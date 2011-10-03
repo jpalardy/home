@@ -137,6 +137,10 @@ sites =
     name:   'yubnub'
     search: 'http://yubnub.org/kernel/ls?args=%s'
     visit:  'http://yubnub.org/'
+  p:
+    name:   'localhost port'
+    search: 'http://localhost:%s/'
+    visit:  'http://localhost/'
 
 #-------------------------------------------------
 
