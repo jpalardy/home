@@ -1,0 +1,54 @@
+= home
+
+The web pages at http://home.jpalardy.com.
+
+== What is it?
+
+The http://home.jpalardy.com page is my home page. It is my command-line
+interface to the web. Inspired by yubnub.org, it runs in JavaScript and does
+NOT log any history.
+
+A 'command' with a query will perform that query on a specific site: (Google
+image, in this case)
+
+  > gim muffins
+
+A 'command' without a query will open the site's home page:
+
+  > gim
+
+Multiple commands can be specified, opening a new tab for each site:
+
+  > gim,yim muffins
+
+== Why?
+
+The web is about searching, and searching goes beyond Google.
+
+If I already know what site I want to end up on (github, amazon, google map), why go
+through the extra step of searching on Google and clicking my way through?
+
+== How it works
+
+The end result ends up in public. Compile the assets:
+
+  > bake compile
+
+  src/coffee => tmp/js
+  src/less   => tmp/css
+  src/images => tmp/images
+  src/html   => tmp
+
+Inline the assets into a single HTML page:
+
+  > cd tmp; python -m SimpleHTTPServer
+  > bake inline
+
+Test the JavaScript files with Jasmine under node.js.
+
+  > bake spec
+
+Finally, clean up after yourself:
+
+  > bake clean
+
