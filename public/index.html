@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jpalardy.com - home</title>
+  <style>html, body {
+  color: #777777;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+#cheatSheetDetails {
+  margin-top: 5px;
+}
+#content {
+  position: relative;
+  width: 600px;
+  margin: auto;
+  margin-top: 100px;
+}
+#content a.logo {
+  text-indent: -5000px;
+  display: block;
+  width: 75px;
+  height: 75px;
+  background: url(data:image/jpeg;base64,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) no-repeat right;
+}
+#content form {
+  position: absolute;
+  top: 54px;
+  left: 80px;
+}
+</style>
+  <script>(function(){var a,b;a=function(){function a(b,c){var d,e;this.query=b!=null?b:"",this.sites=c!=null?c:[],this.links=function(){var b,c,d,f;d=this.sites,f=[];for(b=0,c=d.length;b<c;b++)e=d[b],f.push(this.query?{site:e,url:a.sites[e].search.replace(/%s/g,encodeURI(this.query))}:{site:e,url:a.sites[e].visit});return f}.call(this),this.urls=function(){var a,b,c,e;c=this.links,e=[];for(a=0,b=c.length;a<b;a++)d=c[a],e.push(d.url);return e}.call(this)}a.prototype.toString=function(){return""+this.sites.join(",")+" "+this.query},a.dealias=function(b){var c,d,e,f,g,h,i,j,k;d=b.split(","),f=[];for(g=0,i=d.length;g<i;g++)c=d[g],a.groups[c]?f=f.concat(a.groups[c]):f.push(c);k=[];for(h=0,j=f.length;h<j;h++)e=f[h],a.sites[e]&&k.push(e);return k},a.parse=function(b){var c,d,e,f;f=function(){var a,c,d,f;d=b.split(/\ +/),f=[];for(a=0,c=d.length;a<c;a++)e=d[a],e&&f.push(e);return f}();if(f.length===0)return new a;d=this.dealias(f[0]),d.length===0?(d=a.default_sites,c=f.join(" ")):c=f.slice(1).join(" ");return new a(c,d)};return a}(),b=b!=null?b:this,b.Command=a}).call(this)</script>
+  <script>(function(){var a,b;b={g:{name:"google",search:"http://www.google.com/search?q=%s",visit:"http://www.google.com/"},gmail:{name:"gmail",search:"https://mail.google.com/mail/?shva=1#search/%s",visit:"https://mail.google.com/mail/?shva=1#inbox"},gr:{name:"google reader",search:"https://www.google.com/reader/view/#search/%s/",visit:"https://www.google.com/reader/view"},gt:{name:"google translate",search:"http://translate.google.com/#auto|en|%s",visit:"http://translate.google.com/"},gim:{name:"google image",search:"http://images.google.com/images?q=%s",visit:"http://images.google.com/"},gmap:{name:"google maps",search:"http://maps.google.com/maps?oi=map&q=%s",visit:"http://maps.google.com/"},gfin:{name:"google finance",search:"http://finance.google.com/finance?q=%s",visit:"http://finance.google.com/"},yt:{name:"youtube",search:"http://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search",visit:"http://www.youtube.com/"},yim:{name:"yahoo",search:"http://images.search.yahoo.com/search/images?p=%s",visit:"http://images.search.yahoo.com/search/images"},yfin:{name:"yahoo finance",search:"http://finance.yahoo.com/q?s=%s",visit:"http://finance.yahoo.com/"},fl:{name:"flickr",search:"http://flickr.com/photos/tags/%s",visit:"http://flickr.com/"},b:{name:"bing",search:"http://www.bing.com/search?q=%s",visit:"http://www.bing.com/"},wa:{name:"wolfram alpha",search:"http://www.wolframalpha.com/input/?i=%s",visit:"http://www.wolframalpha.com/"},ddg:{name:"duckduckgo",search:"http://duckduckgo.com/?q=%s",visit:"http://duckduckgo.com/"},blk:{name:"blekko",search:"http://blekko.com/ws/%s",visit:"http://blekko.com/"},wp:{name:"wikipedia",search:"http://en.wikipedia.org/?search=%s",visit:"http://en.wikipedia.org/"},ud:{name:"urban dictionary",search:"http://www.urbandictionary.com/define.php?term=%s",visit:"http://www.urbandictionary.com/"},ed:{name:"encyclopedia dramatica",search:"http://encyclopediadramatica.ch/index.php?search=%s&fulltext=Search",visit:"http://encyclopediadramatica.ch/Main_Page"},am:{name:"amazon.com",search:"http://www.amazon.com/exec/obidos/external-search?mode=blended&keyword=%s",visit:"http://www.amazon.com/"},"am.ca":{name:"amazon.ca",search:"http://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s",visit:"http://www.amazon.ca/"},isbn:{name:"isbn",search:"http://isbn.nu/%s",visit:"http://isbn.nu/"},oreilly:{name:"o'reilly",search:"http://search.oreilly.com/?q=%s&t1=Books",visit:"http://oreilly.com/"},safari:{name:"safari online",search:"http://my.safaribooksonline.com/search/%s",visit:"http://my.safaribooksonline.com/"},apress:{name:"apress",search:"http://apress.com/book/search?searchterm=%s",visit:"http://www.apress.com/"},banq:{name:"bibliothèque et archives nationales du québec",search:"http://us2kv5pk3n.search.serialssolutions.com/?V=1.0&S=T_W_A&C=%s",visit:"http://www.banq.qc.ca/accueil/index.html?language_id=1"},bp:{name:"bookpiles",search:"http://bookpiles.ca/jonathan/books#reading/%s",visit:"http://bookpiles.ca/jonathan/books"},imdb:{name:"imdb",search:"http://imdb.com/find?q=%s",visit:"http://imdb.com/"},da:{name:"deviant art",search:"http://search.deviantart.com/?q=%s",visit:"http://www.deviantart.com/"},td:{name:"tigerdirect.ca",search:"http://www.tigerdirect.ca/applications/SearchTools/search.asp?keywords=%s",visit:"http://www.tigerdirect.ca/"},gh:{name:"github",search:"https://github.com/search?q=%s",visit:"https://github.com/jpalardy"},ls:{name:"yubnub",search:"http://yubnub.org/kernel/ls?args=%s",visit:"http://yubnub.org/"}},a=a!=null?a:this,a.sites=b}).call(this)</script>
+  <script>(function(){var a,b,c;Command.sites=sites,Command.default_sites=["ddg"],Command.groups={images:["yim","gim"]},b=function(a){var b,c,d,e,f,g;try{c=document.getElementById("command_input").value,b=Command.parse(c);if(b.links.length===0)return;g=b.urls;for(e=0,f=g.length;e<f;e++)d=g[e],window.open(d,"_blank")}catch(h){console.log(h)}return!1},c=function(a){var b;if(a.keyCode===27){b=document.getElementById("cheatSheetDetails");return b.open=!b.open}},a=a!=null?a:this,a.handleForm=b,a.handleGlobalKey=c}).call(this)</script>
+</head>
+<body onkeyup="handleGlobalKey(event)">
+
+  <div id="content">
+    <a class="logo" href="http://home.jpalardy.com/">home.jpalardy.com</a>
+
+    <form id="command_form" onsubmit="return handleForm(this);">
+      <input type="search" name="command" id="command_input" size="40" autofocus="autofocus" results="results">
+    </form>
+
+<details id="cheatSheetDetails">
+<summary>help</summary>
+<pre id="cheatSheet">
+g	google
+gmail	gmail
+gr	google reader
+gt	google translate
+gim	google image
+gmap	google maps
+gfin	google finance
+yt	youtube
+yim	yahoo
+yfin	yahoo finance
+fl	flickr
+b	bing
+wa	wolfram alpha
+ddg	duckduckgo
+blk	blekko
+wp	wikipedia
+ud	urban dictionary
+ed	encyclopedia dramatica
+am	amazon.com
+am.ca	amazon.ca
+isbn	isbn
+oreilly	o'reilly
+safari	safari online
+apress	apress
+banq	bibliothèque et archives nationales du québec
+bp	bookpiles
+imdb	imdb
+da	deviant art
+td	tigerdirect.ca
+gh	github
+ls	yubnub
+</pre>
+</details>
+
+  </div>
+
+</body>
+</html>
