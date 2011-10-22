@@ -129,6 +129,10 @@ sites =
     name:   'tigerdirect.ca'
     search: 'http://www.tigerdirect.ca/applications/SearchTools/search.asp?keywords=%s'
     visit:  'http://www.tigerdirect.ca/'
+  yelp:
+    name:   'yelp'
+    search: 'http://www.yelp.com/search?find_desc=%s&find_loc=Montr%C3%A9al%2C+QC'
+    visit:  'http://www.yelp.com/'
   gh:
     name:   'github'
     search: 'https://github.com/search?q=%s'
