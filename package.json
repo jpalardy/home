@@ -2,12 +2,12 @@
   "author":        "Jonathan Palardy",
   "name":          "home",
   "description":   "The web pages at home.jpalardy.com",
-  "version":       "0.1.0",
+  "version":       "0.1.1",
   "dependencies" : {
-    "coffee-script": "1.1.2",
-    "inliner":       "0.1.8",
-    "jasmine-node":  "1.0.11",
-    "less":          "1.1.4"
+    "coffee-script": "1.2.x",
+    "inliner":       "0.1.x",
+    "jasmine-node":  "1.0.x",
+    "less":          "1.x"
   },
   "private": true
 }
