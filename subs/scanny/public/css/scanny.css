@@ -1,0 +1,24 @@
+
+.container {
+  width:  350px;
+  margin: 200px auto;
+}
+
+.scanny {
+  width:  300px;
+  height: 300px;
+  position: relative;
+}
+
+.scanny .item {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #666;
+  text-align: center;
+  position: absolute;
+}
+
+.container button {
+  margin-top: 15px;
+}
+
