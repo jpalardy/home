@@ -1,0 +1,30 @@
+
+.question {
+  font-family: Courier New, Courier, monospace;
+}
+
+.question input {
+  width: 30px;
+}
+
+.question .good {
+  background: green;
+}
+
+.question .bad {
+  background: red;
+}
+
+.timeleft {
+  position: absolute;
+  top:   10px;
+  right: 10px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  padding: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px dotted #999;
+  color: #333;
+}
+
