@@ -66,16 +66,17 @@
     };
     regions = [];
     return sel.find('.item').each(function(i, elem) {
-      var region;
+      var duration, region;
       region = region_for(elem);
       while (overlap_iter(region, regions)) {
         region = region_for(elem);
       }
       regions.push(region);
+      duration = Math.random() * 1500 + 500;
       return $(elem).animate({
         left: "" + region.topLeft.x + "px",
         top: "" + region.topLeft.y + "px"
-      }, 1000);
+      }, duration);
     });
   };
 

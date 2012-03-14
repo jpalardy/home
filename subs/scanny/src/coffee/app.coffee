@@ -51,7 +51,8 @@ shuffle = (sel) ->
     while overlap_iter(region, regions)
       region = region_for(elem)
     regions.push(region)
-    $(elem).animate({left: "#{region.topLeft.x}px", top:  "#{region.topLeft.y}px"}, 1000)
+    duration = Math.random() * 1500 + 500
+    $(elem).animate({left: "#{region.topLeft.x}px", top:  "#{region.topLeft.y}px"}, duration)
 
 ############################################################
 
