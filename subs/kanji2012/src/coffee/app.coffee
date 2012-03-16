@@ -53,6 +53,8 @@ jQuery ->
                    .click(updateValue)
                    .change(updateValue)
 
+  $('#kanjis_today').text(KANJIS_TODAY)
+
   $('form').submit (e) ->
     e.preventDefault()
 

@@ -47,6 +47,7 @@
       return updateProgress(KANJIS_DONE);
     };
     $('#kanjis_done').attr('value', KANJIS_DONE).click(updateValue).change(updateValue);
+    $('#kanjis_today').text(KANJIS_TODAY);
     return $('form').submit(function(e) {
       return e.preventDefault();
     });
