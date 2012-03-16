@@ -4,7 +4,7 @@ KANJIS_TOTAL = 2200
 KANJI_PER_DAY = 6
 KANJIS_TODAY = parseInt(moment().format("DDD"), 10) * KANJI_PER_DAY
 
-KANJIS_DONE = parseInt(localStorage.getItem('KANJIS_DONE'), 10)
+KANJIS_DONE = parseInt(localStorage.getItem('KANJIS_DONE'), 10) or 0
 
 #-------------------------------------------------
 

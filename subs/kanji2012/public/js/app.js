@@ -7,7 +7,7 @@
 
   KANJIS_TODAY = parseInt(moment().format("DDD"), 10) * KANJI_PER_DAY;
 
-  KANJIS_DONE = parseInt(localStorage.getItem('KANJIS_DONE'), 10);
+  KANJIS_DONE = parseInt(localStorage.getItem('KANJIS_DONE'), 10) || 0;
 
   jQuery(function() {
     var chart, data, h, m, updateProgress, updateValue, vis, w;
