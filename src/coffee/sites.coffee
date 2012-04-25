@@ -65,7 +65,7 @@ sites =
     visit:  'http://duckduckgo.com/'
   blk:
     name:   'blekko'
-    search: 'http://blekko.com/ws/%s'
+    search: 'http://blekko.com/ws/%s+/date'
     visit:  'http://blekko.com/'
 
   # reference
