@@ -1,0 +1,25 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.source {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  width: 100%;
+  border: 0;
+  overflow: hidden;
+}
+
+.source:focus {
+  outline: none;
+}
+
+.destination {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-size: 128px;
+  margin: 0;
+  border-top: 3px dotted #bbb;
+}
+
