@@ -5,11 +5,11 @@ set  :application,    "home"
 set  :use_sudo,       false
 role :app,            "jonathan@jpalardy.com"
 
-set  :scm, :git
-set  :repository,     "git://github.com/jpalardy/#{application}.git"
-
-set  :deploy_via,     :remote_cache
+set :repository,      '.'
+set :scm,             :git
+set :deploy_via,      :copy
 set  :deploy_to,      "/home/jonathan/production/#{application}"
+set :copy_strategy,   :export
 
 # don't do a bunch of Rails stuff
 namespace :deploy do
