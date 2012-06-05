@@ -19,3 +19,10 @@ namespace :deploy do
   task :finalize_update do ; end
 end
 
+after "deploy:update_code", "deploy:symlink_shared"
+namespace :deploy do
+  task :symlink_shared do
+    run "ln -nfs #{shared_path}/config/kanjis.json #{release_path}/public/kanji2012/js/kanjis.json"
+  end
+end
+
