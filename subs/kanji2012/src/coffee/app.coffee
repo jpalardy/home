@@ -4,8 +4,6 @@ KANJIS_TOTAL = 2200
 KANJI_PER_DAY = 6
 KANJIS_TODAY = parseInt(moment().format("DDD"), 10) * KANJI_PER_DAY
 
-KANJIS_DONE = parseInt(localStorage.getItem('KANJIS_DONE'), 10) or 0
-
 #-------------------------------------------------
 
 jQuery ->
@@ -38,20 +36,14 @@ jQuery ->
   , 100)
 
   updateProgress = (value) ->
+    $('#kanjis_done').text(value)
     vis.datum(ranges: [KANJIS_TOTAL], measures: [KANJIS_TODAY], markers: [value]).call(chart)
 
-  setTimeout(->
-    updateProgress(KANJIS_DONE)
-  , 1100)
-
-  updateValue = ->
-    KANJIS_DONE = parseInt($('#kanjis_done').attr('value'), 10) || 0
-    localStorage.setItem('KANJIS_DONE', KANJIS_DONE)
-    updateProgress(KANJIS_DONE)
-
-  $('#kanjis_done').attr('value', KANJIS_DONE)
-                   .click(updateValue)
-                   .change(updateValue)
+  # lookup kanjis done, update
+  $.getJSON 'js/kanjis.json', (kanjis_done) ->
+    setTimeout(->
+      updateProgress(kanjis_done)
+    , 1100)
 
   $('#kanjis_today').text(KANJIS_TODAY)
 

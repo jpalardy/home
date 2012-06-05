@@ -1,19 +1,13 @@
 
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+
 #chart {
   width: 960px;
   margin: auto;
   margin-top: 300px;
-}
-
-#kanjis_today, #kanjis_done {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 10px;
-}
-
-.divider {
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  color: #999;
 }
 
 .bullet { font: 10px sans-serif; }
