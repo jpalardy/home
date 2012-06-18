@@ -32,6 +32,7 @@
     }, 100);
     updateProgress = function(value) {
       $('#kanjis_done').text(value);
+      $('#kanjis_diff').text(value - KANJIS_TODAY);
       return vis.datum({
         ranges: [KANJIS_TOTAL],
         measures: [KANJIS_TODAY],

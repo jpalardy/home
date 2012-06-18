@@ -37,6 +37,7 @@ jQuery ->
 
   updateProgress = (value) ->
     $('#kanjis_done').text(value)
+    $('#kanjis_diff').text(value - KANJIS_TODAY)
     vis.datum(ranges: [KANJIS_TOTAL], measures: [KANJIS_TODAY], markers: [value]).call(chart)
 
   # lookup kanjis done, update
