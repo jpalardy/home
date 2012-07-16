@@ -3,7 +3,8 @@
 Command.sites = sites
 Command.default_sites = ['ddg']
 Command.groups =
-  images : ['yim','gim']
+  images: ['yim','gim']
+  anime:  ['ann','anidb']
 
 handleForm = (form) ->
   try

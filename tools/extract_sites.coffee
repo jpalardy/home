@@ -1,6 +1,7 @@
 
 sites = (require "../tmp/js/sites.js").sites
 
-for site, {name} of sites
-  console.log "#{site}\t#{name}"
+for command, site of sites
+  unless site.hide
+    console.log "#{command}\t#{site.name}"
 

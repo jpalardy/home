@@ -146,7 +146,38 @@ sites =
     search: 'http://localhost:%s/'
     visit:  'http://localhost/'
 
-#-------------------------------------------------
+  # personal
+  ann:
+    name:   'anime news network',
+    search: 'http://www.animenewsnetwork.com/encyclopedia/search.php?searchbox=%s'
+    visit:  'http://www.animenewsnetwork.com/',
+    hide:   true
 
+  anidb:
+    name:   'anidb',
+    search: 'http://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist'
+    visit:  'http://anidb.info/',
+    hide:   true
+
+  tot:
+    name:   'tokyo toshokan',
+    search: 'http://www.tokyotosho.info/search.php?terms=%s'
+    visit:  'http://www.tokyotosho.info/',
+    hide:   true
+
+  tpb:
+    name:   'the pirate bay',
+    search: 'http://thepiratebay.org/search/%s/0/7/0'
+    visit:  'http://thepiratebay.org/',
+    hide:   true
+
+  crunchy:
+    name:   'crunchyroll',
+    search: 'http://www.crunchyroll.com/search?q=%s'
+    visit:  'http://www.crunchyroll.com/',
+    hide:   true
+
+#-------------------------------------------------
 exports = exports ? this
 exports.sites = sites
+
