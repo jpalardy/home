@@ -1,5 +1,0 @@
-
-bake_compile() {
-  coffee -o public/js -c src/coffee
-}
-
