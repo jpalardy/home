@@ -19,10 +19,10 @@ namespace :deploy do
   task :finalize_update do ; end
 end
 
-after "deploy:update_code", "deploy:symlink_shared"
+after "deploy:update_code", "deploy:grab_last_img"
 namespace :deploy do
-  task :symlink_shared do
-    run "ln -nfs #{shared_path}/config/kanjis.json #{release_path}/public/kanji2012/js/kanjis.json"
+  task :grab_last_img do
+    run "cp #{previous_release}/public/kanji2012/img/kanjis.png #{release_path}/public/kanji2012/img/kanjis.png"
   end
 end
 
