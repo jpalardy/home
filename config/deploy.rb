@@ -22,7 +22,7 @@ end
 after "deploy:update_code", "deploy:grab_last_img"
 namespace :deploy do
   task :grab_last_img do
-    run "cp #{previous_release}/public/kanji2012/img/kanjis.png #{release_path}/public/kanji2012/img/kanjis.png"
+    run "cp #{previous_release}/public/kanji2012/img/*.png #{release_path}/public/kanji2012/img/"
   end
 end
 
