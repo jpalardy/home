@@ -4,10 +4,36 @@
   <meta charset="utf-8" />
   <title>Kanjis 2012</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <link rel="apple-touch-icon" sizes="57x57"   href="touch-icon-iphone-114.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-114.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!--<meta name="apple-mobile-web-app-status-bar-style" content="black" />-->
+  <style>
+    .hide {
+      display: none;
+    }
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <script>
+    function updateOrientation() {
+      switch(window.orientation){
+        case -90: // fallthrough
+        case 90:
+          document.getElementById('tall').className = "hide";
+          document.getElementById('wide').className = "";
+          break;
+
+        default:
+          document.getElementById('tall').className = "";
+          document.getElementById('wide').className = "hide";
+          break;
+      }
+    }
+  </script>
 </head>
-<body style="padding: 0; margin: 0">
-  <img alt="kanjis progress" src="img/kanjis.png" width="320" height="356" />
+<body onorientationchange="updateOrientation();" onload="updateOrientation();">
+  <img id="tall"              alt="kanjis progress" src="img/kanjis_tall.png" width="320" height="460" />
+  <img id="wide" class="hide" alt="kanjis progress" src="img/kanjis_wide.png" width="480" height="300" />
 </body>
 </html>
