@@ -17,24 +17,32 @@
     }
   </style>
   <script>
+    var now = new Date();
+    var ts = now.getTime();
+
     function updateOrientation() {
+      var nd;
       switch(window.orientation){
         case -90: // fallthrough
         case 90:
-          document.getElementById('tall').className = "hide";
-          document.getElementById('wide').className = "";
+          document.getElementById('tall').className = 'hide';
+          nd = document.getElementById('wide');
+          nd.src = nd.attributes['data-src'].value + '?' + ts;
+          nd.className = '';
           break;
 
         default:
-          document.getElementById('tall').className = "";
-          document.getElementById('wide').className = "hide";
+          document.getElementById('wide').className = 'hide';
+          nd = document.getElementById('tall');
+          nd.src = nd.attributes['data-src'].value + '?' + ts;
+          nd.className = '';
           break;
       }
     }
   </script>
 </head>
 <body onorientationchange="updateOrientation();" onload="updateOrientation();">
-  <img id="tall"              alt="kanjis progress" src="img/kanjis_tall.png" width="320" height="460" />
-  <img id="wide" class="hide" alt="kanjis progress" src="img/kanjis_wide.png" width="480" height="300" />
+  <img id="tall" class="hide" alt="kanjis progress" data-src="img/kanjis_tall.png" src="" width="320" height="460" />
+  <img id="wide" class="hide" alt="kanjis progress" data-src="img/kanjis_wide.png" src="" width="480" height="300" />
 </body>
 </html>
