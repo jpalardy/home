@@ -28,7 +28,7 @@ tmp/images/logo.jpg: src/images/logo.jpg tmp/images
 	cp $< $@
 
 html: tmp/index.html
-tmp/index.html: tmp/js/sites.js tmp
+tmp/index.html: src/html/index.html tmp/js/sites.js tmp
 	coffee tools/extract_sites.coffee > src/html/sites.part
 	sed '/id="cheatSheet"/ r src/html/sites.part' src/html/index.html > $@
 

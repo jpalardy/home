@@ -108,7 +108,7 @@ sites =
     search: 'http://apress.com/book/search?searchterm=%s'
     visit:  'http://www.apress.com/'
   banq:
-    name:   'bibliothèque et archives nationales du québec'
+    name:   'bibliothèque et archives nationales'
     search: 'http://us2kv5pk3n.search.serialssolutions.com/?V=1.0&S=T_W_A&C=%s'
     visit:  'http://www.banq.qc.ca/accueil/index.html?language_id=1'
   bp:
