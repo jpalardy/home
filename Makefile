@@ -21,7 +21,7 @@ js: $(DST_JS)
 
 css: tmp/css/main.css
 tmp/css/main.css: src/less/main.less tmp/css
-	$(BIN_LESS) $< > $@
+	$(BIN_LESS) $< $@
 
 images: tmp/images/logo.jpg
 tmp/images/logo.jpg: src/images/logo.jpg tmp/images
