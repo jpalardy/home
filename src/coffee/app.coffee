@@ -6,14 +6,18 @@ Command.groups =
   images: ['yim','gim']
   anime:  ['ann','anidb']
 
+reuse = false
+
+setReuse = (value) ->
+  reuse = value
+  if reuse
+    document.getElementById("command_input").className = "reuse"
+  else
+    document.getElementById("command_input").className = ""
+
 handleForm = (form) ->
   try
     command_text = document.getElementById("command_input").value
-    if command_text[0] is '!'
-      reuse = true
-      command_text = command_text.slice(1)
-    else
-      reuse = false
     command = Command.parse(command_text)
 
     return if command.links.length is 0
@@ -35,9 +39,17 @@ handleGlobalKey = (event) ->
     elem = document.getElementById "cheatSheetDetails"
     elem.open = !elem.open
 
+handleKey = (event) ->
+  if event.charCode is 33 # char is "!"
+    setReuse !reuse
+    return false # don't print "!"
+  else
+    return true
+
 #-------------------------------------------------
 
 exports = exports ? this
 exports.handleForm      = handleForm
 exports.handleGlobalKey = handleGlobalKey
+exports.handleKey       = handleKey
 
