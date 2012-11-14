@@ -111,6 +111,15 @@ sites =
     name:   'bibliothèque et archives nationales'
     search: 'http://us2kv5pk3n.search.serialssolutions.com/?V=1.0&S=T_W_A&C=%s'
     visit:  'http://www.banq.qc.ca/accueil/index.html?language_id=1'
+  audible:
+    name:   'audible'
+    search: 'http://www.audible.com/search?advsearchKeywords=%s'
+    visit:  'http://www.audible.com/'
+  vpl:
+    name:   'vpl'
+    search: 'http://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue'
+    visit:  'http://www.vpl.ca/'
+
   bp:
     name:   'bookpiles'
     search: 'http://bookpiles.ca/jonathan/books#reading/%s'
