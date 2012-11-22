@@ -202,6 +202,12 @@ sites =
     visit:  'http://www.romajidesu.com/'
     hide:   true
 
+  netflix:
+    name:   'netflix',
+    search: 'http://movies.netflix.com/Search?v1=%s'
+    visit:  'http://movies.netflix.com/WiHome',
+    hide:   true
+
 #-------------------------------------------------
 exports = exports ? this
 exports.sites = sites
