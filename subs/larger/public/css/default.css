@@ -5,21 +5,18 @@ html, body {
 }
 
 .source {
+  position: absolute;
+  top: 5px;
+  left: 5px;
   font-family: Geneva, Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  width: 100%;
+  font-size: 128px;
+  width: 98%;
+  height: 98%;
   border: 0;
   overflow: hidden;
 }
 
 .source:focus {
   outline: none;
-}
-
-.destination {
-  font-family: Geneva, Arial, Helvetica, sans-serif;
-  font-size: 128px;
-  margin: 0;
-  border-top: 3px dotted #bbb;
 }
 
