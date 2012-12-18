@@ -8,7 +8,7 @@ role :app,            "jonathan@jpalardy.com"
 set :repository,      '.'
 set :scm,             :git
 set :deploy_via,      :copy
-set  :deploy_to,      "/home/jonathan/production/#{application}"
+set :deploy_to,       "/home/jonathan/production/#{application}"
 set :copy_strategy,   :export
 
 # don't do a bunch of Rails stuff

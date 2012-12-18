@@ -30,9 +30,9 @@ through the extra step of searching on Google and clicking my way through?
 
 == How it works
 
-The end result ends up in public. Compile the assets:
+The end result ends up in `public`. Compile the assets:
 
-  > bake compile
+  > make compile
 
   src/coffee => tmp/js
   src/less   => tmp/css
@@ -42,13 +42,13 @@ The end result ends up in public. Compile the assets:
 Inline the assets into a single HTML page:
 
   > cd tmp; python -m SimpleHTTPServer
-  > bake inline
+  > make inline
 
 Test the JavaScript files with Jasmine under node.js.
 
-  > bake spec
+  > make spec
 
 Finally, clean up after yourself:
 
-  > bake clean
+  > make clean
 
