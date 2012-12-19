@@ -81,6 +81,10 @@ sites =
     name:   'encyclopedia dramatica'
     search: 'http://encyclopediadramatica.ch/index.php?search=%s&fulltext=Search'
     visit:  'http://encyclopediadramatica.ch/Main_Page'
+  so:
+    name:   'stack overflow'
+    search: 'http://stackoverflow.com/search?q=%s'
+    visit:  'http://stackoverflow.com/'
 
   # books
   am:
