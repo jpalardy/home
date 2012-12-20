@@ -1,54 +1,59 @@
-= home
+
+home
+====
 
 The web pages at http://home.jpalardy.com.
 
-== What is it?
+What is it?
+-----------
 
 The http://home.jpalardy.com page is my home page. It is my command-line
 interface to the web. Inspired by yubnub.org, it runs in JavaScript and does
 NOT log any history.
 
-A 'command' with a query will perform that query on a specific site: (Google
+A _command_ with a query will perform that query on a specific site: (Google
 image, in this case)
 
-  > gim muffins
+    > gim muffins
 
-A 'command' without a query will open the site's home page:
+A _command_ without a query will open the site's home page:
 
-  > gim
+    > gim
 
 Multiple commands can be specified, opening a new tab for each site:
 
-  > gim,yim muffins
+    > gim,yim muffins
 
-== Why?
+Why?
+----
 
 The web is about searching, and searching goes beyond Google.
 
 If I already know what site I want to end up on (github, amazon, google map), why go
 through the extra step of searching on Google and clicking my way through?
 
-== How it works
+How it works
+------------
 
 The end result ends up in `public`. Compile the assets:
 
-  > make compile
+    > make compile
 
-  src/coffee => tmp/js
-  src/less   => tmp/css
-  src/images => tmp/images
-  src/html   => tmp
+    src/coffee => tmp/js
+    src/less   => tmp/css
+    src/images => tmp/images
+    src/html   => tmp
 
 Inline the assets into a single HTML page:
 
-  > cd tmp; python -m SimpleHTTPServer
-  > make inline
+    > cd tmp; python -m SimpleHTTPServer
+    > make inline
 
 Test the JavaScript files with Jasmine under node.js.
 
-  > make spec
+    > make spec
 
 Finally, clean up after yourself:
 
-  > make clean
+    > make clean
 
