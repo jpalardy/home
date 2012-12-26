@@ -1,0 +1,49 @@
+
+.card {
+  float: left;
+  width: 180px;
+  height: 112px;
+  position: relative;
+  border: 1px solid #bbb;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin: 5px 5px;
+  -o-transition:      all 500ms ease-in-out;
+  -ms-transition:     all 500ms ease-in-out;
+  -moz-transition:    all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  transition:         all 500ms ease-in-out;
+  cursor: pointer;
+}
+
+.card .no {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  /*font-family: Georgia;*/
+  color: #777;
+}
+
+.card .keyword {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.card .kanji {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+  font-size: 42px;
+}
+
+#count {
+  font-size: 80%;
+  color: #777;
+}
+
+.highlighted {
+  background-color: #FFFF9C;
+}
+

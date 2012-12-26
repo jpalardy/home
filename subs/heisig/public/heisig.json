@@ -1,0 +1,11042 @@
+[
+    {
+        "no": 1,
+        "kanji": "一",
+        "keyword": "one"
+    },
+    {
+        "no": 2,
+        "kanji": "二",
+        "keyword": "two"
+    },
+    {
+        "no": 3,
+        "kanji": "三",
+        "keyword": "three"
+    },
+    {
+        "no": 4,
+        "kanji": "四",
+        "keyword": "four",
+        "primitives": "mouth, human legs"
+    },
+    {
+        "no": 5,
+        "kanji": "五",
+        "keyword": "five"
+    },
+    {
+        "no": 6,
+        "kanji": "六",
+        "keyword": "six",
+        "primitives": "top hat, animal legs"
+    },
+    {
+        "no": 7,
+        "kanji": "七",
+        "keyword": "seven",
+        "primitives": "cut"
+    },
+    {
+        "no": 8,
+        "kanji": "八",
+        "keyword": "eight"
+    },
+    {
+        "no": 9,
+        "kanji": "九",
+        "keyword": "nine",
+        "primitives": "baseball"
+    },
+    {
+        "no": 10,
+        "kanji": "十",
+        "keyword": "ten",
+        "primitives": "needle"
+    },
+    {
+        "no": 11,
+        "kanji": "口",
+        "keyword": "mouth"
+    },
+    {
+        "no": 12,
+        "kanji": "日",
+        "keyword": "day",
+        "primitives": "sun"
+    },
+    {
+        "no": 13,
+        "kanji": "月",
+        "keyword": "month",
+        "primitives": "flesh/moon"
+    },
+    {
+        "no": 14,
+        "kanji": "田",
+        "keyword": "rice field",
+        "primitives": "brains"
+    },
+    {
+        "no": 15,
+        "kanji": "目",
+        "keyword": "eye"
+    },
+    {
+        "no": 16,
+        "kanji": "古",
+        "keyword": "old",
+        "primitives": "ten, mouth"
+    },
+    {
+        "no": 17,
+        "kanji": "吾",
+        "keyword": "I",
+        "primitives": "five, mouth"
+    },
+    {
+        "no": 18,
+        "kanji": "冒",
+        "keyword": "risk",
+        "primitives": "eye, sun"
+    },
+    {
+        "no": 19,
+        "kanji": "朋",
+        "keyword": "companion",
+        "primitives": "flesh/moon"
+    },
+    {
+        "no": 20,
+        "kanji": "明",
+        "keyword": "bright",
+        "primitives": "sun, moon"
+    },
+    {
+        "no": 21,
+        "kanji": "唱",
+        "keyword": "chant",
+        "primitives": "mouth, sun, prosperous"
+    },
+    {
+        "no": 22,
+        "kanji": "晶",
+        "keyword": "sparkle",
+        "primitives": "sun"
+    },
+    {
+        "no": 23,
+        "kanji": "品",
+        "keyword": "goods",
+        "primitives": "mouth, box"
+    },
+    {
+        "no": 24,
+        "kanji": "呂",
+        "keyword": "spine"
+    },
+    {
+        "no": 25,
+        "kanji": "昌",
+        "keyword": "prosperous",
+        "primitives": "sun"
+    },
+    {
+        "no": 26,
+        "kanji": "早",
+        "keyword": "early",
+        "primitives": "sun, needle, sunflower"
+    },
+    {
+        "no": 27,
+        "kanji": "旭",
+        "keyword": "rising sun",
+        "primitives": "nine/baseball, sun"
+    },
+    {
+        "no": 28,
+        "kanji": "世",
+        "keyword": "generation",
+        "primitives": "twenty, fishhook"
+    },
+    {
+        "no": 29,
+        "kanji": "胃",
+        "keyword": "stomach",
+        "primitives": "brains/rice field, flesh/moon"
+    },
+    {
+        "no": 30,
+        "kanji": "旦",
+        "keyword": "nightbreak",
+        "primitives": "sun, floor"
+    },
+    {
+        "no": 31,
+        "kanji": "胆",
+        "keyword": "gall bladder",
+        "primitives": "flesh/moon, nightbreak, sun, floor"
+    },
+    {
+        "no": 32,
+        "kanji": "亘",
+        "keyword": "span",
+        "primitives": "ceiling, floor, sun/day"
+    },
+    {
+        "no": 33,
+        "kanji": "凹",
+        "keyword": "concave"
+    },
+    {
+        "no": 34,
+        "kanji": "凸",
+        "keyword": "convex"
+    },
+    {
+        "no": 35,
+        "kanji": "旧",
+        "keyword": "olden times",
+        "primitives": "walking stick, sun/day"
+    },
+    {
+        "no": 36,
+        "kanji": "自",
+        "keyword": "oneself",
+        "primitives": "drop, eye, nose"
+    },
+    {
+        "no": 37,
+        "kanji": "白",
+        "keyword": "white",
+        "primitives": "drop, sun/day, dove"
+    },
+    {
+        "no": 38,
+        "kanji": "百",
+        "keyword": "hundred",
+        "primitives": "one, white"
+    },
+    {
+        "no": 39,
+        "kanji": "中",
+        "keyword": "in",
+        "primitives": "stick, mouth"
+    },
+    {
+        "no": 40,
+        "kanji": "千",
+        "keyword": "thousand",
+        "primitives": "drop, ten"
+    },
+    {
+        "no": 41,
+        "kanji": "舌",
+        "keyword": "tongue",
+        "primitives": "thousand, mouth"
+    },
+    {
+        "no": 42,
+        "kanji": "升",
+        "keyword": "measuring box",
+        "primitives": "thousand, needle"
+    },
+    {
+        "no": 43,
+        "kanji": "昇",
+        "keyword": "rise up",
+        "primitives": "sun/day, measuring box"
+    },
+    {
+        "no": 44,
+        "kanji": "丸",
+        "keyword": "round",
+        "primitives": "nine, drop, fat man"
+    },
+    {
+        "no": 45,
+        "kanji": "寸",
+        "keyword": "measurement",
+        "primitives": "drop, ten, glue"
+    },
+    {
+        "no": 46,
+        "kanji": "肘",
+        "keyword": "elbow *",
+        "primitives": "flesh/moon, glue"
+    },
+    {
+        "no": 47,
+        "kanji": "専",
+        "keyword": "specialty",
+        "primitives": "ten, rice field, glue"
+    },
+    {
+        "no": 48,
+        "kanji": "博",
+        "keyword": "Dr.",
+        "primitives": "needle, drop, specialty, ten, rice field, glue"
+    },
+    {
+        "no": 49,
+        "kanji": "占",
+        "keyword": "fortune-telling",
+        "primitives": "mouth, wand"
+    },
+    {
+        "no": 50,
+        "kanji": "上",
+        "keyword": "above",
+        "primitives": "wand, floor, up"
+    },
+    {
+        "no": 51,
+        "kanji": "下",
+        "keyword": "below"
+    },
+    {
+        "no": 52,
+        "kanji": "卓",
+        "keyword": "eminent"
+    },
+    {
+        "no": 53,
+        "kanji": "朝",
+        "keyword": "morning"
+    },
+    {
+        "no": 54,
+        "kanji": "嘲",
+        "keyword": "derision"
+    },
+    {
+        "no": 55,
+        "kanji": "只",
+        "keyword": "only"
+    },
+    {
+        "no": 56,
+        "kanji": "貝",
+        "keyword": "shellfish"
+    },
+    {
+        "no": 57,
+        "kanji": "唄",
+        "keyword": "pop song"
+    },
+    {
+        "no": 58,
+        "kanji": "貞",
+        "keyword": "upright"
+    },
+    {
+        "no": 59,
+        "kanji": "員",
+        "keyword": "employee"
+    },
+    {
+        "no": 60,
+        "kanji": "貼",
+        "keyword": "post a bill"
+    },
+    {
+        "no": 61,
+        "kanji": "見",
+        "keyword": "see"
+    },
+    {
+        "no": 62,
+        "kanji": "児",
+        "keyword": "newborn babe"
+    },
+    {
+        "no": 63,
+        "kanji": "元",
+        "keyword": "beginning"
+    },
+    {
+        "no": 64,
+        "kanji": "頁",
+        "keyword": "page"
+    },
+    {
+        "no": 65,
+        "kanji": "頑",
+        "keyword": "stubborn"
+    },
+    {
+        "no": 66,
+        "kanji": "凡",
+        "keyword": "mediocre"
+    },
+    {
+        "no": 67,
+        "kanji": "負",
+        "keyword": "defeat"
+    },
+    {
+        "no": 68,
+        "kanji": "万",
+        "keyword": "ten thousand"
+    },
+    {
+        "no": 69,
+        "kanji": "句",
+        "keyword": "phrase"
+    },
+    {
+        "no": 70,
+        "kanji": "肌",
+        "keyword": "texture"
+    },
+    {
+        "no": 71,
+        "kanji": "旬",
+        "keyword": "decameron"
+    },
+    {
+        "no": 72,
+        "kanji": "勺",
+        "keyword": "ladle"
+    },
+    {
+        "no": 73,
+        "kanji": "的",
+        "keyword": "bull's eye"
+    },
+    {
+        "no": 74,
+        "kanji": "首",
+        "keyword": "neck"
+    },
+    {
+        "no": 75,
+        "kanji": "乙",
+        "keyword": "fish guts"
+    },
+    {
+        "no": 76,
+        "kanji": "乱",
+        "keyword": "riot"
+    },
+    {
+        "no": 77,
+        "kanji": "直",
+        "keyword": "straightaway"
+    },
+    {
+        "no": 78,
+        "kanji": "具",
+        "keyword": "tool"
+    },
+    {
+        "no": 79,
+        "kanji": "真",
+        "keyword": "true"
+    },
+    {
+        "no": 80,
+        "kanji": "工",
+        "keyword": "craft"
+    },
+    {
+        "no": 81,
+        "kanji": "左",
+        "keyword": "left"
+    },
+    {
+        "no": 82,
+        "kanji": "右",
+        "keyword": "right"
+    },
+    {
+        "no": 83,
+        "kanji": "有",
+        "keyword": "possess"
+    },
+    {
+        "no": 84,
+        "kanji": "賄",
+        "keyword": "bribe"
+    },
+    {
+        "no": 85,
+        "kanji": "貢",
+        "keyword": "tribute"
+    },
+    {
+        "no": 86,
+        "kanji": "項",
+        "keyword": "paragraph"
+    },
+    {
+        "no": 87,
+        "kanji": "刀",
+        "keyword": "sword"
+    },
+    {
+        "no": 88,
+        "kanji": "刃",
+        "keyword": "blade"
+    },
+    {
+        "no": 89,
+        "kanji": "切",
+        "keyword": "cut"
+    },
+    {
+        "no": 90,
+        "kanji": "召",
+        "keyword": "seduce"
+    },
+    {
+        "no": 91,
+        "kanji": "昭",
+        "keyword": "shining"
+    },
+    {
+        "no": 92,
+        "kanji": "則",
+        "keyword": "rule"
+    },
+    {
+        "no": 93,
+        "kanji": "副",
+        "keyword": "vice-"
+    },
+    {
+        "no": 94,
+        "kanji": "別",
+        "keyword": "separate"
+    },
+    {
+        "no": 95,
+        "kanji": "丁",
+        "keyword": "street"
+    },
+    {
+        "no": 96,
+        "kanji": "町",
+        "keyword": "village"
+    },
+    {
+        "no": 97,
+        "kanji": "可",
+        "keyword": "can"
+    },
+    {
+        "no": 98,
+        "kanji": "頂",
+        "keyword": "place on the head"
+    },
+    {
+        "no": 99,
+        "kanji": "子",
+        "keyword": "child"
+    },
+    {
+        "no": 100,
+        "kanji": "孔",
+        "keyword": "cavity"
+    },
+    {
+        "no": 101,
+        "kanji": "了",
+        "keyword": "complete"
+    },
+    {
+        "no": 102,
+        "kanji": "女",
+        "keyword": "woman"
+    },
+    {
+        "no": 103,
+        "kanji": "好",
+        "keyword": "fond"
+    },
+    {
+        "no": 104,
+        "kanji": "如",
+        "keyword": "likeness"
+    },
+    {
+        "no": 105,
+        "kanji": "母",
+        "keyword": "mama"
+    },
+    {
+        "no": 106,
+        "kanji": "貫",
+        "keyword": "pierce"
+    },
+    {
+        "no": 107,
+        "kanji": "兄",
+        "keyword": "elder brother"
+    },
+    {
+        "no": 108,
+        "kanji": "呪",
+        "keyword": "curse"
+    },
+    {
+        "no": 109,
+        "kanji": "克",
+        "keyword": "overcome"
+    },
+    {
+        "no": 110,
+        "kanji": "小",
+        "keyword": "little"
+    },
+    {
+        "no": 111,
+        "kanji": "少",
+        "keyword": "few"
+    },
+    {
+        "no": 112,
+        "kanji": "大",
+        "keyword": "large"
+    },
+    {
+        "no": 113,
+        "kanji": "多",
+        "keyword": "many"
+    },
+    {
+        "no": 114,
+        "kanji": "夕",
+        "keyword": "evening"
+    },
+    {
+        "no": 115,
+        "kanji": "汐",
+        "keyword": "eventide"
+    },
+    {
+        "no": 116,
+        "kanji": "外",
+        "keyword": "outside"
+    },
+    {
+        "no": 117,
+        "kanji": "名",
+        "keyword": "name"
+    },
+    {
+        "no": 118,
+        "kanji": "石",
+        "keyword": "stone"
+    },
+    {
+        "no": 119,
+        "kanji": "肖",
+        "keyword": "resemblance"
+    },
+    {
+        "no": 120,
+        "kanji": "硝",
+        "keyword": "nitrate"
+    },
+    {
+        "no": 121,
+        "kanji": "砕",
+        "keyword": "smash"
+    },
+    {
+        "no": 122,
+        "kanji": "砂",
+        "keyword": "sand"
+    },
+    {
+        "no": 123,
+        "kanji": "妬",
+        "keyword": "jealous"
+    },
+    {
+        "no": 124,
+        "kanji": "削",
+        "keyword": "plane"
+    },
+    {
+        "no": 125,
+        "kanji": "光",
+        "keyword": "ray"
+    },
+    {
+        "no": 126,
+        "kanji": "太",
+        "keyword": "plump"
+    },
+    {
+        "no": 127,
+        "kanji": "器",
+        "keyword": "utensil"
+    },
+    {
+        "no": 128,
+        "kanji": "臭",
+        "keyword": "stinking"
+    },
+    {
+        "no": 129,
+        "kanji": "嗅",
+        "keyword": "sniff"
+    },
+    {
+        "no": 130,
+        "kanji": "妙",
+        "keyword": "exquisite"
+    },
+    {
+        "no": 131,
+        "kanji": "省",
+        "keyword": "focus"
+    },
+    {
+        "no": 132,
+        "kanji": "厚",
+        "keyword": "thick"
+    },
+    {
+        "no": 133,
+        "kanji": "奇",
+        "keyword": "strange"
+    },
+    {
+        "no": 134,
+        "kanji": "川",
+        "keyword": "stream"
+    },
+    {
+        "no": 135,
+        "kanji": "州",
+        "keyword": "state"
+    },
+    {
+        "no": 136,
+        "kanji": "順",
+        "keyword": "obey"
+    },
+    {
+        "no": 137,
+        "kanji": "水",
+        "keyword": "water"
+    },
+    {
+        "no": 138,
+        "kanji": "氷",
+        "keyword": "icicle"
+    },
+    {
+        "no": 139,
+        "kanji": "永",
+        "keyword": "eternity"
+    },
+    {
+        "no": 140,
+        "kanji": "泉",
+        "keyword": "spring"
+    },
+    {
+        "no": 141,
+        "kanji": "腺",
+        "keyword": "gland"
+    },
+    {
+        "no": 142,
+        "kanji": "原",
+        "keyword": "meadow"
+    },
+    {
+        "no": 143,
+        "kanji": "願",
+        "keyword": "petition"
+    },
+    {
+        "no": 144,
+        "kanji": "泳",
+        "keyword": "swim"
+    },
+    {
+        "no": 145,
+        "kanji": "沼",
+        "keyword": "marsh"
+    },
+    {
+        "no": 146,
+        "kanji": "沖",
+        "keyword": "open sea"
+    },
+    {
+        "no": 147,
+        "kanji": "汎",
+        "keyword": "pan-"
+    },
+    {
+        "no": 148,
+        "kanji": "江",
+        "keyword": "creek"
+    },
+    {
+        "no": 149,
+        "kanji": "汰",
+        "keyword": "cleanse"
+    },
+    {
+        "no": 150,
+        "kanji": "汁",
+        "keyword": "soup"
+    },
+    {
+        "no": 151,
+        "kanji": "沙",
+        "keyword": "grain of sand"
+    },
+    {
+        "no": 152,
+        "kanji": "潮",
+        "keyword": "tide"
+    },
+    {
+        "no": 153,
+        "kanji": "源",
+        "keyword": "source"
+    },
+    {
+        "no": 154,
+        "kanji": "活",
+        "keyword": "lively"
+    },
+    {
+        "no": 155,
+        "kanji": "消",
+        "keyword": "extinguish"
+    },
+    {
+        "no": 156,
+        "kanji": "況",
+        "keyword": "but of course"
+    },
+    {
+        "no": 157,
+        "kanji": "河",
+        "keyword": "river"
+    },
+    {
+        "no": 158,
+        "kanji": "泊",
+        "keyword": "overnight"
+    },
+    {
+        "no": 159,
+        "kanji": "湖",
+        "keyword": "lake"
+    },
+    {
+        "no": 160,
+        "kanji": "測",
+        "keyword": "fathom"
+    },
+    {
+        "no": 161,
+        "kanji": "土",
+        "keyword": "soil"
+    },
+    {
+        "no": 162,
+        "kanji": "吐",
+        "keyword": "spit"
+    },
+    {
+        "no": 163,
+        "kanji": "圧",
+        "keyword": "pressure"
+    },
+    {
+        "no": 164,
+        "kanji": "埼",
+        "keyword": "cape"
+    },
+    {
+        "no": 165,
+        "kanji": "垣",
+        "keyword": "hedge"
+    },
+    {
+        "no": 166,
+        "kanji": "填",
+        "keyword": "inlay"
+    },
+    {
+        "no": 167,
+        "kanji": "圭",
+        "keyword": "squared jewel"
+    },
+    {
+        "no": 168,
+        "kanji": "封",
+        "keyword": "seal"
+    },
+    {
+        "no": 169,
+        "kanji": "涯",
+        "keyword": "horizon"
+    },
+    {
+        "no": 170,
+        "kanji": "寺",
+        "keyword": "Buddhist temple"
+    },
+    {
+        "no": 171,
+        "kanji": "時",
+        "keyword": "time"
+    },
+    {
+        "no": 172,
+        "kanji": "均",
+        "keyword": "level"
+    },
+    {
+        "no": 173,
+        "kanji": "火",
+        "keyword": "fire"
+    },
+    {
+        "no": 174,
+        "kanji": "炎",
+        "keyword": "inflammation"
+    },
+    {
+        "no": 175,
+        "kanji": "煩",
+        "keyword": "anxiety"
+    },
+    {
+        "no": 176,
+        "kanji": "淡",
+        "keyword": "thin"
+    },
+    {
+        "no": 177,
+        "kanji": "灯",
+        "keyword": "lamp"
+    },
+    {
+        "no": 178,
+        "kanji": "畑",
+        "keyword": "farm"
+    },
+    {
+        "no": 179,
+        "kanji": "災",
+        "keyword": "disaster"
+    },
+    {
+        "no": 180,
+        "kanji": "灰",
+        "keyword": "ashes"
+    },
+    {
+        "no": 181,
+        "kanji": "点",
+        "keyword": "spot"
+    },
+    {
+        "no": 182,
+        "kanji": "照",
+        "keyword": "illuminate"
+    },
+    {
+        "no": 183,
+        "kanji": "魚",
+        "keyword": "fish"
+    },
+    {
+        "no": 184,
+        "kanji": "漁",
+        "keyword": "fishing"
+    },
+    {
+        "no": 185,
+        "kanji": "里",
+        "keyword": "ri"
+    },
+    {
+        "no": 186,
+        "kanji": "黒",
+        "keyword": "black"
+    },
+    {
+        "no": 187,
+        "kanji": "墨",
+        "keyword": "black ink"
+    },
+    {
+        "no": 188,
+        "kanji": "鯉",
+        "keyword": "carp"
+    },
+    {
+        "no": 189,
+        "kanji": "量",
+        "keyword": "quantity"
+    },
+    {
+        "no": 190,
+        "kanji": "厘",
+        "keyword": "rin"
+    },
+    {
+        "no": 191,
+        "kanji": "埋",
+        "keyword": "bury"
+    },
+    {
+        "no": 192,
+        "kanji": "同",
+        "keyword": "same"
+    },
+    {
+        "no": 193,
+        "kanji": "洞",
+        "keyword": "den"
+    },
+    {
+        "no": 194,
+        "kanji": "胴",
+        "keyword": "trunk"
+    },
+    {
+        "no": 195,
+        "kanji": "向",
+        "keyword": "yonder"
+    },
+    {
+        "no": 196,
+        "kanji": "尚",
+        "keyword": "esteem"
+    },
+    {
+        "no": 197,
+        "kanji": "字",
+        "keyword": "character"
+    },
+    {
+        "no": 198,
+        "kanji": "守",
+        "keyword": "guard"
+    },
+    {
+        "no": 199,
+        "kanji": "完",
+        "keyword": "perfect"
+    },
+    {
+        "no": 200,
+        "kanji": "宣",
+        "keyword": "proclaim"
+    },
+    {
+        "no": 201,
+        "kanji": "宵",
+        "keyword": "wee hours"
+    },
+    {
+        "no": 202,
+        "kanji": "安",
+        "keyword": "relax"
+    },
+    {
+        "no": 203,
+        "kanji": "宴",
+        "keyword": "banquet"
+    },
+    {
+        "no": 204,
+        "kanji": "寄",
+        "keyword": "draw near"
+    },
+    {
+        "no": 205,
+        "kanji": "富",
+        "keyword": "wealth"
+    },
+    {
+        "no": 206,
+        "kanji": "貯",
+        "keyword": "savings"
+    },
+    {
+        "no": 207,
+        "kanji": "木",
+        "keyword": "tree"
+    },
+    {
+        "no": 208,
+        "kanji": "林",
+        "keyword": "grove"
+    },
+    {
+        "no": 209,
+        "kanji": "森",
+        "keyword": "forest"
+    },
+    {
+        "no": 210,
+        "kanji": "桂",
+        "keyword": "Japanese Judas-tree"
+    },
+    {
+        "no": 211,
+        "kanji": "柏",
+        "keyword": "oak"
+    },
+    {
+        "no": 212,
+        "kanji": "枠",
+        "keyword": "frame"
+    },
+    {
+        "no": 213,
+        "kanji": "梢",
+        "keyword": "treetops"
+    },
+    {
+        "no": 214,
+        "kanji": "棚",
+        "keyword": "shelf"
+    },
+    {
+        "no": 215,
+        "kanji": "杏",
+        "keyword": "apricot"
+    },
+    {
+        "no": 216,
+        "kanji": "桐",
+        "keyword": "paulownia"
+    },
+    {
+        "no": 217,
+        "kanji": "植",
+        "keyword": "plant"
+    },
+    {
+        "no": 218,
+        "kanji": "椅",
+        "keyword": "chair"
+    },
+    {
+        "no": 219,
+        "kanji": "枯",
+        "keyword": "wither"
+    },
+    {
+        "no": 220,
+        "kanji": "朴",
+        "keyword": "crude"
+    },
+    {
+        "no": 221,
+        "kanji": "村",
+        "keyword": "town"
+    },
+    {
+        "no": 222,
+        "kanji": "相",
+        "keyword": "inter-"
+    },
+    {
+        "no": 223,
+        "kanji": "机",
+        "keyword": "desk"
+    },
+    {
+        "no": 224,
+        "kanji": "本",
+        "keyword": "book"
+    },
+    {
+        "no": 225,
+        "kanji": "札",
+        "keyword": "tag"
+    },
+    {
+        "no": 226,
+        "kanji": "暦",
+        "keyword": "calendar"
+    },
+    {
+        "no": 227,
+        "kanji": "案",
+        "keyword": "plan"
+    },
+    {
+        "no": 228,
+        "kanji": "燥",
+        "keyword": "parch"
+    },
+    {
+        "no": 229,
+        "kanji": "未",
+        "keyword": "not yet"
+    },
+    {
+        "no": 230,
+        "kanji": "末",
+        "keyword": "extremity"
+    },
+    {
+        "no": 231,
+        "kanji": "昧",
+        "keyword": "obscure"
+    },
+    {
+        "no": 232,
+        "kanji": "沫",
+        "keyword": "splash"
+    },
+    {
+        "no": 233,
+        "kanji": "味",
+        "keyword": "flavor"
+    },
+    {
+        "no": 234,
+        "kanji": "妹",
+        "keyword": "younger sister"
+    },
+    {
+        "no": 235,
+        "kanji": "朱",
+        "keyword": "vermilion"
+    },
+    {
+        "no": 236,
+        "kanji": "株",
+        "keyword": "stocks"
+    },
+    {
+        "no": 237,
+        "kanji": "若",
+        "keyword": "young"
+    },
+    {
+        "no": 238,
+        "kanji": "草",
+        "keyword": "grass"
+    },
+    {
+        "no": 239,
+        "kanji": "苦",
+        "keyword": "suffering"
+    },
+    {
+        "no": 240,
+        "kanji": "苛",
+        "keyword": "bullying"
+    },
+    {
+        "no": 241,
+        "kanji": "寛",
+        "keyword": "tolerant"
+    },
+    {
+        "no": 242,
+        "kanji": "薄",
+        "keyword": "dilute"
+    },
+    {
+        "no": 243,
+        "kanji": "葉",
+        "keyword": "leaf"
+    },
+    {
+        "no": 244,
+        "kanji": "模",
+        "keyword": "imitation"
+    },
+    {
+        "no": 245,
+        "kanji": "漠",
+        "keyword": "vague"
+    },
+    {
+        "no": 246,
+        "kanji": "墓",
+        "keyword": "grave"
+    },
+    {
+        "no": 247,
+        "kanji": "暮",
+        "keyword": "livelihood"
+    },
+    {
+        "no": 248,
+        "kanji": "膜",
+        "keyword": "membrane"
+    },
+    {
+        "no": 249,
+        "kanji": "苗",
+        "keyword": "seedling"
+    },
+    {
+        "no": 250,
+        "kanji": "兆",
+        "keyword": "portent"
+    },
+    {
+        "no": 251,
+        "kanji": "桃",
+        "keyword": "peach tree"
+    },
+    {
+        "no": 252,
+        "kanji": "眺",
+        "keyword": "stare"
+    },
+    {
+        "no": 253,
+        "kanji": "犬",
+        "keyword": "dog"
+    },
+    {
+        "no": 254,
+        "kanji": "状",
+        "keyword": "status quo"
+    },
+    {
+        "no": 255,
+        "kanji": "黙",
+        "keyword": "silence"
+    },
+    {
+        "no": 256,
+        "kanji": "然",
+        "keyword": "sort of thing"
+    },
+    {
+        "no": 257,
+        "kanji": "荻",
+        "keyword": "reed"
+    },
+    {
+        "no": 258,
+        "kanji": "狩",
+        "keyword": "hunt"
+    },
+    {
+        "no": 259,
+        "kanji": "猫",
+        "keyword": "cat"
+    },
+    {
+        "no": 260,
+        "kanji": "牛",
+        "keyword": "cow"
+    },
+    {
+        "no": 261,
+        "kanji": "特",
+        "keyword": "special"
+    },
+    {
+        "no": 262,
+        "kanji": "告",
+        "keyword": "revelation"
+    },
+    {
+        "no": 263,
+        "kanji": "先",
+        "keyword": "before"
+    },
+    {
+        "no": 264,
+        "kanji": "洗",
+        "keyword": "wash"
+    },
+    {
+        "no": 265,
+        "kanji": "介",
+        "keyword": "jammed in"
+    },
+    {
+        "no": 266,
+        "kanji": "界",
+        "keyword": "world"
+    },
+    {
+        "no": 267,
+        "kanji": "茶",
+        "keyword": "tea"
+    },
+    {
+        "no": 268,
+        "kanji": "脊",
+        "keyword": "spinal column"
+    },
+    {
+        "no": 269,
+        "kanji": "合",
+        "keyword": "fit"
+    },
+    {
+        "no": 270,
+        "kanji": "塔",
+        "keyword": "pagoda"
+    },
+    {
+        "no": 271,
+        "kanji": "王",
+        "keyword": "king"
+    },
+    {
+        "no": 272,
+        "kanji": "玉",
+        "keyword": "jewel"
+    },
+    {
+        "no": 273,
+        "kanji": "宝",
+        "keyword": "treasure"
+    },
+    {
+        "no": 274,
+        "kanji": "珠",
+        "keyword": "pearl"
+    },
+    {
+        "no": 275,
+        "kanji": "現",
+        "keyword": "present"
+    },
+    {
+        "no": 276,
+        "kanji": "玩",
+        "keyword": "toy"
+    },
+    {
+        "no": 277,
+        "kanji": "狂",
+        "keyword": "lunatic"
+    },
+    {
+        "no": 278,
+        "kanji": "旺",
+        "keyword": "effulgent"
+    },
+    {
+        "no": 279,
+        "kanji": "皇",
+        "keyword": "emperor"
+    },
+    {
+        "no": 280,
+        "kanji": "呈",
+        "keyword": "display"
+    },
+    {
+        "no": 281,
+        "kanji": "全",
+        "keyword": "whole"
+    },
+    {
+        "no": 282,
+        "kanji": "栓",
+        "keyword": "plug"
+    },
+    {
+        "no": 283,
+        "kanji": "理",
+        "keyword": "logic"
+    },
+    {
+        "no": 284,
+        "kanji": "主",
+        "keyword": "lord"
+    },
+    {
+        "no": 285,
+        "kanji": "注",
+        "keyword": "pour"
+    },
+    {
+        "no": 286,
+        "kanji": "柱",
+        "keyword": "pillar"
+    },
+    {
+        "no": 287,
+        "kanji": "金",
+        "keyword": "gold"
+    },
+    {
+        "no": 288,
+        "kanji": "銑",
+        "keyword": "pig-iron"
+    },
+    {
+        "no": 289,
+        "kanji": "鉢",
+        "keyword": "bowl"
+    },
+    {
+        "no": 290,
+        "kanji": "銅",
+        "keyword": "copper"
+    },
+    {
+        "no": 291,
+        "kanji": "釣",
+        "keyword": "angling"
+    },
+    {
+        "no": 292,
+        "kanji": "針",
+        "keyword": "needle"
+    },
+    {
+        "no": 293,
+        "kanji": "銘",
+        "keyword": "inscription"
+    },
+    {
+        "no": 294,
+        "kanji": "鎮",
+        "keyword": "tranquillize"
+    },
+    {
+        "no": 295,
+        "kanji": "道",
+        "keyword": "road-way"
+    },
+    {
+        "no": 296,
+        "kanji": "導",
+        "keyword": "guidance"
+    },
+    {
+        "no": 297,
+        "kanji": "辻",
+        "keyword": "crossing"
+    },
+    {
+        "no": 298,
+        "kanji": "迅",
+        "keyword": "swift"
+    },
+    {
+        "no": 299,
+        "kanji": "造",
+        "keyword": "create"
+    },
+    {
+        "no": 300,
+        "kanji": "迫",
+        "keyword": "urge"
+    },
+    {
+        "no": 301,
+        "kanji": "逃",
+        "keyword": "escape"
+    },
+    {
+        "no": 302,
+        "kanji": "辺",
+        "keyword": "environs"
+    },
+    {
+        "no": 303,
+        "kanji": "巡",
+        "keyword": "patrol"
+    },
+    {
+        "no": 304,
+        "kanji": "車",
+        "keyword": "car"
+    },
+    {
+        "no": 305,
+        "kanji": "連",
+        "keyword": "take along"
+    },
+    {
+        "no": 306,
+        "kanji": "軌",
+        "keyword": "rut"
+    },
+    {
+        "no": 307,
+        "kanji": "輸",
+        "keyword": "transport"
+    },
+    {
+        "no": 308,
+        "kanji": "喻",
+        "keyword": "metaphor"
+    },
+    {
+        "no": 309,
+        "kanji": "前",
+        "keyword": "in front"
+    },
+    {
+        "no": 310,
+        "kanji": "煎",
+        "keyword": "roast"
+    },
+    {
+        "no": 311,
+        "kanji": "各",
+        "keyword": "each"
+    },
+    {
+        "no": 312,
+        "kanji": "格",
+        "keyword": "status"
+    },
+    {
+        "no": 313,
+        "kanji": "賂",
+        "keyword": "graft"
+    },
+    {
+        "no": 314,
+        "kanji": "略",
+        "keyword": "abbreviation"
+    },
+    {
+        "no": 315,
+        "kanji": "客",
+        "keyword": "guest"
+    },
+    {
+        "no": 316,
+        "kanji": "額",
+        "keyword": "forehead"
+    },
+    {
+        "no": 317,
+        "kanji": "夏",
+        "keyword": "summer"
+    },
+    {
+        "no": 318,
+        "kanji": "処",
+        "keyword": "dispose"
+    },
+    {
+        "no": 319,
+        "kanji": "条",
+        "keyword": "twig"
+    },
+    {
+        "no": 320,
+        "kanji": "落",
+        "keyword": "fall -- verb"
+    },
+    {
+        "no": 321,
+        "kanji": "冗",
+        "keyword": "superfluous"
+    },
+    {
+        "no": 322,
+        "kanji": "冥",
+        "keyword": "Hades"
+    },
+    {
+        "no": 323,
+        "kanji": "軍",
+        "keyword": "army"
+    },
+    {
+        "no": 324,
+        "kanji": "輝",
+        "keyword": "radiance"
+    },
+    {
+        "no": 325,
+        "kanji": "運",
+        "keyword": "carry"
+    },
+    {
+        "no": 326,
+        "kanji": "冠",
+        "keyword": "crown"
+    },
+    {
+        "no": 327,
+        "kanji": "夢",
+        "keyword": "dream"
+    },
+    {
+        "no": 328,
+        "kanji": "坑",
+        "keyword": "pit"
+    },
+    {
+        "no": 329,
+        "kanji": "高",
+        "keyword": "tall"
+    },
+    {
+        "no": 330,
+        "kanji": "享",
+        "keyword": "receive"
+    },
+    {
+        "no": 331,
+        "kanji": "塾",
+        "keyword": "cram school"
+    },
+    {
+        "no": 332,
+        "kanji": "熟",
+        "keyword": "mellow"
+    },
+    {
+        "no": 333,
+        "kanji": "亭",
+        "keyword": "pavilion"
+    },
+    {
+        "no": 334,
+        "kanji": "京",
+        "keyword": "capital"
+    },
+    {
+        "no": 335,
+        "kanji": "涼",
+        "keyword": "refreshing"
+    },
+    {
+        "no": 336,
+        "kanji": "景",
+        "keyword": "scenery"
+    },
+    {
+        "no": 337,
+        "kanji": "鯨",
+        "keyword": "whale"
+    },
+    {
+        "no": 338,
+        "kanji": "舎",
+        "keyword": "cottage"
+    },
+    {
+        "no": 339,
+        "kanji": "周",
+        "keyword": "circumference"
+    },
+    {
+        "no": 340,
+        "kanji": "週",
+        "keyword": "week"
+    },
+    {
+        "no": 341,
+        "kanji": "士",
+        "keyword": "gentleman"
+    },
+    {
+        "no": 342,
+        "kanji": "吉",
+        "keyword": "good luck"
+    },
+    {
+        "no": 343,
+        "kanji": "壮",
+        "keyword": "robust"
+    },
+    {
+        "no": 344,
+        "kanji": "荘",
+        "keyword": "villa"
+    },
+    {
+        "no": 345,
+        "kanji": "売",
+        "keyword": "sell"
+    },
+    {
+        "no": 346,
+        "kanji": "学",
+        "keyword": "study"
+    },
+    {
+        "no": 347,
+        "kanji": "覚",
+        "keyword": "memorize"
+    },
+    {
+        "no": 348,
+        "kanji": "栄",
+        "keyword": "flourish"
+    },
+    {
+        "no": 349,
+        "kanji": "書",
+        "keyword": "write"
+    },
+    {
+        "no": 350,
+        "kanji": "津",
+        "keyword": "haven"
+    },
+    {
+        "no": 351,
+        "kanji": "牧",
+        "keyword": "breed"
+    },
+    {
+        "no": 352,
+        "kanji": "攻",
+        "keyword": "aggression"
+    },
+    {
+        "no": 353,
+        "kanji": "敗",
+        "keyword": "failure"
+    },
+    {
+        "no": 354,
+        "kanji": "枚",
+        "keyword": "a sheet of"
+    },
+    {
+        "no": 355,
+        "kanji": "故",
+        "keyword": "happenstance"
+    },
+    {
+        "no": 356,
+        "kanji": "敬",
+        "keyword": "awe"
+    },
+    {
+        "no": 357,
+        "kanji": "言",
+        "keyword": "say"
+    },
+    {
+        "no": 358,
+        "kanji": "警",
+        "keyword": "admonish"
+    },
+    {
+        "no": 359,
+        "kanji": "計",
+        "keyword": "plot"
+    },
+    {
+        "no": 360,
+        "kanji": "詮",
+        "keyword": "elucidate"
+    },
+    {
+        "no": 361,
+        "kanji": "獄",
+        "keyword": "prison"
+    },
+    {
+        "no": 362,
+        "kanji": "訂",
+        "keyword": "revise"
+    },
+    {
+        "no": 363,
+        "kanji": "訃",
+        "keyword": "obituary"
+    },
+    {
+        "no": 364,
+        "kanji": "討",
+        "keyword": "chastise"
+    },
+    {
+        "no": 365,
+        "kanji": "訓",
+        "keyword": "instruction"
+    },
+    {
+        "no": 366,
+        "kanji": "詔",
+        "keyword": "imperial edict"
+    },
+    {
+        "no": 367,
+        "kanji": "詰",
+        "keyword": "packed"
+    },
+    {
+        "no": 368,
+        "kanji": "話",
+        "keyword": "tale"
+    },
+    {
+        "no": 369,
+        "kanji": "詠",
+        "keyword": "recitation"
+    },
+    {
+        "no": 370,
+        "kanji": "詩",
+        "keyword": "poem"
+    },
+    {
+        "no": 371,
+        "kanji": "語",
+        "keyword": "word"
+    },
+    {
+        "no": 372,
+        "kanji": "読",
+        "keyword": "read"
+    },
+    {
+        "no": 373,
+        "kanji": "調",
+        "keyword": "tune"
+    },
+    {
+        "no": 374,
+        "kanji": "談",
+        "keyword": "discuss"
+    },
+    {
+        "no": 375,
+        "kanji": "諾",
+        "keyword": "consent"
+    },
+    {
+        "no": 376,
+        "kanji": "諭",
+        "keyword": "rebuke"
+    },
+    {
+        "no": 377,
+        "kanji": "式",
+        "keyword": "style"
+    },
+    {
+        "no": 378,
+        "kanji": "試",
+        "keyword": "test"
+    },
+    {
+        "no": 379,
+        "kanji": "弐",
+        "keyword": "II (two)"
+    },
+    {
+        "no": 380,
+        "kanji": "域",
+        "keyword": "range"
+    },
+    {
+        "no": 381,
+        "kanji": "賊",
+        "keyword": "burglar"
+    },
+    {
+        "no": 382,
+        "kanji": "栽",
+        "keyword": "plantation"
+    },
+    {
+        "no": 383,
+        "kanji": "載",
+        "keyword": "load"
+    },
+    {
+        "no": 384,
+        "kanji": "茂",
+        "keyword": "overgrown"
+    },
+    {
+        "no": 385,
+        "kanji": "戚",
+        "keyword": "relatives"
+    },
+    {
+        "no": 386,
+        "kanji": "成",
+        "keyword": "turn into"
+    },
+    {
+        "no": 387,
+        "kanji": "城",
+        "keyword": "castle"
+    },
+    {
+        "no": 388,
+        "kanji": "誠",
+        "keyword": "sincerity"
+    },
+    {
+        "no": 389,
+        "kanji": "威",
+        "keyword": "intimidate"
+    },
+    {
+        "no": 390,
+        "kanji": "滅",
+        "keyword": "destroy"
+    },
+    {
+        "no": 391,
+        "kanji": "減",
+        "keyword": "dwindle"
+    },
+    {
+        "no": 392,
+        "kanji": "蔑",
+        "keyword": "revile"
+    },
+    {
+        "no": 393,
+        "kanji": "桟",
+        "keyword": "scaffold"
+    },
+    {
+        "no": 394,
+        "kanji": "銭",
+        "keyword": "coin"
+    },
+    {
+        "no": 395,
+        "kanji": "浅",
+        "keyword": "shallow"
+    },
+    {
+        "no": 396,
+        "kanji": "止",
+        "keyword": "stop"
+    },
+    {
+        "no": 397,
+        "kanji": "歩",
+        "keyword": "walk"
+    },
+    {
+        "no": 398,
+        "kanji": "渉",
+        "keyword": "ford"
+    },
+    {
+        "no": 399,
+        "kanji": "頻",
+        "keyword": "repeatedly"
+    },
+    {
+        "no": 400,
+        "kanji": "肯",
+        "keyword": "agreement"
+    },
+    {
+        "no": 401,
+        "kanji": "企",
+        "keyword": "undertake"
+    },
+    {
+        "no": 402,
+        "kanji": "歴",
+        "keyword": "curriculum"
+    },
+    {
+        "no": 403,
+        "kanji": "武",
+        "keyword": "warrior"
+    },
+    {
+        "no": 404,
+        "kanji": "賦",
+        "keyword": "levy"
+    },
+    {
+        "no": 405,
+        "kanji": "正",
+        "keyword": "correct"
+    },
+    {
+        "no": 406,
+        "kanji": "証",
+        "keyword": "evidence"
+    },
+    {
+        "no": 407,
+        "kanji": "政",
+        "keyword": "politics"
+    },
+    {
+        "no": 408,
+        "kanji": "定",
+        "keyword": "determine"
+    },
+    {
+        "no": 409,
+        "kanji": "錠",
+        "keyword": "lock"
+    },
+    {
+        "no": 410,
+        "kanji": "走",
+        "keyword": "run"
+    },
+    {
+        "no": 411,
+        "kanji": "超",
+        "keyword": "transcend"
+    },
+    {
+        "no": 412,
+        "kanji": "赴",
+        "keyword": "proceed"
+    },
+    {
+        "no": 413,
+        "kanji": "越",
+        "keyword": "surpass"
+    },
+    {
+        "no": 414,
+        "kanji": "是",
+        "keyword": "just so"
+    },
+    {
+        "no": 415,
+        "kanji": "題",
+        "keyword": "topic"
+    },
+    {
+        "no": 416,
+        "kanji": "堤",
+        "keyword": "dike"
+    },
+    {
+        "no": 417,
+        "kanji": "建",
+        "keyword": "build"
+    },
+    {
+        "no": 418,
+        "kanji": "鍵",
+        "keyword": "key"
+    },
+    {
+        "no": 419,
+        "kanji": "延",
+        "keyword": "prolong"
+    },
+    {
+        "no": 420,
+        "kanji": "誕",
+        "keyword": "nativity"
+    },
+    {
+        "no": 421,
+        "kanji": "礎",
+        "keyword": "cornerstone"
+    },
+    {
+        "no": 422,
+        "kanji": "婿",
+        "keyword": "bridegroom"
+    },
+    {
+        "no": 423,
+        "kanji": "衣",
+        "keyword": "garment"
+    },
+    {
+        "no": 424,
+        "kanji": "裁",
+        "keyword": "tailor"
+    },
+    {
+        "no": 425,
+        "kanji": "装",
+        "keyword": "attire"
+    },
+    {
+        "no": 426,
+        "kanji": "裏",
+        "keyword": "back"
+    },
+    {
+        "no": 427,
+        "kanji": "壊",
+        "keyword": "demolition"
+    },
+    {
+        "no": 428,
+        "kanji": "哀",
+        "keyword": "pathetic"
+    },
+    {
+        "no": 429,
+        "kanji": "遠",
+        "keyword": "distant"
+    },
+    {
+        "no": 430,
+        "kanji": "猿",
+        "keyword": "monkey"
+    },
+    {
+        "no": 431,
+        "kanji": "初",
+        "keyword": "first time"
+    },
+    {
+        "no": 432,
+        "kanji": "巾",
+        "keyword": "towel"
+    },
+    {
+        "no": 433,
+        "kanji": "布",
+        "keyword": "linen"
+    },
+    {
+        "no": 434,
+        "kanji": "帆",
+        "keyword": "sail"
+    },
+    {
+        "no": 435,
+        "kanji": "幅",
+        "keyword": "hanging scroll"
+    },
+    {
+        "no": 436,
+        "kanji": "帽",
+        "keyword": "cap"
+    },
+    {
+        "no": 437,
+        "kanji": "幕",
+        "keyword": "curtain"
+    },
+    {
+        "no": 438,
+        "kanji": "幌",
+        "keyword": "canopy"
+    },
+    {
+        "no": 439,
+        "kanji": "錦",
+        "keyword": "brocade"
+    },
+    {
+        "no": 440,
+        "kanji": "市",
+        "keyword": "market"
+    },
+    {
+        "no": 441,
+        "kanji": "柿",
+        "keyword": "persimmon"
+    },
+    {
+        "no": 442,
+        "kanji": "姉",
+        "keyword": "elder sister"
+    },
+    {
+        "no": 443,
+        "kanji": "肺",
+        "keyword": "lungs"
+    },
+    {
+        "no": 444,
+        "kanji": "帯",
+        "keyword": "sash"
+    },
+    {
+        "no": 445,
+        "kanji": "滞",
+        "keyword": "stagnate"
+    },
+    {
+        "no": 446,
+        "kanji": "刺",
+        "keyword": "thorn"
+    },
+    {
+        "no": 447,
+        "kanji": "制",
+        "keyword": "system"
+    },
+    {
+        "no": 448,
+        "kanji": "製",
+        "keyword": "made in..."
+    },
+    {
+        "no": 449,
+        "kanji": "転",
+        "keyword": "revolve"
+    },
+    {
+        "no": 450,
+        "kanji": "芸",
+        "keyword": "technique"
+    },
+    {
+        "no": 451,
+        "kanji": "雨",
+        "keyword": "rain"
+    },
+    {
+        "no": 452,
+        "kanji": "雲",
+        "keyword": "cloud"
+    },
+    {
+        "no": 453,
+        "kanji": "曇",
+        "keyword": "cloudy weather"
+    },
+    {
+        "no": 454,
+        "kanji": "雷",
+        "keyword": "thunder"
+    },
+    {
+        "no": 455,
+        "kanji": "霜",
+        "keyword": "frost"
+    },
+    {
+        "no": 456,
+        "kanji": "冬",
+        "keyword": "winter"
+    },
+    {
+        "no": 457,
+        "kanji": "天",
+        "keyword": "heavens"
+    },
+    {
+        "no": 458,
+        "kanji": "妖",
+        "keyword": "bewitched"
+    },
+    {
+        "no": 459,
+        "kanji": "沃",
+        "keyword": "irrigate"
+    },
+    {
+        "no": 460,
+        "kanji": "橋",
+        "keyword": "bridge"
+    },
+    {
+        "no": 461,
+        "kanji": "嬌",
+        "keyword": "attractive"
+    },
+    {
+        "no": 462,
+        "kanji": "立",
+        "keyword": "stand up"
+    },
+    {
+        "no": 463,
+        "kanji": "泣",
+        "keyword": "cry"
+    },
+    {
+        "no": 464,
+        "kanji": "章",
+        "keyword": "badge"
+    },
+    {
+        "no": 465,
+        "kanji": "競",
+        "keyword": "vie"
+    },
+    {
+        "no": 466,
+        "kanji": "帝",
+        "keyword": "sovereign"
+    },
+    {
+        "no": 467,
+        "kanji": "諦",
+        "keyword": "renunciation"
+    },
+    {
+        "no": 468,
+        "kanji": "童",
+        "keyword": "juvenile"
+    },
+    {
+        "no": 469,
+        "kanji": "瞳",
+        "keyword": "pupil"
+    },
+    {
+        "no": 470,
+        "kanji": "鐘",
+        "keyword": "bell"
+    },
+    {
+        "no": 471,
+        "kanji": "商",
+        "keyword": "make a deal"
+    },
+    {
+        "no": 472,
+        "kanji": "嫡",
+        "keyword": "legitimate wife"
+    },
+    {
+        "no": 473,
+        "kanji": "適",
+        "keyword": "suitable"
+    },
+    {
+        "no": 474,
+        "kanji": "滴",
+        "keyword": "drip"
+    },
+    {
+        "no": 475,
+        "kanji": "敵",
+        "keyword": "enemy"
+    },
+    {
+        "no": 476,
+        "kanji": "匕",
+        "keyword": "spoon"
+    },
+    {
+        "no": 477,
+        "kanji": "叱",
+        "keyword": "scold"
+    },
+    {
+        "no": 478,
+        "kanji": "匂",
+        "keyword": "aroma"
+    },
+    {
+        "no": 479,
+        "kanji": "頃",
+        "keyword": "about that time"
+    },
+    {
+        "no": 480,
+        "kanji": "北",
+        "keyword": "north"
+    },
+    {
+        "no": 481,
+        "kanji": "背",
+        "keyword": "stature"
+    },
+    {
+        "no": 482,
+        "kanji": "比",
+        "keyword": "compare"
+    },
+    {
+        "no": 483,
+        "kanji": "昆",
+        "keyword": "descendants"
+    },
+    {
+        "no": 484,
+        "kanji": "皆",
+        "keyword": "all"
+    },
+    {
+        "no": 485,
+        "kanji": "楷",
+        "keyword": "block letters"
+    },
+    {
+        "no": 486,
+        "kanji": "諧",
+        "keyword": "orderliness"
+    },
+    {
+        "no": 487,
+        "kanji": "混",
+        "keyword": "mix"
+    },
+    {
+        "no": 488,
+        "kanji": "渇",
+        "keyword": "thirst"
+    },
+    {
+        "no": 489,
+        "kanji": "謁",
+        "keyword": "audience"
+    },
+    {
+        "no": 490,
+        "kanji": "褐",
+        "keyword": "brown"
+    },
+    {
+        "no": 491,
+        "kanji": "喝",
+        "keyword": "hoarse"
+    },
+    {
+        "no": 492,
+        "kanji": "葛",
+        "keyword": "kudzu"
+    },
+    {
+        "no": 493,
+        "kanji": "旨",
+        "keyword": "delicious"
+    },
+    {
+        "no": 494,
+        "kanji": "脂",
+        "keyword": "fat"
+    },
+    {
+        "no": 495,
+        "kanji": "詣",
+        "keyword": "visit a shrine"
+    },
+    {
+        "no": 496,
+        "kanji": "壱",
+        "keyword": "I (one)"
+    },
+    {
+        "no": 497,
+        "kanji": "毎",
+        "keyword": "every"
+    },
+    {
+        "no": 498,
+        "kanji": "敏",
+        "keyword": "cleverness"
+    },
+    {
+        "no": 499,
+        "kanji": "梅",
+        "keyword": "plum"
+    },
+    {
+        "no": 500,
+        "kanji": "海",
+        "keyword": "sea"
+    },
+    {
+        "no": 501,
+        "kanji": "乞",
+        "keyword": "beg"
+    },
+    {
+        "no": 502,
+        "kanji": "乾",
+        "keyword": "drought"
+    },
+    {
+        "no": 503,
+        "kanji": "腹",
+        "keyword": "abdomen"
+    },
+    {
+        "no": 504,
+        "kanji": "複",
+        "keyword": "duplicate"
+    },
+    {
+        "no": 505,
+        "kanji": "欠",
+        "keyword": "lack"
+    },
+    {
+        "no": 506,
+        "kanji": "吹",
+        "keyword": "blow"
+    },
+    {
+        "no": 507,
+        "kanji": "炊",
+        "keyword": "cook"
+    },
+    {
+        "no": 508,
+        "kanji": "歌",
+        "keyword": "song"
+    },
+    {
+        "no": 509,
+        "kanji": "軟",
+        "keyword": "soft"
+    },
+    {
+        "no": 510,
+        "kanji": "次",
+        "keyword": "next"
+    },
+    {
+        "no": 511,
+        "kanji": "茨",
+        "keyword": "briar"
+    },
+    {
+        "no": 512,
+        "kanji": "資",
+        "keyword": "assets"
+    },
+    {
+        "no": 513,
+        "kanji": "姿",
+        "keyword": "figure"
+    },
+    {
+        "no": 514,
+        "kanji": "諮",
+        "keyword": "consult with"
+    },
+    {
+        "no": 515,
+        "kanji": "賠",
+        "keyword": "compensation"
+    },
+    {
+        "no": 516,
+        "kanji": "培",
+        "keyword": "cultivate"
+    },
+    {
+        "no": 517,
+        "kanji": "剖",
+        "keyword": "divide"
+    },
+    {
+        "no": 518,
+        "kanji": "音",
+        "keyword": "sound"
+    },
+    {
+        "no": 519,
+        "kanji": "暗",
+        "keyword": "darkness"
+    },
+    {
+        "no": 520,
+        "kanji": "韻",
+        "keyword": "rhyme"
+    },
+    {
+        "no": 521,
+        "kanji": "識",
+        "keyword": "discriminating"
+    },
+    {
+        "no": 522,
+        "kanji": "鏡",
+        "keyword": "mirror"
+    },
+    {
+        "no": 523,
+        "kanji": "境",
+        "keyword": "boundary"
+    },
+    {
+        "no": 524,
+        "kanji": "亡",
+        "keyword": "deceased"
+    },
+    {
+        "no": 525,
+        "kanji": "盲",
+        "keyword": "blind"
+    },
+    {
+        "no": 526,
+        "kanji": "妄",
+        "keyword": "delusion"
+    },
+    {
+        "no": 527,
+        "kanji": "荒",
+        "keyword": "laid waste"
+    },
+    {
+        "no": 528,
+        "kanji": "望",
+        "keyword": "ambition"
+    },
+    {
+        "no": 529,
+        "kanji": "方",
+        "keyword": "direction"
+    },
+    {
+        "no": 530,
+        "kanji": "妨",
+        "keyword": "disturb"
+    },
+    {
+        "no": 531,
+        "kanji": "坊",
+        "keyword": "boy"
+    },
+    {
+        "no": 532,
+        "kanji": "芳",
+        "keyword": "perfumed"
+    },
+    {
+        "no": 533,
+        "kanji": "肪",
+        "keyword": "obese"
+    },
+    {
+        "no": 534,
+        "kanji": "訪",
+        "keyword": "call on"
+    },
+    {
+        "no": 535,
+        "kanji": "放",
+        "keyword": "set free"
+    },
+    {
+        "no": 536,
+        "kanji": "激",
+        "keyword": "violent"
+    },
+    {
+        "no": 537,
+        "kanji": "脱",
+        "keyword": "undress"
+    },
+    {
+        "no": 538,
+        "kanji": "説",
+        "keyword": "explanation"
+    },
+    {
+        "no": 539,
+        "kanji": "鋭",
+        "keyword": "pointed"
+    },
+    {
+        "no": 540,
+        "kanji": "曽",
+        "keyword": "formerly"
+    },
+    {
+        "no": 541,
+        "kanji": "増",
+        "keyword": "increase *"
+    },
+    {
+        "no": 542,
+        "kanji": "贈",
+        "keyword": "presents"
+    },
+    {
+        "no": 543,
+        "kanji": "東",
+        "keyword": "east"
+    },
+    {
+        "no": 544,
+        "kanji": "棟",
+        "keyword": "ridgepole"
+    },
+    {
+        "no": 545,
+        "kanji": "凍",
+        "keyword": "frozen"
+    },
+    {
+        "no": 546,
+        "kanji": "妊",
+        "keyword": "pregnancy"
+    },
+    {
+        "no": 547,
+        "kanji": "廷",
+        "keyword": "courts"
+    },
+    {
+        "no": 548,
+        "kanji": "染",
+        "keyword": "dye"
+    },
+    {
+        "no": 549,
+        "kanji": "燃",
+        "keyword": "burn"
+    },
+    {
+        "no": 550,
+        "kanji": "賓",
+        "keyword": "V.I.P."
+    },
+    {
+        "no": 551,
+        "kanji": "歳",
+        "keyword": "year-end"
+    },
+    {
+        "no": 552,
+        "kanji": "県",
+        "keyword": "prefecture"
+    },
+    {
+        "no": 553,
+        "kanji": "栃",
+        "keyword": "horse chestnut"
+    },
+    {
+        "no": 554,
+        "kanji": "地",
+        "keyword": "ground"
+    },
+    {
+        "no": 555,
+        "kanji": "池",
+        "keyword": "pond"
+    },
+    {
+        "no": 556,
+        "kanji": "虫",
+        "keyword": "insect"
+    },
+    {
+        "no": 557,
+        "kanji": "蛍",
+        "keyword": "lightning-bug"
+    },
+    {
+        "no": 558,
+        "kanji": "蛇",
+        "keyword": "snake"
+    },
+    {
+        "no": 559,
+        "kanji": "虹",
+        "keyword": "rainbow"
+    },
+    {
+        "no": 560,
+        "kanji": "蝶",
+        "keyword": "butterfly"
+    },
+    {
+        "no": 561,
+        "kanji": "独",
+        "keyword": "single"
+    },
+    {
+        "no": 562,
+        "kanji": "蚕",
+        "keyword": "silkworm"
+    },
+    {
+        "no": 563,
+        "kanji": "風",
+        "keyword": "wind"
+    },
+    {
+        "no": 564,
+        "kanji": "己",
+        "keyword": "self"
+    },
+    {
+        "no": 565,
+        "kanji": "起",
+        "keyword": "rouse"
+    },
+    {
+        "no": 566,
+        "kanji": "妃",
+        "keyword": "queen"
+    },
+    {
+        "no": 567,
+        "kanji": "改",
+        "keyword": "reformation"
+    },
+    {
+        "no": 568,
+        "kanji": "記",
+        "keyword": "scribe"
+    },
+    {
+        "no": 569,
+        "kanji": "包",
+        "keyword": "wrap"
+    },
+    {
+        "no": 570,
+        "kanji": "胞",
+        "keyword": "placenta"
+    },
+    {
+        "no": 571,
+        "kanji": "砲",
+        "keyword": "cannon"
+    },
+    {
+        "no": 572,
+        "kanji": "泡",
+        "keyword": "bubble"
+    },
+    {
+        "no": 573,
+        "kanji": "亀",
+        "keyword": "tortoise"
+    },
+    {
+        "no": 574,
+        "kanji": "電",
+        "keyword": "electricity"
+    },
+    {
+        "no": 575,
+        "kanji": "竜",
+        "keyword": "dragon"
+    },
+    {
+        "no": 576,
+        "kanji": "滝",
+        "keyword": "waterfall"
+    },
+    {
+        "no": 577,
+        "kanji": "豚",
+        "keyword": "pork"
+    },
+    {
+        "no": 578,
+        "kanji": "逐",
+        "keyword": "pursue"
+    },
+    {
+        "no": 579,
+        "kanji": "遂",
+        "keyword": "consummate"
+    },
+    {
+        "no": 580,
+        "kanji": "家",
+        "keyword": "house"
+    },
+    {
+        "no": 581,
+        "kanji": "嫁",
+        "keyword": "marry into"
+    },
+    {
+        "no": 582,
+        "kanji": "豪",
+        "keyword": "overpowering"
+    },
+    {
+        "no": 583,
+        "kanji": "腸",
+        "keyword": "intestines"
+    },
+    {
+        "no": 584,
+        "kanji": "場",
+        "keyword": "location"
+    },
+    {
+        "no": 585,
+        "kanji": "湯",
+        "keyword": "hot water"
+    },
+    {
+        "no": 586,
+        "kanji": "羊",
+        "keyword": "sheep"
+    },
+    {
+        "no": 587,
+        "kanji": "美",
+        "keyword": "beauty"
+    },
+    {
+        "no": 588,
+        "kanji": "洋",
+        "keyword": "ocean"
+    },
+    {
+        "no": 589,
+        "kanji": "詳",
+        "keyword": "detailed"
+    },
+    {
+        "no": 590,
+        "kanji": "鮮",
+        "keyword": "fresh"
+    },
+    {
+        "no": 591,
+        "kanji": "達",
+        "keyword": "accomplished"
+    },
+    {
+        "no": 592,
+        "kanji": "羨",
+        "keyword": "envious"
+    },
+    {
+        "no": 593,
+        "kanji": "差",
+        "keyword": "distinction"
+    },
+    {
+        "no": 594,
+        "kanji": "着",
+        "keyword": "don"
+    },
+    {
+        "no": 595,
+        "kanji": "唯",
+        "keyword": "solely"
+    },
+    {
+        "no": 596,
+        "kanji": "堆",
+        "keyword": "piled high"
+    },
+    {
+        "no": 597,
+        "kanji": "椎",
+        "keyword": "sweet oak"
+    },
+    {
+        "no": 598,
+        "kanji": "誰",
+        "keyword": "who"
+    },
+    {
+        "no": 599,
+        "kanji": "焦",
+        "keyword": "char"
+    },
+    {
+        "no": 600,
+        "kanji": "礁",
+        "keyword": "reef"
+    },
+    {
+        "no": 601,
+        "kanji": "集",
+        "keyword": "gather"
+    },
+    {
+        "no": 602,
+        "kanji": "准",
+        "keyword": "quasi-"
+    },
+    {
+        "no": 603,
+        "kanji": "進",
+        "keyword": "advance"
+    },
+    {
+        "no": 604,
+        "kanji": "雑",
+        "keyword": "miscellaneous"
+    },
+    {
+        "no": 605,
+        "kanji": "雌",
+        "keyword": "female"
+    },
+    {
+        "no": 606,
+        "kanji": "準",
+        "keyword": "semi-"
+    },
+    {
+        "no": 607,
+        "kanji": "奮",
+        "keyword": "stirred up"
+    },
+    {
+        "no": 608,
+        "kanji": "奪",
+        "keyword": "rob"
+    },
+    {
+        "no": 609,
+        "kanji": "確",
+        "keyword": "assurance"
+    },
+    {
+        "no": 610,
+        "kanji": "午",
+        "keyword": "noon"
+    },
+    {
+        "no": 611,
+        "kanji": "許",
+        "keyword": "permit"
+    },
+    {
+        "no": 612,
+        "kanji": "歓",
+        "keyword": "delight"
+    },
+    {
+        "no": 613,
+        "kanji": "権",
+        "keyword": "authority"
+    },
+    {
+        "no": 614,
+        "kanji": "観",
+        "keyword": "outlook"
+    },
+    {
+        "no": 615,
+        "kanji": "羽",
+        "keyword": "feathers"
+    },
+    {
+        "no": 616,
+        "kanji": "習",
+        "keyword": "learn"
+    },
+    {
+        "no": 617,
+        "kanji": "翌",
+        "keyword": "the following"
+    },
+    {
+        "no": 618,
+        "kanji": "曜",
+        "keyword": "weekday"
+    },
+    {
+        "no": 619,
+        "kanji": "濯",
+        "keyword": "laundry"
+    },
+    {
+        "no": 620,
+        "kanji": "曰",
+        "keyword": "sayeth"
+    },
+    {
+        "no": 621,
+        "kanji": "困",
+        "keyword": "quandary"
+    },
+    {
+        "no": 622,
+        "kanji": "固",
+        "keyword": "harden"
+    },
+    {
+        "no": 623,
+        "kanji": "錮",
+        "keyword": "weld"
+    },
+    {
+        "no": 624,
+        "kanji": "国",
+        "keyword": "country"
+    },
+    {
+        "no": 625,
+        "kanji": "団",
+        "keyword": "group"
+    },
+    {
+        "no": 626,
+        "kanji": "因",
+        "keyword": "cause"
+    },
+    {
+        "no": 627,
+        "kanji": "姻",
+        "keyword": "matrimony"
+    },
+    {
+        "no": 628,
+        "kanji": "咽",
+        "keyword": "windpipe"
+    },
+    {
+        "no": 629,
+        "kanji": "園",
+        "keyword": "park"
+    },
+    {
+        "no": 630,
+        "kanji": "回",
+        "keyword": "-times"
+    },
+    {
+        "no": 631,
+        "kanji": "壇",
+        "keyword": "podium"
+    },
+    {
+        "no": 632,
+        "kanji": "店",
+        "keyword": "store"
+    },
+    {
+        "no": 633,
+        "kanji": "庫",
+        "keyword": "warehouse"
+    },
+    {
+        "no": 634,
+        "kanji": "庭",
+        "keyword": "courtyard"
+    },
+    {
+        "no": 635,
+        "kanji": "庁",
+        "keyword": "government office"
+    },
+    {
+        "no": 636,
+        "kanji": "床",
+        "keyword": "bed"
+    },
+    {
+        "no": 637,
+        "kanji": "麻",
+        "keyword": "hemp"
+    },
+    {
+        "no": 638,
+        "kanji": "磨",
+        "keyword": "grind"
+    },
+    {
+        "no": 639,
+        "kanji": "心",
+        "keyword": "heart"
+    },
+    {
+        "no": 640,
+        "kanji": "忘",
+        "keyword": "forget"
+    },
+    {
+        "no": 641,
+        "kanji": "恣",
+        "keyword": "selfish"
+    },
+    {
+        "no": 642,
+        "kanji": "忍",
+        "keyword": "endure"
+    },
+    {
+        "no": 643,
+        "kanji": "認",
+        "keyword": "acknowledge"
+    },
+    {
+        "no": 644,
+        "kanji": "忌",
+        "keyword": "mourning"
+    },
+    {
+        "no": 645,
+        "kanji": "志",
+        "keyword": "intention"
+    },
+    {
+        "no": 646,
+        "kanji": "誌",
+        "keyword": "document"
+    },
+    {
+        "no": 647,
+        "kanji": "芯",
+        "keyword": "wick"
+    },
+    {
+        "no": 648,
+        "kanji": "忠",
+        "keyword": "loyalty"
+    },
+    {
+        "no": 649,
+        "kanji": "串",
+        "keyword": "shish kebab"
+    },
+    {
+        "no": 650,
+        "kanji": "患",
+        "keyword": "afflicted"
+    },
+    {
+        "no": 651,
+        "kanji": "思",
+        "keyword": "think"
+    },
+    {
+        "no": 652,
+        "kanji": "恩",
+        "keyword": "grace"
+    },
+    {
+        "no": 653,
+        "kanji": "応",
+        "keyword": "apply"
+    },
+    {
+        "no": 654,
+        "kanji": "意",
+        "keyword": "idea"
+    },
+    {
+        "no": 655,
+        "kanji": "臆",
+        "keyword": "cowardice"
+    },
+    {
+        "no": 656,
+        "kanji": "想",
+        "keyword": "concept"
+    },
+    {
+        "no": 657,
+        "kanji": "息",
+        "keyword": "breath"
+    },
+    {
+        "no": 658,
+        "kanji": "憩",
+        "keyword": "recess"
+    },
+    {
+        "no": 659,
+        "kanji": "恵",
+        "keyword": "favor"
+    },
+    {
+        "no": 660,
+        "kanji": "恐",
+        "keyword": "fear"
+    },
+    {
+        "no": 661,
+        "kanji": "惑",
+        "keyword": "beguile"
+    },
+    {
+        "no": 662,
+        "kanji": "感",
+        "keyword": "emotion"
+    },
+    {
+        "no": 663,
+        "kanji": "憂",
+        "keyword": "melancholy"
+    },
+    {
+        "no": 664,
+        "kanji": "寡",
+        "keyword": "widow"
+    },
+    {
+        "no": 665,
+        "kanji": "忙",
+        "keyword": "busy"
+    },
+    {
+        "no": 666,
+        "kanji": "悦",
+        "keyword": "ecstasy"
+    },
+    {
+        "no": 667,
+        "kanji": "恒",
+        "keyword": "constancy"
+    },
+    {
+        "no": 668,
+        "kanji": "悼",
+        "keyword": "lament"
+    },
+    {
+        "no": 669,
+        "kanji": "悟",
+        "keyword": "enlightenment"
+    },
+    {
+        "no": 670,
+        "kanji": "怖",
+        "keyword": "dreadful"
+    },
+    {
+        "no": 671,
+        "kanji": "慌",
+        "keyword": "disconcerted"
+    },
+    {
+        "no": 672,
+        "kanji": "悔",
+        "keyword": "repent"
+    },
+    {
+        "no": 673,
+        "kanji": "憎",
+        "keyword": "hate"
+    },
+    {
+        "no": 674,
+        "kanji": "慣",
+        "keyword": "accustomed"
+    },
+    {
+        "no": 675,
+        "kanji": "愉",
+        "keyword": "pleasure"
+    },
+    {
+        "no": 676,
+        "kanji": "惰",
+        "keyword": "lazy"
+    },
+    {
+        "no": 677,
+        "kanji": "慎",
+        "keyword": "humility"
+    },
+    {
+        "no": 678,
+        "kanji": "憾",
+        "keyword": "remorse"
+    },
+    {
+        "no": 679,
+        "kanji": "憶",
+        "keyword": "recollection"
+    },
+    {
+        "no": 680,
+        "kanji": "惧",
+        "keyword": "disquieting"
+    },
+    {
+        "no": 681,
+        "kanji": "憧",
+        "keyword": "yearn"
+    },
+    {
+        "no": 682,
+        "kanji": "憬",
+        "keyword": "hanker"
+    },
+    {
+        "no": 683,
+        "kanji": "慕",
+        "keyword": "pining"
+    },
+    {
+        "no": 684,
+        "kanji": "添",
+        "keyword": "annexed"
+    },
+    {
+        "no": 685,
+        "kanji": "必",
+        "keyword": "invariably"
+    },
+    {
+        "no": 686,
+        "kanji": "泌",
+        "keyword": "ooze"
+    },
+    {
+        "no": 687,
+        "kanji": "手",
+        "keyword": "hand"
+    },
+    {
+        "no": 688,
+        "kanji": "看",
+        "keyword": "watch over"
+    },
+    {
+        "no": 689,
+        "kanji": "摩",
+        "keyword": "chafe"
+    },
+    {
+        "no": 690,
+        "kanji": "我",
+        "keyword": "ego"
+    },
+    {
+        "no": 691,
+        "kanji": "義",
+        "keyword": "righteousness"
+    },
+    {
+        "no": 692,
+        "kanji": "議",
+        "keyword": "deliberation"
+    },
+    {
+        "no": 693,
+        "kanji": "犠",
+        "keyword": "sacrifice"
+    },
+    {
+        "no": 694,
+        "kanji": "抹",
+        "keyword": "rub"
+    },
+    {
+        "no": 695,
+        "kanji": "拭",
+        "keyword": "wipe"
+    },
+    {
+        "no": 696,
+        "kanji": "拉",
+        "keyword": "yank"
+    },
+    {
+        "no": 697,
+        "kanji": "抱",
+        "keyword": "embrace"
+    },
+    {
+        "no": 698,
+        "kanji": "搭",
+        "keyword": "board (v)"
+    },
+    {
+        "no": 699,
+        "kanji": "抄",
+        "keyword": "extract"
+    },
+    {
+        "no": 700,
+        "kanji": "抗",
+        "keyword": "confront"
+    },
+    {
+        "no": 701,
+        "kanji": "批",
+        "keyword": "criticism"
+    },
+    {
+        "no": 702,
+        "kanji": "招",
+        "keyword": "beckon"
+    },
+    {
+        "no": 703,
+        "kanji": "拓",
+        "keyword": "clear the land"
+    },
+    {
+        "no": 704,
+        "kanji": "拍",
+        "keyword": "clap"
+    },
+    {
+        "no": 705,
+        "kanji": "打",
+        "keyword": "strike"
+    },
+    {
+        "no": 706,
+        "kanji": "拘",
+        "keyword": "arrest"
+    },
+    {
+        "no": 707,
+        "kanji": "捨",
+        "keyword": "discard"
+    },
+    {
+        "no": 708,
+        "kanji": "拐",
+        "keyword": "kidnap"
+    },
+    {
+        "no": 709,
+        "kanji": "摘",
+        "keyword": "pinch"
+    },
+    {
+        "no": 710,
+        "kanji": "挑",
+        "keyword": "challenge"
+    },
+    {
+        "no": 711,
+        "kanji": "指",
+        "keyword": "finger"
+    },
+    {
+        "no": 712,
+        "kanji": "持",
+        "keyword": "hold"
+    },
+    {
+        "no": 713,
+        "kanji": "拶",
+        "keyword": "imminent"
+    },
+    {
+        "no": 714,
+        "kanji": "括",
+        "keyword": "fasten"
+    },
+    {
+        "no": 715,
+        "kanji": "揮",
+        "keyword": "brandish"
+    },
+    {
+        "no": 716,
+        "kanji": "推",
+        "keyword": "conjecture"
+    },
+    {
+        "no": 717,
+        "kanji": "揚",
+        "keyword": "hoist"
+    },
+    {
+        "no": 718,
+        "kanji": "提",
+        "keyword": "propose"
+    },
+    {
+        "no": 719,
+        "kanji": "損",
+        "keyword": "damage"
+    },
+    {
+        "no": 720,
+        "kanji": "拾",
+        "keyword": "pick up"
+    },
+    {
+        "no": 721,
+        "kanji": "担",
+        "keyword": "shouldering"
+    },
+    {
+        "no": 722,
+        "kanji": "拠",
+        "keyword": "foothold"
+    },
+    {
+        "no": 723,
+        "kanji": "描",
+        "keyword": "sketch"
+    },
+    {
+        "no": 724,
+        "kanji": "操",
+        "keyword": "maneuver"
+    },
+    {
+        "no": 725,
+        "kanji": "接",
+        "keyword": "touch"
+    },
+    {
+        "no": 726,
+        "kanji": "掲",
+        "keyword": "put up a notice"
+    },
+    {
+        "no": 727,
+        "kanji": "掛",
+        "keyword": "hang"
+    },
+    {
+        "no": 728,
+        "kanji": "捗",
+        "keyword": "make headway"
+    },
+    {
+        "no": 729,
+        "kanji": "研",
+        "keyword": "polish"
+    },
+    {
+        "no": 730,
+        "kanji": "戒",
+        "keyword": "commandment"
+    },
+    {
+        "no": 731,
+        "kanji": "弄",
+        "keyword": "tinker with"
+    },
+    {
+        "no": 732,
+        "kanji": "械",
+        "keyword": "contraption"
+    },
+    {
+        "no": 733,
+        "kanji": "鼻",
+        "keyword": "nose"
+    },
+    {
+        "no": 734,
+        "kanji": "刑",
+        "keyword": "punish"
+    },
+    {
+        "no": 735,
+        "kanji": "型",
+        "keyword": "mould"
+    },
+    {
+        "no": 736,
+        "kanji": "才",
+        "keyword": "genius"
+    },
+    {
+        "no": 737,
+        "kanji": "財",
+        "keyword": "property"
+    },
+    {
+        "no": 738,
+        "kanji": "材",
+        "keyword": "lumber"
+    },
+    {
+        "no": 739,
+        "kanji": "存",
+        "keyword": "suppose"
+    },
+    {
+        "no": 740,
+        "kanji": "在",
+        "keyword": "exist"
+    },
+    {
+        "no": 741,
+        "kanji": "乃",
+        "keyword": "from"
+    },
+    {
+        "no": 742,
+        "kanji": "携",
+        "keyword": "portable"
+    },
+    {
+        "no": 743,
+        "kanji": "及",
+        "keyword": "reach out"
+    },
+    {
+        "no": 744,
+        "kanji": "吸",
+        "keyword": "suck"
+    },
+    {
+        "no": 745,
+        "kanji": "扱",
+        "keyword": "handle"
+    },
+    {
+        "no": 746,
+        "kanji": "丈",
+        "keyword": "length"
+    },
+    {
+        "no": 747,
+        "kanji": "史",
+        "keyword": "history"
+    },
+    {
+        "no": 748,
+        "kanji": "吏",
+        "keyword": "officer"
+    },
+    {
+        "no": 749,
+        "kanji": "更",
+        "keyword": "grow late"
+    },
+    {
+        "no": 750,
+        "kanji": "硬",
+        "keyword": "stiff"
+    },
+    {
+        "no": 751,
+        "kanji": "梗",
+        "keyword": "spiny"
+    },
+    {
+        "no": 752,
+        "kanji": "又",
+        "keyword": "or again"
+    },
+    {
+        "no": 753,
+        "kanji": "双",
+        "keyword": "pair"
+    },
+    {
+        "no": 754,
+        "kanji": "桑",
+        "keyword": "mulberry"
+    },
+    {
+        "no": 755,
+        "kanji": "隻",
+        "keyword": "vessels"
+    },
+    {
+        "no": 756,
+        "kanji": "護",
+        "keyword": "safeguard"
+    },
+    {
+        "no": 757,
+        "kanji": "獲",
+        "keyword": "seize"
+    },
+    {
+        "no": 758,
+        "kanji": "奴",
+        "keyword": "guy"
+    },
+    {
+        "no": 759,
+        "kanji": "怒",
+        "keyword": "angry"
+    },
+    {
+        "no": 760,
+        "kanji": "友",
+        "keyword": "friend"
+    },
+    {
+        "no": 761,
+        "kanji": "抜",
+        "keyword": "slip out"
+    },
+    {
+        "no": 762,
+        "kanji": "投",
+        "keyword": "throw"
+    },
+    {
+        "no": 763,
+        "kanji": "没",
+        "keyword": "drown"
+    },
+    {
+        "no": 764,
+        "kanji": "股",
+        "keyword": "thigh"
+    },
+    {
+        "no": 765,
+        "kanji": "設",
+        "keyword": "establishment"
+    },
+    {
+        "no": 766,
+        "kanji": "撃",
+        "keyword": "beat"
+    },
+    {
+        "no": 767,
+        "kanji": "殻",
+        "keyword": "husk"
+    },
+    {
+        "no": 768,
+        "kanji": "支",
+        "keyword": "branch"
+    },
+    {
+        "no": 769,
+        "kanji": "技",
+        "keyword": "skill"
+    },
+    {
+        "no": 770,
+        "kanji": "枝",
+        "keyword": "bough"
+    },
+    {
+        "no": 771,
+        "kanji": "肢",
+        "keyword": "limb"
+    },
+    {
+        "no": 772,
+        "kanji": "茎",
+        "keyword": "stalk"
+    },
+    {
+        "no": 773,
+        "kanji": "怪",
+        "keyword": "suspicious"
+    },
+    {
+        "no": 774,
+        "kanji": "軽",
+        "keyword": "lightly"
+    },
+    {
+        "no": 775,
+        "kanji": "叔",
+        "keyword": "uncle"
+    },
+    {
+        "no": 776,
+        "kanji": "督",
+        "keyword": "coach"
+    },
+    {
+        "no": 777,
+        "kanji": "寂",
+        "keyword": "loneliness"
+    },
+    {
+        "no": 778,
+        "kanji": "淑",
+        "keyword": "graceful"
+    },
+    {
+        "no": 779,
+        "kanji": "反",
+        "keyword": "anti-"
+    },
+    {
+        "no": 780,
+        "kanji": "坂",
+        "keyword": "slope"
+    },
+    {
+        "no": 781,
+        "kanji": "板",
+        "keyword": "plank"
+    },
+    {
+        "no": 782,
+        "kanji": "返",
+        "keyword": "return"
+    },
+    {
+        "no": 783,
+        "kanji": "販",
+        "keyword": "marketing"
+    },
+    {
+        "no": 784,
+        "kanji": "爪",
+        "keyword": "claw"
+    },
+    {
+        "no": 785,
+        "kanji": "妥",
+        "keyword": "gentle"
+    },
+    {
+        "no": 786,
+        "kanji": "乳",
+        "keyword": "milk"
+    },
+    {
+        "no": 787,
+        "kanji": "浮",
+        "keyword": "floating"
+    },
+    {
+        "no": 788,
+        "kanji": "淫",
+        "keyword": "lewd"
+    },
+    {
+        "no": 789,
+        "kanji": "将",
+        "keyword": "leader"
+    },
+    {
+        "no": 790,
+        "kanji": "奨",
+        "keyword": "exhort"
+    },
+    {
+        "no": 791,
+        "kanji": "采",
+        "keyword": "grab"
+    },
+    {
+        "no": 792,
+        "kanji": "採",
+        "keyword": "pick"
+    },
+    {
+        "no": 793,
+        "kanji": "菜",
+        "keyword": "vegetable"
+    },
+    {
+        "no": 794,
+        "kanji": "受",
+        "keyword": "accept"
+    },
+    {
+        "no": 795,
+        "kanji": "授",
+        "keyword": "impart"
+    },
+    {
+        "no": 796,
+        "kanji": "愛",
+        "keyword": "love"
+    },
+    {
+        "no": 797,
+        "kanji": "曖",
+        "keyword": "unclear"
+    },
+    {
+        "no": 798,
+        "kanji": "払",
+        "keyword": "pay"
+    },
+    {
+        "no": 799,
+        "kanji": "広",
+        "keyword": "wide"
+    },
+    {
+        "no": 800,
+        "kanji": "勾",
+        "keyword": "hooked"
+    },
+    {
+        "no": 801,
+        "kanji": "拡",
+        "keyword": "broaden"
+    },
+    {
+        "no": 802,
+        "kanji": "鉱",
+        "keyword": "mineral"
+    },
+    {
+        "no": 803,
+        "kanji": "弁",
+        "keyword": "valve"
+    },
+    {
+        "no": 804,
+        "kanji": "雄",
+        "keyword": "male"
+    },
+    {
+        "no": 805,
+        "kanji": "台",
+        "keyword": "pedestal"
+    },
+    {
+        "no": 806,
+        "kanji": "怠",
+        "keyword": "neglect"
+    },
+    {
+        "no": 807,
+        "kanji": "治",
+        "keyword": "reign"
+    },
+    {
+        "no": 808,
+        "kanji": "冶",
+        "keyword": "metallurgy"
+    },
+    {
+        "no": 809,
+        "kanji": "始",
+        "keyword": "commence"
+    },
+    {
+        "no": 810,
+        "kanji": "胎",
+        "keyword": "womb"
+    },
+    {
+        "no": 811,
+        "kanji": "窓",
+        "keyword": "window"
+    },
+    {
+        "no": 812,
+        "kanji": "去",
+        "keyword": "gone"
+    },
+    {
+        "no": 813,
+        "kanji": "法",
+        "keyword": "method"
+    },
+    {
+        "no": 814,
+        "kanji": "会",
+        "keyword": "meeting"
+    },
+    {
+        "no": 815,
+        "kanji": "至",
+        "keyword": "climax"
+    },
+    {
+        "no": 816,
+        "kanji": "室",
+        "keyword": "room"
+    },
+    {
+        "no": 817,
+        "kanji": "到",
+        "keyword": "arrival"
+    },
+    {
+        "no": 818,
+        "kanji": "致",
+        "keyword": "doth"
+    },
+    {
+        "no": 819,
+        "kanji": "互",
+        "keyword": "mutually"
+    },
+    {
+        "no": 820,
+        "kanji": "棄",
+        "keyword": "abandon"
+    },
+    {
+        "no": 821,
+        "kanji": "育",
+        "keyword": "bring up"
+    },
+    {
+        "no": 822,
+        "kanji": "撤",
+        "keyword": "remove"
+    },
+    {
+        "no": 823,
+        "kanji": "充",
+        "keyword": "allot"
+    },
+    {
+        "no": 824,
+        "kanji": "銃",
+        "keyword": "gun"
+    },
+    {
+        "no": 825,
+        "kanji": "硫",
+        "keyword": "sulphur"
+    },
+    {
+        "no": 826,
+        "kanji": "流",
+        "keyword": "current"
+    },
+    {
+        "no": 827,
+        "kanji": "允",
+        "keyword": "license"
+    },
+    {
+        "no": 828,
+        "kanji": "唆",
+        "keyword": "tempt"
+    },
+    {
+        "no": 829,
+        "kanji": "出",
+        "keyword": "exit"
+    },
+    {
+        "no": 830,
+        "kanji": "山",
+        "keyword": "mountain"
+    },
+    {
+        "no": 831,
+        "kanji": "拙",
+        "keyword": "bungling"
+    },
+    {
+        "no": 832,
+        "kanji": "岩",
+        "keyword": "boulder"
+    },
+    {
+        "no": 833,
+        "kanji": "炭",
+        "keyword": "charcoal"
+    },
+    {
+        "no": 834,
+        "kanji": "岐",
+        "keyword": "branch off"
+    },
+    {
+        "no": 835,
+        "kanji": "峠",
+        "keyword": "mountain pass"
+    },
+    {
+        "no": 836,
+        "kanji": "崩",
+        "keyword": "crumble"
+    },
+    {
+        "no": 837,
+        "kanji": "密",
+        "keyword": "secrecy"
+    },
+    {
+        "no": 838,
+        "kanji": "蜜",
+        "keyword": "honey"
+    },
+    {
+        "no": 839,
+        "kanji": "嵐",
+        "keyword": "storm"
+    },
+    {
+        "no": 840,
+        "kanji": "崎",
+        "keyword": "promontory"
+    },
+    {
+        "no": 841,
+        "kanji": "崖",
+        "keyword": "bluffs"
+    },
+    {
+        "no": 842,
+        "kanji": "入",
+        "keyword": "enter"
+    },
+    {
+        "no": 843,
+        "kanji": "込",
+        "keyword": "crowded"
+    },
+    {
+        "no": 844,
+        "kanji": "分",
+        "keyword": "part"
+    },
+    {
+        "no": 845,
+        "kanji": "貧",
+        "keyword": "poverty"
+    },
+    {
+        "no": 846,
+        "kanji": "頒",
+        "keyword": "partition"
+    },
+    {
+        "no": 847,
+        "kanji": "公",
+        "keyword": "public"
+    },
+    {
+        "no": 848,
+        "kanji": "松",
+        "keyword": "pine tree"
+    },
+    {
+        "no": 849,
+        "kanji": "翁",
+        "keyword": "venerable old man"
+    },
+    {
+        "no": 850,
+        "kanji": "訟",
+        "keyword": "sue"
+    },
+    {
+        "no": 851,
+        "kanji": "谷",
+        "keyword": "valley"
+    },
+    {
+        "no": 852,
+        "kanji": "浴",
+        "keyword": "bathe"
+    },
+    {
+        "no": 853,
+        "kanji": "容",
+        "keyword": "contain"
+    },
+    {
+        "no": 854,
+        "kanji": "溶",
+        "keyword": "melt"
+    },
+    {
+        "no": 855,
+        "kanji": "欲",
+        "keyword": "longing"
+    },
+    {
+        "no": 856,
+        "kanji": "裕",
+        "keyword": "abundant"
+    },
+    {
+        "no": 857,
+        "kanji": "鉛",
+        "keyword": "lead (metal)"
+    },
+    {
+        "no": 858,
+        "kanji": "沿",
+        "keyword": "run alongside"
+    },
+    {
+        "no": 859,
+        "kanji": "賞",
+        "keyword": "prize"
+    },
+    {
+        "no": 860,
+        "kanji": "党",
+        "keyword": "party"
+    },
+    {
+        "no": 861,
+        "kanji": "堂",
+        "keyword": "hall"
+    },
+    {
+        "no": 862,
+        "kanji": "常",
+        "keyword": "usual"
+    },
+    {
+        "no": 863,
+        "kanji": "裳",
+        "keyword": "skirt"
+    },
+    {
+        "no": 864,
+        "kanji": "掌",
+        "keyword": "manipulate"
+    },
+    {
+        "no": 865,
+        "kanji": "皮",
+        "keyword": "pelt"
+    },
+    {
+        "no": 866,
+        "kanji": "波",
+        "keyword": "waves"
+    },
+    {
+        "no": 867,
+        "kanji": "婆",
+        "keyword": "old woman"
+    },
+    {
+        "no": 868,
+        "kanji": "披",
+        "keyword": "expose"
+    },
+    {
+        "no": 869,
+        "kanji": "破",
+        "keyword": "rend"
+    },
+    {
+        "no": 870,
+        "kanji": "被",
+        "keyword": "incur"
+    },
+    {
+        "no": 871,
+        "kanji": "残",
+        "keyword": "remainder"
+    },
+    {
+        "no": 872,
+        "kanji": "殉",
+        "keyword": "martyrdom"
+    },
+    {
+        "no": 873,
+        "kanji": "殊",
+        "keyword": "particularly"
+    },
+    {
+        "no": 874,
+        "kanji": "殖",
+        "keyword": "augment"
+    },
+    {
+        "no": 875,
+        "kanji": "列",
+        "keyword": "file"
+    },
+    {
+        "no": 876,
+        "kanji": "裂",
+        "keyword": "split"
+    },
+    {
+        "no": 877,
+        "kanji": "烈",
+        "keyword": "ardent"
+    },
+    {
+        "no": 878,
+        "kanji": "死",
+        "keyword": "death"
+    },
+    {
+        "no": 879,
+        "kanji": "葬",
+        "keyword": "interment"
+    },
+    {
+        "no": 880,
+        "kanji": "瞬",
+        "keyword": "wink"
+    },
+    {
+        "no": 881,
+        "kanji": "耳",
+        "keyword": "ear"
+    },
+    {
+        "no": 882,
+        "kanji": "取",
+        "keyword": "take"
+    },
+    {
+        "no": 883,
+        "kanji": "趣",
+        "keyword": "gist"
+    },
+    {
+        "no": 884,
+        "kanji": "最",
+        "keyword": "utmost"
+    },
+    {
+        "no": 885,
+        "kanji": "撮",
+        "keyword": "snapshot"
+    },
+    {
+        "no": 886,
+        "kanji": "恥",
+        "keyword": "shame"
+    },
+    {
+        "no": 887,
+        "kanji": "職",
+        "keyword": "post"
+    },
+    {
+        "no": 888,
+        "kanji": "聖",
+        "keyword": "holy"
+    },
+    {
+        "no": 889,
+        "kanji": "敢",
+        "keyword": "daring"
+    },
+    {
+        "no": 890,
+        "kanji": "聴",
+        "keyword": "listen"
+    },
+    {
+        "no": 891,
+        "kanji": "懐",
+        "keyword": "pocket"
+    },
+    {
+        "no": 892,
+        "kanji": "慢",
+        "keyword": "ridicule"
+    },
+    {
+        "no": 893,
+        "kanji": "漫",
+        "keyword": "loose"
+    },
+    {
+        "no": 894,
+        "kanji": "買",
+        "keyword": "buy"
+    },
+    {
+        "no": 895,
+        "kanji": "置",
+        "keyword": "placement"
+    },
+    {
+        "no": 896,
+        "kanji": "罰",
+        "keyword": "penalty"
+    },
+    {
+        "no": 897,
+        "kanji": "寧",
+        "keyword": "rather"
+    },
+    {
+        "no": 898,
+        "kanji": "濁",
+        "keyword": "voiced"
+    },
+    {
+        "no": 899,
+        "kanji": "環",
+        "keyword": "ring"
+    },
+    {
+        "no": 900,
+        "kanji": "還",
+        "keyword": "send back"
+    },
+    {
+        "no": 901,
+        "kanji": "夫",
+        "keyword": "husband"
+    },
+    {
+        "no": 902,
+        "kanji": "扶",
+        "keyword": "aid"
+    },
+    {
+        "no": 903,
+        "kanji": "渓",
+        "keyword": "mountain stream"
+    },
+    {
+        "no": 904,
+        "kanji": "規",
+        "keyword": "standard"
+    },
+    {
+        "no": 905,
+        "kanji": "替",
+        "keyword": "exchange"
+    },
+    {
+        "no": 906,
+        "kanji": "賛",
+        "keyword": "approve"
+    },
+    {
+        "no": 907,
+        "kanji": "潜",
+        "keyword": "submerge"
+    },
+    {
+        "no": 908,
+        "kanji": "失",
+        "keyword": "lose"
+    },
+    {
+        "no": 909,
+        "kanji": "鉄",
+        "keyword": "iron"
+    },
+    {
+        "no": 910,
+        "kanji": "迭",
+        "keyword": "alternate"
+    },
+    {
+        "no": 911,
+        "kanji": "臣",
+        "keyword": "retainer"
+    },
+    {
+        "no": 912,
+        "kanji": "姫",
+        "keyword": "princess"
+    },
+    {
+        "no": 913,
+        "kanji": "蔵",
+        "keyword": "storehouse"
+    },
+    {
+        "no": 914,
+        "kanji": "臓",
+        "keyword": "entrails"
+    },
+    {
+        "no": 915,
+        "kanji": "賢",
+        "keyword": "intelligent"
+    },
+    {
+        "no": 916,
+        "kanji": "腎",
+        "keyword": "kidney"
+    },
+    {
+        "no": 917,
+        "kanji": "堅",
+        "keyword": "strict"
+    },
+    {
+        "no": 918,
+        "kanji": "臨",
+        "keyword": "look to"
+    },
+    {
+        "no": 919,
+        "kanji": "覧",
+        "keyword": "perusal"
+    },
+    {
+        "no": 920,
+        "kanji": "巨",
+        "keyword": "gigantic"
+    },
+    {
+        "no": 921,
+        "kanji": "拒",
+        "keyword": "repel"
+    },
+    {
+        "no": 922,
+        "kanji": "力",
+        "keyword": "power"
+    },
+    {
+        "no": 923,
+        "kanji": "男",
+        "keyword": "man"
+    },
+    {
+        "no": 924,
+        "kanji": "労",
+        "keyword": "labor"
+    },
+    {
+        "no": 925,
+        "kanji": "募",
+        "keyword": "recruit"
+    },
+    {
+        "no": 926,
+        "kanji": "劣",
+        "keyword": "inferiority"
+    },
+    {
+        "no": 927,
+        "kanji": "功",
+        "keyword": "achievement"
+    },
+    {
+        "no": 928,
+        "kanji": "勧",
+        "keyword": "persuade"
+    },
+    {
+        "no": 929,
+        "kanji": "努",
+        "keyword": "toil"
+    },
+    {
+        "no": 930,
+        "kanji": "勃",
+        "keyword": "uprising"
+    },
+    {
+        "no": 931,
+        "kanji": "励",
+        "keyword": "encourage"
+    },
+    {
+        "no": 932,
+        "kanji": "加",
+        "keyword": "add"
+    },
+    {
+        "no": 933,
+        "kanji": "賀",
+        "keyword": "congratulations"
+    },
+    {
+        "no": 934,
+        "kanji": "架",
+        "keyword": "erect"
+    },
+    {
+        "no": 935,
+        "kanji": "脇",
+        "keyword": "armpit"
+    },
+    {
+        "no": 936,
+        "kanji": "脅",
+        "keyword": "threaten"
+    },
+    {
+        "no": 937,
+        "kanji": "協",
+        "keyword": "co-"
+    },
+    {
+        "no": 938,
+        "kanji": "行",
+        "keyword": "going"
+    },
+    {
+        "no": 939,
+        "kanji": "律",
+        "keyword": "rhythm"
+    },
+    {
+        "no": 940,
+        "kanji": "復",
+        "keyword": "restore"
+    },
+    {
+        "no": 941,
+        "kanji": "得",
+        "keyword": "gain"
+    },
+    {
+        "no": 942,
+        "kanji": "従",
+        "keyword": "accompany"
+    },
+    {
+        "no": 943,
+        "kanji": "徒",
+        "keyword": "junior"
+    },
+    {
+        "no": 944,
+        "kanji": "待",
+        "keyword": "wait"
+    },
+    {
+        "no": 945,
+        "kanji": "往",
+        "keyword": "journey"
+    },
+    {
+        "no": 946,
+        "kanji": "征",
+        "keyword": "subjugate"
+    },
+    {
+        "no": 947,
+        "kanji": "径",
+        "keyword": "diameter"
+    },
+    {
+        "no": 948,
+        "kanji": "彼",
+        "keyword": "he"
+    },
+    {
+        "no": 949,
+        "kanji": "役",
+        "keyword": "duty"
+    },
+    {
+        "no": 950,
+        "kanji": "徳",
+        "keyword": "benevolence"
+    },
+    {
+        "no": 951,
+        "kanji": "徹",
+        "keyword": "penetrate"
+    },
+    {
+        "no": 952,
+        "kanji": "徴",
+        "keyword": "indications"
+    },
+    {
+        "no": 953,
+        "kanji": "懲",
+        "keyword": "penal"
+    },
+    {
+        "no": 954,
+        "kanji": "微",
+        "keyword": "delicate"
+    },
+    {
+        "no": 955,
+        "kanji": "街",
+        "keyword": "boulevard"
+    },
+    {
+        "no": 956,
+        "kanji": "桁",
+        "keyword": "girder"
+    },
+    {
+        "no": 957,
+        "kanji": "衡",
+        "keyword": "equilibrium"
+    },
+    {
+        "no": 958,
+        "kanji": "稿",
+        "keyword": "draft"
+    },
+    {
+        "no": 959,
+        "kanji": "稼",
+        "keyword": "earnings"
+    },
+    {
+        "no": 960,
+        "kanji": "程",
+        "keyword": "extent"
+    },
+    {
+        "no": 961,
+        "kanji": "税",
+        "keyword": "tax"
+    },
+    {
+        "no": 962,
+        "kanji": "稚",
+        "keyword": "immature"
+    },
+    {
+        "no": 963,
+        "kanji": "和",
+        "keyword": "harmony"
+    },
+    {
+        "no": 964,
+        "kanji": "移",
+        "keyword": "shift"
+    },
+    {
+        "no": 965,
+        "kanji": "秒",
+        "keyword": "second"
+    },
+    {
+        "no": 966,
+        "kanji": "秋",
+        "keyword": "autumn"
+    },
+    {
+        "no": 967,
+        "kanji": "愁",
+        "keyword": "distress"
+    },
+    {
+        "no": 968,
+        "kanji": "私",
+        "keyword": "private"
+    },
+    {
+        "no": 969,
+        "kanji": "秩",
+        "keyword": "regularity"
+    },
+    {
+        "no": 970,
+        "kanji": "秘",
+        "keyword": "secret"
+    },
+    {
+        "no": 971,
+        "kanji": "称",
+        "keyword": "appellation"
+    },
+    {
+        "no": 972,
+        "kanji": "利",
+        "keyword": "profit"
+    },
+    {
+        "no": 973,
+        "kanji": "梨",
+        "keyword": "pear tree"
+    },
+    {
+        "no": 974,
+        "kanji": "穫",
+        "keyword": "harvest"
+    },
+    {
+        "no": 975,
+        "kanji": "穂",
+        "keyword": "ear (of a plant)"
+    },
+    {
+        "no": 976,
+        "kanji": "稲",
+        "keyword": "rice plant"
+    },
+    {
+        "no": 977,
+        "kanji": "香",
+        "keyword": "incense"
+    },
+    {
+        "no": 978,
+        "kanji": "季",
+        "keyword": "seasons"
+    },
+    {
+        "no": 979,
+        "kanji": "委",
+        "keyword": "committee"
+    },
+    {
+        "no": 980,
+        "kanji": "秀",
+        "keyword": "excel"
+    },
+    {
+        "no": 981,
+        "kanji": "透",
+        "keyword": "transparent"
+    },
+    {
+        "no": 982,
+        "kanji": "誘",
+        "keyword": "entice"
+    },
+    {
+        "no": 983,
+        "kanji": "稽",
+        "keyword": "training"
+    },
+    {
+        "no": 984,
+        "kanji": "穀",
+        "keyword": "cereals"
+    },
+    {
+        "no": 985,
+        "kanji": "菌",
+        "keyword": "germ"
+    },
+    {
+        "no": 986,
+        "kanji": "萎",
+        "keyword": "numb"
+    },
+    {
+        "no": 987,
+        "kanji": "米",
+        "keyword": "rice"
+    },
+    {
+        "no": 988,
+        "kanji": "粉",
+        "keyword": "flour"
+    },
+    {
+        "no": 989,
+        "kanji": "粘",
+        "keyword": "sticky"
+    },
+    {
+        "no": 990,
+        "kanji": "粒",
+        "keyword": "grains"
+    },
+    {
+        "no": 991,
+        "kanji": "粧",
+        "keyword": "cosmetics"
+    },
+    {
+        "no": 992,
+        "kanji": "迷",
+        "keyword": "astray"
+    },
+    {
+        "no": 993,
+        "kanji": "粋",
+        "keyword": "chic"
+    },
+    {
+        "no": 994,
+        "kanji": "謎",
+        "keyword": "riddle"
+    },
+    {
+        "no": 995,
+        "kanji": "糧",
+        "keyword": "provisions"
+    },
+    {
+        "no": 996,
+        "kanji": "菊",
+        "keyword": "chrysanthemum"
+    },
+    {
+        "no": 997,
+        "kanji": "奥",
+        "keyword": "core"
+    },
+    {
+        "no": 998,
+        "kanji": "数",
+        "keyword": "number"
+    },
+    {
+        "no": 999,
+        "kanji": "楼",
+        "keyword": "watchtower"
+    },
+    {
+        "no": 1000,
+        "kanji": "類",
+        "keyword": "sort"
+    },
+    {
+        "no": 1001,
+        "kanji": "漆",
+        "keyword": "lacquer"
+    },
+    {
+        "no": 1002,
+        "kanji": "膝",
+        "keyword": "knee"
+    },
+    {
+        "no": 1003,
+        "kanji": "様",
+        "keyword": "Esq."
+    },
+    {
+        "no": 1004,
+        "kanji": "求",
+        "keyword": "request"
+    },
+    {
+        "no": 1005,
+        "kanji": "球",
+        "keyword": "ball"
+    },
+    {
+        "no": 1006,
+        "kanji": "救",
+        "keyword": "salvation"
+    },
+    {
+        "no": 1007,
+        "kanji": "竹",
+        "keyword": "bamboo"
+    },
+    {
+        "no": 1008,
+        "kanji": "笑",
+        "keyword": "laugh"
+    },
+    {
+        "no": 1009,
+        "kanji": "笠",
+        "keyword": "bamboo hat"
+    },
+    {
+        "no": 1010,
+        "kanji": "笹",
+        "keyword": "bamboo grass"
+    },
+    {
+        "no": 1011,
+        "kanji": "箋",
+        "keyword": "stationery"
+    },
+    {
+        "no": 1012,
+        "kanji": "筋",
+        "keyword": "muscle"
+    },
+    {
+        "no": 1013,
+        "kanji": "箱",
+        "keyword": "box"
+    },
+    {
+        "no": 1014,
+        "kanji": "筆",
+        "keyword": "writing brush"
+    },
+    {
+        "no": 1015,
+        "kanji": "筒",
+        "keyword": "cylinder"
+    },
+    {
+        "no": 1016,
+        "kanji": "等",
+        "keyword": "etc."
+    },
+    {
+        "no": 1017,
+        "kanji": "算",
+        "keyword": "calculate"
+    },
+    {
+        "no": 1018,
+        "kanji": "答",
+        "keyword": "solution"
+    },
+    {
+        "no": 1019,
+        "kanji": "策",
+        "keyword": "scheme"
+    },
+    {
+        "no": 1020,
+        "kanji": "簿",
+        "keyword": "register"
+    },
+    {
+        "no": 1021,
+        "kanji": "築",
+        "keyword": "fabricate"
+    },
+    {
+        "no": 1022,
+        "kanji": "篭",
+        "keyword": "basket"
+    },
+    {
+        "no": 1023,
+        "kanji": "人",
+        "keyword": "person"
+    },
+    {
+        "no": 1024,
+        "kanji": "佐",
+        "keyword": "assistant"
+    },
+    {
+        "no": 1025,
+        "kanji": "侶",
+        "keyword": "partner"
+    },
+    {
+        "no": 1026,
+        "kanji": "但",
+        "keyword": "however"
+    },
+    {
+        "no": 1027,
+        "kanji": "住",
+        "keyword": "dwell"
+    },
+    {
+        "no": 1028,
+        "kanji": "位",
+        "keyword": "rank"
+    },
+    {
+        "no": 1029,
+        "kanji": "仲",
+        "keyword": "go-between"
+    },
+    {
+        "no": 1030,
+        "kanji": "体",
+        "keyword": "body"
+    },
+    {
+        "no": 1031,
+        "kanji": "悠",
+        "keyword": "remote"
+    },
+    {
+        "no": 1032,
+        "kanji": "件",
+        "keyword": "affair"
+    },
+    {
+        "no": 1033,
+        "kanji": "仕",
+        "keyword": "attend"
+    },
+    {
+        "no": 1034,
+        "kanji": "他",
+        "keyword": "other"
+    },
+    {
+        "no": 1035,
+        "kanji": "伏",
+        "keyword": "prostrated"
+    },
+    {
+        "no": 1036,
+        "kanji": "伝",
+        "keyword": "transmit"
+    },
+    {
+        "no": 1037,
+        "kanji": "仏",
+        "keyword": "Buddha"
+    },
+    {
+        "no": 1038,
+        "kanji": "休",
+        "keyword": "rest"
+    },
+    {
+        "no": 1039,
+        "kanji": "仮",
+        "keyword": "provisional"
+    },
+    {
+        "no": 1040,
+        "kanji": "伎",
+        "keyword": "performing artist"
+    },
+    {
+        "no": 1041,
+        "kanji": "伯",
+        "keyword": "chief"
+    },
+    {
+        "no": 1042,
+        "kanji": "俗",
+        "keyword": "vulgar"
+    },
+    {
+        "no": 1043,
+        "kanji": "信",
+        "keyword": "faith"
+    },
+    {
+        "no": 1044,
+        "kanji": "佳",
+        "keyword": "excellent"
+    },
+    {
+        "no": 1045,
+        "kanji": "依",
+        "keyword": "reliant"
+    },
+    {
+        "no": 1046,
+        "kanji": "例",
+        "keyword": "example"
+    },
+    {
+        "no": 1047,
+        "kanji": "個",
+        "keyword": "individual"
+    },
+    {
+        "no": 1048,
+        "kanji": "健",
+        "keyword": "healthy"
+    },
+    {
+        "no": 1049,
+        "kanji": "側",
+        "keyword": "side"
+    },
+    {
+        "no": 1050,
+        "kanji": "侍",
+        "keyword": "waiter"
+    },
+    {
+        "no": 1051,
+        "kanji": "停",
+        "keyword": "halt"
+    },
+    {
+        "no": 1052,
+        "kanji": "値",
+        "keyword": "price"
+    },
+    {
+        "no": 1053,
+        "kanji": "倣",
+        "keyword": "emulate"
+    },
+    {
+        "no": 1054,
+        "kanji": "傲",
+        "keyword": "arrogance"
+    },
+    {
+        "no": 1055,
+        "kanji": "倒",
+        "keyword": "overthrow"
+    },
+    {
+        "no": 1056,
+        "kanji": "偵",
+        "keyword": "spy"
+    },
+    {
+        "no": 1057,
+        "kanji": "僧",
+        "keyword": "Buddhist priest"
+    },
+    {
+        "no": 1058,
+        "kanji": "億",
+        "keyword": "hundred million"
+    },
+    {
+        "no": 1059,
+        "kanji": "儀",
+        "keyword": "ceremony"
+    },
+    {
+        "no": 1060,
+        "kanji": "償",
+        "keyword": "reparation"
+    },
+    {
+        "no": 1061,
+        "kanji": "仙",
+        "keyword": "hermit"
+    },
+    {
+        "no": 1062,
+        "kanji": "催",
+        "keyword": "sponsor"
+    },
+    {
+        "no": 1063,
+        "kanji": "仁",
+        "keyword": "humanity"
+    },
+    {
+        "no": 1064,
+        "kanji": "侮",
+        "keyword": "scorn"
+    },
+    {
+        "no": 1065,
+        "kanji": "使",
+        "keyword": "use"
+    },
+    {
+        "no": 1066,
+        "kanji": "便",
+        "keyword": "convenience"
+    },
+    {
+        "no": 1067,
+        "kanji": "倍",
+        "keyword": "double"
+    },
+    {
+        "no": 1068,
+        "kanji": "優",
+        "keyword": "tenderness"
+    },
+    {
+        "no": 1069,
+        "kanji": "伐",
+        "keyword": "fell"
+    },
+    {
+        "no": 1070,
+        "kanji": "宿",
+        "keyword": "inn"
+    },
+    {
+        "no": 1071,
+        "kanji": "傷",
+        "keyword": "wound"
+    },
+    {
+        "no": 1072,
+        "kanji": "保",
+        "keyword": "protect"
+    },
+    {
+        "no": 1073,
+        "kanji": "褒",
+        "keyword": "praise"
+    },
+    {
+        "no": 1074,
+        "kanji": "傑",
+        "keyword": "greatness"
+    },
+    {
+        "no": 1075,
+        "kanji": "付",
+        "keyword": "adhere"
+    },
+    {
+        "no": 1076,
+        "kanji": "符",
+        "keyword": "token"
+    },
+    {
+        "no": 1077,
+        "kanji": "府",
+        "keyword": "municipality"
+    },
+    {
+        "no": 1078,
+        "kanji": "任",
+        "keyword": "responsibility"
+    },
+    {
+        "no": 1079,
+        "kanji": "賃",
+        "keyword": "fare"
+    },
+    {
+        "no": 1080,
+        "kanji": "代",
+        "keyword": "substitute"
+    },
+    {
+        "no": 1081,
+        "kanji": "袋",
+        "keyword": "sack"
+    },
+    {
+        "no": 1082,
+        "kanji": "貸",
+        "keyword": "lend"
+    },
+    {
+        "no": 1083,
+        "kanji": "化",
+        "keyword": "change"
+    },
+    {
+        "no": 1084,
+        "kanji": "花",
+        "keyword": "flower"
+    },
+    {
+        "no": 1085,
+        "kanji": "貨",
+        "keyword": "freight"
+    },
+    {
+        "no": 1086,
+        "kanji": "傾",
+        "keyword": "lean"
+    },
+    {
+        "no": 1087,
+        "kanji": "何",
+        "keyword": "what"
+    },
+    {
+        "no": 1088,
+        "kanji": "荷",
+        "keyword": "baggage"
+    },
+    {
+        "no": 1089,
+        "kanji": "俊",
+        "keyword": "sagacious"
+    },
+    {
+        "no": 1090,
+        "kanji": "傍",
+        "keyword": "bystander"
+    },
+    {
+        "no": 1091,
+        "kanji": "俺",
+        "keyword": "myself"
+    },
+    {
+        "no": 1092,
+        "kanji": "久",
+        "keyword": "long time"
+    },
+    {
+        "no": 1093,
+        "kanji": "畝",
+        "keyword": "furrow"
+    },
+    {
+        "no": 1094,
+        "kanji": "囚",
+        "keyword": "captured"
+    },
+    {
+        "no": 1095,
+        "kanji": "内",
+        "keyword": "inside"
+    },
+    {
+        "no": 1096,
+        "kanji": "丙",
+        "keyword": "third class"
+    },
+    {
+        "no": 1097,
+        "kanji": "柄",
+        "keyword": "design"
+    },
+    {
+        "no": 1098,
+        "kanji": "肉",
+        "keyword": "meat"
+    },
+    {
+        "no": 1099,
+        "kanji": "腐",
+        "keyword": "rot"
+    },
+    {
+        "no": 1100,
+        "kanji": "座",
+        "keyword": "sit"
+    },
+    {
+        "no": 1101,
+        "kanji": "挫",
+        "keyword": "sprain"
+    },
+    {
+        "no": 1102,
+        "kanji": "卒",
+        "keyword": "graduate"
+    },
+    {
+        "no": 1103,
+        "kanji": "傘",
+        "keyword": "umbrella"
+    },
+    {
+        "no": 1104,
+        "kanji": "匁",
+        "keyword": "monme"
+    },
+    {
+        "no": 1105,
+        "kanji": "以",
+        "keyword": "by means of"
+    },
+    {
+        "no": 1106,
+        "kanji": "似",
+        "keyword": "similar"
+    },
+    {
+        "no": 1107,
+        "kanji": "併",
+        "keyword": "join"
+    },
+    {
+        "no": 1108,
+        "kanji": "瓦",
+        "keyword": "tile"
+    },
+    {
+        "no": 1109,
+        "kanji": "瓶",
+        "keyword": "flower pot"
+    },
+    {
+        "no": 1110,
+        "kanji": "宮",
+        "keyword": "Shinto shrine"
+    },
+    {
+        "no": 1111,
+        "kanji": "営",
+        "keyword": "occupation"
+    },
+    {
+        "no": 1112,
+        "kanji": "善",
+        "keyword": "virtuous"
+    },
+    {
+        "no": 1113,
+        "kanji": "膳",
+        "keyword": "dining tray"
+    },
+    {
+        "no": 1114,
+        "kanji": "年",
+        "keyword": "year"
+    },
+    {
+        "no": 1115,
+        "kanji": "夜",
+        "keyword": "night"
+    },
+    {
+        "no": 1116,
+        "kanji": "液",
+        "keyword": "fluid"
+    },
+    {
+        "no": 1117,
+        "kanji": "塚",
+        "keyword": "hillock"
+    },
+    {
+        "no": 1118,
+        "kanji": "幣",
+        "keyword": "cash"
+    },
+    {
+        "no": 1119,
+        "kanji": "蔽",
+        "keyword": "cover over"
+    },
+    {
+        "no": 1120,
+        "kanji": "弊",
+        "keyword": "abuse"
+    },
+    {
+        "no": 1121,
+        "kanji": "喚",
+        "keyword": "yell"
+    },
+    {
+        "no": 1122,
+        "kanji": "換",
+        "keyword": "interchange"
+    },
+    {
+        "no": 1123,
+        "kanji": "融",
+        "keyword": "dissolve"
+    },
+    {
+        "no": 1124,
+        "kanji": "施",
+        "keyword": "alms"
+    },
+    {
+        "no": 1125,
+        "kanji": "旋",
+        "keyword": "rotation"
+    },
+    {
+        "no": 1126,
+        "kanji": "遊",
+        "keyword": "play"
+    },
+    {
+        "no": 1127,
+        "kanji": "旅",
+        "keyword": "trip"
+    },
+    {
+        "no": 1128,
+        "kanji": "勿",
+        "keyword": "not"
+    },
+    {
+        "no": 1129,
+        "kanji": "物",
+        "keyword": "thing"
+    },
+    {
+        "no": 1130,
+        "kanji": "易",
+        "keyword": "easy"
+    },
+    {
+        "no": 1131,
+        "kanji": "賜",
+        "keyword": "grant"
+    },
+    {
+        "no": 1132,
+        "kanji": "尿",
+        "keyword": "urine"
+    },
+    {
+        "no": 1133,
+        "kanji": "尼",
+        "keyword": "nun"
+    },
+    {
+        "no": 1134,
+        "kanji": "尻",
+        "keyword": "buttocks"
+    },
+    {
+        "no": 1135,
+        "kanji": "泥",
+        "keyword": "mud"
+    },
+    {
+        "no": 1136,
+        "kanji": "塀",
+        "keyword": "fence"
+    },
+    {
+        "no": 1137,
+        "kanji": "履",
+        "keyword": "footgear"
+    },
+    {
+        "no": 1138,
+        "kanji": "屋",
+        "keyword": "roof"
+    },
+    {
+        "no": 1139,
+        "kanji": "握",
+        "keyword": "grip"
+    },
+    {
+        "no": 1140,
+        "kanji": "屈",
+        "keyword": "yield"
+    },
+    {
+        "no": 1141,
+        "kanji": "掘",
+        "keyword": "dig"
+    },
+    {
+        "no": 1142,
+        "kanji": "堀",
+        "keyword": "ditch"
+    },
+    {
+        "no": 1143,
+        "kanji": "居",
+        "keyword": "reside"
+    },
+    {
+        "no": 1144,
+        "kanji": "据",
+        "keyword": "set"
+    },
+    {
+        "no": 1145,
+        "kanji": "裾",
+        "keyword": "hem"
+    },
+    {
+        "no": 1146,
+        "kanji": "層",
+        "keyword": "stratum"
+    },
+    {
+        "no": 1147,
+        "kanji": "局",
+        "keyword": "bureau"
+    },
+    {
+        "no": 1148,
+        "kanji": "遅",
+        "keyword": "slow"
+    },
+    {
+        "no": 1149,
+        "kanji": "漏",
+        "keyword": "leak"
+    },
+    {
+        "no": 1150,
+        "kanji": "刷",
+        "keyword": "printing"
+    },
+    {
+        "no": 1151,
+        "kanji": "尺",
+        "keyword": "shaku"
+    },
+    {
+        "no": 1152,
+        "kanji": "尽",
+        "keyword": "exhaust"
+    },
+    {
+        "no": 1153,
+        "kanji": "沢",
+        "keyword": "swamp"
+    },
+    {
+        "no": 1154,
+        "kanji": "訳",
+        "keyword": "translate"
+    },
+    {
+        "no": 1155,
+        "kanji": "択",
+        "keyword": "choose"
+    },
+    {
+        "no": 1156,
+        "kanji": "昼",
+        "keyword": "daytime"
+    },
+    {
+        "no": 1157,
+        "kanji": "戸",
+        "keyword": "door"
+    },
+    {
+        "no": 1158,
+        "kanji": "肩",
+        "keyword": "shoulder"
+    },
+    {
+        "no": 1159,
+        "kanji": "房",
+        "keyword": "tassel"
+    },
+    {
+        "no": 1160,
+        "kanji": "扇",
+        "keyword": "fan"
+    },
+    {
+        "no": 1161,
+        "kanji": "炉",
+        "keyword": "hearth"
+    },
+    {
+        "no": 1162,
+        "kanji": "戻",
+        "keyword": "re-"
+    },
+    {
+        "no": 1163,
+        "kanji": "涙",
+        "keyword": "tears"
+    },
+    {
+        "no": 1164,
+        "kanji": "雇",
+        "keyword": "employ"
+    },
+    {
+        "no": 1165,
+        "kanji": "顧",
+        "keyword": "look back"
+    },
+    {
+        "no": 1166,
+        "kanji": "啓",
+        "keyword": "disclose"
+    },
+    {
+        "no": 1167,
+        "kanji": "示",
+        "keyword": "show"
+    },
+    {
+        "no": 1168,
+        "kanji": "礼",
+        "keyword": "salutation"
+    },
+    {
+        "no": 1169,
+        "kanji": "祥",
+        "keyword": "auspicious"
+    },
+    {
+        "no": 1170,
+        "kanji": "祝",
+        "keyword": "celebrate"
+    },
+    {
+        "no": 1171,
+        "kanji": "福",
+        "keyword": "blessing"
+    },
+    {
+        "no": 1172,
+        "kanji": "祉",
+        "keyword": "welfare"
+    },
+    {
+        "no": 1173,
+        "kanji": "社",
+        "keyword": "company"
+    },
+    {
+        "no": 1174,
+        "kanji": "視",
+        "keyword": "inspection"
+    },
+    {
+        "no": 1175,
+        "kanji": "奈",
+        "keyword": "Nara"
+    },
+    {
+        "no": 1176,
+        "kanji": "尉",
+        "keyword": "military officer"
+    },
+    {
+        "no": 1177,
+        "kanji": "慰",
+        "keyword": "consolation"
+    },
+    {
+        "no": 1178,
+        "kanji": "款",
+        "keyword": "goodwill"
+    },
+    {
+        "no": 1179,
+        "kanji": "禁",
+        "keyword": "prohibition"
+    },
+    {
+        "no": 1180,
+        "kanji": "襟",
+        "keyword": "collar"
+    },
+    {
+        "no": 1181,
+        "kanji": "宗",
+        "keyword": "religion"
+    },
+    {
+        "no": 1182,
+        "kanji": "崇",
+        "keyword": "adore"
+    },
+    {
+        "no": 1183,
+        "kanji": "祭",
+        "keyword": "ritual"
+    },
+    {
+        "no": 1184,
+        "kanji": "察",
+        "keyword": "guess"
+    },
+    {
+        "no": 1185,
+        "kanji": "擦",
+        "keyword": "grate"
+    },
+    {
+        "no": 1186,
+        "kanji": "由",
+        "keyword": "wherefore"
+    },
+    {
+        "no": 1187,
+        "kanji": "抽",
+        "keyword": "pluck"
+    },
+    {
+        "no": 1188,
+        "kanji": "油",
+        "keyword": "oil"
+    },
+    {
+        "no": 1189,
+        "kanji": "袖",
+        "keyword": "sleeve"
+    },
+    {
+        "no": 1190,
+        "kanji": "宙",
+        "keyword": "mid-air"
+    },
+    {
+        "no": 1191,
+        "kanji": "届",
+        "keyword": "deliver"
+    },
+    {
+        "no": 1192,
+        "kanji": "笛",
+        "keyword": "flute"
+    },
+    {
+        "no": 1193,
+        "kanji": "軸",
+        "keyword": "axis"
+    },
+    {
+        "no": 1194,
+        "kanji": "甲",
+        "keyword": "armor"
+    },
+    {
+        "no": 1195,
+        "kanji": "押",
+        "keyword": "push"
+    },
+    {
+        "no": 1196,
+        "kanji": "岬",
+        "keyword": "headland"
+    },
+    {
+        "no": 1197,
+        "kanji": "挿",
+        "keyword": "insert"
+    },
+    {
+        "no": 1198,
+        "kanji": "申",
+        "keyword": "speaketh"
+    },
+    {
+        "no": 1199,
+        "kanji": "伸",
+        "keyword": "expand"
+    },
+    {
+        "no": 1200,
+        "kanji": "神",
+        "keyword": "gods"
+    },
+    {
+        "no": 1201,
+        "kanji": "捜",
+        "keyword": "search"
+    },
+    {
+        "no": 1202,
+        "kanji": "果",
+        "keyword": "fruit"
+    },
+    {
+        "no": 1203,
+        "kanji": "菓",
+        "keyword": "confectionary (candy)"
+    },
+    {
+        "no": 1204,
+        "kanji": "課",
+        "keyword": "chapter"
+    },
+    {
+        "no": 1205,
+        "kanji": "裸",
+        "keyword": "naked"
+    },
+    {
+        "no": 1206,
+        "kanji": "斤",
+        "keyword": "axe"
+    },
+    {
+        "no": 1207,
+        "kanji": "析",
+        "keyword": "chop"
+    },
+    {
+        "no": 1208,
+        "kanji": "所",
+        "keyword": "place"
+    },
+    {
+        "no": 1209,
+        "kanji": "祈",
+        "keyword": "pray"
+    },
+    {
+        "no": 1210,
+        "kanji": "近",
+        "keyword": "near"
+    },
+    {
+        "no": 1211,
+        "kanji": "折",
+        "keyword": "fold"
+    },
+    {
+        "no": 1212,
+        "kanji": "哲",
+        "keyword": "philosophy"
+    },
+    {
+        "no": 1213,
+        "kanji": "逝",
+        "keyword": "departed"
+    },
+    {
+        "no": 1214,
+        "kanji": "誓",
+        "keyword": "vow"
+    },
+    {
+        "no": 1215,
+        "kanji": "斬",
+        "keyword": "chop off"
+    },
+    {
+        "no": 1216,
+        "kanji": "暫",
+        "keyword": "temporarily"
+    },
+    {
+        "no": 1217,
+        "kanji": "漸",
+        "keyword": "steadily"
+    },
+    {
+        "no": 1218,
+        "kanji": "断",
+        "keyword": "severance"
+    },
+    {
+        "no": 1219,
+        "kanji": "質",
+        "keyword": "substance"
+    },
+    {
+        "no": 1220,
+        "kanji": "斥",
+        "keyword": "reject"
+    },
+    {
+        "no": 1221,
+        "kanji": "訴",
+        "keyword": "accusation"
+    },
+    {
+        "no": 1222,
+        "kanji": "昨",
+        "keyword": "yesterday"
+    },
+    {
+        "no": 1223,
+        "kanji": "詐",
+        "keyword": "lie"
+    },
+    {
+        "no": 1224,
+        "kanji": "作",
+        "keyword": "make"
+    },
+    {
+        "no": 1225,
+        "kanji": "雪",
+        "keyword": "snow"
+    },
+    {
+        "no": 1226,
+        "kanji": "録",
+        "keyword": "record"
+    },
+    {
+        "no": 1227,
+        "kanji": "剥",
+        "keyword": "peel off"
+    },
+    {
+        "no": 1228,
+        "kanji": "尋",
+        "keyword": "inquire"
+    },
+    {
+        "no": 1229,
+        "kanji": "急",
+        "keyword": "hurry"
+    },
+    {
+        "no": 1230,
+        "kanji": "穏",
+        "keyword": "calm"
+    },
+    {
+        "no": 1231,
+        "kanji": "侵",
+        "keyword": "encroach"
+    },
+    {
+        "no": 1232,
+        "kanji": "浸",
+        "keyword": "immersed"
+    },
+    {
+        "no": 1233,
+        "kanji": "寝",
+        "keyword": "lie down"
+    },
+    {
+        "no": 1234,
+        "kanji": "婦",
+        "keyword": "lady"
+    },
+    {
+        "no": 1235,
+        "kanji": "掃",
+        "keyword": "sweep"
+    },
+    {
+        "no": 1236,
+        "kanji": "当",
+        "keyword": "hit"
+    },
+    {
+        "no": 1237,
+        "kanji": "彙",
+        "keyword": "glossary"
+    },
+    {
+        "no": 1238,
+        "kanji": "争",
+        "keyword": "contend"
+    },
+    {
+        "no": 1239,
+        "kanji": "浄",
+        "keyword": "clean"
+    },
+    {
+        "no": 1240,
+        "kanji": "事",
+        "keyword": "matter"
+    },
+    {
+        "no": 1241,
+        "kanji": "唐",
+        "keyword": "T'ang"
+    },
+    {
+        "no": 1242,
+        "kanji": "糖",
+        "keyword": "sugar"
+    },
+    {
+        "no": 1243,
+        "kanji": "康",
+        "keyword": "sane"
+    },
+    {
+        "no": 1244,
+        "kanji": "逮",
+        "keyword": "apprehend"
+    },
+    {
+        "no": 1245,
+        "kanji": "伊",
+        "keyword": "Italy"
+    },
+    {
+        "no": 1246,
+        "kanji": "君",
+        "keyword": "old boy"
+    },
+    {
+        "no": 1247,
+        "kanji": "群",
+        "keyword": "flock"
+    },
+    {
+        "no": 1248,
+        "kanji": "耐",
+        "keyword": "-proof"
+    },
+    {
+        "no": 1249,
+        "kanji": "需",
+        "keyword": "demand"
+    },
+    {
+        "no": 1250,
+        "kanji": "儒",
+        "keyword": "Confucian"
+    },
+    {
+        "no": 1251,
+        "kanji": "端",
+        "keyword": "edge"
+    },
+    {
+        "no": 1252,
+        "kanji": "両",
+        "keyword": "both"
+    },
+    {
+        "no": 1253,
+        "kanji": "満",
+        "keyword": "full"
+    },
+    {
+        "no": 1254,
+        "kanji": "画",
+        "keyword": "brush-stroke"
+    },
+    {
+        "no": 1255,
+        "kanji": "歯",
+        "keyword": "tooth"
+    },
+    {
+        "no": 1256,
+        "kanji": "曲",
+        "keyword": "bend"
+    },
+    {
+        "no": 1257,
+        "kanji": "曹",
+        "keyword": "cadet"
+    },
+    {
+        "no": 1258,
+        "kanji": "遭",
+        "keyword": "encounter"
+    },
+    {
+        "no": 1259,
+        "kanji": "漕",
+        "keyword": "rowing"
+    },
+    {
+        "no": 1260,
+        "kanji": "槽",
+        "keyword": "vat"
+    },
+    {
+        "no": 1261,
+        "kanji": "斗",
+        "keyword": "Big Dipper"
+    },
+    {
+        "no": 1262,
+        "kanji": "料",
+        "keyword": "fee"
+    },
+    {
+        "no": 1263,
+        "kanji": "科",
+        "keyword": "department"
+    },
+    {
+        "no": 1264,
+        "kanji": "図",
+        "keyword": "map"
+    },
+    {
+        "no": 1265,
+        "kanji": "用",
+        "keyword": "utilize"
+    },
+    {
+        "no": 1266,
+        "kanji": "庸",
+        "keyword": "comfortable"
+    },
+    {
+        "no": 1267,
+        "kanji": "備",
+        "keyword": "equip"
+    },
+    {
+        "no": 1268,
+        "kanji": "昔",
+        "keyword": "once upon a time"
+    },
+    {
+        "no": 1269,
+        "kanji": "錯",
+        "keyword": "confused"
+    },
+    {
+        "no": 1270,
+        "kanji": "借",
+        "keyword": "borrow"
+    },
+    {
+        "no": 1271,
+        "kanji": "惜",
+        "keyword": "pity"
+    },
+    {
+        "no": 1272,
+        "kanji": "措",
+        "keyword": "set aside"
+    },
+    {
+        "no": 1273,
+        "kanji": "散",
+        "keyword": "scatter"
+    },
+    {
+        "no": 1274,
+        "kanji": "廿",
+        "keyword": "twenty"
+    },
+    {
+        "no": 1275,
+        "kanji": "庶",
+        "keyword": "commoner"
+    },
+    {
+        "no": 1276,
+        "kanji": "遮",
+        "keyword": "intercept"
+    },
+    {
+        "no": 1277,
+        "kanji": "席",
+        "keyword": "seat"
+    },
+    {
+        "no": 1278,
+        "kanji": "度",
+        "keyword": "degrees"
+    },
+    {
+        "no": 1279,
+        "kanji": "渡",
+        "keyword": "transit"
+    },
+    {
+        "no": 1280,
+        "kanji": "奔",
+        "keyword": "bustle"
+    },
+    {
+        "no": 1281,
+        "kanji": "噴",
+        "keyword": "erupt"
+    },
+    {
+        "no": 1282,
+        "kanji": "墳",
+        "keyword": "tomb"
+    },
+    {
+        "no": 1283,
+        "kanji": "憤",
+        "keyword": "aroused"
+    },
+    {
+        "no": 1284,
+        "kanji": "焼",
+        "keyword": "bake"
+    },
+    {
+        "no": 1285,
+        "kanji": "暁",
+        "keyword": "daybreak"
+    },
+    {
+        "no": 1286,
+        "kanji": "半",
+        "keyword": "half"
+    },
+    {
+        "no": 1287,
+        "kanji": "伴",
+        "keyword": "consort"
+    },
+    {
+        "no": 1288,
+        "kanji": "畔",
+        "keyword": "paddy-ridge"
+    },
+    {
+        "no": 1289,
+        "kanji": "判",
+        "keyword": "judgment"
+    },
+    {
+        "no": 1290,
+        "kanji": "拳",
+        "keyword": "fist"
+    },
+    {
+        "no": 1291,
+        "kanji": "券",
+        "keyword": "ticket"
+    },
+    {
+        "no": 1292,
+        "kanji": "巻",
+        "keyword": "scroll"
+    },
+    {
+        "no": 1293,
+        "kanji": "圏",
+        "keyword": "sphere"
+    },
+    {
+        "no": 1294,
+        "kanji": "勝",
+        "keyword": "victory"
+    },
+    {
+        "no": 1295,
+        "kanji": "藤",
+        "keyword": "wisteria"
+    },
+    {
+        "no": 1296,
+        "kanji": "謄",
+        "keyword": "facsimile"
+    },
+    {
+        "no": 1297,
+        "kanji": "片",
+        "keyword": "one-sided"
+    },
+    {
+        "no": 1298,
+        "kanji": "版",
+        "keyword": "printing block"
+    },
+    {
+        "no": 1299,
+        "kanji": "之",
+        "keyword": "of"
+    },
+    {
+        "no": 1300,
+        "kanji": "乏",
+        "keyword": "destitution"
+    },
+    {
+        "no": 1301,
+        "kanji": "芝",
+        "keyword": "turf"
+    },
+    {
+        "no": 1302,
+        "kanji": "不",
+        "keyword": "negative"
+    },
+    {
+        "no": 1303,
+        "kanji": "否",
+        "keyword": "negate"
+    },
+    {
+        "no": 1304,
+        "kanji": "杯",
+        "keyword": "cupfuls"
+    },
+    {
+        "no": 1305,
+        "kanji": "矢",
+        "keyword": "dart"
+    },
+    {
+        "no": 1306,
+        "kanji": "矯",
+        "keyword": "rectify"
+    },
+    {
+        "no": 1307,
+        "kanji": "族",
+        "keyword": "tribe"
+    },
+    {
+        "no": 1308,
+        "kanji": "知",
+        "keyword": "know"
+    },
+    {
+        "no": 1309,
+        "kanji": "智",
+        "keyword": "wisdom"
+    },
+    {
+        "no": 1310,
+        "kanji": "挨",
+        "keyword": "shove"
+    },
+    {
+        "no": 1311,
+        "kanji": "矛",
+        "keyword": "halberd"
+    },
+    {
+        "no": 1312,
+        "kanji": "柔",
+        "keyword": "tender"
+    },
+    {
+        "no": 1313,
+        "kanji": "務",
+        "keyword": "task"
+    },
+    {
+        "no": 1314,
+        "kanji": "霧",
+        "keyword": "fog"
+    },
+    {
+        "no": 1315,
+        "kanji": "班",
+        "keyword": "squad"
+    },
+    {
+        "no": 1316,
+        "kanji": "帰",
+        "keyword": "homecoming"
+    },
+    {
+        "no": 1317,
+        "kanji": "弓",
+        "keyword": "bow"
+    },
+    {
+        "no": 1318,
+        "kanji": "引",
+        "keyword": "pull"
+    },
+    {
+        "no": 1319,
+        "kanji": "弔",
+        "keyword": "condolences"
+    },
+    {
+        "no": 1320,
+        "kanji": "弘",
+        "keyword": "vast"
+    },
+    {
+        "no": 1321,
+        "kanji": "強",
+        "keyword": "strong"
+    },
+    {
+        "no": 1322,
+        "kanji": "弥",
+        "keyword": "more and more"
+    },
+    {
+        "no": 1323,
+        "kanji": "弱",
+        "keyword": "weak"
+    },
+    {
+        "no": 1324,
+        "kanji": "溺",
+        "keyword": "drowning"
+    },
+    {
+        "no": 1325,
+        "kanji": "沸",
+        "keyword": "seethe"
+    },
+    {
+        "no": 1326,
+        "kanji": "費",
+        "keyword": "expense"
+    },
+    {
+        "no": 1327,
+        "kanji": "第",
+        "keyword": "No."
+    },
+    {
+        "no": 1328,
+        "kanji": "弟",
+        "keyword": "younger brother"
+    },
+    {
+        "no": 1329,
+        "kanji": "巧",
+        "keyword": "adroit"
+    },
+    {
+        "no": 1330,
+        "kanji": "号",
+        "keyword": "nickname"
+    },
+    {
+        "no": 1331,
+        "kanji": "朽",
+        "keyword": "decay"
+    },
+    {
+        "no": 1332,
+        "kanji": "誇",
+        "keyword": "boast"
+    },
+    {
+        "no": 1333,
+        "kanji": "顎",
+        "keyword": "chin"
+    },
+    {
+        "no": 1334,
+        "kanji": "汚",
+        "keyword": "dirty"
+    },
+    {
+        "no": 1335,
+        "kanji": "与",
+        "keyword": "bestow"
+    },
+    {
+        "no": 1336,
+        "kanji": "写",
+        "keyword": "copy"
+    },
+    {
+        "no": 1337,
+        "kanji": "身",
+        "keyword": "somebody"
+    },
+    {
+        "no": 1338,
+        "kanji": "射",
+        "keyword": "shoot"
+    },
+    {
+        "no": 1339,
+        "kanji": "謝",
+        "keyword": "apologize"
+    },
+    {
+        "no": 1340,
+        "kanji": "老",
+        "keyword": "old man"
+    },
+    {
+        "no": 1341,
+        "kanji": "考",
+        "keyword": "consider"
+    },
+    {
+        "no": 1342,
+        "kanji": "孝",
+        "keyword": "filial piety"
+    },
+    {
+        "no": 1343,
+        "kanji": "教",
+        "keyword": "teach"
+    },
+    {
+        "no": 1344,
+        "kanji": "拷",
+        "keyword": "torture"
+    },
+    {
+        "no": 1345,
+        "kanji": "者",
+        "keyword": "someone"
+    },
+    {
+        "no": 1346,
+        "kanji": "煮",
+        "keyword": "boil"
+    },
+    {
+        "no": 1347,
+        "kanji": "著",
+        "keyword": "renowned"
+    },
+    {
+        "no": 1348,
+        "kanji": "箸",
+        "keyword": "chopsticks"
+    },
+    {
+        "no": 1349,
+        "kanji": "署",
+        "keyword": "signature"
+    },
+    {
+        "no": 1350,
+        "kanji": "暑",
+        "keyword": "sultry"
+    },
+    {
+        "no": 1351,
+        "kanji": "諸",
+        "keyword": "various"
+    },
+    {
+        "no": 1352,
+        "kanji": "猪",
+        "keyword": "boar"
+    },
+    {
+        "no": 1353,
+        "kanji": "渚",
+        "keyword": "strand"
+    },
+    {
+        "no": 1354,
+        "kanji": "賭",
+        "keyword": "gamble"
+    },
+    {
+        "no": 1355,
+        "kanji": "峡",
+        "keyword": "gorge"
+    },
+    {
+        "no": 1356,
+        "kanji": "狭",
+        "keyword": "cramped"
+    },
+    {
+        "no": 1357,
+        "kanji": "挟",
+        "keyword": "sandwiched"
+    },
+    {
+        "no": 1358,
+        "kanji": "頬",
+        "keyword": "cheek"
+    },
+    {
+        "no": 1359,
+        "kanji": "追",
+        "keyword": "chase"
+    },
+    {
+        "no": 1360,
+        "kanji": "阜",
+        "keyword": "large hill"
+    },
+    {
+        "no": 1361,
+        "kanji": "師",
+        "keyword": "expert"
+    },
+    {
+        "no": 1362,
+        "kanji": "帥",
+        "keyword": "commander"
+    },
+    {
+        "no": 1363,
+        "kanji": "官",
+        "keyword": "bureaucrat"
+    },
+    {
+        "no": 1364,
+        "kanji": "棺",
+        "keyword": "coffin"
+    },
+    {
+        "no": 1365,
+        "kanji": "管",
+        "keyword": "pipe"
+    },
+    {
+        "no": 1366,
+        "kanji": "父",
+        "keyword": "father"
+    },
+    {
+        "no": 1367,
+        "kanji": "釜",
+        "keyword": "cauldron"
+    },
+    {
+        "no": 1368,
+        "kanji": "交",
+        "keyword": "mingle"
+    },
+    {
+        "no": 1369,
+        "kanji": "効",
+        "keyword": "merit"
+    },
+    {
+        "no": 1370,
+        "kanji": "較",
+        "keyword": "contrast"
+    },
+    {
+        "no": 1371,
+        "kanji": "校",
+        "keyword": "exam"
+    },
+    {
+        "no": 1372,
+        "kanji": "足",
+        "keyword": "leg"
+    },
+    {
+        "no": 1373,
+        "kanji": "促",
+        "keyword": "stimulate"
+    },
+    {
+        "no": 1374,
+        "kanji": "捉",
+        "keyword": "nab"
+    },
+    {
+        "no": 1375,
+        "kanji": "距",
+        "keyword": "long-distance"
+    },
+    {
+        "no": 1376,
+        "kanji": "路",
+        "keyword": "path"
+    },
+    {
+        "no": 1377,
+        "kanji": "露",
+        "keyword": "dew"
+    },
+    {
+        "no": 1378,
+        "kanji": "跳",
+        "keyword": "hop"
+    },
+    {
+        "no": 1379,
+        "kanji": "躍",
+        "keyword": "leap"
+    },
+    {
+        "no": 1380,
+        "kanji": "践",
+        "keyword": "tread"
+    },
+    {
+        "no": 1381,
+        "kanji": "踏",
+        "keyword": "step"
+    },
+    {
+        "no": 1382,
+        "kanji": "踪",
+        "keyword": "trail"
+    },
+    {
+        "no": 1383,
+        "kanji": "骨",
+        "keyword": "skeleton"
+    },
+    {
+        "no": 1384,
+        "kanji": "滑",
+        "keyword": "slippery"
+    },
+    {
+        "no": 1385,
+        "kanji": "髄",
+        "keyword": "marrow"
+    },
+    {
+        "no": 1386,
+        "kanji": "禍",
+        "keyword": "calamity"
+    },
+    {
+        "no": 1387,
+        "kanji": "渦",
+        "keyword": "whirlpool"
+    },
+    {
+        "no": 1388,
+        "kanji": "鍋",
+        "keyword": "pot"
+    },
+    {
+        "no": 1389,
+        "kanji": "過",
+        "keyword": "overdo"
+    },
+    {
+        "no": 1390,
+        "kanji": "阪",
+        "keyword": "Heights"
+    },
+    {
+        "no": 1391,
+        "kanji": "阿",
+        "keyword": "Africa"
+    },
+    {
+        "no": 1392,
+        "kanji": "際",
+        "keyword": "occasion"
+    },
+    {
+        "no": 1393,
+        "kanji": "障",
+        "keyword": "hinder"
+    },
+    {
+        "no": 1394,
+        "kanji": "隙",
+        "keyword": "chink"
+    },
+    {
+        "no": 1395,
+        "kanji": "随",
+        "keyword": "follow"
+    },
+    {
+        "no": 1396,
+        "kanji": "陪",
+        "keyword": "auxiliary"
+    },
+    {
+        "no": 1397,
+        "kanji": "陽",
+        "keyword": "sunshine"
+    },
+    {
+        "no": 1398,
+        "kanji": "陳",
+        "keyword": "line up"
+    },
+    {
+        "no": 1399,
+        "kanji": "防",
+        "keyword": "ward off"
+    },
+    {
+        "no": 1400,
+        "kanji": "附",
+        "keyword": "affixed"
+    },
+    {
+        "no": 1401,
+        "kanji": "院",
+        "keyword": "Inst."
+    },
+    {
+        "no": 1402,
+        "kanji": "陣",
+        "keyword": "camp"
+    },
+    {
+        "no": 1403,
+        "kanji": "隊",
+        "keyword": "regiment"
+    },
+    {
+        "no": 1404,
+        "kanji": "墜",
+        "keyword": "crash"
+    },
+    {
+        "no": 1405,
+        "kanji": "降",
+        "keyword": "descend"
+    },
+    {
+        "no": 1406,
+        "kanji": "階",
+        "keyword": "story"
+    },
+    {
+        "no": 1407,
+        "kanji": "陛",
+        "keyword": "highness"
+    },
+    {
+        "no": 1408,
+        "kanji": "隣",
+        "keyword": "neighboring"
+    },
+    {
+        "no": 1409,
+        "kanji": "隔",
+        "keyword": "isolate"
+    },
+    {
+        "no": 1410,
+        "kanji": "隠",
+        "keyword": "conceal"
+    },
+    {
+        "no": 1411,
+        "kanji": "堕",
+        "keyword": "degenerate"
+    },
+    {
+        "no": 1412,
+        "kanji": "陥",
+        "keyword": "collapse"
+    },
+    {
+        "no": 1413,
+        "kanji": "穴",
+        "keyword": "hole"
+    },
+    {
+        "no": 1414,
+        "kanji": "空",
+        "keyword": "empty"
+    },
+    {
+        "no": 1415,
+        "kanji": "控",
+        "keyword": "withdraw"
+    },
+    {
+        "no": 1416,
+        "kanji": "突",
+        "keyword": "stab"
+    },
+    {
+        "no": 1417,
+        "kanji": "究",
+        "keyword": "research"
+    },
+    {
+        "no": 1418,
+        "kanji": "窒",
+        "keyword": "plug up"
+    },
+    {
+        "no": 1419,
+        "kanji": "窃",
+        "keyword": "stealth"
+    },
+    {
+        "no": 1420,
+        "kanji": "窟",
+        "keyword": "cavern"
+    },
+    {
+        "no": 1421,
+        "kanji": "窪",
+        "keyword": "depression"
+    },
+    {
+        "no": 1422,
+        "kanji": "搾",
+        "keyword": "squeeze"
+    },
+    {
+        "no": 1423,
+        "kanji": "窯",
+        "keyword": "kiln"
+    },
+    {
+        "no": 1424,
+        "kanji": "窮",
+        "keyword": "hard up"
+    },
+    {
+        "no": 1425,
+        "kanji": "探",
+        "keyword": "grope"
+    },
+    {
+        "no": 1426,
+        "kanji": "深",
+        "keyword": "deep"
+    },
+    {
+        "no": 1427,
+        "kanji": "丘",
+        "keyword": "hill"
+    },
+    {
+        "no": 1428,
+        "kanji": "岳",
+        "keyword": "Point"
+    },
+    {
+        "no": 1429,
+        "kanji": "兵",
+        "keyword": "soldier"
+    },
+    {
+        "no": 1430,
+        "kanji": "浜",
+        "keyword": "seacoast"
+    },
+    {
+        "no": 1431,
+        "kanji": "糸",
+        "keyword": "thread"
+    },
+    {
+        "no": 1432,
+        "kanji": "織",
+        "keyword": "weave"
+    },
+    {
+        "no": 1433,
+        "kanji": "繕",
+        "keyword": "darning"
+    },
+    {
+        "no": 1434,
+        "kanji": "縮",
+        "keyword": "shrink"
+    },
+    {
+        "no": 1435,
+        "kanji": "繁",
+        "keyword": "luxuriant"
+    },
+    {
+        "no": 1436,
+        "kanji": "縦",
+        "keyword": "vertical"
+    },
+    {
+        "no": 1437,
+        "kanji": "緻",
+        "keyword": "fine"
+    },
+    {
+        "no": 1438,
+        "kanji": "線",
+        "keyword": "line"
+    },
+    {
+        "no": 1439,
+        "kanji": "綻",
+        "keyword": "come apart at the seams"
+    },
+    {
+        "no": 1440,
+        "kanji": "締",
+        "keyword": "tighten"
+    },
+    {
+        "no": 1441,
+        "kanji": "維",
+        "keyword": "fiber"
+    },
+    {
+        "no": 1442,
+        "kanji": "羅",
+        "keyword": "gauze"
+    },
+    {
+        "no": 1443,
+        "kanji": "練",
+        "keyword": "practice"
+    },
+    {
+        "no": 1444,
+        "kanji": "緒",
+        "keyword": "thong"
+    },
+    {
+        "no": 1445,
+        "kanji": "続",
+        "keyword": "continue"
+    },
+    {
+        "no": 1446,
+        "kanji": "絵",
+        "keyword": "picture"
+    },
+    {
+        "no": 1447,
+        "kanji": "統",
+        "keyword": "overall"
+    },
+    {
+        "no": 1448,
+        "kanji": "絞",
+        "keyword": "strangle"
+    },
+    {
+        "no": 1449,
+        "kanji": "給",
+        "keyword": "salary"
+    },
+    {
+        "no": 1450,
+        "kanji": "絡",
+        "keyword": "entwine"
+    },
+    {
+        "no": 1451,
+        "kanji": "結",
+        "keyword": "tie"
+    },
+    {
+        "no": 1452,
+        "kanji": "終",
+        "keyword": "end"
+    },
+    {
+        "no": 1453,
+        "kanji": "級",
+        "keyword": "class"
+    },
+    {
+        "no": 1454,
+        "kanji": "紀",
+        "keyword": "chronicle"
+    },
+    {
+        "no": 1455,
+        "kanji": "紅",
+        "keyword": "crimson"
+    },
+    {
+        "no": 1456,
+        "kanji": "納",
+        "keyword": "settlement"
+    },
+    {
+        "no": 1457,
+        "kanji": "紡",
+        "keyword": "spinning"
+    },
+    {
+        "no": 1458,
+        "kanji": "紛",
+        "keyword": "distract"
+    },
+    {
+        "no": 1459,
+        "kanji": "紹",
+        "keyword": "introduce"
+    },
+    {
+        "no": 1460,
+        "kanji": "経",
+        "keyword": "sutra"
+    },
+    {
+        "no": 1461,
+        "kanji": "紳",
+        "keyword": "sire"
+    },
+    {
+        "no": 1462,
+        "kanji": "約",
+        "keyword": "promise"
+    },
+    {
+        "no": 1463,
+        "kanji": "細",
+        "keyword": "dainty"
+    },
+    {
+        "no": 1464,
+        "kanji": "累",
+        "keyword": "accumulate"
+    },
+    {
+        "no": 1465,
+        "kanji": "索",
+        "keyword": "cord"
+    },
+    {
+        "no": 1466,
+        "kanji": "総",
+        "keyword": "general"
+    },
+    {
+        "no": 1467,
+        "kanji": "綿",
+        "keyword": "cotton"
+    },
+    {
+        "no": 1468,
+        "kanji": "絹",
+        "keyword": "silk"
+    },
+    {
+        "no": 1469,
+        "kanji": "繰",
+        "keyword": "winding"
+    },
+    {
+        "no": 1470,
+        "kanji": "継",
+        "keyword": "inherit"
+    },
+    {
+        "no": 1471,
+        "kanji": "緑",
+        "keyword": "green"
+    },
+    {
+        "no": 1472,
+        "kanji": "縁",
+        "keyword": "affinity"
+    },
+    {
+        "no": 1473,
+        "kanji": "網",
+        "keyword": "netting"
+    },
+    {
+        "no": 1474,
+        "kanji": "緊",
+        "keyword": "tense"
+    },
+    {
+        "no": 1475,
+        "kanji": "紫",
+        "keyword": "purple"
+    },
+    {
+        "no": 1476,
+        "kanji": "縛",
+        "keyword": "truss"
+    },
+    {
+        "no": 1477,
+        "kanji": "縄",
+        "keyword": "straw rope"
+    },
+    {
+        "no": 1478,
+        "kanji": "幼",
+        "keyword": "infancy"
+    },
+    {
+        "no": 1479,
+        "kanji": "後",
+        "keyword": "behind"
+    },
+    {
+        "no": 1480,
+        "kanji": "幽",
+        "keyword": "faint"
+    },
+    {
+        "no": 1481,
+        "kanji": "幾",
+        "keyword": "how many"
+    },
+    {
+        "no": 1482,
+        "kanji": "機",
+        "keyword": "mechanism"
+    },
+    {
+        "no": 1483,
+        "kanji": "畿",
+        "keyword": "capital suburbs"
+    },
+    {
+        "no": 1484,
+        "kanji": "玄",
+        "keyword": "mysterious"
+    },
+    {
+        "no": 1485,
+        "kanji": "畜",
+        "keyword": "livestock"
+    },
+    {
+        "no": 1486,
+        "kanji": "蓄",
+        "keyword": "amass"
+    },
+    {
+        "no": 1487,
+        "kanji": "弦",
+        "keyword": "bowstring"
+    },
+    {
+        "no": 1488,
+        "kanji": "擁",
+        "keyword": "hug"
+    },
+    {
+        "no": 1489,
+        "kanji": "滋",
+        "keyword": "nourishing"
+    },
+    {
+        "no": 1490,
+        "kanji": "慈",
+        "keyword": "mercy"
+    },
+    {
+        "no": 1491,
+        "kanji": "磁",
+        "keyword": "magnet"
+    },
+    {
+        "no": 1492,
+        "kanji": "系",
+        "keyword": "lineage"
+    },
+    {
+        "no": 1493,
+        "kanji": "係",
+        "keyword": "person in charge"
+    },
+    {
+        "no": 1494,
+        "kanji": "孫",
+        "keyword": "grandchild"
+    },
+    {
+        "no": 1495,
+        "kanji": "懸",
+        "keyword": "suspend"
+    },
+    {
+        "no": 1496,
+        "kanji": "遜",
+        "keyword": "modest"
+    },
+    {
+        "no": 1497,
+        "kanji": "却",
+        "keyword": "instead"
+    },
+    {
+        "no": 1498,
+        "kanji": "脚",
+        "keyword": "shins"
+    },
+    {
+        "no": 1499,
+        "kanji": "卸",
+        "keyword": "wholesale"
+    },
+    {
+        "no": 1500,
+        "kanji": "御",
+        "keyword": "honorable"
+    },
+    {
+        "no": 1501,
+        "kanji": "服",
+        "keyword": "clothing"
+    },
+    {
+        "no": 1502,
+        "kanji": "命",
+        "keyword": "fate"
+    },
+    {
+        "no": 1503,
+        "kanji": "令",
+        "keyword": "orders"
+    },
+    {
+        "no": 1504,
+        "kanji": "零",
+        "keyword": "zero"
+    },
+    {
+        "no": 1505,
+        "kanji": "齢",
+        "keyword": "age"
+    },
+    {
+        "no": 1506,
+        "kanji": "冷",
+        "keyword": "cool"
+    },
+    {
+        "no": 1507,
+        "kanji": "領",
+        "keyword": "jurisdiction"
+    },
+    {
+        "no": 1508,
+        "kanji": "鈴",
+        "keyword": "small bell"
+    },
+    {
+        "no": 1509,
+        "kanji": "勇",
+        "keyword": "courage"
+    },
+    {
+        "no": 1510,
+        "kanji": "湧",
+        "keyword": "bubble up"
+    },
+    {
+        "no": 1511,
+        "kanji": "通",
+        "keyword": "traffic"
+    },
+    {
+        "no": 1512,
+        "kanji": "踊",
+        "keyword": "jump"
+    },
+    {
+        "no": 1513,
+        "kanji": "疑",
+        "keyword": "doubt"
+    },
+    {
+        "no": 1514,
+        "kanji": "擬",
+        "keyword": "mimic"
+    },
+    {
+        "no": 1515,
+        "kanji": "凝",
+        "keyword": "congeal"
+    },
+    {
+        "no": 1516,
+        "kanji": "範",
+        "keyword": "pattern"
+    },
+    {
+        "no": 1517,
+        "kanji": "犯",
+        "keyword": "crime"
+    },
+    {
+        "no": 1518,
+        "kanji": "氾",
+        "keyword": "widespread"
+    },
+    {
+        "no": 1519,
+        "kanji": "厄",
+        "keyword": "unlucky"
+    },
+    {
+        "no": 1520,
+        "kanji": "危",
+        "keyword": "dangerous"
+    },
+    {
+        "no": 1521,
+        "kanji": "宛",
+        "keyword": "address"
+    },
+    {
+        "no": 1522,
+        "kanji": "腕",
+        "keyword": "arm"
+    },
+    {
+        "no": 1523,
+        "kanji": "苑",
+        "keyword": "garden"
+    },
+    {
+        "no": 1524,
+        "kanji": "怨",
+        "keyword": "grudge"
+    },
+    {
+        "no": 1525,
+        "kanji": "柳",
+        "keyword": "willow"
+    },
+    {
+        "no": 1526,
+        "kanji": "卵",
+        "keyword": "egg"
+    },
+    {
+        "no": 1527,
+        "kanji": "留",
+        "keyword": "detain"
+    },
+    {
+        "no": 1528,
+        "kanji": "瑠",
+        "keyword": "marine blue"
+    },
+    {
+        "no": 1529,
+        "kanji": "貿",
+        "keyword": "trade"
+    },
+    {
+        "no": 1530,
+        "kanji": "印",
+        "keyword": "stamp *"
+    },
+    {
+        "no": 1531,
+        "kanji": "臼",
+        "keyword": "mortar"
+    },
+    {
+        "no": 1532,
+        "kanji": "毀",
+        "keyword": "break"
+    },
+    {
+        "no": 1533,
+        "kanji": "興",
+        "keyword": "entertain"
+    },
+    {
+        "no": 1534,
+        "kanji": "酉",
+        "keyword": "sign of the bird"
+    },
+    {
+        "no": 1535,
+        "kanji": "酒",
+        "keyword": "sake"
+    },
+    {
+        "no": 1536,
+        "kanji": "酌",
+        "keyword": "bartending"
+    },
+    {
+        "no": 1537,
+        "kanji": "酎",
+        "keyword": "hooch"
+    },
+    {
+        "no": 1538,
+        "kanji": "酵",
+        "keyword": "fermentation"
+    },
+    {
+        "no": 1539,
+        "kanji": "酷",
+        "keyword": "cruel"
+    },
+    {
+        "no": 1540,
+        "kanji": "酬",
+        "keyword": "repay"
+    },
+    {
+        "no": 1541,
+        "kanji": "酪",
+        "keyword": "dairy products"
+    },
+    {
+        "no": 1542,
+        "kanji": "酢",
+        "keyword": "vinegar"
+    },
+    {
+        "no": 1543,
+        "kanji": "酔",
+        "keyword": "drunk"
+    },
+    {
+        "no": 1544,
+        "kanji": "配",
+        "keyword": "distribute"
+    },
+    {
+        "no": 1545,
+        "kanji": "酸",
+        "keyword": "acid"
+    },
+    {
+        "no": 1546,
+        "kanji": "猶",
+        "keyword": "waver"
+    },
+    {
+        "no": 1547,
+        "kanji": "尊",
+        "keyword": "revered"
+    },
+    {
+        "no": 1548,
+        "kanji": "豆",
+        "keyword": "beans"
+    },
+    {
+        "no": 1549,
+        "kanji": "頭",
+        "keyword": "head"
+    },
+    {
+        "no": 1550,
+        "kanji": "短",
+        "keyword": "short"
+    },
+    {
+        "no": 1551,
+        "kanji": "豊",
+        "keyword": "bountiful"
+    },
+    {
+        "no": 1552,
+        "kanji": "鼓",
+        "keyword": "drum *"
+    },
+    {
+        "no": 1553,
+        "kanji": "喜",
+        "keyword": "rejoice"
+    },
+    {
+        "no": 1554,
+        "kanji": "樹",
+        "keyword": "timber-trees"
+    },
+    {
+        "no": 1555,
+        "kanji": "皿",
+        "keyword": "dish"
+    },
+    {
+        "no": 1556,
+        "kanji": "血",
+        "keyword": "blood"
+    },
+    {
+        "no": 1557,
+        "kanji": "盆",
+        "keyword": "basin"
+    },
+    {
+        "no": 1558,
+        "kanji": "盟",
+        "keyword": "alliance"
+    },
+    {
+        "no": 1559,
+        "kanji": "盗",
+        "keyword": "steal"
+    },
+    {
+        "no": 1560,
+        "kanji": "温",
+        "keyword": "warm"
+    },
+    {
+        "no": 1561,
+        "kanji": "蓋",
+        "keyword": "lid"
+    },
+    {
+        "no": 1562,
+        "kanji": "監",
+        "keyword": "oversee"
+    },
+    {
+        "no": 1563,
+        "kanji": "濫",
+        "keyword": "overflow"
+    },
+    {
+        "no": 1564,
+        "kanji": "鑑",
+        "keyword": "specimen"
+    },
+    {
+        "no": 1565,
+        "kanji": "藍",
+        "keyword": "indigo"
+    },
+    {
+        "no": 1566,
+        "kanji": "猛",
+        "keyword": "fierce"
+    },
+    {
+        "no": 1567,
+        "kanji": "盛",
+        "keyword": "boom"
+    },
+    {
+        "no": 1568,
+        "kanji": "塩",
+        "keyword": "salt"
+    },
+    {
+        "no": 1569,
+        "kanji": "銀",
+        "keyword": "silver *"
+    },
+    {
+        "no": 1570,
+        "kanji": "恨",
+        "keyword": "resentment"
+    },
+    {
+        "no": 1571,
+        "kanji": "根",
+        "keyword": "root"
+    },
+    {
+        "no": 1572,
+        "kanji": "即",
+        "keyword": "instant"
+    },
+    {
+        "no": 1573,
+        "kanji": "爵",
+        "keyword": "baron"
+    },
+    {
+        "no": 1574,
+        "kanji": "節",
+        "keyword": "node"
+    },
+    {
+        "no": 1575,
+        "kanji": "退",
+        "keyword": "retreat"
+    },
+    {
+        "no": 1576,
+        "kanji": "限",
+        "keyword": "limit"
+    },
+    {
+        "no": 1577,
+        "kanji": "眼",
+        "keyword": "eyeball"
+    },
+    {
+        "no": 1578,
+        "kanji": "良",
+        "keyword": "good"
+    },
+    {
+        "no": 1579,
+        "kanji": "朗",
+        "keyword": "melodious"
+    },
+    {
+        "no": 1580,
+        "kanji": "浪",
+        "keyword": "wandering"
+    },
+    {
+        "no": 1581,
+        "kanji": "娘",
+        "keyword": "daughter"
+    },
+    {
+        "no": 1582,
+        "kanji": "食",
+        "keyword": "eat"
+    },
+    {
+        "no": 1583,
+        "kanji": "飯",
+        "keyword": "meal *"
+    },
+    {
+        "no": 1584,
+        "kanji": "飲",
+        "keyword": "drink"
+    },
+    {
+        "no": 1585,
+        "kanji": "飢",
+        "keyword": "hungry"
+    },
+    {
+        "no": 1586,
+        "kanji": "餓",
+        "keyword": "starve"
+    },
+    {
+        "no": 1587,
+        "kanji": "飾",
+        "keyword": "decorate"
+    },
+    {
+        "no": 1588,
+        "kanji": "餌",
+        "keyword": "feed"
+    },
+    {
+        "no": 1589,
+        "kanji": "館",
+        "keyword": "Bldg."
+    },
+    {
+        "no": 1590,
+        "kanji": "餅",
+        "keyword": "mochi"
+    },
+    {
+        "no": 1591,
+        "kanji": "養",
+        "keyword": "foster"
+    },
+    {
+        "no": 1592,
+        "kanji": "飽",
+        "keyword": "sated"
+    },
+    {
+        "no": 1593,
+        "kanji": "既",
+        "keyword": "previously"
+    },
+    {
+        "no": 1594,
+        "kanji": "概",
+        "keyword": "outline"
+    },
+    {
+        "no": 1595,
+        "kanji": "慨",
+        "keyword": "rue"
+    },
+    {
+        "no": 1596,
+        "kanji": "平",
+        "keyword": "even"
+    },
+    {
+        "no": 1597,
+        "kanji": "呼",
+        "keyword": "call"
+    },
+    {
+        "no": 1598,
+        "kanji": "坪",
+        "keyword": "two-mat area"
+    },
+    {
+        "no": 1599,
+        "kanji": "評",
+        "keyword": "evaluate"
+    },
+    {
+        "no": 1600,
+        "kanji": "刈",
+        "keyword": "reap"
+    },
+    {
+        "no": 1601,
+        "kanji": "刹",
+        "keyword": "moment"
+    },
+    {
+        "no": 1602,
+        "kanji": "希",
+        "keyword": "hope"
+    },
+    {
+        "no": 1603,
+        "kanji": "凶",
+        "keyword": "villain"
+    },
+    {
+        "no": 1604,
+        "kanji": "胸",
+        "keyword": "bosom"
+    },
+    {
+        "no": 1605,
+        "kanji": "離",
+        "keyword": "detach"
+    },
+    {
+        "no": 1606,
+        "kanji": "璃",
+        "keyword": "crystal"
+    },
+    {
+        "no": 1607,
+        "kanji": "殺",
+        "keyword": "kill"
+    },
+    {
+        "no": 1608,
+        "kanji": "爽",
+        "keyword": "bracing"
+    },
+    {
+        "no": 1609,
+        "kanji": "純",
+        "keyword": "genuine"
+    },
+    {
+        "no": 1610,
+        "kanji": "頓",
+        "keyword": "immediate"
+    },
+    {
+        "no": 1611,
+        "kanji": "鈍",
+        "keyword": "dull"
+    },
+    {
+        "no": 1612,
+        "kanji": "辛",
+        "keyword": "spicy"
+    },
+    {
+        "no": 1613,
+        "kanji": "辞",
+        "keyword": "resign"
+    },
+    {
+        "no": 1614,
+        "kanji": "梓",
+        "keyword": "catalpa"
+    },
+    {
+        "no": 1615,
+        "kanji": "宰",
+        "keyword": "superintend"
+    },
+    {
+        "no": 1616,
+        "kanji": "壁",
+        "keyword": "wall"
+    },
+    {
+        "no": 1617,
+        "kanji": "璧",
+        "keyword": "holed gem"
+    },
+    {
+        "no": 1618,
+        "kanji": "避",
+        "keyword": "evade"
+    },
+    {
+        "no": 1619,
+        "kanji": "新",
+        "keyword": "new"
+    },
+    {
+        "no": 1620,
+        "kanji": "薪",
+        "keyword": "firewood"
+    },
+    {
+        "no": 1621,
+        "kanji": "親",
+        "keyword": "parent"
+    },
+    {
+        "no": 1622,
+        "kanji": "幸",
+        "keyword": "happiness"
+    },
+    {
+        "no": 1623,
+        "kanji": "執",
+        "keyword": "tenacious"
+    },
+    {
+        "no": 1624,
+        "kanji": "摯",
+        "keyword": "clasp"
+    },
+    {
+        "no": 1625,
+        "kanji": "報",
+        "keyword": "report"
+    },
+    {
+        "no": 1626,
+        "kanji": "叫",
+        "keyword": "shout"
+    },
+    {
+        "no": 1627,
+        "kanji": "糾",
+        "keyword": "twist"
+    },
+    {
+        "no": 1628,
+        "kanji": "収",
+        "keyword": "income"
+    },
+    {
+        "no": 1629,
+        "kanji": "卑",
+        "keyword": "lowly"
+    },
+    {
+        "no": 1630,
+        "kanji": "碑",
+        "keyword": "tombstone"
+    },
+    {
+        "no": 1631,
+        "kanji": "陸",
+        "keyword": "land"
+    },
+    {
+        "no": 1632,
+        "kanji": "睦",
+        "keyword": "intimate"
+    },
+    {
+        "no": 1633,
+        "kanji": "勢",
+        "keyword": "forces"
+    },
+    {
+        "no": 1634,
+        "kanji": "熱",
+        "keyword": "heat"
+    },
+    {
+        "no": 1635,
+        "kanji": "菱",
+        "keyword": "diamond"
+    },
+    {
+        "no": 1636,
+        "kanji": "陵",
+        "keyword": "mausoleum"
+    },
+    {
+        "no": 1637,
+        "kanji": "亥",
+        "keyword": "sign of the hog"
+    },
+    {
+        "no": 1638,
+        "kanji": "核",
+        "keyword": "nucleus"
+    },
+    {
+        "no": 1639,
+        "kanji": "刻",
+        "keyword": "engrave"
+    },
+    {
+        "no": 1640,
+        "kanji": "該",
+        "keyword": "above-stated"
+    },
+    {
+        "no": 1641,
+        "kanji": "骸",
+        "keyword": "remains"
+    },
+    {
+        "no": 1642,
+        "kanji": "劾",
+        "keyword": "censure"
+    },
+    {
+        "no": 1643,
+        "kanji": "述",
+        "keyword": "mention"
+    },
+    {
+        "no": 1644,
+        "kanji": "術",
+        "keyword": "art"
+    },
+    {
+        "no": 1645,
+        "kanji": "寒",
+        "keyword": "cold"
+    },
+    {
+        "no": 1646,
+        "kanji": "塞",
+        "keyword": "block up"
+    },
+    {
+        "no": 1647,
+        "kanji": "醸",
+        "keyword": "brew"
+    },
+    {
+        "no": 1648,
+        "kanji": "譲",
+        "keyword": "defer"
+    },
+    {
+        "no": 1649,
+        "kanji": "壌",
+        "keyword": "lot"
+    },
+    {
+        "no": 1650,
+        "kanji": "嬢",
+        "keyword": "lass"
+    },
+    {
+        "no": 1651,
+        "kanji": "毒",
+        "keyword": "poison"
+    },
+    {
+        "no": 1652,
+        "kanji": "素",
+        "keyword": "elementary"
+    },
+    {
+        "no": 1653,
+        "kanji": "麦",
+        "keyword": "barley"
+    },
+    {
+        "no": 1654,
+        "kanji": "青",
+        "keyword": "blue"
+    },
+    {
+        "no": 1655,
+        "kanji": "精",
+        "keyword": "refined"
+    },
+    {
+        "no": 1656,
+        "kanji": "請",
+        "keyword": "solicit"
+    },
+    {
+        "no": 1657,
+        "kanji": "情",
+        "keyword": "feelings"
+    },
+    {
+        "no": 1658,
+        "kanji": "晴",
+        "keyword": "clear up"
+    },
+    {
+        "no": 1659,
+        "kanji": "清",
+        "keyword": "pure"
+    },
+    {
+        "no": 1660,
+        "kanji": "静",
+        "keyword": "quiet"
+    },
+    {
+        "no": 1661,
+        "kanji": "責",
+        "keyword": "blame"
+    },
+    {
+        "no": 1662,
+        "kanji": "績",
+        "keyword": "exploits"
+    },
+    {
+        "no": 1663,
+        "kanji": "積",
+        "keyword": "volume"
+    },
+    {
+        "no": 1664,
+        "kanji": "債",
+        "keyword": "bond"
+    },
+    {
+        "no": 1665,
+        "kanji": "漬",
+        "keyword": "pickling"
+    },
+    {
+        "no": 1666,
+        "kanji": "表",
+        "keyword": "surface"
+    },
+    {
+        "no": 1667,
+        "kanji": "俵",
+        "keyword": "bag"
+    },
+    {
+        "no": 1668,
+        "kanji": "潔",
+        "keyword": "undefiled"
+    },
+    {
+        "no": 1669,
+        "kanji": "契",
+        "keyword": "pledge"
+    },
+    {
+        "no": 1670,
+        "kanji": "喫",
+        "keyword": "consume"
+    },
+    {
+        "no": 1671,
+        "kanji": "害",
+        "keyword": "harm"
+    },
+    {
+        "no": 1672,
+        "kanji": "轄",
+        "keyword": "control"
+    },
+    {
+        "no": 1673,
+        "kanji": "割",
+        "keyword": "proportion"
+    },
+    {
+        "no": 1674,
+        "kanji": "憲",
+        "keyword": "constitution"
+    },
+    {
+        "no": 1675,
+        "kanji": "生",
+        "keyword": "life"
+    },
+    {
+        "no": 1676,
+        "kanji": "星",
+        "keyword": "star"
+    },
+    {
+        "no": 1677,
+        "kanji": "醒",
+        "keyword": "awakening"
+    },
+    {
+        "no": 1678,
+        "kanji": "姓",
+        "keyword": "surname"
+    },
+    {
+        "no": 1679,
+        "kanji": "性",
+        "keyword": "sex"
+    },
+    {
+        "no": 1680,
+        "kanji": "牲",
+        "keyword": "animal sacrifice"
+    },
+    {
+        "no": 1681,
+        "kanji": "産",
+        "keyword": "products"
+    },
+    {
+        "no": 1682,
+        "kanji": "隆",
+        "keyword": "hump"
+    },
+    {
+        "no": 1683,
+        "kanji": "峰",
+        "keyword": "summit"
+    },
+    {
+        "no": 1684,
+        "kanji": "蜂",
+        "keyword": "bee"
+    },
+    {
+        "no": 1685,
+        "kanji": "縫",
+        "keyword": "sew"
+    },
+    {
+        "no": 1686,
+        "kanji": "拝",
+        "keyword": "worship"
+    },
+    {
+        "no": 1687,
+        "kanji": "寿",
+        "keyword": "longevity"
+    },
+    {
+        "no": 1688,
+        "kanji": "鋳",
+        "keyword": "casting"
+    },
+    {
+        "no": 1689,
+        "kanji": "籍",
+        "keyword": "enroll"
+    },
+    {
+        "no": 1690,
+        "kanji": "春",
+        "keyword": "springtime"
+    },
+    {
+        "no": 1691,
+        "kanji": "椿",
+        "keyword": "camellia"
+    },
+    {
+        "no": 1692,
+        "kanji": "泰",
+        "keyword": "peaceful"
+    },
+    {
+        "no": 1693,
+        "kanji": "奏",
+        "keyword": "play music"
+    },
+    {
+        "no": 1694,
+        "kanji": "実",
+        "keyword": "reality"
+    },
+    {
+        "no": 1695,
+        "kanji": "奉",
+        "keyword": "dedicate"
+    },
+    {
+        "no": 1696,
+        "kanji": "俸",
+        "keyword": "stipend"
+    },
+    {
+        "no": 1697,
+        "kanji": "棒",
+        "keyword": "rod"
+    },
+    {
+        "no": 1698,
+        "kanji": "謹",
+        "keyword": "discreet"
+    },
+    {
+        "no": 1699,
+        "kanji": "僅",
+        "keyword": "trifle"
+    },
+    {
+        "no": 1700,
+        "kanji": "勤",
+        "keyword": "diligence"
+    },
+    {
+        "no": 1701,
+        "kanji": "漢",
+        "keyword": "Sino-"
+    },
+    {
+        "no": 1702,
+        "kanji": "嘆",
+        "keyword": "sigh"
+    },
+    {
+        "no": 1703,
+        "kanji": "難",
+        "keyword": "difficult"
+    },
+    {
+        "no": 1704,
+        "kanji": "華",
+        "keyword": "splendor"
+    },
+    {
+        "no": 1705,
+        "kanji": "垂",
+        "keyword": "droop"
+    },
+    {
+        "no": 1706,
+        "kanji": "唾",
+        "keyword": "saliva"
+    },
+    {
+        "no": 1707,
+        "kanji": "睡",
+        "keyword": "drowsy"
+    },
+    {
+        "no": 1708,
+        "kanji": "錘",
+        "keyword": "spindle"
+    },
+    {
+        "no": 1709,
+        "kanji": "乗",
+        "keyword": "ride"
+    },
+    {
+        "no": 1710,
+        "kanji": "剰",
+        "keyword": "surplus"
+    },
+    {
+        "no": 1711,
+        "kanji": "今",
+        "keyword": "now"
+    },
+    {
+        "no": 1712,
+        "kanji": "含",
+        "keyword": "include"
+    },
+    {
+        "no": 1713,
+        "kanji": "貪",
+        "keyword": "covet"
+    },
+    {
+        "no": 1714,
+        "kanji": "吟",
+        "keyword": "versify"
+    },
+    {
+        "no": 1715,
+        "kanji": "念",
+        "keyword": "wish"
+    },
+    {
+        "no": 1716,
+        "kanji": "捻",
+        "keyword": "wrench"
+    },
+    {
+        "no": 1717,
+        "kanji": "琴",
+        "keyword": "harp"
+    },
+    {
+        "no": 1718,
+        "kanji": "陰",
+        "keyword": "shade"
+    },
+    {
+        "no": 1719,
+        "kanji": "予",
+        "keyword": "beforehand"
+    },
+    {
+        "no": 1720,
+        "kanji": "序",
+        "keyword": "preface"
+    },
+    {
+        "no": 1721,
+        "kanji": "預",
+        "keyword": "deposit"
+    },
+    {
+        "no": 1722,
+        "kanji": "野",
+        "keyword": "plains"
+    },
+    {
+        "no": 1723,
+        "kanji": "兼",
+        "keyword": "concurrently"
+    },
+    {
+        "no": 1724,
+        "kanji": "嫌",
+        "keyword": "dislike"
+    },
+    {
+        "no": 1725,
+        "kanji": "鎌",
+        "keyword": "sickle"
+    },
+    {
+        "no": 1726,
+        "kanji": "謙",
+        "keyword": "self-effacing"
+    },
+    {
+        "no": 1727,
+        "kanji": "廉",
+        "keyword": "bargain"
+    },
+    {
+        "no": 1728,
+        "kanji": "西",
+        "keyword": "west"
+    },
+    {
+        "no": 1729,
+        "kanji": "価",
+        "keyword": "value"
+    },
+    {
+        "no": 1730,
+        "kanji": "要",
+        "keyword": "need"
+    },
+    {
+        "no": 1731,
+        "kanji": "腰",
+        "keyword": "loins"
+    },
+    {
+        "no": 1732,
+        "kanji": "票",
+        "keyword": "ballot"
+    },
+    {
+        "no": 1733,
+        "kanji": "漂",
+        "keyword": "drift"
+    },
+    {
+        "no": 1734,
+        "kanji": "標",
+        "keyword": "signpost"
+    },
+    {
+        "no": 1735,
+        "kanji": "栗",
+        "keyword": "chestnut"
+    },
+    {
+        "no": 1736,
+        "kanji": "慄",
+        "keyword": "shudder"
+    },
+    {
+        "no": 1737,
+        "kanji": "遷",
+        "keyword": "transition"
+    },
+    {
+        "no": 1738,
+        "kanji": "覆",
+        "keyword": "capsize"
+    },
+    {
+        "no": 1739,
+        "kanji": "煙",
+        "keyword": "smoke"
+    },
+    {
+        "no": 1740,
+        "kanji": "南",
+        "keyword": "south"
+    },
+    {
+        "no": 1741,
+        "kanji": "楠",
+        "keyword": "camphor tree"
+    },
+    {
+        "no": 1742,
+        "kanji": "献",
+        "keyword": "offering"
+    },
+    {
+        "no": 1743,
+        "kanji": "門",
+        "keyword": "gates"
+    },
+    {
+        "no": 1744,
+        "kanji": "問",
+        "keyword": "question"
+    },
+    {
+        "no": 1745,
+        "kanji": "閲",
+        "keyword": "review"
+    },
+    {
+        "no": 1746,
+        "kanji": "閥",
+        "keyword": "clique"
+    },
+    {
+        "no": 1747,
+        "kanji": "間",
+        "keyword": "interval"
+    },
+    {
+        "no": 1748,
+        "kanji": "闇",
+        "keyword": "pitch dark"
+    },
+    {
+        "no": 1749,
+        "kanji": "簡",
+        "keyword": "simplicity"
+    },
+    {
+        "no": 1750,
+        "kanji": "開",
+        "keyword": "open"
+    },
+    {
+        "no": 1751,
+        "kanji": "閉",
+        "keyword": "closed"
+    },
+    {
+        "no": 1752,
+        "kanji": "閣",
+        "keyword": "tower"
+    },
+    {
+        "no": 1753,
+        "kanji": "閑",
+        "keyword": "leisure"
+    },
+    {
+        "no": 1754,
+        "kanji": "聞",
+        "keyword": "hear"
+    },
+    {
+        "no": 1755,
+        "kanji": "潤",
+        "keyword": "wet"
+    },
+    {
+        "no": 1756,
+        "kanji": "欄",
+        "keyword": "column"
+    },
+    {
+        "no": 1757,
+        "kanji": "闘",
+        "keyword": "fight"
+    },
+    {
+        "no": 1758,
+        "kanji": "倉",
+        "keyword": "godown"
+    },
+    {
+        "no": 1759,
+        "kanji": "創",
+        "keyword": "genesis"
+    },
+    {
+        "no": 1760,
+        "kanji": "非",
+        "keyword": "un-"
+    },
+    {
+        "no": 1761,
+        "kanji": "俳",
+        "keyword": "haiku"
+    },
+    {
+        "no": 1762,
+        "kanji": "排",
+        "keyword": "repudiate"
+    },
+    {
+        "no": 1763,
+        "kanji": "悲",
+        "keyword": "sad"
+    },
+    {
+        "no": 1764,
+        "kanji": "罪",
+        "keyword": "guilt"
+    },
+    {
+        "no": 1765,
+        "kanji": "輩",
+        "keyword": "comrade"
+    },
+    {
+        "no": 1766,
+        "kanji": "扉",
+        "keyword": "front door"
+    },
+    {
+        "no": 1767,
+        "kanji": "侯",
+        "keyword": "marquis"
+    },
+    {
+        "no": 1768,
+        "kanji": "喉",
+        "keyword": "throat"
+    },
+    {
+        "no": 1769,
+        "kanji": "候",
+        "keyword": "climate"
+    },
+    {
+        "no": 1770,
+        "kanji": "決",
+        "keyword": "decide"
+    },
+    {
+        "no": 1771,
+        "kanji": "快",
+        "keyword": "cheerful"
+    },
+    {
+        "no": 1772,
+        "kanji": "偉",
+        "keyword": "admirable"
+    },
+    {
+        "no": 1773,
+        "kanji": "違",
+        "keyword": "difference"
+    },
+    {
+        "no": 1774,
+        "kanji": "緯",
+        "keyword": "horizontal"
+    },
+    {
+        "no": 1775,
+        "kanji": "衛",
+        "keyword": "defense"
+    },
+    {
+        "no": 1776,
+        "kanji": "韓",
+        "keyword": "Korea"
+    },
+    {
+        "no": 1777,
+        "kanji": "干",
+        "keyword": "dry"
+    },
+    {
+        "no": 1778,
+        "kanji": "肝",
+        "keyword": "liver"
+    },
+    {
+        "no": 1779,
+        "kanji": "刊",
+        "keyword": "publish"
+    },
+    {
+        "no": 1780,
+        "kanji": "汗",
+        "keyword": "sweat"
+    },
+    {
+        "no": 1781,
+        "kanji": "軒",
+        "keyword": "flats"
+    },
+    {
+        "no": 1782,
+        "kanji": "岸",
+        "keyword": "beach"
+    },
+    {
+        "no": 1783,
+        "kanji": "幹",
+        "keyword": "tree trunk"
+    },
+    {
+        "no": 1784,
+        "kanji": "芋",
+        "keyword": "potato *"
+    },
+    {
+        "no": 1785,
+        "kanji": "宇",
+        "keyword": "eaves"
+    },
+    {
+        "no": 1786,
+        "kanji": "余",
+        "keyword": "too much"
+    },
+    {
+        "no": 1787,
+        "kanji": "除",
+        "keyword": "exclude"
+    },
+    {
+        "no": 1788,
+        "kanji": "徐",
+        "keyword": "gradually"
+    },
+    {
+        "no": 1789,
+        "kanji": "叙",
+        "keyword": "confer"
+    },
+    {
+        "no": 1790,
+        "kanji": "途",
+        "keyword": "route"
+    },
+    {
+        "no": 1791,
+        "kanji": "斜",
+        "keyword": "diagonal"
+    },
+    {
+        "no": 1792,
+        "kanji": "塗",
+        "keyword": "paint"
+    },
+    {
+        "no": 1793,
+        "kanji": "束",
+        "keyword": "bundle"
+    },
+    {
+        "no": 1794,
+        "kanji": "頼",
+        "keyword": "trust"
+    },
+    {
+        "no": 1795,
+        "kanji": "瀬",
+        "keyword": "rapids"
+    },
+    {
+        "no": 1796,
+        "kanji": "勅",
+        "keyword": "imperial order"
+    },
+    {
+        "no": 1797,
+        "kanji": "疎",
+        "keyword": "alienate"
+    },
+    {
+        "no": 1798,
+        "kanji": "辣",
+        "keyword": "bitter"
+    },
+    {
+        "no": 1799,
+        "kanji": "速",
+        "keyword": "quick"
+    },
+    {
+        "no": 1800,
+        "kanji": "整",
+        "keyword": "organize"
+    },
+    {
+        "no": 1801,
+        "kanji": "剣",
+        "keyword": "saber"
+    },
+    {
+        "no": 1802,
+        "kanji": "険",
+        "keyword": "precipitous"
+    },
+    {
+        "no": 1803,
+        "kanji": "検",
+        "keyword": "examination"
+    },
+    {
+        "no": 1804,
+        "kanji": "倹",
+        "keyword": "frugal"
+    },
+    {
+        "no": 1805,
+        "kanji": "重",
+        "keyword": "heavy"
+    },
+    {
+        "no": 1806,
+        "kanji": "動",
+        "keyword": "move"
+    },
+    {
+        "no": 1807,
+        "kanji": "腫",
+        "keyword": "tumor"
+    },
+    {
+        "no": 1808,
+        "kanji": "勲",
+        "keyword": "meritorious deed"
+    },
+    {
+        "no": 1809,
+        "kanji": "働",
+        "keyword": "work"
+    },
+    {
+        "no": 1810,
+        "kanji": "種",
+        "keyword": "species"
+    },
+    {
+        "no": 1811,
+        "kanji": "衝",
+        "keyword": "collide"
+    },
+    {
+        "no": 1812,
+        "kanji": "薫",
+        "keyword": "fragrant"
+    },
+    {
+        "no": 1813,
+        "kanji": "病",
+        "keyword": "ill"
+    },
+    {
+        "no": 1814,
+        "kanji": "痴",
+        "keyword": "stupid"
+    },
+    {
+        "no": 1815,
+        "kanji": "痘",
+        "keyword": "pox"
+    },
+    {
+        "no": 1816,
+        "kanji": "症",
+        "keyword": "symptoms"
+    },
+    {
+        "no": 1817,
+        "kanji": "瘍",
+        "keyword": "carbuncle"
+    },
+    {
+        "no": 1818,
+        "kanji": "痩",
+        "keyword": "lose weight"
+    },
+    {
+        "no": 1819,
+        "kanji": "疾",
+        "keyword": "rapidly"
+    },
+    {
+        "no": 1820,
+        "kanji": "嫉",
+        "keyword": "envy"
+    },
+    {
+        "no": 1821,
+        "kanji": "痢",
+        "keyword": "diarrhea"
+    },
+    {
+        "no": 1822,
+        "kanji": "痕",
+        "keyword": "scar"
+    },
+    {
+        "no": 1823,
+        "kanji": "疲",
+        "keyword": "tired"
+    },
+    {
+        "no": 1824,
+        "kanji": "疫",
+        "keyword": "epidemic"
+    },
+    {
+        "no": 1825,
+        "kanji": "痛",
+        "keyword": "pain"
+    },
+    {
+        "no": 1826,
+        "kanji": "癖",
+        "keyword": "mannerism"
+    },
+    {
+        "no": 1827,
+        "kanji": "匿",
+        "keyword": "hide"
+    },
+    {
+        "no": 1828,
+        "kanji": "匠",
+        "keyword": "artisan"
+    },
+    {
+        "no": 1829,
+        "kanji": "医",
+        "keyword": "doctor"
+    },
+    {
+        "no": 1830,
+        "kanji": "匹",
+        "keyword": "equal"
+    },
+    {
+        "no": 1831,
+        "kanji": "区",
+        "keyword": "ward"
+    },
+    {
+        "no": 1832,
+        "kanji": "枢",
+        "keyword": "hinge"
+    },
+    {
+        "no": 1833,
+        "kanji": "殴",
+        "keyword": "assault"
+    },
+    {
+        "no": 1834,
+        "kanji": "欧",
+        "keyword": "Europe"
+    },
+    {
+        "no": 1835,
+        "kanji": "抑",
+        "keyword": "repress"
+    },
+    {
+        "no": 1836,
+        "kanji": "仰",
+        "keyword": "faceup"
+    },
+    {
+        "no": 1837,
+        "kanji": "迎",
+        "keyword": "welcome"
+    },
+    {
+        "no": 1838,
+        "kanji": "登",
+        "keyword": "ascend"
+    },
+    {
+        "no": 1839,
+        "kanji": "澄",
+        "keyword": "lucidity"
+    },
+    {
+        "no": 1840,
+        "kanji": "発",
+        "keyword": "discharge"
+    },
+    {
+        "no": 1841,
+        "kanji": "廃",
+        "keyword": "abolish"
+    },
+    {
+        "no": 1842,
+        "kanji": "僚",
+        "keyword": "colleague"
+    },
+    {
+        "no": 1843,
+        "kanji": "瞭",
+        "keyword": "obvious"
+    },
+    {
+        "no": 1844,
+        "kanji": "寮",
+        "keyword": "dormitory"
+    },
+    {
+        "no": 1845,
+        "kanji": "療",
+        "keyword": "heal"
+    },
+    {
+        "no": 1846,
+        "kanji": "彫",
+        "keyword": "carve"
+    },
+    {
+        "no": 1847,
+        "kanji": "形",
+        "keyword": "shape *"
+    },
+    {
+        "no": 1848,
+        "kanji": "影",
+        "keyword": "shadow"
+    },
+    {
+        "no": 1849,
+        "kanji": "杉",
+        "keyword": "cedar"
+    },
+    {
+        "no": 1850,
+        "kanji": "彩",
+        "keyword": "coloring"
+    },
+    {
+        "no": 1851,
+        "kanji": "彰",
+        "keyword": "patent"
+    },
+    {
+        "no": 1852,
+        "kanji": "彦",
+        "keyword": "lad"
+    },
+    {
+        "no": 1853,
+        "kanji": "顔",
+        "keyword": "face"
+    },
+    {
+        "no": 1854,
+        "kanji": "須",
+        "keyword": "ought"
+    },
+    {
+        "no": 1855,
+        "kanji": "膨",
+        "keyword": "swell"
+    },
+    {
+        "no": 1856,
+        "kanji": "参",
+        "keyword": "visit"
+    },
+    {
+        "no": 1857,
+        "kanji": "惨",
+        "keyword": "wretched"
+    },
+    {
+        "no": 1858,
+        "kanji": "修",
+        "keyword": "discipline"
+    },
+    {
+        "no": 1859,
+        "kanji": "珍",
+        "keyword": "rare"
+    },
+    {
+        "no": 1860,
+        "kanji": "診",
+        "keyword": "checkup"
+    },
+    {
+        "no": 1861,
+        "kanji": "文",
+        "keyword": "sentence"
+    },
+    {
+        "no": 1862,
+        "kanji": "対",
+        "keyword": "vis-à-vis"
+    },
+    {
+        "no": 1863,
+        "kanji": "紋",
+        "keyword": "family crest"
+    },
+    {
+        "no": 1864,
+        "kanji": "蚊",
+        "keyword": "mosquito"
+    },
+    {
+        "no": 1865,
+        "kanji": "斑",
+        "keyword": "speckled"
+    },
+    {
+        "no": 1866,
+        "kanji": "斉",
+        "keyword": "adjusted"
+    },
+    {
+        "no": 1867,
+        "kanji": "剤",
+        "keyword": "dose"
+    },
+    {
+        "no": 1868,
+        "kanji": "済",
+        "keyword": "finish"
+    },
+    {
+        "no": 1869,
+        "kanji": "斎",
+        "keyword": "purification"
+    },
+    {
+        "no": 1870,
+        "kanji": "粛",
+        "keyword": "solemn"
+    },
+    {
+        "no": 1871,
+        "kanji": "塁",
+        "keyword": "bases"
+    },
+    {
+        "no": 1872,
+        "kanji": "楽",
+        "keyword": "music"
+    },
+    {
+        "no": 1873,
+        "kanji": "薬",
+        "keyword": "medicine"
+    },
+    {
+        "no": 1874,
+        "kanji": "率",
+        "keyword": "ratio"
+    },
+    {
+        "no": 1875,
+        "kanji": "渋",
+        "keyword": "astringent"
+    },
+    {
+        "no": 1876,
+        "kanji": "摂",
+        "keyword": "vicarious"
+    },
+    {
+        "no": 1877,
+        "kanji": "央",
+        "keyword": "center"
+    },
+    {
+        "no": 1878,
+        "kanji": "英",
+        "keyword": "England"
+    },
+    {
+        "no": 1879,
+        "kanji": "映",
+        "keyword": "reflect"
+    },
+    {
+        "no": 1880,
+        "kanji": "赤",
+        "keyword": "red"
+    },
+    {
+        "no": 1881,
+        "kanji": "赦",
+        "keyword": "pardon"
+    },
+    {
+        "no": 1882,
+        "kanji": "変",
+        "keyword": "unusual"
+    },
+    {
+        "no": 1883,
+        "kanji": "跡",
+        "keyword": "tracks"
+    },
+    {
+        "no": 1884,
+        "kanji": "蛮",
+        "keyword": "barbarian"
+    },
+    {
+        "no": 1885,
+        "kanji": "恋",
+        "keyword": "romance"
+    },
+    {
+        "no": 1886,
+        "kanji": "湾",
+        "keyword": "gulf"
+    },
+    {
+        "no": 1887,
+        "kanji": "黄",
+        "keyword": "yellow"
+    },
+    {
+        "no": 1888,
+        "kanji": "横",
+        "keyword": "sideways"
+    },
+    {
+        "no": 1889,
+        "kanji": "把",
+        "keyword": "grasp"
+    },
+    {
+        "no": 1890,
+        "kanji": "色",
+        "keyword": "color"
+    },
+    {
+        "no": 1891,
+        "kanji": "絶",
+        "keyword": "discontinue"
+    },
+    {
+        "no": 1892,
+        "kanji": "艶",
+        "keyword": "glossy"
+    },
+    {
+        "no": 1893,
+        "kanji": "肥",
+        "keyword": "fertilizer"
+    },
+    {
+        "no": 1894,
+        "kanji": "甘",
+        "keyword": "sweet"
+    },
+    {
+        "no": 1895,
+        "kanji": "紺",
+        "keyword": "navy blue"
+    },
+    {
+        "no": 1896,
+        "kanji": "某",
+        "keyword": "so-and-so"
+    },
+    {
+        "no": 1897,
+        "kanji": "謀",
+        "keyword": "conspire"
+    },
+    {
+        "no": 1898,
+        "kanji": "媒",
+        "keyword": "mediator"
+    },
+    {
+        "no": 1899,
+        "kanji": "欺",
+        "keyword": "deceit"
+    },
+    {
+        "no": 1900,
+        "kanji": "棋",
+        "keyword": "chess piece"
+    },
+    {
+        "no": 1901,
+        "kanji": "旗",
+        "keyword": "national flag"
+    },
+    {
+        "no": 1902,
+        "kanji": "期",
+        "keyword": "period"
+    },
+    {
+        "no": 1903,
+        "kanji": "碁",
+        "keyword": "Go"
+    },
+    {
+        "no": 1904,
+        "kanji": "基",
+        "keyword": "fundamentals"
+    },
+    {
+        "no": 1905,
+        "kanji": "甚",
+        "keyword": "tremendously"
+    },
+    {
+        "no": 1906,
+        "kanji": "勘",
+        "keyword": "intuition"
+    },
+    {
+        "no": 1907,
+        "kanji": "堪",
+        "keyword": "withstand"
+    },
+    {
+        "no": 1908,
+        "kanji": "貴",
+        "keyword": "precious"
+    },
+    {
+        "no": 1909,
+        "kanji": "遺",
+        "keyword": "bequeath"
+    },
+    {
+        "no": 1910,
+        "kanji": "遣",
+        "keyword": "dispatch"
+    },
+    {
+        "no": 1911,
+        "kanji": "潰",
+        "keyword": "defile"
+    },
+    {
+        "no": 1912,
+        "kanji": "舞",
+        "keyword": "dance"
+    },
+    {
+        "no": 1913,
+        "kanji": "無",
+        "keyword": "nothingness"
+    },
+    {
+        "no": 1914,
+        "kanji": "組",
+        "keyword": "association"
+    },
+    {
+        "no": 1915,
+        "kanji": "粗",
+        "keyword": "coarse"
+    },
+    {
+        "no": 1916,
+        "kanji": "租",
+        "keyword": "tariff"
+    },
+    {
+        "no": 1917,
+        "kanji": "狙",
+        "keyword": "aim at"
+    },
+    {
+        "no": 1918,
+        "kanji": "祖",
+        "keyword": "ancestor"
+    },
+    {
+        "no": 1919,
+        "kanji": "阻",
+        "keyword": "thwart"
+    },
+    {
+        "no": 1920,
+        "kanji": "査",
+        "keyword": "investigate"
+    },
+    {
+        "no": 1921,
+        "kanji": "助",
+        "keyword": "help"
+    },
+    {
+        "no": 1922,
+        "kanji": "宜",
+        "keyword": "best regards"
+    },
+    {
+        "no": 1923,
+        "kanji": "畳",
+        "keyword": "tatami mat"
+    },
+    {
+        "no": 1924,
+        "kanji": "並",
+        "keyword": "row"
+    },
+    {
+        "no": 1925,
+        "kanji": "普",
+        "keyword": "universal"
+    },
+    {
+        "no": 1926,
+        "kanji": "譜",
+        "keyword": "musical score"
+    },
+    {
+        "no": 1927,
+        "kanji": "湿",
+        "keyword": "damp"
+    },
+    {
+        "no": 1928,
+        "kanji": "顕",
+        "keyword": "appear"
+    },
+    {
+        "no": 1929,
+        "kanji": "繊",
+        "keyword": "slender"
+    },
+    {
+        "no": 1930,
+        "kanji": "霊",
+        "keyword": "spirits"
+    },
+    {
+        "no": 1931,
+        "kanji": "業",
+        "keyword": "profession"
+    },
+    {
+        "no": 1932,
+        "kanji": "撲",
+        "keyword": "slap"
+    },
+    {
+        "no": 1933,
+        "kanji": "僕",
+        "keyword": "me"
+    },
+    {
+        "no": 1934,
+        "kanji": "共",
+        "keyword": "together"
+    },
+    {
+        "no": 1935,
+        "kanji": "供",
+        "keyword": "submit"
+    },
+    {
+        "no": 1936,
+        "kanji": "異",
+        "keyword": "uncommon"
+    },
+    {
+        "no": 1937,
+        "kanji": "翼",
+        "keyword": "wing"
+    },
+    {
+        "no": 1938,
+        "kanji": "戴",
+        "keyword": "accept humbly"
+    },
+    {
+        "no": 1939,
+        "kanji": "洪",
+        "keyword": "deluge"
+    },
+    {
+        "no": 1940,
+        "kanji": "港",
+        "keyword": "harbor"
+    },
+    {
+        "no": 1941,
+        "kanji": "暴",
+        "keyword": "outburst"
+    },
+    {
+        "no": 1942,
+        "kanji": "爆",
+        "keyword": "bomb"
+    },
+    {
+        "no": 1943,
+        "kanji": "恭",
+        "keyword": "respect"
+    },
+    {
+        "no": 1944,
+        "kanji": "選",
+        "keyword": "elect"
+    },
+    {
+        "no": 1945,
+        "kanji": "殿",
+        "keyword": "Mr."
+    },
+    {
+        "no": 1946,
+        "kanji": "井",
+        "keyword": "well"
+    },
+    {
+        "no": 1947,
+        "kanji": "丼",
+        "keyword": "donburi"
+    },
+    {
+        "no": 1948,
+        "kanji": "囲",
+        "keyword": "surround"
+    },
+    {
+        "no": 1949,
+        "kanji": "耕",
+        "keyword": "till"
+    },
+    {
+        "no": 1950,
+        "kanji": "亜",
+        "keyword": "Asia"
+    },
+    {
+        "no": 1951,
+        "kanji": "悪",
+        "keyword": "bad"
+    },
+    {
+        "no": 1952,
+        "kanji": "円",
+        "keyword": "circle"
+    },
+    {
+        "no": 1953,
+        "kanji": "角",
+        "keyword": "angle"
+    },
+    {
+        "no": 1954,
+        "kanji": "触",
+        "keyword": "contact"
+    },
+    {
+        "no": 1955,
+        "kanji": "解",
+        "keyword": "unravel"
+    },
+    {
+        "no": 1956,
+        "kanji": "再",
+        "keyword": "again"
+    },
+    {
+        "no": 1957,
+        "kanji": "講",
+        "keyword": "lecture"
+    },
+    {
+        "no": 1958,
+        "kanji": "購",
+        "keyword": "subscription"
+    },
+    {
+        "no": 1959,
+        "kanji": "構",
+        "keyword": "posture"
+    },
+    {
+        "no": 1960,
+        "kanji": "溝",
+        "keyword": "gutter"
+    },
+    {
+        "no": 1961,
+        "kanji": "論",
+        "keyword": "argument"
+    },
+    {
+        "no": 1962,
+        "kanji": "倫",
+        "keyword": "ethics"
+    },
+    {
+        "no": 1963,
+        "kanji": "輪",
+        "keyword": "wheel"
+    },
+    {
+        "no": 1964,
+        "kanji": "偏",
+        "keyword": "partial"
+    },
+    {
+        "no": 1965,
+        "kanji": "遍",
+        "keyword": "everywhere"
+    },
+    {
+        "no": 1966,
+        "kanji": "編",
+        "keyword": "compilation"
+    },
+    {
+        "no": 1967,
+        "kanji": "冊",
+        "keyword": "tome"
+    },
+    {
+        "no": 1968,
+        "kanji": "柵",
+        "keyword": "palisade"
+    },
+    {
+        "no": 1969,
+        "kanji": "典",
+        "keyword": "code"
+    },
+    {
+        "no": 1970,
+        "kanji": "氏",
+        "keyword": "family name"
+    },
+    {
+        "no": 1971,
+        "kanji": "紙",
+        "keyword": "paper"
+    },
+    {
+        "no": 1972,
+        "kanji": "婚",
+        "keyword": "marriage"
+    },
+    {
+        "no": 1973,
+        "kanji": "低",
+        "keyword": "lower"
+    },
+    {
+        "no": 1974,
+        "kanji": "抵",
+        "keyword": "resist"
+    },
+    {
+        "no": 1975,
+        "kanji": "底",
+        "keyword": "bottom"
+    },
+    {
+        "no": 1976,
+        "kanji": "民",
+        "keyword": "people"
+    },
+    {
+        "no": 1977,
+        "kanji": "眠",
+        "keyword": "sleep"
+    },
+    {
+        "no": 1978,
+        "kanji": "捕",
+        "keyword": "catch"
+    },
+    {
+        "no": 1979,
+        "kanji": "哺",
+        "keyword": "suckle"
+    },
+    {
+        "no": 1980,
+        "kanji": "浦",
+        "keyword": "bay"
+    },
+    {
+        "no": 1981,
+        "kanji": "蒲",
+        "keyword": "bullrush"
+    },
+    {
+        "no": 1982,
+        "kanji": "舗",
+        "keyword": "shop"
+    },
+    {
+        "no": 1983,
+        "kanji": "補",
+        "keyword": "supplement"
+    },
+    {
+        "no": 1984,
+        "kanji": "邸",
+        "keyword": "residence"
+    },
+    {
+        "no": 1985,
+        "kanji": "郭",
+        "keyword": "enclosure"
+    },
+    {
+        "no": 1986,
+        "kanji": "郡",
+        "keyword": "county"
+    },
+    {
+        "no": 1987,
+        "kanji": "郊",
+        "keyword": "outskirts"
+    },
+    {
+        "no": 1988,
+        "kanji": "部",
+        "keyword": "section"
+    },
+    {
+        "no": 1989,
+        "kanji": "都",
+        "keyword": "metropolis"
+    },
+    {
+        "no": 1990,
+        "kanji": "郵",
+        "keyword": "mail"
+    },
+    {
+        "no": 1991,
+        "kanji": "邦",
+        "keyword": "home country"
+    },
+    {
+        "no": 1992,
+        "kanji": "那",
+        "keyword": "interrogative"
+    },
+    {
+        "no": 1993,
+        "kanji": "郷",
+        "keyword": "hometown"
+    },
+    {
+        "no": 1994,
+        "kanji": "響",
+        "keyword": "echo"
+    },
+    {
+        "no": 1995,
+        "kanji": "郎",
+        "keyword": "son"
+    },
+    {
+        "no": 1996,
+        "kanji": "廊",
+        "keyword": "corridor"
+    },
+    {
+        "no": 1997,
+        "kanji": "盾",
+        "keyword": "shield"
+    },
+    {
+        "no": 1998,
+        "kanji": "循",
+        "keyword": "sequential"
+    },
+    {
+        "no": 1999,
+        "kanji": "派",
+        "keyword": "faction"
+    },
+    {
+        "no": 2000,
+        "kanji": "脈",
+        "keyword": "vein"
+    },
+    {
+        "no": 2001,
+        "kanji": "衆",
+        "keyword": "masses"
+    },
+    {
+        "no": 2002,
+        "kanji": "逓",
+        "keyword": "parcel post"
+    },
+    {
+        "no": 2003,
+        "kanji": "段",
+        "keyword": "grade"
+    },
+    {
+        "no": 2004,
+        "kanji": "鍛",
+        "keyword": "forge"
+    },
+    {
+        "no": 2005,
+        "kanji": "后",
+        "keyword": "empress"
+    },
+    {
+        "no": 2006,
+        "kanji": "幻",
+        "keyword": "phantasm"
+    },
+    {
+        "no": 2007,
+        "kanji": "司",
+        "keyword": "director"
+    },
+    {
+        "no": 2008,
+        "kanji": "伺",
+        "keyword": "pay respects"
+    },
+    {
+        "no": 2009,
+        "kanji": "詞",
+        "keyword": "part of speech"
+    },
+    {
+        "no": 2010,
+        "kanji": "飼",
+        "keyword": "domesticate"
+    },
+    {
+        "no": 2011,
+        "kanji": "嗣",
+        "keyword": "heir"
+    },
+    {
+        "no": 2012,
+        "kanji": "舟",
+        "keyword": "boat"
+    },
+    {
+        "no": 2013,
+        "kanji": "舶",
+        "keyword": "liner"
+    },
+    {
+        "no": 2014,
+        "kanji": "航",
+        "keyword": "navigate"
+    },
+    {
+        "no": 2015,
+        "kanji": "舷",
+        "keyword": "gunwale"
+    },
+    {
+        "no": 2016,
+        "kanji": "般",
+        "keyword": "carrier"
+    },
+    {
+        "no": 2017,
+        "kanji": "盤",
+        "keyword": "tray"
+    },
+    {
+        "no": 2018,
+        "kanji": "搬",
+        "keyword": "conveyor"
+    },
+    {
+        "no": 2019,
+        "kanji": "船",
+        "keyword": "ship"
+    },
+    {
+        "no": 2020,
+        "kanji": "艦",
+        "keyword": "warship"
+    },
+    {
+        "no": 2021,
+        "kanji": "艇",
+        "keyword": "rowboat"
+    },
+    {
+        "no": 2022,
+        "kanji": "瓜",
+        "keyword": "melon"
+    },
+    {
+        "no": 2023,
+        "kanji": "弧",
+        "keyword": "arc"
+    },
+    {
+        "no": 2024,
+        "kanji": "孤",
+        "keyword": "orphan"
+    },
+    {
+        "no": 2025,
+        "kanji": "繭",
+        "keyword": "cocoon *"
+    },
+    {
+        "no": 2026,
+        "kanji": "益",
+        "keyword": "benefit"
+    },
+    {
+        "no": 2027,
+        "kanji": "暇",
+        "keyword": "spare time"
+    },
+    {
+        "no": 2028,
+        "kanji": "敷",
+        "keyword": "spread"
+    },
+    {
+        "no": 2029,
+        "kanji": "来",
+        "keyword": "come"
+    },
+    {
+        "no": 2030,
+        "kanji": "気",
+        "keyword": "spirit"
+    },
+    {
+        "no": 2031,
+        "kanji": "汽",
+        "keyword": "vapor"
+    },
+    {
+        "no": 2032,
+        "kanji": "飛",
+        "keyword": "fly"
+    },
+    {
+        "no": 2033,
+        "kanji": "沈",
+        "keyword": "sink"
+    },
+    {
+        "no": 2034,
+        "kanji": "枕",
+        "keyword": "pillow"
+    },
+    {
+        "no": 2035,
+        "kanji": "妻",
+        "keyword": "wife"
+    },
+    {
+        "no": 2036,
+        "kanji": "凄",
+        "keyword": "nifty"
+    },
+    {
+        "no": 2037,
+        "kanji": "衰",
+        "keyword": "decline"
+    },
+    {
+        "no": 2038,
+        "kanji": "衷",
+        "keyword": "inmost"
+    },
+    {
+        "no": 2039,
+        "kanji": "面",
+        "keyword": "mask"
+    },
+    {
+        "no": 2040,
+        "kanji": "麺",
+        "keyword": "noodles"
+    },
+    {
+        "no": 2041,
+        "kanji": "革",
+        "keyword": "leather"
+    },
+    {
+        "no": 2042,
+        "kanji": "靴",
+        "keyword": "shoes"
+    },
+    {
+        "no": 2043,
+        "kanji": "覇",
+        "keyword": "hegemony"
+    },
+    {
+        "no": 2044,
+        "kanji": "声",
+        "keyword": "voice"
+    },
+    {
+        "no": 2045,
+        "kanji": "眉",
+        "keyword": "eyebrow"
+    },
+    {
+        "no": 2046,
+        "kanji": "呉",
+        "keyword": "give"
+    },
+    {
+        "no": 2047,
+        "kanji": "娯",
+        "keyword": "recreation"
+    },
+    {
+        "no": 2048,
+        "kanji": "誤",
+        "keyword": "mistake"
+    },
+    {
+        "no": 2049,
+        "kanji": "蒸",
+        "keyword": "steam"
+    },
+    {
+        "no": 2050,
+        "kanji": "承",
+        "keyword": "acquiesce"
+    },
+    {
+        "no": 2051,
+        "kanji": "函",
+        "keyword": "bin"
+    },
+    {
+        "no": 2052,
+        "kanji": "極",
+        "keyword": "poles"
+    },
+    {
+        "no": 2053,
+        "kanji": "牙",
+        "keyword": "tusk"
+    },
+    {
+        "no": 2054,
+        "kanji": "芽",
+        "keyword": "bud"
+    },
+    {
+        "no": 2055,
+        "kanji": "邪",
+        "keyword": "wicked"
+    },
+    {
+        "no": 2056,
+        "kanji": "雅",
+        "keyword": "gracious"
+    },
+    {
+        "no": 2057,
+        "kanji": "釈",
+        "keyword": "interpretation"
+    },
+    {
+        "no": 2058,
+        "kanji": "番",
+        "keyword": "turn"
+    },
+    {
+        "no": 2059,
+        "kanji": "審",
+        "keyword": "hearing"
+    },
+    {
+        "no": 2060,
+        "kanji": "翻",
+        "keyword": "flip"
+    },
+    {
+        "no": 2061,
+        "kanji": "藩",
+        "keyword": "clan"
+    },
+    {
+        "no": 2062,
+        "kanji": "毛",
+        "keyword": "fur"
+    },
+    {
+        "no": 2063,
+        "kanji": "耗",
+        "keyword": "decrease"
+    },
+    {
+        "no": 2064,
+        "kanji": "尾",
+        "keyword": "tail"
+    },
+    {
+        "no": 2065,
+        "kanji": "宅",
+        "keyword": "home"
+    },
+    {
+        "no": 2066,
+        "kanji": "託",
+        "keyword": "consign"
+    },
+    {
+        "no": 2067,
+        "kanji": "為",
+        "keyword": "do"
+    },
+    {
+        "no": 2068,
+        "kanji": "偽",
+        "keyword": "falsehood"
+    },
+    {
+        "no": 2069,
+        "kanji": "畏",
+        "keyword": "apprehensive"
+    },
+    {
+        "no": 2070,
+        "kanji": "長",
+        "keyword": "long"
+    },
+    {
+        "no": 2071,
+        "kanji": "張",
+        "keyword": "lengthen"
+    },
+    {
+        "no": 2072,
+        "kanji": "帳",
+        "keyword": "notebook"
+    },
+    {
+        "no": 2073,
+        "kanji": "脹",
+        "keyword": "dilate"
+    },
+    {
+        "no": 2074,
+        "kanji": "髪",
+        "keyword": "hair of the head"
+    },
+    {
+        "no": 2075,
+        "kanji": "展",
+        "keyword": "unfold"
+    },
+    {
+        "no": 2076,
+        "kanji": "喪",
+        "keyword": "miss"
+    },
+    {
+        "no": 2077,
+        "kanji": "巣",
+        "keyword": "nest"
+    },
+    {
+        "no": 2078,
+        "kanji": "単",
+        "keyword": "simple"
+    },
+    {
+        "no": 2079,
+        "kanji": "戦",
+        "keyword": "war"
+    },
+    {
+        "no": 2080,
+        "kanji": "禅",
+        "keyword": "Zen"
+    },
+    {
+        "no": 2081,
+        "kanji": "弾",
+        "keyword": "bullet"
+    },
+    {
+        "no": 2082,
+        "kanji": "桜",
+        "keyword": "cherry tree"
+    },
+    {
+        "no": 2083,
+        "kanji": "獣",
+        "keyword": "animal"
+    },
+    {
+        "no": 2084,
+        "kanji": "脳",
+        "keyword": "brain"
+    },
+    {
+        "no": 2085,
+        "kanji": "悩",
+        "keyword": "trouble"
+    },
+    {
+        "no": 2086,
+        "kanji": "厳",
+        "keyword": "stern"
+    },
+    {
+        "no": 2087,
+        "kanji": "鎖",
+        "keyword": "chain"
+    },
+    {
+        "no": 2088,
+        "kanji": "挙",
+        "keyword": "raise"
+    },
+    {
+        "no": 2089,
+        "kanji": "誉",
+        "keyword": "reputation"
+    },
+    {
+        "no": 2090,
+        "kanji": "猟",
+        "keyword": "game hunting"
+    },
+    {
+        "no": 2091,
+        "kanji": "鳥",
+        "keyword": "bird"
+    },
+    {
+        "no": 2092,
+        "kanji": "鳴",
+        "keyword": "chirp"
+    },
+    {
+        "no": 2093,
+        "kanji": "鶴",
+        "keyword": "crane"
+    },
+    {
+        "no": 2094,
+        "kanji": "烏",
+        "keyword": "crow"
+    },
+    {
+        "no": 2095,
+        "kanji": "蔦",
+        "keyword": "vine"
+    },
+    {
+        "no": 2096,
+        "kanji": "鳩",
+        "keyword": "pigeon"
+    },
+    {
+        "no": 2097,
+        "kanji": "鶏",
+        "keyword": "chicken"
+    },
+    {
+        "no": 2098,
+        "kanji": "島",
+        "keyword": "island"
+    },
+    {
+        "no": 2099,
+        "kanji": "暖",
+        "keyword": "warmth"
+    },
+    {
+        "no": 2100,
+        "kanji": "媛",
+        "keyword": "beautiful woman"
+    },
+    {
+        "no": 2101,
+        "kanji": "援",
+        "keyword": "abet"
+    },
+    {
+        "no": 2102,
+        "kanji": "緩",
+        "keyword": "slacken"
+    },
+    {
+        "no": 2103,
+        "kanji": "属",
+        "keyword": "belong"
+    },
+    {
+        "no": 2104,
+        "kanji": "嘱",
+        "keyword": "entrust"
+    },
+    {
+        "no": 2105,
+        "kanji": "偶",
+        "keyword": "accidentally"
+    },
+    {
+        "no": 2106,
+        "kanji": "遇",
+        "keyword": "interview"
+    },
+    {
+        "no": 2107,
+        "kanji": "愚",
+        "keyword": "foolish"
+    },
+    {
+        "no": 2108,
+        "kanji": "隅",
+        "keyword": "corner"
+    },
+    {
+        "no": 2109,
+        "kanji": "逆",
+        "keyword": "inverted"
+    },
+    {
+        "no": 2110,
+        "kanji": "塑",
+        "keyword": "model"
+    },
+    {
+        "no": 2111,
+        "kanji": "遡",
+        "keyword": "go upstream"
+    },
+    {
+        "no": 2112,
+        "kanji": "岡",
+        "keyword": "Mount"
+    },
+    {
+        "no": 2113,
+        "kanji": "鋼",
+        "keyword": "steel"
+    },
+    {
+        "no": 2114,
+        "kanji": "綱",
+        "keyword": "hawser"
+    },
+    {
+        "no": 2115,
+        "kanji": "剛",
+        "keyword": "sturdy"
+    },
+    {
+        "no": 2116,
+        "kanji": "缶",
+        "keyword": "tin can"
+    },
+    {
+        "no": 2117,
+        "kanji": "陶",
+        "keyword": "pottery"
+    },
+    {
+        "no": 2118,
+        "kanji": "揺",
+        "keyword": "swing"
+    },
+    {
+        "no": 2119,
+        "kanji": "謡",
+        "keyword": "Noh chanting"
+    },
+    {
+        "no": 2120,
+        "kanji": "鬱",
+        "keyword": "gloom"
+    },
+    {
+        "no": 2121,
+        "kanji": "就",
+        "keyword": "concerning"
+    },
+    {
+        "no": 2122,
+        "kanji": "蹴",
+        "keyword": "kick"
+    },
+    {
+        "no": 2123,
+        "kanji": "懇",
+        "keyword": "sociable"
+    },
+    {
+        "no": 2124,
+        "kanji": "墾",
+        "keyword": "groundbreaking"
+    },
+    {
+        "no": 2125,
+        "kanji": "貌",
+        "keyword": "countenance"
+    },
+    {
+        "no": 2126,
+        "kanji": "免",
+        "keyword": "excuse"
+    },
+    {
+        "no": 2127,
+        "kanji": "逸",
+        "keyword": "elude"
+    },
+    {
+        "no": 2128,
+        "kanji": "晩",
+        "keyword": "nightfall"
+    },
+    {
+        "no": 2129,
+        "kanji": "勉",
+        "keyword": "exertion"
+    },
+    {
+        "no": 2130,
+        "kanji": "象",
+        "keyword": "elephant"
+    },
+    {
+        "no": 2131,
+        "kanji": "像",
+        "keyword": "statue"
+    },
+    {
+        "no": 2132,
+        "kanji": "馬",
+        "keyword": "horse"
+    },
+    {
+        "no": 2133,
+        "kanji": "駒",
+        "keyword": "pony"
+    },
+    {
+        "no": 2134,
+        "kanji": "験",
+        "keyword": "verification"
+    },
+    {
+        "no": 2135,
+        "kanji": "騎",
+        "keyword": "equestrian"
+    },
+    {
+        "no": 2136,
+        "kanji": "駐",
+        "keyword": "parking"
+    },
+    {
+        "no": 2137,
+        "kanji": "駆",
+        "keyword": "drive"
+    },
+    {
+        "no": 2138,
+        "kanji": "駅",
+        "keyword": "station"
+    },
+    {
+        "no": 2139,
+        "kanji": "騒",
+        "keyword": "boisterous"
+    },
+    {
+        "no": 2140,
+        "kanji": "駄",
+        "keyword": "burdensome"
+    },
+    {
+        "no": 2141,
+        "kanji": "驚",
+        "keyword": "wonder"
+    },
+    {
+        "no": 2142,
+        "kanji": "篤",
+        "keyword": "fervent"
+    },
+    {
+        "no": 2143,
+        "kanji": "罵",
+        "keyword": "insult"
+    },
+    {
+        "no": 2144,
+        "kanji": "騰",
+        "keyword": "inflation"
+    },
+    {
+        "no": 2145,
+        "kanji": "虎",
+        "keyword": "tiger"
+    },
+    {
+        "no": 2146,
+        "kanji": "虜",
+        "keyword": "captive"
+    },
+    {
+        "no": 2147,
+        "kanji": "膚",
+        "keyword": "skin"
+    },
+    {
+        "no": 2148,
+        "kanji": "虚",
+        "keyword": "void"
+    },
+    {
+        "no": 2149,
+        "kanji": "戯",
+        "keyword": "frolic"
+    },
+    {
+        "no": 2150,
+        "kanji": "虞",
+        "keyword": "uneasiness"
+    },
+    {
+        "no": 2151,
+        "kanji": "慮",
+        "keyword": "prudence"
+    },
+    {
+        "no": 2152,
+        "kanji": "劇",
+        "keyword": "drama"
+    },
+    {
+        "no": 2153,
+        "kanji": "虐",
+        "keyword": "tyrannize"
+    },
+    {
+        "no": 2154,
+        "kanji": "鹿",
+        "keyword": "deer"
+    },
+    {
+        "no": 2155,
+        "kanji": "麓",
+        "keyword": "foot of a mountain"
+    },
+    {
+        "no": 2156,
+        "kanji": "薦",
+        "keyword": "recommend"
+    },
+    {
+        "no": 2157,
+        "kanji": "慶",
+        "keyword": "jubilation"
+    },
+    {
+        "no": 2158,
+        "kanji": "麗",
+        "keyword": "lovely"
+    },
+    {
+        "no": 2159,
+        "kanji": "熊",
+        "keyword": "bear"
+    },
+    {
+        "no": 2160,
+        "kanji": "能",
+        "keyword": "ability"
+    },
+    {
+        "no": 2161,
+        "kanji": "態",
+        "keyword": "attitude"
+    },
+    {
+        "no": 2162,
+        "kanji": "寅",
+        "keyword": "sign of the tiger"
+    },
+    {
+        "no": 2163,
+        "kanji": "演",
+        "keyword": "performance"
+    },
+    {
+        "no": 2164,
+        "kanji": "辰",
+        "keyword": "sign of the dragon"
+    },
+    {
+        "no": 2165,
+        "kanji": "辱",
+        "keyword": "embarrass"
+    },
+    {
+        "no": 2166,
+        "kanji": "震",
+        "keyword": "quake"
+    },
+    {
+        "no": 2167,
+        "kanji": "振",
+        "keyword": "shake"
+    },
+    {
+        "no": 2168,
+        "kanji": "娠",
+        "keyword": "with child"
+    },
+    {
+        "no": 2169,
+        "kanji": "唇",
+        "keyword": "lips"
+    },
+    {
+        "no": 2170,
+        "kanji": "農",
+        "keyword": "agriculture"
+    },
+    {
+        "no": 2171,
+        "kanji": "濃",
+        "keyword": "concentrated"
+    },
+    {
+        "no": 2172,
+        "kanji": "送",
+        "keyword": "send off"
+    },
+    {
+        "no": 2173,
+        "kanji": "関",
+        "keyword": "connection"
+    },
+    {
+        "no": 2174,
+        "kanji": "咲",
+        "keyword": "blossom"
+    },
+    {
+        "no": 2175,
+        "kanji": "鬼",
+        "keyword": "ghost"
+    },
+    {
+        "no": 2176,
+        "kanji": "醜",
+        "keyword": "ugly"
+    },
+    {
+        "no": 2177,
+        "kanji": "魂",
+        "keyword": "soul"
+    },
+    {
+        "no": 2178,
+        "kanji": "魔",
+        "keyword": "witch"
+    },
+    {
+        "no": 2179,
+        "kanji": "魅",
+        "keyword": "fascination"
+    },
+    {
+        "no": 2180,
+        "kanji": "塊",
+        "keyword": "clod"
+    },
+    {
+        "no": 2181,
+        "kanji": "襲",
+        "keyword": "attack"
+    },
+    {
+        "no": 2182,
+        "kanji": "嚇",
+        "keyword": "upbraid"
+    },
+    {
+        "no": 2183,
+        "kanji": "朕",
+        "keyword": "majestic plural"
+    },
+    {
+        "no": 2184,
+        "kanji": "雰",
+        "keyword": "atmosphere"
+    },
+    {
+        "no": 2185,
+        "kanji": "箇",
+        "keyword": "item"
+    },
+    {
+        "no": 2186,
+        "kanji": "錬",
+        "keyword": "tempering"
+    },
+    {
+        "no": 2187,
+        "kanji": "遵",
+        "keyword": "abide by"
+    },
+    {
+        "no": 2188,
+        "kanji": "罷",
+        "keyword": "quit"
+    },
+    {
+        "no": 2189,
+        "kanji": "屯",
+        "keyword": "barracks"
+    },
+    {
+        "no": 2190,
+        "kanji": "且",
+        "keyword": "moreover"
+    },
+    {
+        "no": 2191,
+        "kanji": "藻",
+        "keyword": "seaweed"
+    },
+    {
+        "no": 2192,
+        "kanji": "隷",
+        "keyword": "slave"
+    },
+    {
+        "no": 2193,
+        "kanji": "癒",
+        "keyword": "healing"
+    },
+    {
+        "no": 2194,
+        "kanji": "璽",
+        "keyword": "imperial seal"
+    },
+    {
+        "no": 2195,
+        "kanji": "潟",
+        "keyword": "lagoon"
+    },
+    {
+        "no": 2196,
+        "kanji": "丹",
+        "keyword": "cinnabar"
+    },
+    {
+        "no": 2197,
+        "kanji": "丑",
+        "keyword": "sign of the cow"
+    },
+    {
+        "no": 2198,
+        "kanji": "羞",
+        "keyword": "humiliate"
+    },
+    {
+        "no": 2199,
+        "kanji": "卯",
+        "keyword": "sign of the hare"
+    },
+    {
+        "no": 2200,
+        "kanji": "巳",
+        "keyword": "sign of the snake"
+    }
+]
