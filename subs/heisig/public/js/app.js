@@ -142,10 +142,6 @@
       return DeckView.__super__.constructor.apply(this, arguments);
     }
 
-    DeckView.prototype.events = {
-      'click': 'select'
-    };
-
     DeckView.prototype.initialize = function() {
       return this.model.on('change', this.render, this);
     };
@@ -167,18 +163,6 @@
         return CACHE[kno];
       }));
       return this;
-    };
-
-    DeckView.prototype.select = function(e) {
-      var kno;
-      kno = $(e.target).find(".no").text();
-      deck.set('filter', '');
-      return setTimeout(function() {
-        var target;
-        target = $("#card-" + kno);
-        highlight(target, 2000);
-        return $(window).scrollTop(target.offset().top - 130);
-      }, 200);
     };
 
     return DeckView;

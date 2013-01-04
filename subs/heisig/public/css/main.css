@@ -14,7 +14,6 @@
   -moz-transition:    all 500ms ease-in-out;
   -webkit-transition: all 500ms ease-in-out;
   transition:         all 500ms ease-in-out;
-  cursor: pointer;
 }
 
 .card .no {
@@ -44,6 +43,6 @@
 }
 
 .highlighted {
-  background-color: #FFFF9C;
+  background-color: #FFFF9C; /* FFFFCC */
 }
 

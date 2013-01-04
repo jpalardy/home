@@ -292,122 +292,146 @@
     {
         "no": 51,
         "kanji": "下",
-        "keyword": "below"
+        "keyword": "below",
+        "primitives": "wand, floor, down"
     },
     {
         "no": 52,
         "kanji": "卓",
-        "keyword": "eminent"
+        "keyword": "eminent",
+        "primitives": "wand, sunflower"
     },
     {
         "no": 53,
         "kanji": "朝",
-        "keyword": "morning"
+        "keyword": "morning",
+        "primitives": "mist, moon"
     },
     {
         "no": 54,
         "kanji": "嘲",
-        "keyword": "derision"
+        "keyword": "derision",
+        "primitives": "morning, mouth, mist, moon"
     },
     {
         "no": 55,
         "kanji": "只",
-        "keyword": "only"
+        "keyword": "only",
+        "primitives": "mouth, animal legs"
     },
     {
         "no": 56,
         "kanji": "貝",
-        "keyword": "shellfish"
+        "keyword": "shellfish",
+        "primitives": "eye, animal legs, money"
     },
     {
         "no": 57,
         "kanji": "唄",
-        "keyword": "pop song"
+        "keyword": "pop song",
+        "primitives": "mouth, money/shell"
     },
     {
         "no": 58,
         "kanji": "貞",
-        "keyword": "upright"
+        "keyword": "upright",
+        "primitives": "wand, money/shell"
     },
     {
         "no": 59,
         "kanji": "員",
-        "keyword": "employee"
+        "keyword": "employee",
+        "primitives": "mouth, money/shell"
     },
     {
         "no": 60,
         "kanji": "貼",
-        "keyword": "post a bill"
+        "keyword": "post a bill",
+        "primitives": "money/shell, wand, mouth *"
     },
     {
         "no": 61,
         "kanji": "見",
-        "keyword": "see"
+        "keyword": "see",
+        "primitives": "eye, human legs"
     },
     {
         "no": 62,
         "kanji": "児",
-        "keyword": "newborn babe"
+        "keyword": "newborn babe",
+        "primitives": "olden times, human legs, walking stick, sun"
     },
     {
         "no": 63,
         "kanji": "元",
-        "keyword": "beginning"
+        "keyword": "beginning",
+        "primitives": "two, human legs"
     },
     {
         "no": 64,
         "kanji": "頁",
-        "keyword": "page"
+        "keyword": "page",
+        "primitives": "one, drop, money/shell, head"
     },
     {
         "no": 65,
         "kanji": "頑",
-        "keyword": "stubborn"
+        "keyword": "stubborn",
+        "primitives": "beginning, head, human legs"
     },
     {
         "no": 66,
         "kanji": "凡",
-        "keyword": "mediocre"
+        "keyword": "mediocre",
+        "primitives": "drop, wind"
     },
     {
         "no": 67,
         "kanji": "負",
-        "keyword": "defeat"
+        "keyword": "defeat",
+        "primitives": "bound, money/shell"
     },
     {
         "no": 68,
         "kanji": "万",
-        "keyword": "ten thousand"
+        "keyword": "ten thousand",
+        "primitives": "one, bound"
     },
     {
         "no": 69,
         "kanji": "句",
-        "keyword": "phrase"
+        "keyword": "phrase",
+        "primitives": "bound, mouth"
     },
     {
         "no": 70,
         "kanji": "肌",
-        "keyword": "texture"
+        "keyword": "texture",
+        "primitives": "flesh/moon, wind"
     },
     {
         "no": 71,
         "kanji": "旬",
-        "keyword": "decameron"
+        "keyword": "decameron",
+        "primitives": "bound, sun/day"
     },
     {
         "no": 72,
         "kanji": "勺",
-        "keyword": "ladle"
+        "keyword": "ladle",
+        "primitives": "bound, drop"
     },
     {
         "no": 73,
         "kanji": "的",
-        "keyword": "bull's eye"
+        "keyword": "bull's eye",
+        "primitives": "white/dove, ladle"
     },
     {
         "no": 74,
         "kanji": "首",
-        "keyword": "neck"
+        "keyword": "neck",
+        "primitives": "horns, nose"
     },
     {
         "no": 75,

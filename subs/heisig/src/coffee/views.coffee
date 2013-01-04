@@ -25,9 +25,6 @@ class CardView extends Backbone.View
     @
 
 class DeckView extends Backbone.View
-  events:
-    'click': 'select'
-
   initialize: ->
     @model.on 'change', @render, @
 
@@ -41,15 +38,6 @@ class DeckView extends Backbone.View
         CACHE[kno] = cardView.render().el
       CACHE[kno]
     @
-
-  select: (e) ->
-    kno = $(e.target).find(".no").text()
-    deck.set 'filter', ''
-    setTimeout ->
-      target = $("#card-#{kno}")
-      highlight target, 2000
-      $(window).scrollTop(target.offset().top - 130)
-    , 200
 
 class SearchView extends Backbone.View
   events:
