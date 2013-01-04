@@ -11,6 +11,12 @@ class Deck extends Backbone.Model
     @set 'cards', new Cards()
     @on 'change:filter', (deck, query) ->
       Backbone.history.navigate(query)
+    @uniques = uniques = {}
+    @on 'change:cards', (deck, cards) ->
+      unique = {}
+      cards.forEach (card) ->
+        uniques[card.get('no')] = card
+        uniques[card.get('kanji')] = card
 
   parse: (resp) ->
     result =
@@ -19,13 +25,14 @@ class Deck extends Backbone.Model
   filtered: ->
     query = @get('filter')
     return @get('cards') unless query
+    unique = @uniques[query]
+    if unique
+      return [unique]
     try
       query = new RegExp(query, "i")
     catch error
       return []
     @get('cards').filter (card) ->
-      if card.get('kanji').match query
-        return true
       if card.get('keyword').match query
         return true
       if card.get('primitives')?.match query

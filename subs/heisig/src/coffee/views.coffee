@@ -59,7 +59,7 @@ class SearchView extends Backbone.View
     'submit':   (e) -> e.preventDefault()
 
   initialize: ->
-    @filter = _.debounce(@filter, 100)
+    @filter = _.debounce(@filter, 300)
 
   change: (e) ->
     query = $(e.target).val()

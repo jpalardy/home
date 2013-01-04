@@ -116,7 +116,7 @@
     };
 
     SearchView.prototype.initialize = function() {
-      return this.filter = _.debounce(this.filter, 100);
+      return this.filter = _.debounce(this.filter, 300);
     };
 
     SearchView.prototype.change = function(e) {

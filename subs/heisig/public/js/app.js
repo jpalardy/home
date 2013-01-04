@@ -41,9 +41,19 @@
     Deck.prototype.url = 'heisig.json';
 
     Deck.prototype.initialize = function() {
+      var uniques;
       this.set('cards', new Cards());
-      return this.on('change:filter', function(deck, query) {
+      this.on('change:filter', function(deck, query) {
         return Backbone.history.navigate(query);
+      });
+      this.uniques = uniques = {};
+      return this.on('change:cards', function(deck, cards) {
+        var unique;
+        unique = {};
+        return cards.forEach(function(card) {
+          uniques[card.get('no')] = card;
+          return uniques[card.get('kanji')] = card;
+        });
       });
     };
 
@@ -55,10 +65,14 @@
     };
 
     Deck.prototype.filtered = function() {
-      var query;
+      var query, unique;
       query = this.get('filter');
       if (!query) {
         return this.get('cards');
+      }
+      unique = this.uniques[query];
+      if (unique) {
+        return [unique];
       }
       try {
         query = new RegExp(query, "i");
@@ -67,9 +81,6 @@
       }
       return this.get('cards').filter(function(card) {
         var _ref;
-        if (card.get('kanji').match(query)) {
-          return true;
-        }
         if (card.get('keyword').match(query)) {
           return true;
         }
@@ -207,7 +218,7 @@
     };
 
     SearchView.prototype.initialize = function() {
-      return this.filter = _.debounce(this.filter, 100);
+      return this.filter = _.debounce(this.filter, 300);
     };
 
     SearchView.prototype.change = function(e) {
