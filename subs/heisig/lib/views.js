@@ -54,6 +54,21 @@
       return DeckView.__super__.constructor.apply(this, arguments);
     }
 
+    DeckView.prototype.events = {
+      'click a': 'select'
+    };
+
+    DeckView.prototype.select = function(e) {
+      var kno, target;
+      e.preventDefault();
+      kno = $(e.target).text();
+      $('#search input').val('');
+      deck.set('filter', '');
+      target = $("#card-" + kno);
+      highlight(target, 2000);
+      return $(window).scrollTop(target.offset().top - 130);
+    };
+
     DeckView.prototype.initialize = function() {
       return this.model.on('change', this.render, this);
     };

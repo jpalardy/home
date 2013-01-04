@@ -25,6 +25,18 @@ class CardView extends Backbone.View
     @
 
 class DeckView extends Backbone.View
+  events:
+    'click a': 'select'
+
+  select: (e) ->
+    e.preventDefault()
+    kno = $(e.target).text()
+    $('#search input').val('')
+    deck.set 'filter', ''
+    target = $("#card-" + kno)
+    highlight target, 2000
+    $(window).scrollTop(target.offset().top - 130)
+
   initialize: ->
     @model.on 'change', @render, @
 
@@ -44,7 +56,7 @@ class SearchView extends Backbone.View
     'keyup':  'change'
     'click':  'change'
     'keypress': (e) -> e.stopPropagation()
-    'submit': (e) -> e.preventDefault()
+    'submit':   (e) -> e.preventDefault()
 
   initialize: ->
     @filter = _.debounce(@filter, 100)
