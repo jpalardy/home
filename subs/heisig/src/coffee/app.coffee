@@ -7,3 +7,8 @@ $ ->
   Backbone.history.start()
   deck.fetch()
 
+  $(document).keypress (e) ->
+    if e.which in [47,104] # / or h
+      e.preventDefault()
+      $('#search input').focus()
+

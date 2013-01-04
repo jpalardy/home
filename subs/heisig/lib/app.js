@@ -13,7 +13,14 @@
     });
     workspace = new Workspace();
     Backbone.history.start();
-    return deck.fetch();
+    deck.fetch();
+    return $(document).keypress(function(e) {
+      var _ref;
+      if ((_ref = e.which) === 47 || _ref === 104) {
+        e.preventDefault();
+        return $('#search input').focus();
+      }
+    });
   });
 
 }).call(this);

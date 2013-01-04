@@ -92,6 +92,9 @@
     SearchView.prototype.events = {
       'keyup': 'change',
       'click': 'change',
+      'keypress': function(e) {
+        return e.stopPropagation();
+      },
       'submit': function(e) {
         return e.preventDefault();
       }

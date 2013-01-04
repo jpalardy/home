@@ -43,6 +43,7 @@ class SearchView extends Backbone.View
   events:
     'keyup':  'change'
     'click':  'change'
+    'keypress': (e) -> e.stopPropagation()
     'submit': (e) -> e.preventDefault()
 
   initialize: ->
