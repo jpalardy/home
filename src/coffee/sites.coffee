@@ -190,10 +190,10 @@ sites =
     visit:  'http://www.crunchyroll.com/',
     hide:   true
 
-  k:
-    name:   'kanji 2012',
-    search: 'http://home.jpalardy.com/kanji2012/'
-    visit:  'http://home.jpalardy.com/kanji2012/',
+  h:
+    name:   'heisig',
+    search: 'http://home.jpalardy.com/heisig/#%s',
+    visit:  'http://home.jpalardy.com/heisig/'
     hide:   true
 
 #-------------------------------------------------
