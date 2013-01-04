@@ -3,5 +3,7 @@ $ ->
   window.deck = new Deck()
   deck_view   = new DeckView model: deck, el: $('#cards')
   search_view = new SearchView el: $('#search')
+  workspace   = new Workspace()
+  Backbone.history.start()
   deck.fetch()
 

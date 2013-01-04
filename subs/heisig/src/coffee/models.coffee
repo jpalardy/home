@@ -9,6 +9,8 @@ class Deck extends Backbone.Model
 
   initialize: ->
     @set 'cards', new Cards()
+    @on 'change:filter', (deck, query) ->
+      Backbone.history.navigate(query)
 
   parse: (resp) ->
     result =

@@ -41,7 +41,10 @@
     Deck.prototype.url = 'heisig.json';
 
     Deck.prototype.initialize = function() {
-      return this.set('cards', new Cards());
+      this.set('cards', new Cards());
+      return this.on('change:filter', function(deck, query) {
+        return Backbone.history.navigate(query);
+      });
     };
 
     Deck.prototype.parse = function(resp) {

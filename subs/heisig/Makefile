@@ -8,7 +8,7 @@ lib/%.js: src/coffee/%.coffee
 all: public/js/app.js
 
 public/js/app.js: $(JSs)
-	cat lib/models.js lib/views.js lib/app.js > $@
+	cat lib/models.js lib/views.js lib/routers.js lib/app.js > $@
 
 clean:
 	rm -rf lib

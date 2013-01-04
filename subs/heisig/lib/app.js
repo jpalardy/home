@@ -2,7 +2,7 @@
 (function() {
 
   $(function() {
-    var deck_view, search_view;
+    var deck_view, search_view, workspace;
     window.deck = new Deck();
     deck_view = new DeckView({
       model: deck,
@@ -11,6 +11,8 @@
     search_view = new SearchView({
       el: $('#search')
     });
+    workspace = new Workspace();
+    Backbone.history.start();
     return deck.fetch();
   });
 
