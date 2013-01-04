@@ -9,6 +9,7 @@
       el: $('#cards')
     });
     search_view = new SearchView({
+      model: deck,
       el: $('#search')
     });
     workspace = new Workspace();

@@ -63,7 +63,7 @@
       e.preventDefault();
       kno = $(e.target).text();
       $('#search input').val('');
-      deck.set('filter', '');
+      this.model.set('filter', '');
       target = $("#card-" + kno);
       highlight(target, 2000);
       return $(window).scrollTop(target.offset().top - 130);
@@ -107,16 +107,15 @@
     SearchView.prototype.events = {
       'keyup': 'change',
       'click': 'change',
-      'keypress': function(e) {
-        return e.stopPropagation();
-      },
+      'keypress': 'press',
       'submit': function(e) {
         return e.preventDefault();
       }
     };
 
     SearchView.prototype.initialize = function() {
-      return this.filter = _.debounce(this.filter, 300);
+      this.filter = _.debounce(this.filter, 300);
+      return this.model.on('change:strict', this.strictMode, this);
     };
 
     SearchView.prototype.change = function(e) {
@@ -126,7 +125,19 @@
     };
 
     SearchView.prototype.filter = function(query) {
-      return deck.set('filter', query);
+      return this.model.set('filter', query);
+    };
+
+    SearchView.prototype.press = function(e) {
+      e.stopPropagation();
+      if (e.which === 33) {
+        e.preventDefault();
+        return this.model.set('strict', !this.model.get('strict'));
+      }
+    };
+
+    SearchView.prototype.strictMode = function(model, strict) {
+      return this.$('input').toggleClass('strict', strict);
     };
 
     return SearchView;

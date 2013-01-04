@@ -32,10 +32,11 @@ class Deck extends Backbone.Model
       query = new RegExp(query, "i")
     catch error
       return []
+    strict = @get('strict')
     @get('cards').filter (card) ->
       if card.get('keyword').match query
         return true
-      if card.get('primitives')?.match query
+      if !strict and card.get('primitives')?.match query
         return true
       false
 

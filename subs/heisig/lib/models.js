@@ -65,7 +65,7 @@
     };
 
     Deck.prototype.filtered = function() {
-      var query, unique;
+      var query, strict, unique;
       query = this.get('filter');
       if (!query) {
         return this.get('cards');
@@ -79,12 +79,13 @@
       } catch (error) {
         return [];
       }
+      strict = this.get('strict');
       return this.get('cards').filter(function(card) {
         var _ref;
         if (card.get('keyword').match(query)) {
           return true;
         }
-        if ((_ref = card.get('primitives')) != null ? _ref.match(query) : void 0) {
+        if (!strict && ((_ref = card.get('primitives')) != null ? _ref.match(query) : void 0)) {
           return true;
         }
         return false;

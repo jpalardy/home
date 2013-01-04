@@ -32,7 +32,7 @@ class DeckView extends Backbone.View
     e.preventDefault()
     kno = $(e.target).text()
     $('#search input').val('')
-    deck.set 'filter', ''
+    @model.set 'filter', ''
     target = $("#card-" + kno)
     highlight target, 2000
     $(window).scrollTop(target.offset().top - 130)
@@ -53,20 +53,30 @@ class DeckView extends Backbone.View
 
 class SearchView extends Backbone.View
   events:
-    'keyup':  'change'
-    'click':  'change'
-    'keypress': (e) -> e.stopPropagation()
+    'keyup':    'change'
+    'click':    'change'
+    'keypress': 'press'
     'submit':   (e) -> e.preventDefault()
 
   initialize: ->
     @filter = _.debounce(@filter, 300)
+    @model.on 'change:strict', @strictMode, @
 
   change: (e) ->
     query = $(e.target).val()
     @filter query
 
   filter: (query) ->
-    deck.set 'filter', query
+    @model.set 'filter', query
+
+  press: (e) ->
+    e.stopPropagation()
+    if e.which is 33 # !
+      e.preventDefault()
+      @model.set 'strict', !@model.get('strict')
+
+  strictMode: (model, strict) ->
+    @.$('input').toggleClass('strict', strict)
 
 #-------------------------------------------------
 root = this
