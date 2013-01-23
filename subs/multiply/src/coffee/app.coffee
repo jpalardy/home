@@ -34,9 +34,9 @@ $ ->
         answer: i * j
 
   questions.sort -> Math.round(Math.random())-0.5
-  questions = questions.slice(30)
+  questions = questions.slice(0,35)
   questions.forEach (q) ->
-    questionsDOM.append("<div class=\"question\">#{q.left} x #{q.right} = <input data-answer=\"#{q.answer}\" type=\"text\"></input></div>\n")
+    questionsDOM.append("<div class=\"question\">#{q.left} x #{q.right} = <input data-answer=\"#{q.answer}\" type=\"text\" pattern=\"[0-9]*\"></input></div>\n")
 
   refreshTime()
   handle = setInterval(refreshTime, 1000)

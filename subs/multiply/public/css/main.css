@@ -1,6 +1,9 @@
 
 .question {
-  font-family: Courier New, Courier, monospace;
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  float: left;
+  font-size: 16px;
+  margin: 20px;
 }
 
 .question input {
@@ -8,17 +11,14 @@
 }
 
 .question .good {
-  background: green;
+  background: #5dbb5d;
 }
 
 .question .bad {
-  background: red;
+  background: #e35651;
 }
 
 .timeleft {
-  position: absolute;
-  top:   10px;
-  right: 10px;
   font-family: Verdana, Arial, Helvetica, sans-serif;
   padding: 5px;
   -moz-border-radius: 5px;
