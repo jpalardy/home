@@ -274,6 +274,8 @@
 
     Workspace.prototype.search = function(q) {
       $('#search input').val(q);
+      console.log('q (before)', q);
+      console.log('q (after)', decodeURIComponent(q));
       return deck.set('filter', decodeURIComponent(q));
     };
 
