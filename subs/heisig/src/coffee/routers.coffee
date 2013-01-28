@@ -4,10 +4,9 @@ class Workspace extends Backbone.Router
     ":query": "search"
 
   search: (q) ->
+    q = decodeURIComponent(q)
     $('#search input').val(q)
-    console.log 'q (before)', q
-    console.log 'q (after)', decodeURIComponent(q)
-    deck.set 'filter', decodeURIComponent(q)
+    deck.set 'filter', q
 
 #-------------------------------------------------
 root = this
