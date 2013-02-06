@@ -10,5 +10,5 @@ $ ->
   $(document).keypress (e) ->
     if e.which in [47,104] # / or h
       e.preventDefault()
-      $('#search input').focus()
+      $('#search input').select().focus()
 

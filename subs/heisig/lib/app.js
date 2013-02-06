@@ -19,7 +19,7 @@
       var _ref;
       if ((_ref = e.which) === 47 || _ref === 104) {
         e.preventDefault();
-        return $('#search input').focus();
+        return $('#search input').select().focus();
       }
     });
   });

@@ -115,7 +115,7 @@
 
     SearchView.prototype.initialize = function() {
       this.filter = _.debounce(this.filter, 300);
-      return this.model.on('change:strict', this.strictMode, this);
+      return this.model.on('change:relaxed', this.relaxedMode, this);
     };
 
     SearchView.prototype.change = function(e) {
@@ -132,12 +132,12 @@
       e.stopPropagation();
       if (e.which === 33) {
         e.preventDefault();
-        return this.model.set('strict', !this.model.get('strict'));
+        return this.model.set('relaxed', !this.model.get('relaxed'));
       }
     };
 
-    SearchView.prototype.strictMode = function(model, strict) {
-      return this.$('input').toggleClass('strict', strict);
+    SearchView.prototype.relaxedMode = function(model, relaxed) {
+      return this.$('input').toggleClass('relaxed', relaxed);
     };
 
     return SearchView;

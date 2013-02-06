@@ -65,7 +65,7 @@
     };
 
     Deck.prototype.filtered = function() {
-      var query, strict, unique;
+      var query, relaxed, unique;
       query = this.get('filter');
       if (!query) {
         return this.get('cards');
@@ -79,13 +79,13 @@
       } catch (error) {
         return [];
       }
-      strict = this.get('strict');
+      relaxed = this.get('relaxed');
       return this.get('cards').filter(function(card) {
         var _ref;
         if (card.get('keyword').match(query)) {
           return true;
         }
-        if (!strict && ((_ref = card.get('primitives')) != null ? _ref.match(query) : void 0)) {
+        if (relaxed && ((_ref = card.get('primitives')) != null ? _ref.match(query) : void 0)) {
           return true;
         }
         return false;
@@ -218,7 +218,7 @@
 
     SearchView.prototype.initialize = function() {
       this.filter = _.debounce(this.filter, 300);
-      return this.model.on('change:strict', this.strictMode, this);
+      return this.model.on('change:relaxed', this.relaxedMode, this);
     };
 
     SearchView.prototype.change = function(e) {
@@ -235,12 +235,12 @@
       e.stopPropagation();
       if (e.which === 33) {
         e.preventDefault();
-        return this.model.set('strict', !this.model.get('strict'));
+        return this.model.set('relaxed', !this.model.get('relaxed'));
       }
     };
 
-    SearchView.prototype.strictMode = function(model, strict) {
-      return this.$('input').toggleClass('strict', strict);
+    SearchView.prototype.relaxedMode = function(model, relaxed) {
+      return this.$('input').toggleClass('relaxed', relaxed);
     };
 
     return SearchView;
@@ -308,7 +308,7 @@
       var _ref;
       if ((_ref = e.which) === 47 || _ref === 104) {
         e.preventDefault();
-        return $('#search input').focus();
+        return $('#search input').select().focus();
       }
     });
   });

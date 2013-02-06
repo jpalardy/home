@@ -60,7 +60,7 @@ class SearchView extends Backbone.View
 
   initialize: ->
     @filter = _.debounce(@filter, 300)
-    @model.on 'change:strict', @strictMode, @
+    @model.on 'change:relaxed', @relaxedMode, @
 
   change: (e) ->
     query = $(e.target).val()
@@ -73,10 +73,10 @@ class SearchView extends Backbone.View
     e.stopPropagation()
     if e.which is 33 # !
       e.preventDefault()
-      @model.set 'strict', !@model.get('strict')
+      @model.set 'relaxed', !@model.get('relaxed')
 
-  strictMode: (model, strict) ->
-    @.$('input').toggleClass('strict', strict)
+  relaxedMode: (model, relaxed) ->
+    @.$('input').toggleClass('relaxed', relaxed)
 
 #-------------------------------------------------
 root = this

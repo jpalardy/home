@@ -65,7 +65,7 @@
     };
 
     Deck.prototype.filtered = function() {
-      var query, strict, unique;
+      var query, relaxed, unique;
       query = this.get('filter');
       if (!query) {
         return this.get('cards');
@@ -79,13 +79,13 @@
       } catch (error) {
         return [];
       }
-      strict = this.get('strict');
+      relaxed = this.get('relaxed');
       return this.get('cards').filter(function(card) {
         var _ref;
         if (card.get('keyword').match(query)) {
           return true;
         }
-        if (!strict && ((_ref = card.get('primitives')) != null ? _ref.match(query) : void 0)) {
+        if (relaxed && ((_ref = card.get('primitives')) != null ? _ref.match(query) : void 0)) {
           return true;
         }
         return false;
