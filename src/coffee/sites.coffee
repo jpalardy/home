@@ -196,6 +196,12 @@ sites =
     visit:  'http://home.jpalardy.com/heisig/'
     hide:   true
 
+  rd:
+    name:   'romajidesu',
+    search: 'http://www.romajidesu.com/dictionary/meaning-of-%s.html',
+    visit:  'http://www.romajidesu.com/'
+    hide:   true
+
 #-------------------------------------------------
 exports = exports ? this
 exports.sites = sites
