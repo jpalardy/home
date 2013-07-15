@@ -9,10 +9,6 @@ sites =
     name:   'gmail'
     search: 'https://mail.google.com/mail/?shva=1#search/%s'
     visit:  'https://mail.google.com/mail/?shva=1#inbox'
-  gr:
-    name:   'google reader'
-    search: 'https://www.google.com/reader/view/#search/%s/'
-    visit:  'https://www.google.com/reader/view'
   gt:
     name:   'google translate'
     search: 'http://translate.google.com/#auto|en|%s'
@@ -29,6 +25,10 @@ sites =
     name:   'google finance'
     search: 'http://finance.google.com/finance?q=%s'
     visit:  'http://finance.google.com/'
+  feedly:
+    name:   'feedly'
+    search: 'http://cloud.feedly.com/'
+    visit:  'http://cloud.feedly.com/'
   yt:
     name:   'youtube'
     search: 'http://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search'

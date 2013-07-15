@@ -29,7 +29,7 @@ tmp/images/logo.jpg: src/images/logo.jpg tmp/images
 
 html: tmp/index.html
 tmp/index.html: src/html/index.html tmp/js/sites.js tmp
-	coffee tools/extract_sites.coffee > src/html/sites.part
+	$(BIN_COFFEE) tools/extract_sites.coffee > src/html/sites.part
 	sed '/id="cheatSheet"/ r src/html/sites.part' src/html/index.html > $@
 
 clean:
