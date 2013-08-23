@@ -39,7 +39,6 @@ class Deck extends Backbone.Model
     if unique
       return [unique]
     matchers = tokenizeQuery(query).map(starific.matcher)
-    relaxed = @get('relaxed')
     @get('cards').filter (card) ->
       return starific.match(matchers, card.get('tokens'))
 

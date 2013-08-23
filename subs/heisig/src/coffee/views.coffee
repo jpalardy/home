@@ -53,30 +53,21 @@ class DeckView extends Backbone.View
 
 class SearchView extends Backbone.View
   events:
-    'keyup':    'change'
+    'change':   'change'
     'click':    'change'
     'keypress': 'press'
-    'submit':   (e) -> e.preventDefault()
-
-  initialize: ->
-    @filter = _.debounce(@filter, 300)
-    @model.on 'change:relaxed', @relaxedMode, @
 
   change: (e) ->
     query = $(e.target).val()
     @filter query
 
+  press: (e) ->
+    if e.which is 13 # <return>
+      e.preventDefault()
+      @change(e)
+
   filter: (query) ->
     @model.set 'filter', query
-
-  press: (e) ->
-    e.stopPropagation()
-    if e.which is 33 # !
-      e.preventDefault()
-      @model.set 'relaxed', !@model.get('relaxed')
-
-  relaxedMode: (model, relaxed) ->
-    @.$('input').toggleClass('relaxed', relaxed)
 
 #-------------------------------------------------
 root = this

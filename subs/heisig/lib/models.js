@@ -77,7 +77,7 @@
     };
 
     Deck.prototype.filtered = function() {
-      var matchers, query, relaxed, unique;
+      var matchers, query, unique;
       query = this.get('filter');
       if (!query) {
         return this.get('cards');
@@ -87,7 +87,6 @@
         return [unique];
       }
       matchers = tokenizeQuery(query).map(starific.matcher);
-      relaxed = this.get('relaxed');
       return this.get('cards').filter(function(card) {
         return starific.match(matchers, card.get('tokens'));
       });

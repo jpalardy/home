@@ -77,7 +77,7 @@
     };
 
     Deck.prototype.filtered = function() {
-      var matchers, query, relaxed, unique;
+      var matchers, query, unique;
       query = this.get('filter');
       if (!query) {
         return this.get('cards');
@@ -87,7 +87,6 @@
         return [unique];
       }
       matchers = tokenizeQuery(query).map(starific.matcher);
-      relaxed = this.get('relaxed');
       return this.get('cards').filter(function(card) {
         return starific.match(matchers, card.get('tokens'));
       });
@@ -209,17 +208,9 @@
     }
 
     SearchView.prototype.events = {
-      'keyup': 'change',
+      'change': 'change',
       'click': 'change',
-      'keypress': 'press',
-      'submit': function(e) {
-        return e.preventDefault();
-      }
-    };
-
-    SearchView.prototype.initialize = function() {
-      this.filter = _.debounce(this.filter, 300);
-      return this.model.on('change:relaxed', this.relaxedMode, this);
+      'keypress': 'press'
     };
 
     SearchView.prototype.change = function(e) {
@@ -228,20 +219,15 @@
       return this.filter(query);
     };
 
-    SearchView.prototype.filter = function(query) {
-      return this.model.set('filter', query);
-    };
-
     SearchView.prototype.press = function(e) {
-      e.stopPropagation();
-      if (e.which === 33) {
+      if (e.which === 13) {
         e.preventDefault();
-        return this.model.set('relaxed', !this.model.get('relaxed'));
+        return this.change(e);
       }
     };
 
-    SearchView.prototype.relaxedMode = function(model, relaxed) {
-      return this.$('input').toggleClass('relaxed', relaxed);
+    SearchView.prototype.filter = function(query) {
+      return this.model.set('filter', query);
     };
 
     return SearchView;
