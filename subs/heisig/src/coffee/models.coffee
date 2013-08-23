@@ -9,7 +9,7 @@ tokenizeQuery = (str) ->
 
 class Card extends Backbone.Model
   initialize: ->
-    @set 'tokens', tokenize(@)
+    @set 'tokens', tokenizeCard(@)
 
 class Cards extends Backbone.Collection
   model: Card

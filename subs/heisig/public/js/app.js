@@ -21,7 +21,7 @@
     }
 
     Card.prototype.initialize = function() {
-      return this.set('tokens', tokenize(this));
+      return this.set('tokens', tokenizeCard(this));
     };
 
     return Card;

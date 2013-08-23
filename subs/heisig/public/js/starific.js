@@ -1,10 +1,4 @@
 
-function tokenize(card) {
-  return card.get('keyword').toLowerCase().replace(/-/, ' ').replace(/[^a-z ]/g, '').trim().split(/\s+/);
-}
-
-//-------------------------------------------------
-
 var starific = (function () {
   var starific = {};
 
