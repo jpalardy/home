@@ -1,8 +1,26 @@
 
 var starific = (function () {
-  var starific = {};
+  var Starific = function (matchers) {
+    this.matchers = matchers;
+  };
 
-  starific.matcher = function (pattern) {
+  Starific.prototype.any = function (tokens) {
+    return this.matchers.some(function (matcher) {
+      return tokens.some(function (token) {
+        return matcher(token);
+      });
+    });
+  };
+
+  Starific.prototype.all = function (tokens) {
+    return this.matchers.every(function (matcher) {
+      return tokens.some(function (token) {
+        return matcher(token);
+      });
+    });
+  };
+
+  var matcher = function (pattern) {
     var m = pattern.match(/^(\*)?(.*?)(\*)?$/);
     var starB = m[1];
     var text  = m[2];
@@ -27,14 +45,12 @@ var starific = (function () {
     }
   };
 
-  starific.match = function (matchers, tokens) {
-    return matchers.some(function (matcher) {
-      return tokens.some(function (token) {
-        return matcher(token);
-      });
-    });
+  return function (terms) {
+    if (!Array.isArray(terms)) {
+      terms = terms.toLowerCase().trim().split(/\s+/);
+    }
+    var matchers = terms.map(matcher);
+    return new Starific(matchers);
   };
-
-  return starific;
 }());
 

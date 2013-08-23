@@ -1,15 +1,10 @@
 
-tokenizeCard = (card) ->
- card.get('keyword').toLowerCase().replace(/-/, ' ').replace(/[^a-z ]/g, '').trim().split(/\s+/)
-
-tokenizeQuery = (str) ->
- str.toLowerCase().trim().split(/\s+/)
-
-#-------------------------------------------------
-
 class Card extends Backbone.Model
   initialize: ->
-    @set 'tokens', tokenizeCard(@)
+    @set 'tokens', @tokenize(@get 'keyword')
+
+  tokenize: (str) ->
+     str.toLowerCase().replace(/-/, ' ').replace(/[^a-z ]/g, '').trim().split(/\s+/)
 
 class Cards extends Backbone.Collection
   model: Card
@@ -38,9 +33,9 @@ class Deck extends Backbone.Model
     unique = @uniques[query]
     if unique
       return [unique]
-    matchers = tokenizeQuery(query).map(starific.matcher)
+    matchers = starific(query)
     @get('cards').filter (card) ->
-      return starific.match(matchers, card.get('tokens'))
+      return matchers.any(card.get('tokens'))
 
 #-------------------------------------------------
 root = this
