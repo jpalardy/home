@@ -62,6 +62,7 @@ class SearchView extends Backbone.View
     @filter query
 
   press: (e) ->
+    e.stopPropagation()
     if e.which is 13 # <return>
       e.preventDefault()
       @change(e)

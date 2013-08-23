@@ -220,6 +220,7 @@
     };
 
     SearchView.prototype.press = function(e) {
+      e.stopPropagation();
       if (e.which === 13) {
         e.preventDefault();
         return this.change(e);
