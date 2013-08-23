@@ -1,5 +1,15 @@
 
+tokenizeCard = (card) ->
+ card.get('keyword').toLowerCase().replace(/-/, ' ').replace(/[^a-z ]/g, '').trim().split(/\s+/)
+
+tokenizeQuery = (str) ->
+ str.toLowerCase().trim().split(/\s+/)
+
+#-------------------------------------------------
+
 class Card extends Backbone.Model
+  initialize: ->
+    @set 'tokens', tokenize(@)
 
 class Cards extends Backbone.Collection
   model: Card
@@ -28,17 +38,10 @@ class Deck extends Backbone.Model
     unique = @uniques[query]
     if unique
       return [unique]
-    try
-      query = new RegExp(query, "i")
-    catch error
-      return []
+    matchers = tokenizeQuery(query).map(starific.matcher)
     relaxed = @get('relaxed')
     @get('cards').filter (card) ->
-      if card.get('keyword').match query
-        return true
-      if relaxed and card.get('primitives')?.match query
-        return true
-      false
+      return starific.match(matchers, card.get('tokens'))
 
 #-------------------------------------------------
 root = this
