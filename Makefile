@@ -23,9 +23,8 @@ css: tmp/css/main.css
 tmp/css/main.css: src/less/main.less tmp/css
 	$(BIN_LESS) $< $@
 
-images: tmp/images/logo.jpg
-tmp/images/logo.jpg: src/images/logo.jpg tmp/images
-	cp $< $@
+images:
+	cp src/images/* tmp/images/
 
 html: tmp/index.html
 tmp/index.html: src/html/index.html tmp/js/sites.js tmp

@@ -6,14 +6,14 @@ Command.groups =
   images: ['yim','gim']
   anime:  ['ann','anidb']
 
-reuse = false
+reuse = true
 
 setReuse = (value) ->
   reuse = value
   if reuse
-    document.getElementById("command_input").className = "reuse"
+    document.getElementById("openwindow").className = "hide"
   else
-    document.getElementById("command_input").className = ""
+    document.getElementById("openwindow").className = ""
 
 handleForm = (form) ->
   try
