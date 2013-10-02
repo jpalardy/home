@@ -23,7 +23,7 @@ css: tmp/css/main.css
 tmp/css/main.css: src/less/main.less tmp/css
 	$(BIN_LESS) $< $@
 
-images:
+images: tmp/images
 	cp src/images/* tmp/images/
 
 html: tmp/index.html
