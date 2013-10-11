@@ -1,7 +1,7 @@
 
 class Card extends Backbone.Model
   initialize: ->
-    @set 'tokens', @tokenize(@get 'keyword')
+    @set 'tokens', _.flatten [@tokenize(@get 'keyword'), @get('no').toString(), @get 'kanji']
 
   tokenize: (str) ->
      str.toLowerCase().replace(/-/, ' ').replace(/[^a-z ]/g, '').trim().split(/\s+/)
@@ -16,12 +16,6 @@ class Deck extends Backbone.Model
     @set 'cards', new Cards()
     @on 'change:filter', (deck, query) ->
       Backbone.history.navigate(query)
-    @uniques = uniques = {}
-    @on 'change:cards', (deck, cards) ->
-      unique = {}
-      cards.forEach (card) ->
-        uniques[card.get('no')] = card
-        uniques[card.get('kanji')] = card
 
   parse: (resp) ->
     result =
@@ -30,11 +24,8 @@ class Deck extends Backbone.Model
   filtered: ->
     query = @get('filter')
     return @get('cards') unless query
-    unique = @uniques[query]
-    if unique
-      return [unique]
     matchers = starific(query)
-    @get('cards').filter (card) ->
+    cards = @get('cards').filter (card) ->
       return matchers.any(card.get('tokens'))
 
 #-------------------------------------------------

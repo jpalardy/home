@@ -13,7 +13,7 @@
     }
 
     Card.prototype.initialize = function() {
-      return this.set('tokens', this.tokenize(this.get('keyword')));
+      return this.set('tokens', _.flatten([this.tokenize(this.get('keyword')), this.get('no').toString(), this.get('kanji')]));
     };
 
     Card.prototype.tokenize = function(str) {
@@ -49,19 +49,9 @@
     Deck.prototype.url = 'heisig.json';
 
     Deck.prototype.initialize = function() {
-      var uniques;
       this.set('cards', new Cards());
-      this.on('change:filter', function(deck, query) {
+      return this.on('change:filter', function(deck, query) {
         return Backbone.history.navigate(query);
-      });
-      this.uniques = uniques = {};
-      return this.on('change:cards', function(deck, cards) {
-        var unique;
-        unique = {};
-        return cards.forEach(function(card) {
-          uniques[card.get('no')] = card;
-          return uniques[card.get('kanji')] = card;
-        });
       });
     };
 
@@ -73,17 +63,13 @@
     };
 
     Deck.prototype.filtered = function() {
-      var matchers, query, unique;
+      var cards, matchers, query;
       query = this.get('filter');
       if (!query) {
         return this.get('cards');
       }
-      unique = this.uniques[query];
-      if (unique) {
-        return [unique];
-      }
       matchers = starific(query);
-      return this.get('cards').filter(function(card) {
+      return cards = this.get('cards').filter(function(card) {
         return matchers.any(card.get('tokens'));
       });
     };
