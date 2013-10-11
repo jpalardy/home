@@ -1,10 +1,16 @@
 
+# "muffin's" -> "muffin's muffin"
+possessiveWord = (word) ->
+  [word, word.replace(/'s\b/, '')].join(' ')
+
+#-------------------------------------------------
+
 class Card extends Backbone.Model
   initialize: ->
     @set 'tokens', _.flatten [@tokenize(@get 'keyword'), @get('no').toString(), @get 'kanji']
 
   tokenize: (str) ->
-     str.toLowerCase().replace(/-/, ' ').replace(/[^a-z ]/g, '').trim().split(/\s+/)
+     str.toLowerCase().replace(/-/, ' ').replace(/\w+'s\b/, possessiveWord).replace(/[^a-z' ]/g, '').trim().split(/\s+/)
 
 class Cards extends Backbone.Collection
   model: Card
