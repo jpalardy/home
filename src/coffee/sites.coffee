@@ -3,40 +3,40 @@ sites =
   # search -- google
   g:
     name:   'google'
-    search: 'http://www.google.com/search?q=%s'
-    visit:  'http://www.google.com/'
+    search: 'https://www.google.com/search?q=%s'
+    visit:  'https://www.google.com/'
   gmail:
     name:   'gmail'
     search: 'https://mail.google.com/mail/?shva=1#search/%s'
     visit:  'https://mail.google.com/mail/?shva=1#inbox'
   gt:
     name:   'google translate'
-    search: 'http://translate.google.com/#auto|en|%s'
-    visit:  'http://translate.google.com/'
+    search: 'https://translate.google.com/#auto|en|%s'
+    visit:  'https://translate.google.com/'
   gim:
     name:   'google image'
-    search: 'http://images.google.com/images?q=%s'
-    visit:  'http://images.google.com/'
+    search: 'https://www.google.com/search?q=%s&tbm=isch'
+    visit:  'https://www.google.com/imghp?tbm=isch'
   gmap:
     name:   'google maps'
-    search: 'http://maps.google.com/maps?oi=map&q=%s'
-    visit:  'http://maps.google.com/'
+    search: 'https://maps.google.com/maps?oi=map&q=%s'
+    visit:  'https://maps.google.com/'
   gfin:
     name:   'google finance'
-    search: 'http://finance.google.com/finance?q=%s'
-    visit:  'http://finance.google.com/'
+    search: 'https://www.google.com/finance?q=%s'
+    visit:  'https://www.google.com/finance'
   feedly:
     name:   'feedly'
-    search: 'http://cloud.feedly.com/'
-    visit:  'http://cloud.feedly.com/'
+    search: 'https://cloud.feedly.com/'
+    visit:  'https://cloud.feedly.com/'
   yt:
     name:   'youtube'
-    search: 'http://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search'
-    visit:  'http://www.youtube.com/'
+    search: 'https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search'
+    visit:  'https://www.youtube.com/'
 
   # search -- yahoo
   yim:
-    name:   'yahoo'
+    name:   'yahoo image'
     search: 'http://images.search.yahoo.com/search/images?p=%s'
     visit:  'http://images.search.yahoo.com/search/images'
   yfin:
@@ -45,8 +45,8 @@ sites =
     visit:  'http://finance.yahoo.com/'
   fl:
     name:   'flickr'
-    search: 'http://flickr.com/photos/tags/%s'
-    visit:  'http://flickr.com/'
+    search: 'https://www.flickr.com/photos/tags/%s'
+    visit:  'https://www.flickr.com/'
 
   # search -- microsoft
   b:
@@ -57,22 +57,22 @@ sites =
   # search -- misc
   wa:
     name:   'wolfram alpha'
-    search: 'http://www.wolframalpha.com/input/?i=%s'
-    visit:  'http://www.wolframalpha.com/'
+    search: 'https://www.wolframalpha.com/input/?i=%s'
+    visit:  'https://www.wolframalpha.com/'
   ddg:
     name:   'duckduckgo'
-    search: 'http://duckduckgo.com/?q=%s'
-    visit:  'http://duckduckgo.com/'
+    search: 'https://duckduckgo.com/?q=%s'
+    visit:  'https://duckduckgo.com/'
   blk:
     name:   'blekko'
-    search: 'http://blekko.com/ws/%s+/date'
-    visit:  'http://blekko.com/'
+    search: 'https://blekko.com/ws/%s+/date'
+    visit:  'https://blekko.com/'
 
   # reference
   wp:
     name:   'wikipedia'
-    search: 'http://en.wikipedia.org/?search=%s'
-    visit:  'http://en.wikipedia.org/'
+    search: 'https://en.wikipedia.org/?search=%s'
+    visit:  'https://en.wikipedia.org/'
   ud:
     name:   'urban dictionary'
     search: 'http://www.urbandictionary.com/define.php?term=%s'
