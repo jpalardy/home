@@ -126,8 +126,8 @@ sites =
 
   bp:
     name:   'bookpiles'
-    search: 'http://bookpiles.ca/jonathan/books#reading/%s'
-    visit:  'http://bookpiles.ca/jonathan/books'
+    search: 'https://bookpiles.ca/jonathan/books#reading/%s'
+    visit:  'https://bookpiles.ca/jonathan/books'
 
   # misc
   imdb:
