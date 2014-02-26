@@ -5,6 +5,7 @@ Command.default_sites = ['ddg']
 Command.groups =
   images: ['yim','gim']
   anime:  ['ann','anidb']
+  'am*':  ['am','am.ca']
 
 reuse = true
 
