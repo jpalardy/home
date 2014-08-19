@@ -17,7 +17,10 @@ tmp/%:
 
 all: js css html images
 
-js: $(DST_JS)
+js: $(DST_JS) tmp/js/sites.js
+
+tmp/js/sites.js: config/sites.json
+	awk 'BEGIN {printf "var sites = " } { print }' $< > $@
 
 css: tmp/css/main.css
 tmp/css/main.css: src/less/main.less tmp/css
@@ -27,8 +30,8 @@ images: tmp/images
 	cp src/images/* tmp/images/
 
 html: tmp/index.html
-tmp/index.html: src/html/index.html tmp/js/sites.js tmp
-	$(BIN_COFFEE) tools/extract_sites.coffee > src/html/sites.part
+tmp/index.html: src/html/index.html config/sites.json tmp
+	cat config/sites.json | jq '.[] | select(.hide != true) | "\(.alias)\t\(.name)"' -r > src/html/sites.part
 	sed '/id="cheatSheet"/ r src/html/sites.part' src/html/index.html > $@
 
 clean:

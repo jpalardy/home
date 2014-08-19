@@ -1,6 +1,9 @@
 
 # attach sites to Command
-Command.sites = sites
+sites_lut = {}
+for site in sites
+  sites_lut[site.alias] = site
+Command.sites = sites_lut
 Command.default_sites = ['ddg']
 Command.groups =
   images: ['yim','gim']
