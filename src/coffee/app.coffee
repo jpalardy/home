@@ -5,10 +5,6 @@ for site in sites
   sites_lut[site.alias] = site
 Command.sites = sites_lut
 Command.default_sites = ['ddg']
-Command.groups =
-  images: ['yim','gim']
-  anime:  ['ann','anidb']
-  'am*':  ['am','am.ca']
 
 reuse = true
 
