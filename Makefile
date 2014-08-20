@@ -4,7 +4,7 @@ BIN_JASMINE = node_modules/.bin/jasmine-node
 BIN_LESS    = node_modules/.bin/lessc
 BIN_INLINER = node_modules/.bin/inliner
 
-SRC_COFFEE = $(shell find src/coffee -name '*.coffee')
+SRC_COFFEE = src/coffee/app.coffee
 DST_JS     = $(patsubst src/coffee/%.coffee, tmp/js/%.js, $(SRC_COFFEE))
 
 tmp/js/%.js: src/coffee/%.coffee
@@ -17,7 +17,10 @@ tmp/%:
 
 all: js css html images
 
-js: $(DST_JS) tmp/js/sites.js
+js: $(DST_JS) tmp/js/sites.js tmp/js/command.js
+
+tmp/js/command.js: src/js/command.js
+	cp $< $@
 
 tmp/js/sites.js: config/sites.json
 	awk 'BEGIN {printf "var sites = " } { print }' $< > $@
