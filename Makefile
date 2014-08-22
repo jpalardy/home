@@ -1,14 +1,7 @@
 
-BIN_COFFEE  = node_modules/.bin/coffee
 BIN_JASMINE = node_modules/.bin/jasmine-node
 BIN_LESS    = node_modules/.bin/lessc
 BIN_INLINER = node_modules/.bin/inliner
-
-SRC_COFFEE = src/coffee/app.coffee
-DST_JS     = $(patsubst src/coffee/%.coffee, tmp/js/%.js, $(SRC_COFFEE))
-
-tmp/js/%.js: src/coffee/%.coffee
-	$(BIN_COFFEE) -c -o $(@D) $<
 
 tmp/%:
 	mkdir -p $@
@@ -17,7 +10,8 @@ tmp/%:
 
 all: js css html images
 
-js: $(DST_JS) tmp/js/sites.js tmp/js/command.js
+js: tmp/js tmp/js/sites.js
+	cp src/js/* tmp/js
 
 tmp/js/command.js: src/js/command.js
 	cp $< $@

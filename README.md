@@ -39,7 +39,6 @@ The end result ends up in `public`. Compile the assets:
 
     > make compile
 
-    src/coffee => tmp/js
     src/less   => tmp/css
     src/images => tmp/images
     src/html   => tmp

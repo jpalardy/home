@@ -15,8 +15,8 @@
     <a class="logo" href="http://home.jpalardy.com/">home.jpalardy.com</a>
 
     <form id="command_form" onsubmit="return handleForm(this);">
-      <input type="search" name="command" id="command_input" size="35" autofocus="autofocus" autocapitalize="off" autocorrect="off" results="results" onkeypress="return handleKey(event)" />
-      <span id="openwindow" class="hide">&nbsp;&nbsp;&nbsp;</span>
+      <input type="search" name="command" id="command_input" size="35" autofocus="autofocus" autocapitalize="off" autocorrect="off" results="results" onkeyup="return handleKey(event)" onkeydown="return handleKey(event)" />
+      <div id="links"></div>
     </form>
 
 <details id="cheatSheetDetails">
