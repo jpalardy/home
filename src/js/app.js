@@ -1,5 +1,5 @@
 /* global document, window, console, Command, sites */
-(function (exports) {
+(function () {
   'use strict';
 
   Command.sites = (function () {
@@ -29,7 +29,7 @@
 
   //-------------------------------------------------
 
-  var handleForm = function () {
+  document.getElementById("command_form").onsubmit = function () {
     try {
       var command = getCommand();
       if (!command) {
@@ -45,7 +45,7 @@
     return false;
   };
 
-  var handleGlobalKey = function (ev) {
+  document.body.onkeyup = function (ev) {
     if (ev.keyCode === 27) { // ESC
       var elem = document.getElementById("cheatSheetDetails");
       elem.open = !elem.open;
@@ -54,17 +54,16 @@
     return true;
   };
 
-  var handleKey = function (ev) {
+  document.getElementById("command_input").onkeydown = function (ev) {
     if (ev.keyCode === 27) { // ESC
       ev.preventDefault();   // don't clear the text field
       return false;
     }
+  };
+
+  document.getElementById("command_input").onkeyup = function () {
     var command = getCommand();
     makeLinks(command);
     return true;
   };
-
-  exports.handleForm      = handleForm;
-  exports.handleGlobalKey = handleGlobalKey;
-  exports.handleKey       = handleKey;
-}(this.module && this.module.exports || this));
+}());
