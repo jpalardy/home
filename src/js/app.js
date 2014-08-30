@@ -48,7 +48,7 @@
   document.body.onkeyup = function (ev) {
     if (ev.keyCode === 27) { // ESC
       var elem = document.getElementById("cheatSheetDetails");
-      elem.open = !elem.open;
+      elem.className = (elem.className === "hide" ? "" : "hide");
       return false;
     }
     return true;
