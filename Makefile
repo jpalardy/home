@@ -1,5 +1,5 @@
 
-BIN_JASMINE = node_modules/.bin/jasmine-node
+BIN_MOCHA   = node_modules/.bin/mocha
 BIN_LESS    = node_modules/.bin/lessc
 BIN_INLINER = node_modules/.bin/inliner
 
@@ -34,9 +34,11 @@ tmp/index.html: src/html/index.html config/sites.json tmp
 clean:
 	rm -rf tmp
 
-spec: $(DST_JS)
-	$(BIN_JASMINE) --coffee spec
+test:
+	$(BIN_MOCHA) --reporter dot
 
 inline:
 	$(BIN_INLINER) --nocompress --verbose http://localhost:8000/index.html > public/index.html
+
+.PHONY: test
 

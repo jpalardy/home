@@ -4,8 +4,8 @@
   "description":   "The web pages at home.jpalardy.com",
   "version":       "0.2.1",
   "dependencies" : {
+    "mocha":         "1.21.4",
     "inliner":       "0.1.16",
-    "jasmine-node":  "1.14.5",
     "less":          "1.7.4"
   },
   "private": true

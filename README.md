@@ -48,9 +48,9 @@ Inline the assets into a single HTML page:
     > cd tmp; python -m SimpleHTTPServer
     > make inline
 
-Test the JavaScript files with Jasmine under node.js.
+Test the JavaScript files with mocha under node.js.
 
-    > make spec
+    > make test
 
 Finally, clean up after yourself:
 
