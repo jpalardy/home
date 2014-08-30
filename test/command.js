@@ -76,6 +76,11 @@ describe('Command', function () {
       assert_sites('gim,unknown,yim,blah something', ['https://www.google.com/search?q=something&tbm=isch',
                                                       'http://images.search.yahoo.com/search/images?p=something']);
     });
+
+    it('handles worst case with bad spacing', function () {
+      assert_sites('    gim,unknown,yim,blah some     thing      ', ['https://www.google.com/search?q=some%20thing&tbm=isch',
+                                                                     'http://images.search.yahoo.com/search/images?p=some%20thing']);
+    });
   });
 
   describe('parse (legacy)', function () {
