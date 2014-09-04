@@ -146,7 +146,7 @@
   {
     "alias": "apress",
     "name": "apress",
-    "search": "http://apress.com/book/search?searchterm=%s",
+    "search": "http://www.apress.com/catalogsearch/result/?q=%s",
     "visit": "http://www.apress.com/"
   },
   {
@@ -182,7 +182,7 @@
   {
     "alias": "da",
     "name": "deviant art",
-    "search": "http://search.deviantart.com/?q=%s",
+    "search": "http://www.deviantart.com/?q=%s",
     "visit": "http://www.deviantart.com/"
   },
   {
