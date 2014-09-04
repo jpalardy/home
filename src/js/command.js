@@ -7,7 +7,7 @@
     var links = this.links = [];
     sites.forEach(function (site) {
       if (query) {
-        links.push({site: site, url: Command.sites[site].search.replace(/%s/g, encodeURIComponent(query))});
+        links.push({site: site, url: Command.sites[site].search.replace(/%s/g, encodeURIComponent(query).replace(/%20/g, '+'))});
         return;
       }
       links.push({site: site, url: Command.sites[site].visit});

@@ -47,7 +47,7 @@ describe('Command', function () {
     });
 
     it('handles a two-word query', function () {
-      assert_sites('gim some thing', ['https://www.google.com/search?q=some%20thing&tbm=isch']);
+      assert_sites('gim some thing', ['https://www.google.com/search?q=some+thing&tbm=isch']);
     });
 
     it('handles a one-word query (default)', function () {
@@ -55,7 +55,7 @@ describe('Command', function () {
     });
 
     it('handles a two-word query (default)', function () {
-      assert_sites('some thing', ['https://duckduckgo.com/?q=some%20thing']);
+      assert_sites('some thing', ['https://duckduckgo.com/?q=some+thing']);
     });
 
     it('handles a site without a query', function () {
@@ -78,8 +78,8 @@ describe('Command', function () {
     });
 
     it('handles worst case with bad spacing', function () {
-      assert_sites('    gim,unknown,yim,blah some     thing      ', ['https://www.google.com/search?q=some%20thing&tbm=isch',
-                                                                     'http://images.search.yahoo.com/search/images?p=some%20thing']);
+      assert_sites('    gim,unknown,yim,blah some     thing      ', ['https://www.google.com/search?q=some+thing&tbm=isch',
+                                                                     'http://images.search.yahoo.com/search/images?p=some+thing']);
     });
   });
 
@@ -89,7 +89,7 @@ describe('Command', function () {
     });
 
     it('does not handle site as a query, with a query', function () {
-      assert_sites('gim yim something', ['https://www.google.com/search?q=yim%20something&tbm=isch']);
+      assert_sites('gim yim something', ['https://www.google.com/search?q=yim+something&tbm=isch']);
     });
   });
 });
