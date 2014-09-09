@@ -11,7 +11,7 @@
       this.deck = options.deck;
     },
     search: function (q) {
-      q = decodeURIComponent(q);
+      q = decodeURIComponent(q.replace(/\+/g, "%20"));
       $('#search input').val(q);
       this.deck.set('filter', q);
     }
