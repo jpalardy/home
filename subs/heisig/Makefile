@@ -1,15 +1,9 @@
 
-COFFEEs = $(wildcard src/coffee/*.coffee)
-JSs     = $(patsubst src/coffee/%.coffee,lib/%.js,$(COFFEEs))
-
-lib/%.js: src/coffee/%.coffee
-	coffee -c -o $(@D) $<
-
 all: public/js/app.js
 
-public/js/app.js: $(JSs)
-	cat lib/models.js lib/views.js lib/routers.js lib/app.js > $@
+public/js/app.js:
+	cat src/js/app.js src/js/models.js src/js/views.js src/js/routers.js > $@
 
 clean:
-	rm -rf lib
+	rm -rf public/js/app.js
 
