@@ -12,7 +12,6 @@ fl	flickr
 b	bing
 wa	wolfram alpha
 ddg	duckduckgo
-blk	blekko
 wp	wikipedia
 ud	urban dictionary
 ed	encyclopedia dramatica
@@ -31,6 +30,7 @@ imdb	imdb
 da	deviant art
 td	tigerdirect.ca
 yelp	yelp
+rt	rotten tomatoes
 gh	github
 ls	yubnub
 p	localhost port

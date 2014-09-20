@@ -84,12 +84,6 @@
     "visit": "https://duckduckgo.com/"
   },
   {
-    "alias": "blk",
-    "name": "blekko",
-    "search": "https://blekko.com/ws/%s+/date",
-    "visit": "https://blekko.com/"
-  },
-  {
     "alias": "wp",
     "name": "wikipedia",
     "search": "https://en.wikipedia.org/?search=%s",
@@ -196,6 +190,12 @@
     "name": "yelp",
     "search": "http://www.yelp.com/search?find_desc=%s&find_loc=Montr%C3%A9al%2C+QC",
     "visit": "http://www.yelp.com/"
+  },
+  {
+    "alias": "rt",
+    "name": "rotten tomatoes",
+    "search": "http://www.rottentomatoes.com/search/search.php?search=%s&searchby=movies&x=12&y=7",
+    "visit": "http://www.rottentomatoes.com/"
   },
   {
     "alias": "gh",
