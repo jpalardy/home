@@ -251,6 +251,13 @@
     "hide": true
   },
   {
+    "alias": "netflix",
+    "name": "netflix",
+    "search": "http://movies.netflix.com/Search?v1=%s",
+    "visit": "http://movies.netflix.com/WiHome",
+    "hide": true
+  },
+  {
     "alias": "h",
     "name": "heisig",
     "search": "http://home.jpalardy.com/heisig/#%s",
@@ -265,10 +272,10 @@
     "hide": true
   },
   {
-    "alias": "netflix",
-    "name": "netflix",
-    "search": "http://movies.netflix.com/Search?v1=%s",
-    "visit": "http://movies.netflix.com/WiHome",
+    "alias": "wr",
+    "name": "wordreference",
+    "search": "http://www.wordreference.com/es/en/translation.asp?spen=%s",
+    "visit": "http://www.wordreference.com/",
     "hide": true
   }
 ]
