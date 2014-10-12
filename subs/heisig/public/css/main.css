@@ -1,4 +1,8 @@
 
+.cards {
+  margin-top: 8px;
+}
+
 .card {
   float: left;
   width: 180px;
@@ -41,6 +45,8 @@
 }
 
 #count {
+  margin-left: 8px;
+  margin-bottom: 50px;
   font-size: 80%;
   color: #777;
 }
