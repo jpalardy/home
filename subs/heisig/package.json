@@ -1,0 +1,11 @@
+{
+  "name": "heisig",
+  "version": "0.1.0",
+  "description": "heisig lookup app",
+  "author": "Jonathan Palardy",
+  "license": "MIT",
+  "dependencies": {
+    "browserify": "^6.2.0",
+    "react": "^0.12.0"
+  }
+}
