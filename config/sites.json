@@ -194,7 +194,7 @@
   {
     "alias": "rt",
     "name": "rotten tomatoes",
-    "search": "http://www.rottentomatoes.com/search/search.php?search=%s&searchby=movies&x=12&y=7",
+    "search": "http://www.rottentomatoes.com/search/?search=%s",
     "visit": "http://www.rottentomatoes.com/"
   },
   {
