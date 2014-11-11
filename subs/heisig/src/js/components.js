@@ -24,10 +24,13 @@ var SearchBar = exports.SearchBar = React.createClass({
     var query = this.refs.query.getDOMNode().value;
     this.props.setQuery(query);
   },
+  handleFocus: function (e) {
+    e.target.value = e.target.value; // forces cursor to end of line
+  },
   render: function () {
     return React.createElement('div', {id: 'content'},
       React.createElement('form', {id: 'search', onSubmit: this.handleSubmit},
-        React.createElement('input', {type: 'search', ref: 'query', size: 35, autoFocus: 'autofocus', autoCapitalize: 'off', autoCorrect: 'off', results: 'results', value: this.props.query, onChange: this.handleChange})
+        React.createElement('input', {type: 'search', ref: 'query', size: 35, autoFocus: 'autofocus', autoCapitalize: 'off', autoCorrect: 'off', results: 'results', value: this.props.query, onChange: this.handleChange, onFocus: this.handleFocus})
       )
     );
   }
