@@ -18371,6 +18371,9 @@ var SearchBar = exports.SearchBar = React.createClass({
 var Deck = exports.Deck = React.createClass({
   render: function () {
     var query    = this.props.query;
+    if (!query.match(/[ *]$/)) {
+      query = query + '*';
+    }
     var matchers = starific(query);
     var cards    = this.props.cards;
     if (query) {
