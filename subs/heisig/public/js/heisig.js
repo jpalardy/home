@@ -18394,13 +18394,16 @@ var Deck = exports.Deck = React.createClass({
   },
 });
 
+var queryUpdate = function (query) {
+  location.hash = encodeURIComponent(query).replace(/%20/g, '+');
+  document.title = 'Heisig: ' + query;
+};
 
 exports.DeckFilter = React.createClass({
   getInitialState: function () {
     return {query: this.props.query};
   },
   setQuery: function (query) {
-    location.hash = encodeURIComponent(query).replace(/%20/g, '+');
     this.setState({query: query});
   },
   render: function () {
@@ -18408,7 +18411,13 @@ exports.DeckFilter = React.createClass({
       React.createElement(SearchBar, {query: this.state.query, setQuery: this.setQuery}),
       React.createElement(Deck, {cards: this.props.cards, query: this.state.query})
     );
-  }
+  },
+  componentDidMount: function () {
+    queryUpdate(this.state.query);
+  },
+  componentDidUpdate: function () {
+    queryUpdate(this.state.query);
+  },
 });
 
 },{"./starific":150,"react":147}],150:[function(require,module,exports){
