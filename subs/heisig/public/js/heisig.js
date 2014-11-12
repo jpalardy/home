@@ -18365,7 +18365,9 @@ var SearchBar = exports.SearchBar = React.createClass({
   render: function () {
     return React.createElement('div', {id: 'content'},
       React.createElement('form', {id: 'search', onSubmit: this.handleSubmit},
-        React.createElement('input', {type: 'search', ref: 'query', size: 35, autoFocus: 'autofocus', autoCapitalize: 'off', autoCorrect: 'off', results: 'results', value: this.props.query, onChange: this.handleChange, onFocus: this.handleFocus})
+        React.createElement('div', {id: 'glass'},
+          React.createElement('input', {type: 'text', ref: 'query', autoFocus: 'autofocus', autoCapitalize: 'off', autoCorrect: 'off', value: this.props.query, onChange: this.handleChange, onFocus: this.handleFocus})
+        )
       )
     );
   }
