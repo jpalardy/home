@@ -7,11 +7,11 @@
   width: 180px;
   height: 112px;
   position: relative;
-  border: 1px solid #bbb;
+  box-shadow: 1px 1px 1px #777;
   border-radius: 5px;
   margin: 5px 5px;
   transition: all 500ms ease-in-out;
-  background: url(/images/cardboard.jpg) no-repeat;
+  background: url(..//images/cardboard.jpg) no-repeat;
 }
 
 .card .no {
@@ -51,7 +51,7 @@
   border-radius: 5px;
   line-height: 23px;
   padding-left: 23px;
-  background: url(/images/glass.png) no-repeat;
+  background: url(..//images/glass.png) no-repeat;
   background-size: 24px 24px;
   width: 200px;
   height: 24px;
