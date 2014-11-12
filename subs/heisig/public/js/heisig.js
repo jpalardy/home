@@ -18396,7 +18396,7 @@ var Deck = exports.Deck = React.createClass({
 
 var queryUpdate = function (query) {
   location.hash = encodeURIComponent(query).replace(/%20/g, '+');
-  document.title = 'Heisig: ' + query;
+  document.title = (query.trim() ? 'Heisig: ' + query : 'Heisig lookup');
 };
 
 exports.DeckFilter = React.createClass({
