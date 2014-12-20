@@ -72,6 +72,12 @@
     "visit": "http://www.bing.com/"
   },
   {
+    "alias": "sh",
+    "name": "symbol hound",
+    "search": "http://symbolhound.com/?q=%s",
+    "visit": "http://symbolhound.com/"
+  },
+  {
     "alias": "wa",
     "name": "wolfram alpha",
     "search": "https://www.wolframalpha.com/input/?i=%s",
