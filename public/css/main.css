@@ -1,0 +1,54 @@
+html,
+body {
+  color: #777777;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#cheatSheetDetails {
+  margin-top: 5px;
+}
+#content {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+}
+#content a.logo {
+  text-indent: -5000px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(/images/logo.jpg) no-repeat right;
+  background-size: 100% 100%;
+}
+#content a {
+  color: #777777;
+  text-decoration: none;
+}
+#content form {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+}
+#content #glass {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  line-height: 23px;
+  padding-left: 23px;
+  background: url(/images/glass.png) no-repeat;
+  background-size: 24px 24px;
+  width: 200px;
+  height: 24px;
+}
+#content input {
+  border: 0;
+  outline: none;
+  width: 190px;
+}
+.hide {
+  display: none;
+}
