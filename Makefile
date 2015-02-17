@@ -1,17 +1,17 @@
 
-BIN_MOCHA   = node_modules/.bin/mocha
-BIN_LESS    = node_modules/.bin/lessc
+BIN = node_modules/.bin
 
 #-------------------------------------------------
 
 all: js css html
 
-js:
-	cp src/js/* public/js
+js: public/js/app.js
+public/js/app.js: src/js/*.js
+	$(BIN)/browserify src/js/app.js -o public/js/app.js
 
 css: public/css/main.css
 public/css/main.css: src/less/main.less public/css
-	$(BIN_LESS) $< $@
+	$(BIN)/lessc $< $@
 
 html: public/index.html
 public/index.html: src/html/index.html src/js/sites.js
@@ -19,7 +19,7 @@ public/index.html: src/html/index.html src/js/sites.js
 	sed '/id="cheatSheet"/ r src/html/sites.part' src/html/index.html > $@
 
 test:
-	$(BIN_MOCHA) --reporter dot
+	$(BIN)/mocha --reporter dot
 
 .PHONY: test
 
