@@ -263,6 +263,13 @@
     "hide": true
   },
   {
+    "alias": "fun",
+    "name": "funimation",
+    "search": "http://www.funimation.com/search?q=%s",
+    "visit": "http://www.funimation.com/",
+    "hide": true
+  },
+  {
     "alias": "nf",
     "name": "netflix",
     "search": "http://movies.netflix.com/Search?v1=%s",
