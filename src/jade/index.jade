@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title jpalardy.com - home
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    style= "\n"
+      include css/main.css
+  body
+    #content
+      a.logo(href="http://home.jpalardy.com/") home.jpalardy.com
+
+      form#command_form
+        #glass
+          input#command_input(type="text", name="command", autofocus="autofocus", autocapitalize="off", autocorrect="off")
+        #links
+
+      #cheatSheetDetails.hide
+        pre#cheatSheet= "\n"
+          include html/sites.html
+
+    script= "\n"
+      include js/app.js
+

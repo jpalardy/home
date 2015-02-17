@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <title>jpalardy.com - home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <link rel="stylesheet" href="css/main.css" />
-</head>
-<body>
-
-  <div id="content">
-    <a class="logo" href="http://home.jpalardy.com/">home.jpalardy.com</a>
-
-    <form id="command_form">
-      <div id="glass">
-        <input type="text" name="command" id="command_input" autofocus="autofocus" autocapitalize="off" autocorrect="off" />
-      </div>
-      <div id="links"></div>
-    </form>
-
-<div id="cheatSheetDetails" class="hide">
-<pre id="cheatSheet">
+  <head>
+    <meta charset="utf-8">
+    <title>jpalardy.com - home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <style>
+html,
+body {
+  color: #777777;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#cheatSheetDetails {
+  margin-top: 5px;
+}
+#content {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+}
+#content a.logo {
+  text-indent: -5000px;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAsHCAkIBwsJCQkMCwsNEBoREA8PECAXGBMaJiIoKCYiJSQqMD0zKi05LiQlNUg1OT9BREVEKTNLUEpCTz1DREH/2wBDAQsMDBAOEB8RER9BLCUsQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUH/wAARCAB4AHgDAREAAhEBAxEB/8QAGwAAAQUBAQAAAAAAAAAAAAAABQIDBAYHAQD/xAA6EAABAwIEAwUFBgUFAAAAAAABAAIDBBEFBhIhEzFBMlFhcbEHIoGRoRQVFkJS0SM2YnKjVFWCkqL/xAAYAQEBAQEBAAAAAAAAAAAAAAABAAIDBP/EAB8RAQEAAwEAAgMBAAAAAAAAAAABAhESMRMhA0FRMv/aAAwDAQACEQMRAD8AyWKJ8zwxgu4qMm0kYVWHlF9Qs9Q8Ur7mr7X4H/oK6i4pcWA4lK4NZBcn+oK7h4yP/hbGOYpb/wDMI+TFfHkS3LGMOBIo3bG25AV3ivjyJflzFmWvSON/0kH0V3ivjyKGWMY/0h/7BXeK+PI3Nl/E4G6pKew/uCZnKuMkV1DUtNjH9U7Z5o3TZDzJVQMniw/VHI0Oa7iN3B+KO4tHB7PMzkAjD/8AI390d4h4+zvNH+3f5G/urvFGp8iZkp26pMNdb+lzT6FPcQHW0k9DUvpqmMxys7TT0Wpdo7hcjY6oFwvcH4IrWPow3EREexcLPLp0ktxemcPzD4LPNa6ifRTMkaJIZAfVZsallF6WtcwgPFweqxcW9i8TmPaC0g7LFhKZCw3NrFAM1fDibrcbDkmfaA8RqGPjdYXHiusjNoRR0QrK+GEAniPDbDnzXRzrbKSnbTUsUDbkRtDQTz2XKuR3RdCJLEA3I33VJgntDJdm6uJbp3At5AL0Yf5ALQAmqYB4rVM9ExE0glxsPFG2zclNGASH2sra0jGR8ModFJuORaVAUpsfqA0NlY1w/UOazzG5nRvC8c0vseyR1Wbi6SiNRmGOKDVq3Owss8HYJNmF0ry6Z4t0seS3MWeiRidLUssJgPA7J0OpR3JBikzFTFjgbE+hRfGcr9NWWHN66NIklCNSu2QmB+0Jzn5uri4i+oDbyC9GH+WQvBm68Rib5+i1l41j6sU+HahctNiucrtcQ6owxpbdrnAnot7ZuKKMOLDvJ9FbHKbRYVxvee6w8OqNmYrFTZYkdTsljuNjseq53N0kVzGYJ4JnQSts5vyK6T7YyB5CeRBS5UqGEucLJOmneyLD3RPq6qSIkEBrZDyHeB9FjItKBWA4ShEEoRiZ3NZDAs6uLs0V5cSTxDzXpx8ZqJgGn72p9XLUrLxrD1qdNQMlj94b9F5Llp6tI1XhDbEuZfxA5LcyGkP8NCYaw4RtPS11rsaEKTBaWHS0NJt3rNyp0sNK1oj0gbBYKm54w7iVDJ2i22k+K6/jv6Zym1Tdhz+ov8F12xyfgw+VxADNI8VbOmsZHpm0mBRRgEOJLnHvXO37YvqwatlMkl4CEbfJZCRZZPdN0JhuenF2aK0u/UPQL0YeM1Cy+0OxaC/Q3Vl4cPWtYS4uh1E72Xjy9eoSDARuhESBobvYJgMROa93urRT6U6QRbmhK7m3YtNiLbLeCDcMgjkaXOat2pKqIg1oa0eQREumEwmmoIYiLEN3Hih576nB5slEkkooNSlSQ6l5t4ITFc7/AMzVfm30C9GPjNQsCdpxSE+J9E5eHD1pGHVekDe1wvPlHplFjiGmP3gbjuWOUhz1ElTc76VqTRT8PhEUTXatV91i37QnFugg+YIhLE9rzzGxtyW8Ur1NOKb+GTcd66WITwpklfXxMjbqDSHOv3XQxldReGtshxLskPEKRqQXQkKpALDdCYjnB7n5iq3P567fJejHxmo2B2+8Y7+Nvkm+HH1daJ+wauVd5ROJ3Fe1pOxNlk7HYI2RQhgAt6rmQ6pqKiJ54TrAHkRtZaklW3PxBLTts6LUfBPBC63GZ6+0YjLBe5TMdIOqrscDfcrUVW/IVDURxz1MzHNY+wZq/N4orlnVtDUMOpDjkVGn8kJDqR7pQmIZya5mY6wOtfVfbxC9GPjNQsIcWV0bgL2umnH1bqScB7T0KxY6iQkcBqZv3LBFMPxEPiHHeGEbb9Vmw6Sa51OIw/iNudxvzRNmQMAY67ri3Naa0jPfT2cQ9tx3JCDSU7q7EI4tzreBYdAtC1rNJA2CnjhYLNY0NAWHE+GpDhahEOaVI28bFCQ52gt3QmI55bpzPWDxB+gXow8ZoZhYJrWAdbppx9WWmJY8XOyzXQdpWksB71zrULqKZ7xqA3RtvG6RHN6OBS7TRJAIIuUG6MNpnMJcRt3p25ZUIfjNVS1/EpJTHo2BHVdccZ+3nyy2tuDe02SngjixCndO4Eh0jSASPJF/H/GVvwvPWAV7QBViB5PZlGn68lnmwD0c8U0bZIntexwuHNNwQsl4uCEZkO6EhzuFiTyCAxHPn80Vnm30C74eCh2Cua3Eoi8gDfc+S1fDj6uLKYTMu0Xtysue3VNwyThu4Um2+11nKKUfgDH9oA+a5VpyppoXN0hoHkFSmIhpImA2Y35J2dq/mSuipoJIg8cUiwC6YTbGV1FNB1E7L0OJQJulFA3UhOgx3FMOaG0tbLGwG+kO2v5IslQ7H7ScaazQ6Oncf1Fpv6rPxxDFD7RKeWBrasOjqPzODfc/dYv47+kJQZhir49UErHX22/ZYuOkzDOr+JmSqd/b6BdcfGaDR9paQrheMVOHPGk64+rHLNxlbl0MDMsE8g4kRiHfe6OdHoRos2UTLiSci3e07rFw2ZkmNzfhLgS6ZwI/pO6z8da6gLi2dXvvHQxaWn87+fyWp+P+i5/xV56ierk1yvc93LfousmnO/Z6EaB4rcR5rWO3AF1I1O3Q4OA2UnQdTbhSJPaCkS8kOUHWTPjeHMeWkbgg2UketlfPUOkkdqcbXKyDUYu5SPBpSXnA9yERZReQimxl3gnSSI4/knSOWSnuyVI7s8WKkadGWctwpGXu0m6E452vdKeAUEacWkKKHYO38FQxI8QkvDdCdIHclPbDohFNISjocFIq+ykSdwpGnOezqpFMqAdnfNW0TK0OBspGGOsbFAONO6UYqDeT4IoNAkG4Qi+K/vUnOI4dVJ3jP71J3jP8FLb3Gepbd+0P8E7W3vtMvera299plv2lbW3HTyO5lG0SXuUnRM8CwcracL3E3vupPCRwN7qTjnFxuVJ//9k=") no-repeat right;
+  background-size: 100% 100%;
+}
+#content a {
+  color: #777777;
+  text-decoration: none;
+}
+#content form {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+}
+#content #glass {
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  line-height: 23px;
+  padding-left: 23px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAQAAAC0jZKKAAABOElEQVRIx2NgGAWjYBSMRKDGRG0DJdWa1c6pfVX7r/ZabadaqhobNQxlVKsCG4kM76hZU27sPDRDIfCHWhhlBpdCDfqrtlotRS1ErVztIlTkm5oO+cZKAbWDDHmhZoGIQKBl/8CiO8k3uBpswB81SzTxfqir9ck1+ChY+xoMcX6oT8rJNfglWHs6Fpn9YJmZ5Br8E6w9CovMerDMCnINfgDWXo1F5gpYZhq5Bm8Ca7+qxowmbgiNvHhyDY6GGtCIIsqldgaakgXINZhF7TrU6GlqolAxU6ix/9XaKcl5hvBy4pfacbUdajeRsvU6igojNQ+1z1hLCyoYrQZNXDD4Va1VbSlVjAYarqxWoDZZbbnaJGCE8gP5zFQzGsMqhNErGBhoYfRPtUDq14HMavNpYOwoGAWjYIQBAGitv5yzkZIwAAAAAElFTkSuQmCC") no-repeat;
+  background-size: 24px 24px;
+  width: 200px;
+  height: 24px;
+}
+#content input {
+  border: 0;
+  outline: none;
+  width: 190px;
+}
+.hide {
+  display: none;
+}
+</style>
+  </head>
+  <body>
+    <div id="content"><a href="http://home.jpalardy.com/" class="logo">home.jpalardy.com</a>
+      <form id="command_form">
+        <div id="glass">
+          <input id="command_input" type="text" name="command" autofocus="autofocus" autocapitalize="off" autocorrect="off">
+        </div>
+        <div id="links"></div>
+      </form>
+      <div id="cheatSheetDetails" class="hide">
+        <pre id="cheatSheet">
 g	google
 gmail	gmail
 gt	google translate
@@ -59,10 +110,9 @@ gh	github
 ls	yubnub
 p	localhost port
 </pre>
-</div>
-
-  </div>
-
-  <script src="js/app.js"></script>
-</body>
+      </div>
+    </div>
+    <script>
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){var Command=require("./command");var sites=require("./sites");Command.sites=function(){var result={};sites.forEach(function(site){result[site.alias]=site});return result}();Command.default_sites=["ddg"];var getCommand=function(){var text=document.getElementById("command_input").value;return Command.parse(text)};var makeLinks=function(command){if(!command){document.getElementById("links").innerHTML="";return}var html=command.links.map(function(link){return'<a href="'+link.url+'">'+link.site+"</a>"}).join(" ");document.getElementById("links").innerHTML=html};document.getElementById("command_form").onsubmit=function(){try{var command=getCommand();if(!command){return false}command.urls.slice(1).forEach(function(url){window.open(url,"_blank")});window.location=command.urls[0]}catch(e){console.error(e)}return false};document.body.onkeyup=function(ev){if(ev.keyCode===27){var elem=document.getElementById("cheatSheetDetails");elem.className=elem.className==="hide"?"":"hide";return false}return true};document.getElementById("command_input").onkeydown=function(ev){if(ev.keyCode===27){ev.preventDefault();return false}};document.getElementById("command_input").onkeyup=function(){var command=getCommand();makeLinks(command);return true}},{"./command":2,"./sites":3}],2:[function(require,module,exports){var Command=function(query,sites){this.query=query||"";this.sites=sites||[];var links=this.links=[];sites.forEach(function(site){if(query){links.push({site:site,url:Command.sites[site].search.replace(/%s/g,encodeURIComponent(query).replace(/%20/g,"+"))});return}links.push({site:site,url:Command.sites[site].visit})});this.urls=links.map(function(link){return link.url})};Command.prototype.toString=function(){return this.sites.join(",")+" "+this.query};Command.parse=function(text){var words=text.split(/ +/).filter(Boolean);if(words.length===0){return null}var sites=words[0].split(",").filter(function(site){return Command.sites[site]});if(sites.length){return new Command(words.slice(1).join(" "),sites)}return new Command(words.join(" "),Command.default_sites)};module.exports=Command},{}],3:[function(require,module,exports){module.exports=[{alias:"g",name:"google",search:"https://www.google.com/search?q=%s",visit:"https://www.google.com/"},{alias:"gmail",name:"gmail",search:"https://mail.google.com/mail/?shva=1#search/%s",visit:"https://mail.google.com/mail/?shva=1#inbox"},{alias:"gt",name:"google translate",search:"https://translate.google.com/#auto|en|%s",visit:"https://translate.google.com/"},{alias:"gim",name:"google image",search:"https://www.google.com/search?q=%s&tbm=isch",visit:"https://www.google.com/imghp?tbm=isch"},{alias:"gmap",name:"google maps",search:"https://maps.google.com/maps?oi=map&q=%s",visit:"https://maps.google.com/"},{alias:"gfin",name:"google finance",search:"https://www.google.com/finance?q=%s",visit:"https://www.google.com/finance"},{alias:"feedly",name:"feedly",search:"https://cloud.feedly.com/",visit:"https://cloud.feedly.com/"},{alias:"yt",name:"youtube",search:"https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search",visit:"https://www.youtube.com/"},{alias:"yim",name:"yahoo image",search:"http://images.search.yahoo.com/search/images?p=%s",visit:"http://images.search.yahoo.com/search/images"},{alias:"yfin",name:"yahoo finance",search:"http://finance.yahoo.com/q?s=%s",visit:"http://finance.yahoo.com/"},{alias:"fl",name:"flickr",search:"https://www.flickr.com/photos/tags/%s",visit:"https://www.flickr.com/"},{alias:"b",name:"bing",search:"http://www.bing.com/search?q=%s",visit:"http://www.bing.com/"},{alias:"sh",name:"symbol hound",search:"http://symbolhound.com/?q=%s",visit:"http://symbolhound.com/"},{alias:"wa",name:"wolfram alpha",search:"https://www.wolframalpha.com/input/?i=%s",visit:"https://www.wolframalpha.com/"},{alias:"ddg",name:"duckduckgo",search:"https://duckduckgo.com/?q=%s",visit:"https://duckduckgo.com/"},{alias:"wp",name:"wikipedia",search:"https://en.wikipedia.org/?search=%s",visit:"https://en.wikipedia.org/"},{alias:"ud",name:"urban dictionary",search:"http://www.urbandictionary.com/define.php?term=%s",visit:"http://www.urbandictionary.com/"},{alias:"ed",name:"encyclopedia dramatica",search:"http://encyclopediadramatica.ch/index.php?search=%s&fulltext=Search",visit:"http://encyclopediadramatica.ch/Main_Page"},{alias:"so",name:"stack overflow",search:"http://stackoverflow.com/search?q=%s",visit:"http://stackoverflow.com/"},{alias:"am",name:"amazon.com",search:"http://www.amazon.com/exec/obidos/external-search?mode=blended&keyword=%s",visit:"http://www.amazon.com/"},{alias:"am.ca",name:"amazon.ca",search:"http://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s",visit:"http://www.amazon.ca/"},{alias:"isbn",name:"isbn",search:"http://isbn.nu/%s",visit:"http://isbn.nu/"},{alias:"oreilly",name:"o'reilly",search:"http://search.oreilly.com/?q=%s&t1=Books",visit:"http://oreilly.com/"},{alias:"safari",name:"safari online",search:"http://my.safaribooksonline.com/search/%s",visit:"http://my.safaribooksonline.com/"},{alias:"apress",name:"apress",search:"http://www.apress.com/catalogsearch/result/?q=%s",visit:"http://www.apress.com/"},{alias:"banq",name:"bibliothèque et archives nationales",search:"http://us2kv5pk3n.search.serialssolutions.com/?V=1.0&S=T_W_A&C=%s",visit:"http://www.banq.qc.ca/accueil/index.html?language_id=1"},{alias:"audible",name:"audible",search:"http://www.audible.com/search?advsearchKeywords=%s",visit:"http://www.audible.com/"},{alias:"vpl",name:"vpl",search:"http://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue",visit:"http://www.vpl.ca/"},{alias:"bp",name:"bookpiles",search:"https://bookpiles.ca/jonathan/books#reading/%s",visit:"https://bookpiles.ca/jonathan/books"},{alias:"ups",name:"ups",search:"http://wwwapps.ups.com/WebTracking/processInputRequest?sort_by=status&tracknums_displayed=1&TypeOfInquiryNumber=T&loc=en_US&InquiryNumber1=%s&track.x=0&track.y=0",visit:"http://www.ups.com/?cookie=ca_en_home"},{alias:"imdb",name:"imdb",search:"http://imdb.com/find?q=%s",visit:"http://imdb.com/"},{alias:"da",name:"deviant art",search:"http://www.deviantart.com/?q=%s",visit:"http://www.deviantart.com/"},{alias:"td",name:"tigerdirect.ca",search:"http://www.tigerdirect.ca/applications/SearchTools/search.asp?keywords=%s",visit:"http://www.tigerdirect.ca/"},{alias:"yelp",name:"yelp",search:"http://www.yelp.com/search?find_desc=%s&find_loc=Montr%C3%A9al%2C+QC",visit:"http://www.yelp.com/"},{alias:"rt",name:"rotten tomatoes",search:"http://www.rottentomatoes.com/search/?search=%s",visit:"http://www.rottentomatoes.com/"},{alias:"gh",name:"github",search:"https://github.com/search?q=%s",visit:"https://github.com/jpalardy"},{alias:"ls",name:"yubnub",search:"http://yubnub.org/kernel/ls?args=%s",visit:"http://yubnub.org/"},{alias:"p",name:"localhost port",search:"http://localhost:%s/",visit:"http://localhost/"},{alias:"ann",name:"anime news network",search:"http://www.animenewsnetwork.com/encyclopedia/search.php?searchbox=%s",visit:"http://www.animenewsnetwork.com/",hide:true},{alias:"anidb",name:"anidb",search:"http://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist",visit:"http://anidb.info/",hide:true},{alias:"tot",name:"tokyo toshokan",search:"http://www.tokyotosho.info/search.php?terms=%s",visit:"http://www.tokyotosho.info/",hide:true},{alias:"tpb",name:"the pirate bay",search:"http://thepiratebay.org/search/%s/0/7/0",visit:"http://thepiratebay.org/",hide:true},{alias:"cr",name:"crunchyroll",search:"http://www.crunchyroll.com/search?q=%s",visit:"http://www.crunchyroll.com/",hide:true},{alias:"fun",name:"funimation",search:"http://www.funimation.com/search?q=%s",visit:"http://www.funimation.com/",hide:true},{alias:"nf",name:"netflix",search:"http://movies.netflix.com/Search?v1=%s",visit:"http://movies.netflix.com/WiHome",hide:true},{alias:"h",name:"heisig",search:"http://home.jpalardy.com/heisig/#%s",visit:"http://home.jpalardy.com/heisig/",hide:true},{alias:"rd",name:"romajidesu",search:"http://www.romajidesu.com/dictionary/meaning-of-%s.html",visit:"http://www.romajidesu.com/",hide:true},{alias:"wr",name:"wordreference",search:"http://www.wordreference.com/es/en/translation.asp?spen=%s",visit:"http://www.wordreference.com/",hide:true}]},{}]},{},[1]);</script>
+  </body>
 </html>
