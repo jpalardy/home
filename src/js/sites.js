@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "alias": "g",
     "name": "google",
@@ -297,4 +297,4 @@
     "visit": "http://www.wordreference.com/",
     "hide": true
   }
-]
+];

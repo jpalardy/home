@@ -1,4 +1,4 @@
-var sites = [
+module.exports = [
   {
     "alias": "g",
     "name": "google",
@@ -297,4 +297,4 @@ var sites = [
     "visit": "http://www.wordreference.com/",
     "hide": true
   }
-]
+];
