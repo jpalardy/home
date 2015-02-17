@@ -7,7 +7,7 @@ all: js css html
 
 js: public/js/app.js
 public/js/app.js: src/js/*.js
-	$(BIN)/browserify src/js/app.js -o public/js/app.js
+	$(BIN)/browserify src/js/app.js | $(BIN)/uglifyjs > public/js/app.js
 
 css: public/css/main.css
 public/css/main.css: src/less/main.less public/css
