@@ -19,7 +19,7 @@
     $("#questions input").each(function (i, elem) {
       var jqElem = $(elem);
       var answer = jqElem.attr("data-answer");
-      jqElem.addClass(jqElem.attr("value") === answer ? "good" : "bad").attr("disabled", "disabled");
+      jqElem.addClass(jqElem.attr("value").trim() === answer ? "good" : "bad").attr("disabled", "disabled");
     });
   };
 
