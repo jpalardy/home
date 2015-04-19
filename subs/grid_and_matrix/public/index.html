@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>grid and matrix</title>
+<style>
+
+svg {
+  cursor: crosshair;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #bbb;
+  shape-rendering: crispEdges;
+}
+
+.line {
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+}
+
+#matrix {
+  position: absolute;
+  left: 530px;
+  top:  30px;
+}
+
+#matrix table {
+  border-collapse: collapse;
+}
+
+h3 {
+  font-family: Arial;
+  margin-bottom: 10px;
+}
+
+#matrix input {
+  width: 15px;
+}
+
+</style>
+</head>
+<body>
+  <div id="grid"></div>
+  <div id="matrix">
+    <h3>Transformation matrix:</h3>
+    <table>
+      <tr>
+        <td><input type="text" value="1"></td>
+        <td><input type="text" value="0"></td>
+      </tr>
+      <tr>
+        <td><input type="text" value="0"></td>
+        <td><input type="text" value="1"></td>
+      </tr>
+    </table>
+  </div>
+  <script src="js/d3.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
