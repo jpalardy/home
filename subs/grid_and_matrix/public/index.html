@@ -20,13 +20,20 @@ svg {
   shape-rendering: crispEdges;
 }
 
-.dot {
+body {
+  font-family: Arial;
+  color: #777;
 }
 
 #matrix {
   position: absolute;
   left: 530px;
-  top:  30px;
+  top:  -3px;
+}
+
+#matrix input {
+  width: 20px;
+  text-align: right;
 }
 
 #matrix table {
@@ -34,18 +41,37 @@ svg {
 }
 
 h3 {
-  font-family: Arial;
   margin-bottom: 10px;
 }
 
-#matrix input {
-  width: 15px;
+#matrix ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+#matrix li {
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+#matrix li a {
+  border: 1px solid steelblue;
+  border-radius: 4px;
+  padding: 5px 0 6px 8px;
+  display: block;
+  background: steelblue;
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  width: 125px;
 }
 
 </style>
 </head>
 <body>
   <div id="grid"></div>
+
   <div id="matrix">
     <h3>Transformation matrix:</h3>
     <table>
@@ -58,7 +84,22 @@ h3 {
         <td><input type="text" value="1"></td>
       </tr>
     </table>
+    <h3>Presets:</h3>
+    <ul>
+      <li><a data-matrix="1 0 0 1"         href="#">identity</a></li>
+      <li><a data-matrix="2 0 0 2"         href="#">scale by 2</a></li>
+      <li><a data-matrix="1 1 0 1"         href="#">skew to the right</a></li>
+      <li><a data-matrix="0 -1 1 0"        href="#">rotate 90</a></li>
+      <li><a data-matrix="-1 0 0 -1"       href="#">rotate 180</a></li>
+      <li><a data-matrix="0 1 -1 0"        href="#">rotate 270</a></li>
+      <li><a data-matrix="1 0 0 -1"        href="#">mirror on x axis</a></li>
+      <li><a data-matrix="-1 0 0 1"        href="#">mirror on y axis</a></li>
+      <li><a data-matrix="1 0 0 0"         href="#">project on x axis</a></li>
+      <li><a data-matrix="0 0 0 1"         href="#">project on y axis</a></li>
+      <li><a data-matrix="0.5 0.5 0.5 0.5" href="#">project on y = x</a></li>
+    </ul>
   </div>
+
   <script src="js/d3.min.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/app.js"></script>

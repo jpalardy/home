@@ -108,12 +108,30 @@ $('input').change(function () {
   MATRIX[1] = vals.slice(2, 4);
 });
 
+$('#matrix a').click(function (e) {
+  e.preventDefault();
+  var vals = this.dataset.matrix.split(' ');
+  MATRIX[0] = vals.slice(0, 2);
+  MATRIX[1] = vals.slice(2, 4);
+  $('input')[0].value = MATRIX[0][0];
+  $('input')[1].value = MATRIX[0][1];
+  $('input')[2].value = MATRIX[1][0];
+  $('input')[3].value = MATRIX[1][1];
+});
+
 setInterval(function () {
   if (!current_xy) { return; }
   if (dots[dots.length - 1] === current_xy) {
     return;
   }
+
+  if (dots.length === 0) {
+    for (var i = 0; i < 50; i++) {
+      dots.push(current_xy);
+    }
+  }
   push_dot(current_xy);
+
   svg.selectAll('.dot')
     .data(dots)
     .enter().append("circle")
@@ -138,4 +156,7 @@ setInterval(function () {
     });
 
 }, 30);
+
+//-------------------------------------------------
+
 
