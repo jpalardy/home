@@ -15,7 +15,7 @@ var push_dot = function (dot) {
 
 //-------------------------------------------------
 
-var opacityScale = d3.scale.linear()
+var opacityScale = d3.scale.pow().exponent([3])
   .domain([0, MAX_DOTS])
   .range([0, 1]);
 
@@ -137,7 +137,9 @@ setInterval(function () {
     .enter().append("circle")
     .attr("class", "dot")
     .attr("r", 5)
-    .style("fill", "steelblue")
+    .style("fill", function (d, i) {
+      return i === (MAX_DOTS - 1) ? "red" : "steelblue";
+    })
     .attr("cx", function (d) {
       return xScale(d[0]);
     })
