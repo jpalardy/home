@@ -4,18 +4,28 @@ var w = 500;
 var h = 500;
 var padding = 10;
 
-var dots = [];
-var MAX_DOTS = 50;
-var push_dot = function (dot) {
-  dots.push(dot); // add
-  if (dots.length > MAX_DOTS) {
-    dots = dots.slice(1, MAX_DOTS + 1); // pop first
-  }
-};
+var MAX_DOTS = 100;
 
 //-------------------------------------------------
 
-var opacityScale = d3.scale.pow().exponent([3])
+var SlidingWindow = function (width) {
+  this.width = width || 10;
+  this.list  = [];
+};
+
+SlidingWindow.prototype.push = function (value) {
+  this.list.push(value);
+  if (this.list.length > this.width) {
+    this.list.shift();
+  }
+};
+
+var sw_src = new SlidingWindow(MAX_DOTS);
+var sw_dst = new SlidingWindow(MAX_DOTS);
+
+//-------------------------------------------------
+
+var opacityScale = d3.scale.pow().exponent([4])
   .domain([0, MAX_DOTS])
   .range([0, 1]);
 
@@ -88,15 +98,51 @@ var MATRIX = [
 
 //-------------------------------------------------
 
-var current_xy;
 svg.on("mousemove", function () {
   var mouse_xy = d3.mouse(this);
-  var mouse_x = mouse_xy[0];
-  var mouse_y = mouse_xy[1];
-  var x = xScale.invert(mouse_x);
-  var y = yScale.invert(mouse_y);
-  current_xy = matrix_x_vector(MATRIX, [x, y]);
+  var src_xy   = [xScale.invert(mouse_xy[0]), yScale.invert(mouse_xy[1])];
+  var dst_xy   = matrix_x_vector(MATRIX, src_xy);
+
+  if (sw_src.list.length === 0) {
+    for (var i = 0; i < MAX_DOTS; i++) {
+      sw_src.push(src_xy);
+      sw_dst.push(dst_xy);
+    }
+    var enter_common = function (dot) {
+      dot.attr("r", 5)
+        .attr("cx", function (d) { return xScale(d[0]); })
+        .attr("cy", function (d) { return yScale(d[1]); });
+    };
+    svg.selectAll('.dot_src')
+      .data(sw_src.list)
+      .enter().append("circle")
+      .attr("class", "dot_src")
+      .call(enter_common);
+    svg.selectAll('.dot_dst')
+      .data(sw_dst.list)
+      .enter().append("circle")
+      .attr("class", "dot_dst")
+      .call(enter_common);
+    return;
+  }
+
+  sw_src.push(src_xy);
+  sw_dst.push(dst_xy);
+
+  var data_common = function (dot) {
+    dot.style("opacity", function (d, i) { return opacityScale(i); })
+      .attr("cx", function (d) { return xScale(d[0]); })
+      .attr("cy", function (d) { return yScale(d[1]); });
+  };
+  svg.selectAll('.dot_src')
+    .data(sw_src.list)
+    .call(data_common);
+  svg.selectAll('.dot_dst')
+    .data(sw_dst.list)
+    .call(data_common);
 });
+
+//-------------------------------------------------
 
 $('input').change(function () {
   var vals = [];
@@ -118,47 +164,4 @@ $('#matrix a').click(function (e) {
   $('input')[2].value = MATRIX[1][0];
   $('input')[3].value = MATRIX[1][1];
 });
-
-setInterval(function () {
-  if (!current_xy) { return; }
-  if (dots[dots.length - 1] === current_xy) {
-    return;
-  }
-
-  if (dots.length === 0) {
-    for (var i = 0; i < 50; i++) {
-      dots.push(current_xy);
-    }
-  }
-  push_dot(current_xy);
-
-  svg.selectAll('.dot')
-    .data(dots)
-    .enter().append("circle")
-    .attr("class", "dot")
-    .attr("r", 5)
-    .style("fill", function (d, i) {
-      return i === (MAX_DOTS - 1) ? "red" : "steelblue";
-    })
-    .attr("cx", function (d) {
-      return xScale(d[0]);
-    })
-    .attr("cy", function (d) {
-      return yScale(d[1]);
-    });
-
-  svg.selectAll('.dot')
-    .data(dots)
-    .style("opacity", function (d, i) { return opacityScale(i); })
-    .attr("cx", function (d) {
-      return xScale(d[0]);
-    })
-    .attr("cy", function (d) {
-      return yScale(d[1]);
-    });
-
-}, 30);
-
-//-------------------------------------------------
-
 
