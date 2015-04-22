@@ -15,6 +15,17 @@ svg {
   shape-rendering: crispEdges;
 }
 
+.hide {
+  display: none;
+}
+
+.timmy line {
+  fill: none;
+  stroke: blue;
+  stroke-width: 1.5px;
+  shape-rendering: crispEdges;
+}
+
 .dot_src {
   fill: red;
 }
@@ -75,6 +86,10 @@ h3 {
   width: 125px;
 }
 
+#matrix button {
+  margin-top: 5px;
+}
+
 </style>
 </head>
 <body>
@@ -92,6 +107,7 @@ h3 {
         <td><input type="text" value="1"></td>
       </tr>
     </table>
+    <button>toggle timmy</button>
     <h3>Presets:</h3>
     <ul>
       <li><a data-matrix="1 0 0 1"         href="#">identity</a></li>

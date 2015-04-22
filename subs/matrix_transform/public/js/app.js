@@ -85,6 +85,30 @@ svg.append("line")
 
 //-------------------------------------------------
 
+var timmy = svg.append("g").attr("class", "timmy hide");
+
+var timmy_line = function (x1, y1, x2, y2) {
+  var scale = 0.75;
+  timmy.append("line")
+        .attr("class", "line")
+        .attr("x1", xScale(x1 * scale))
+        .attr("y1", yScale(y1 * scale))
+        .attr("x2", xScale(x2 * scale))
+        .attr("y2", yScale(y2 * scale));
+};
+
+timmy_line(0, 0, 2, 2); // left leg
+timmy_line(2, 2, 4, 0); // right leg
+timmy_line(2, 2, 2, 6); // torso
+timmy_line(2, 4, 0, 3); // left arm
+timmy_line(2, 4, 4, 5); // right arm
+timmy_line(0.5, 6, 3.5, 6); // head
+timmy_line(0.5, 9, 3.5, 9); // head
+timmy_line(0.5, 6, 0.5, 9); // head
+timmy_line(3.5, 6, 3.5, 9); // head
+
+//-------------------------------------------------
+
 // not general-case :-)
 var matrix_x_vector = function (m, v) {
   return [m[0][0] * v[0] + m[0][1] * v[1],
@@ -152,6 +176,17 @@ $('input').change(function () {
   vals = vals.map(Number);
   MATRIX[0] = vals.slice(0, 2);
   MATRIX[1] = vals.slice(2, 4);
+});
+
+var timmy_hide = true;
+$('#matrix button').click(function () {
+  // hmmm... toggleClass doesn't work for SVG
+  if (timmy_hide) {
+    $('.timmy').attr('class', 'timmy');
+  } else {
+    $('.timmy').attr('class', 'timmy hide');
+  }
+  timmy_hide = !timmy_hide;
 });
 
 $('#matrix a').click(function (e) {
