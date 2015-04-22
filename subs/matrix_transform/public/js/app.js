@@ -85,30 +85,6 @@ svg.append("line")
 
 //-------------------------------------------------
 
-var timmy = svg.append("g").attr("class", "timmy hide");
-
-var timmy_line = function (x1, y1, x2, y2) {
-  var scale = 0.75;
-  timmy.append("line")
-        .attr("class", "line")
-        .attr("x1", xScale(x1 * scale))
-        .attr("y1", yScale(y1 * scale))
-        .attr("x2", xScale(x2 * scale))
-        .attr("y2", yScale(y2 * scale));
-};
-
-timmy_line(0, 0, 2, 2); // left leg
-timmy_line(2, 2, 4, 0); // right leg
-timmy_line(2, 2, 2, 6); // torso
-timmy_line(2, 4, 0, 3); // left arm
-timmy_line(2, 4, 4, 5); // right arm
-timmy_line(0.5, 6, 3.5, 6); // head
-timmy_line(0.5, 9, 3.5, 9); // head
-timmy_line(0.5, 6, 0.5, 9); // head
-timmy_line(3.5, 6, 3.5, 9); // head
-
-//-------------------------------------------------
-
 // not general-case :-)
 var matrix_x_vector = function (m, v) {
   return [m[0][0] * v[0] + m[0][1] * v[1],
@@ -119,6 +95,52 @@ var MATRIX = [
   [1, 0],
   [0, 1],
 ];
+
+var update_matrix = function (a, b, c, d) {
+  MATRIX = [
+    [a, b],
+    [c, d],
+  ];
+  draw_timmy();
+};
+
+//-------------------------------------------------
+
+var timmy  = svg.append("g").attr("class", "timmy hide");
+
+var timmy_line = function (x1, y1, x2, y2) {
+  var scale = 1;
+  timmy.append("line")
+        .attr("class", "line")
+        .attr("x1", xScale(x1 * scale))
+        .attr("y1", yScale(y1 * scale))
+        .attr("x2", xScale(x2 * scale))
+        .attr("y2", yScale(y2 * scale));
+
+  var t1 = matrix_x_vector(MATRIX, [x1, y1]);
+  var t2 = matrix_x_vector(MATRIX, [x2, y2]);
+  timmy.append("line")
+        .attr("class", "line")
+        .attr("opacity", "0.3")
+        .attr("x1", xScale(t1[0] * scale))
+        .attr("y1", yScale(t1[1] * scale))
+        .attr("x2", xScale(t2[0] * scale))
+        .attr("y2", yScale(t2[1] * scale));
+};
+
+var draw_timmy = function () {
+  timmy.selectAll('line').remove();
+  timmy_line(0, 0, 1, 1); // left leg
+  timmy_line(1, 1, 2, 0); // right leg
+  timmy_line(1, 1, 1, 3); // torso
+  timmy_line(1, 2, 0, 1.5); // left arm
+  timmy_line(1, 2, 2, 2.5); // right arm
+  timmy_line(0.25, 3, 1.75, 3); // head
+  timmy_line(0.25, 4.5, 1.75, 4.5); // head
+  timmy_line(0.25, 3, 0.25, 4.5); // head
+  timmy_line(1.75, 3, 1.75, 4.5); // head
+};
+draw_timmy();
 
 //-------------------------------------------------
 
@@ -174,8 +196,7 @@ $('input').change(function () {
     vals.push($(this).val());
   });
   vals = vals.map(Number);
-  MATRIX[0] = vals.slice(0, 2);
-  MATRIX[1] = vals.slice(2, 4);
+  update_matrix.apply(null, vals);
 });
 
 var timmy_hide = true;
@@ -192,8 +213,7 @@ $('#matrix button').click(function () {
 $('#matrix a').click(function (e) {
   e.preventDefault();
   var vals = this.dataset.matrix.split(' ');
-  MATRIX[0] = vals.slice(0, 2);
-  MATRIX[1] = vals.slice(2, 4);
+  update_matrix.apply(null, vals);
   $('input')[0].value = MATRIX[0][0];
   $('input')[1].value = MATRIX[0][1];
   $('input')[2].value = MATRIX[1][0];
