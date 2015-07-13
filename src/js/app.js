@@ -1,15 +1,21 @@
 var Command = require('./command');
 var sites   = require('./sites');
 
-var cheatSheet = document.getElementById('cheatSheet').innerHTML;
+var cheatSheet = [];
 
 //-------------------------------------------------
 
 Command.sites = (function () {
   var result = {};
+  cheatSheet = [];
   sites.forEach(function (site) {
     site.visit = site.visit || site.search.match("^https?://[^/]+/")[0];
     result[site.alias] = site;
+  });
+  cheatSheet = sites.filter(function (site) {
+    return !site.hide;
+  }).map(function (site) {
+    return site.alias + "\t" + site.name;
   });
   return result;
 }());
@@ -69,12 +75,14 @@ document.getElementById("command_input").onkeyup = function () {
   var command = getCommand();
   makeLinks(command);
 
-  var text = document.getElementById('command_input').value;
-  var lines = cheatSheet.split("\n").filter(function (line) {
+  var text = document.getElementById('command_input').value.trim().split(/\s+/)[0];
+  var lines = cheatSheet.filter(function (line) {
     return line.indexOf(text) === 0;
-  }).join("\n");
-  lines = lines || cheatSheet;
-  document.getElementById('cheatSheet').innerHTML = lines;
+  });
+  if (lines.length === 0) {
+    lines = cheatSheet;
+  }
+  document.getElementById('cheatSheet').innerHTML = lines.join("\n");
 
   return true;
 };
