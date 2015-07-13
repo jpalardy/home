@@ -1,6 +1,8 @@
 var Command = require('./command');
 var sites   = require('./sites');
 
+var cheatSheet = document.getElementById('cheatSheet').innerHTML;
+
 //-------------------------------------------------
 
 Command.sites = (function () {
@@ -66,5 +68,13 @@ document.getElementById("command_input").onkeydown = function (ev) {
 document.getElementById("command_input").onkeyup = function () {
   var command = getCommand();
   makeLinks(command);
+
+  var text = document.getElementById('command_input').value;
+  var lines = cheatSheet.split("\n").filter(function (line) {
+    return line.indexOf(text) === 0;
+  }).join("\n");
+  lines = lines || cheatSheet;
+  document.getElementById('cheatSheet').innerHTML = lines;
+
   return true;
 };
