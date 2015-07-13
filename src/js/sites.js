@@ -48,22 +48,10 @@ module.exports = [
     "visit": "https://www.youtube.com/"
   },
   {
-    "alias": "yim",
-    "name": "yahoo image",
-    "search": "http://images.search.yahoo.com/search/images?p=%s",
-    "visit": "http://images.search.yahoo.com/search/images"
-  },
-  {
     "alias": "yfin",
     "name": "yahoo finance",
     "search": "http://finance.yahoo.com/q?s=%s",
     "visit": "http://finance.yahoo.com/"
-  },
-  {
-    "alias": "fl",
-    "name": "flickr",
-    "search": "https://www.flickr.com/photos/tags/%s",
-    "visit": "https://www.flickr.com/"
   },
   {
     "alias": "b",
@@ -220,12 +208,6 @@ module.exports = [
     "name": "yubnub",
     "search": "http://yubnub.org/kernel/ls?args=%s",
     "visit": "http://yubnub.org/"
-  },
-  {
-    "alias": "p",
-    "name": "localhost port",
-    "search": "http://localhost:%s/",
-    "visit": "http://localhost/"
   },
   {
     "alias": "ann",
