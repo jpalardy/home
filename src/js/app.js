@@ -3,11 +3,12 @@ var sites   = require('./sites');
 
 var cheatSheet = [];
 
+var get = function (sel) { return document.getElementById(sel); };
+
 //-------------------------------------------------
 
 Command.sites = (function () {
   var result = {};
-  cheatSheet = [];
   sites.forEach(function (site) {
     site.visit = site.visit || site.search.match("^https?://[^/]+/")[0];
     result[site.alias] = site;
@@ -22,24 +23,24 @@ Command.sites = (function () {
 Command.default_sites = ['ddg'];
 
 var getCommand = function () {
-  var text = document.getElementById('command_input').value;
+  var text = get('command_input').value;
   return Command.parse(text);
 };
 
 var makeLinks = function (command) {
   if (!command) {
-    document.getElementById('links').innerHTML = "";
+    get('links').innerHTML = "";
     return;
   }
   var html = command.links.map(function (link) {
     return '<a href="' + link.url + '">' + link.site + '</a>';
   }).join(' ');
-  document.getElementById('links').innerHTML = html;
+  get('links').innerHTML = html;
 };
 
 //-------------------------------------------------
 
-document.getElementById("command_form").onsubmit = function () {
+get("command_form").onsubmit = function () {
   try {
     var command = getCommand();
     if (!command) {
@@ -57,32 +58,32 @@ document.getElementById("command_form").onsubmit = function () {
 
 document.body.onkeyup = function (ev) {
   if (ev.keyCode === 27) { // ESC
-    var elem = document.getElementById("cheatSheetDetails");
+    var elem = get("cheatSheetDetails");
     elem.className = (elem.className === "hide" ? "" : "hide");
     return false;
   }
   return true;
 };
 
-document.getElementById("command_input").onkeydown = function (ev) {
+get("command_input").onkeydown = function (ev) {
   if (ev.keyCode === 27) { // ESC
     ev.preventDefault();   // don't clear the text field
     return false;
   }
 };
 
-document.getElementById("command_input").onkeyup = function () {
+get("command_input").onkeyup = function () {
   var command = getCommand();
   makeLinks(command);
 
-  var text = document.getElementById('command_input').value.trim().split(/\s+/)[0];
+  var text = get('command_input').value.trim().split(/\s+/)[0];
   var lines = cheatSheet.filter(function (line) {
     return line.indexOf(text) === 0;
   });
-  if (lines.length === 0) {
+  if (!lines.length) {
     lines = cheatSheet;
   }
-  document.getElementById('cheatSheet').innerHTML = lines.join("\n");
+  get('cheatSheet').innerHTML = lines.join("\n");
 
   return true;
 };
