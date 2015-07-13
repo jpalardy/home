@@ -6,6 +6,7 @@ var sites   = require('./sites');
 Command.sites = (function () {
   var result = {};
   sites.forEach(function (site) {
+    site.visit = site.visit || site.search.match("^https?://[^/]+/")[0];
     result[site.alias] = site;
   });
   return result;

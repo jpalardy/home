@@ -18,7 +18,7 @@ tmp/css/main.css: src/less/main.less tmp/css
 
 html: public/index.html js css
 public/index.html: src/jade/index.jade src/js/sites.js tmp/html
-	cat src/js/sites.js | sed -e 's/module.exports =//' -e 's/];/]/' | jq '.[] | select(.hide != true) | "\(.alias)\t\(.name)"' -r > tmp/html/sites.html
+	node -e 'console.log(JSON.stringify(require("./src/js/sites")))' | jq '.[] | select(.hide != true) | "\(.alias)\t\(.name)"' -r > tmp/html/sites.html
 	cp src/jade/index.jade tmp
 	node_modules/.bin/jade --pretty tmp/index.jade -o public
 
