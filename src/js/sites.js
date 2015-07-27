@@ -5,7 +5,6 @@ module.exports = [
     search: "https://www.google.com/search?q=%s",
   },
   {
-    alias: "gmail",
     name: "gmail",
     search: "https://mail.google.com/mail/?shva=1#search/%s",
     visit: "https://mail.google.com/mail/?shva=1#inbox"
@@ -33,7 +32,6 @@ module.exports = [
     visit: "https://www.google.com/finance"
   },
   {
-    alias: "feedly",
     name: "feedly",
     search: "https://cloud.feedly.com/",
   },
@@ -99,7 +97,6 @@ module.exports = [
     search: "http://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s",
   },
   {
-    alias: "isbn",
     name: "isbn",
     search: "http://isbn.nu/%s",
   },
@@ -114,7 +111,6 @@ module.exports = [
     search: "http://my.safaribooksonline.com/search/%s",
   },
   {
-    alias: "apress",
     name: "apress",
     search: "http://www.apress.com/catalogsearch/result/?q=%s",
   },
@@ -125,12 +121,10 @@ module.exports = [
     visit: "http://www.banq.qc.ca/accueil/index.html?language_id=1"
   },
   {
-    alias: "audible",
     name: "audible",
     search: "http://www.audible.com/search?advsearchKeywords=%s",
   },
   {
-    alias: "vpl",
     name: "vpl",
     search: "http://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue",
     visit: "http://www.vpl.ca/"
@@ -142,13 +136,11 @@ module.exports = [
     visit: "https://bookpiles.ca/jonathan/books"
   },
   {
-    alias: "ups",
     name: "ups",
     search: "http://wwwapps.ups.com/WebTracking/processInputRequest?sort_by=status&tracknums_displayed=1&TypeOfInquiryNumber=T&loc=en_US&InquiryNumber1=%s&track.x=0&track.y=0",
     visit: "http://www.ups.com/?cookie=ca_en_home"
   },
   {
-    alias: "imdb",
     name: "imdb",
     search: "http://imdb.com/find?q=%s",
   },
@@ -163,9 +155,8 @@ module.exports = [
     search: "http://www.tigerdirect.ca/applications/SearchTools/search.asp?keywords=%s",
   },
   {
-    alias: "yelp",
     name: "yelp",
-    search: "http://www.yelp.com/search?find_desc=%s&find_loc=Montr%C3%A9al%2C+QC",
+    search: "http://www.yelp.com/search?find_desc=%s",
   },
   {
     alias: "rt",
@@ -190,7 +181,6 @@ module.exports = [
     hide: true
   },
   {
-    alias: "anidb",
     name: "anidb",
     search: "http://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist",
     hide: true

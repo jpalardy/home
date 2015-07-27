@@ -11,6 +11,7 @@ Command.sites = (function () {
   var result = {};
   sites.forEach(function (site) {
     site.visit = site.visit || site.search.match("^https?://[^/]+/")[0];
+    site.alias = site.alias || site.name;
     result[site.alias] = site;
   });
   cheatSheet = sites.filter(function (site) {
