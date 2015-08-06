@@ -1,0 +1,33 @@
+
+.container {
+  width: 700px;
+  margin: auto;
+  margin-top: 75px;
+}
+
+.text {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.text:focus {
+  outline: 0;
+}
+
+.output {
+  font-family: Geneva, Arial, Helvetica, sans-serif;
+  font-size: 64px;
+}
+
+/*-------------------------------------------------*/
+
+.unknown {
+  opacity: 0.2;
+  color: red;
+}
+
