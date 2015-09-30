@@ -71,6 +71,11 @@ module.exports = [
     search: "https://en.wikipedia.org/?search=%s",
   },
   {
+    alias: "wn",
+    name: "wordnik",
+    search: "http://www.wordnik.com/words/%s",
+  },
+  {
     alias: "ud",
     name: "urban dictionary",
     search: "http://www.urbandictionary.com/define.php?term=%s",
