@@ -32,6 +32,11 @@ module.exports = [
     visit: "https://www.google.com/finance"
   },
   {
+    alias: "tw",
+    name: "twitter",
+    search: "https://twitter.com/search?q=%s",
+  },
+  {
     name: "feedly",
     search: "https://cloud.feedly.com/",
   },
