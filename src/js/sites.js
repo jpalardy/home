@@ -222,8 +222,7 @@ module.exports = [
   {
     alias: "nf",
     name: "netflix",
-    search: "http://movies.netflix.com/Search?v1=%s",
-    visit: "http://movies.netflix.com/WiHome",
+    search: "http://www.netflix.com/search/%s",
     hide: true
   },
   {
