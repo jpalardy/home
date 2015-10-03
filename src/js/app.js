@@ -10,14 +10,14 @@ var get = function (sel) { return document.getElementById(sel); };
 Command.sites = (function () {
   var result = {};
   sites.forEach(function (site) {
-    site.visit = site.visit || site.search.match("^https?://[^/]+/")[0];
+    site.visit = site.visit || site.search.match('^https?://[^/]+/')[0];
     site.alias = site.alias || site.name;
     result[site.alias] = site;
   });
   cheatSheet = sites.filter(function (site) {
     return !site.hide;
   }).map(function (site) {
-    return site.alias + "\t" + site.name;
+    return site.alias + '\t' + site.name;
   });
   return result;
 }());
@@ -30,7 +30,7 @@ var getCommand = function () {
 
 var makeLinks = function (command) {
   if (!command) {
-    get('links').innerHTML = "";
+    get('links').innerHTML = '';
     return;
   }
   var html = command.links.map(function (link) {
@@ -41,7 +41,7 @@ var makeLinks = function (command) {
 
 //-------------------------------------------------
 
-get("command_form").onsubmit = function () {
+get('command_form').onsubmit = function () {
   try {
     var command = getCommand();
     if (!command) {
@@ -59,21 +59,21 @@ get("command_form").onsubmit = function () {
 
 document.body.onkeyup = function (ev) {
   if (ev.keyCode === 27) { // ESC
-    var elem = get("cheatSheetDetails");
-    elem.className = (elem.className === "hide" ? "" : "hide");
+    var elem = get('cheatSheetDetails');
+    elem.className = (elem.className === 'hide' ? '' : 'hide');
     return false;
   }
   return true;
 };
 
-get("command_input").onkeydown = function (ev) {
+get('command_input').onkeydown = function (ev) {
   if (ev.keyCode === 27) { // ESC
     ev.preventDefault();   // don't clear the text field
     return false;
   }
 };
 
-get("command_input").onkeyup = function () {
+get('command_input').onkeyup = function () {
   var command = getCommand();
   makeLinks(command);
 
@@ -84,7 +84,7 @@ get("command_input").onkeyup = function () {
   if (!lines.length) {
     lines = cheatSheet;
   }
-  get('cheatSheet').innerHTML = lines.join("\n");
+  get('cheatSheet').innerHTML = lines.join('\n');
 
   return true;
 };

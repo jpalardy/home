@@ -14,7 +14,7 @@ var Command = function (query, sites) {
 };
 
 Command.prototype.toString = function () {
-  return this.sites.join(",") + " " + this.query;
+  return this.sites.join(',') + ' ' + this.query;
 };
 
 Command.parse = function (text) {

@@ -14,13 +14,12 @@ Command.sites = (function () {
 }());
 Command.default_sites = ['ddg'];
 
-var assert_sites = function (query, sites) {
+var assertSites = function (query, sites) {
   var command = Command.parse(query);
   assert.deepEqual(command && command.urls, sites); // command && to test null
 };
 
 describe('Command', function () {
-
   describe('constructor', function () {
     it('constructs properly', function () {
       var command = new Command('something', ['gim', 'yim']);
@@ -35,61 +34,61 @@ describe('Command', function () {
 
   describe('parse', function () {
     it('punts an empty query', function () {
-      assert_sites('', null);
+      assertSites('', null);
     });
 
     it('punts a blank query', function () {
-      assert_sites('     ', null);
+      assertSites('     ', null);
     });
 
     it('handles a one-word query', function () {
-      assert_sites('gim something', ['https://www.google.com/search?q=something&tbm=isch']);
+      assertSites('gim something', ['https://www.google.com/search?q=something&tbm=isch']);
     });
 
     it('handles a two-word query', function () {
-      assert_sites('gim some thing', ['https://www.google.com/search?q=some+thing&tbm=isch']);
+      assertSites('gim some thing', ['https://www.google.com/search?q=some+thing&tbm=isch']);
     });
 
     it('handles a one-word query (default)', function () {
-      assert_sites('something', ['https://duckduckgo.com/?q=something']);
+      assertSites('something', ['https://duckduckgo.com/?q=something']);
     });
 
     it('handles a two-word query (default)', function () {
-      assert_sites('some thing', ['https://duckduckgo.com/?q=some+thing']);
+      assertSites('some thing', ['https://duckduckgo.com/?q=some+thing']);
     });
 
     it('handles a site without a query', function () {
-      assert_sites('g', ['https://www.google.com/']);
+      assertSites('g', ['https://www.google.com/']);
     });
 
     it('handles two sites without a query', function () {
-      assert_sites('g,yim', ['https://www.google.com/',
+      assertSites('g,yim', ['https://www.google.com/',
                              'http://images.search.yahoo.com/search/images']);
     });
 
     it('handles two sites', function () {
-      assert_sites('gim,yim something', ['https://www.google.com/search?q=something&tbm=isch',
+      assertSites('gim,yim something', ['https://www.google.com/search?q=something&tbm=isch',
                                          'http://images.search.yahoo.com/search/images?p=something']);
     });
 
     it('ignores unknown sites', function () {
-      assert_sites('gim,unknown,yim,blah something', ['https://www.google.com/search?q=something&tbm=isch',
+      assertSites('gim,unknown,yim,blah something', ['https://www.google.com/search?q=something&tbm=isch',
                                                       'http://images.search.yahoo.com/search/images?p=something']);
     });
 
     it('handles worst case with bad spacing', function () {
-      assert_sites('    gim,unknown,yim,blah some     thing      ', ['https://www.google.com/search?q=some+thing&tbm=isch',
+      assertSites('    gim,unknown,yim,blah some     thing      ', ['https://www.google.com/search?q=some+thing&tbm=isch',
                                                                      'http://images.search.yahoo.com/search/images?p=some+thing']);
     });
   });
 
   describe('parse (legacy)', function () {
     it('does not handle site as a query', function () {
-      assert_sites('gim yim', ['https://www.google.com/search?q=yim&tbm=isch']);
+      assertSites('gim yim', ['https://www.google.com/search?q=yim&tbm=isch']);
     });
 
     it('does not handle site as a query, with a query', function () {
-      assert_sites('gim yim something', ['https://www.google.com/search?q=yim+something&tbm=isch']);
+      assertSites('gim yim something', ['https://www.google.com/search?q=yim+something&tbm=isch']);
     });
   });
 });
