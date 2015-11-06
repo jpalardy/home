@@ -97,6 +97,11 @@ module.exports = [
     search: 'http://stackoverflow.com/search?q=%s',
   },
   {
+    alias: 'cv',
+    name: 'cross validated',
+    search: 'http://stats.stackexchange.com/search?q=%s',
+  },
+  {
     alias: 'am',
     name: 'amazon.com',
     search: 'http://www.amazon.com/exec/obidos/external-search?mode=blended&keyword=%s',
