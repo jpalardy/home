@@ -249,4 +249,18 @@ module.exports = [
     search: 'http://www.wordreference.com/es/en/translation.asp?spen=%s',
     hide: true,
   },
+  {
+    alias: 'cnm.mtl',
+    name: 'cinema, montreal',
+    search: 'http://www.cinemaclock.com/que/montreal',
+    visit: 'http://www.cinemaclock.com/que/montreal',
+    hide: true,
+  },
+  {
+    alias: 'cnm.van',
+    name: 'cinema, vancouver',
+    search: 'http://www.cinemaclock.com/bri/vancouver',
+    visit: 'http://www.cinemaclock.com/bri/vancouver',
+    hide: true,
+  },
 ];
