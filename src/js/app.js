@@ -66,16 +66,39 @@ document.body.onkeyup = function (ev) {
   return true;
 };
 
+var circularCompletions = [];
 get('command_input').onkeydown = function (ev) {
   if (ev.keyCode === 27) { // ESC
     ev.preventDefault();   // don't clear the text field
     return false;
   }
+  if (ev.keyCode === 9) {  // TAB
+    ev.preventDefault();
+    var text = get('command_input').value;
+    if (!text) { return false; }
+    var newText = (function () {
+      if (circularCompletions.length > 0) {
+        var i = circularCompletions.indexOf(text);
+        return circularCompletions[(i + 1) % circularCompletions.length];
+      }
+      var completions = sites.filter(function (site) { return site.alias.indexOf(text) === 0; }).map(function (site) { return site.alias; });
+      if (completions.length === 0) { return text; }  // no match, return original
+      circularCompletions = completions.concat(text); // save completions and original text
+      return completions[0];
+      throw new Error("no completions for: " + text);
+    }());
+    get('command_input').value = newText;
+    return false;
+  }
 };
 
-get('command_input').onkeyup = function () {
+get('command_input').onkeyup = function (ev) {
   var command = getCommand();
   makeLinks(command);
+
+  if (ev.keyCode !== 9) { // TAB
+    circularCompletions = []; // reset completions, some other key was pressed
+  }
 
   var text = get('command_input').value.trim().split(/\s+/)[0];
   var lines = cheatSheet.filter(function (line) {
