@@ -185,6 +185,11 @@ module.exports = [
     visit: 'https://github.com/jpalardy',
   },
   {
+    alias: 'dh',
+    name: 'docker hub',
+    search: 'https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=%s&starCount=0',
+  },
+  {
     alias: 'ls',
     name: 'yubnub',
     search: 'http://yubnub.org/kernel/ls?args=%s',
