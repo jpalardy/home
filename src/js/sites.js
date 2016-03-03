@@ -268,4 +268,11 @@ module.exports = [
     visit: 'http://www.cinemaclock.com/bri/vancouver',
     hide: true,
   },
+  {
+    alias: 'fs',
+    name: 'fatsecret',
+    search: 'http://www.fatsecret.com/calories-nutrition/search?q=%s',
+    visit: 'http://www.fatsecret.com/calories-nutrition/',
+    hide: true,
+  },
 ];
