@@ -275,4 +275,10 @@ module.exports = [
     visit: 'http://www.fatsecret.com/calories-nutrition/',
     hide: true,
   },
+  {
+    alias: 'iteb',
+    name: 'it ebooks',
+    search: 'http://it-ebooks.info/search/?q=%s&type=title',
+    hide: true,
+  },
 ];
