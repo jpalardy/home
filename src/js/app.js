@@ -1,44 +1,70 @@
-var Command = require('./command');
 var sites   = require('./sites');
-
-var cheatSheet = [];
+var Command = require('./command')(sites, 'ddg');
 
 var get = function (sel) { return document.getElementById(sel); };
 
+// maintains completion state
+var circularCompletions = [];
+
+//-------------------------------------------------
+// actions
 //-------------------------------------------------
 
-Command.sites = (function () {
-  var result = {};
-  sites.forEach(function (site) {
-    site.visit = site.visit || site.search.match('^https?://[^/]+/')[0];
-    site.alias = site.alias || site.name;
-    result[site.alias] = site;
-  });
-  cheatSheet = sites.filter(function (site) {
-    return !site.hide;
-  }).map(function (site) {
-    return site.alias + '\t' + site.name;
-  });
-  return result;
-}());
-Command.default_sites = ['ddg'];
+var setCommand = function (text) {
+  if (text === undefined) { return; }
+  get('command_input').value = text;
+};
+
+var getText = function () {
+  return get('command_input').value.trim();
+};
 
 var getCommand = function () {
-  var text = get('command_input').value;
-  return Command.parse(text);
+  return Command.parse(getText());
 };
 
-var makeLinks = function (command) {
+var submit = function () {
+  var command = getCommand();
   if (!command) {
-    get('links').innerHTML = '';
-    return;
+    return false;
   }
-  var html = command.links.map(function (link) {
-    return '<a href="' + link.url + '">' + link.site + '</a>';
-  }).join(' ');
-  get('links').innerHTML = html;
+  window.location = command.url;
 };
 
+var toggleCheatSheet = function () {
+  var elem = get('cheatSheetDetails');
+  elem.className = (elem.className === 'hide' ? '' : 'hide');
+};
+
+var reduceCheatSheet = function (text) {
+  var lines = Command.cheatSheet.filter(function (line) {
+    return line.indexOf(text) === 0;
+  });
+  if (!lines.length) {
+    lines = Command.cheatSheet;
+  }
+  get('cheatSheet').innerHTML = lines.join('\n');
+};
+
+var complete = function (text) {
+  if (!text) { return; }
+  var newText = (function () {
+    if (circularCompletions.length > 0) {
+      var i = circularCompletions.indexOf(text);
+      return circularCompletions[(i + 1) % circularCompletions.length];
+    }
+    var completions = sites.filter(function (site) {
+      return site.alias.indexOf(text) === 0;
+    }).map(function (site) { return site.alias; });
+    if (completions.length === 0) { return text; }  // no match, return original
+    circularCompletions = completions.concat(text); // save completions and original text
+    return completions[0];
+  }());
+  setCommand(newText);
+};
+
+//-------------------------------------------------
+// deal with q= param
 //-------------------------------------------------
 
 var getParams = function (query) {
@@ -51,46 +77,26 @@ var getParams = function (query) {
   return result;
 };
 
-var visit = function (urls) {
-  urls.slice(1).forEach(function (url) {
-    window.open(url, '_blank');
-  });
-  window.location = urls[0];
-};
+setCommand(getParams().q);
+submit();
 
-(function () {
-  var q = getParams().q;
-  if (!q) { return; }
-  var command = Command.parse(q);
-  if (!command) { return; }
-  visit(command.urls);
-}());
-
+//-------------------------------------------------
+// event handlers
 //-------------------------------------------------
 
 get('command_form').onsubmit = function () {
-  try {
-    var command = getCommand();
-    if (!command) {
-      return false;
-    }
-    visit(command.urls);
-  } catch (e) {
-    console.error(e);
-  }
+  submit();
   return false;
 };
 
 document.body.onkeyup = function (ev) {
   if (ev.keyCode === 27) { // ESC
-    var elem = get('cheatSheetDetails');
-    elem.className = (elem.className === 'hide' ? '' : 'hide');
+    toggleCheatSheet();
     return false;
   }
   return true;
 };
 
-var circularCompletions = [];
 get('command_input').onkeydown = function (ev) {
   if (ev.keyCode === 27) { // ESC
     ev.preventDefault();   // don't clear the text field
@@ -98,40 +104,15 @@ get('command_input').onkeydown = function (ev) {
   }
   if (ev.keyCode === 9) {  // TAB
     ev.preventDefault();
-    var text = get('command_input').value;
-    if (!text) { return false; }
-    var newText = (function () {
-      if (circularCompletions.length > 0) {
-        var i = circularCompletions.indexOf(text);
-        return circularCompletions[(i + 1) % circularCompletions.length];
-      }
-      var completions = sites.filter(function (site) { return site.alias.indexOf(text) === 0; }).map(function (site) { return site.alias; });
-      if (completions.length === 0) { return text; }  // no match, return original
-      circularCompletions = completions.concat(text); // save completions and original text
-      return completions[0];
-      throw new Error("no completions for: " + text);
-    }());
-    get('command_input').value = newText;
+    complete(getText());
     return false;
   }
 };
 
 get('command_input').onkeyup = function (ev) {
-  var command = getCommand();
-  makeLinks(command);
-
   if (ev.keyCode !== 9) { // TAB
     circularCompletions = []; // reset completions, some other key was pressed
   }
-
-  var text = get('command_input').value.trim().split(/\s+/)[0];
-  var lines = cheatSheet.filter(function (line) {
-    return line.indexOf(text) === 0;
-  });
-  if (!lines.length) {
-    lines = cheatSheet;
-  }
-  get('cheatSheet').innerHTML = lines.join('\n');
-
+  reduceCheatSheet(getText().split(/\s+/)[0]);
   return true;
 };
