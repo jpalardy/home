@@ -41,16 +41,40 @@ var makeLinks = function (command) {
 
 //-------------------------------------------------
 
+var getParams = function (query) {
+  var result = {};
+  query = query || document.location.search.substring(1);
+  query.split('&').forEach(function (param) {
+    var parts = param.split('=', 2);
+    result[parts[0]] = decodeURIComponent(parts[1]).replace(/\+/g, ' ');
+  });
+  return result;
+};
+
+var visit = function (urls) {
+  urls.slice(1).forEach(function (url) {
+    window.open(url, '_blank');
+  });
+  window.location = urls[0];
+};
+
+(function () {
+  var q = getParams().q;
+  if (!q) { return; }
+  var command = Command.parse(q);
+  if (!command) { return; }
+  visit(command.urls);
+}());
+
+//-------------------------------------------------
+
 get('command_form').onsubmit = function () {
   try {
     var command = getCommand();
     if (!command) {
       return false;
     }
-    command.urls.slice(1).forEach(function (url) {
-      window.open(url, '_blank');
-    });
-    window.location = command.urls[0];
+    visit(command.urls);
   } catch (e) {
     console.error(e);
   }
