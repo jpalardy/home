@@ -26,6 +26,11 @@ module.exports = [
     search: 'https://maps.google.com/maps?oi=map&q=%s',
   },
   {
+    alias: 'w3w',
+    name: 'what3words',
+    search: 'https://map.what3words.com/%s',
+  },
+  {
     alias: 'gfin',
     name: 'google finance',
     search: 'https://www.google.com/finance?q=%s',
