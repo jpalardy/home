@@ -31,3 +31,12 @@
   color: red;
 }
 
+a.known {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.known:hover {
+  background-color: #eee;
+}
+
