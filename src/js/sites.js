@@ -146,7 +146,7 @@ module.exports = [
   {
     alias: 'bp',
     name: 'bookpiles',
-    search: 'https://bookpiles.ca/jonathan/books#reading/%s',
+    search: 'https://bookpiles.ca/jonathan/books?q=%s',
     visit: 'https://bookpiles.ca/jonathan/books',
   },
   {
