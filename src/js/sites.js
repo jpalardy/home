@@ -194,6 +194,11 @@ module.exports = [
     search: 'http://yubnub.org/kernel/ls?args=%s',
   },
   {
+    alias: 'ch',
+    name: 'color-hex',
+    search: 'http://www.color-hex.com/color/%s',
+  },
+  {
     alias: 'ann',
     name: 'anime news network',
     search: 'http://www.animenewsnetwork.com/encyclopedia/search.php?searchbox=%s',
