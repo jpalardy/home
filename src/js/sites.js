@@ -86,6 +86,11 @@ module.exports = [
     search: 'http://www.wordnik.com/words/%s',
   },
   {
+    alias: 'mw',
+    name: 'merriam-webster',
+    search: 'https://www.merriam-webster.com/dictionary/%s',
+  },
+  {
     alias: 'ud',
     name: 'urban dictionary',
     search: 'http://www.urbandictionary.com/define.php?term=%s',
@@ -197,6 +202,10 @@ module.exports = [
     alias: 'ch',
     name: 'color-hex',
     search: 'http://www.color-hex.com/color/%s',
+  },
+  {
+    name: 'caniuse',
+    search: 'http://caniuse.com/#search=%s',
   },
   {
     alias: 'ann',
