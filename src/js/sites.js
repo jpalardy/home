@@ -5,11 +5,6 @@ module.exports = [
     search: 'https://www.google.com/search?q=%s',
   },
   {
-    name: 'gmail',
-    search: 'https://mail.google.com/mail/?shva=1#search/%s',
-    visit: 'https://mail.google.com/mail/?shva=1#inbox',
-  },
-  {
     alias: 'gt',
     name: 'google translate',
     search: 'https://translate.google.com/#auto|en|%s',
@@ -42,18 +37,9 @@ module.exports = [
     search: 'https://twitter.com/search?q=%s',
   },
   {
-    name: 'feedly',
-    search: 'https://cloud.feedly.com/',
-  },
-  {
     alias: 'yt',
     name: 'youtube',
     search: 'https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search',
-  },
-  {
-    alias: 'yfin',
-    name: 'yahoo finance',
-    search: 'http://finance.yahoo.com/q?s=%s',
   },
   {
     alias: 'b',
@@ -96,12 +82,6 @@ module.exports = [
     search: 'http://www.urbandictionary.com/define.php?term=%s',
   },
   {
-    alias: 'ed',
-    name: 'encyclopedia dramatica',
-    search: 'http://encyclopediadramatica.ch/index.php?search=%s&fulltext=Search',
-    visit: 'http://encyclopediadramatica.ch/Main_Page',
-  },
-  {
     alias: 'so',
     name: 'stack overflow',
     search: 'http://stackoverflow.com/search?q=%s',
@@ -120,24 +100,6 @@ module.exports = [
     alias: 'am.ca',
     name: 'amazon.ca',
     search: 'http://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s',
-  },
-  {
-    name: 'isbn',
-    search: 'http://isbn.nu/%s',
-  },
-  {
-    alias: 'oreilly',
-    name: "o'reilly",
-    search: 'http://search.oreilly.com/?q=%s&t1=Books',
-  },
-  {
-    alias: 'safari',
-    name: 'safari online',
-    search: 'http://my.safaribooksonline.com/search/%s',
-  },
-  {
-    name: 'apress',
-    search: 'http://www.apress.com/catalogsearch/result/?q=%s',
   },
   {
     name: 'audible',
@@ -162,16 +124,6 @@ module.exports = [
   {
     name: 'imdb',
     search: 'http://imdb.com/find?q=%s',
-  },
-  {
-    alias: 'da',
-    name: 'deviant art',
-    search: 'http://www.deviantart.com/?q=%s',
-  },
-  {
-    alias: 'td',
-    name: 'tigerdirect.ca',
-    search: 'http://www.tigerdirect.ca/applications/SearchTools/search.asp?keywords=%s',
   },
   {
     name: 'yelp',
@@ -216,18 +168,6 @@ module.exports = [
   {
     name: 'anidb',
     search: 'http://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist',
-    hide: true,
-  },
-  {
-    alias: 'tot',
-    name: 'tokyo toshokan',
-    search: 'http://www.tokyotosho.info/search.php?terms=%s',
-    hide: true,
-  },
-  {
-    alias: 'tpb',
-    name: 'the pirate bay',
-    search: 'http://thepiratebay.org/search/%s/0/7/0',
     hide: true,
   },
   {
@@ -286,12 +226,6 @@ module.exports = [
     name: 'fatsecret',
     search: 'http://www.fatsecret.com/calories-nutrition/search?q=%s',
     visit: 'http://www.fatsecret.com/calories-nutrition/',
-    hide: true,
-  },
-  {
-    alias: 'iteb',
-    name: 'it ebooks',
-    search: 'http://it-ebooks.info/search/?q=%s&type=title',
     hide: true,
   },
 ];
