@@ -117,6 +117,10 @@ module.exports = [
     visit: 'https://bookpiles.ca/jonathan/books',
   },
   {
+    name: 'leanpub',
+    search: 'https://leanpub.com/bookstore/type/book/sort/earnings_in_last_7_days?search=%s',
+  },
+  {
     name: 'ups',
     search: 'http://wwwapps.ups.com/WebTracking/processInputRequest?sort_by=status&tracknums_displayed=1&TypeOfInquiryNumber=T&loc=en_US&InquiryNumber1=%s&track.x=0&track.y=0',
     visit: 'http://www.ups.com/?cookie=ca_en_home',
