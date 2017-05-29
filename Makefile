@@ -29,7 +29,7 @@ test:
 	$(BIN)/mocha --reporter dot
 
 clean:
-	rm -r tmp
+	rm -rd tmp deploy.retry
 
 .PHONY: test
 
