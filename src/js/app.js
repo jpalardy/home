@@ -1,5 +1,5 @@
 var sites   = require('./sites');
-var Command = require('./command')(sites, 'ddg');
+var Command = require('./command')(sites, 'g');
 
 var get = function (sel) { return document.getElementById(sel); };
 
