@@ -36,5 +36,5 @@ clean:
 #-------------------------------------------------
 
 deploy:
-	docker run --rm -ti -v "$$PWD:/src" -w /src capistrano-home cap production deploy
+	ansible-playbook deploy.yml
 
