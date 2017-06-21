@@ -116,6 +116,16 @@ module.exports = [
     search: 'https://leanpub.com/bookstore/type/book/sort/earnings_in_last_7_days?search=%s',
   },
   {
+    name: 'ebooks-it',
+    search: 'https://ebooks-it.org/search-engine.htm?bform=btitle&page=1&query=%s',
+    hide: true,
+  },
+  {
+    name: 'libgen',
+    search: 'http://libgen.io/search.php?req=%s',
+    hide: true,
+  },
+  {
     name: 'imdb',
     search: 'http://imdb.com/find?q=%s',
   },
