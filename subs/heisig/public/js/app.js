@@ -1,6 +1,6 @@
 /* global fetch, Vue, document, location, starific */
 
-const app = new Vue({
+var app = new Vue({
   el: '#app',
   template: '#template',
   data: {
