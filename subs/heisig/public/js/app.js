@@ -2,6 +2,7 @@
 
 const app = new Vue({
   el: '#app',
+  template: '#template',
   data: {
     query: "",
     allCards: [],
