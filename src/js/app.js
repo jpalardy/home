@@ -1,6 +1,8 @@
 var sites   = require('./sites');
 var Command = require('./command')(sites, 'g');
 
+require('../less/main.less');
+
 var get = function (sel) { return document.getElementById(sel); };
 
 // maintains completion state
