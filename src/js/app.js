@@ -94,6 +94,10 @@ document.body.onkeyup = function (ev) {
     toggleCheatSheet();
     return false;
   }
+  if (ev.keyCode === 191) { // forward slash '/'
+    get('command_input').focus();
+    return false;
+  }
   return true;
 };
 
