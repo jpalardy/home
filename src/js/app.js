@@ -1,63 +1,64 @@
-var sites   = require('./sites');
-var Command = require('./command')(sites, 'g');
+/* global window, document */
+
+const sites   = require('./sites');
+const Command = require('./command')(sites, 'g');
 
 require('../less/main.less');
 
-var get = function (sel) { return document.getElementById(sel); };
+const get = function (sel) { return document.getElementById(sel); };
 
 // maintains completion state
-var circularCompletions = [];
+let circularCompletions = [];
 
 //-------------------------------------------------
 // actions
 //-------------------------------------------------
 
-var setCommand = function (text) {
+const setCommand = function (text) {
   if (text === undefined) { return; }
   get('command_input').value = text;
 };
 
-var getText = function () {
+const getText = function () {
   return get('command_input').value.trim();
 };
 
-var getCommand = function () {
+const getCommand = function () {
   return Command.parse(getText());
 };
 
-var submit = function () {
-  var command = getCommand();
+const submit = function () {
+  const command = getCommand();
   if (!command) {
     return false;
   }
   window.location = command.url;
+  return true;
 };
 
-var toggleCheatSheet = function () {
-  var elem = get('cheatSheetDetails');
+const toggleCheatSheet = function () {
+  const elem = get('cheatSheetDetails');
   elem.className = (elem.className === 'hide' ? '' : 'hide');
 };
 
-var reduceCheatSheet = function (text) {
-  var lines = Command.cheatSheet.filter(function (line) {
-    return line.indexOf(text) === 0;
-  });
+const reduceCheatSheet = function (text) {
+  let lines = Command.cheatSheet.filter(line => line.indexOf(text) === 0);
   if (!lines.length) {
     lines = Command.cheatSheet;
   }
   get('cheatSheet').innerHTML = lines.join('\n');
 };
 
-var complete = function (text) {
+const complete = function (text) {
   if (!text) { return; }
-  var newText = (function () {
+  const newText = (function () {
     if (circularCompletions.length > 0) {
-      var i = circularCompletions.indexOf(text);
+      const i = circularCompletions.indexOf(text);
       return circularCompletions[(i + 1) % circularCompletions.length];
     }
-    var completions = sites.filter(function (site) {
-      return site.alias.indexOf(text) === 0;
-    }).map(function (site) { return site.alias; });
+    const completions = sites
+      .filter(site => site.alias.indexOf(text) === 0)
+      .map(site => site.alias);
     if (completions.length === 0) { return text; }  // no match, return original
     circularCompletions = completions.concat(text); // save completions and original text
     return completions[0];
@@ -69,11 +70,11 @@ var complete = function (text) {
 // deal with q= param
 //-------------------------------------------------
 
-var getParams = function (query) {
-  var result = {};
+const getParams = function (query) {
+  const result = {};
   query = query || document.location.search.substring(1);
-  query.split('&').forEach(function (param) {
-    var parts = param.split('=', 2);
+  query.split('&').forEach((param) => {
+    const parts = param.split('=', 2);
     result[parts[0]] = decodeURIComponent(parts[1]).replace(/\+/g, ' ');
   });
   return result;
@@ -113,6 +114,7 @@ get('command_input').onkeydown = function (ev) {
     complete(getText());
     return false;
   }
+  return true;
 };
 
 get('command_input').onkeyup = function (ev) {
