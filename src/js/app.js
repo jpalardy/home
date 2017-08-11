@@ -1,4 +1,4 @@
-/* global window, document */
+/* global window, document, KeyboardEvent */
 
 const sites   = require('./sites');
 const Command = require('./command')(sites, 'g');
@@ -64,14 +64,15 @@ const ACTIONS = {
 //-------------------------------------------------
 
 {
-  document.body.addEventListener('keyup', (ev) => {
+  document.body.addEventListener('keydown', (ev) => {
     if (ev.keyCode === 27) { // ESC
       ACTIONS.toggleCheatSheet();
-      return;
     }
-    // any key focused search field
-    get('command_input').focus();
-  }, true); // capture event on way down
+    // any key focuses on search field
+    if (document.activeElement.tagName.toLowerCase() !== 'input') {
+      get('command_input').focus();
+    }
+  });
 
   //-------------------------------------------------
   // maintains completion state
