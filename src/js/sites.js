@@ -224,4 +224,18 @@ module.exports = [
     visit: 'http://www.fatsecret.com/calories-nutrition/',
     hide: true,
   },
+  {
+    alias: 'api.nodejs',
+    name: 'nodejs api',
+    search: 'https://nodejs.org/api/',
+    visit: 'https://nodejs.org/api/',
+    hide: true,
+  },
+  {
+    alias: 'api.express',
+    name: 'express api',
+    search: 'https://expressjs.com/en/4x/api.html',
+    visit: 'https://expressjs.com/en/4x/api.html',
+    hide: true,
+  },
 ];
