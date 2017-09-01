@@ -33,7 +33,7 @@ module.exports = {
     new ExtractTextPlugin("out.css"),
     new HtmlWebpackPlugin({
       template:     "./src/html/index.html",
-      inlineSource: /\.(js|css)$/,
+      inlineSource: /\.css$/,
     }),
     new HtmlWebpackInlineSourcePlugin(),
   ],

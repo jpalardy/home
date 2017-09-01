@@ -1,7 +1,7 @@
 
 webpack:
 	@npx webpack --progress $(FLAGS)
-	@rm public/bundle.js public/out.css # damn webpack doesn't cleanup
+	@rm public/out.css # damn webpack doesn't cleanup
 
 webpack-p:
 	@$(MAKE) FLAGS=-p
