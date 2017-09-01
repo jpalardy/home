@@ -1,4 +1,4 @@
-/* global window, document, KeyboardEvent */
+/* global window, document */
 
 const sites   = require('./sites');
 const Command = require('./command')(sites, 'g');
