@@ -213,7 +213,6 @@ module.exports = [
   {
     alias: 'cnm',
     name: 'cinema, vancouver',
-    search: 'http://www.cinemaclock.com/bri/vancouver',
     visit: 'http://www.cinemaclock.com/bri/vancouver',
     hide: true,
   },
@@ -227,15 +226,21 @@ module.exports = [
   {
     alias: 'api.nodejs',
     name: 'nodejs api',
-    search: 'https://nodejs.org/api/',
     visit: 'https://nodejs.org/api/',
     hide: true,
   },
   {
     alias: 'api.express',
     name: 'express api',
-    search: 'https://expressjs.com/en/4x/api.html',
     visit: 'https://expressjs.com/en/4x/api.html',
     hide: true,
   },
-];
+].map(site => (
+  {
+    name:   site.name,
+    alias:  site.alias  || site.name,
+    visit:  site.visit  || site.search.match('^https?://[^/]+/')[0],
+    search: site.search || site.visit,
+    hide:   Boolean(site.hide),
+  }
+));

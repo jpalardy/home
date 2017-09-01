@@ -14,11 +14,6 @@ class Command {
 //-------------------------------------------------
 
 module.exports = function (sites, defaultSiteName) {
-  // augment sites
-  sites.forEach((site) => {
-    site.visit = site.visit || site.search.match('^https?://[^/]+/')[0];
-    site.alias = site.alias || site.name;
-  });
   const cheatSheet = sites
     .filter(site => !site.hide)
     .map(site => `${site.alias}\t${site.name}`);
