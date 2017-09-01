@@ -1,11 +1,13 @@
 
 webpack:
-	@npx webpack
+	@npx webpack --progress $(FLAGS)
 	@rm public/bundle.js public/out.css # damn webpack doesn't cleanup
 
 webpack-p:
-	@npx webpack -p
-	@rm public/bundle.js public/out.css # damn webpack doesn't cleanup
+	@$(MAKE) FLAGS=-p
+
+webpack-w:
+	@$(MAKE) FLAGS=-w
 
 test:
 	@npx mocha --reporter dot
