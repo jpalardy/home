@@ -235,6 +235,12 @@ module.exports = [
     visit: 'https://expressjs.com/en/4x/api.html',
     hide: true,
   },
+  {
+    alias: 'api.jq',
+    name: 'jq api',
+    visit: 'https://stedolan.github.io/jq/manual/',
+    hide: true,
+  },
 ].map(site => (
   {
     name:   site.name,
