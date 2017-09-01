@@ -2,6 +2,7 @@
 
 const sites   = require('./sites');
 const Command = require('./command')(sites, 'g');
+const Completer = require('./completer');
 
 // import CSS for webpack
 require('../less/main.less');
@@ -75,27 +76,10 @@ const ACTIONS = {
   });
 
   //-------------------------------------------------
-  // maintains completion state
-  let circularCompletions = [];
-  const complete = function (text) {
-    if (!text) { return; }
-    const newText = (function () {
-      if (circularCompletions.length > 0) {
-        const i = circularCompletions.indexOf(text);
-        return circularCompletions[(i + 1) % circularCompletions.length];
-      }
-      const completions = sites
-        .filter(site => site.alias.indexOf(text) === 0)
-        .map(site => site.alias);
-      if (completions.length === 0) { return text; }  // no match, return original
-      circularCompletions = completions.concat(text); // save completions and original text
-      return completions[0];
-    }());
-    ACTIONS.setCommand(newText);
-  };
-  //-------------------------------------------------
-
+  // some state
+  const completer = new Completer(sites.map(site => site.alias));
   const commandForm = get('command_form');
+  //-------------------------------------------------
 
   commandForm.addEventListener('submit', (ev) => {
     ev.preventDefault();
@@ -105,14 +89,14 @@ const ACTIONS = {
   commandForm.addEventListener('keydown', (ev) => {
     if (ev.keyCode === 9) {  // TAB
       ev.preventDefault();
-      complete(ACTIONS.getText());
+      ACTIONS.setCommand(completer.next(ACTIONS.getText()));
+    }
+    if (ev.keyCode !== 9) { // TAB
+      completer.reset();
     }
   });
 
-  commandForm.addEventListener('keyup', (ev) => {
-    if (ev.keyCode !== 9) { // TAB
-      circularCompletions = []; // reset completions, some other key was pressed
-    }
+  commandForm.addEventListener('keyup', () => {
     ACTIONS.reduceCheatSheet(ACTIONS.getText().split(/\s+/)[0]);
   });
 }
