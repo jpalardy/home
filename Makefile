@@ -9,6 +9,9 @@ webpack-p:
 webpack-w:
 	@$(MAKE) FLAGS=-w
 
+run-local:
+	cd public; browser-sync start --server --files .
+
 test:
 	@npx mocha --reporter dot
 
