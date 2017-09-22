@@ -77,6 +77,10 @@ module.exports = [
     search: 'http://www.urbandictionary.com/define.php?term=%s',
   },
   {
+    name: 'emoji',
+    search: 'https://emojipedia.org/search/?q=%s',
+  },
+  {
     alias: 'so',
     name: 'stack overflow',
     search: 'http://stackoverflow.com/search?q=%s',
