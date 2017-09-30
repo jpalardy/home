@@ -14,13 +14,17 @@
   width: 95%;
 }
 
+[v-cloak] {
+  display: none;
+}
+
 </style>
 </head>
 <body>
 
   <div id="app" style="width: 500px">
-    <textarea v-model="text" rows="10" autofocus></textarea>
-    <pre id="answer">{{ volume }}</pre>
+    <textarea v-model="text" rows="10" v-focus></textarea>
+    <pre id="answer" v-cloak>{{ volume }}</pre>
   </div>
 
   <script src="js/vue.min.js"></script>

@@ -37,5 +37,11 @@ const app = new Vue({
       return Math.ceil(numbers.reduce((acc, x) => acc * x));
     },
   },
+  //-------------------------------------------------
+  directives: {
+    focus(el) {
+      Vue.nextTick(() => el.focus());
+    },
+  },
 });
 
