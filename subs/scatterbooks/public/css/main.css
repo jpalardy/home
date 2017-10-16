@@ -1,0 +1,51 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/*-------------------------------------------------*/
+
+#container {
+  margin: auto;
+  margin-top: 50px;
+  /*border: 1px dashed #777;*/
+}
+
+#tooltip {
+  border: 1px solid #777;
+  display: none;
+  position: absolute;
+}
+
+/*-------------------------------------------------*/
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  fill: #777;
+}
+
+.axis line, .axis path {
+  stroke: #bbb;
+}
+
+/*-------------------------------------------------*/
+
+svg {
+  display: block;
+  margin: auto;
+  /*border: 1px dashed #777;*/
+}
+
+circle {
+  opacity: 0.5;
+}
+
+circle:hover {
+  /*fill: red;*/
+  opacity: 1;
+}
+
