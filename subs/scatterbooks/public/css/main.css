@@ -5,16 +5,17 @@ html, body {
 }
 
 body {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  color: #777;
   margin-left: 50px;
 }
 
-/*-------------------------------------------------*/
-
-#container {
-  margin: auto;
+.container {
   margin-top: 50px;
-  /*border: 1px dashed #777;*/
+  display: flex;
 }
+
+/*-------------------------------------------------*/
 
 #tooltip {
   border: 1px solid #777;
@@ -38,34 +39,26 @@ body {
 
 /*-------------------------------------------------*/
 
-svg {
-  display: block;
-  margin: auto;
-  /*border: 1px dashed #777;*/
-}
-
 circle {
   opacity: 0.5;
 }
 
 circle:hover {
-  /*fill: red;*/
   opacity: 1;
 }
 
 /*-------------------------------------------------*/
 
 .controls {
-  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  margin-left: 25px;
+  padding-left: 25px;
   font-size: 13px;
-  /*margin-left: 50px;*/
-  border-top: 1px solid #bbb;
-  color: #777;
+  border-left: 1px dashed #bbb;
 }
 
 .controls h2 {
+  margin-top: 0;
   margin-bottom: 10px;
-  margin-top: 5px;
 }
 
 .controls form {
