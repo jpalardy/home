@@ -144,6 +144,15 @@ const app = new Vue({
     },
   },
   //-------------------------------------------------
+  methods: {
+    selectAll() {
+      this.selectedYears = this.years;
+    },
+    selectNone() {
+      this.selectedYears = [];
+    },
+  },
+  //-------------------------------------------------
   created() {
     fetch('data/books.json').then(response => response.json()).then((books) => {
       this.books = books;
