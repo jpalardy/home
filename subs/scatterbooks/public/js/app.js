@@ -50,8 +50,8 @@ const updateBooks = function (books) {
 //-------------------------------------------------
 
 const renderBooks = function (books, years) {
-  const WIDTH  = 500;
-  const HEIGHT = 500;
+  const WIDTH  = Number(d3.select("svg").attr('width'));
+  const HEIGHT = Number(d3.select("svg").attr('height'));
   const margin = {
     top:    10,
     right:  10,
@@ -97,8 +97,6 @@ const renderBooks = function (books, years) {
   });
 
   svg = d3.select("svg")
-    .attr('width', WIDTH)
-    .attr('height', HEIGHT)
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
