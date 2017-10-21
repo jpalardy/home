@@ -92,7 +92,11 @@ const renderBooks = function (books, years) {
       return;
     }
     const data = ev.target.__data__;
-    app.selectedYears = app.selectedYears.filter(year => year !== data.year);
+    if (app.selectedYears.length === 1 && app.selectedYears[0] === data.year) {
+      app.selectedYears = app.years;
+    } else {
+      app.selectedYears = [data.year];
+    }
     tooltip.style.display = "none";
   });
 
