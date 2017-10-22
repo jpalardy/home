@@ -19,6 +19,10 @@ a {
   display: flex;
 }
 
+.hide {
+  display: none;
+}
+
 /*-------------------------------------------------*/
 
 #tooltip {
@@ -74,3 +78,14 @@ circle:hover {
   margin-left: 3px;
   margin-top: 5px;
 }
+
+/*-------------------------------------------------*/
+
+#volume textarea {
+  width: 95%;
+}
+
+[v-cloak] {
+  display: none;
+}
+
