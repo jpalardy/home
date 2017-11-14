@@ -245,6 +245,11 @@ module.exports = [
     visit: 'https://stedolan.github.io/jq/manual/',
     hide: true,
   },
+  {
+    name: 'meetup',
+    search: 'https://www.google.com/search?q=meetup+vancouver+%s',
+    visit: 'https://www.meetup.com',
+  },
 ].map(site => (
   {
     name:   site.name,
