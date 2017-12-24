@@ -250,6 +250,11 @@ module.exports = [
     search: 'https://www.google.com/search?q=meetup+vancouver+%s',
     visit: 'https://www.meetup.com',
   },
+  {
+    name: 'udemy',
+    search: 'https://www.udemy.com/courses/search/?q=%s',
+    hide: true,
+  },
 ].map(site => (
   {
     name:   site.name,
