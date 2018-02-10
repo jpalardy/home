@@ -246,6 +246,12 @@ module.exports = [
     hide: true,
   },
   {
+    alias: 'api.aws',
+    name: 'aws api',
+    visit: 'https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/',
+    hide: true,
+  },
+  {
     name: 'meetup',
     search: 'https://www.google.com/search?q=meetup+vancouver+%s',
     visit: 'https://www.meetup.com',
