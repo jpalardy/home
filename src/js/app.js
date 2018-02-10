@@ -77,7 +77,7 @@ const ACTIONS = {
 
   //-------------------------------------------------
   // some state
-  const completer = new Completer(sites.map(site => site.alias));
+  const completer = new Completer(sites.map(site => site.alias).sort());
   const commandForm = get('command_form');
   //-------------------------------------------------
 
