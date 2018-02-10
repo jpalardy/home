@@ -252,6 +252,13 @@ module.exports = [
     hide: true,
   },
   {
+    alias: 'api.mdn',
+    name: 'mdn api',
+    search: 'https://developer.mozilla.org/en-US/search?q=%s',
+    visit: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference',
+    hide: true,
+  },
+  {
     name: 'meetup',
     search: 'https://www.google.com/search?q=meetup+vancouver+%s',
     visit: 'https://www.meetup.com',
