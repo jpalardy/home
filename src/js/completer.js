@@ -5,25 +5,37 @@ class Completer {
     this.completions = [];
   }
 
-  next(prefix) {
-    // currently cycling
-    if (this.completions.length > 0) {
-      const i = this.completions.indexOf(prefix);
-      const n = this.completions.length;
-      return this.completions[(i + 1) % n];
+  * matches(prefix) {
+    const results = Completer.findCompletions(prefix, this.words);
+    while (true) {
+      for (let i = 0; i < results.length; i += 1) {
+        yield results[i];
+      }
     }
-    // new word
-    this.completions = this.words.filter(word => word.indexOf(prefix) === 0 && word !== prefix);
-    // no completions...
-    if (this.completions.length === 0) {
-      return prefix;
-    }
-    this.completions.push(prefix); // add original word to the end
-    return this.completions[0];
   }
 
-  reset() {
-    this.completions = [];
+  //-------------------------------------------------
+
+  static findCommonPrefix(words = []) {
+    const firstWord = words[0];
+    if (words.length <= 1) {
+      return firstWord || '';
+    }
+    for (let i = 0; i < firstWord.length; i += 1) {
+      for (let j = 1; j < words.length; j += 1) {
+        if (!words[j][i] || words[j][i] !== firstWord[i]) {
+          return firstWord.slice(0, i);
+        }
+      }
+    }
+    // first word matched completely, all words are same
+    return firstWord;
+  }
+
+  static findCompletions(prefix, words) {
+    const matches = words.filter(word => word.startsWith(prefix));
+    const commonPrefix = Completer.findCommonPrefix(matches) || prefix;
+    return [commonPrefix, ...matches.filter(match => match !== prefix)];
   }
 }
 
