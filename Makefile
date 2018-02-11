@@ -15,6 +15,9 @@ run-local:
 test:
 	@npx mocha --reporter dot
 
+test-monitor:
+	@nodemon -x "make test"
+
 clean:
 	rm deploy.retry
 
