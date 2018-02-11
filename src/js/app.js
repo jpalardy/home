@@ -86,13 +86,17 @@ const ACTIONS = {
     ACTIONS.submit();
   });
 
+  let iter;
   commandForm.addEventListener('keydown', (ev) => {
     if (ev.keyCode === 9) {  // TAB
       ev.preventDefault();
-      ACTIONS.setCommand(completer.next(ACTIONS.getText()));
+      if (!iter) {
+        iter = completer.matches(ACTIONS.getText());
+      }
+      ACTIONS.setCommand(iter.next().value);
     }
     if (ev.keyCode !== 9) { // TAB
-      completer.reset();
+      iter = null;
     }
   });
 
