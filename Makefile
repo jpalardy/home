@@ -12,6 +12,10 @@ webpack-w:
 run-local:
 	cd public; browser-sync start --server --files .
 
+coverage: test
+	@npx nyc mocha --reporter dot
+	@npx nyc report --reporter=html
+
 test:
 	@npx mocha --reporter dot
 
