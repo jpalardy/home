@@ -20,7 +20,7 @@ test:
 	@npx mocha --reporter dot
 
 test-monitor:
-	@nodemon -x "make test"
+	@nodemon -x "npx mocha --reporter dot"
 
 clean:
 	rm deploy.retry
