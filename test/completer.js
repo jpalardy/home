@@ -81,5 +81,9 @@ describe('Completer', function () {
       assert.deepEqual(Completer.findCompletions('cat', ['catalog', 'cat', 'cathode']), ['cat', 'catalog', 'cathode']);
       assert.deepEqual(Completer.findCompletions('cat', ['cat']), ['cat']);
     });
+
+    it('does not return duplicates if same as commonPrefix', function () {
+      assert.deepEqual(Completer.findCompletions('cat', ['cathode']), ['cathode']);
+    });
   });
 });

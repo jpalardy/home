@@ -35,7 +35,7 @@ class Completer {
   static findCompletions(prefix, words) {
     const matches = words.filter(word => word.startsWith(prefix));
     const commonPrefix = Completer.findCommonPrefix(matches) || prefix;
-    return [commonPrefix, ...matches.filter(match => match !== prefix)];
+    return [...new Set([commonPrefix, ...matches])];
   }
 }
 
