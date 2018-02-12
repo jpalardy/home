@@ -1,16 +1,9 @@
 
-webpack:
-	@npx webpack --progress $(FLAGS)
-	@rm public/out.css # damn webpack doesn't cleanup
+build:
+	@npx parcel build src/html/index.html -d public --public-url ./ --no-minify --no-cache
 
-webpack-p:
-	@$(MAKE) FLAGS=-p
-
-webpack-w:
-	@$(MAKE) FLAGS=-w
-
-run-local:
-	cd public; browser-sync start --server --files .
+watch:
+	@npx parcel serve src/html/index.html -d public --no-source-maps
 
 coverage: test
 	@npx nyc mocha --reporter dot

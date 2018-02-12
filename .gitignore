@@ -1,5 +1,5 @@
-tmp
 node_modules
 deploy.retry
 .nyc_output/
 coverage/
+.cache
