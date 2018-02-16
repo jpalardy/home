@@ -24,6 +24,10 @@ module.exports = [
     name: 'lodash',
     visit: 'https://lodash.com/docs/',
   },
+  {
+    name: 'ramda',
+    visit: 'http://ramdajs.com/docs/',
+  },
 ].map(site => (
   {
     name:   `${site.name} api`,
