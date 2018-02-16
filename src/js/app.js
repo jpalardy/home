@@ -1,6 +1,10 @@
 /* global window, document */
 
-const sites   = require('./sites');
+const websites = require('./websites');
+const apis     = require('./apis');
+
+const sites = [...websites, ...apis];
+
 const Command = require('./command')(sites, 'g');
 const Completer = require('./completer');
 

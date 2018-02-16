@@ -228,43 +228,6 @@ module.exports = [
     hide: true,
   },
   {
-    alias: 'api.nodejs',
-    name: 'nodejs api',
-    visit: 'https://nodejs.org/api/',
-    hide: true,
-  },
-  {
-    alias: 'api.express',
-    name: 'express api',
-    visit: 'https://expressjs.com/en/4x/api.html',
-    hide: true,
-  },
-  {
-    alias: 'api.jq',
-    name: 'jq api',
-    visit: 'https://stedolan.github.io/jq/manual/',
-    hide: true,
-  },
-  {
-    alias: 'api.aws',
-    name: 'aws api',
-    visit: 'https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/',
-    hide: true,
-  },
-  {
-    alias: 'api.mdn',
-    name: 'mdn api',
-    search: 'https://developer.mozilla.org/en-US/search?q=%s',
-    visit: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference',
-    hide: true,
-  },
-  {
-    alias: 'api.lodash',
-    name: 'lodash api',
-    visit: 'https://lodash.com/docs/',
-    hide: true,
-  },
-  {
     name: 'meetup',
     search: 'https://www.google.com/search?q=meetup+vancouver+%s',
     visit: 'https://www.meetup.com',

@@ -300,43 +300,6 @@ module.exports = [
     hide: true,
   },
   {
-    alias: 'api.nodejs',
-    name: 'nodejs api',
-    visit: 'https://nodejs.org/api/',
-    hide: true,
-  },
-  {
-    alias: 'api.express',
-    name: 'express api',
-    visit: 'https://expressjs.com/en/4x/api.html',
-    hide: true,
-  },
-  {
-    alias: 'api.jq',
-    name: 'jq api',
-    visit: 'https://stedolan.github.io/jq/manual/',
-    hide: true,
-  },
-  {
-    alias: 'api.aws',
-    name: 'aws api',
-    visit: 'https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/',
-    hide: true,
-  },
-  {
-    alias: 'api.mdn',
-    name: 'mdn api',
-    search: 'https://developer.mozilla.org/en-US/search?q=%s',
-    visit: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference',
-    hide: true,
-  },
-  {
-    alias: 'api.lodash',
-    name: 'lodash api',
-    visit: 'https://lodash.com/docs/',
-    hide: true,
-  },
-  {
     name: 'meetup',
     search: 'https://www.google.com/search?q=meetup+vancouver+%s',
     visit: 'https://www.meetup.com',
@@ -357,6 +320,43 @@ module.exports = [
 ));
 
 },{}],10:[function(require,module,exports) {
+module.exports = [
+  {
+    name: 'nodejs',
+    visit: 'https://nodejs.org/api/',
+  },
+  {
+    name: 'express',
+    visit: 'https://expressjs.com/en/4x/api.html',
+  },
+  {
+    name: 'jq',
+    visit: 'https://stedolan.github.io/jq/manual/',
+  },
+  {
+    name: 'aws',
+    visit: 'https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/',
+  },
+  {
+    name: 'mdn',
+    search: 'https://developer.mozilla.org/en-US/search?q=%s',
+    visit: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference',
+  },
+  {
+    name: 'lodash',
+    visit: 'https://lodash.com/docs/',
+  },
+].map(site => (
+  {
+    name:   `${site.name} api`,
+    alias:  `api.${site.name}`,
+    visit:  site.visit  || site.search.match('^https?://[^/]+/')[0],
+    search: site.search || site.visit,
+    hide:   true,
+  }
+));
+
+},{}],12:[function(require,module,exports) {
 
 class Command {
   constructor(site, query, url) {
@@ -413,7 +413,7 @@ module.exports = function (sites, defaultSiteName) {
   };
 };
 
-},{}],12:[function(require,module,exports) {
+},{}],14:[function(require,module,exports) {
 
 class Completer {
   constructor(words) {
@@ -462,7 +462,11 @@ module.exports = Completer;
 },{}],4:[function(require,module,exports) {
 /* global window, document */
 
-const sites   = require('./sites');
+const websites = require('./websites');
+const apis     = require('./apis');
+
+const sites = [...websites, ...apis];
+
 const Command = require('./command')(sites, 'g');
 const Completer = require('./completer');
 
@@ -567,4 +571,4 @@ const ACTIONS = {
   });
 }
 
-},{"./sites":8,"./command":10,"./completer":12,"../less/main.less":6}]},{},[4])
+},{"./websites":8,"./apis":10,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
