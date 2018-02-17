@@ -69,7 +69,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({6:[function(require,module,exports) {
+})({8:[function(require,module,exports) {
 module.exports = [
   {
     alias: 'g',
@@ -461,7 +461,7 @@ class Completer {
 
 module.exports = Completer;
 
-},{}],8:[function(require,module,exports) {
+},{}],6:[function(require,module,exports) {
 
 },{}],4:[function(require,module,exports) {
 /* global window, document */
@@ -560,14 +560,22 @@ const ACTIONS = {
   commandForm.addEventListener('keydown', (ev) => {
     if (ev.keyCode === 9) {  // TAB
       ev.preventDefault();
-      if (!iter) {
-        iter = completer.matches(ACTIONS.getText());
+      if (iter) {
+        ACTIONS.setCommand(iter.next().value);
+        return;
       }
-      ACTIONS.setCommand(iter.next().value);
+      const currentText = ACTIONS.getText();
+      iter = completer.matches(currentText);
+      let replacement = iter.next().value;
+      // if the first completion is what we typed, try next one
+      if (currentText === replacement) {
+        replacement = iter.next().value;
+      }
+      ACTIONS.setCommand(replacement);
+      return;
     }
-    if (ev.keyCode !== 9) { // TAB
-      iter = null;
-    }
+    // anything else...
+    iter = null;
   });
 
   commandForm.addEventListener('keyup', () => {
@@ -575,4 +583,4 @@ const ACTIONS = {
   });
 }
 
-},{"./websites":6,"./apis":10,"./command":12,"./completer":14,"../less/main.less":8}]},{},[4])
+},{"./websites":8,"./apis":10,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
