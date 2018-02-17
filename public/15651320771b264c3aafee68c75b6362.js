@@ -69,7 +69,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({8:[function(require,module,exports) {
+})({6:[function(require,module,exports) {
 module.exports = [
   {
     alias: 'g',
@@ -461,7 +461,7 @@ class Completer {
 
 module.exports = Completer;
 
-},{}],6:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 
 },{}],4:[function(require,module,exports) {
 /* global window, document */
@@ -575,4 +575,4 @@ const ACTIONS = {
   });
 }
 
-},{"./websites":8,"./apis":10,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
+},{"./websites":6,"./apis":10,"./command":12,"./completer":14,"../less/main.less":8}]},{},[4])
