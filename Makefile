@@ -1,24 +1,21 @@
 
 build:
-	@npx parcel build src/html/index.html -d public --public-url ./ --no-minify --no-cache
+	@npm run build
 
 watch:
-	@npx parcel serve src/html/index.html -d public --no-source-maps
+	@npm run watch
 
-coverage: test
-	@npx nyc mocha --reporter dot
-	@npx nyc report --reporter=html
+coverage:
+	@npm run coverage
 
 test:
-	@npx mocha --reporter dot
-
-test-monitor:
-	@nodemon -x "npx mocha --reporter dot"
+	@npm test
 
 clean:
-	rm deploy.retry
+	rm -f deploy.retry
+	rm -rf coverage/ .nyc_output/
 
-.PHONY: test
+.PHONY: build watch coverage test clean
 
 #-------------------------------------------------
 
