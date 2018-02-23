@@ -28,6 +28,10 @@ module.exports = [
     name: 'ramda',
     visit: 'http://ramdajs.com/docs/',
   },
+  {
+    name: 'async',
+    visit: 'https://caolan.github.io/async/',
+  },
 ].map(site => (
   {
     name:   `${site.name} api`,
