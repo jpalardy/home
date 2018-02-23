@@ -10,10 +10,10 @@
     "test": "mocha --reporter dot"
   },
   "devDependencies": {
-    "less": "3.0.0",
-    "mocha": "5.0.0",
+    "less": "3.0.1",
+    "mocha": "5.0.1",
     "nyc": "11.4.1",
-    "parcel-bundler": "1.5.1"
+    "parcel-bundler": "1.6.2"
   },
   "private": true
 }
