@@ -468,7 +468,7 @@ module.exports = Completer;
 },{}],6:[function(require,module,exports) {
 
 },{}],4:[function(require,module,exports) {
-/* global window, document */
+/* global window, document, localStorage */
 
 const websites = require('./websites');
 const apis     = require('./apis');
@@ -487,6 +487,18 @@ const get = document.getElementById.bind(document);
 // actions
 //-------------------------------------------------
 
+const logUsage = function (alias) {
+  if (!window.localStorage) {
+    return;
+  }
+  if (!localStorage.getItem('logging')) {
+    return;
+  }
+  const usage = JSON.parse(localStorage.getItem('usage')) || {};
+  usage[Date.now()] = alias;
+  localStorage.setItem('usage', JSON.stringify(usage));
+};
+
 const ACTIONS = {
   setCommand(text) {
     if (text === undefined) { return; }
@@ -503,6 +515,7 @@ const ACTIONS = {
       return;
     }
     //console.log("*** window.location =", command.url)
+    logUsage(command.site.alias);
     window.location = command.url;
   },
 
