@@ -156,7 +156,25 @@ const app = new Vue({
   },
   //-------------------------------------------------
   created() {
-    fetch('data/books.json').then(response => response.json()).then((books) => {
+    fetch('https://bookpiles.ca/jonathan/books.json').then(response => response.json()).then((books) => {
+      books = books.filter((book) => {
+        if (book.status !== 'done' ||
+            !book.ml ||
+            !book.pages ||
+            book.notes.includes('#audio') ||
+            book.notes.includes('#ebook')
+        ) {
+          return false;
+        }
+        return true;
+      }).map(book => (
+        {
+          ml:        Number(book.ml),
+          pages:     Number(book.pages),
+          image_url: book.image_url,
+          year:      Number(book.done_on.split('-')[0]),
+        }
+      ));
       this.books = books;
       this.years = [...new Set(books.map(book => book.year))].sort();
       this.selectedYears = this.years;
