@@ -1,9 +1,8 @@
-
 class Command {
   constructor(site, query, url) {
-    this.site  = site;
+    this.site = site;
     this.query = query;
-    this.url   = url;
+    this.url = url;
   }
 
   toString() {
@@ -13,10 +12,8 @@ class Command {
 
 //-------------------------------------------------
 
-module.exports = function (sites, defaultSiteName) {
-  const cheatSheet = sites
-    .filter(site => !site.hide)
-    .map(site => `${site.alias}\t${site.name}`);
+module.exports = function(sites, defaultSiteName) {
+  const cheatSheet = sites.filter(site => !site.hide).map(site => `${site.alias}\t${site.name}`);
   const LUT = sites.reduce((acc, site) => {
     acc[site.alias] = site;
     return acc;
@@ -30,7 +27,10 @@ module.exports = function (sites, defaultSiteName) {
       return lines.length ? lines : cheatSheet;
     },
     parse(text) {
-      const words = text.trim().split(/ +/).filter(Boolean);
+      const words = text
+        .trim()
+        .split(/ +/)
+        .filter(Boolean);
       // text is blank
       if (words.length === 0) {
         return null;
@@ -39,16 +39,16 @@ module.exports = function (sites, defaultSiteName) {
       // query is all remaining words
       const [first, ...rest] = words;
       const site = LUT[first];
-      const query = rest.join(' ');
+      const query = rest.join(" ");
       // if not, parse again with default site
       if (!site) {
         return this.parse(`${defaultSiteName} ${text}`);
       }
       // empty query means 'visit', otherwise 'search'
       if (!query) {
-        return new Command(site, '', site.visit);
+        return new Command(site, "", site.visit);
       }
-      const encodedQuery = encodeURIComponent(query).replace(/%20/g, '+');
+      const encodedQuery = encodeURIComponent(query).replace(/%20/g, "+");
       return new Command(site, query, site.search.replace(/%s/g, encodedQuery));
     },
   };

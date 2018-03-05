@@ -1,11 +1,10 @@
-
 class Completer {
   constructor(words) {
     this.words = words;
     this.completions = [];
   }
 
-  * matches(prefix) {
+  *matches(prefix) {
     const results = Completer.findCompletions(prefix, this.words);
     while (true) {
       for (let i = 0; i < results.length; i += 1) {
@@ -19,7 +18,7 @@ class Completer {
   static findCommonPrefix(words = []) {
     const firstWord = words[0];
     if (words.length <= 1) {
-      return firstWord || '';
+      return firstWord || "";
     }
     for (let i = 0; i < firstWord.length; i += 1) {
       for (let j = 1; j < words.length; j += 1) {
