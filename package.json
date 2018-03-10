@@ -5,7 +5,7 @@
   "version": "0.3.0",
   "scripts": {
     "build": "parcel build src/html/index.html -d public --public-url ./ --no-minify --no-cache",
-    "watch": "parcel serve src/html/index.html -d public --no-source-maps",
+    "watch": "parcel serve src/html/index.html -d public --no-cache",
     "coverage": "nyc --reporter=html --reporter text npm test",
     "test": "mocha --reporter dot"
   },

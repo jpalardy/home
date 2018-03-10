@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({12:[function(require,module,exports) {
+})({10:[function(require,module,exports) {
 module.exports = [{
   alias: "g",
   name: "google",
@@ -264,15 +264,13 @@ module.exports = [{
   name: "udemy",
   search: "https://www.udemy.com/courses/search/?q=%s",
   hide: true
-}].map(function (site) {
-  return {
-    name: site.name,
-    alias: site.alias || site.name,
-    visit: site.visit || site.search.match("^https?://[^/]+/")[0],
-    search: site.search || site.visit,
-    hide: Boolean(site.hide)
-  };
-});
+}].map(site => ({
+  name: site.name,
+  alias: site.alias || site.name,
+  visit: site.visit || site.search.match("^https?://[^/]+/")[0],
+  search: site.search || site.visit,
+  hide: Boolean(site.hide)
+}));
 },{}],8:[function(require,module,exports) {
 module.exports = [{
   name: "nodejs",
@@ -299,65 +297,46 @@ module.exports = [{
 }, {
   name: "async",
   visit: "https://caolan.github.io/async/"
-}].map(function (site) {
-  return {
-    name: site.name + " api",
-    alias: "api." + site.name,
-    visit: site.visit || site.search.match("^https?://[^/]+/")[0],
-    search: site.search || site.visit,
-    hide: true
-  };
-});
-},{}],10:[function(require,module,exports) {
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
+}].map(site => ({
+  name: `${site.name} api`,
+  alias: `api.${site.name}`,
+  visit: site.visit || site.search.match("^https?://[^/]+/")[0],
+  search: site.search || site.visit,
+  hide: true
+}));
+},{}],12:[function(require,module,exports) {
 function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Command = function () {
-  function Command(site, query, url) {
-    _classCallCheck(this, Command);
-
+class Command {
+  constructor(site, query, url) {
     this.site = site;
     this.query = query;
     this.url = url;
   }
 
-  _createClass(Command, [{
-    key: "toString",
-    value: function toString() {
-      return this.site.alias + " " + this.query;
-    }
-  }]);
-
-  return Command;
-}();
+  toString() {
+    return `${this.site.alias} ${this.query}`;
+  }
+}
 
 //-------------------------------------------------
 
 module.exports = function (sites, defaultSiteName) {
-  var _cheatSheet = sites.filter(function (site) {
-    return !site.hide;
-  }).map(function (site) {
-    return site.alias + "\t" + site.name;
-  });
-  var LUT = sites.reduce(function (acc, site) {
+  const cheatSheet = sites.filter(site => !site.hide).map(site => `${site.alias}\t${site.name}`);
+  const LUT = sites.reduce((acc, site) => {
     acc[site.alias] = site;
     return acc;
   }, {});
 
   return {
-    cheatSheet: function cheatSheet(text) {
-      var lines = _cheatSheet.filter(function (line) {
-        return line.indexOf(text) === 0;
-      });
+    cheatSheet(text) {
+      const lines = cheatSheet.filter(line => line.indexOf(text) === 0);
       // match:   filtered down list
       // nomatch: _everything_
-      return lines.length ? lines : _cheatSheet;
+      return lines.length ? lines : cheatSheet;
     },
-    parse: function parse(text) {
-      var words = text.trim().split(/ +/).filter(Boolean);
+    parse(text) {
+      const words = text.trim().split(/ +/).filter(Boolean);
       // text is blank
       if (words.length === 0) {
         return null;
@@ -365,168 +344,116 @@ module.exports = function (sites, defaultSiteName) {
       // first word supposed to be an existing site
       // query is all remaining words
 
-      var _words = _toArray(words),
-          first = _words[0],
-          rest = _words.slice(1);
+      var _words = _toArray(words);
 
-      var site = LUT[first];
-      var query = rest.join(" ");
+      const first = _words[0],
+            rest = _words.slice(1);
+
+      const site = LUT[first];
+      const query = rest.join(" ");
       // if not, parse again with default site
       if (!site) {
-        return this.parse(defaultSiteName + " " + text);
+        return this.parse(`${defaultSiteName} ${text}`);
       }
       // empty query means 'visit', otherwise 'search'
       if (!query) {
         return new Command(site, "", site.visit);
       }
-      var encodedQuery = encodeURIComponent(query).replace(/%20/g, "+");
+      const encodedQuery = encodeURIComponent(query).replace(/%20/g, "+");
       return new Command(site, query, site.search.replace(/%s/g, encodedQuery));
     }
   };
 };
 },{}],14:[function(require,module,exports) {
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Completer = function () {
-  function Completer(words) {
-    _classCallCheck(this, Completer);
-
+class Completer {
+  constructor(words) {
     this.words = words;
     this.completions = [];
   }
 
-  _createClass(Completer, [{
-    key: "matches",
-    value: /*#__PURE__*/regeneratorRuntime.mark(function matches(prefix) {
-      var results, i;
-      return regeneratorRuntime.wrap(function matches$(_context) {
-        while (1) {
-          switch (_context.prev = _context.next) {
-            case 0:
-              results = Completer.findCompletions(prefix, this.words);
-
-            case 1:
-              if (!true) {
-                _context.next = 11;
-                break;
-              }
-
-              i = 0;
-
-            case 3:
-              if (!(i < results.length)) {
-                _context.next = 9;
-                break;
-              }
-
-              _context.next = 6;
-              return results[i];
-
-            case 6:
-              i += 1;
-              _context.next = 3;
-              break;
-
-            case 9:
-              _context.next = 1;
-              break;
-
-            case 11:
-            case "end":
-              return _context.stop();
-          }
-        }
-      }, matches, this);
-    })
-
-    //-------------------------------------------------
-
-  }], [{
-    key: "findCommonPrefix",
-    value: function findCommonPrefix() {
-      var words = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-
-      var firstWord = words[0];
-      if (words.length <= 1) {
-        return firstWord || "";
+  *matches(prefix) {
+    const results = Completer.findCompletions(prefix, this.words);
+    while (true) {
+      for (let i = 0; i < results.length; i += 1) {
+        yield results[i];
       }
-      for (var i = 0; i < firstWord.length; i += 1) {
-        for (var j = 1; j < words.length; j += 1) {
-          if (!words[j][i] || words[j][i] !== firstWord[i]) {
-            return firstWord.slice(0, i);
-          }
+    }
+  }
+
+  //-------------------------------------------------
+
+  static findCommonPrefix(words = []) {
+    const firstWord = words[0];
+    if (words.length <= 1) {
+      return firstWord || "";
+    }
+    for (let i = 0; i < firstWord.length; i += 1) {
+      for (let j = 1; j < words.length; j += 1) {
+        if (!words[j][i] || words[j][i] !== firstWord[i]) {
+          return firstWord.slice(0, i);
         }
       }
-      // first word matched completely, all words are same
-      return firstWord;
     }
-  }, {
-    key: "findCompletions",
-    value: function findCompletions(prefix, words) {
-      var matches = words.filter(function (word) {
-        return word.startsWith(prefix);
-      });
-      var commonPrefix = Completer.findCommonPrefix(matches) || prefix;
-      return [].concat(_toConsumableArray(new Set([commonPrefix].concat(_toConsumableArray(matches)))));
-    }
-  }]);
+    // first word matched completely, all words are same
+    return firstWord;
+  }
 
-  return Completer;
-}();
+  static findCompletions(prefix, words) {
+    const matches = words.filter(word => word.startsWith(prefix));
+    const commonPrefix = Completer.findCommonPrefix(matches) || prefix;
+    return [...new Set([commonPrefix, ...matches])];
+  }
+}
 
 module.exports = Completer;
 },{}],6:[function(require,module,exports) {
 
 },{}],4:[function(require,module,exports) {
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
-
 /* global window, document, localStorage */
 
-var websites = require("./websites");
-var apis = require("./apis");
+const websites = require("./websites");
+const apis = require("./apis");
 
-var sites = [].concat(_toConsumableArray(websites), _toConsumableArray(apis));
+const sites = [...websites, ...apis];
 
-var Command = require("./command")(sites, "g");
-var Completer = require("./completer");
+const Command = require("./command")(sites, "g");
+const Completer = require("./completer");
 
 // import CSS for webpack
 require("../less/main.less");
 
-var get = document.getElementById.bind(document);
+const get = document.getElementById.bind(document);
 
 //-------------------------------------------------
 // actions
 //-------------------------------------------------
 
-var logUsage = function logUsage(alias) {
+const logUsage = function logUsage(alias) {
   if (!window.localStorage) {
     return;
   }
   if (!localStorage.getItem("logging")) {
     return;
   }
-  var usage = JSON.parse(localStorage.getItem("usage")) || {};
+  const usage = JSON.parse(localStorage.getItem("usage")) || {};
   usage[Date.now()] = alias;
   localStorage.setItem("usage", JSON.stringify(usage));
 };
 
-var ACTIONS = {
-  setCommand: function setCommand(text) {
+const ACTIONS = {
+  setCommand(text) {
     if (text === undefined) {
       return;
     }
     get("command_input").value = text;
   },
-  getText: function getText() {
+
+  getText() {
     return get("command_input").value.trim();
   },
-  submit: function submit() {
-    var command = Command.parse(this.getText());
+
+  submit() {
+    const command = Command.parse(this.getText());
     if (!command) {
       return;
     }
@@ -534,10 +461,12 @@ var ACTIONS = {
     logUsage(command.site.alias);
     window.location = command.url;
   },
-  toggleCheatSheet: function toggleCheatSheet() {
+
+  toggleCheatSheet() {
     get("cheatSheetDetails").classList.toggle("hide");
   },
-  reduceCheatSheet: function reduceCheatSheet(text) {
+
+  reduceCheatSheet(text) {
     get("cheatSheet").innerHTML = Command.cheatSheet(text).join("\n");
   }
 };
@@ -547,11 +476,11 @@ var ACTIONS = {
 //-------------------------------------------------
 
 {
-  var getParams = function getParams(query) {
-    var result = {};
+  const getParams = function getParams(query) {
+    const result = {};
     query = query || document.location.search.substring(1);
-    query.split("&").forEach(function (param) {
-      var parts = param.split("=", 2);
+    query.split("&").forEach(param => {
+      const parts = param.split("=", 2);
       result[parts[0]] = decodeURIComponent(parts[1]).replace(/\+/g, " ");
     });
     return result;
@@ -566,7 +495,7 @@ var ACTIONS = {
 //-------------------------------------------------
 
 {
-  document.body.addEventListener("keydown", function (ev) {
+  document.body.addEventListener("keydown", ev => {
     if (ev.keyCode === 27) {
       // ESC
       ACTIONS.toggleCheatSheet();
@@ -579,19 +508,17 @@ var ACTIONS = {
 
   //-------------------------------------------------
   // some state
-  var completer = new Completer(sites.map(function (site) {
-    return site.alias;
-  }).sort());
-  var commandForm = get("command_form");
+  const completer = new Completer(sites.map(site => site.alias).sort());
+  const commandForm = get("command_form");
   //-------------------------------------------------
 
-  commandForm.addEventListener("submit", function (ev) {
+  commandForm.addEventListener("submit", ev => {
     ev.preventDefault();
     ACTIONS.submit();
   });
 
-  var iter = void 0;
-  commandForm.addEventListener("keydown", function (ev) {
+  let iter;
+  commandForm.addEventListener("keydown", ev => {
     if (ev.keyCode === 9) {
       // TAB
       ev.preventDefault();
@@ -599,9 +526,9 @@ var ACTIONS = {
         ACTIONS.setCommand(iter.next().value);
         return;
       }
-      var currentText = ACTIONS.getText();
+      const currentText = ACTIONS.getText();
       iter = completer.matches(currentText);
-      var replacement = iter.next().value;
+      let replacement = iter.next().value;
       // if the first completion is what we typed, try next one
       if (currentText === replacement) {
         replacement = iter.next().value;
@@ -613,8 +540,8 @@ var ACTIONS = {
     iter = null;
   });
 
-  commandForm.addEventListener("keyup", function () {
+  commandForm.addEventListener("keyup", () => {
     ACTIONS.reduceCheatSheet(ACTIONS.getText().split(/\s+/)[0]);
   });
 }
-},{"./websites":12,"./apis":8,"./command":10,"./completer":14,"../less/main.less":6}]},{},[4])
+},{"./websites":10,"./apis":8,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])

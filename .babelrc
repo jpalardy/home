@@ -1,0 +1,16 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "> 1%",
+            "not op_mini > 0",
+            "not ie > 0"
+          ]
+        }
+      }
+    ]
+  ]
+}
