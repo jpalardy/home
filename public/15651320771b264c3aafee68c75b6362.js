@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({10:[function(require,module,exports) {
+})({8:[function(require,module,exports) {
 module.exports = [{
   alias: "g",
   name: "google",
@@ -264,6 +264,10 @@ module.exports = [{
   name: "udemy",
   search: "https://www.udemy.com/courses/search/?q=%s",
   hide: true
+}, {
+  name: "npm",
+  search: "https://www.npmjs.org/search?q=%s",
+  hide: true
 }].map(site => ({
   name: site.name,
   alias: site.alias || site.name,
@@ -271,7 +275,7 @@ module.exports = [{
   search: site.search || site.visit,
   hide: Boolean(site.hide)
 }));
-},{}],8:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 module.exports = [{
   name: "nodejs",
   visit: "https://nodejs.org/api/"
@@ -544,4 +548,4 @@ const ACTIONS = {
     ACTIONS.reduceCheatSheet(ACTIONS.getText().split(/\s+/)[0]);
   });
 }
-},{"./websites":10,"./apis":8,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
+},{"./websites":8,"./apis":10,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])

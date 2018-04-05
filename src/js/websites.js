@@ -237,6 +237,11 @@ module.exports = [
     search: "https://www.udemy.com/courses/search/?q=%s",
     hide: true,
   },
+  {
+    name: "npm",
+    search: "https://www.npmjs.org/search?q=%s",
+    hide: true,
+  },
 ].map(site => ({
   name: site.name,
   alias: site.alias || site.name,
