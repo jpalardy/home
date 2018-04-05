@@ -3,3 +3,4 @@ deploy.retry
 .nyc_output/
 coverage/
 .cache
+public/*.map
