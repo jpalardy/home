@@ -46,7 +46,6 @@ const ACTIONS = {
     if (!command) {
       return;
     }
-    //console.log("*** window.location =", command.url)
     logUsage(command.site.alias);
     window.location = command.url;
   },
@@ -65,9 +64,8 @@ const ACTIONS = {
 //-------------------------------------------------
 
 {
-  const getParams = function(query) {
+  const getParams = function(query = document.location.search.substring(1)) {
     const result = {};
-    query = query || document.location.search.substring(1);
     query.split("&").forEach(param => {
       const parts = param.split("=", 2);
       result[parts[0]] = decodeURIComponent(parts[1]).replace(/\+/g, " ");

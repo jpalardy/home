@@ -12,7 +12,7 @@ class Command {
 
 //-------------------------------------------------
 
-module.exports = function(sites, defaultSiteName) {
+module.exports = function create(sites, defaultSiteName) {
   const cheatSheet = sites.filter(site => !site.hide).map(site => `${site.alias}\t${site.name}`);
   const LUT = sites.reduce((acc, site) => {
     acc[site.alias] = site;
