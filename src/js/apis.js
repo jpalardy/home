@@ -32,6 +32,10 @@ module.exports = [
     name: "async",
     visit: "https://caolan.github.io/async/",
   },
+  {
+    name: "eslint",
+    visit: "https://eslint.org/",
+  },
 ].map(site => ({
   name: `${site.name} api`,
   alias: `api.${site.name}`,
