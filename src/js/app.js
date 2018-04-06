@@ -1,4 +1,4 @@
-/* global window, document, localStorage */
+/* global window, document, localStorage, sessionStorage, performance */
 
 const websites = require("./websites");
 const apis = require("./apis");
@@ -29,6 +29,23 @@ const logUsage = function(alias) {
   localStorage.setItem("usage", JSON.stringify(usage));
 };
 
+const lastText = (() => {
+  if (!window.sessionStorage) {
+    return {
+      get() {},
+      set() {},
+    };
+  }
+  return {
+    get() {
+      return sessionStorage.getItem("lastText");
+    },
+    set(value) {
+      sessionStorage.setItem("lastText", value);
+    },
+  };
+})();
+
 const ACTIONS = {
   setCommand(text) {
     if (text === undefined) {
@@ -47,6 +64,7 @@ const ACTIONS = {
       return;
     }
     logUsage(command.site.alias);
+    lastText.set(command.toString());
     window.location = command.url;
   },
 
@@ -73,8 +91,21 @@ const ACTIONS = {
     return result;
   };
 
-  ACTIONS.setCommand(getParams().q);
-  ACTIONS.submit();
+  // restore textfield on back button
+  const getLastText = function() {
+    if (window.performance && performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD) {
+      return lastText.get();
+    }
+    return "";
+  };
+
+  const {q} = getParams();
+  if (q) {
+    ACTIONS.setCommand(q);
+    ACTIONS.submit();
+  }
+
+  ACTIONS.setCommand(getLastText());
 }
 
 //-------------------------------------------------
