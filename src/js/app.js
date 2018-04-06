@@ -11,40 +11,38 @@ const Completer = require("./completer");
 // import CSS for webpack
 require("../less/main.less");
 
+//-------------------------------------------------
+// convenience
+//-------------------------------------------------
+
 const get = document.getElementById.bind(document);
+
+function guard(predicate, f, fallback = undefined) {
+  return (...args) => {
+    if (typeof predicate === "function" ? predicate() : predicate) {
+      return f(...args);
+    }
+    return fallback;
+  };
+}
 
 //-------------------------------------------------
 // actions
 //-------------------------------------------------
 
-const logUsage = function(alias) {
-  if (!window.localStorage) {
-    return;
-  }
+const logUsage = guard(window.localStorage, alias => {
   if (!localStorage.getItem("logging")) {
     return;
   }
   const usage = JSON.parse(localStorage.getItem("usage")) || {};
   usage[Date.now()] = alias;
   localStorage.setItem("usage", JSON.stringify(usage));
-};
+});
 
-const lastText = (() => {
-  if (!window.sessionStorage) {
-    return {
-      get() {},
-      set() {},
-    };
-  }
-  return {
-    get() {
-      return sessionStorage.getItem("lastText");
-    },
-    set(value) {
-      sessionStorage.setItem("lastText", value);
-    },
-  };
-})();
+const lastText = {
+  get: guard(window.sessionStorage, () => sessionStorage.getItem("lastText")),
+  set: guard(window.sessionStorage, value => sessionStorage.setItem("lastText", value)),
+};
 
 const ACTIONS = {
   setCommand(text) {
@@ -92,12 +90,12 @@ const ACTIONS = {
   };
 
   // restore textfield on back button
-  const getLastText = function() {
-    if (window.performance && performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD) {
+  const getLastText = guard(window.performance, () => {
+    if (performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD) {
       return lastText.get();
     }
     return "";
-  };
+  });
 
   const {q} = getParams();
   if (q) {

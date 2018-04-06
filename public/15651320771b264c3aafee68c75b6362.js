@@ -325,7 +325,7 @@ class Command {
 
 //-------------------------------------------------
 
-module.exports = function (sites, defaultSiteName) {
+module.exports = function create(sites, defaultSiteName) {
   const cheatSheet = sites.filter(site => !site.hide).map(site => `${site.alias}\t${site.name}`);
   const LUT = sites.reduce((acc, site) => {
     acc[site.alias] = site;
@@ -413,7 +413,7 @@ module.exports = Completer;
 },{}],6:[function(require,module,exports) {
 
 },{}],4:[function(require,module,exports) {
-/* global window, document, localStorage */
+/* global window, document, localStorage, sessionStorage, performance */
 
 const websites = require("./websites");
 const apis = require("./apis");
@@ -426,22 +426,37 @@ const Completer = require("./completer");
 // import CSS for webpack
 require("../less/main.less");
 
+//-------------------------------------------------
+// convenience
+//-------------------------------------------------
+
 const get = document.getElementById.bind(document);
+
+function guard(predicate, f, fallback = undefined) {
+  return (...args) => {
+    if (typeof predicate === "function" ? predicate() : predicate) {
+      return f(...args);
+    }
+    return fallback;
+  };
+}
 
 //-------------------------------------------------
 // actions
 //-------------------------------------------------
 
-const logUsage = function logUsage(alias) {
-  if (!window.localStorage) {
-    return;
-  }
+const logUsage = guard(window.localStorage, alias => {
   if (!localStorage.getItem("logging")) {
     return;
   }
   const usage = JSON.parse(localStorage.getItem("usage")) || {};
   usage[Date.now()] = alias;
   localStorage.setItem("usage", JSON.stringify(usage));
+});
+
+const lastText = {
+  get: guard(window.sessionStorage, () => sessionStorage.getItem("lastText")),
+  set: guard(window.sessionStorage, value => sessionStorage.setItem("lastText", value))
 };
 
 const ACTIONS = {
@@ -461,8 +476,8 @@ const ACTIONS = {
     if (!command) {
       return;
     }
-    //console.log("*** window.location =", command.url)
     logUsage(command.site.alias);
+    lastText.set(command.toString());
     window.location = command.url;
   },
 
@@ -480,9 +495,8 @@ const ACTIONS = {
 //-------------------------------------------------
 
 {
-  const getParams = function getParams(query) {
+  const getParams = function getParams(query = document.location.search.substring(1)) {
     const result = {};
-    query = query || document.location.search.substring(1);
     query.split("&").forEach(param => {
       const parts = param.split("=", 2);
       result[parts[0]] = decodeURIComponent(parts[1]).replace(/\+/g, " ");
@@ -490,8 +504,24 @@ const ACTIONS = {
     return result;
   };
 
-  ACTIONS.setCommand(getParams().q);
-  ACTIONS.submit();
+  // restore textfield on back button
+  const getLastText = guard(window.performance, () => {
+    if (performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD) {
+      return lastText.get();
+    }
+    return "";
+  });
+
+  var _getParams = getParams();
+
+  const q = _getParams.q;
+
+  if (q) {
+    ACTIONS.setCommand(q);
+    ACTIONS.submit();
+  }
+
+  ACTIONS.setCommand(getLastText());
 }
 
 //-------------------------------------------------
