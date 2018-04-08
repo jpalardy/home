@@ -38,7 +38,7 @@ module.exports = [
   },
 ].map(site => ({
   name: `${site.name} api`,
-  alias: `api.${site.name}`,
+  alias: `doc.${site.name}`,
   visit: site.visit || site.search.match("^https?://[^/]+/")[0],
   search: site.search || site.visit,
   hide: true,

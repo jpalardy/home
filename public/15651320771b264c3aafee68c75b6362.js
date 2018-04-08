@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({8:[function(require,module,exports) {
+})({10:[function(require,module,exports) {
 module.exports = [{
   alias: "g",
   name: "google",
@@ -275,7 +275,7 @@ module.exports = [{
   search: site.search || site.visit,
   hide: Boolean(site.hide)
 }));
-},{}],10:[function(require,module,exports) {
+},{}],8:[function(require,module,exports) {
 module.exports = [{
   name: "nodejs",
   visit: "https://nodejs.org/api/"
@@ -306,7 +306,7 @@ module.exports = [{
   visit: "https://eslint.org/"
 }].map(site => ({
   name: `${site.name} api`,
-  alias: `api.${site.name}`,
+  alias: `doc.${site.name}`,
   visit: site.visit || site.search.match("^https?://[^/]+/")[0],
   search: site.search || site.visit,
   hide: true
@@ -419,9 +419,9 @@ module.exports = Completer;
 /* global window, document, localStorage, sessionStorage, performance */
 
 const websites = require("./websites");
-const apis = require("./apis");
+const docs = require("./docs");
 
-const sites = [...websites, ...apis];
+const sites = [...websites, ...docs];
 
 const Command = require("./command")(sites, "g");
 const Completer = require("./completer");
@@ -581,4 +581,4 @@ const ACTIONS = {
     ACTIONS.reduceCheatSheet(ACTIONS.getText().split(/\s+/)[0]);
   });
 }
-},{"./websites":8,"./apis":10,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
+},{"./websites":10,"./docs":8,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])

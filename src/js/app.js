@@ -1,9 +1,9 @@
 /* global window, document, localStorage, sessionStorage, performance */
 
 const websites = require("./websites");
-const apis = require("./apis");
+const docs = require("./docs");
 
-const sites = [...websites, ...apis];
+const sites = [...websites, ...docs];
 
 const Command = require("./command")(sites, "g");
 const Completer = require("./completer");
