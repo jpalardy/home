@@ -7,9 +7,10 @@
 // orig method which is the require for previous bundles
 
 // eslint-disable-next-line no-global-assign
-require = (function (modules, cache, entry) {
+parcelRequire = (function (modules, cache, entry) {
   // Save the require from previous bundle to this closure if any
-  var previousRequire = typeof require === "function" && require;
+  var previousRequire = typeof parcelRequire === 'function' && parcelRequire;
+  var nodeRequire = typeof require === 'function' && require;
 
   function newRequire(name, jumped) {
     if (!cache[name]) {
@@ -17,7 +18,7 @@ require = (function (modules, cache, entry) {
         // if we cannot find the module within our internal map or
         // cache jump to the current global require ie. the last bundle
         // that was added to the page.
-        var currentRequire = typeof require === "function" && require;
+        var currentRequire = typeof parcelRequire === 'function' && parcelRequire;
         if (!jumped && currentRequire) {
           return currentRequire(name, true);
         }
@@ -28,6 +29,11 @@ require = (function (modules, cache, entry) {
         // we exhaust the require chain.
         if (previousRequire) {
           return previousRequire(name, true);
+        }
+
+        // Try the node require function if it exists.
+        if (nodeRequire && typeof name === 'string') {
+          return nodeRequire(name);
         }
 
         var err = new Error('Cannot find module \'' + name + '\'');
@@ -71,7 +77,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({10:[function(require,module,exports) {
+})({8:[function(require,module,exports) {
 module.exports = [{
   alias: "g",
   name: "google",
@@ -275,7 +281,7 @@ module.exports = [{
   search: site.search || site.visit,
   hide: Boolean(site.hide)
 }));
-},{}],8:[function(require,module,exports) {
+},{}],10:[function(require,module,exports) {
 module.exports = [{
   name: "nodejs",
   visit: "https://nodejs.org/api/"
@@ -581,4 +587,5 @@ const ACTIONS = {
     ACTIONS.reduceCheatSheet(ACTIONS.getText().split(/\s+/)[0]);
   });
 }
-},{"./websites":10,"./docs":8,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
+},{"./websites":8,"./docs":10,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
+//# sourceMappingURL=app.31bc3441.map
