@@ -31,7 +31,7 @@ describe("Completer", () => {
       assert.deepEqual(this.subject.completions, []);
     });
 
-    it.only("cycles through completions", function _test() {
+    it("cycles through completions", function _test() {
       {
         const matches = this.subject.matches("c");
         const words = ["c", "cv", "ch", "caniuse", "cr", "cnm", "c", "cv", "ch"]; // keeps going...
