@@ -65,14 +65,6 @@ const ACTIONS = {
     lastText.set(command.toString());
     window.location = command.url;
   },
-
-  toggleCheatSheet() {
-    get("cheatSheetDetails").classList.toggle("hide");
-  },
-
-  reduceCheatSheet(text) {
-    get("cheatSheet").innerHTML = Command.cheatSheet(text).join("\n");
-  },
 };
 
 //-------------------------------------------------
@@ -111,11 +103,7 @@ const ACTIONS = {
 //-------------------------------------------------
 
 {
-  document.body.addEventListener("keydown", ev => {
-    if (ev.keyCode === 27) {
-      // ESC
-      ACTIONS.toggleCheatSheet();
-    }
+  document.body.addEventListener("keydown", () => {
     // any key focuses on search field
     if (document.activeElement.tagName.toLowerCase() !== "input") {
       get("command_input").focus();
@@ -154,9 +142,5 @@ const ACTIONS = {
     }
     // anything else...
     iter = null;
-  });
-
-  commandForm.addEventListener("keyup", () => {
-    ACTIONS.reduceCheatSheet(ACTIONS.getText().split(/\s+/)[0]);
   });
 }

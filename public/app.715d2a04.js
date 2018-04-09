@@ -335,19 +335,12 @@ class Command {
 //-------------------------------------------------
 
 module.exports = function create(sites, defaultSiteName) {
-  const cheatSheet = sites.filter(site => !site.hide).map(site => `${site.alias}\t${site.name}`);
   const LUT = sites.reduce((acc, site) => {
     acc[site.alias] = site;
     return acc;
   }, {});
 
   return {
-    cheatSheet(text) {
-      const lines = cheatSheet.filter(line => line.indexOf(text) === 0);
-      // match:   filtered down list
-      // nomatch: _everything_
-      return lines.length ? lines : cheatSheet;
-    },
     parse(text) {
       const words = text.trim().split(/ +/).filter(Boolean);
       // text is blank
@@ -488,14 +481,6 @@ const ACTIONS = {
     logUsage(command.site.alias);
     lastText.set(command.toString());
     window.location = command.url;
-  },
-
-  toggleCheatSheet() {
-    get("cheatSheetDetails").classList.toggle("hide");
-  },
-
-  reduceCheatSheet(text) {
-    get("cheatSheet").innerHTML = Command.cheatSheet(text).join("\n");
   }
 };
 
@@ -538,11 +523,7 @@ const ACTIONS = {
 //-------------------------------------------------
 
 {
-  document.body.addEventListener("keydown", ev => {
-    if (ev.keyCode === 27) {
-      // ESC
-      ACTIONS.toggleCheatSheet();
-    }
+  document.body.addEventListener("keydown", () => {
     // any key focuses on search field
     if (document.activeElement.tagName.toLowerCase() !== "input") {
       get("command_input").focus();
@@ -582,10 +563,6 @@ const ACTIONS = {
     // anything else...
     iter = null;
   });
-
-  commandForm.addEventListener("keyup", () => {
-    ACTIONS.reduceCheatSheet(ACTIONS.getText().split(/\s+/)[0]);
-  });
 }
 },{"./websites":8,"./docs":10,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
-//# sourceMappingURL=app.31bc3441.map
+//# sourceMappingURL=app.715d2a04.map

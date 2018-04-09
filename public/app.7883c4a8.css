@@ -7,9 +7,6 @@ body {
   margin: 0;
   padding: 0;
 }
-#cheatSheetDetails {
-  margin-top: 5px;
-}
 #content {
   position: absolute;
   top: 10%;
@@ -45,7 +42,4 @@ body {
   border: 0;
   width: 95%;
   outline: none;
-}
-.hide {
-  display: none;
 }

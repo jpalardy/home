@@ -13,19 +13,12 @@ class Command {
 //-------------------------------------------------
 
 module.exports = function create(sites, defaultSiteName) {
-  const cheatSheet = sites.filter(site => !site.hide).map(site => `${site.alias}\t${site.name}`);
   const LUT = sites.reduce((acc, site) => {
     acc[site.alias] = site;
     return acc;
   }, {});
 
   return {
-    cheatSheet(text) {
-      const lines = cheatSheet.filter(line => line.indexOf(text) === 0);
-      // match:   filtered down list
-      // nomatch: _everything_
-      return lines.length ? lines : cheatSheet;
-    },
     parse(text) {
       const words = text
         .trim()
