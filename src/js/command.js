@@ -8,7 +8,7 @@ class Command {
 
 //-------------------------------------------------
 
-module.exports = function create(sites, defaultSiteName) {
+module.exports = function create(sites, defaultAlias) {
   const LUT = sites.reduce((acc, site) => {
     acc[site.alias] = site;
     return acc;
@@ -31,7 +31,7 @@ module.exports = function create(sites, defaultSiteName) {
       const query = rest.join(" ");
       // if not, parse again with default site
       if (!site) {
-        return this.parse(`${defaultSiteName} ${text}`);
+        return this.parse(`${defaultAlias} ${text}`);
       }
       // empty query means 'visit', otherwise 'search'
       if (!query) {

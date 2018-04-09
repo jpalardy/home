@@ -80,242 +80,191 @@ parcelRequire = (function (modules, cache, entry) {
 })({8:[function(require,module,exports) {
 module.exports = [{
   alias: "g",
-  name: "google",
   search: "https://www.google.com/search?q=%s"
 }, {
   alias: "gt",
-  name: "google translate",
   search: "https://translate.google.com/#auto|en|%s"
 }, {
   alias: "gim",
-  name: "google image",
   search: "https://www.google.com/search?q=%s&tbm=isch",
   visit: "https://www.google.com/imghp?tbm=isch"
 }, {
   alias: "gmap",
-  name: "google maps",
   search: "https://maps.google.com/maps?oi=map&q=%s"
 }, {
   alias: "w3w",
-  name: "what3words",
   search: "https://map.what3words.com/%s"
 }, {
   alias: "gfin",
-  name: "google finance",
   search: "https://www.google.com/finance?q=%s",
   visit: "https://www.google.com/finance"
 }, {
   alias: "tw",
-  name: "twitter",
   search: "https://twitter.com/search?q=%s"
 }, {
   alias: "yt",
-  name: "youtube",
   search: "https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search"
 }, {
   alias: "b",
-  name: "bing",
   search: "http://www.bing.com/search?q=%s"
 }, {
   alias: "sh",
-  name: "symbol hound",
   search: "http://symbolhound.com/?q=%s"
 }, {
   alias: "wa",
-  name: "wolfram alpha",
   search: "https://www.wolframalpha.com/input/?i=%s"
 }, {
   alias: "ddg",
-  name: "duckduckgo",
   search: "https://duckduckgo.com/?q=%s"
 }, {
   alias: "wp",
-  name: "wikipedia",
   search: "https://en.wikipedia.org/?search=%s"
 }, {
   alias: "mw",
-  name: "merriam-webster",
   search: "https://www.merriam-webster.com/dictionary/%s"
 }, {
   alias: "ud",
-  name: "urban dictionary",
   search: "http://www.urbandictionary.com/define.php?term=%s"
 }, {
-  name: "emoji",
+  alias: "emoji",
   search: "https://emojipedia.org/search/?q=%s"
 }, {
   alias: "so",
-  name: "stack overflow",
   search: "http://stackoverflow.com/search?q=%s"
 }, {
   alias: "cv",
-  name: "cross validated",
   search: "http://stats.stackexchange.com/search?q=%s"
 }, {
   alias: "am",
-  name: "amazon.com",
   search: "http://www.amazon.com/exec/obidos/external-search?mode=blended&keyword=%s"
 }, {
   alias: "am.ca",
-  name: "amazon.ca",
   search: "http://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s"
 }, {
-  name: "audible",
+  alias: "audible",
   search: "http://www.audible.com/search?advsearchKeywords=%s"
 }, {
-  name: "vpl",
+  alias: "vpl",
   search: "http://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue",
   visit: "http://www.vpl.ca/"
 }, {
   alias: "bp",
-  name: "bookpiles",
   search: "https://bookpiles.ca/jonathan/books?q=%s",
   visit: "https://bookpiles.ca/jonathan/books"
 }, {
-  name: "leanpub",
+  alias: "leanpub",
   search: "https://leanpub.com/bookstore/type/book/sort/earnings_in_last_7_days?search=%s"
 }, {
-  name: "ebooks-it",
-  search: "https://ebooks-it.org/search-engine.htm?bform=btitle&page=1&query=%s",
-  hide: true
+  alias: "ebooks-it",
+  search: "https://ebooks-it.org/search-engine.htm?bform=btitle&page=1&query=%s"
 }, {
-  name: "libgen",
-  search: "http://libgen.io/search.php?req=%s",
-  hide: true
+  alias: "libgen",
+  search: "http://libgen.io/search.php?req=%s"
 }, {
-  name: "imdb",
+  alias: "imdb",
   search: "http://imdb.com/find?q=%s"
 }, {
-  name: "yelp",
+  alias: "yelp",
   search: "http://www.yelp.com/search?find_desc=%s"
 }, {
   alias: "rt",
-  name: "rotten tomatoes",
   search: "http://www.rottentomatoes.com/search/?search=%s"
 }, {
   alias: "gh",
-  name: "github",
   search: "https://github.com/search?q=%s",
   visit: "https://github.com/jpalardy"
 }, {
   alias: "dh",
-  name: "docker hub",
   search: "https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=%s&starCount=0"
 }, {
   alias: "ls",
-  name: "yubnub",
   search: "http://yubnub.org/kernel/ls?args=%s"
 }, {
   alias: "ch",
-  name: "color-hex",
   search: "http://www.color-hex.com/color/%s"
 }, {
-  name: "caniuse",
+  alias: "caniuse",
   search: "http://caniuse.com/#search=%s"
 }, {
   alias: "ann",
-  name: "anime news network",
-  search: "http://www.animenewsnetwork.com/encyclopedia/search.php?searchbox=%s",
-  hide: true
+  search: "http://www.animenewsnetwork.com/encyclopedia/search.php?searchbox=%s"
 }, {
-  name: "anidb",
-  search: "http://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist",
-  hide: true
+  alias: "anidb",
+  search: "http://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist"
 }, {
   alias: "cr",
-  name: "crunchyroll",
-  search: "http://www.crunchyroll.com/search?q=%s",
-  hide: true
+  search: "http://www.crunchyroll.com/search?q=%s"
 }, {
   alias: "fun",
-  name: "funimation",
-  search: "http://www.funimation.com/search?q=%s",
-  hide: true
+  search: "http://www.funimation.com/search?q=%s"
 }, {
   alias: "nf",
-  name: "netflix",
-  search: "http://www.netflix.com/search/%s",
-  hide: true
+  search: "http://www.netflix.com/search/%s"
 }, {
-  name: "heisig",
+  alias: "heisig",
   search: "http://home.jpalardy.com/heisig/#%s",
-  visit: "http://home.jpalardy.com/heisig/",
-  hide: true
+  visit: "http://home.jpalardy.com/heisig/"
 }, {
   alias: "rd",
-  name: "romajidesu",
-  search: "http://www.romajidesu.com/dictionary/meaning-of-%s.html",
-  hide: true
+  search: "http://www.romajidesu.com/dictionary/meaning-of-%s.html"
 }, {
   alias: "wr",
-  name: "wordreference",
-  search: "http://www.wordreference.com/es/en/translation.asp?spen=%s",
-  hide: true
+  search: "http://www.wordreference.com/es/en/translation.asp?spen=%s"
 }, {
   alias: "cnm",
-  name: "cinema, vancouver",
-  visit: "http://www.cinemaclock.com/bri/vancouver",
-  hide: true
+  visit: "http://www.cinemaclock.com/bri/vancouver"
 }, {
   alias: "fs",
-  name: "fatsecret",
   search: "http://www.fatsecret.com/calories-nutrition/search?q=%s",
-  visit: "http://www.fatsecret.com/calories-nutrition/",
-  hide: true
+  visit: "http://www.fatsecret.com/calories-nutrition/"
 }, {
-  name: "meetup",
+  alias: "meetup",
   search: "https://www.google.com/search?q=meetup+vancouver+%s",
   visit: "https://www.meetup.com"
 }, {
-  name: "udemy",
-  search: "https://www.udemy.com/courses/search/?q=%s",
-  hide: true
+  alias: "udemy",
+  search: "https://www.udemy.com/courses/search/?q=%s"
 }, {
-  name: "npm",
-  search: "https://www.npmjs.org/search?q=%s",
-  hide: true
+  alias: "npm",
+  search: "https://www.npmjs.org/search?q=%s"
 }].map(site => ({
-  name: site.name,
-  alias: site.alias || site.name,
+  alias: site.alias,
   visit: site.visit || site.search.match("^https?://[^/]+/")[0],
-  search: site.search || site.visit,
-  hide: Boolean(site.hide)
+  search: site.search || site.visit
 }));
 },{}],10:[function(require,module,exports) {
 module.exports = [{
-  name: "nodejs",
+  alias: "nodejs",
   visit: "https://nodejs.org/api/"
 }, {
-  name: "express",
+  alias: "express",
   visit: "https://expressjs.com/en/4x/api.html"
 }, {
-  name: "jq",
+  alias: "jq",
   visit: "https://stedolan.github.io/jq/manual/"
 }, {
-  name: "aws",
+  alias: "aws",
   visit: "https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/"
 }, {
-  name: "mdn",
+  alias: "mdn",
   search: "https://developer.mozilla.org/en-US/search?q=%s",
   visit: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
 }, {
-  name: "lodash",
+  alias: "lodash",
   visit: "https://lodash.com/docs/"
 }, {
-  name: "ramda",
+  alias: "ramda",
   visit: "http://ramdajs.com/docs/"
 }, {
-  name: "async",
+  alias: "async",
   visit: "https://caolan.github.io/async/"
 }, {
-  name: "eslint",
+  alias: "eslint",
   visit: "https://eslint.org/"
 }].map(site => ({
-  name: `${site.name} api`,
-  alias: `doc.${site.name}`,
+  alias: `doc.${site.alias}`,
   visit: site.visit || site.search.match("^https?://[^/]+/")[0],
-  search: site.search || site.visit,
-  hide: true
+  search: site.search || site.visit
 }));
 },{}],12:[function(require,module,exports) {
 function _toArray(arr) { return Array.isArray(arr) ? arr : Array.from(arr); }
@@ -326,15 +275,11 @@ class Command {
     this.query = query;
     this.url = url;
   }
-
-  toString() {
-    return `${this.site.alias} ${this.query}`;
-  }
 }
 
 //-------------------------------------------------
 
-module.exports = function create(sites, defaultSiteName) {
+module.exports = function create(sites, defaultAlias) {
   const LUT = sites.reduce((acc, site) => {
     acc[site.alias] = site;
     return acc;
@@ -359,7 +304,7 @@ module.exports = function create(sites, defaultSiteName) {
       const query = rest.join(" ");
       // if not, parse again with default site
       if (!site) {
-        return this.parse(`${defaultSiteName} ${text}`);
+        return this.parse(`${defaultAlias} ${text}`);
       }
       // empty query means 'visit', otherwise 'search'
       if (!query) {
@@ -466,7 +411,7 @@ const ACTIONS = {
     if (text === undefined) {
       return;
     }
-    get("command_input").value = text;
+    get("command_input").value = text.trim();
   },
 
   getText() {
@@ -479,7 +424,7 @@ const ACTIONS = {
       return;
     }
     logUsage(command.site.alias);
-    lastText.set(command.toString());
+    lastText.set(this.getText());
     window.location = command.url;
   }
 };
@@ -569,4 +514,4 @@ const ACTIONS = {
   });
 }
 },{"./websites":8,"./docs":10,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
-//# sourceMappingURL=app.be3e999a.map
+//# sourceMappingURL=app.d58c2872.map

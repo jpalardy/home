@@ -1,45 +1,43 @@
 module.exports = [
   {
-    name: "nodejs",
+    alias: "nodejs",
     visit: "https://nodejs.org/api/",
   },
   {
-    name: "express",
+    alias: "express",
     visit: "https://expressjs.com/en/4x/api.html",
   },
   {
-    name: "jq",
+    alias: "jq",
     visit: "https://stedolan.github.io/jq/manual/",
   },
   {
-    name: "aws",
+    alias: "aws",
     visit: "https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/",
   },
   {
-    name: "mdn",
+    alias: "mdn",
     search: "https://developer.mozilla.org/en-US/search?q=%s",
     visit: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
   },
   {
-    name: "lodash",
+    alias: "lodash",
     visit: "https://lodash.com/docs/",
   },
   {
-    name: "ramda",
+    alias: "ramda",
     visit: "http://ramdajs.com/docs/",
   },
   {
-    name: "async",
+    alias: "async",
     visit: "https://caolan.github.io/async/",
   },
   {
-    name: "eslint",
+    alias: "eslint",
     visit: "https://eslint.org/",
   },
 ].map(site => ({
-  name: `${site.name} api`,
-  alias: `doc.${site.name}`,
+  alias: `doc.${site.alias}`,
   visit: site.visit || site.search.match("^https?://[^/]+/")[0],
   search: site.search || site.visit,
-  hide: true,
 }));
