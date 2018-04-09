@@ -1,5 +1,5 @@
 
-build:
+build: clean
 	@npm run build
 
 watch:
@@ -12,6 +12,7 @@ test:
 	@npm test
 
 clean:
+	rm -f public/app.*
 	rm -f deploy.retry
 	rm -rf coverage/ .nyc_output/
 
