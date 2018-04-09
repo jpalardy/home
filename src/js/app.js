@@ -49,7 +49,7 @@ const ACTIONS = {
     if (text === undefined) {
       return;
     }
-    get("command_input").value = text;
+    get("command_input").value = text.trim();
   },
 
   getText() {
@@ -62,7 +62,7 @@ const ACTIONS = {
       return;
     }
     logUsage(command.site.alias);
-    lastText.set(command.toString());
+    lastText.set(this.getText());
     window.location = command.url;
   },
 };

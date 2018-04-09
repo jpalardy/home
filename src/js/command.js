@@ -4,10 +4,6 @@ class Command {
     this.query = query;
     this.url = url;
   }
-
-  toString() {
-    return `${this.site.alias} ${this.query}`;
-  }
 }
 
 //-------------------------------------------------
