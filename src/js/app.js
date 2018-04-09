@@ -71,7 +71,7 @@ const ACTIONS = {
 // deal with q= param
 //-------------------------------------------------
 
-{
+(() => {
   const getParams = function(query = document.location.search.substring(1)) {
     const result = {};
     query.split("&").forEach(param => {
@@ -89,14 +89,18 @@ const ACTIONS = {
     return "";
   });
 
+  const lt = getLastText();
+  if (lt) {
+    ACTIONS.setCommand(lt);
+    return;
+  }
+
   const {q} = getParams();
   if (q) {
     ACTIONS.setCommand(q);
     ACTIONS.submit();
   }
-
-  ACTIONS.setCommand(getLastText());
-}
+})();
 
 //-------------------------------------------------
 // event handlers

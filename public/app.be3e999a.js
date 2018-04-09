@@ -488,7 +488,7 @@ const ACTIONS = {
 // deal with q= param
 //-------------------------------------------------
 
-{
+(() => {
   const getParams = function getParams(query = document.location.search.substring(1)) {
     const result = {};
     query.split("&").forEach(param => {
@@ -506,6 +506,12 @@ const ACTIONS = {
     return "";
   });
 
+  const lt = getLastText();
+  if (lt) {
+    ACTIONS.setCommand(lt);
+    return;
+  }
+
   var _getParams = getParams();
 
   const q = _getParams.q;
@@ -514,9 +520,7 @@ const ACTIONS = {
     ACTIONS.setCommand(q);
     ACTIONS.submit();
   }
-
-  ACTIONS.setCommand(getLastText());
-}
+})();
 
 //-------------------------------------------------
 // event handlers
@@ -565,4 +569,4 @@ const ACTIONS = {
   });
 }
 },{"./websites":8,"./docs":10,"./command":12,"./completer":14,"../less/main.less":6}]},{},[4])
-//# sourceMappingURL=app.715d2a04.map
+//# sourceMappingURL=app.be3e999a.map
