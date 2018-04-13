@@ -195,6 +195,10 @@ module.exports = [
     alias: "npm",
     search: "https://www.npmjs.org/search?q=%s",
   },
+  {
+    alias: "yarn",
+    search: "https://yarnpkg.com/en/packages?q=%s",
+  },
 ].map(site => ({
   alias: site.alias,
   visit: site.visit || site.search.match("^https?://[^/]+/")[0],
