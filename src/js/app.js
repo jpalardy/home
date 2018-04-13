@@ -49,21 +49,32 @@ const ACTIONS = {
     if (text === undefined) {
       return;
     }
-    get("command_input").value = text.trim();
+    const value = text.trim();
+    get("command_input").value = value;
+    this.updateLink(value);
+  },
+
+  updateLink(value) {
+    const command = Command.parse(value);
+    if (command) {
+      get("logo").href = command.url;
+    }
   },
 
   getText() {
     return get("command_input").value.trim();
   },
 
-  submit() {
+  submit(redirect = true) {
     const command = Command.parse(this.getText());
     if (!command) {
       return;
     }
     logUsage(command.site.alias);
     lastText.set(this.getText());
-    window.location = command.url;
+    if (redirect) {
+      window.location = command.url;
+    }
   },
 };
 
@@ -114,6 +125,10 @@ const ACTIONS = {
     }
   });
 
+  get("logo").addEventListener("click", () => {
+    ACTIONS.submit(false);
+  });
+
   //-------------------------------------------------
   // some state
   const completer = new Completer(sites.map(site => site.alias).sort());
@@ -146,5 +161,9 @@ const ACTIONS = {
     }
     // anything else...
     iter = null;
+  });
+
+  commandForm.addEventListener("keyup", () => {
+    ACTIONS.updateLink(get("command_input").value);
   });
 }
