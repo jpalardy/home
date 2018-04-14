@@ -25,5 +25,5 @@ clean:
 #-------------------------------------------------
 
 deploy:
-	ansible-playbook deploy.yml
+	rsync -avz public/ atlas@jpalardy.com:/home/atlas/home/public/ --delete
 
