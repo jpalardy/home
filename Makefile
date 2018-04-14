@@ -1,6 +1,10 @@
 
-build: clean
+build: clean public
 	@npm run build
+
+public:
+	mkdir -p public
+	for sub in subs/*; do rsync -q -avz --delete $$sub/public/ public/`basename $$sub`/; done
 
 watch:
 	@npm run watch
@@ -12,11 +16,11 @@ test:
 	@npm test
 
 clean:
-	rm -f public/app.*
+	rm -rf public
 	rm -f deploy.retry
 	rm -rf coverage/ .nyc_output/
 
-.PHONY: build watch coverage test clean
+.PHONY: build watch coverage test clean public
 
 #-------------------------------------------------
 

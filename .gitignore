@@ -1,6 +1,6 @@
 node_modules
 deploy.retry
+public/
 .nyc_output/
 coverage/
 .cache
-public/*.map
