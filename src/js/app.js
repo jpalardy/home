@@ -58,7 +58,9 @@ const ACTIONS = {
     const command = Command.parse(value);
     if (command) {
       get("logo").href = command.url;
+      return;
     }
+    get("logo").href = "http://home.jpalardy.com/";
   },
 
   getText() {
