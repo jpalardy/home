@@ -20,10 +20,6 @@ A _command_ without a query will open the site's home page:
 
     > gim
 
-Multiple commands can be specified, opening a new tab for each site:
-
-    > gim,yim muffins
-
 Why?
 ----
 
@@ -31,28 +27,4 @@ The web is about searching, and searching goes beyond Google.
 
 If I already know what site I want to end up on (github, amazon, google map), why go
 through the extra step of searching on Google and clicking my way through?
-
-How it works
-------------
-
-The end result ends up in `public`. Compile the assets:
-
-    > make compile
-
-    src/less   => tmp/css
-    src/images => tmp/images
-    src/html   => tmp
-
-Inline the assets into a single HTML page:
-
-    > cd tmp; python -m SimpleHTTPServer
-    > make inline
-
-Test the JavaScript files with mocha under node.js.
-
-    > make test
-
-Finally, clean up after yourself:
-
-    > make clean
 
