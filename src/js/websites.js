@@ -199,6 +199,18 @@ module.exports = [
     alias: "yarn",
     search: "https://yarnpkg.com/en/packages?q=%s",
   },
+  {
+    alias: "linkedin",
+    search: "https://www.linkedin.com/search/results/index/?keywords=%s",
+  },
+  {
+    alias: "edx",
+    search: "https://www.edx.org/course?search_query=%s",
+  },
+  {
+    alias: "coursera",
+    search: "https://www.coursera.org/courses?languages=en&query=%s",
+  },
 ].map(site => ({
   alias: site.alias,
   visit: site.visit || site.search.match("^https?://[^/]+/")[0],
