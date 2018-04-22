@@ -147,28 +147,28 @@ const ACTIONS = {
   let iter;
   let leftover = "";
   commandForm.addEventListener("keydown", ev => {
-    if (ev.keyCode === 9) {
-      // TAB
-      ev.preventDefault();
-      if (iter) {
-        ACTIONS.setCommand(iter.next().value, leftover);
-        return;
-      }
-      const currentText = ACTIONS.getText(); // trim and curPos
-      const curPos = ev.target.selectionStart;
-      const [left, right] = [currentText.slice(0, curPos), currentText.slice(curPos)];
-      iter = completer.matches(left);
-      let replacement = iter.next().value;
-      // if the first completion is what we typed, try next one
-      if (left === replacement) {
-        replacement = iter.next().value;
-      }
-      leftover = right;
-      ACTIONS.setCommand(replacement, leftover);
+    // not TAB
+    if (ev.keyCode !== 9) {
+      iter = null;
       return;
     }
-    // anything else...
-    iter = null;
+    // TAB
+    ev.preventDefault();
+    if (iter) {
+      ACTIONS.setCommand(iter.next().value, leftover);
+      return;
+    }
+    const currentText = ACTIONS.getText(); // trim and curPos
+    const curPos = ev.target.selectionStart;
+    const [left, right] = [currentText.slice(0, curPos), currentText.slice(curPos)];
+    iter = completer.matches(left);
+    let replacement = iter.next().value;
+    // if the first completion is what we typed, try next one
+    if (left === replacement) {
+      replacement = iter.next().value;
+    }
+    leftover = right;
+    ACTIONS.setCommand(replacement, leftover);
   });
 
   commandForm.addEventListener("keyup", () => {
