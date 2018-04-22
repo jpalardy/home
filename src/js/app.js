@@ -145,7 +145,7 @@ const ACTIONS = {
   });
 
   let iter;
-  let leftover = "";
+  let right = "";
   commandForm.addEventListener("keydown", ev => {
     // not TAB
     if (ev.keyCode !== 9) {
@@ -155,20 +155,20 @@ const ACTIONS = {
     // TAB
     ev.preventDefault();
     if (iter) {
-      ACTIONS.setCommand(iter.next().value, leftover);
+      ACTIONS.setCommand(iter.next().value, right);
       return;
     }
-    const currentText = ACTIONS.getText(); // trim and curPos
+    const currentText = ACTIONS.getText();
     const curPos = ev.target.selectionStart;
-    const [left, right] = [currentText.slice(0, curPos), currentText.slice(curPos)];
+    const left = currentText.slice(0, curPos);
+    right = currentText.slice(curPos);
     iter = completer.matches(left);
     let replacement = iter.next().value;
     // if the first completion is what we typed, try next one
     if (left === replacement) {
       replacement = iter.next().value;
     }
-    leftover = right;
-    ACTIONS.setCommand(replacement, leftover);
+    ACTIONS.setCommand(replacement, right);
   });
 
   commandForm.addEventListener("keyup", () => {
