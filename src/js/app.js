@@ -45,12 +45,14 @@ const lastText = {
 };
 
 const ACTIONS = {
-  setCommand(text) {
+  setCommand(left, right = "") {
+    const text = `${left}${right}`;
     if (text === undefined) {
       return;
     }
     const value = text.trim();
     get("command_input").value = value;
+    get("command_input").setSelectionRange(left.length, left.length);
     this.updateLink(value);
   },
 
@@ -143,22 +145,26 @@ const ACTIONS = {
   });
 
   let iter;
+  let leftover = "";
   commandForm.addEventListener("keydown", ev => {
     if (ev.keyCode === 9) {
       // TAB
       ev.preventDefault();
       if (iter) {
-        ACTIONS.setCommand(iter.next().value);
+        ACTIONS.setCommand(iter.next().value, leftover);
         return;
       }
-      const currentText = ACTIONS.getText();
-      iter = completer.matches(currentText);
+      const currentText = ACTIONS.getText(); // trim and curPos
+      const curPos = ev.target.selectionStart;
+      const [left, right] = [currentText.slice(0, curPos), currentText.slice(curPos)];
+      iter = completer.matches(left);
       let replacement = iter.next().value;
       // if the first completion is what we typed, try next one
-      if (currentText === replacement) {
+      if (left === replacement) {
         replacement = iter.next().value;
       }
-      ACTIONS.setCommand(replacement);
+      leftover = right;
+      ACTIONS.setCommand(replacement, leftover);
       return;
     }
     // anything else...
