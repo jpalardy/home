@@ -162,13 +162,8 @@ const ACTIONS = {
     const curPos = ev.target.selectionStart;
     const left = currentText.slice(0, curPos);
     right = currentText.slice(curPos);
-    iter = completer.matches(left);
-    let replacement = iter.next().value;
-    // if the first completion is what we typed, try next one
-    if (left === replacement) {
-      replacement = iter.next().value;
-    }
-    ACTIONS.setCommand(replacement, right);
+    iter = completer.matches(left, {skipSameFirst: true});
+    ACTIONS.setCommand(iter.next().value, right);
   });
 
   commandForm.addEventListener("keyup", () => {

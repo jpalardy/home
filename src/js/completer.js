@@ -4,8 +4,14 @@ class Completer {
     this.completions = [];
   }
 
-  *matches(prefix) {
+  *matches(prefix, options = {}) {
     const results = Completer.findCompletions(prefix, this.words);
+    if (options.skipSameFirst) {
+      const first = results.shift();
+      if (first !== undefined) {
+        results.push(first);
+      }
+    }
     while (true) {
       for (let i = 0; i < results.length; i += 1) {
         yield results[i];

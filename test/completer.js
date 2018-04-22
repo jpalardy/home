@@ -43,6 +43,19 @@ describe("Completer", () => {
         words.forEach(word => assert.strictEqual(matches.next().value, word));
       }
     });
+
+    it("cycles through completions, skipSameFirst", function _test() {
+      {
+        const matches = this.subject.matches("c", {skipSameFirst: true});
+        const words = ["cv", "ch", "caniuse", "cr", "cnm", "c", "cv", "ch"]; // keeps going...
+        words.forEach(word => assert.strictEqual(matches.next().value, word));
+      }
+      {
+        const matches = this.subject.matches("am", {skipSameFirst: true});
+        const words = ["am.ca", "am", "am.ca", "am"];
+        words.forEach(word => assert.strictEqual(matches.next().value, word));
+      }
+    });
   });
 
   //-------------------------------------------------
