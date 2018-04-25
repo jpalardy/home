@@ -7,9 +7,9 @@ class Completer {
   *matches(prefix, options = {}) {
     const results = Completer.findCompletions(prefix, this.words);
     if (options.skipSameFirst) {
-      const first = results.shift();
-      if (first !== undefined) {
-        results.push(first);
+      const first = results[0];
+      if (first !== undefined && first === prefix) {
+        results.push(results.shift()); // rotate-left
       }
     }
     while (true) {
