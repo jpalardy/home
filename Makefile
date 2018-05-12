@@ -25,5 +25,5 @@ clean:
 #-------------------------------------------------
 
 deploy:
-	rsync -avz public/ atlas@jpalardy.com:/home/atlas/home/public/ --delete
+	aws s3 sync public/ s3://home.jpalardy.com/ --delete
 
