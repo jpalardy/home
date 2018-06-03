@@ -36,8 +36,10 @@ module.exports = [
     alias: "eslint",
     visit: "https://eslint.org/",
   },
-].map(site => ({
-  alias: `doc.${site.alias}`,
-  visit: site.visit || site.search.match("^https?://[^/]+/")[0],
-  search: site.search || site.visit,
-}));
+].map(site => {
+  return {
+    alias: `doc.${site.alias}`,
+    visit: site.visit || site.search.match("^https?://[^/]+/")[0],
+    search: site.search || site.visit,
+  };
+});

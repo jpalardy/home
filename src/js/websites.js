@@ -216,8 +216,10 @@ module.exports = [
     visit: "https://www.justwatch.com/ca",
     search: "https://www.justwatch.com/ca/search?q=%s",
   },
-].map(site => ({
-  alias: site.alias,
-  visit: site.visit || site.search.match("^https?://[^/]+/")[0],
-  search: site.search || site.visit,
-}));
+].map(site => {
+  return {
+    alias: site.alias,
+    visit: site.visit || site.search.match("^https?://[^/]+/")[0],
+    search: site.search || site.visit,
+  };
+});
