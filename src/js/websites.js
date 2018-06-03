@@ -211,6 +211,11 @@ module.exports = [
     alias: "coursera",
     search: "https://www.coursera.org/courses?languages=en&query=%s",
   },
+  {
+    alias: "jw",
+    visit: "https://www.justwatch.com/ca",
+    search: "https://www.justwatch.com/ca/search?q=%s",
+  },
 ].map(site => ({
   alias: site.alias,
   visit: site.visit || site.search.match("^https?://[^/]+/")[0],
