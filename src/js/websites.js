@@ -125,6 +125,10 @@ module.exports = [
     visit: "https://github.com/jpalardy",
   },
   {
+    alias: "ghn",
+    visit: "https://github.com/notifications",
+  },
+  {
     alias: "dh",
     search: "https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=%s&starCount=0",
   },
