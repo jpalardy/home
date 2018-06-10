@@ -1,6 +1,7 @@
 
 build: clean public
 	@npm run build
+	sed -e "s/\$$VERSION/`git rev-parse --short HEAD` @ `date +%F`/" -i public/index.html
 
 public:
 	mkdir -p public
