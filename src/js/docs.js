@@ -36,6 +36,10 @@ module.exports = [
     alias: "eslint",
     visit: "https://eslint.org/",
   },
+  {
+    alias: "redis",
+    visit: "https://redis.io/commands",
+  },
 ].map(site => {
   return {
     alias: `doc.${site.alias}`,
