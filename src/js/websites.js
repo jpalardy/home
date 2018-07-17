@@ -220,6 +220,11 @@ module.exports = [
     visit: "https://www.justwatch.com/ca",
     search: "https://www.justwatch.com/ca/search?q=%s",
   },
+  {
+    alias: "ports",
+    visit: "https://www.speedguide.net/ports.php",
+    search: "https://www.speedguide.net/ports.php?filter=%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
