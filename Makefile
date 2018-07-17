@@ -26,5 +26,8 @@ clean:
 #-------------------------------------------------
 
 deploy:
+	aws s3 sync public/ s3://home.jpalardy.com/
+
+deploy-delete:
 	aws s3 sync public/ s3://home.jpalardy.com/ --delete
 
