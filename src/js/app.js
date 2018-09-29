@@ -1,4 +1,4 @@
-/* global window, document, localStorage, sessionStorage, performance */
+/* global window, document, sessionStorage, performance */
 
 const websites = require("./websites");
 const docs = require("./docs");
@@ -29,15 +29,6 @@ function guard(predicate, f, fallback = undefined) {
 //-------------------------------------------------
 // actions
 //-------------------------------------------------
-
-const logUsage = guard(window.localStorage, alias => {
-  if (!localStorage.getItem("logging")) {
-    return;
-  }
-  const usage = JSON.parse(localStorage.getItem("usage")) || {};
-  usage[Date.now()] = alias;
-  localStorage.setItem("usage", JSON.stringify(usage));
-});
 
 const lastText = {
   get: guard(window.sessionStorage, () => sessionStorage.getItem("lastText")),
@@ -74,7 +65,6 @@ const ACTIONS = {
     if (!command) {
       return;
     }
-    logUsage(command.site.alias);
     lastText.set(this.getText());
     if (redirect) {
       window.location = command.url;
