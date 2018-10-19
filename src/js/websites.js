@@ -230,6 +230,10 @@ module.exports = [
     visit: "https://www.speedguide.net/ports.php",
     search: "https://www.speedguide.net/ports.php?filter=%s",
   },
+  {
+    alias: "wtb",
+    visit: "https://www.worldtimebuddy.com/",
+  },
 ].map(site => {
   return {
     alias: site.alias,
