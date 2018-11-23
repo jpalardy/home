@@ -134,6 +134,11 @@ module.exports = [
     search: "https://github.com/trending/%s",
   },
   {
+    alias: "ghpr",
+    visit: "https://github.com/pulls",
+    search: "https://github.com/pulls?utf8=✓&q=is%3Aopen+is%3Apr+author%3Ajpalardy+archived%3Afalse+%s",
+  },
+  {
     alias: "dh",
     search: "https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=%s&starCount=0",
   },
