@@ -239,6 +239,10 @@ module.exports = [
     alias: "wtb",
     visit: "https://www.worldtimebuddy.com/",
   },
+  {
+    alias: "ct",
+    search: "https://www.canadiantire.ca/en/search-results.html?q=%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
