@@ -240,8 +240,8 @@ module.exports = [
     visit: "https://www.worldtimebuddy.com/",
   },
   {
-    alias: "ct",
-    search: "https://www.canadiantire.ca/en/search-results.html?q=%s",
+    alias: "aws",
+    search: "https://console.aws.amazon.com/%s/home",
   },
 ].map(site => {
   return {
