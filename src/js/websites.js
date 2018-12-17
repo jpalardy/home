@@ -243,6 +243,10 @@ module.exports = [
     alias: "aws",
     search: "https://console.aws.amazon.com/%s/home",
   },
+  {
+    alias: "devhints",
+    search: "https://devhints.io/?q=%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
