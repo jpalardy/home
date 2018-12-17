@@ -40,6 +40,11 @@ module.exports = [
     alias: "redis",
     visit: "https://redis.io/commands",
   },
+  {
+    alias: "gp",
+    search: "https://golang.org/search?q=%s",
+    visit: "https://golang.org/doc/",
+  },
 ].map(site => {
   return {
     alias: `doc.${site.alias}`,
