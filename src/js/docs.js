@@ -41,7 +41,7 @@ module.exports = [
     visit: "https://redis.io/commands",
   },
   {
-    alias: "gp",
+    alias: "go",
     search: "https://golang.org/search?q=%s",
     visit: "https://golang.org/doc/",
   },
