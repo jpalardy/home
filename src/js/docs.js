@@ -41,9 +41,13 @@ module.exports = [
     visit: "https://redis.io/commands",
   },
   {
-    alias: "go",
+    alias: "golang",
     search: "https://golang.org/search?q=%s",
     visit: "https://golang.org/doc/",
+  },
+  {
+    alias: "golang:pkg",
+    visit: "https://golang.org/pkg/",
   },
 ].map(site => {
   return {
