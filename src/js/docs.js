@@ -49,6 +49,11 @@ module.exports = [
     alias: "golang:pkg",
     visit: "https://golang.org/pkg/",
   },
+  {
+    alias: "kubernetes",
+    search: "https://kubernetes.io/docs/search/?q=%s",
+    visit: "https://kubernetes.io/docs/home/",
+  },
 ].map(site => {
   return {
     alias: `doc.${site.alias}`,
