@@ -35,7 +35,7 @@ module.exports = [
   },
   {
     alias: "b",
-    search: "http://www.bing.com/search?q=%s",
+    search: "https://www.bing.com/search?q=%s",
   },
   {
     alias: "sh",
@@ -59,7 +59,7 @@ module.exports = [
   },
   {
     alias: "ud",
-    search: "http://www.urbandictionary.com/define.php?term=%s",
+    search: "https://www.urbandictionary.com/define.php?term=%s",
   },
   {
     alias: "emoji",
@@ -67,28 +67,28 @@ module.exports = [
   },
   {
     alias: "so",
-    search: "http://stackoverflow.com/search?q=%s",
+    search: "https://stackoverflow.com/search?q=%s",
   },
   {
     alias: "cv",
-    search: "http://stats.stackexchange.com/search?q=%s",
+    search: "https://stats.stackexchange.com/search?q=%s",
   },
   {
     alias: "am",
-    search: "http://www.amazon.com/exec/obidos/external-search?mode=blended&keyword=%s",
+    search: "https://www.amazon.com/exec/obidos/external-search?mode=blended&keyword=%s",
   },
   {
     alias: "am.ca",
-    search: "http://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s",
+    search: "https://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s",
   },
   {
     alias: "audible",
-    search: "http://www.audible.com/search?advsearchKeywords=%s",
+    search: "https://www.audible.com/search?advsearchKeywords=%s",
   },
   {
     alias: "vpl",
-    search: "http://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue",
-    visit: "http://www.vpl.ca/",
+    search: "https://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue",
+    visit: "https://www.vpl.ca/",
   },
   {
     alias: "bp",
@@ -109,15 +109,15 @@ module.exports = [
   },
   {
     alias: "imdb",
-    search: "http://imdb.com/find?q=%s",
+    search: "https://imdb.com/find?q=%s",
   },
   {
     alias: "yelp",
-    search: "http://www.yelp.com/search?find_desc=%s",
+    search: "https://www.yelp.com/search?find_desc=%s",
   },
   {
     alias: "rt",
-    search: "http://www.rottentomatoes.com/search/?search=%s",
+    search: "https://www.rottentomatoes.com/search/?search=%s",
   },
   {
     alias: "gh",
@@ -144,57 +144,57 @@ module.exports = [
   },
   {
     alias: "ls",
-    search: "http://yubnub.org/kernel/ls?args=%s",
+    search: "https://yubnub.org/kernel/ls?args=%s",
   },
   {
     alias: "color-hex",
-    search: "http://www.color-hex.com/color/%s",
+    search: "https://www.color-hex.com/color/%s",
   },
   {
     alias: "caniuse",
-    search: "http://caniuse.com/#search=%s",
+    search: "https://caniuse.com/#search=%s",
   },
   {
     alias: "ann",
-    search: "http://www.animenewsnetwork.com/encyclopedia/search.php?searchbox=%s",
+    search: "https://www.animenewsnetwork.com/encyclopedia/search.php?searchbox=%s",
   },
   {
     alias: "anidb",
-    search: "http://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist",
+    search: "https://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist",
   },
   {
     alias: "cr",
-    search: "http://www.crunchyroll.com/search?q=%s",
+    search: "https://www.crunchyroll.com/search?q=%s",
   },
   {
     alias: "fun",
-    search: "http://www.funimation.com/search?q=%s",
+    search: "https://www.funimation.com/search?q=%s",
   },
   {
     alias: "nf",
-    search: "http://www.netflix.com/search/%s",
+    search: "https://www.netflix.com/search/%s",
   },
   {
     alias: "heisig",
-    search: "http://home.jpalardy.com/heisig/#%s",
-    visit: "http://home.jpalardy.com/heisig/",
+    search: "https://home.jpalardy.com/heisig/#%s",
+    visit: "https://home.jpalardy.com/heisig/",
   },
   {
     alias: "rd",
-    search: "http://www.romajidesu.com/dictionary/meaning-of-%s.html",
+    search: "https://www.romajidesu.com/dictionary/meaning-of-%s.html",
   },
   {
     alias: "wr",
-    search: "http://www.wordreference.com/es/en/translation.asp?spen=%s",
+    search: "https://www.wordreference.com/es/en/translation.asp?spen=%s",
   },
   {
     alias: "cnm",
-    visit: "http://www.cinemaclock.com/bri/vancouver",
+    visit: "https://www.cinemaclock.com/bri/vancouver",
   },
   {
     alias: "fs",
-    search: "http://www.fatsecret.com/calories-nutrition/search?q=%s",
-    visit: "http://www.fatsecret.com/calories-nutrition/",
+    search: "https://www.fatsecret.com/calories-nutrition/search?q=%s",
+    visit: "https://www.fatsecret.com/calories-nutrition/",
   },
   {
     alias: "meetup",

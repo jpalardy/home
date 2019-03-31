@@ -26,7 +26,7 @@ module.exports = [
   },
   {
     alias: "ramda",
-    visit: "http://ramdajs.com/docs/",
+    visit: "https://ramdajs.com/docs/",
   },
   {
     alias: "async",
