@@ -25,6 +25,11 @@ clean:
 
 #-------------------------------------------------
 
+list:
+	@node scripts/list-all.js | sort | column -t
+
+#-------------------------------------------------
+
 deploy:
 	aws s3 sync public/ s3://home.jpalardy.com/ --delete
 	aws cloudfront create-invalidation --distribution-id E1SGJ2SOI6A0WB --paths "/*" --profile jonathan
