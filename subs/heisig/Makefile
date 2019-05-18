@@ -1,4 +1,4 @@
 
 public/heisig.min.json: public/heisig.json
-	cat $< | jq '[.[] | {(.kanji): (.keyword)}]' -c > $@
+	jq '[.[] | [.kanji, .keyword]]' -c $< > $@
 

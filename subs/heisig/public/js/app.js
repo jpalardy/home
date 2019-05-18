@@ -36,7 +36,7 @@ const app = new Vue({
     },
   },
   //-------------------------------------------------
-  created() {
+  mounted() {
     // pick query from the URL
     this.query = decodeURIComponent(location.hash.replace(/^#/, "").replace(/\+/g, "%20"));
     // load JSON
@@ -58,7 +58,7 @@ const app = new Vue({
           const result = {};
           result.no = `${i + 1}`;
           result.key = `card-${result.no}`;
-          [result.kanji, result.keyword] = Object.entries(card).flat();
+          [result.kanji, result.keyword] = card;
           result.tokens = [...tokenize(result.keyword), result.no, result.kanji];
           return result;
         });
