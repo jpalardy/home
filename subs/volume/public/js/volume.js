@@ -1,14 +1,15 @@
 /* global document, Vue */
 
-document.addEventListener('keydown', (ev) => {
-  if (ev.keyCode === 27) { // ESC
-    document.querySelector('#volume').classList.toggle('hide');
-    document.querySelector('#volume textarea').focus();
+document.addEventListener("keydown", ev => {
+  if (ev.keyCode === 27) {
+    // ESC
+    document.querySelector("#volume").classList.toggle("hide");
+    document.querySelector("#volume textarea").focus();
   }
 });
 
 const volume = new Vue({
-  el: '#volume',
+  el: "#volume",
   data: {
     text: "",
   },
@@ -16,7 +17,7 @@ const volume = new Vue({
   computed: {
     volume() {
       const lines = this.text.split("\n");
-      const volumes = lines.map((line) => {
+      const volumes = lines.map(line => {
         const volume = this.convert(line);
         if (volume) {
           return `${line.trim()} => ${volume}ml`;
@@ -51,4 +52,3 @@ const volume = new Vue({
     },
   },
 });
-
