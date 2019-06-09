@@ -181,7 +181,7 @@ module.exports = [
   },
   {
     alias: "rd",
-    search: "https://www.romajidesu.com/dictionary/meaning-of-%s.html",
+    search: "http://www.romajidesu.com/dictionary/meaning-of-%s.html",
   },
   {
     alias: "wr",
