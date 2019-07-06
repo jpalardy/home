@@ -259,6 +259,10 @@ module.exports = [
     alias: "hd",
     search: "https://www.homedepot.ca/en/home/search.html?q=%s",
   },
+  {
+    alias: "usgs",
+    visit: "https://earthquake.usgs.gov/earthquakes/map/",
+  },
 ].map(site => {
   return {
     alias: site.alias,
