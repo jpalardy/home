@@ -29,6 +29,8 @@ a {
   border: 1px solid #777;
   display: none;
   position: absolute;
+  max-width: 160px;
+  max-height: 160px;
 }
 
 /*-------------------------------------------------*/
