@@ -87,7 +87,7 @@ const renderBooks = (books, years) => {
     tooltip.onload = () => {
       tooltip.style.display = "block";
     };
-    tooltip.src = `https://bookpiles.ca${data.image_url}`;
+    tooltip.src = `https://bookpiles.ca/${data.image_url}`;
   });
   document.addEventListener("mouseout", () => {
     tooltip.style.display = "none";
@@ -177,7 +177,7 @@ const app = new Vue({
           .map(book => ({
             ml: Number(book.ml),
             pages: Number(book.pages),
-            image_url: book.image_url,
+            image_url: `images/covers/${book.asin}.jpg`,
             year: Number(book.done_on.split("-")[0]),
           }));
         this.books = books;
