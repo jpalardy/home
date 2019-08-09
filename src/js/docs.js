@@ -33,6 +33,11 @@ module.exports = [
     alias: "golang:pkg",
     visit: "https://golang.org/pkg/",
   },
+  {
+    alias: "rust",
+    search: "https://doc.rust-lang.org/std/index.html?search=%s",
+    visit: "https://doc.rust-lang.org/std/index.html",
+  },
 ].map(site => {
   return {
     alias: `doc.${site.alias}`,
