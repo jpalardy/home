@@ -12,10 +12,6 @@ module.exports = [
     visit: "https://stedolan.github.io/jq/manual/",
   },
   {
-    alias: "aws",
-    visit: "https://docs.aws.amazon.com/AWSJavaScriptSDK/latest/",
-  },
-  {
     alias: "mdn",
     search: "https://developer.mozilla.org/en-US/search?q=%s",
     visit: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
@@ -25,20 +21,8 @@ module.exports = [
     visit: "https://lodash.com/docs/",
   },
   {
-    alias: "ramda",
-    visit: "https://ramdajs.com/docs/",
-  },
-  {
     alias: "async",
     visit: "https://caolan.github.io/async/",
-  },
-  {
-    alias: "eslint",
-    visit: "https://eslint.org/",
-  },
-  {
-    alias: "redis",
-    visit: "https://redis.io/commands",
   },
   {
     alias: "golang",
@@ -48,11 +32,6 @@ module.exports = [
   {
     alias: "golang:pkg",
     visit: "https://golang.org/pkg/",
-  },
-  {
-    alias: "kubernetes",
-    search: "https://kubernetes.io/docs/search/?q=%s",
-    visit: "https://kubernetes.io/docs/home/",
   },
 ].map(site => {
   return {
