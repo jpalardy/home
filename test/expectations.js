@@ -10,8 +10,8 @@ describe("completer expectations for", () => {
   const sites = [...websites, ...docs];
   const completer = new Completer(sites.map(site => site.alias).sort());
 
-  it("do => doc.", () => {
-    const matches = completer.matches("do");
-    assert.strictEqual(matches.next().value, "doc.");
+  it(": => doc.", () => {
+    const matches = completer.matches(":r");
+    assert.strictEqual(matches.next().value, ":rust");
   });
 });
