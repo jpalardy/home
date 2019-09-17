@@ -1,51 +1,27 @@
-@foreground: #777;
+
+// mixin
+.font() {
+  color: #333;
+  font-family: monospace;
+  font-size: 16px;
+}
 
 html, body {
-  color: @foreground;
-  font-family: Verdana, Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+  .font();
 }
 
 #content {
-  position: absolute;
-  top:  10%;
-  left: 50%;
-  width: 300px;
-  margin-left: -150px;
+  margin-top: 40px;
+  margin-left: 20px;
 
-  a.logo {
-    text-indent: -5000px;
-    display: block;
-    width:  60px;
-    height: 60px;
-    background: url(https://secure.gravatar.com/avatar/ecfd1bdc5d3aab1e40f25658817712ba) no-repeat right;
-    background-size: 100% 100%;
-    border-radius: 10px;
-  }
-
-  form {
-    position: absolute;
-    top:  17px;
-    left: 70px;
-  }
-
-  #glass {
-    border: 1px solid #bbb;
-    border-radius: 5px;
-    line-height: 23px;
-    padding-left: 23px;
-    background: data-uri('images/glass.png') no-repeat;
-    background-size: 24px 24px;
-    width: 200px;
-    height: 24px;
+  p {
+    margin-bottom: 5px;
   }
 
   input {
+    .font();
+    outline: none;
     border: 0;
     width: 95%;
-    outline: none;
   }
 }

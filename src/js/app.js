@@ -44,16 +44,6 @@ const ACTIONS = {
     const value = text.trim();
     get("command_input").value = value;
     get("command_input").setSelectionRange(left.length, left.length);
-    this.updateLink(value);
-  },
-
-  updateLink(value) {
-    const command = Command.parse(value);
-    if (command) {
-      get("logo").href = command.url;
-      return;
-    }
-    get("logo").href = "http://home.jpalardy.com/";
   },
 
   getText() {
@@ -119,10 +109,6 @@ const ACTIONS = {
     }
   });
 
-  get("logo").addEventListener("click", () => {
-    ACTIONS.submit(false);
-  });
-
   //-------------------------------------------------
   // some state
   const completer = new Completer(sites.map(site => site.alias).sort());
@@ -154,9 +140,5 @@ const ACTIONS = {
     right = currentText.slice(curPos);
     iter = completer.matches(left, {skipSameFirst: true});
     ACTIONS.setCommand(iter.next().value, right);
-  });
-
-  commandForm.addEventListener("keyup", () => {
-    ACTIONS.updateLink(get("command_input").value);
   });
 }
