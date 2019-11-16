@@ -31,7 +31,7 @@ module.exports = [
   },
   {
     alias: "golang:pkg",
-    visit: "https://golang.org/pkg/",
+    search: "https://pkg.go.dev/search?q=%s",
   },
   {
     alias: "rust",
