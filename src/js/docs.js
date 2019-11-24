@@ -26,11 +26,6 @@ module.exports = [
   },
   {
     alias: "golang",
-    search: "https://golang.org/search?q=%s",
-    visit: "https://golang.org/doc/",
-  },
-  {
-    alias: "golang:pkg",
     search: "https://pkg.go.dev/search?q=%s",
   },
   {
