@@ -215,7 +215,7 @@ module.exports = [
   },
   {
     alias: "linkedin",
-    search: "https://www.linkedin.com/search/results/index/?keywords=%s",
+    search: "https://www.linkedin.com/search/results/all/?keywords=%s",
   },
   {
     alias: "edx",
