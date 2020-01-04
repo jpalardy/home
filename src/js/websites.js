@@ -100,10 +100,6 @@ module.exports = [
     search: "https://leanpub.com/bookstore/type/book/sort/earnings_in_last_7_days?search=%s",
   },
   {
-    alias: "ebooks-it",
-    search: "https://ebooks-it.org/search-engine.htm?bform=btitle&page=1&query=%s",
-  },
-  {
     alias: "libgen",
     search: "http://libgen.io/search.php?req=%s",
   },
@@ -231,11 +227,6 @@ module.exports = [
     search: "https://www.justwatch.com/ca/search?q=%s",
   },
   {
-    alias: "ports",
-    visit: "https://www.speedguide.net/ports.php",
-    search: "https://www.speedguide.net/ports.php?filter=%s",
-  },
-  {
     alias: "wtb",
     visit: "https://www.worldtimebuddy.com/",
   },
@@ -246,18 +237,6 @@ module.exports = [
   {
     alias: "devhints",
     search: "https://devhints.io/?q=%s",
-  },
-  {
-    alias: "ct",
-    search: "https://www.canadiantire.ca/en/search-results.html?q=%s",
-  },
-  {
-    alias: "bb",
-    search: "https://www.bestbuy.ca/en-CA/Search/SearchResults.aspx?query=%s",
-  },
-  {
-    alias: "hd",
-    search: "https://www.homedepot.ca/en/home/search.html?q=%s",
   },
   {
     alias: "usgs",

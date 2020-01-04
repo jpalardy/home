@@ -2,8 +2,9 @@
 
 const websites = require("./websites");
 const docs = require("./docs");
+const shopping = require("./shopping");
 
-const sites = [...websites, ...docs];
+const sites = [...websites, ...docs, ...shopping];
 
 const Command = require("./command")(sites, "g");
 const Completer = require("./completer");

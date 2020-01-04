@@ -15,6 +15,7 @@ coverage:
 
 test:
 	@npm test
+	@awk '/alias:/' src/js/*.js | awk -F'"' '/"/ {print $$2}' | sort | uniq -c | awk '$$1 != 1 { print "*********", $$0; exit 1 }'
 
 clean:
 	rm -rf public
