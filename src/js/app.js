@@ -124,6 +124,12 @@ const ACTIONS = {
   let iter;
   let right = "";
   commandForm.addEventListener("keydown", ev => {
+    // ESC
+    if (ev.keyCode === 27) {
+      ACTIONS.setCommand(""); // clear
+      iter = null;
+      return;
+    }
     // not TAB
     if (ev.keyCode !== 9) {
       iter = null;
