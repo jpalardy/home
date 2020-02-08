@@ -8,10 +8,6 @@ module.exports = [
     search: "https://www.bestbuy.ca/en-CA/Search/SearchResults.aspx?query=%s",
   },
   {
-    alias: "bestbuy",
-    search: "https://www.bestbuy.ca/en-CA/Search/SearchResults.aspx?query=%s",
-  },
-  {
     alias: "homedepot",
     search: "https://www.homedepot.ca/en/home/search.html?q=%s",
   },
