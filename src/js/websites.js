@@ -214,6 +214,11 @@ module.exports = [
     search: "https://www.linkedin.com/search/results/all/?keywords=%s",
   },
   {
+    alias: "linkedin.jobs",
+    search: "https://www.linkedin.com/jobs/search/?keywords=%s",
+    visit: "https://www.linkedin.com/jobs/",
+  },
+  {
     alias: "edx",
     search: "https://www.edx.org/course?search_query=%s",
   },
