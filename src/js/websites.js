@@ -247,6 +247,10 @@ module.exports = [
     alias: "usgs",
     visit: "https://earthquake.usgs.gov/earthquakes/map/",
   },
+  {
+    alias: "geocoder",
+    search: "https://geocoder.ca/?locate=%s&geoit=GeoCode",
+  },
 ].map(site => {
   return {
     alias: site.alias,
