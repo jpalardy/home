@@ -33,6 +33,10 @@ module.exports = [
     search: "https://doc.rust-lang.org/std/index.html?search=%s",
     visit: "https://doc.rust-lang.org/std/index.html",
   },
+  {
+    alias: "hex",
+    search: "https://hex.pm/packages?search=%s",
+  },
 ].map(site => {
   return {
     alias: `:${site.alias}`,
