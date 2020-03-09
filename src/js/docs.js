@@ -37,6 +37,11 @@ module.exports = [
     alias: "hex",
     search: "https://hex.pm/packages?search=%s",
   },
+  {
+    alias: "elixir",
+    search: "https://hexdocs.pm/elixir/search.html?q=%s",
+    visit: "https://elixir-lang.org/docs.html",
+  },
 ].map(site => {
   return {
     alias: `:${site.alias}`,
