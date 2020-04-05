@@ -207,7 +207,7 @@ module.exports = [
   },
   {
     alias: "yarn",
-    search: "https://yarnpkg.com/en/packages?q=%s",
+    search: "https://yarnpkg.com/?q=%s",
   },
   {
     alias: "linkedin",
