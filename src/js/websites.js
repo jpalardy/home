@@ -210,6 +210,10 @@ module.exports = [
     search: "https://yarnpkg.com/?q=%s",
   },
   {
+    alias: "apk",
+    search: "https://pkgs.alpinelinux.org/contents?file=%s&arch=x86_64",
+  },
+  {
     alias: "linkedin",
     search: "https://www.linkedin.com/search/results/all/?keywords=%s",
   },
