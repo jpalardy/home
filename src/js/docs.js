@@ -42,6 +42,10 @@ module.exports = [
     search: "https://hexdocs.pm/elixir/search.html?q=%s",
     visit: "https://elixir-lang.org/docs.html",
   },
+  {
+    alias: "postgres",
+    search: "https://www.postgresql.org/search/?q=%s",
+  },
 ].map(site => {
   return {
     alias: `:${site.alias}`,
