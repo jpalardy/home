@@ -31,6 +31,9 @@ list:
 
 #-------------------------------------------------
 
+deploy-dryrun:
+	aws s3 sync public/ s3://home.jpalardy.com/ --delete --profile jonathan --dryrun
+
 deploy:
 	aws s3 sync public/ s3://home.jpalardy.com/ --delete --profile jonathan
 	aws cloudfront create-invalidation --distribution-id E1SGJ2SOI6A0WB --paths "/*" --profile jonathan
