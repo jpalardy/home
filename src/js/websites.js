@@ -70,10 +70,6 @@ module.exports = [
     search: "https://stackoverflow.com/search?q=%s",
   },
   {
-    alias: "cv",
-    search: "https://stats.stackexchange.com/search?q=%s",
-  },
-  {
     alias: "am",
     search: "https://www.amazon.com/exec/obidos/external-search?mode=blended&keyword=%s",
   },
@@ -100,10 +96,6 @@ module.exports = [
     search: "https://leanpub.com/bookstore/type/book/sort/earnings_in_last_7_days?search=%s",
   },
   {
-    alias: "libgen",
-    search: "http://libgen.io/search.php?req=%s",
-  },
-  {
     alias: "imdb",
     search: "https://imdb.com/find?q=%s",
   },
@@ -123,16 +115,6 @@ module.exports = [
   {
     alias: "ghn",
     visit: "https://github.com/notifications",
-  },
-  {
-    alias: "ght",
-    visit: "https://github.com/trending/",
-    search: "https://github.com/trending/%s",
-  },
-  {
-    alias: "ghpr",
-    visit: "https://github.com/pulls",
-    search: "https://github.com/pulls?utf8=✓&q=is%3Aopen+is%3Apr+author%3Ajpalardy+archived%3Afalse+%s",
   },
   {
     alias: "dh",
@@ -215,10 +197,6 @@ module.exports = [
   },
   {
     alias: "linkedin",
-    search: "https://www.linkedin.com/search/results/all/?keywords=%s",
-  },
-  {
-    alias: "linkedin.jobs",
     search: "https://www.linkedin.com/jobs/search/?keywords=%s",
     visit: "https://www.linkedin.com/jobs/",
   },
@@ -242,10 +220,6 @@ module.exports = [
   {
     alias: "aws",
     search: "https://console.aws.amazon.com/%s/home",
-  },
-  {
-    alias: "devhints",
-    search: "https://devhints.io/?q=%s",
   },
   {
     alias: "usgs",
