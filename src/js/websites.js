@@ -129,6 +129,10 @@ module.exports = [
     search: "https://www.color-hex.com/color/%s",
   },
   {
+    alias: "color",
+    search: "https://color.adobe.com/search?q=%s",
+  },
+  {
     alias: "caniuse",
     search: "https://caniuse.com/#search=%s",
   },
