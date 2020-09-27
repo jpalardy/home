@@ -15,15 +15,13 @@ require("../less/main.less");
 // convenience
 //-------------------------------------------------
 
-const get = document.getElementById.bind(document);
+const ELEMENTS = {
+  input: document.getElementById("command_input"),
+  form: document.getElementById("command_form"),
+};
 
-function guard(predicate, f, fallback = undefined) {
-  return (...args) => {
-    if (typeof predicate === "function" ? predicate() : predicate) {
-      return f(...args);
-    }
-    return fallback;
-  };
+function guard(predicate, f) {
+  return predicate ? f : () => {};
 }
 
 //-------------------------------------------------
@@ -32,33 +30,28 @@ function guard(predicate, f, fallback = undefined) {
 
 const lastText = {
   get: guard(window.sessionStorage, () => sessionStorage.getItem("lastText")),
-  set: guard(window.sessionStorage, value => sessionStorage.setItem("lastText", value)),
+  set: guard(window.sessionStorage, (value) => sessionStorage.setItem("lastText", value)),
 };
 
 const ACTIONS = {
-  setCommand(left, right = "") {
-    const text = `${left}${right}`;
-    if (text === undefined) {
-      return;
-    }
-    const value = text.trim();
-    get("command_input").value = value;
-    get("command_input").setSelectionRange(left.length, left.length);
+  setCommand(left = "", right = "") {
+    const text = `${left}${right}`.trim();
+    ELEMENTS.input.value = text;
+    ELEMENTS.input.setSelectionRange(left.length, left.length);
   },
 
   getText() {
-    return get("command_input").value.trim();
+    return ELEMENTS.input.value.trim();
   },
 
-  submit(redirect = true) {
-    const command = Command.parse(this.getText());
+  submit() {
+    const text = this.getText();
+    const command = Command.parse(text);
     if (!command) {
       return;
     }
-    lastText.set(this.getText());
-    if (redirect) {
-      window.location = command.url;
-    }
+    lastText.set(text);
+    window.location = command.url;
   },
 };
 
@@ -67,18 +60,23 @@ const ACTIONS = {
 //-------------------------------------------------
 
 (() => {
-  const getParams = function(query = document.location.search.substring(1)) {
+  const getParams = (query = document.location.search.substring(1)) => {
     const result = {};
-    query.split("&").forEach(param => {
-      const parts = param.split("=", 2);
-      result[parts[0]] = decodeURIComponent(parts[1]).replace(/\+/g, " ");
+    query.split("&").forEach((param) => {
+      const [k, v = ""] = param.split("=", 2);
+      if (!k) {
+        return;
+      }
+      result[k] = decodeURIComponent(v).replace(/\+/g, " ");
     });
     return result;
   };
 
   // restore textfield on back button
   const getLastText = guard(window.performance, () => {
-    if (performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD) {
+    const entries = performance.getEntriesByType("navigation");
+    // eventually: use optional chaining...
+    if (entries[0] && entries[0].type === "back_forward") {
       return lastText.get();
     }
     return "";
@@ -105,24 +103,23 @@ const ACTIONS = {
   document.body.addEventListener("keydown", () => {
     // any key focuses on search field
     if (document.activeElement.tagName.toLowerCase() !== "input") {
-      get("command_input").focus();
+      ELEMENTS.input.focus();
     }
   });
 
   //-------------------------------------------------
   // some state
-  const completer = new Completer(sites.map(site => site.alias).sort());
-  const commandForm = get("command_form");
+  const completer = new Completer(sites.map((site) => site.alias).sort());
   //-------------------------------------------------
 
-  commandForm.addEventListener("submit", ev => {
+  ELEMENTS.form.addEventListener("submit", (ev) => {
     ev.preventDefault();
     ACTIONS.submit();
   });
 
   let iter;
   let right = "";
-  commandForm.addEventListener("keydown", ev => {
+  ELEMENTS.form.addEventListener("keydown", (ev) => {
     // ESC
     if (ev.keyCode === 27) {
       ACTIONS.setCommand(""); // clear
