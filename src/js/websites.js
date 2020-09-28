@@ -26,6 +26,10 @@ module.exports = [
     visit: "https://www.google.com/finance",
   },
   {
+    alias: "gplay",
+    search: "https://play.google.com/store/search?q=%s&c=movies&hl=en",
+  },
+  {
     alias: "tw",
     search: "https://twitter.com/search?q=%s",
   },
