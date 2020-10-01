@@ -4,8 +4,8 @@
   "description": "The web pages at home.jpalardy.com",
   "version": "0.3.0",
   "scripts": {
-    "build": "parcel build src/html/index.html -d public --public-url ./ --no-minify --no-cache",
-    "watch": "parcel serve src/html/index.html -d public --no-cache",
+    "build": "parcel build src/html/index.html -d public --public-url ./ --no-source-maps --no-minify --no-cache",
+    "watch": "parcel serve src/html/index.html -d public --no-source-maps --no-cache",
     "coverage": "nyc --reporter=html --reporter text npm test",
     "test": "mocha --reporter dot"
   },
@@ -15,7 +15,6 @@
     "eslint": "7.10.0",
     "eslint-config-airbnb-base": "14.2.0",
     "eslint-plugin-import": "2.22.0",
-    "less": "3.12.2",
     "mocha": "8.1.3",
     "nyc": "15.1.0",
     "parcel-bundler": "1.12.4"

@@ -5,13 +5,30 @@
     <title>jpalardy.com - home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="icon" type="image/png" href="https://secure.gravatar.com/avatar/ecfd1bdc5d3aab1e40f25658817712ba">
+<style>
+#content {
+  margin: 30px 15px;
+}
+#content input {
+  color: #333;
+  font: 16px monospace;
+  outline: none;
+  border: 0;
+}
+#content form {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 6px;
+  align-items: center;
+}
+</style>
   </head>
   <!-- $VERSION -->
   <body>
     <div id="content">
-      <form id="command_form">
-          <label for="command_input">&gt;</label>
-          <input id="command_input" type="text" name="command" autofocus="autofocus" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      <form>
+          <label>&gt;</label>
+          <input name="command" autofocus="autofocus" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
       </form>
     </div>
     <script src="../js/app.js"></script>

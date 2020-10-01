@@ -8,16 +8,13 @@ const sites = [...websites, ...docs];
 const Command = require("./command")(sites, "g");
 const Completer = require("./completer");
 
-// import CSS for webpack
-require("../less/main.less");
-
 //-------------------------------------------------
 // convenience
 //-------------------------------------------------
 
 const ELEMENTS = {
-  input: document.getElementById("command_input"),
-  form: document.getElementById("command_form"),
+  input: document.querySelector("#content input"),
+  form: document.querySelector("#content form"),
 };
 
 function guard(predicate, f) {
