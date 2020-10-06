@@ -166,6 +166,10 @@ module.exports = [
     visit: "https://home.jpalardy.com/heisig/",
   },
   {
+    alias: "bookmarklets",
+    visit: "https://blog.jpalardy.com/bookmarklets/",
+  },
+  {
     alias: "rd",
     search: "http://www.romajidesu.com/dictionary/meaning-of-%s.html",
   },
