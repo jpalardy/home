@@ -2,8 +2,8 @@
 
 const assert = require("assert");
 
-const websites = require("../src/js/websites");
-const docs = require("../src/js/docs");
+const websites = require("../src/js/sites/websites");
+const docs = require("../src/js/sites/docs");
 const Completer = require("../src/js/completer");
 
 describe("completer expectations for", () => {

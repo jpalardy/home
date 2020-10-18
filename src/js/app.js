@@ -1,7 +1,7 @@
 /* global window, document, sessionStorage, performance */
 
-const websites = require("./websites");
-const docs = require("./docs");
+const websites = require("./sites/websites");
+const docs = require("./sites/docs");
 
 const sites = [...websites, ...docs];
 

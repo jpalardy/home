@@ -2,7 +2,7 @@
 
 const assert = require("assert");
 
-const sites = require("../src/js/websites");
+const sites = require("../src/js/sites/websites");
 const Command = require("../src/js/command")(sites, "ddg");
 
 const assertURL = function(text, url) {
