@@ -78,7 +78,7 @@ module.exports = [
     search: "https://www.amazon.com/exec/obidos/external-search?mode=blended&keyword=%s",
   },
   {
-    alias: "am.ca",
+    alias: "amca",
     search: "https://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s",
   },
   {
