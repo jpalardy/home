@@ -46,6 +46,11 @@ module.exports = [
     alias: "postgres",
     search: "https://www.postgresql.org/search/?q=%s",
   },
+  {
+    alias: "elm",
+    search: "https://klaftertief.github.io/elm-search/?q=%s",
+    visit: "https://elm-lang.org/docs",
+  },
 ].map(site => {
   return {
     alias: `:${site.alias}`,
