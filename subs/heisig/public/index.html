@@ -1,36 +1,16 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <title>Heisig lookup</title>
   <link rel="icon" type="image/png" href="images/favicon-heisig.png">
-  <link rel="stylesheet" href="css/main.css" />
-</head>
-<body>
-
-  <script type="text/x-template" id="template">
-    <div>
-      <form @submit.prevent>
-        <div id="glass">
-          <input name="query" v-model="query" autofocus="autofocus" autoCapitalize="off" autoCorrect="off">
-        </div>
-      </form>
-      <span id="count">{{ count }}</span>
-      <div class="cards">
-        <div class="card" v-for="card in cards">
-          <span class="no">{{ card.no }}</span>
-          <span class="keyword">{{ card.keyword }}</span>
-          <span class="kanji">{{ card.kanji }}</span>
-        </div>
-      </div>
-    </div>
-  </script>
-
-  <div id="app">
-  </div>
-
-  <script src="js/vue.min.js"></script>
-  <script src="js/starific.js"></script>
+  <link rel="stylesheet" href="css/main.css">
   <script src="js/app.js"></script>
+</head>
+
+<body>
+  <script>Elm.Main.init();</script>
 </body>
+
 </html>

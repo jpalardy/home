@@ -37,7 +37,7 @@
   font-size: 42px;
 }
 
-#count {
+.muted {
   margin-left: 8px;
   margin-bottom: 50px;
   font-size: 80%;
@@ -61,5 +61,5 @@
 #glass input {
   border: 0;
   outline: none;
-  width: 190px
+  width: 190px;
 }
