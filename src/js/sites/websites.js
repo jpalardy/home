@@ -162,7 +162,7 @@ module.exports = [
   },
   {
     alias: "heisig",
-    search: "https://home.jpalardy.com/heisig/#%s",
+    search: "https://home.jpalardy.com/heisig/?q=%s",
     visit: "https://home.jpalardy.com/heisig/",
   },
   {
