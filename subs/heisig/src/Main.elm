@@ -3,7 +3,7 @@ module Main exposing (main)
 import Browser
 import Browser.Navigation as Nav
 import Html exposing (..)
-import Html.Attributes exposing (attribute, autofocus, class, id, name, style, value)
+import Html.Attributes exposing (attribute, autofocus, class, id, name, value)
 import Html.Events exposing (onInput, onSubmit)
 import Http
 import Json.Decode exposing (Decoder, index, list, map2, string)
@@ -186,10 +186,7 @@ renderError httpErr =
     case httpErr of
         Just err ->
             div
-                [ style "float" "left"
-                , style "clear" "both"
-                , class "muted"
-                ]
+                [ class "muted" ]
                 [ case err of
                     Http.BadUrl msg ->
                         text ("⚠️ " ++ msg)
@@ -214,13 +211,7 @@ renderError httpErr =
 renderTruncatedNotice : Bool -> Html msg
 renderTruncatedNotice truncated =
     if truncated then
-        div
-            [ style "float" "left"
-            , style "clear" "both"
-            , class "muted"
-            ]
-            [ text "⚠️ results truncated"
-            ]
+        div [ class "muted" ] [ text "⚠️ results truncated" ]
 
     else
         text ""

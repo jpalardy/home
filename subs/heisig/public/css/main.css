@@ -1,17 +1,24 @@
+
 .cards {
-  margin-top: 8px;
+  margin: 10px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .card {
-  float: left;
-  width: 180px;
-  height: 112px;
+  /*
+   *  26px: margin outside .cards
+   *  50px: margin between .card
+   */
+  width: calc((100vw - 26px - 50px) / 6);
+  height: calc((100vw - 26px - 50px) / 6 / 1.618);
   position: relative;
   box-shadow: 1px 1px 1px #777;
   border-radius: 5px;
-  margin: 5px 5px;
   transition: all 500ms ease-in-out;
   background: url(../images/cardboard.jpg) no-repeat;
+  background-size: cover;
 }
 
 .card .no {

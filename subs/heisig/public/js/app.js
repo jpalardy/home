@@ -6440,7 +6440,7 @@ var $author$project$Main$init = F3(
 	});
 var $elm$core$Platform$Sub$batch = _Platform_batch;
 var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
-var $author$project$Main$subscriptions = function (model) {
+var $author$project$Main$subscriptions = function (_v0) {
 	return $elm$core$Platform$Sub$none;
 };
 var $author$project$Main$Card = F4(
@@ -6827,8 +6827,6 @@ var $author$project$Main$renderCard = function (card) {
 					]))
 			]));
 };
-var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
-var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
 var $author$project$Main$renderError = function (httpErr) {
 	if (!httpErr.$) {
 		var err = httpErr.a;
@@ -6836,8 +6834,6 @@ var $author$project$Main$renderError = function (httpErr) {
 			$elm$html$Html$div,
 			_List_fromArray(
 				[
-					A2($elm$html$Html$Attributes$style, 'float', 'left'),
-					A2($elm$html$Html$Attributes$style, 'clear', 'both'),
 					$elm$html$Html$Attributes$class('muted')
 				]),
 			_List_fromArray(
@@ -6870,8 +6866,6 @@ var $author$project$Main$renderTruncatedNotice = function (truncated) {
 		$elm$html$Html$div,
 		_List_fromArray(
 			[
-				A2($elm$html$Html$Attributes$style, 'float', 'left'),
-				A2($elm$html$Html$Attributes$style, 'clear', 'both'),
 				$elm$html$Html$Attributes$class('muted')
 			]),
 		_List_fromArray(
