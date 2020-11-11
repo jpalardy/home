@@ -6861,18 +6861,6 @@ var $author$project$Main$renderError = function (httpErr) {
 		return $elm$html$Html$text('');
 	}
 };
-var $author$project$Main$renderTruncatedNotice = function (truncated) {
-	return truncated ? A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('muted')
-			]),
-		_List_fromArray(
-			[
-				$elm$html$Html$text('⚠️ results truncated')
-			])) : $elm$html$Html$text('');
-};
 var $author$project$Main$Change = function (a) {
 	return {$: 1, a: a};
 };
@@ -6954,7 +6942,7 @@ var $elm$html$Html$Events$onSubmit = function (msg) {
 			$elm$json$Json$Decode$succeed(msg)));
 };
 var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('value');
-var $author$project$Main$searchForm = function (query) {
+var $author$project$Main$renderSearchForm = function (query) {
 	return A2(
 		$elm$html$Html$form,
 		_List_fromArray(
@@ -6985,6 +6973,18 @@ var $author$project$Main$searchForm = function (query) {
 						_List_Nil)
 					]))
 			]));
+};
+var $author$project$Main$renderTruncatedNotice = function (truncated) {
+	return truncated ? A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('muted')
+			]),
+		_List_fromArray(
+			[
+				$elm$html$Html$text('⚠️ results truncated')
+			])) : $elm$html$Html$text('');
 };
 var $elm$core$List$takeReverse = F3(
 	function (n, list, kept) {
@@ -7128,7 +7128,7 @@ var $author$project$Main$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
-						$author$project$Main$searchForm(model.q),
+						$author$project$Main$renderSearchForm(model.q),
 						A2(
 						$elm$html$Html$span,
 						_List_fromArray(

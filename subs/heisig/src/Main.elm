@@ -171,7 +171,7 @@ view model =
             "Heisig: " ++ trimmedQuery
     , body =
         [ div []
-            [ searchForm model.query
+            [ renderSearchForm model.query
             , span [ class "muted" ] [ text (countKanjis filteredCards) ]
             , div [ class "cards" ] (List.map renderCard visibleCards)
             ]
@@ -250,8 +250,8 @@ countKanjis cards =
             String.fromInt numOfCards ++ " kanjis"
 
 
-searchForm : String -> Html Msg
-searchForm query =
+renderSearchForm : String -> Html Msg
+renderSearchForm query =
     form [ onSubmit Noop ]
         [ div [ id "glass" ]
             [ input
