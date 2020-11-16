@@ -2704,7 +2704,7 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		o: func(record.o),
+		p: func(record.p),
 		O: record.O,
 		L: record.L
 	}
@@ -2974,7 +2974,7 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.o;
+		var message = !tag ? value : tag < 3 ? value.a : value.p;
 		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.O;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
@@ -5158,7 +5158,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {U: fragment, X: host, aR: path, ad: port_, ag: protocol, q: query};
+		return {U: fragment, X: host, aR: path, ad: port_, ag: protocol, l: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -6245,9 +6245,19 @@ var $author$project$Main$getKanjis = $elm$http$Http$get(
 		aD: A2($elm$http$Http$expectJson, $author$project$Main$GotKanjis, $author$project$Main$kanjiDecoder),
 		F: 'heisig.min.json'
 	});
+var $elm$core$Maybe$map = F2(
+	function (f, maybe) {
+		if (!maybe.$) {
+			var value = maybe.a;
+			return $elm$core$Maybe$Just(
+				f(value));
+		} else {
+			return $elm$core$Maybe$Nothing;
+		}
+	});
 var $elm$url$Url$Parser$State = F5(
 	function (visited, unvisited, params, frag, value) {
-		return {s: frag, t: params, r: unvisited, m: value, v: visited};
+		return {s: frag, t: params, r: unvisited, n: value, v: visited};
 	});
 var $elm$url$Url$Parser$getFirstMatch = function (states) {
 	getFirstMatch:
@@ -6259,10 +6269,10 @@ var $elm$url$Url$Parser$getFirstMatch = function (states) {
 			var rest = states.b;
 			var _v1 = state.r;
 			if (!_v1.b) {
-				return $elm$core$Maybe$Just(state.m);
+				return $elm$core$Maybe$Just(state.n);
 			} else {
 				if ((_v1.a === '') && (!_v1.b.b)) {
-					return $elm$core$Maybe$Just(state.m);
+					return $elm$core$Maybe$Just(state.n);
 				} else {
 					var $temp$states = rest;
 					states = $temp$states;
@@ -6360,7 +6370,7 @@ var $elm$url$Url$Parser$parse = F2(
 					$elm$url$Url$Parser$State,
 					_List_Nil,
 					$elm$url$Url$Parser$preparePath(url.aR),
-					$elm$url$Url$Parser$prepareQuery(url.q),
+					$elm$url$Url$Parser$prepareQuery(url.l),
 					url.U,
 					$elm$core$Basics$identity)));
 	});
@@ -6372,7 +6382,7 @@ var $elm$url$Url$Parser$query = function (_v0) {
 		var unvisited = _v1.r;
 		var params = _v1.t;
 		var frag = _v1.s;
-		var value = _v1.m;
+		var value = _v1.n;
 		return _List_fromArray(
 			[
 				A5(
@@ -6386,6 +6396,13 @@ var $elm$url$Url$Parser$query = function (_v0) {
 			]);
 	};
 };
+var $elm$core$String$replace = F3(
+	function (before, after, string) {
+		return A2(
+			$elm$core$String$join,
+			after,
+			A2($elm$core$String$split, before, string));
+	});
 var $elm$url$Url$Parser$Internal$Parser = $elm$core$Basics$identity;
 var $elm$core$Maybe$withDefault = F2(
 	function (_default, maybe) {
@@ -6421,6 +6438,8 @@ var $elm$url$Url$Parser$Query$string = function (key) {
 };
 var $author$project$Main$init = F3(
 	function (_v0, url, key) {
+		var unescapeSpace = $elm$core$Maybe$map(
+			A2($elm$core$String$replace, '+', '%20'));
 		var query = A2(
 			$elm$core$Maybe$withDefault,
 			'',
@@ -6433,9 +6452,12 @@ var $author$project$Main$init = F3(
 						$elm$url$Url$Parser$Query$string('q')),
 					_Utils_update(
 						url,
-						{aR: ''}))));
+						{
+							aR: '',
+							l: unescapeSpace(url.l)
+						}))));
 		return _Utils_Tuple2(
-			{G: _List_Nil, H: $elm$core$Maybe$Nothing, I: key, q: query, F: url},
+			{G: _List_Nil, H: $elm$core$Maybe$Nothing, I: key, l: query, F: url},
 			$author$project$Main$getKanjis);
 	});
 var $elm$core$Platform$Sub$batch = _Platform_batch;
@@ -6468,13 +6490,6 @@ var $elm$regex$Regex$fromString = function (string) {
 };
 var $elm$regex$Regex$never = _Regex_never;
 var $elm$regex$Regex$replace = _Regex_replaceAtMost(_Regex_infinity);
-var $elm$core$String$replace = F3(
-	function (before, after, string) {
-		return A2(
-			$elm$core$String$join,
-			after,
-			A2($elm$core$String$split, before, string));
-	});
 var $elm$core$String$toLower = _String_toLower;
 var $elm$core$String$words = _String_words;
 var $author$project$Main$list2Cards = F2(
@@ -6548,7 +6563,7 @@ var $elm$url$Url$toString = function (url) {
 		A3(
 			$elm$url$Url$addPrefixed,
 			'?',
-			url.q,
+			url.l,
 			_Utils_ap(
 				A2(
 					$elm$url$Url$addPort,
@@ -6566,17 +6581,21 @@ var $author$project$Main$update = F2(
 				var query = msg.a;
 				var urlQuery = ($elm$core$String$trim(query) === '') ? $elm$core$Maybe$Nothing : $elm$core$Maybe$Just('q=' + query);
 				var url = model.F;
+				var escapeSpace = $elm$core$Maybe$map(
+					A2($elm$core$String$replace, ' ', '+'));
 				return _Utils_Tuple2(
 					_Utils_update(
 						model,
-						{q: query}),
+						{l: query}),
 					A2(
 						$elm$browser$Browser$Navigation$replaceUrl,
 						model.I,
 						$elm$url$Url$toString(
 							_Utils_update(
 								url,
-								{q: urlQuery}))));
+								{
+									l: escapeSpace(urlQuery)
+								}))));
 			case 2:
 				if (!msg.a.$) {
 					var kanjis = msg.a.a;
@@ -7113,8 +7132,8 @@ var $elm$core$List$take = F2(
 		return A3($elm$core$List$takeFast, 0, n, list);
 	});
 var $author$project$Main$view = function (model) {
-	var trimmedQuery = $elm$core$String$trim(model.q);
-	var suffixedQuery = ((trimmedQuery === '') || (A2($elm$core$String$endsWith, ' ', model.q) || A2($elm$core$String$endsWith, '*', model.q))) ? trimmedQuery : (trimmedQuery + '*');
+	var trimmedQuery = $elm$core$String$trim(model.l);
+	var suffixedQuery = ((trimmedQuery === '') || (A2($elm$core$String$endsWith, ' ', model.l) || A2($elm$core$String$endsWith, '*', model.l))) ? trimmedQuery : (trimmedQuery + '*');
 	var filteredCards = A2($author$project$Main$filterWithQuery, suffixedQuery, model.G);
 	var visibleCards = A2($elm$core$List$take, 120, filteredCards);
 	var truncated = _Utils_cmp(
@@ -7128,7 +7147,7 @@ var $author$project$Main$view = function (model) {
 				_List_Nil,
 				_List_fromArray(
 					[
-						$author$project$Main$renderSearchForm(model.q),
+						$author$project$Main$renderSearchForm(model.l),
 						A2(
 						$elm$html$Html$span,
 						_List_fromArray(

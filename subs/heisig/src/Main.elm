@@ -43,8 +43,11 @@ type alias Card =
 init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
 init _ url key =
     let
+        unescapeSpace =
+            Maybe.map (String.replace "+" "%20")
+
         query =
-            { url | path = "" }
+            { url | path = "", query = unescapeSpace url.query }
                 |> Url.Parser.parse (Url.Parser.query <| Url.Parser.Query.string "q")
                 |> Maybe.withDefault Nothing
                 |> Maybe.withDefault ""
@@ -87,9 +90,12 @@ update msg model =
 
                     else
                         Just ("q=" ++ query)
+
+                escapeSpace =
+                    Maybe.map (String.replace " " "+")
             in
             ( { model | query = query }
-            , Nav.replaceUrl model.key ({ url | query = urlQuery } |> Url.toString)
+            , Nav.replaceUrl model.key ({ url | query = escapeSpace urlQuery } |> Url.toString)
             )
 
         GotKanjis (Ok kanjis) ->
