@@ -1,6 +1,8 @@
 module Main exposing (main)
 
 import Browser
+import Browser.Dom as Dom
+import Browser.Events as Events
 import Browser.Navigation as Nav
 import Html exposing (..)
 import Html.Attributes exposing (attribute, autofocus, class, id, name, value)
@@ -9,6 +11,7 @@ import Http
 import Json.Decode exposing (Decoder, index, list, map2, string)
 import Regex
 import Starific
+import Task
 import Tuple
 import Url
 import Url.Parser
@@ -21,6 +24,7 @@ type Msg
     | GotKanjis (Result Http.Error (List ( String, String )))
     | LinkClicked Browser.UrlRequest
     | UrlChanged Url.Url
+    | KeyPress String
 
 
 type alias Model =
@@ -70,7 +74,7 @@ kanjiDecoder =
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    Sub.none
+    Events.onKeyPress (Json.Decode.map KeyPress (Json.Decode.field "key" string))
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -118,6 +122,12 @@ update msg model =
 
         UrlChanged url ->
             ( { model | url = url }, Cmd.none )
+
+        KeyPress "/" ->
+            ( model, Task.attempt (\_ -> Noop) (Dom.focus "query") )
+
+        KeyPress _ ->
+            ( model, Cmd.none )
 
 
 list2Cards : Int -> ( String, String ) -> Card
@@ -261,7 +271,8 @@ renderSearchForm query =
     form [ onSubmit Noop ]
         [ div [ id "glass" ]
             [ input
-                [ name "query"
+                [ id "query"
+                , name "query"
                 , value query
                 , onInput Change
                 , autofocus True
