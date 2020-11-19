@@ -8,11 +8,10 @@ import Html exposing (..)
 import Html.Attributes exposing (attribute, autofocus, class, id, name, value)
 import Html.Events exposing (onInput, onSubmit)
 import Http
-import Json.Decode exposing (Decoder, index, list, map2, string)
+import Json.Decode exposing (Decoder, keyValuePairs, string)
 import Regex
 import Starific
 import Task
-import Tuple
 import Url
 import Url.Parser
 import Url.Parser.Query
@@ -69,7 +68,7 @@ getKanjis =
 
 kanjiDecoder : Decoder (List ( String, String ))
 kanjiDecoder =
-    list (map2 Tuple.pair (index 0 string) (index 1 string))
+    keyValuePairs string
 
 
 subscriptions : Model -> Sub Msg

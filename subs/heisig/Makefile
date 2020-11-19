@@ -12,5 +12,5 @@ clean:
 	rm -f public/js/app.js
 
 public/heisig.min.json: public/heisig.json
-	jq '[.[] | [.kanji, .keyword]]' -c $< > $@
+	jq '[.[] | {(.kanji): .keyword}] | add' -c $< > $@
 
