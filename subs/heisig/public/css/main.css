@@ -1,16 +1,13 @@
 .cards {
   margin: 10px 5px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-gap: 10px;
 }
 
 .card {
-  /*
-   *  50px: margin between .card
-   */
-  width: calc((100% - 50px) / 6);
-  height: calc((100vw - 50px) / 6 / 1.618);
+  width: 100%;
+  padding-top: 62%;
   position: relative;
   box-shadow: 1px 1px 1px #777;
   border-radius: 5px;
