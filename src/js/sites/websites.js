@@ -241,6 +241,10 @@ module.exports = [
     alias: "geocoder",
     search: "https://geocoder.ca/?locate=%s&geoit=GeoCode",
   },
+  {
+    alias: "investopedia",
+    search: "https://www.investopedia.com/search?q=%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
