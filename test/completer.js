@@ -58,11 +58,9 @@ describe("Completer", () => {
     });
 
     it("cycles through completions, skipSameFirst, common prefix", function _test() {
-      {
-        const matches = this.subject.matches("ap", {skipSameFirst: true});
-        const words = ["api.", "api.nodejs", "api.express", "api.jq", "api.aws", "api.mdn", "api.", "api.nodejs", "api.express"];
-        words.forEach(word => assert.strictEqual(matches.next().value, word));
-      }
+      const matches = this.subject.matches("ap", {skipSameFirst: true});
+      const words = ["api.", "api.nodejs", "api.express", "api.jq", "api.aws", "api.mdn", "api.", "api.nodejs", "api.express"];
+      words.forEach(word => assert.strictEqual(matches.next().value, word));
     });
   });
 
