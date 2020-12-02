@@ -245,6 +245,10 @@ module.exports = [
     alias: "investopedia",
     search: "https://www.investopedia.com/search?q=%s",
   },
+  {
+    alias: "yfin",
+    search: "https://finance.yahoo.com/q?s=%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
