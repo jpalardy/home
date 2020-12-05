@@ -214,7 +214,7 @@ module.exports = [
   },
   {
     alias: "edx",
-    search: "https://www.edx.org/course?search_query=%s",
+    search: "https://www.edx.org/search?q=%s",
   },
   {
     alias: "coursera",
