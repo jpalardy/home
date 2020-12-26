@@ -38,6 +38,10 @@ module.exports = [
     search: "https://hex.pm/packages?search=%s",
   },
   {
+    alias: "hd",
+    search: "https://hexdocs.pm/%s/",
+  },
+  {
     alias: "elixir",
     search: "https://hexdocs.pm/elixir/search.html?q=%s",
     visit: "https://elixir-lang.org/docs.html",
