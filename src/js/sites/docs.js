@@ -26,9 +26,22 @@ module.exports = [
     search: "https://hexdocs.pm/%s/",
   },
   {
-    alias: "elixir",
+    alias: "ex",
     search: "https://hexdocs.pm/elixir/search.html?q=%s",
     visit: "https://elixir-lang.org/docs.html",
+  },
+  {
+    alias: "phx",
+    search: "https://hexdocs.pm/phoenix/search.html?q=%s",
+    visit: "https://www.phoenixframework.org/",
+  },
+  {
+    alias: "ge",
+    search: "https://www.google.com/search?q=elixir+%s",
+  },
+  {
+    alias: "gep",
+    search: "https://www.google.com/search?q=elixir+phoenix+%s",
   },
   {
     alias: "postgres",
