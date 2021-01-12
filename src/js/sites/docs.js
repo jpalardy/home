@@ -1,13 +1,5 @@
 module.exports = [
   {
-    alias: "nodejs",
-    visit: "https://nodejs.org/api/",
-  },
-  {
-    alias: "express",
-    visit: "https://expressjs.com/en/4x/api.html",
-  },
-  {
     alias: "jq",
     visit: "https://stedolan.github.io/jq/manual/",
   },
@@ -15,14 +7,6 @@ module.exports = [
     alias: "mdn",
     search: "https://developer.mozilla.org/en-US/search?q=%s",
     visit: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
-  },
-  {
-    alias: "lodash",
-    visit: "https://lodash.com/docs/",
-  },
-  {
-    alias: "async",
-    visit: "https://caolan.github.io/async/",
   },
   {
     alias: "golang",
