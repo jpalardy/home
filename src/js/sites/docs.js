@@ -57,7 +57,7 @@ module.exports = [
   },
 ].map(site => {
   return {
-    alias: `:${site.alias}`,
+    alias: site.alias,
     visit: site.visit || site.search.match("^https?://[^/]+/")[0],
     search: site.search || site.visit,
   };
