@@ -253,6 +253,10 @@ module.exports = [
     alias: "chart",
     search: "https://finance.yahoo.com/chart/%s",
   },
+  {
+    alias: "chunks",
+    visit: "https://github.com/jpalardy/dotfiles/tree/main/chunks",
+  },
 ].map(site => {
   return {
     alias: site.alias,
