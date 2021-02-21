@@ -38,10 +38,6 @@ module.exports = [
     search: "https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search",
   },
   {
-    alias: "b",
-    search: "https://www.bing.com/search?q=%s",
-  },
-  {
     alias: "sh",
     search: "http://symbolhound.com/?q=%s",
   },
@@ -194,14 +190,6 @@ module.exports = [
   {
     alias: "udemy",
     search: "https://www.udemy.com/courses/search/?q=%s",
-  },
-  {
-    alias: "npm",
-    search: "https://www.npmjs.org/search?q=%s",
-  },
-  {
-    alias: "yarn",
-    search: "https://yarnpkg.com/?q=%s",
   },
   {
     alias: "apk",
