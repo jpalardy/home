@@ -38,6 +38,10 @@ module.exports = [
     search: "https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search",
   },
   {
+    alias: "yts",
+    visit: "https://www.youtube.com/feed/subscriptions",
+  },
+  {
     alias: "sh",
     search: "http://symbolhound.com/?q=%s",
   },
