@@ -36,6 +36,10 @@ module.exports = [
     visit: "https://www.phoenixframework.org/",
   },
   {
+    alias: "ef",
+    search: "https://elixirforum.com/search?q=%s",
+  },
+  {
     alias: "ge",
     search: "https://www.google.com/search?q=elixir+%s",
   },
