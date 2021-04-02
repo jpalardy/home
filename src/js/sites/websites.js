@@ -249,6 +249,14 @@ module.exports = [
     alias: "chunks",
     visit: "https://github.com/jpalardy/dotfiles/tree/main/chunks",
   },
+  {
+    alias: "ffi",
+    visit: "https://www.fileformat.info/info/unicode/char/search.htm?q=%s",
+  },
+  {
+    alias: "ut",
+    visit: "https://unicode-table.com/en/search/?q=%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
