@@ -44,6 +44,10 @@ module.exports = [
     search: "https://www.google.com/search?q=elixir+%s",
   },
   {
+    alias: "gerl",
+    search: "https://www.google.com/search?q=erlang+%s",
+  },
+  {
     alias: "gep",
     search: "https://www.google.com/search?q=elixir+phoenix+%s",
   },
