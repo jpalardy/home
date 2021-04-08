@@ -26,6 +26,10 @@ module.exports = [
     search: "https://hexdocs.pm/%s/",
   },
   {
+    alias: "exm",
+    search: "https://hexdocs.pm/elixir/%s.html#summary",
+  },
+  {
     alias: "ex",
     search: "https://hexdocs.pm/elixir/search.html?q=%s",
     visit: "https://elixir-lang.org/docs.html",
