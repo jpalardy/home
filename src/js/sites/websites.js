@@ -42,6 +42,10 @@ module.exports = [
     visit: "https://www.youtube.com/feed/subscriptions",
   },
   {
+    alias: "ytwl",
+    visit: "https://www.youtube.com/playlist?list=WL",
+  },
+  {
     alias: "sh",
     search: "http://symbolhound.com/?q=%s",
   },
