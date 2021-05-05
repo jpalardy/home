@@ -28,10 +28,13 @@ module.exports = function create(sites, defaultAlias) {
       // query is all remaining words
       const [first, ...rest] = words;
       const site = LUT[first];
-      const query = rest.join(" ");
       // if not, parse again with default site
       if (!site) {
         return this.parse(`${defaultAlias} ${text}`);
+      }
+      let query = rest.join(" ");
+      if (site.queryMod) {
+        query = site.queryMod(query);
       }
       // empty query means 'visit', otherwise 'search'
       if (!query) {

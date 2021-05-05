@@ -1,3 +1,7 @@
+function capitalize(str) {
+  return str.toLowerCase().replace(/./, (c) => c.toUpperCase());
+}
+
 module.exports = [
   {
     alias: "jq",
@@ -28,6 +32,7 @@ module.exports = [
   {
     alias: "exm",
     search: "https://hexdocs.pm/elixir/%s.html#summary",
+    queryMod: capitalize,
   },
   {
     alias: "ex",
@@ -69,5 +74,6 @@ module.exports = [
     alias: site.alias,
     visit: site.visit || site.search.match("^https?://[^/]+/")[0],
     search: site.search || site.visit,
+    queryMod: site.queryMod,
   };
 });
