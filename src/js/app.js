@@ -117,18 +117,16 @@ const ACTIONS = {
   let iter;
   let right = "";
   ELEMENTS.form.addEventListener("keydown", (ev) => {
-    // ESC
-    if (ev.keyCode === 27) {
+    if (ev.key === "Escape") {
       ACTIONS.setCommand(""); // clear
       iter = null;
       return;
     }
-    // not TAB
-    if (ev.keyCode !== 9) {
+    if (ev.key !== "Tab") {
       iter = null;
       return;
     }
-    // TAB
+    // Tab
     ev.preventDefault();
     if (iter) {
       ACTIONS.setCommand(iter.next().value, right);
