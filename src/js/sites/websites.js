@@ -261,6 +261,10 @@ module.exports = [
     alias: "ut",
     visit: "https://unicode-table.com/en/search/?q=%s",
   },
+  {
+    alias: "newegg",
+    search: "https://www.newegg.ca/p/pl?d=%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
