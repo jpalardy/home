@@ -265,6 +265,10 @@ module.exports = [
     alias: "newegg",
     search: "https://www.newegg.ca/p/pl?d=%s",
   },
+  {
+    alias: "dw",
+    search: "https://distrowatch.com/table.php?distribution=%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
