@@ -17,10 +17,6 @@ module.exports = [
     search: "https://maps.google.com/maps?oi=map&q=%s",
   },
   {
-    alias: "w3w",
-    search: "https://map.what3words.com/%s",
-  },
-  {
     alias: "gfin",
     search: "https://www.google.com/finance?q=%s",
     visit: "https://www.google.com/finance",
@@ -40,10 +36,6 @@ module.exports = [
   {
     alias: "yts",
     visit: "https://www.youtube.com/feed/subscriptions",
-  },
-  {
-    alias: "ytwl",
-    visit: "https://www.youtube.com/playlist?list=WL",
   },
   {
     alias: "sh",
@@ -72,10 +64,6 @@ module.exports = [
   {
     alias: "emoji",
     search: "https://emojipedia.org/search/?q=%s",
-  },
-  {
-    alias: "so",
-    search: "https://stackoverflow.com/search?q=%s",
   },
   {
     alias: "am",
@@ -191,11 +179,6 @@ module.exports = [
     visit: "https://www.fatsecret.com/calories-nutrition/",
   },
   {
-    alias: "meetup",
-    search: "https://www.google.com/search?q=meetup+vancouver+%s",
-    visit: "https://www.meetup.com",
-  },
-  {
     alias: "udemy",
     search: "https://www.udemy.com/courses/search/?q=%s",
   },
@@ -234,10 +217,6 @@ module.exports = [
     visit: "https://earthquake.usgs.gov/earthquakes/map/",
   },
   {
-    alias: "geocoder",
-    search: "https://geocoder.ca/?locate=%s&geoit=GeoCode",
-  },
-  {
     alias: "investopedia",
     search: "https://www.investopedia.com/search?q=%s",
   },
@@ -248,18 +227,6 @@ module.exports = [
   {
     alias: "chart",
     search: "https://finance.yahoo.com/chart/%s",
-  },
-  {
-    alias: "chunks",
-    visit: "https://github.com/jpalardy/dotfiles/tree/main/chunks",
-  },
-  {
-    alias: "ffi",
-    visit: "https://www.fileformat.info/info/unicode/char/search.htm?q=%s",
-  },
-  {
-    alias: "ut",
-    visit: "https://unicode-table.com/en/search/?q=%s",
   },
   {
     alias: "newegg",
