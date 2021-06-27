@@ -50,14 +50,17 @@ module.exports = [
   },
   {
     alias: "ge",
+    visit: "https://www.google.com/search?q=elixir",
     search: "https://www.google.com/search?q=elixir+%s",
   },
   {
     alias: "gerl",
+    visit: "https://www.google.com/search?q=erlang",
     search: "https://www.google.com/search?q=erlang+%s",
   },
   {
     alias: "gep",
+    visit: "https://www.google.com/search?q=elixir+phoenix",
     search: "https://www.google.com/search?q=elixir+phoenix+%s",
   },
   {
