@@ -5,8 +5,8 @@ import Browser.Dom as Dom
 import Browser.Events as Events
 import Browser.Navigation as Nav
 import Html exposing (..)
-import Html.Attributes exposing (attribute, autofocus, class, id, name, value)
-import Html.Events exposing (onInput, onSubmit)
+import Html.Attributes exposing (attribute, autofocus, class, classList, id, name, value)
+import Html.Events exposing (onInput, onSubmit, stopPropagationOn)
 import Http
 import Json.Decode exposing (Decoder, keyValuePairs, string)
 import Regex
@@ -32,6 +32,7 @@ type alias Model =
     , url : Url.Url
     , key : Nav.Key
     , err : Maybe Http.Error
+    , sansSerif : Bool
     }
 
 
@@ -55,7 +56,7 @@ init _ url key =
                 |> Maybe.withDefault Nothing
                 |> Maybe.withDefault ""
     in
-    ( { query = query, cards = [], url = url, key = key, err = Nothing }, getKanjis )
+    ( { query = query, cards = [], url = url, key = key, err = Nothing, sansSerif = False }, getKanjis )
 
 
 getKanjis : Cmd Msg
@@ -125,6 +126,9 @@ update msg model =
         KeyPress "/" ->
             ( model, Task.attempt (\_ -> Noop) (Dom.focus "query") )
 
+        KeyPress "f" ->
+            ( { model | sansSerif = not model.sansSerif }, Cmd.none )
+
         KeyPress _ ->
             ( model, Cmd.none )
 
@@ -188,7 +192,13 @@ view model =
         [ div []
             [ renderSearchForm model.query
             , span [ class "muted" ] [ text (countKanjis filteredCards) ]
-            , div [ class "cards" ] (List.map renderCard visibleCards)
+            , div
+                [ classList
+                    [ ( "cards", True )
+                    , ( "sans-serif", model.sansSerif )
+                    ]
+                ]
+                (List.map renderCard visibleCards)
             ]
         , renderTruncatedNotice truncated
         , renderError model.err
@@ -274,6 +284,7 @@ renderSearchForm query =
                 , name "query"
                 , value query
                 , onInput Change
+                , stopPropagationOn "keypress" (Json.Decode.succeed ( Noop, True ))
                 , autofocus True
                 , attribute "autocapitalize" "off"
                 , attribute "autocorrect" "off"
