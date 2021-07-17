@@ -236,6 +236,10 @@ module.exports = [
     alias: "dw",
     search: "https://distrowatch.com/table.php?distribution=%s",
   },
+  {
+    alias: "protondb",
+    search: "https://www.protondb.com/search?q=%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
