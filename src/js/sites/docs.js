@@ -68,7 +68,16 @@ module.exports = [
     search: "https://www.postgresql.org/search/?q=%s",
   },
   {
+    alias: "gelm",
+    visit: "https://www.google.com/search?q=elm",
+    search: "https://www.google.com/search?q=elm+%s",
+  },
+  {
     alias: "elm",
+    search: "https://package.elm-lang.org/packages/elm/%s/latest/",
+  },
+  {
+    alias: "elm-sig",
     search: "https://klaftertief.github.io/elm-search/?q=%s",
     visit: "https://elm-lang.org/docs",
   },
