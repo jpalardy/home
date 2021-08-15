@@ -1,10 +1,14 @@
 
 .PHONY: build
+build: COMMIT_SHA = $(shell git rev-parse --short HEAD)
+build: TODAY = $(shell date +%F)
+build: MD5 = $(shell md5 -q src/js/app.js)
 build:
 	test -d public || mkdir public
-	sed -e "s/\$$VERSION/`git rev-parse --short HEAD` @ `date +%F`/" src/html/index.html > public/index.html
 	for sub in subs/*; do rsync -q -av --delete $$sub/public/ public/`basename $$sub`/; done
-	./node_modules/.bin/esbuild --bundle src/js/app.js --outfile=public/app.js --minify
+	rm -rf public/app*.js
+	./node_modules/.bin/esbuild --bundle --minify src/js/app.js --outfile=public/app.$(MD5).js
+	m4 -D __VERSION__="$(COMMIT_SHA) @ $(TODAY)" -D __MD5__=$(MD5) src/html/index.html > public/index.html
 
 .PHONY: coverage
 coverage:
