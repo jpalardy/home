@@ -10,6 +10,13 @@ build:
 	./node_modules/.bin/esbuild --bundle --minify src/js/app.js --outfile=public/app.$(MD5).js
 	m4 -D __VERSION__="$(COMMIT_SHA) @ $(TODAY)" -D __MD5__=$(MD5) src/html/index.html > public/index.html
 
+watch:
+	test -d public || mkdir public
+	for sub in subs/*; do rsync -q -av --delete $$sub/public/ public/`basename $$sub`/; done
+	rm -rf public/app*.js
+	m4 -D __VERSION__="watched @ now" -D __MD5__=WATCHED src/html/index.html > public/index.html
+	./node_modules/.bin/esbuild --watch --bundle --minify src/js/app.js --outfile=public/app.WATCHED.js
+
 .PHONY: coverage
 coverage:
 	@npm run coverage
