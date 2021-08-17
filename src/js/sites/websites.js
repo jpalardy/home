@@ -105,7 +105,7 @@ module.exports = [
   },
   {
     alias: "gh",
-    search: "https://github.com/search?q=%s",
+    search: "https://github.com/search?q=%s&type=code",
     visit: "https://github.com/jpalardy",
   },
   {
