@@ -1,14 +1,15 @@
+BUNDLE = ./node_modules/.bin/esbuild --bundle --minify src/js/app.js
 
 .PHONY: build
 build: COMMIT_SHA = $(shell git rev-parse --short HEAD)
 build: TODAY = $(shell date +%F)
-build: MD5 = $(shell md5 -q src/js/app.js)
+build: CHECKSUM = $(shell $(BUNDLE) | sha1sum | cut -c 1-7)
 build:
 	test -d public || mkdir public
 	for sub in subs/*; do rsync -q -av --delete $$sub/public/ public/`basename $$sub`/; done
 	rm -rf public/app*.js
-	./node_modules/.bin/esbuild --bundle --minify src/js/app.js --outfile=public/app.$(MD5).js
-	m4 -D __VERSION__="$(COMMIT_SHA) @ $(TODAY)" -D __MD5__=$(MD5) src/html/index.html > public/index.html
+	$(BUNDLE) --outfile=public/app.$(CHECKSUM).js
+	m4 -D __VERSION__="$(COMMIT_SHA) @ $(TODAY)" -D __APPJS__=app.$(CHECKSUM).js src/html/index.html > public/index.html
 
 watch:
 	rg --files | entr make
