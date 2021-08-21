@@ -8,11 +8,11 @@
     "test": "mocha --reporter dot"
   },
   "devDependencies": {
-    "esbuild": "0.12.20",
+    "esbuild": "0.12.22",
     "eslint": "7.32.0",
     "eslint-config-airbnb-base": "14.2.1",
-    "eslint-plugin-import": "2.24.0",
-    "mocha": "9.0.3",
+    "eslint-plugin-import": "2.24.1",
+    "mocha": "9.1.0",
     "nyc": "15.1.0"
   },
   "private": true
