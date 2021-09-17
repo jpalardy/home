@@ -19,6 +19,11 @@ module.exports = [
     alias: "postgres",
     search: "https://www.postgresql.org/search/?q=%s",
   },
+  {
+    alias: "tachyons",
+    search: "https://tachyons.io/docs/table-of-styles/",
+    visit: "https://tachyons.io/docs/",
+  },
   // -------------------------------------------------
   // elixir, phoenix
   // -------------------------------------------------
