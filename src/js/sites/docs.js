@@ -16,11 +16,11 @@ module.exports = [
     visit: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference",
   },
   {
-    alias: "postgres",
+    alias: "pg",
     search: "https://www.postgresql.org/search/?q=%s",
   },
   {
-    alias: "tachyons",
+    alias: "tac",
     search: "https://tachyons.io/docs/table-of-styles/",
     visit: "https://tachyons.io/docs/",
   },
