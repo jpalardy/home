@@ -21,8 +21,11 @@ module.exports = [
   },
   {
     alias: "tac",
-    search: "https://tachyons.io/docs/table-of-styles/",
     visit: "https://tachyons.io/docs/",
+  },
+  {
+    alias: "tac_",
+    visit: "https://github.com/tachyons-css/tachyons/blob/main/css/tachyons.css",
   },
   // -------------------------------------------------
   // elixir, phoenix
