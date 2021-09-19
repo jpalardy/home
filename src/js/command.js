@@ -41,7 +41,12 @@ module.exports = function create(sites, defaultAlias) {
         return new Command(site, "", site.visit);
       }
       const encodedQuery = encodeURIComponent(query).replace(/%20/g, "+");
-      return new Command(site, query, site.search.replace(/%s/g, encodedQuery));
+      if (site.search.includes("%s")) {
+        return new Command(site, query, site.search.replace(/%s/g, encodedQuery));
+      }
+      // happens for sites without search functionality...
+      // at least, query is in the url, as a reminder
+      return new Command(site, query, `${site.search}#${encodedQuery}`);
     },
   };
 };

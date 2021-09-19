@@ -43,6 +43,10 @@ describe("Command", () => {
     it("handles worst case with bad spacing", () => {
       assertURL("    gim some     thing      ", "https://www.google.com/search?q=some+thing&tbm=isch");
     });
+
+    it("handles alias without search -- putting search in hashtag", () => {
+      assertURL("cnm something", "https://www.cinemaclock.com/bri/vancouver#something");
+    });
   });
 
   describe("parse (legacy)", () => {
