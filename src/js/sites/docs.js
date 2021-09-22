@@ -19,6 +19,9 @@ module.exports = [
     alias: "pg",
     search: "https://www.postgresql.org/search/?q=%s",
   },
+  // -------------------------------------------------
+  // css
+  // -------------------------------------------------
   {
     alias: "tac",
     visit: "https://tachyons.io/docs/",
@@ -34,6 +37,10 @@ module.exports = [
   {
     alias: "flexboxfroggy",
     visit: "https://flexboxfroggy.com/",
+  },
+  {
+    alias: "grid",
+    visit: "https://css-tricks.com/snippets/css/complete-guide-grid/",
   },
   // -------------------------------------------------
   // elixir, phoenix
