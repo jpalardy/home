@@ -27,6 +27,14 @@ module.exports = [
     alias: "tac_",
     visit: "https://github.com/tachyons-css/tachyons/blob/main/css/tachyons.css",
   },
+  {
+    alias: "flex",
+    visit: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+  },
+  {
+    alias: "flexboxfroggy",
+    visit: "https://flexboxfroggy.com/",
+  },
   // -------------------------------------------------
   // elixir, phoenix
   // -------------------------------------------------
