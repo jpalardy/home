@@ -42,6 +42,10 @@ module.exports = [
     alias: "grid",
     visit: "https://css-tricks.com/snippets/css/complete-guide-grid/",
   },
+  {
+    alias: "fa",
+    search: "https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=%s&m=free",
+  },
   // -------------------------------------------------
   // elixir, phoenix
   // -------------------------------------------------
