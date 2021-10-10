@@ -202,17 +202,20 @@ search cards query =
         limit =
             120
 
-        trimmedQuery =
-            String.trim query
+        tokens =
+            query |> String.words |> Set.fromList
 
         matchingCards =
-            cards
-                |> filterWithQuery trimmedQuery
+            if query == "" then
+                cards
+
+            else
+                cards |> List.filter (\card -> Set.intersect tokens card.tokens |> (not << Set.isEmpty))
 
         count =
             List.length matchingCards
     in
-    { query = trimmedQuery
+    { query = String.trim query
     , cards = List.take limit matchingCards
     , count = count
     , truncated = count > limit
@@ -322,20 +325,6 @@ renderTruncatedNotice truncated =
 
     else
         text ""
-
-
-filterWithQuery : String -> List Card -> List Card
-filterWithQuery query cards =
-    let
-        tokens =
-            query |> String.words |> Set.fromList
-    in
-    if query == "" then
-        cards
-
-    else
-        cards |> List.filter (\card -> Set.intersect tokens card.tokens |> (not << Set.isEmpty))
-
 
 
 renderSearchForm : String -> List String -> Html Msg
