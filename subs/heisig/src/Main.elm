@@ -40,6 +40,7 @@ type alias Model =
     , queryChanged : Bool
     , cards : List Card
     , searchResults : SearchResults
+    , sortedTokens : List String
     , url : Url.Url
     , key : Nav.Key
     , err : Maybe Http.Error
@@ -84,6 +85,7 @@ init _ url key =
       , queryChanged = False
       , cards = []
       , searchResults = search [] query
+      , sortedTokens = []
       , url = url
       , key = key
       , err = Nothing
@@ -177,7 +179,17 @@ update msg model =
             )
 
         GotCards (Ok cards) ->
-            ( { model | cards = cards, searchResults = search cards model.query }, Cmd.none )
+            ( { model
+                | cards = cards
+                , searchResults = search cards model.query
+                , sortedTokens =
+                    List.map .tokens cards
+                        |> List.foldl Set.union Set.empty
+                        |> Set.toList
+                        |> List.sort
+              }
+            , Cmd.none
+            )
 
         GotCards (Err err) ->
             ( { model | err = Just err }, Cmd.none )
@@ -265,11 +277,8 @@ view model =
         suggestions =
             case ( model.queryChanged, lastWord ) of
                 ( True, Just word ) ->
-                    List.concatMap (.tokens >> Set.toList) model.cards
+                    model.sortedTokens
                         |> List.filter (String.startsWith word)
-                        |> Set.fromList
-                        |> Set.toList
-                        |> List.sort
                         |> List.take 10
                         |> List.map (\suggestion -> firstWords ++ " " ++ suggestion)
 
