@@ -98,6 +98,20 @@ init _ url key =
 --}
 
 
+tokenize : String -> Set.Set String
+tokenize text =
+    let
+        funnyChars =
+            Regex.fromString "[^a-z0-9' ]" |> Maybe.withDefault Regex.never
+    in
+    text
+        |> String.toLower
+        |> String.replace "-" " "
+        |> Regex.replace funnyChars (always "")
+        |> String.words
+        |> Set.fromList
+
+
 getKanjis : Cmd Msg
 getKanjis =
     Http.get
@@ -108,27 +122,17 @@ getKanjis =
 
 kanjiDecoder : Json.Decode.Decoder (List Card)
 kanjiDecoder =
-    let
-        funnyChars =
-            Regex.fromString "[^a-z' ]" |> Maybe.withDefault Regex.never
-
-        withTokens card =
-            let
-                tokens =
-                    card.keyword
-                        |> String.toLower
-                        |> String.replace "-" " "
-                        |> Regex.replace funnyChars (\_ -> "")
-                        |> String.words
-                        |> List.append [ String.fromInt card.no, card.kanji ]
-                        |> Set.fromList
-            in
-            { card | tokens = tokens }
-    in
     Json.Decode.keyValuePairs Json.Decode.string
         |> Json.Decode.andThen
             (Json.Decode.succeed
-                << List.indexedMap (\i ( kanji, keyword ) -> Card (i + 1) keyword kanji Set.empty |> withTokens)
+                << List.indexedMap
+                    (\i ( kanji, keyword ) ->
+                        { no = i + 1
+                        , keyword = keyword
+                        , kanji = kanji
+                        , tokens = tokenize <| String.join " " [ keyword, String.fromInt (i + 1), kanji ]
+                        }
+                    )
             )
 
 
@@ -203,7 +207,7 @@ search cards query =
             120
 
         tokens =
-            query |> String.words |> Set.fromList
+            tokenize query
 
         matchingCards =
             if query == "" then
