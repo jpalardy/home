@@ -72,13 +72,13 @@ type alias Card =
 init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
 init _ url key =
     let
-        unescapeSpace =
-            Maybe.map (String.replace "+" "%20")
-
         query =
-            { url | path = "", query = unescapeSpace url.query }
+            { url
+                | path = ""
+                , query = Maybe.map (String.replace "+" "%20") url.query
+            }
                 |> Url.Parser.parse (Url.Parser.query <| Url.Parser.Query.string "q")
-                |> Maybe.withDefault Nothing
+                |> Maybe.andThen identity
                 |> Maybe.withDefault ""
     in
     ( { query = query
