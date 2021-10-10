@@ -342,7 +342,8 @@ renderSearchForm query suggestions =
     Html.form [ onSubmit <| Search query ]
         [ div [ class "awesomplete" ]
             [ input
-                [ value query
+                [ id "query"
+                , value query
                 , onInput UpdateQuery
                 , stopPropagationOn "keypress" (Json.Decode.succeed ( Noop, True ))
                 , autofocus True
