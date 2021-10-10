@@ -337,6 +337,8 @@ renderSearchForm query suggestions =
                 , onInput UpdateQuery
                 , stopPropagationOn "keypress" (Json.Decode.succeed ( Noop, True ))
                 , autofocus True
+                , placeholder "keywords..."
+                , attribute "autocomplete" "off"
                 , attribute "autocapitalize" "off"
                 , attribute "autocorrect" "off"
                 , style "width" "500px"
