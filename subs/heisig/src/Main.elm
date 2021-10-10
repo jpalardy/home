@@ -353,7 +353,7 @@ renderSearchForm query suggestions =
                 , onInput UpdateQuery
                 , autofocus True
                 , placeholder "keywords..."
-                , attribute "autocomplete" "off"
+                , autocomplete False
                 , attribute "autocapitalize" "off"
                 , attribute "autocorrect" "off"
                 , style "width" "500px"
