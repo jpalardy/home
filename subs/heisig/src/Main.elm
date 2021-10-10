@@ -143,7 +143,7 @@ update msg model =
                         []
 
                     else
-                        [ Url.Builder.string "q" <| String.replace " " "+" query ]
+                        [ Url.Builder.string "q" query ]
             in
             ( { model
                 | searchResults = searchResults
