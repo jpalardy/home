@@ -43,7 +43,6 @@ type alias Model =
     , url : Url.Url
     , key : Nav.Key
     , err : Maybe Http.Error
-    , sansSerif : Bool
     }
 
 
@@ -88,7 +87,6 @@ init _ url key =
       , url = url
       , key = key
       , err = Nothing
-      , sansSerif = False
       }
     , getKanjis
     )
@@ -176,9 +174,6 @@ update msg model =
 
         KeyPress "/" ->
             ( model, Task.attempt (\_ -> Noop) (Dom.focus "query") )
-
-        KeyPress "f" ->
-            ( { model | sansSerif = not model.sansSerif }, Cmd.none )
 
         KeyPress _ ->
             ( model, Cmd.none )
@@ -275,12 +270,7 @@ view model =
         [ div []
             [ renderSearchForm model.query suggestions
             , span [ class "muted" ] [ text <| pluralize model.searchResults.count "no kanjis" "kanji" "kanjis" ]
-            , div
-                [ classList
-                    [ ( "cards", True )
-                    , ( "sans-serif", model.sansSerif )
-                    ]
-                ]
+            , div [ class "cards" ]
                 (List.map renderCard model.searchResults.cards)
             ]
         , renderTruncatedNotice model.searchResults.truncated
