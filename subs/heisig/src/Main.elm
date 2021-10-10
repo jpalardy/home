@@ -225,6 +225,19 @@ search cards query =
 --}
 
 
+pluralize : Int -> String -> String -> String -> String
+pluralize count zeroCase oneCase manyCase =
+    case count of
+        0 ->
+            zeroCase
+
+        1 ->
+            [ "1", oneCase ] |> String.join " "
+
+        _ ->
+            [ String.fromInt count, manyCase ] |> String.join " "
+
+
 view : Model -> Browser.Document Msg
 view model =
     let
@@ -323,18 +336,6 @@ filterWithQuery query cards =
     else
         cards |> List.filter (\card -> Set.intersect tokens card.tokens |> (not << Set.isEmpty))
 
-
-pluralize : Int -> String -> String -> String -> String
-pluralize count zeroCase oneCase manyCase =
-    case count of
-        0 ->
-            zeroCase
-
-        1 ->
-            [ "1", oneCase ] |> String.join " "
-
-        _ ->
-            [ String.fromInt count, manyCase ] |> String.join " "
 
 
 renderSearchForm : String -> List String -> Html Msg
