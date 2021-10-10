@@ -352,6 +352,7 @@ renderSearchForm query suggestions =
                 , autofocus True
                 , attribute "autocapitalize" "off"
                 , attribute "autocorrect" "off"
+                , style "width" "500px"
                 ]
                 []
             , ul []
@@ -362,6 +363,7 @@ renderSearchForm query suggestions =
                     suggestions
                 )
             ]
+        , button [ style "margin-left" "0.3rem" ] [ text "Search" ]
         ]
 
 
