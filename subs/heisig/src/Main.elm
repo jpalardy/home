@@ -32,7 +32,7 @@ type Msg
     | GotCards (Result Http.Error (List Card))
     | LinkClicked Browser.UrlRequest
     | UrlChanged Url.Url
-    | KeyPress String
+    | KeyUp String
 
 
 type alias Model =
@@ -140,7 +140,7 @@ kanjiDecoder =
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    Events.onKeyPress (Json.Decode.map KeyPress (Json.Decode.field "key" Json.Decode.string))
+    Events.onKeyUp (Json.Decode.map KeyUp (Json.Decode.field "key" Json.Decode.string))
 
 
 
@@ -205,10 +205,13 @@ update msg model =
         UrlChanged url ->
             ( { model | url = url }, Cmd.none )
 
-        KeyPress "/" ->
+        KeyUp "/" ->
             ( model, Task.attempt (\_ -> Noop) (Dom.focus "query") )
 
-        KeyPress _ ->
+        KeyUp "Escape" ->
+            ( { model | queryChanged = False }, Cmd.none )
+
+        KeyUp _ ->
             ( model, Cmd.none )
 
 
@@ -348,7 +351,6 @@ renderSearchForm query suggestions =
                 [ id "query"
                 , value query
                 , onInput UpdateQuery
-                , stopPropagationOn "keypress" (Json.Decode.succeed ( Noop, True ))
                 , autofocus True
                 , placeholder "keywords..."
                 , attribute "autocomplete" "off"
