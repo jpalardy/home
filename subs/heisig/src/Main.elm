@@ -8,7 +8,7 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
-import Json.Decode exposing (Decoder, keyValuePairs, string)
+import Json.Decode
 import List.Extra
 import Regex
 import Set
@@ -29,7 +29,7 @@ type Msg
     = Noop
     | UpdateQuery String
     | Search String
-    | GotKanjis (Result Http.Error (List ( String, String )))
+    | GotCards (Result Http.Error (List Card))
     | LinkClicked Browser.UrlRequest
     | UrlChanged Url.Url
     | KeyPress String
@@ -102,18 +102,39 @@ getKanjis : Cmd Msg
 getKanjis =
     Http.get
         { url = "heisig.min.json"
-        , expect = Http.expectJson GotKanjis kanjiDecoder
+        , expect = Http.expectJson GotCards kanjiDecoder
         }
 
 
-kanjiDecoder : Decoder (List ( String, String ))
+kanjiDecoder : Json.Decode.Decoder (List Card)
 kanjiDecoder =
-    keyValuePairs string
+    let
+        funnyChars =
+            Regex.fromString "[^a-z' ]" |> Maybe.withDefault Regex.never
+
+        withTokens card =
+            let
+                tokens =
+                    card.keyword
+                        |> String.toLower
+                        |> String.replace "-" " "
+                        |> Regex.replace funnyChars (\_ -> "")
+                        |> String.words
+                        |> List.append [ String.fromInt card.no, card.kanji ]
+                        |> Set.fromList
+            in
+            { card | tokens = tokens }
+    in
+    Json.Decode.keyValuePairs Json.Decode.string
+        |> Json.Decode.andThen
+            (Json.Decode.succeed
+                << List.indexedMap (\i ( kanji, keyword ) -> Card (i + 1) keyword kanji Set.empty |> withTokens)
+            )
 
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    Events.onKeyPress (Json.Decode.map KeyPress (Json.Decode.field "key" string))
+    Events.onKeyPress (Json.Decode.map KeyPress (Json.Decode.field "key" Json.Decode.string))
 
 
 
@@ -151,14 +172,10 @@ update msg model =
             , Nav.replaceUrl model.key <| Url.Builder.absolute [] urlQuery
             )
 
-        GotKanjis (Ok kanjis) ->
-            let
-                cards =
-                    List.indexedMap list2Cards kanjis
-            in
+        GotCards (Ok cards) ->
             ( { model | cards = cards, searchResults = search cards model.query }, Cmd.none )
 
-        GotKanjis (Err err) ->
+        GotCards (Err err) ->
             ( { model | err = Just err }, Cmd.none )
 
         LinkClicked urlRequest ->
@@ -177,27 +194,6 @@ update msg model =
 
         KeyPress _ ->
             ( model, Cmd.none )
-
-
-list2Cards : Int -> ( String, String ) -> Card
-list2Cards i ( kanji, keyword ) =
-    let
-        no =
-            i + 1
-
-        funnyChars =
-            Regex.fromString "[^a-z' ]" |> Maybe.withDefault Regex.never
-
-        tokens =
-            keyword
-                |> String.toLower
-                |> String.replace "-" " "
-                |> Regex.replace funnyChars (\_ -> "")
-                |> String.words
-                |> List.append [ String.fromInt no, kanji ]
-                |> Set.fromList
-    in
-    Card no keyword kanji tokens
 
 
 search : List Card -> String -> SearchResults
