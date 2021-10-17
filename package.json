@@ -8,7 +8,7 @@
     "test": "mocha --reporter dot"
   },
   "devDependencies": {
-    "esbuild": "0.13.7",
+    "esbuild": "0.13.8",
     "eslint": "8.0.1",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-plugin-import": "2.25.2",
