@@ -360,7 +360,12 @@ renderTruncatedNotice truncated =
 renderSearchForm : String -> Complete.State -> Html Msg
 renderSearchForm query completeState =
     Html.form [ onSubmit <| Search query ]
-        [ Complete.render completeState query UpdateQuery Search UpdateState
+        [ Complete.render completeState
+            query
+            { updateQuery = UpdateQuery
+            , updateState = UpdateState
+            , acceptQuery = Search
+            }
         , button [ style "margin-left" "0.3rem" ] [ text "Search" ]
         ]
 

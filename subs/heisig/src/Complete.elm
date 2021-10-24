@@ -33,6 +33,12 @@ closed =
     Closed
 
 
+type alias Callbacks msg =
+    { updateQuery : String -> msg
+    , updateState : State -> msg
+    , acceptQuery : String -> msg
+    }
+
 
 {--
 -------------------------------------------------
@@ -89,14 +95,14 @@ selection state =
 --}
 
 
-keyDecoder : State -> (String -> msg) -> (State -> msg) -> Json.Decode.Decoder { message : msg, stopPropagation : Bool, preventDefault : Bool }
-keyDecoder state acceptMsg selectMsg =
+keyDecoder : State -> Callbacks msg -> Json.Decode.Decoder { message : msg, stopPropagation : Bool, preventDefault : Bool }
+keyDecoder state messages =
     let
         -- https://thoughtbot.com/blog/advanced-dom-event-handlers-in-elm
         suppressedEvent =
             Json.Decode.fail "suppressed event"
 
-        handledWith msg =
+        handleWith msg =
             Json.Decode.succeed
                 { message = msg
                 , stopPropagation = True
@@ -108,29 +114,30 @@ keyDecoder state acceptMsg selectMsg =
             (\key ->
                 case ( state, key ) of
                     ( Opened _ _, "ArrowDown" ) ->
-                        handledWith <| selectMsg (next state)
+                        handleWith <| messages.updateState (next state)
 
                     ( Opened _ _, "ArrowUp" ) ->
-                        handledWith <| selectMsg (prev state)
+                      handleWith <| messages.updateState (prev state)
 
                     ( Opened _ _, "Enter" ) ->
                         case selection state of
                             Just text ->
-                                handledWith <| acceptMsg text
+                                handleWith <| messages.acceptQuery text
 
                             Nothing ->
                                 suppressedEvent
 
                     ( Opened _ _, "Escape" ) ->
-                        handledWith <| selectMsg Closed
+                        handleWith <| messages.updateState Closed
 
                     _ ->
                         suppressedEvent
             )
 
 
-render : State -> String -> (String -> msg) -> (String -> msg) -> (State -> msg) -> Html msg
-render state query updateMsg acceptMsg selectMsg =
+
+render : State -> String -> Callbacks msg -> Html msg
+render state query messages =
     let
         boolean v =
             if v then
@@ -143,12 +150,12 @@ render state query updateMsg acceptMsg selectMsg =
         [ input
             [ id "query"
             , value query
-            , onInput updateMsg
-            , onBlur (selectMsg Closed)
+            , onInput messages.updateQuery
+            , onBlur (messages.updateState Closed)
             , autofocus True
             , placeholder "keywords..."
             , autocomplete False
-            , custom "keydown" (keyDecoder state acceptMsg selectMsg)
+            , custom "keydown" (keyDecoder state messages)
             , attribute "autocapitalize" "off"
             , attribute "autocorrect" "off"
             , style "width" "500px"
@@ -162,10 +169,9 @@ render state query updateMsg acceptMsg selectMsg =
                 ul []
                     (List.indexedMap
                         (\i suggestion ->
-                            -- onClick <| acceptMsg suggestion
                             li
-                                [ -- to prevent blur
-                                  preventDefaultOn "mousedown" (Json.Decode.succeed ( acceptMsg suggestion, True ))
+                                -- mousedown (instead of mouseclick) to prevent blur
+                                [ preventDefaultOn "mousedown" (Json.Decode.succeed ( messages.acceptQuery suggestion, True ))
                                 , attribute "aria-selected" (boolean <| i == selectedIndex)
                                 ]
                                 [ text suggestion ]
