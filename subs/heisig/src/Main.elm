@@ -360,7 +360,14 @@ renderTruncatedNotice truncated =
 renderSearchForm : String -> Complete.State -> Html Msg
 renderSearchForm query completeState =
     Html.form [ onSubmit <| Search query ]
-        [ Complete.render completeState
+        [ Complete.render
+            [ id "query"
+            , autofocus True
+            , placeholder "keywords..."
+            , autocomplete False
+            , style "width" "500px"
+            ]
+            completeState
             query
             { updateQuery = UpdateQuery
             , updateState = UpdateState

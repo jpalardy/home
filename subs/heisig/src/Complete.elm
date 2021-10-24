@@ -40,6 +40,7 @@ type alias Callbacks msg =
     }
 
 
+
 {--
 -------------------------------------------------
     helpers
@@ -117,7 +118,7 @@ keyDecoder state messages =
                         handleWith <| messages.updateState (next state)
 
                     ( Opened _ _, "ArrowUp" ) ->
-                      handleWith <| messages.updateState (prev state)
+                        handleWith <| messages.updateState (prev state)
 
                     ( Opened _ _, "Enter" ) ->
                         case selection state of
@@ -135,9 +136,8 @@ keyDecoder state messages =
             )
 
 
-
-render : State -> String -> Callbacks msg -> Html msg
-render state query messages =
+render : List (Attribute msg) -> State -> String -> Callbacks msg -> Html msg
+render attrs state query messages =
     let
         boolean v =
             if v then
@@ -148,18 +148,16 @@ render state query messages =
     in
     div [ class "awesomplete" ]
         [ input
-            [ id "query"
-            , value query
-            , onInput messages.updateQuery
-            , onBlur (messages.updateState Closed)
-            , autofocus True
-            , placeholder "keywords..."
-            , autocomplete False
-            , custom "keydown" (keyDecoder state messages)
-            , attribute "autocapitalize" "off"
-            , attribute "autocorrect" "off"
-            , style "width" "500px"
-            ]
+            (attrs
+                ++ [ value query
+                   , onInput messages.updateQuery
+                   , onBlur (messages.updateState Closed)
+                   , custom "keydown" (keyDecoder state messages)
+                   , autocomplete False
+                   , attribute "autocapitalize" "off"
+                   , attribute "autocorrect" "off"
+                   ]
+            )
             []
         , case state of
             Closed ->
