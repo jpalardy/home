@@ -4,6 +4,7 @@ import Browser
 import Browser.Dom as Dom
 import Browser.Events as Events
 import Browser.Navigation as Nav
+import Complete
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
@@ -28,16 +29,17 @@ import Url.Parser.Query
 type Msg
     = Noop
     | UpdateQuery String
+    | UpdateState Complete.State
     | Search String
     | GotCards (Result Http.Error (List Card))
     | LinkClicked Browser.UrlRequest
     | UrlChanged Url.Url
-    | KeyUp String
+    | KeyDown String
 
 
 type alias Model =
     { query : String
-    , queryChanged : Bool
+    , completeState : Complete.State
     , cards : List Card
     , searchResults : SearchResults
     , sortedTokens : List String
@@ -82,7 +84,7 @@ init _ url key =
                 |> Maybe.withDefault ""
     in
     ( { query = query
-      , queryChanged = False
+      , completeState = Complete.closed
       , cards = []
       , searchResults = search [] query
       , sortedTokens = []
@@ -98,6 +100,36 @@ init _ url key =
 {--
 -------------------------------------------------
 --}
+
+
+generateSuggestions : List String -> Int -> String -> Complete.State
+generateSuggestions sortedTokens count query =
+    let
+        words =
+            String.words query
+
+        -- no last word: empty or ends with space
+        splitIndex =
+            if String.trim query == "" || String.endsWith " " query then
+                List.length words
+
+            else
+                List.length words - 1
+
+        ( firstWords, lastWord ) =
+            List.Extra.splitAt splitIndex words |> Tuple.mapBoth (String.join " ") List.head
+    in
+    case lastWord of
+        Just word ->
+            Complete.new
+                (sortedTokens
+                    |> List.filter (String.startsWith word)
+                    |> List.take count
+                    |> List.map (\suggestion -> firstWords ++ " " ++ suggestion)
+                )
+
+        _ ->
+            Complete.closed
 
 
 tokenize : String -> Set.Set String
@@ -140,7 +172,7 @@ kanjiDecoder =
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    Events.onKeyUp (Json.Decode.map KeyUp (Json.Decode.field "key" Json.Decode.string))
+    Events.onKeyUp (Json.Decode.map KeyDown (Json.Decode.field "key" Json.Decode.string))
 
 
 
@@ -156,7 +188,15 @@ update msg model =
             ( model, Cmd.none )
 
         UpdateQuery query ->
-            ( { model | query = query, queryChanged = True }, Cmd.none )
+            ( { model
+                | query = query
+                , completeState = generateSuggestions model.sortedTokens 10 query
+              }
+            , Cmd.none
+            )
+
+        UpdateState completeState ->
+            ( { model | completeState = completeState }, Cmd.none )
 
         Search query ->
             let
@@ -173,7 +213,7 @@ update msg model =
             ( { model
                 | searchResults = searchResults
                 , query = searchResults.query
-                , queryChanged = False
+                , completeState = Complete.closed
               }
             , Nav.replaceUrl model.key <| Url.Builder.absolute [] urlQuery
             )
@@ -205,13 +245,13 @@ update msg model =
         UrlChanged url ->
             ( { model | url = url }, Cmd.none )
 
-        KeyUp "/" ->
+        KeyDown "/" ->
             ( model, Task.attempt (\_ -> Noop) (Dom.focus "query") )
 
-        KeyUp "Escape" ->
-            ( { model | queryChanged = False }, Cmd.none )
+        KeyDown "?" ->
+            ( model, Task.attempt (\_ -> Noop) (Dom.focus "query") )
 
-        KeyUp _ ->
+        KeyDown _ ->
             ( model, Cmd.none )
 
 
@@ -262,32 +302,6 @@ pluralize count zeroCase oneCase manyCase =
 
 view : Model -> Browser.Document Msg
 view model =
-    let
-        words =
-            String.words model.query
-
-        -- no last word: empty or ends with space
-        splitIndex =
-            if String.trim model.query == "" || String.endsWith " " model.query then
-                List.length words
-
-            else
-                List.length words - 1
-
-        ( firstWords, lastWord ) =
-            List.Extra.splitAt splitIndex words |> Tuple.mapBoth (String.join " ") List.head
-
-        suggestions =
-            case ( model.queryChanged, lastWord ) of
-                ( True, Just word ) ->
-                    model.sortedTokens
-                        |> List.filter (String.startsWith word)
-                        |> List.take 10
-                        |> List.map (\suggestion -> firstWords ++ " " ++ suggestion)
-
-                _ ->
-                    []
-    in
     { title =
         if model.searchResults.query == "" then
             "Heisig lookup"
@@ -296,7 +310,7 @@ view model =
             "Heisig: " ++ model.searchResults.query
     , body =
         [ div []
-            [ renderSearchForm model.query suggestions
+            [ renderSearchForm model.query model.completeState
             , span [ class "muted" ] [ text <| pluralize model.searchResults.count "no kanjis" "kanji" "kanjis" ]
             , div [ class "cards" ]
                 (List.map renderCard model.searchResults.cards)
@@ -343,30 +357,10 @@ renderTruncatedNotice truncated =
         text ""
 
 
-renderSearchForm : String -> List String -> Html Msg
-renderSearchForm query suggestions =
+renderSearchForm : String -> Complete.State -> Html Msg
+renderSearchForm query completeState =
     Html.form [ onSubmit <| Search query ]
-        [ div [ class "awesomplete" ]
-            [ input
-                [ id "query"
-                , value query
-                , onInput UpdateQuery
-                , autofocus True
-                , placeholder "keywords..."
-                , autocomplete False
-                , attribute "autocapitalize" "off"
-                , attribute "autocorrect" "off"
-                , style "width" "500px"
-                ]
-                []
-            , ul []
-                (List.map
-                    (\suggestion ->
-                        li [ onClick <| Search suggestion ] [ text suggestion ]
-                    )
-                    suggestions
-                )
-            ]
+        [ Complete.render completeState query UpdateQuery Search UpdateState
         , button [ style "margin-left" "0.3rem" ] [ text "Search" ]
         ]
 
