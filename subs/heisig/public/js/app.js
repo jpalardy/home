@@ -784,11 +784,11 @@ function _Debug_crash_UNUSED(identifier, fact1, fact2, fact3, fact4)
 
 function _Debug_regionToString(region)
 {
-	if (region.O.A === region.T.A)
+	if (region.W.C === region.ab.C)
 	{
-		return 'on line ' + region.O.A;
+		return 'on line ' + region.W.C;
 	}
-	return 'on lines ' + region.O.A + ' through ' + region.T.A;
+	return 'on lines ' + region.W.C + ' through ' + region.ab.C;
 }
 
 
@@ -1857,9 +1857,9 @@ var _Platform_worker = F4(function(impl, flagDecoder, debugMetadata, args)
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.aJ,
-		impl.a0,
-		impl.aZ,
+		impl.aP,
+		impl.a9,
+		impl.a6,
 		function() { return function() {} }
 	);
 });
@@ -2704,9 +2704,9 @@ var _VirtualDom_mapEventTuple = F2(function(func, tuple)
 var _VirtualDom_mapEventRecord = F2(function(func, record)
 {
 	return {
-		p: func(record.p),
-		P: record.P,
-		M: record.M
+		aR: func(record.aR),
+		a4: record.a4,
+		a_: record.a_
 	}
 });
 
@@ -2974,11 +2974,11 @@ function _VirtualDom_makeCallback(eventNode, initialHandler)
 		// 3 = Custom
 
 		var value = result.a;
-		var message = !tag ? value : tag < 3 ? value.a : value.p;
-		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.P;
+		var message = !tag ? value : tag < 3 ? value.a : value.aR;
+		var stopPropagation = tag == 1 ? value.b : tag == 3 && value.a4;
 		var currentEventNode = (
 			stopPropagation && event.stopPropagation(),
-			(tag == 2 ? value.b : tag == 3 && value.M) && event.preventDefault(),
+			(tag == 2 ? value.b : tag == 3 && value.a_) && event.preventDefault(),
 			eventNode
 		);
 		var tagger;
@@ -3928,11 +3928,11 @@ var _Browser_element = _Debugger_element || F4(function(impl, flagDecoder, debug
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.aJ,
-		impl.a0,
-		impl.aZ,
+		impl.aP,
+		impl.a9,
+		impl.a6,
 		function(sendToApp, initialModel) {
-			var view = impl.a1;
+			var view = impl.ba;
 			/**/
 			var domNode = args['node'];
 			//*/
@@ -3964,12 +3964,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 	return _Platform_initialize(
 		flagDecoder,
 		args,
-		impl.aJ,
-		impl.a0,
-		impl.aZ,
+		impl.aP,
+		impl.a9,
+		impl.a6,
 		function(sendToApp, initialModel) {
-			var divertHrefToApp = impl.N && impl.N(sendToApp)
-			var view = impl.a1;
+			var divertHrefToApp = impl.V && impl.V(sendToApp)
+			var view = impl.ba;
 			var title = _VirtualDom_doc.title;
 			var bodyNode = _VirtualDom_doc.body;
 			var currNode = _VirtualDom_virtualize(bodyNode);
@@ -3977,12 +3977,12 @@ var _Browser_document = _Debugger_document || F4(function(impl, flagDecoder, deb
 			{
 				_VirtualDom_divertHrefToApp = divertHrefToApp;
 				var doc = view(model);
-				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.az);
+				var nextNode = _VirtualDom_node('body')(_List_Nil)(doc.aF);
 				var patches = _VirtualDom_diff(currNode, nextNode);
 				bodyNode = _VirtualDom_applyPatches(bodyNode, currNode, patches, sendToApp);
 				currNode = nextNode;
 				_VirtualDom_divertHrefToApp = 0;
-				(title !== doc.a$) && (_VirtualDom_doc.title = title = doc.a$);
+				(title !== doc.a8) && (_VirtualDom_doc.title = title = doc.a8);
 			});
 		}
 	);
@@ -4038,12 +4038,12 @@ function _Browser_makeAnimator(model, draw)
 
 function _Browser_application(impl)
 {
-	var onUrlChange = impl.aP;
-	var onUrlRequest = impl.aQ;
+	var onUrlChange = impl.aW;
+	var onUrlRequest = impl.aX;
 	var key = function() { key.a(onUrlChange(_Browser_getUrl())); };
 
 	return _Browser_document({
-		N: function(sendToApp)
+		V: function(sendToApp)
 		{
 			key.a = sendToApp;
 			_Browser_window.addEventListener('popstate', key);
@@ -4059,9 +4059,9 @@ function _Browser_application(impl)
 					var next = $elm$url$Url$fromString(href).a;
 					sendToApp(onUrlRequest(
 						(next
-							&& curr.ah === next.ah
-							&& curr.Y === next.Y
-							&& curr.ae.a === next.ae.a
+							&& curr.an === next.an
+							&& curr.ag === next.ag
+							&& curr.ak.a === next.ak.a
 						)
 							? $elm$browser$Browser$Internal(next)
 							: $elm$browser$Browser$External(href)
@@ -4069,13 +4069,13 @@ function _Browser_application(impl)
 				}
 			});
 		},
-		aJ: function(flags)
+		aP: function(flags)
 		{
-			return A3(impl.aJ, flags, _Browser_getUrl(), key);
+			return A3(impl.aP, flags, _Browser_getUrl(), key);
 		},
-		a1: impl.a1,
-		a0: impl.a0,
-		aZ: impl.aZ
+		ba: impl.ba,
+		a9: impl.a9,
+		a6: impl.a6
 	});
 }
 
@@ -4141,17 +4141,17 @@ var _Browser_decodeEvent = F2(function(decoder, event)
 function _Browser_visibilityInfo()
 {
 	return (typeof _VirtualDom_doc.hidden !== 'undefined')
-		? { aG: 'hidden', aB: 'visibilitychange' }
+		? { aM: 'hidden', aH: 'visibilitychange' }
 		:
 	(typeof _VirtualDom_doc.mozHidden !== 'undefined')
-		? { aG: 'mozHidden', aB: 'mozvisibilitychange' }
+		? { aM: 'mozHidden', aH: 'mozvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.msHidden !== 'undefined')
-		? { aG: 'msHidden', aB: 'msvisibilitychange' }
+		? { aM: 'msHidden', aH: 'msvisibilitychange' }
 		:
 	(typeof _VirtualDom_doc.webkitHidden !== 'undefined')
-		? { aG: 'webkitHidden', aB: 'webkitvisibilitychange' }
-		: { aG: 'hidden', aB: 'visibilitychange' };
+		? { aM: 'webkitHidden', aH: 'webkitvisibilitychange' }
+		: { aM: 'hidden', aH: 'visibilitychange' };
 }
 
 
@@ -4232,12 +4232,12 @@ var _Browser_call = F2(function(functionName, id)
 function _Browser_getViewport()
 {
 	return {
-		am: _Browser_getScene(),
-		as: {
-			au: _Browser_window.pageXOffset,
-			av: _Browser_window.pageYOffset,
-			at: _Browser_doc.documentElement.clientWidth,
-			X: _Browser_doc.documentElement.clientHeight
+		as: _Browser_getScene(),
+		ay: {
+			aA: _Browser_window.pageXOffset,
+			aB: _Browser_window.pageYOffset,
+			az: _Browser_doc.documentElement.clientWidth,
+			af: _Browser_doc.documentElement.clientHeight
 		}
 	};
 }
@@ -4247,8 +4247,8 @@ function _Browser_getScene()
 	var body = _Browser_doc.body;
 	var elem = _Browser_doc.documentElement;
 	return {
-		at: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
-		X: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
+		az: Math.max(body.scrollWidth, body.offsetWidth, elem.scrollWidth, elem.offsetWidth, elem.clientWidth),
+		af: Math.max(body.scrollHeight, body.offsetHeight, elem.scrollHeight, elem.offsetHeight, elem.clientHeight)
 	};
 }
 
@@ -4271,15 +4271,15 @@ function _Browser_getViewportOf(id)
 	return _Browser_withNode(id, function(node)
 	{
 		return {
-			am: {
-				at: node.scrollWidth,
-				X: node.scrollHeight
-			},
 			as: {
-				au: node.scrollLeft,
-				av: node.scrollTop,
-				at: node.clientWidth,
-				X: node.clientHeight
+				az: node.scrollWidth,
+				af: node.scrollHeight
+			},
+			ay: {
+				aA: node.scrollLeft,
+				aB: node.scrollTop,
+				az: node.clientWidth,
+				af: node.clientHeight
 			}
 		};
 	});
@@ -4309,18 +4309,18 @@ function _Browser_getElement(id)
 		var x = _Browser_window.pageXOffset;
 		var y = _Browser_window.pageYOffset;
 		return {
-			am: _Browser_getScene(),
-			as: {
-				au: x,
-				av: y,
-				at: _Browser_doc.documentElement.clientWidth,
-				X: _Browser_doc.documentElement.clientHeight
+			as: _Browser_getScene(),
+			ay: {
+				aA: x,
+				aB: y,
+				az: _Browser_doc.documentElement.clientWidth,
+				af: _Browser_doc.documentElement.clientHeight
 			},
-			aD: {
-				au: x + rect.left,
-				av: y + rect.top,
-				at: rect.width,
-				X: rect.height
+			aJ: {
+				aA: x + rect.left,
+				aB: y + rect.top,
+				az: rect.width,
+				af: rect.height
 			}
 		};
 	});
@@ -4365,25 +4365,25 @@ var _Http_toTask = F3(function(router, toTask, request)
 	return _Scheduler_binding(function(callback)
 	{
 		function done(response) {
-			callback(toTask(request.aE.a(response)));
+			callback(toTask(request.aK.a(response)));
 		}
 
 		var xhr = new XMLHttpRequest();
 		xhr.addEventListener('error', function() { done($elm$http$Http$NetworkError_); });
 		xhr.addEventListener('timeout', function() { done($elm$http$Http$Timeout_); });
-		xhr.addEventListener('load', function() { done(_Http_toResponse(request.aE.b, xhr)); });
-		$elm$core$Maybe$isJust(request.ar) && _Http_track(router, xhr, request.ar.a);
+		xhr.addEventListener('load', function() { done(_Http_toResponse(request.aK.b, xhr)); });
+		$elm$core$Maybe$isJust(request.aw) && _Http_track(router, xhr, request.aw.a);
 
 		try {
-			xhr.open(request.aL, request.G, true);
+			xhr.open(request.aS, request.M, true);
 		} catch (e) {
-			return done($elm$http$Http$BadUrl_(request.G));
+			return done($elm$http$Http$BadUrl_(request.M));
 		}
 
 		_Http_configureRequest(xhr, request);
 
-		request.az.a && xhr.setRequestHeader('Content-Type', request.az.a);
-		xhr.send(request.az.b);
+		request.aF.a && xhr.setRequestHeader('Content-Type', request.aF.a);
+		xhr.send(request.aF.b);
 
 		return function() { xhr.c = true; xhr.abort(); };
 	});
@@ -4394,13 +4394,13 @@ var _Http_toTask = F3(function(router, toTask, request)
 
 function _Http_configureRequest(xhr, request)
 {
-	for (var headers = request.W; headers.b; headers = headers.b) // WHILE_CONS
+	for (var headers = request.ae; headers.b; headers = headers.b) // WHILE_CONS
 	{
 		xhr.setRequestHeader(headers.a.a, headers.a.b);
 	}
-	xhr.timeout = request.a_.a || 0;
-	xhr.responseType = request.aE.d;
-	xhr.withCredentials = request.ax;
+	xhr.timeout = request.a7.a || 0;
+	xhr.responseType = request.aK.d;
+	xhr.withCredentials = request.aD;
 }
 
 
@@ -4421,10 +4421,10 @@ function _Http_toResponse(toBody, xhr)
 function _Http_toMetadata(xhr)
 {
 	return {
-		G: xhr.responseURL,
-		aW: xhr.status,
-		aX: xhr.statusText,
-		W: _Http_parseHeaders(xhr.getAllResponseHeaders())
+		M: xhr.responseURL,
+		a2: xhr.status,
+		a3: xhr.statusText,
+		ae: _Http_parseHeaders(xhr.getAllResponseHeaders())
 	};
 }
 
@@ -4519,34 +4519,17 @@ function _Http_track(router, xhr, tracker)
 	xhr.upload.addEventListener('progress', function(event) {
 		if (xhr.c) { return; }
 		_Scheduler_rawSpawn(A2($elm$core$Platform$sendToSelf, router, _Utils_Tuple2(tracker, $elm$http$Http$Sending({
-			aV: event.loaded,
-			an: event.total
+			a1: event.loaded,
+			at: event.total
 		}))));
 	});
 	xhr.addEventListener('progress', function(event) {
 		if (xhr.c) { return; }
 		_Scheduler_rawSpawn(A2($elm$core$Platform$sendToSelf, router, _Utils_Tuple2(tracker, $elm$http$Http$Receiving({
-			aT: event.loaded,
-			an: event.lengthComputable ? $elm$core$Maybe$Just(event.total) : $elm$core$Maybe$Nothing
+			a$: event.loaded,
+			at: event.lengthComputable ? $elm$core$Maybe$Just(event.total) : $elm$core$Maybe$Nothing
 		}))));
 	});
-}
-
-function _Url_percentEncode(string)
-{
-	return encodeURIComponent(string);
-}
-
-function _Url_percentDecode(string)
-{
-	try
-	{
-		return $elm$core$Maybe$Just(decodeURIComponent(string));
-	}
-	catch (e)
-	{
-		return $elm$core$Maybe$Nothing;
-	}
 }
 
 // CREATE
@@ -4556,8 +4539,8 @@ var _Regex_never = /.^/;
 var _Regex_fromStringWith = F2(function(options, string)
 {
 	var flags = 'g';
-	if (options.aM) { flags += 'm'; }
-	if (options.aA) { flags += 'i'; }
+	if (options.aT) { flags += 'm'; }
+	if (options.aG) { flags += 'i'; }
 
 	try
 	{
@@ -4648,11 +4631,28 @@ var _Regex_splitAtMost = F3(function(n, re, str)
 });
 
 var _Regex_infinity = Infinity;
-var $author$project$Main$LinkClicked = function (a) {
-	return {$: 3, a: a};
+
+
+function _Url_percentEncode(string)
+{
+	return encodeURIComponent(string);
+}
+
+function _Url_percentDecode(string)
+{
+	try
+	{
+		return $elm$core$Maybe$Just(decodeURIComponent(string));
+	}
+	catch (e)
+	{
+		return $elm$core$Maybe$Nothing;
+	}
+}var $author$project$Main$LinkClicked = function (a) {
+	return {$: 5, a: a};
 };
 var $author$project$Main$UrlChanged = function (a) {
-	return {$: 4, a: a};
+	return {$: 6, a: a};
 };
 var $elm$core$Basics$EQ = 1;
 var $elm$core$Basics$GT = 2;
@@ -5158,7 +5158,7 @@ var $elm$url$Url$Http = 0;
 var $elm$url$Url$Https = 1;
 var $elm$url$Url$Url = F6(
 	function (protocol, host, port_, path, query, fragment) {
-		return {V: fragment, Y: host, aS: path, ae: port_, ah: protocol, l: query};
+		return {ad: fragment, ag: host, aZ: path, ak: port_, an: protocol, f: query};
 	});
 var $elm$core$String$contains = _String_contains;
 var $elm$core$String$length = _String_length;
@@ -5437,8 +5437,19 @@ var $elm$core$Task$perform = F2(
 			A2($elm$core$Task$map, toMessage, task));
 	});
 var $elm$browser$Browser$application = _Browser_application;
-var $author$project$Main$GotKanjis = function (a) {
-	return {$: 2, a: a};
+var $elm$core$Maybe$andThen = F2(
+	function (callback, maybeValue) {
+		if (!maybeValue.$) {
+			var value = maybeValue.a;
+			return callback(value);
+		} else {
+			return $elm$core$Maybe$Nothing;
+		}
+	});
+var $author$project$Complete$Closed = {$: 0};
+var $author$project$Complete$closed = $author$project$Complete$Closed;
+var $author$project$Main$GotCards = function (a) {
+	return {$: 4, a: a};
 };
 var $elm$json$Json$Decode$decodeString = _Json_runOnString;
 var $elm$http$Http$BadStatus_ = F2(
@@ -6032,7 +6043,7 @@ var $elm$http$Http$resolve = F2(
 			case 3:
 				var metadata = response.a;
 				return $elm$core$Result$Err(
-					$elm$http$Http$BadStatus(metadata.aW));
+					$elm$http$Http$BadStatus(metadata.a2));
 			default:
 				var body = response.b;
 				return A2(
@@ -6060,7 +6071,7 @@ var $elm$http$Http$Request = function (a) {
 };
 var $elm$http$Http$State = F2(
 	function (reqs, subs) {
-		return {aj: reqs, ao: subs};
+		return {ap: reqs, au: subs};
 	});
 var $elm$http$Http$init = $elm$core$Task$succeed(
 	A2($elm$http$Http$State, $elm$core$Dict$empty, _List_Nil));
@@ -6104,7 +6115,7 @@ var $elm$http$Http$updateReqs = F3(
 					return A2(
 						$elm$core$Task$andThen,
 						function (pid) {
-							var _v4 = req.ar;
+							var _v4 = req.aw;
 							if (_v4.$ === 1) {
 								return A3($elm$http$Http$updateReqs, router, otherCmds, reqs);
 							} else {
@@ -6134,7 +6145,7 @@ var $elm$http$Http$onEffects = F4(
 				return $elm$core$Task$succeed(
 					A2($elm$http$Http$State, reqs, subs));
 			},
-			A3($elm$http$Http$updateReqs, router, cmds, state.aj));
+			A3($elm$http$Http$updateReqs, router, cmds, state.ap));
 	});
 var $elm$core$List$maybeCons = F3(
 	function (f, mx, xs) {
@@ -6177,7 +6188,7 @@ var $elm$http$Http$onSelfMsg = F3(
 				A2(
 					$elm$core$List$filterMap,
 					A3($elm$http$Http$maybeSend, router, tracker, progress),
-					state.ao)));
+					state.au)));
 	});
 var $elm$http$Http$Cancel = function (a) {
 	return {$: 0, a: a};
@@ -6191,14 +6202,14 @@ var $elm$http$Http$cmdMap = F2(
 			var r = cmd.a;
 			return $elm$http$Http$Request(
 				{
-					ax: r.ax,
-					az: r.az,
-					aE: A2(_Http_mapExpect, func, r.aE),
-					W: r.W,
-					aL: r.aL,
-					a_: r.a_,
-					ar: r.ar,
-					G: r.G
+					aD: r.aD,
+					aF: r.aF,
+					aK: A2(_Http_mapExpect, func, r.aK),
+					ae: r.ae,
+					aS: r.aS,
+					a7: r.a7,
+					aw: r.aw,
+					M: r.M
 				});
 		}
 	});
@@ -6221,19 +6232,113 @@ var $elm$http$Http$subscription = _Platform_leaf('Http');
 var $elm$http$Http$request = function (r) {
 	return $elm$http$Http$command(
 		$elm$http$Http$Request(
-			{ax: false, az: r.az, aE: r.aE, W: r.W, aL: r.aL, a_: r.a_, ar: r.ar, G: r.G}));
+			{aD: false, aF: r.aF, aK: r.aK, ae: r.ae, aS: r.aS, a7: r.a7, aw: r.aw, M: r.M}));
 };
 var $elm$http$Http$get = function (r) {
 	return $elm$http$Http$request(
-		{az: $elm$http$Http$emptyBody, aE: r.aE, W: _List_Nil, aL: 'GET', a_: $elm$core$Maybe$Nothing, ar: $elm$core$Maybe$Nothing, G: r.G});
+		{aF: $elm$http$Http$emptyBody, aK: r.aK, ae: _List_Nil, aS: 'GET', a7: $elm$core$Maybe$Nothing, aw: $elm$core$Maybe$Nothing, M: r.M});
 };
+var $elm$json$Json$Decode$andThen = _Json_andThen;
+var $elm$core$Basics$composeL = F3(
+	function (g, f, x) {
+		return g(
+			f(x));
+	});
 var $elm$json$Json$Decode$keyValuePairs = _Json_decodeKeyValuePairs;
 var $elm$json$Json$Decode$string = _Json_decodeString;
-var $author$project$Main$kanjiDecoder = $elm$json$Json$Decode$keyValuePairs($elm$json$Json$Decode$string);
+var $elm$core$Basics$always = F2(
+	function (a, _v0) {
+		return a;
+	});
+var $elm$core$Set$Set_elm_builtin = $elm$core$Basics$identity;
+var $elm$core$Set$empty = $elm$core$Dict$empty;
+var $elm$core$Set$insert = F2(
+	function (key, _v0) {
+		var dict = _v0;
+		return A3($elm$core$Dict$insert, key, 0, dict);
+	});
+var $elm$core$Set$fromList = function (list) {
+	return A3($elm$core$List$foldl, $elm$core$Set$insert, $elm$core$Set$empty, list);
+};
+var $elm$regex$Regex$Match = F4(
+	function (match, index, number, submatches) {
+		return {aO: index, aQ: match, aV: number, a5: submatches};
+	});
+var $elm$regex$Regex$fromStringWith = _Regex_fromStringWith;
+var $elm$regex$Regex$fromString = function (string) {
+	return A2(
+		$elm$regex$Regex$fromStringWith,
+		{aG: false, aT: false},
+		string);
+};
+var $elm$regex$Regex$never = _Regex_never;
+var $elm$regex$Regex$replace = _Regex_replaceAtMost(_Regex_infinity);
+var $elm$core$String$replace = F3(
+	function (before, after, string) {
+		return A2(
+			$elm$core$String$join,
+			after,
+			A2($elm$core$String$split, before, string));
+	});
+var $elm$core$String$toLower = _String_toLower;
+var $elm$core$Maybe$withDefault = F2(
+	function (_default, maybe) {
+		if (!maybe.$) {
+			var value = maybe.a;
+			return value;
+		} else {
+			return _default;
+		}
+	});
+var $elm$core$String$words = _String_words;
+var $author$project$Main$tokenize = function (text) {
+	var funnyChars = A2(
+		$elm$core$Maybe$withDefault,
+		$elm$regex$Regex$never,
+		$elm$regex$Regex$fromString('[^a-z0-9\' ]'));
+	return $elm$core$Set$fromList(
+		$elm$core$String$words(
+			A3(
+				$elm$regex$Regex$replace,
+				funnyChars,
+				$elm$core$Basics$always(''),
+				A3(
+					$elm$core$String$replace,
+					'-',
+					' ',
+					$elm$core$String$toLower(text)))));
+};
+var $author$project$Main$kanjiDecoder = A2(
+	$elm$json$Json$Decode$andThen,
+	A2(
+		$elm$core$Basics$composeL,
+		$elm$json$Json$Decode$succeed,
+		$elm$core$List$indexedMap(
+			F2(
+				function (i, _v0) {
+					var kanji = _v0.a;
+					var keyword = _v0.b;
+					return {
+						Q: kanji,
+						R: keyword,
+						T: i + 1,
+						L: $author$project$Main$tokenize(
+							A2(
+								$elm$core$String$join,
+								' ',
+								_List_fromArray(
+									[
+										keyword,
+										$elm$core$String$fromInt(i + 1),
+										kanji
+									])))
+					};
+				}))),
+	$elm$json$Json$Decode$keyValuePairs($elm$json$Json$Decode$string));
 var $author$project$Main$getKanjis = $elm$http$Http$get(
 	{
-		aE: A2($elm$http$Http$expectJson, $author$project$Main$GotKanjis, $author$project$Main$kanjiDecoder),
-		G: 'heisig.min.json'
+		aK: A2($elm$http$Http$expectJson, $author$project$Main$GotCards, $author$project$Main$kanjiDecoder),
+		M: 'heisig.min.json'
 	});
 var $elm$core$Maybe$map = F2(
 	function (f, maybe) {
@@ -6247,7 +6352,7 @@ var $elm$core$Maybe$map = F2(
 	});
 var $elm$url$Url$Parser$State = F5(
 	function (visited, unvisited, params, frag, value) {
-		return {s: frag, t: params, r: unvisited, n: value, v: visited};
+		return {t: frag, u: params, r: unvisited, o: value, w: visited};
 	});
 var $elm$url$Url$Parser$getFirstMatch = function (states) {
 	getFirstMatch:
@@ -6259,10 +6364,10 @@ var $elm$url$Url$Parser$getFirstMatch = function (states) {
 			var rest = states.b;
 			var _v1 = state.r;
 			if (!_v1.b) {
-				return $elm$core$Maybe$Just(state.n);
+				return $elm$core$Maybe$Just(state.o);
 			} else {
 				if ((_v1.a === '') && (!_v1.b.b)) {
-					return $elm$core$Maybe$Just(state.n);
+					return $elm$core$Maybe$Just(state.o);
 				} else {
 					var $temp$states = rest;
 					states = $temp$states;
@@ -6359,20 +6464,20 @@ var $elm$url$Url$Parser$parse = F2(
 				A5(
 					$elm$url$Url$Parser$State,
 					_List_Nil,
-					$elm$url$Url$Parser$preparePath(url.aS),
-					$elm$url$Url$Parser$prepareQuery(url.l),
-					url.V,
+					$elm$url$Url$Parser$preparePath(url.aZ),
+					$elm$url$Url$Parser$prepareQuery(url.f),
+					url.ad,
 					$elm$core$Basics$identity)));
 	});
 var $elm$url$Url$Parser$Parser = $elm$core$Basics$identity;
 var $elm$url$Url$Parser$query = function (_v0) {
 	var queryParser = _v0;
 	return function (_v1) {
-		var visited = _v1.v;
+		var visited = _v1.w;
 		var unvisited = _v1.r;
-		var params = _v1.t;
-		var frag = _v1.s;
-		var value = _v1.n;
+		var params = _v1.u;
+		var frag = _v1.t;
+		var value = _v1.o;
 		return _List_fromArray(
 			[
 				A5(
@@ -6386,113 +6491,17 @@ var $elm$url$Url$Parser$query = function (_v0) {
 			]);
 	};
 };
-var $elm$core$String$replace = F3(
-	function (before, after, string) {
-		return A2(
-			$elm$core$String$join,
-			after,
-			A2($elm$core$String$split, before, string));
+var $elm$core$List$filter = F2(
+	function (isGood, list) {
+		return A3(
+			$elm$core$List$foldr,
+			F2(
+				function (x, xs) {
+					return isGood(x) ? A2($elm$core$List$cons, x, xs) : xs;
+				}),
+			_List_Nil,
+			list);
 	});
-var $elm$url$Url$Parser$Internal$Parser = $elm$core$Basics$identity;
-var $elm$core$Maybe$withDefault = F2(
-	function (_default, maybe) {
-		if (!maybe.$) {
-			var value = maybe.a;
-			return value;
-		} else {
-			return _default;
-		}
-	});
-var $elm$url$Url$Parser$Query$custom = F2(
-	function (key, func) {
-		return function (dict) {
-			return func(
-				A2(
-					$elm$core$Maybe$withDefault,
-					_List_Nil,
-					A2($elm$core$Dict$get, key, dict)));
-		};
-	});
-var $elm$url$Url$Parser$Query$string = function (key) {
-	return A2(
-		$elm$url$Url$Parser$Query$custom,
-		key,
-		function (stringList) {
-			if (stringList.b && (!stringList.b.b)) {
-				var str = stringList.a;
-				return $elm$core$Maybe$Just(str);
-			} else {
-				return $elm$core$Maybe$Nothing;
-			}
-		});
-};
-var $author$project$Main$init = F3(
-	function (_v0, url, key) {
-		var unescapeSpace = $elm$core$Maybe$map(
-			A2($elm$core$String$replace, '+', '%20'));
-		var query = A2(
-			$elm$core$Maybe$withDefault,
-			'',
-			A2(
-				$elm$core$Maybe$withDefault,
-				$elm$core$Maybe$Nothing,
-				A2(
-					$elm$url$Url$Parser$parse,
-					$elm$url$Url$Parser$query(
-						$elm$url$Url$Parser$Query$string('q')),
-					_Utils_update(
-						url,
-						{
-							aS: '',
-							l: unescapeSpace(url.l)
-						}))));
-		return _Utils_Tuple2(
-			{H: _List_Nil, I: $elm$core$Maybe$Nothing, J: key, l: query, B: false, G: url},
-			$author$project$Main$getKanjis);
-	});
-var $author$project$Main$KeyPress = function (a) {
-	return {$: 5, a: a};
-};
-var $elm$json$Json$Decode$field = _Json_decodeField;
-var $elm$browser$Browser$Events$Document = 0;
-var $elm$browser$Browser$Events$MySub = F3(
-	function (a, b, c) {
-		return {$: 0, a: a, b: b, c: c};
-	});
-var $elm$browser$Browser$Events$State = F2(
-	function (subs, pids) {
-		return {ad: pids, ao: subs};
-	});
-var $elm$browser$Browser$Events$init = $elm$core$Task$succeed(
-	A2($elm$browser$Browser$Events$State, _List_Nil, $elm$core$Dict$empty));
-var $elm$browser$Browser$Events$nodeToKey = function (node) {
-	if (!node) {
-		return 'd_';
-	} else {
-		return 'w_';
-	}
-};
-var $elm$browser$Browser$Events$addKey = function (sub) {
-	var node = sub.a;
-	var name = sub.b;
-	return _Utils_Tuple2(
-		_Utils_ap(
-			$elm$browser$Browser$Events$nodeToKey(node),
-			name),
-		sub);
-};
-var $elm$core$Dict$fromList = function (assocs) {
-	return A3(
-		$elm$core$List$foldl,
-		F2(
-			function (_v0, dict) {
-				var key = _v0.a;
-				var value = _v0.b;
-				return A3($elm$core$Dict$insert, key, value, dict);
-			}),
-		$elm$core$Dict$empty,
-		assocs);
-};
 var $elm$core$Dict$foldl = F3(
 	function (func, acc, dict) {
 		foldl:
@@ -6518,822 +6527,54 @@ var $elm$core$Dict$foldl = F3(
 			}
 		}
 	});
-var $elm$core$Dict$merge = F6(
-	function (leftStep, bothStep, rightStep, leftDict, rightDict, initialResult) {
-		var stepState = F3(
-			function (rKey, rValue, _v0) {
-				stepState:
-				while (true) {
-					var list = _v0.a;
-					var result = _v0.b;
-					if (!list.b) {
-						return _Utils_Tuple2(
-							list,
-							A3(rightStep, rKey, rValue, result));
-					} else {
-						var _v2 = list.a;
-						var lKey = _v2.a;
-						var lValue = _v2.b;
-						var rest = list.b;
-						if (_Utils_cmp(lKey, rKey) < 0) {
-							var $temp$rKey = rKey,
-								$temp$rValue = rValue,
-								$temp$_v0 = _Utils_Tuple2(
-								rest,
-								A3(leftStep, lKey, lValue, result));
-							rKey = $temp$rKey;
-							rValue = $temp$rValue;
-							_v0 = $temp$_v0;
-							continue stepState;
-						} else {
-							if (_Utils_cmp(lKey, rKey) > 0) {
-								return _Utils_Tuple2(
-									list,
-									A3(rightStep, rKey, rValue, result));
-							} else {
-								return _Utils_Tuple2(
-									rest,
-									A4(bothStep, lKey, lValue, rValue, result));
-							}
-						}
-					}
-				}
-			});
-		var _v3 = A3(
+var $elm$core$Dict$filter = F2(
+	function (isGood, dict) {
+		return A3(
 			$elm$core$Dict$foldl,
-			stepState,
-			_Utils_Tuple2(
-				$elm$core$Dict$toList(leftDict),
-				initialResult),
-			rightDict);
-		var leftovers = _v3.a;
-		var intermediateResult = _v3.b;
-		return A3(
-			$elm$core$List$foldl,
-			F2(
-				function (_v4, result) {
-					var k = _v4.a;
-					var v = _v4.b;
-					return A3(leftStep, k, v, result);
+			F3(
+				function (k, v, d) {
+					return A2(isGood, k, v) ? A3($elm$core$Dict$insert, k, v, d) : d;
 				}),
-			intermediateResult,
-			leftovers);
+			$elm$core$Dict$empty,
+			dict);
 	});
-var $elm$browser$Browser$Events$Event = F2(
-	function (key, event) {
-		return {U: event, J: key};
+var $elm$core$Dict$member = F2(
+	function (key, dict) {
+		var _v0 = A2($elm$core$Dict$get, key, dict);
+		if (!_v0.$) {
+			return true;
+		} else {
+			return false;
+		}
 	});
-var $elm$browser$Browser$Events$spawn = F3(
-	function (router, key, _v0) {
-		var node = _v0.a;
-		var name = _v0.b;
-		var actualNode = function () {
-			if (!node) {
-				return _Browser_doc;
-			} else {
-				return _Browser_window;
-			}
-		}();
-		return A2(
-			$elm$core$Task$map,
-			function (value) {
-				return _Utils_Tuple2(key, value);
-			},
-			A3(
-				_Browser_on,
-				actualNode,
-				name,
-				function (event) {
-					return A2(
-						$elm$core$Platform$sendToSelf,
-						router,
-						A2($elm$browser$Browser$Events$Event, key, event));
-				}));
-	});
-var $elm$core$Dict$union = F2(
+var $elm$core$Dict$intersect = F2(
 	function (t1, t2) {
-		return A3($elm$core$Dict$foldl, $elm$core$Dict$insert, t2, t1);
-	});
-var $elm$browser$Browser$Events$onEffects = F3(
-	function (router, subs, state) {
-		var stepRight = F3(
-			function (key, sub, _v6) {
-				var deads = _v6.a;
-				var lives = _v6.b;
-				var news = _v6.c;
-				return _Utils_Tuple3(
-					deads,
-					lives,
-					A2(
-						$elm$core$List$cons,
-						A3($elm$browser$Browser$Events$spawn, router, key, sub),
-						news));
-			});
-		var stepLeft = F3(
-			function (_v4, pid, _v5) {
-				var deads = _v5.a;
-				var lives = _v5.b;
-				var news = _v5.c;
-				return _Utils_Tuple3(
-					A2($elm$core$List$cons, pid, deads),
-					lives,
-					news);
-			});
-		var stepBoth = F4(
-			function (key, pid, _v2, _v3) {
-				var deads = _v3.a;
-				var lives = _v3.b;
-				var news = _v3.c;
-				return _Utils_Tuple3(
-					deads,
-					A3($elm$core$Dict$insert, key, pid, lives),
-					news);
-			});
-		var newSubs = A2($elm$core$List$map, $elm$browser$Browser$Events$addKey, subs);
-		var _v0 = A6(
-			$elm$core$Dict$merge,
-			stepLeft,
-			stepBoth,
-			stepRight,
-			state.ad,
-			$elm$core$Dict$fromList(newSubs),
-			_Utils_Tuple3(_List_Nil, $elm$core$Dict$empty, _List_Nil));
-		var deadPids = _v0.a;
-		var livePids = _v0.b;
-		var makeNewPids = _v0.c;
 		return A2(
-			$elm$core$Task$andThen,
-			function (pids) {
-				return $elm$core$Task$succeed(
-					A2(
-						$elm$browser$Browser$Events$State,
-						newSubs,
-						A2(
-							$elm$core$Dict$union,
-							livePids,
-							$elm$core$Dict$fromList(pids))));
-			},
-			A2(
-				$elm$core$Task$andThen,
-				function (_v1) {
-					return $elm$core$Task$sequence(makeNewPids);
-				},
-				$elm$core$Task$sequence(
-					A2($elm$core$List$map, $elm$core$Process$kill, deadPids))));
-	});
-var $elm$browser$Browser$Events$onSelfMsg = F3(
-	function (router, _v0, state) {
-		var key = _v0.J;
-		var event = _v0.U;
-		var toMessage = function (_v2) {
-			var subKey = _v2.a;
-			var _v3 = _v2.b;
-			var node = _v3.a;
-			var name = _v3.b;
-			var decoder = _v3.c;
-			return _Utils_eq(subKey, key) ? A2(_Browser_decodeEvent, decoder, event) : $elm$core$Maybe$Nothing;
-		};
-		var messages = A2($elm$core$List$filterMap, toMessage, state.ao);
-		return A2(
-			$elm$core$Task$andThen,
-			function (_v1) {
-				return $elm$core$Task$succeed(state);
-			},
-			$elm$core$Task$sequence(
-				A2(
-					$elm$core$List$map,
-					$elm$core$Platform$sendToApp(router),
-					messages)));
-	});
-var $elm$browser$Browser$Events$subMap = F2(
-	function (func, _v0) {
-		var node = _v0.a;
-		var name = _v0.b;
-		var decoder = _v0.c;
-		return A3(
-			$elm$browser$Browser$Events$MySub,
-			node,
-			name,
-			A2($elm$json$Json$Decode$map, func, decoder));
-	});
-_Platform_effectManagers['Browser.Events'] = _Platform_createManager($elm$browser$Browser$Events$init, $elm$browser$Browser$Events$onEffects, $elm$browser$Browser$Events$onSelfMsg, 0, $elm$browser$Browser$Events$subMap);
-var $elm$browser$Browser$Events$subscription = _Platform_leaf('Browser.Events');
-var $elm$browser$Browser$Events$on = F3(
-	function (node, name, decoder) {
-		return $elm$browser$Browser$Events$subscription(
-			A3($elm$browser$Browser$Events$MySub, node, name, decoder));
-	});
-var $elm$browser$Browser$Events$onKeyPress = A2($elm$browser$Browser$Events$on, 0, 'keypress');
-var $author$project$Main$subscriptions = function (_v0) {
-	return $elm$browser$Browser$Events$onKeyPress(
-		A2(
-			$elm$json$Json$Decode$map,
-			$author$project$Main$KeyPress,
-			A2($elm$json$Json$Decode$field, 'key', $elm$json$Json$Decode$string)));
-};
-var $author$project$Main$Noop = {$: 0};
-var $elm$core$Basics$composeL = F3(
-	function (g, f, x) {
-		return g(
-			f(x));
-	});
-var $elm$core$Task$onError = _Scheduler_onError;
-var $elm$core$Task$attempt = F2(
-	function (resultToMessage, task) {
-		return $elm$core$Task$command(
-			A2(
-				$elm$core$Task$onError,
-				A2(
-					$elm$core$Basics$composeL,
-					A2($elm$core$Basics$composeL, $elm$core$Task$succeed, resultToMessage),
-					$elm$core$Result$Err),
-				A2(
-					$elm$core$Task$andThen,
-					A2(
-						$elm$core$Basics$composeL,
-						A2($elm$core$Basics$composeL, $elm$core$Task$succeed, resultToMessage),
-						$elm$core$Result$Ok),
-					task)));
-	});
-var $elm$browser$Browser$Dom$focus = _Browser_call('focus');
-var $author$project$Main$Card = F4(
-	function (no, keyword, kanji, tokens) {
-		return {Z: kanji, _: keyword, ab: no, aq: tokens};
-	});
-var $elm$core$List$append = F2(
-	function (xs, ys) {
-		if (!ys.b) {
-			return xs;
-		} else {
-			return A3($elm$core$List$foldr, $elm$core$List$cons, ys, xs);
-		}
-	});
-var $elm$regex$Regex$Match = F4(
-	function (match, index, number, submatches) {
-		return {aI: index, aK: match, aO: number, aY: submatches};
-	});
-var $elm$regex$Regex$fromStringWith = _Regex_fromStringWith;
-var $elm$regex$Regex$fromString = function (string) {
-	return A2(
-		$elm$regex$Regex$fromStringWith,
-		{aA: false, aM: false},
-		string);
-};
-var $elm$regex$Regex$never = _Regex_never;
-var $elm$regex$Regex$replace = _Regex_replaceAtMost(_Regex_infinity);
-var $elm$core$String$toLower = _String_toLower;
-var $elm$core$String$words = _String_words;
-var $author$project$Main$list2Cards = F2(
-	function (i, _v0) {
-		var kanji = _v0.a;
-		var keyword = _v0.b;
-		var no = i + 1;
-		var funnyChars = A2(
-			$elm$core$Maybe$withDefault,
-			$elm$regex$Regex$never,
-			$elm$regex$Regex$fromString('[^a-z\' ]'));
-		var tokens = A2(
-			$elm$core$List$append,
-			_List_fromArray(
-				[
-					$elm$core$String$fromInt(no),
-					kanji
-				]),
-			$elm$core$String$words(
-				A3(
-					$elm$regex$Regex$replace,
-					funnyChars,
-					function (_v1) {
-						return '';
-					},
-					A3(
-						$elm$core$String$replace,
-						'-',
-						' ',
-						$elm$core$String$toLower(keyword)))));
-		return A4($author$project$Main$Card, no, keyword, kanji, tokens);
-	});
-var $elm$browser$Browser$Navigation$load = _Browser_load;
-var $elm$core$Platform$Cmd$batch = _Platform_batch;
-var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
-var $elm$core$Basics$not = _Basics_not;
-var $elm$browser$Browser$Navigation$pushUrl = _Browser_pushUrl;
-var $elm$browser$Browser$Navigation$replaceUrl = _Browser_replaceUrl;
-var $elm$url$Url$addPort = F2(
-	function (maybePort, starter) {
-		if (maybePort.$ === 1) {
-			return starter;
-		} else {
-			var port_ = maybePort.a;
-			return starter + (':' + $elm$core$String$fromInt(port_));
-		}
-	});
-var $elm$url$Url$addPrefixed = F3(
-	function (prefix, maybeSegment, starter) {
-		if (maybeSegment.$ === 1) {
-			return starter;
-		} else {
-			var segment = maybeSegment.a;
-			return _Utils_ap(
-				starter,
-				_Utils_ap(prefix, segment));
-		}
-	});
-var $elm$url$Url$toString = function (url) {
-	var http = function () {
-		var _v0 = url.ah;
-		if (!_v0) {
-			return 'http://';
-		} else {
-			return 'https://';
-		}
-	}();
-	return A3(
-		$elm$url$Url$addPrefixed,
-		'#',
-		url.V,
-		A3(
-			$elm$url$Url$addPrefixed,
-			'?',
-			url.l,
-			_Utils_ap(
-				A2(
-					$elm$url$Url$addPort,
-					url.ae,
-					_Utils_ap(http, url.Y)),
-				url.aS)));
-};
-var $elm$core$String$trim = _String_trim;
-var $author$project$Main$update = F2(
-	function (msg, model) {
-		switch (msg.$) {
-			case 0:
-				return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
-			case 1:
-				var query = msg.a;
-				var urlQuery = ($elm$core$String$trim(query) === '') ? $elm$core$Maybe$Nothing : $elm$core$Maybe$Just('q=' + query);
-				var url = model.G;
-				var escapeSpace = $elm$core$Maybe$map(
-					A2($elm$core$String$replace, ' ', '+'));
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{l: query}),
-					A2(
-						$elm$browser$Browser$Navigation$replaceUrl,
-						model.J,
-						$elm$url$Url$toString(
-							_Utils_update(
-								url,
-								{
-									l: escapeSpace(urlQuery)
-								}))));
-			case 2:
-				if (!msg.a.$) {
-					var kanjis = msg.a.a;
-					var cards = A2($elm$core$List$indexedMap, $author$project$Main$list2Cards, kanjis);
-					return _Utils_Tuple2(
-						_Utils_update(
-							model,
-							{H: cards}),
-						$elm$core$Platform$Cmd$none);
-				} else {
-					var err = msg.a.a;
-					return _Utils_Tuple2(
-						_Utils_update(
-							model,
-							{
-								I: $elm$core$Maybe$Just(err)
-							}),
-						$elm$core$Platform$Cmd$none);
-				}
-			case 3:
-				var urlRequest = msg.a;
-				if (!urlRequest.$) {
-					var url = urlRequest.a;
-					return _Utils_Tuple2(
-						model,
-						A2(
-							$elm$browser$Browser$Navigation$pushUrl,
-							model.J,
-							$elm$url$Url$toString(url)));
-				} else {
-					var href = urlRequest.a;
-					return _Utils_Tuple2(
-						model,
-						$elm$browser$Browser$Navigation$load(href));
-				}
-			case 4:
-				var url = msg.a;
-				return _Utils_Tuple2(
-					_Utils_update(
-						model,
-						{G: url}),
-					$elm$core$Platform$Cmd$none);
-			default:
-				switch (msg.a) {
-					case '/':
-						return _Utils_Tuple2(
-							model,
-							A2(
-								$elm$core$Task$attempt,
-								function (_v2) {
-									return $author$project$Main$Noop;
-								},
-								$elm$browser$Browser$Dom$focus('query')));
-					case 'f':
-						return _Utils_Tuple2(
-							_Utils_update(
-								model,
-								{B: !model.B}),
-							$elm$core$Platform$Cmd$none);
-					default:
-						return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
-				}
-		}
-	});
-var $elm$json$Json$Encode$string = _Json_wrap;
-var $elm$html$Html$Attributes$stringProperty = F2(
-	function (key, string) {
-		return A2(
-			_VirtualDom_property,
-			key,
-			$elm$json$Json$Encode$string(string));
-	});
-var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $elm$core$List$filter = F2(
-	function (isGood, list) {
-		return A3(
-			$elm$core$List$foldr,
+			$elm$core$Dict$filter,
 			F2(
-				function (x, xs) {
-					return isGood(x) ? A2($elm$core$List$cons, x, xs) : xs;
+				function (k, _v0) {
+					return A2($elm$core$Dict$member, k, t2);
 				}),
-			_List_Nil,
-			list);
+			t1);
 	});
-var $elm$core$Tuple$second = function (_v0) {
-	var y = _v0.b;
-	return y;
-};
-var $elm$html$Html$Attributes$classList = function (classes) {
-	return $elm$html$Html$Attributes$class(
-		A2(
-			$elm$core$String$join,
-			' ',
-			A2(
-				$elm$core$List$map,
-				$elm$core$Tuple$first,
-				A2($elm$core$List$filter, $elm$core$Tuple$second, classes))));
-};
-var $author$project$Main$countKanjis = function (cards) {
-	var numOfCards = $elm$core$List$length(cards);
-	switch (numOfCards) {
-		case 0:
-			return 'no kanjis';
-		case 1:
-			return '1 kanji';
-		default:
-			return $elm$core$String$fromInt(numOfCards) + ' kanjis';
-	}
-};
-var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$core$String$endsWith = _String_endsWith;
-var $elm$core$Tuple$mapBoth = F3(
-	function (funcA, funcB, _v0) {
-		var x = _v0.a;
-		var y = _v0.b;
-		return _Utils_Tuple2(
-			funcA(x),
-			funcB(y));
+var $elm$core$Set$intersect = F2(
+	function (_v0, _v1) {
+		var dict1 = _v0;
+		var dict2 = _v1;
+		return A2($elm$core$Dict$intersect, dict1, dict2);
 	});
-var $author$project$Starific$matcherFor = function (keyword) {
-	var starRight = A2($elm$core$String$endsWith, '*', keyword);
-	var starLeft = A2($elm$core$String$startsWith, '*', keyword);
-	var bareKeyword = A3($elm$core$String$replace, '*', '', keyword);
-	var _v0 = _Utils_Tuple2(starLeft, starRight);
-	if (!_v0.a) {
-		if (!_v0.b) {
-			return $elm$core$Basics$eq(bareKeyword);
-		} else {
-			return $elm$core$String$startsWith(bareKeyword);
-		}
+var $elm$core$Dict$isEmpty = function (dict) {
+	if (dict.$ === -2) {
+		return true;
 	} else {
-		if (!_v0.b) {
-			return $elm$core$String$endsWith(bareKeyword);
-		} else {
-			return $elm$core$String$contains(bareKeyword);
-		}
+		return false;
 	}
 };
-var $elm$core$Tuple$mapSecond = F2(
-	function (func, _v0) {
-		var x = _v0.a;
-		var y = _v0.b;
-		return _Utils_Tuple2(
-			x,
-			func(y));
-	});
-var $elm$core$List$partition = F2(
-	function (pred, list) {
-		var step = F2(
-			function (x, _v0) {
-				var trues = _v0.a;
-				var falses = _v0.b;
-				return pred(x) ? _Utils_Tuple2(
-					A2($elm$core$List$cons, x, trues),
-					falses) : _Utils_Tuple2(
-					trues,
-					A2($elm$core$List$cons, x, falses));
-			});
-		return A3(
-			$elm$core$List$foldr,
-			step,
-			_Utils_Tuple2(_List_Nil, _List_Nil),
-			list);
-	});
-var $author$project$Starific$splitKeywords = function (keywords) {
-	return A2(
-		$elm$core$Tuple$mapSecond,
-		$elm$core$List$map(
-			$elm$core$String$dropLeft(1)),
-		A2(
-			$elm$core$List$partition,
-			A2(
-				$elm$core$Basics$composeR,
-				$elm$core$String$startsWith('-'),
-				$elm$core$Basics$not),
-			keywords));
+var $elm$core$Set$isEmpty = function (_v0) {
+	var dict = _v0;
+	return $elm$core$Dict$isEmpty(dict);
 };
-var $author$project$Starific$keywords2matchers = function (keywords) {
-	return A3(
-		$elm$core$Tuple$mapBoth,
-		$elm$core$List$map($author$project$Starific$matcherFor),
-		$elm$core$List$map($author$project$Starific$matcherFor),
-		$author$project$Starific$splitKeywords(keywords));
-};
-var $elm$core$List$any = F2(
-	function (isOkay, list) {
-		any:
-		while (true) {
-			if (!list.b) {
-				return false;
-			} else {
-				var x = list.a;
-				var xs = list.b;
-				if (isOkay(x)) {
-					return true;
-				} else {
-					var $temp$isOkay = isOkay,
-						$temp$list = xs;
-					isOkay = $temp$isOkay;
-					list = $temp$list;
-					continue any;
-				}
-			}
-		}
-	});
-var $author$project$Starific$matchAny = F2(
-	function (matchers, tokens) {
-		return A2(
-			$elm$core$List$any,
-			function (token) {
-				return A2(
-					$elm$core$List$any,
-					function (matcher) {
-						return matcher(token);
-					},
-					matchers);
-			},
-			tokens);
-	});
-var $author$project$Starific$any = function (keywords) {
-	var _v0 = $author$project$Starific$keywords2matchers(keywords);
-	var positives = _v0.a;
-	var negatives = _v0.b;
-	return function (tokens) {
-		return A2($author$project$Starific$matchAny, positives, tokens) && (!A2($author$project$Starific$matchAny, negatives, tokens));
-	};
-};
-var $author$project$Main$filterWithQuery = F2(
-	function (query, cards) {
-		var keywords = $elm$core$String$words(query);
-		var matcher = $author$project$Starific$any(keywords);
-		return (query === '') ? cards : A2(
-			$elm$core$List$filter,
-			function (card) {
-				return matcher(card.aq);
-			},
-			cards);
-	});
-var $elm$html$Html$span = _VirtualDom_node('span');
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$Main$renderCard = function (card) {
-	return A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('card')
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$span,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('no')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text(
-						$elm$core$String$fromInt(card.ab))
-					])),
-				A2(
-				$elm$html$Html$span,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('keyword')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text(card._)
-					])),
-				A2(
-				$elm$html$Html$span,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$class('kanji')
-					]),
-				_List_fromArray(
-					[
-						$elm$html$Html$text(card.Z)
-					]))
-			]));
-};
-var $author$project$Main$renderError = function (httpErr) {
-	if (!httpErr.$) {
-		var err = httpErr.a;
-		return A2(
-			$elm$html$Html$div,
-			_List_fromArray(
-				[
-					$elm$html$Html$Attributes$class('muted')
-				]),
-			_List_fromArray(
-				[
-					function () {
-					switch (err.$) {
-						case 0:
-							var msg = err.a;
-							return $elm$html$Html$text('⚠️ ' + msg);
-						case 1:
-							return $elm$html$Html$text('⚠️ timeout');
-						case 2:
-							return $elm$html$Html$text('⚠️ network error');
-						case 3:
-							var code = err.a;
-							return $elm$html$Html$text(
-								'⚠️ status: ' + $elm$core$String$fromInt(code));
-						default:
-							var body = err.a;
-							return $elm$html$Html$text('⚠️ error: ' + body);
-					}
-				}()
-				]));
-	} else {
-		return $elm$html$Html$text('');
-	}
-};
-var $author$project$Main$Change = function (a) {
-	return {$: 1, a: a};
-};
-var $elm$virtual_dom$VirtualDom$attribute = F2(
-	function (key, value) {
-		return A2(
-			_VirtualDom_attribute,
-			_VirtualDom_noOnOrFormAction(key),
-			_VirtualDom_noJavaScriptOrHtmlUri(value));
-	});
-var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
-var $elm$json$Json$Encode$bool = _Json_wrap;
-var $elm$html$Html$Attributes$boolProperty = F2(
-	function (key, bool) {
-		return A2(
-			_VirtualDom_property,
-			key,
-			$elm$json$Json$Encode$bool(bool));
-	});
-var $elm$html$Html$Attributes$autofocus = $elm$html$Html$Attributes$boolProperty('autofocus');
-var $elm$html$Html$form = _VirtualDom_node('form');
-var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
-var $elm$html$Html$input = _VirtualDom_node('input');
-var $elm$html$Html$Attributes$name = $elm$html$Html$Attributes$stringProperty('name');
-var $elm$html$Html$Events$alwaysStop = function (x) {
-	return _Utils_Tuple2(x, true);
-};
-var $elm$virtual_dom$VirtualDom$MayStopPropagation = function (a) {
-	return {$: 1, a: a};
-};
-var $elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
-var $elm$html$Html$Events$stopPropagationOn = F2(
-	function (event, decoder) {
-		return A2(
-			$elm$virtual_dom$VirtualDom$on,
-			event,
-			$elm$virtual_dom$VirtualDom$MayStopPropagation(decoder));
-	});
-var $elm$json$Json$Decode$at = F2(
-	function (fields, decoder) {
-		return A3($elm$core$List$foldr, $elm$json$Json$Decode$field, decoder, fields);
-	});
-var $elm$html$Html$Events$targetValue = A2(
-	$elm$json$Json$Decode$at,
-	_List_fromArray(
-		['target', 'value']),
-	$elm$json$Json$Decode$string);
-var $elm$html$Html$Events$onInput = function (tagger) {
-	return A2(
-		$elm$html$Html$Events$stopPropagationOn,
-		'input',
-		A2(
-			$elm$json$Json$Decode$map,
-			$elm$html$Html$Events$alwaysStop,
-			A2($elm$json$Json$Decode$map, tagger, $elm$html$Html$Events$targetValue)));
-};
-var $elm$html$Html$Events$alwaysPreventDefault = function (msg) {
-	return _Utils_Tuple2(msg, true);
-};
-var $elm$virtual_dom$VirtualDom$MayPreventDefault = function (a) {
-	return {$: 2, a: a};
-};
-var $elm$html$Html$Events$preventDefaultOn = F2(
-	function (event, decoder) {
-		return A2(
-			$elm$virtual_dom$VirtualDom$on,
-			event,
-			$elm$virtual_dom$VirtualDom$MayPreventDefault(decoder));
-	});
-var $elm$html$Html$Events$onSubmit = function (msg) {
-	return A2(
-		$elm$html$Html$Events$preventDefaultOn,
-		'submit',
-		A2(
-			$elm$json$Json$Decode$map,
-			$elm$html$Html$Events$alwaysPreventDefault,
-			$elm$json$Json$Decode$succeed(msg)));
-};
-var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('value');
-var $author$project$Main$renderSearchForm = function (query) {
-	return A2(
-		$elm$html$Html$form,
-		_List_fromArray(
-			[
-				$elm$html$Html$Events$onSubmit($author$project$Main$Noop)
-			]),
-		_List_fromArray(
-			[
-				A2(
-				$elm$html$Html$div,
-				_List_fromArray(
-					[
-						$elm$html$Html$Attributes$id('glass')
-					]),
-				_List_fromArray(
-					[
-						A2(
-						$elm$html$Html$input,
-						_List_fromArray(
-							[
-								$elm$html$Html$Attributes$id('query'),
-								$elm$html$Html$Attributes$name('query'),
-								$elm$html$Html$Attributes$value(query),
-								$elm$html$Html$Events$onInput($author$project$Main$Change),
-								A2(
-								$elm$html$Html$Events$stopPropagationOn,
-								'keypress',
-								$elm$json$Json$Decode$succeed(
-									_Utils_Tuple2($author$project$Main$Noop, true))),
-								$elm$html$Html$Attributes$autofocus(true),
-								A2($elm$html$Html$Attributes$attribute, 'autocapitalize', 'off'),
-								A2($elm$html$Html$Attributes$attribute, 'autocorrect', 'off')
-							]),
-						_List_Nil)
-					]))
-			]));
-};
-var $author$project$Main$renderTruncatedNotice = function (truncated) {
-	return truncated ? A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('muted')
-			]),
-		_List_fromArray(
-			[
-				$elm$html$Html$text('⚠️ results truncated')
-			])) : $elm$html$Html$text('');
-};
+var $elm$core$Basics$not = _Basics_not;
 var $elm$core$List$takeReverse = F3(
 	function (n, list, kept) {
 		takeReverse:
@@ -7460,23 +6701,1124 @@ var $elm$core$List$take = F2(
 	function (n, list) {
 		return A3($elm$core$List$takeFast, 0, n, list);
 	});
+var $elm$core$String$trim = _String_trim;
+var $author$project$Main$search = F2(
+	function (cards, query) {
+		var tokens = $author$project$Main$tokenize(query);
+		var matchingCards = (query === '') ? cards : A2(
+			$elm$core$List$filter,
+			function (card) {
+				return A3(
+					$elm$core$Basics$composeL,
+					$elm$core$Basics$not,
+					$elm$core$Set$isEmpty,
+					A2($elm$core$Set$intersect, tokens, card.L));
+			},
+			cards);
+		var limit = 120;
+		var count = $elm$core$List$length(matchingCards);
+		return {
+			s: A2($elm$core$List$take, limit, matchingCards),
+			O: count,
+			f: $elm$core$String$trim(query),
+			X: _Utils_cmp(count, limit) > 0
+		};
+	});
+var $elm$url$Url$Parser$Internal$Parser = $elm$core$Basics$identity;
+var $elm$url$Url$Parser$Query$custom = F2(
+	function (key, func) {
+		return function (dict) {
+			return func(
+				A2(
+					$elm$core$Maybe$withDefault,
+					_List_Nil,
+					A2($elm$core$Dict$get, key, dict)));
+		};
+	});
+var $elm$url$Url$Parser$Query$string = function (key) {
+	return A2(
+		$elm$url$Url$Parser$Query$custom,
+		key,
+		function (stringList) {
+			if (stringList.b && (!stringList.b.b)) {
+				var str = stringList.a;
+				return $elm$core$Maybe$Just(str);
+			} else {
+				return $elm$core$Maybe$Nothing;
+			}
+		});
+};
+var $author$project$Main$init = F3(
+	function (_v0, url, key) {
+		var query = A2(
+			$elm$core$Maybe$withDefault,
+			'',
+			A2(
+				$elm$core$Maybe$andThen,
+				$elm$core$Basics$identity,
+				A2(
+					$elm$url$Url$Parser$parse,
+					$elm$url$Url$Parser$query(
+						$elm$url$Url$Parser$Query$string('q')),
+					_Utils_update(
+						url,
+						{
+							aZ: '',
+							f: A2(
+								$elm$core$Maybe$map,
+								A2($elm$core$String$replace, '+', '%20'),
+								url.f)
+						}))));
+		return _Utils_Tuple2(
+			{
+				s: _List_Nil,
+				x: $author$project$Complete$closed,
+				I: $elm$core$Maybe$Nothing,
+				J: key,
+				f: query,
+				n: A2($author$project$Main$search, _List_Nil, query),
+				K: _List_Nil,
+				M: url
+			},
+			$author$project$Main$getKanjis);
+	});
+var $author$project$Main$KeyDown = function (a) {
+	return {$: 7, a: a};
+};
+var $elm$json$Json$Decode$field = _Json_decodeField;
+var $elm$browser$Browser$Events$Document = 0;
+var $elm$browser$Browser$Events$MySub = F3(
+	function (a, b, c) {
+		return {$: 0, a: a, b: b, c: c};
+	});
+var $elm$browser$Browser$Events$State = F2(
+	function (subs, pids) {
+		return {aj: pids, au: subs};
+	});
+var $elm$browser$Browser$Events$init = $elm$core$Task$succeed(
+	A2($elm$browser$Browser$Events$State, _List_Nil, $elm$core$Dict$empty));
+var $elm$browser$Browser$Events$nodeToKey = function (node) {
+	if (!node) {
+		return 'd_';
+	} else {
+		return 'w_';
+	}
+};
+var $elm$browser$Browser$Events$addKey = function (sub) {
+	var node = sub.a;
+	var name = sub.b;
+	return _Utils_Tuple2(
+		_Utils_ap(
+			$elm$browser$Browser$Events$nodeToKey(node),
+			name),
+		sub);
+};
+var $elm$core$Dict$fromList = function (assocs) {
+	return A3(
+		$elm$core$List$foldl,
+		F2(
+			function (_v0, dict) {
+				var key = _v0.a;
+				var value = _v0.b;
+				return A3($elm$core$Dict$insert, key, value, dict);
+			}),
+		$elm$core$Dict$empty,
+		assocs);
+};
+var $elm$core$Dict$merge = F6(
+	function (leftStep, bothStep, rightStep, leftDict, rightDict, initialResult) {
+		var stepState = F3(
+			function (rKey, rValue, _v0) {
+				stepState:
+				while (true) {
+					var list = _v0.a;
+					var result = _v0.b;
+					if (!list.b) {
+						return _Utils_Tuple2(
+							list,
+							A3(rightStep, rKey, rValue, result));
+					} else {
+						var _v2 = list.a;
+						var lKey = _v2.a;
+						var lValue = _v2.b;
+						var rest = list.b;
+						if (_Utils_cmp(lKey, rKey) < 0) {
+							var $temp$rKey = rKey,
+								$temp$rValue = rValue,
+								$temp$_v0 = _Utils_Tuple2(
+								rest,
+								A3(leftStep, lKey, lValue, result));
+							rKey = $temp$rKey;
+							rValue = $temp$rValue;
+							_v0 = $temp$_v0;
+							continue stepState;
+						} else {
+							if (_Utils_cmp(lKey, rKey) > 0) {
+								return _Utils_Tuple2(
+									list,
+									A3(rightStep, rKey, rValue, result));
+							} else {
+								return _Utils_Tuple2(
+									rest,
+									A4(bothStep, lKey, lValue, rValue, result));
+							}
+						}
+					}
+				}
+			});
+		var _v3 = A3(
+			$elm$core$Dict$foldl,
+			stepState,
+			_Utils_Tuple2(
+				$elm$core$Dict$toList(leftDict),
+				initialResult),
+			rightDict);
+		var leftovers = _v3.a;
+		var intermediateResult = _v3.b;
+		return A3(
+			$elm$core$List$foldl,
+			F2(
+				function (_v4, result) {
+					var k = _v4.a;
+					var v = _v4.b;
+					return A3(leftStep, k, v, result);
+				}),
+			intermediateResult,
+			leftovers);
+	});
+var $elm$browser$Browser$Events$Event = F2(
+	function (key, event) {
+		return {ac: event, J: key};
+	});
+var $elm$browser$Browser$Events$spawn = F3(
+	function (router, key, _v0) {
+		var node = _v0.a;
+		var name = _v0.b;
+		var actualNode = function () {
+			if (!node) {
+				return _Browser_doc;
+			} else {
+				return _Browser_window;
+			}
+		}();
+		return A2(
+			$elm$core$Task$map,
+			function (value) {
+				return _Utils_Tuple2(key, value);
+			},
+			A3(
+				_Browser_on,
+				actualNode,
+				name,
+				function (event) {
+					return A2(
+						$elm$core$Platform$sendToSelf,
+						router,
+						A2($elm$browser$Browser$Events$Event, key, event));
+				}));
+	});
+var $elm$core$Dict$union = F2(
+	function (t1, t2) {
+		return A3($elm$core$Dict$foldl, $elm$core$Dict$insert, t2, t1);
+	});
+var $elm$browser$Browser$Events$onEffects = F3(
+	function (router, subs, state) {
+		var stepRight = F3(
+			function (key, sub, _v6) {
+				var deads = _v6.a;
+				var lives = _v6.b;
+				var news = _v6.c;
+				return _Utils_Tuple3(
+					deads,
+					lives,
+					A2(
+						$elm$core$List$cons,
+						A3($elm$browser$Browser$Events$spawn, router, key, sub),
+						news));
+			});
+		var stepLeft = F3(
+			function (_v4, pid, _v5) {
+				var deads = _v5.a;
+				var lives = _v5.b;
+				var news = _v5.c;
+				return _Utils_Tuple3(
+					A2($elm$core$List$cons, pid, deads),
+					lives,
+					news);
+			});
+		var stepBoth = F4(
+			function (key, pid, _v2, _v3) {
+				var deads = _v3.a;
+				var lives = _v3.b;
+				var news = _v3.c;
+				return _Utils_Tuple3(
+					deads,
+					A3($elm$core$Dict$insert, key, pid, lives),
+					news);
+			});
+		var newSubs = A2($elm$core$List$map, $elm$browser$Browser$Events$addKey, subs);
+		var _v0 = A6(
+			$elm$core$Dict$merge,
+			stepLeft,
+			stepBoth,
+			stepRight,
+			state.aj,
+			$elm$core$Dict$fromList(newSubs),
+			_Utils_Tuple3(_List_Nil, $elm$core$Dict$empty, _List_Nil));
+		var deadPids = _v0.a;
+		var livePids = _v0.b;
+		var makeNewPids = _v0.c;
+		return A2(
+			$elm$core$Task$andThen,
+			function (pids) {
+				return $elm$core$Task$succeed(
+					A2(
+						$elm$browser$Browser$Events$State,
+						newSubs,
+						A2(
+							$elm$core$Dict$union,
+							livePids,
+							$elm$core$Dict$fromList(pids))));
+			},
+			A2(
+				$elm$core$Task$andThen,
+				function (_v1) {
+					return $elm$core$Task$sequence(makeNewPids);
+				},
+				$elm$core$Task$sequence(
+					A2($elm$core$List$map, $elm$core$Process$kill, deadPids))));
+	});
+var $elm$browser$Browser$Events$onSelfMsg = F3(
+	function (router, _v0, state) {
+		var key = _v0.J;
+		var event = _v0.ac;
+		var toMessage = function (_v2) {
+			var subKey = _v2.a;
+			var _v3 = _v2.b;
+			var node = _v3.a;
+			var name = _v3.b;
+			var decoder = _v3.c;
+			return _Utils_eq(subKey, key) ? A2(_Browser_decodeEvent, decoder, event) : $elm$core$Maybe$Nothing;
+		};
+		var messages = A2($elm$core$List$filterMap, toMessage, state.au);
+		return A2(
+			$elm$core$Task$andThen,
+			function (_v1) {
+				return $elm$core$Task$succeed(state);
+			},
+			$elm$core$Task$sequence(
+				A2(
+					$elm$core$List$map,
+					$elm$core$Platform$sendToApp(router),
+					messages)));
+	});
+var $elm$browser$Browser$Events$subMap = F2(
+	function (func, _v0) {
+		var node = _v0.a;
+		var name = _v0.b;
+		var decoder = _v0.c;
+		return A3(
+			$elm$browser$Browser$Events$MySub,
+			node,
+			name,
+			A2($elm$json$Json$Decode$map, func, decoder));
+	});
+_Platform_effectManagers['Browser.Events'] = _Platform_createManager($elm$browser$Browser$Events$init, $elm$browser$Browser$Events$onEffects, $elm$browser$Browser$Events$onSelfMsg, 0, $elm$browser$Browser$Events$subMap);
+var $elm$browser$Browser$Events$subscription = _Platform_leaf('Browser.Events');
+var $elm$browser$Browser$Events$on = F3(
+	function (node, name, decoder) {
+		return $elm$browser$Browser$Events$subscription(
+			A3($elm$browser$Browser$Events$MySub, node, name, decoder));
+	});
+var $elm$browser$Browser$Events$onKeyUp = A2($elm$browser$Browser$Events$on, 0, 'keyup');
+var $author$project$Main$subscriptions = function (_v0) {
+	return $elm$browser$Browser$Events$onKeyUp(
+		A2(
+			$elm$json$Json$Decode$map,
+			$author$project$Main$KeyDown,
+			A2($elm$json$Json$Decode$field, 'key', $elm$json$Json$Decode$string)));
+};
+var $author$project$Main$Noop = {$: 0};
+var $elm$url$Url$Builder$toQueryPair = function (_v0) {
+	var key = _v0.a;
+	var value = _v0.b;
+	return key + ('=' + value);
+};
+var $elm$url$Url$Builder$toQuery = function (parameters) {
+	if (!parameters.b) {
+		return '';
+	} else {
+		return '?' + A2(
+			$elm$core$String$join,
+			'&',
+			A2($elm$core$List$map, $elm$url$Url$Builder$toQueryPair, parameters));
+	}
+};
+var $elm$url$Url$Builder$absolute = F2(
+	function (pathSegments, parameters) {
+		return '/' + (A2($elm$core$String$join, '/', pathSegments) + $elm$url$Url$Builder$toQuery(parameters));
+	});
+var $elm$core$Task$onError = _Scheduler_onError;
+var $elm$core$Task$attempt = F2(
+	function (resultToMessage, task) {
+		return $elm$core$Task$command(
+			A2(
+				$elm$core$Task$onError,
+				A2(
+					$elm$core$Basics$composeL,
+					A2($elm$core$Basics$composeL, $elm$core$Task$succeed, resultToMessage),
+					$elm$core$Result$Err),
+				A2(
+					$elm$core$Task$andThen,
+					A2(
+						$elm$core$Basics$composeL,
+						A2($elm$core$Basics$composeL, $elm$core$Task$succeed, resultToMessage),
+						$elm$core$Result$Ok),
+					task)));
+	});
+var $elm$browser$Browser$Dom$focus = _Browser_call('focus');
+var $elm$core$String$endsWith = _String_endsWith;
+var $elm$core$List$head = function (list) {
+	if (list.b) {
+		var x = list.a;
+		var xs = list.b;
+		return $elm$core$Maybe$Just(x);
+	} else {
+		return $elm$core$Maybe$Nothing;
+	}
+};
+var $elm$core$Tuple$mapBoth = F3(
+	function (funcA, funcB, _v0) {
+		var x = _v0.a;
+		var y = _v0.b;
+		return _Utils_Tuple2(
+			funcA(x),
+			funcB(y));
+	});
+var $author$project$Complete$Opened = F2(
+	function (a, b) {
+		return {$: 1, a: a, b: b};
+	});
+var $elm$core$Basics$negate = function (n) {
+	return -n;
+};
+var $author$project$Complete$new = function (suggestions) {
+	if (!suggestions.b) {
+		return $author$project$Complete$Closed;
+	} else {
+		return A2($author$project$Complete$Opened, suggestions, -1);
+	}
+};
+var $elm$core$List$drop = F2(
+	function (n, list) {
+		drop:
+		while (true) {
+			if (n <= 0) {
+				return list;
+			} else {
+				if (!list.b) {
+					return list;
+				} else {
+					var x = list.a;
+					var xs = list.b;
+					var $temp$n = n - 1,
+						$temp$list = xs;
+					n = $temp$n;
+					list = $temp$list;
+					continue drop;
+				}
+			}
+		}
+	});
+var $elm_community$list_extra$List$Extra$splitAt = F2(
+	function (n, xs) {
+		return _Utils_Tuple2(
+			A2($elm$core$List$take, n, xs),
+			A2($elm$core$List$drop, n, xs));
+	});
+var $author$project$Main$generateSuggestions = F3(
+	function (sortedTokens, count, query) {
+		var words = $elm$core$String$words(query);
+		var splitIndex = (($elm$core$String$trim(query) === '') || A2($elm$core$String$endsWith, ' ', query)) ? $elm$core$List$length(words) : ($elm$core$List$length(words) - 1);
+		var _v0 = A3(
+			$elm$core$Tuple$mapBoth,
+			$elm$core$String$join(' '),
+			$elm$core$List$head,
+			A2($elm_community$list_extra$List$Extra$splitAt, splitIndex, words));
+		var firstWords = _v0.a;
+		var lastWord = _v0.b;
+		if (!lastWord.$) {
+			var word = lastWord.a;
+			return $author$project$Complete$new(
+				A2(
+					$elm$core$List$map,
+					function (suggestion) {
+						return firstWords + (' ' + suggestion);
+					},
+					A2(
+						$elm$core$List$take,
+						count,
+						A2(
+							$elm$core$List$filter,
+							$elm$core$String$startsWith(word),
+							sortedTokens))));
+		} else {
+			return $author$project$Complete$closed;
+		}
+	});
+var $elm$browser$Browser$Navigation$load = _Browser_load;
+var $elm$core$Platform$Cmd$batch = _Platform_batch;
+var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
+var $elm$browser$Browser$Navigation$pushUrl = _Browser_pushUrl;
+var $elm$browser$Browser$Navigation$replaceUrl = _Browser_replaceUrl;
+var $elm$core$List$sortBy = _List_sortBy;
+var $elm$core$List$sort = function (xs) {
+	return A2($elm$core$List$sortBy, $elm$core$Basics$identity, xs);
+};
+var $elm$url$Url$Builder$QueryParameter = F2(
+	function (a, b) {
+		return {$: 0, a: a, b: b};
+	});
+var $elm$url$Url$percentEncode = _Url_percentEncode;
+var $elm$url$Url$Builder$string = F2(
+	function (key, value) {
+		return A2(
+			$elm$url$Url$Builder$QueryParameter,
+			$elm$url$Url$percentEncode(key),
+			$elm$url$Url$percentEncode(value));
+	});
+var $elm$url$Url$addPort = F2(
+	function (maybePort, starter) {
+		if (maybePort.$ === 1) {
+			return starter;
+		} else {
+			var port_ = maybePort.a;
+			return starter + (':' + $elm$core$String$fromInt(port_));
+		}
+	});
+var $elm$url$Url$addPrefixed = F3(
+	function (prefix, maybeSegment, starter) {
+		if (maybeSegment.$ === 1) {
+			return starter;
+		} else {
+			var segment = maybeSegment.a;
+			return _Utils_ap(
+				starter,
+				_Utils_ap(prefix, segment));
+		}
+	});
+var $elm$url$Url$toString = function (url) {
+	var http = function () {
+		var _v0 = url.an;
+		if (!_v0) {
+			return 'http://';
+		} else {
+			return 'https://';
+		}
+	}();
+	return A3(
+		$elm$url$Url$addPrefixed,
+		'#',
+		url.ad,
+		A3(
+			$elm$url$Url$addPrefixed,
+			'?',
+			url.f,
+			_Utils_ap(
+				A2(
+					$elm$url$Url$addPort,
+					url.ak,
+					_Utils_ap(http, url.ag)),
+				url.aZ)));
+};
+var $elm$core$Set$union = F2(
+	function (_v0, _v1) {
+		var dict1 = _v0;
+		var dict2 = _v1;
+		return A2($elm$core$Dict$union, dict1, dict2);
+	});
+var $author$project$Main$update = F2(
+	function (msg, model) {
+		switch (msg.$) {
+			case 0:
+				return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+			case 1:
+				var query = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{
+							x: A3($author$project$Main$generateSuggestions, model.K, 10, query),
+							f: query
+						}),
+					$elm$core$Platform$Cmd$none);
+			case 2:
+				var completeState = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{x: completeState}),
+					$elm$core$Platform$Cmd$none);
+			case 3:
+				var query = msg.a;
+				var searchResults = A2($author$project$Main$search, model.s, query);
+				var urlQuery = (searchResults.f === '') ? _List_Nil : _List_fromArray(
+					[
+						A2($elm$url$Url$Builder$string, 'q', query)
+					]);
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{x: $author$project$Complete$closed, f: searchResults.f, n: searchResults}),
+					A2(
+						$elm$browser$Browser$Navigation$replaceUrl,
+						model.J,
+						A2($elm$url$Url$Builder$absolute, _List_Nil, urlQuery)));
+			case 4:
+				if (!msg.a.$) {
+					var cards = msg.a.a;
+					return _Utils_Tuple2(
+						_Utils_update(
+							model,
+							{
+								s: cards,
+								n: A2($author$project$Main$search, cards, model.f),
+								K: $elm$core$List$sort(
+									$elm$core$Set$toList(
+										A3(
+											$elm$core$List$foldl,
+											$elm$core$Set$union,
+											$elm$core$Set$empty,
+											A2(
+												$elm$core$List$map,
+												function ($) {
+													return $.L;
+												},
+												cards))))
+							}),
+						$elm$core$Platform$Cmd$none);
+				} else {
+					var err = msg.a.a;
+					return _Utils_Tuple2(
+						_Utils_update(
+							model,
+							{
+								I: $elm$core$Maybe$Just(err)
+							}),
+						$elm$core$Platform$Cmd$none);
+				}
+			case 5:
+				var urlRequest = msg.a;
+				if (!urlRequest.$) {
+					var url = urlRequest.a;
+					return _Utils_Tuple2(
+						model,
+						A2(
+							$elm$browser$Browser$Navigation$pushUrl,
+							model.J,
+							$elm$url$Url$toString(url)));
+				} else {
+					var href = urlRequest.a;
+					return _Utils_Tuple2(
+						model,
+						$elm$browser$Browser$Navigation$load(href));
+				}
+			case 6:
+				var url = msg.a;
+				return _Utils_Tuple2(
+					_Utils_update(
+						model,
+						{M: url}),
+					$elm$core$Platform$Cmd$none);
+			default:
+				switch (msg.a) {
+					case '/':
+						return _Utils_Tuple2(
+							model,
+							A2(
+								$elm$core$Task$attempt,
+								function (_v2) {
+									return $author$project$Main$Noop;
+								},
+								$elm$browser$Browser$Dom$focus('query')));
+					case '?':
+						return _Utils_Tuple2(
+							model,
+							A2(
+								$elm$core$Task$attempt,
+								function (_v3) {
+									return $author$project$Main$Noop;
+								},
+								$elm$browser$Browser$Dom$focus('query')));
+					default:
+						return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+				}
+		}
+	});
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $elm$html$Html$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$string(string));
+	});
+var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $author$project$Main$pluralize = F4(
+	function (count, zeroCase, oneCase, manyCase) {
+		switch (count) {
+			case 0:
+				return zeroCase;
+			case 1:
+				return A2(
+					$elm$core$String$join,
+					' ',
+					_List_fromArray(
+						['1', oneCase]));
+			default:
+				return A2(
+					$elm$core$String$join,
+					' ',
+					_List_fromArray(
+						[
+							$elm$core$String$fromInt(count),
+							manyCase
+						]));
+		}
+	});
+var $elm$html$Html$span = _VirtualDom_node('span');
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$Main$renderCard = function (card) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('card')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$span,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('no')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text(
+						$elm$core$String$fromInt(card.T))
+					])),
+				A2(
+				$elm$html$Html$span,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('keyword')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text(card.R)
+					])),
+				A2(
+				$elm$html$Html$span,
+				_List_fromArray(
+					[
+						$elm$html$Html$Attributes$class('kanji')
+					]),
+				_List_fromArray(
+					[
+						$elm$html$Html$text(card.Q)
+					]))
+			]));
+};
+var $author$project$Main$renderError = function (httpErr) {
+	if (!httpErr.$) {
+		var err = httpErr.a;
+		return A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('muted')
+				]),
+			_List_fromArray(
+				[
+					function () {
+					switch (err.$) {
+						case 0:
+							var msg = err.a;
+							return $elm$html$Html$text('⚠️ ' + msg);
+						case 1:
+							return $elm$html$Html$text('⚠️ timeout');
+						case 2:
+							return $elm$html$Html$text('⚠️ network error');
+						case 3:
+							var code = err.a;
+							return $elm$html$Html$text(
+								'⚠️ status: ' + $elm$core$String$fromInt(code));
+						default:
+							var body = err.a;
+							return $elm$html$Html$text('⚠️ error: ' + body);
+					}
+				}()
+				]));
+	} else {
+		return $elm$html$Html$text('');
+	}
+};
+var $author$project$Main$Search = function (a) {
+	return {$: 3, a: a};
+};
+var $author$project$Main$UpdateQuery = function (a) {
+	return {$: 1, a: a};
+};
+var $author$project$Main$UpdateState = function (a) {
+	return {$: 2, a: a};
+};
+var $elm$html$Html$Attributes$autocomplete = function (bool) {
+	return A2(
+		$elm$html$Html$Attributes$stringProperty,
+		'autocomplete',
+		bool ? 'on' : 'off');
+};
+var $elm$json$Json$Encode$bool = _Json_wrap;
+var $elm$html$Html$Attributes$boolProperty = F2(
+	function (key, bool) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$bool(bool));
+	});
+var $elm$html$Html$Attributes$autofocus = $elm$html$Html$Attributes$boolProperty('autofocus');
+var $elm$html$Html$button = _VirtualDom_node('button');
+var $elm$html$Html$form = _VirtualDom_node('form');
+var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
+var $elm$html$Html$Events$alwaysPreventDefault = function (msg) {
+	return _Utils_Tuple2(msg, true);
+};
+var $elm$virtual_dom$VirtualDom$MayPreventDefault = function (a) {
+	return {$: 2, a: a};
+};
+var $elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
+var $elm$html$Html$Events$preventDefaultOn = F2(
+	function (event, decoder) {
+		return A2(
+			$elm$virtual_dom$VirtualDom$on,
+			event,
+			$elm$virtual_dom$VirtualDom$MayPreventDefault(decoder));
+	});
+var $elm$html$Html$Events$onSubmit = function (msg) {
+	return A2(
+		$elm$html$Html$Events$preventDefaultOn,
+		'submit',
+		A2(
+			$elm$json$Json$Decode$map,
+			$elm$html$Html$Events$alwaysPreventDefault,
+			$elm$json$Json$Decode$succeed(msg)));
+};
+var $elm$html$Html$Attributes$placeholder = $elm$html$Html$Attributes$stringProperty('placeholder');
+var $elm$virtual_dom$VirtualDom$attribute = F2(
+	function (key, value) {
+		return A2(
+			_VirtualDom_attribute,
+			_VirtualDom_noOnOrFormAction(key),
+			_VirtualDom_noJavaScriptOrHtmlUri(value));
+	});
+var $elm$html$Html$Attributes$attribute = $elm$virtual_dom$VirtualDom$attribute;
+var $elm$virtual_dom$VirtualDom$Custom = function (a) {
+	return {$: 3, a: a};
+};
+var $elm$html$Html$Events$custom = F2(
+	function (event, decoder) {
+		return A2(
+			$elm$virtual_dom$VirtualDom$on,
+			event,
+			$elm$virtual_dom$VirtualDom$Custom(decoder));
+	});
+var $elm$html$Html$input = _VirtualDom_node('input');
+var $elm$json$Json$Decode$fail = _Json_fail;
+var $elm$core$Basics$modBy = _Basics_modBy;
+var $author$project$Complete$next = function (state) {
+	if (!state.$) {
+		return $author$project$Complete$Closed;
+	} else {
+		var suggestions = state.a;
+		var i = state.b;
+		return A2(
+			$author$project$Complete$Opened,
+			suggestions,
+			A2(
+				$elm$core$Basics$modBy,
+				$elm$core$List$length(suggestions),
+				i + 1));
+	}
+};
+var $author$project$Complete$prev = function (state) {
+	prev:
+	while (true) {
+		if (!state.$) {
+			return $author$project$Complete$Closed;
+		} else {
+			var suggestions = state.a;
+			var i = state.b;
+			if (_Utils_eq(i, -1)) {
+				var $temp$state = A2($author$project$Complete$Opened, suggestions, 0);
+				state = $temp$state;
+				continue prev;
+			} else {
+				return A2(
+					$author$project$Complete$Opened,
+					suggestions,
+					A2(
+						$elm$core$Basics$modBy,
+						$elm$core$List$length(suggestions),
+						i - 1));
+			}
+		}
+	}
+};
+var $author$project$Complete$selection = function (state) {
+	if (!state.$) {
+		return $elm$core$Maybe$Nothing;
+	} else {
+		var suggestions = state.a;
+		var i = state.b;
+		return _Utils_eq(i, -1) ? $elm$core$Maybe$Nothing : $elm$core$List$head(
+			A2($elm$core$List$drop, i, suggestions));
+	}
+};
+var $author$project$Complete$keyDecoder = F2(
+	function (state, messages) {
+		var suppressedEvent = $elm$json$Json$Decode$fail('suppressed event');
+		var handleWith = function (msg) {
+			return $elm$json$Json$Decode$succeed(
+				{aR: msg, a_: true, a4: true});
+		};
+		return A2(
+			$elm$json$Json$Decode$andThen,
+			function (key) {
+				var _v0 = _Utils_Tuple2(state, key);
+				_v0$4:
+				while (true) {
+					if (_v0.a.$ === 1) {
+						switch (_v0.b) {
+							case 'ArrowDown':
+								var _v1 = _v0.a;
+								return handleWith(
+									messages.H(
+										$author$project$Complete$next(state)));
+							case 'ArrowUp':
+								var _v2 = _v0.a;
+								return handleWith(
+									messages.H(
+										$author$project$Complete$prev(state)));
+							case 'Enter':
+								var _v3 = _v0.a;
+								var _v4 = $author$project$Complete$selection(state);
+								if (!_v4.$) {
+									var text = _v4.a;
+									return handleWith(
+										messages.N(text));
+								} else {
+									return suppressedEvent;
+								}
+							case 'Escape':
+								var _v5 = _v0.a;
+								return handleWith(
+									messages.H($author$project$Complete$Closed));
+							default:
+								break _v0$4;
+						}
+					} else {
+						break _v0$4;
+					}
+				}
+				return suppressedEvent;
+			},
+			A2($elm$json$Json$Decode$field, 'key', $elm$json$Json$Decode$string));
+	});
+var $elm$html$Html$li = _VirtualDom_node('li');
+var $elm$virtual_dom$VirtualDom$Normal = function (a) {
+	return {$: 0, a: a};
+};
+var $elm$html$Html$Events$on = F2(
+	function (event, decoder) {
+		return A2(
+			$elm$virtual_dom$VirtualDom$on,
+			event,
+			$elm$virtual_dom$VirtualDom$Normal(decoder));
+	});
+var $elm$html$Html$Events$onBlur = function (msg) {
+	return A2(
+		$elm$html$Html$Events$on,
+		'blur',
+		$elm$json$Json$Decode$succeed(msg));
+};
+var $elm$html$Html$Events$alwaysStop = function (x) {
+	return _Utils_Tuple2(x, true);
+};
+var $elm$virtual_dom$VirtualDom$MayStopPropagation = function (a) {
+	return {$: 1, a: a};
+};
+var $elm$html$Html$Events$stopPropagationOn = F2(
+	function (event, decoder) {
+		return A2(
+			$elm$virtual_dom$VirtualDom$on,
+			event,
+			$elm$virtual_dom$VirtualDom$MayStopPropagation(decoder));
+	});
+var $elm$json$Json$Decode$at = F2(
+	function (fields, decoder) {
+		return A3($elm$core$List$foldr, $elm$json$Json$Decode$field, decoder, fields);
+	});
+var $elm$html$Html$Events$targetValue = A2(
+	$elm$json$Json$Decode$at,
+	_List_fromArray(
+		['target', 'value']),
+	$elm$json$Json$Decode$string);
+var $elm$html$Html$Events$onInput = function (tagger) {
+	return A2(
+		$elm$html$Html$Events$stopPropagationOn,
+		'input',
+		A2(
+			$elm$json$Json$Decode$map,
+			$elm$html$Html$Events$alwaysStop,
+			A2($elm$json$Json$Decode$map, tagger, $elm$html$Html$Events$targetValue)));
+};
+var $elm$html$Html$ul = _VirtualDom_node('ul');
+var $elm$html$Html$Attributes$value = $elm$html$Html$Attributes$stringProperty('value');
+var $author$project$Complete$render = F4(
+	function (attrs, state, query, messages) {
+		var _boolean = function (v) {
+			return v ? 'true' : 'false';
+		};
+		return A2(
+			$elm$html$Html$div,
+			_List_fromArray(
+				[
+					$elm$html$Html$Attributes$class('awesomplete')
+				]),
+			_List_fromArray(
+				[
+					A2(
+					$elm$html$Html$input,
+					_Utils_ap(
+						attrs,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$value(query),
+								$elm$html$Html$Events$onInput(messages.ax),
+								$elm$html$Html$Events$onBlur(
+								messages.H($author$project$Complete$Closed)),
+								A2(
+								$elm$html$Html$Events$custom,
+								'keydown',
+								A2($author$project$Complete$keyDecoder, state, messages)),
+								$elm$html$Html$Attributes$autocomplete(false),
+								A2($elm$html$Html$Attributes$attribute, 'autocapitalize', 'off'),
+								A2($elm$html$Html$Attributes$attribute, 'autocorrect', 'off')
+							])),
+					_List_Nil),
+					function () {
+					if (!state.$) {
+						return $elm$html$Html$text('');
+					} else {
+						var suggestions = state.a;
+						var selectedIndex = state.b;
+						return A2(
+							$elm$html$Html$ul,
+							_List_Nil,
+							A2(
+								$elm$core$List$indexedMap,
+								F2(
+									function (i, suggestion) {
+										return A2(
+											$elm$html$Html$li,
+											_List_fromArray(
+												[
+													A2(
+													$elm$html$Html$Events$preventDefaultOn,
+													'mousedown',
+													$elm$json$Json$Decode$succeed(
+														_Utils_Tuple2(
+															messages.N(suggestion),
+															true))),
+													A2(
+													$elm$html$Html$Attributes$attribute,
+													'aria-selected',
+													_boolean(
+														_Utils_eq(i, selectedIndex)))
+												]),
+											_List_fromArray(
+												[
+													$elm$html$Html$text(suggestion)
+												]));
+									}),
+								suggestions));
+					}
+				}()
+				]));
+	});
+var $elm$virtual_dom$VirtualDom$style = _VirtualDom_style;
+var $elm$html$Html$Attributes$style = $elm$virtual_dom$VirtualDom$style;
+var $author$project$Main$renderSearchForm = F2(
+	function (query, completeState) {
+		return A2(
+			$elm$html$Html$form,
+			_List_fromArray(
+				[
+					$elm$html$Html$Events$onSubmit(
+					$author$project$Main$Search(query))
+				]),
+			_List_fromArray(
+				[
+					A4(
+					$author$project$Complete$render,
+					_List_fromArray(
+						[
+							$elm$html$Html$Attributes$id('query'),
+							$elm$html$Html$Attributes$autofocus(true),
+							$elm$html$Html$Attributes$placeholder('keywords...'),
+							$elm$html$Html$Attributes$autocomplete(false),
+							A2($elm$html$Html$Attributes$style, 'width', '500px')
+						]),
+					completeState,
+					query,
+					{N: $author$project$Main$Search, ax: $author$project$Main$UpdateQuery, H: $author$project$Main$UpdateState}),
+					A2(
+					$elm$html$Html$button,
+					_List_fromArray(
+						[
+							A2($elm$html$Html$Attributes$style, 'margin-left', '0.3rem')
+						]),
+					_List_fromArray(
+						[
+							$elm$html$Html$text('Search')
+						]))
+				]));
+	});
+var $author$project$Main$renderTruncatedNotice = function (truncated) {
+	return truncated ? A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('muted')
+			]),
+		_List_fromArray(
+			[
+				$elm$html$Html$text('⚠️ results truncated')
+			])) : $elm$html$Html$text('');
+};
 var $author$project$Main$view = function (model) {
-	var trimmedQuery = $elm$core$String$trim(model.l);
-	var suffixedQuery = ((trimmedQuery === '') || (A2($elm$core$String$endsWith, ' ', model.l) || A2($elm$core$String$endsWith, '*', model.l))) ? trimmedQuery : (trimmedQuery + '*');
-	var filteredCards = A2($author$project$Main$filterWithQuery, suffixedQuery, model.H);
-	var visibleCards = A2($elm$core$List$take, 120, filteredCards);
-	var truncated = _Utils_cmp(
-		$elm$core$List$length(filteredCards),
-		$elm$core$List$length(visibleCards)) > 0;
 	return {
-		az: _List_fromArray(
+		aF: _List_fromArray(
 			[
 				A2(
 				$elm$html$Html$div,
 				_List_Nil,
 				_List_fromArray(
 					[
-						$author$project$Main$renderSearchForm(model.l),
+						A2($author$project$Main$renderSearchForm, model.f, model.x),
 						A2(
 						$elm$html$Html$span,
 						_List_fromArray(
@@ -7486,28 +7828,23 @@ var $author$project$Main$view = function (model) {
 						_List_fromArray(
 							[
 								$elm$html$Html$text(
-								$author$project$Main$countKanjis(filteredCards))
+								A4($author$project$Main$pluralize, model.n.O, 'no kanjis', 'kanji', 'kanjis'))
 							])),
 						A2(
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$classList(
-								_List_fromArray(
-									[
-										_Utils_Tuple2('cards', true),
-										_Utils_Tuple2('sans-serif', model.B)
-									]))
+								$elm$html$Html$Attributes$class('cards')
 							]),
-						A2($elm$core$List$map, $author$project$Main$renderCard, visibleCards))
+						A2($elm$core$List$map, $author$project$Main$renderCard, model.n.s))
 					])),
-				$author$project$Main$renderTruncatedNotice(truncated),
+				$author$project$Main$renderTruncatedNotice(model.n.X),
 				$author$project$Main$renderError(model.I)
 			]),
-		a$: (trimmedQuery === '') ? 'Heisig lookup' : ('Heisig: ' + trimmedQuery)
+		a8: (model.n.f === '') ? 'Heisig lookup' : ('Heisig: ' + model.n.f)
 	};
 };
 var $author$project$Main$main = $elm$browser$Browser$application(
-	{aJ: $author$project$Main$init, aP: $author$project$Main$UrlChanged, aQ: $author$project$Main$LinkClicked, aZ: $author$project$Main$subscriptions, a0: $author$project$Main$update, a1: $author$project$Main$view});
+	{aP: $author$project$Main$init, aW: $author$project$Main$UrlChanged, aX: $author$project$Main$LinkClicked, a6: $author$project$Main$subscriptions, a9: $author$project$Main$update, ba: $author$project$Main$view});
 _Platform_export({'Main':{'init':$author$project$Main$main(
 	$elm$json$Json$Decode$succeed(0))(0)}});}(this));
