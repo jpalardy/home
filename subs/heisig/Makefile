@@ -8,7 +8,7 @@ optimize:
 	@OPTIMIZE=--optimize make public/js/app.js
 
 watch:
-	ls $(ELM_FILES) | entr -s 'make; ding'
+	ls $(ELM_FILES) | entr -s 'clear; make; ding'
 
 clean:
 	rm -f public/js/app.js

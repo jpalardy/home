@@ -4,35 +4,56 @@ import Browser
 import Browser.Dom as Dom
 import Browser.Events as Events
 import Browser.Navigation as Nav
+import Complete
 import Html exposing (..)
-import Html.Attributes exposing (attribute, autofocus, class, classList, id, name, value)
-import Html.Events exposing (onInput, onSubmit, stopPropagationOn)
+import Html.Attributes exposing (..)
+import Html.Events exposing (..)
 import Http
-import Json.Decode exposing (Decoder, keyValuePairs, string)
+import Json.Decode
+import List.Extra
 import Regex
-import Starific
+import Set
 import Task
 import Url
+import Url.Builder
 import Url.Parser
 import Url.Parser.Query
 
 
+
+{--
+-------------------------------------------------
+--}
+
+
 type Msg
     = Noop
-    | Change String
-    | GotKanjis (Result Http.Error (List ( String, String )))
+    | UpdateQuery String
+    | UpdateState Complete.State
+    | Search String
+    | GotCards (Result Http.Error (List Card))
     | LinkClicked Browser.UrlRequest
     | UrlChanged Url.Url
-    | KeyPress String
+    | KeyDown String
 
 
 type alias Model =
     { query : String
+    , completeState : Complete.State
     , cards : List Card
+    , searchResults : SearchResults
+    , sortedTokens : List String
     , url : Url.Url
     , key : Nav.Key
     , err : Maybe Http.Error
-    , sansSerif : Bool
+    }
+
+
+type alias SearchResults =
+    { query : String
+    , cards : List Card
+    , count : Int
+    , truncated : Bool
     }
 
 
@@ -40,41 +61,124 @@ type alias Card =
     { no : Int
     , keyword : String
     , kanji : String
-    , tokens : List String
+    , tokens : Set.Set String
     }
+
+
+
+{--
+-------------------------------------------------
+--}
 
 
 init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
 init _ url key =
     let
-        unescapeSpace =
-            Maybe.map (String.replace "+" "%20")
-
         query =
-            { url | path = "", query = unescapeSpace url.query }
+            { url
+                | path = ""
+                , query = Maybe.map (String.replace "+" "%20") url.query
+            }
                 |> Url.Parser.parse (Url.Parser.query <| Url.Parser.Query.string "q")
-                |> Maybe.withDefault Nothing
+                |> Maybe.andThen identity
                 |> Maybe.withDefault ""
     in
-    ( { query = query, cards = [], url = url, key = key, err = Nothing, sansSerif = False }, getKanjis )
+    ( { query = query
+      , completeState = Complete.closed
+      , cards = []
+      , searchResults = search [] query
+      , sortedTokens = []
+      , url = url
+      , key = key
+      , err = Nothing
+      }
+    , getKanjis
+    )
+
+
+
+{--
+-------------------------------------------------
+--}
+
+
+generateSuggestions : List String -> Int -> String -> Complete.State
+generateSuggestions sortedTokens count query =
+    let
+        words =
+            String.words query
+
+        -- no last word: empty or ends with space
+        splitIndex =
+            if String.trim query == "" || String.endsWith " " query then
+                List.length words
+
+            else
+                List.length words - 1
+
+        ( firstWords, lastWord ) =
+            List.Extra.splitAt splitIndex words |> Tuple.mapBoth (String.join " ") List.head
+    in
+    case lastWord of
+        Just word ->
+            Complete.new
+                (sortedTokens
+                    |> List.filter (String.startsWith word)
+                    |> List.take count
+                    |> List.map (\suggestion -> firstWords ++ " " ++ suggestion)
+                )
+
+        _ ->
+            Complete.closed
+
+
+tokenize : String -> Set.Set String
+tokenize text =
+    let
+        funnyChars =
+            Regex.fromString "[^a-z0-9' ]" |> Maybe.withDefault Regex.never
+    in
+    text
+        |> String.toLower
+        |> String.replace "-" " "
+        |> Regex.replace funnyChars (always "")
+        |> String.words
+        |> Set.fromList
 
 
 getKanjis : Cmd Msg
 getKanjis =
     Http.get
         { url = "heisig.min.json"
-        , expect = Http.expectJson GotKanjis kanjiDecoder
+        , expect = Http.expectJson GotCards kanjiDecoder
         }
 
 
-kanjiDecoder : Decoder (List ( String, String ))
+kanjiDecoder : Json.Decode.Decoder (List Card)
 kanjiDecoder =
-    keyValuePairs string
+    Json.Decode.keyValuePairs Json.Decode.string
+        |> Json.Decode.andThen
+            (Json.Decode.succeed
+                << List.indexedMap
+                    (\i ( kanji, keyword ) ->
+                        { no = i + 1
+                        , keyword = keyword
+                        , kanji = kanji
+                        , tokens = tokenize <| String.join " " [ keyword, String.fromInt (i + 1), kanji ]
+                        }
+                    )
+            )
 
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    Events.onKeyPress (Json.Decode.map KeyPress (Json.Decode.field "key" string))
+    Events.onKeyUp (Json.Decode.map KeyDown (Json.Decode.field "key" Json.Decode.string))
+
+
+
+{--
+-------------------------------------------------
+--}
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -83,33 +187,51 @@ update msg model =
         Noop ->
             ( model, Cmd.none )
 
-        Change query ->
-            let
-                url =
-                    model.url
-
-                urlQuery =
-                    if String.trim query == "" then
-                        Nothing
-
-                    else
-                        Just ("q=" ++ query)
-
-                escapeSpace =
-                    Maybe.map (String.replace " " "+")
-            in
-            ( { model | query = query }
-            , Nav.replaceUrl model.key ({ url | query = escapeSpace urlQuery } |> Url.toString)
+        UpdateQuery query ->
+            ( { model
+                | query = query
+                , completeState = generateSuggestions model.sortedTokens 10 query
+              }
+            , Cmd.none
             )
 
-        GotKanjis (Ok kanjis) ->
-            let
-                cards =
-                    List.indexedMap list2Cards kanjis
-            in
-            ( { model | cards = cards }, Cmd.none )
+        UpdateState completeState ->
+            ( { model | completeState = completeState }, Cmd.none )
 
-        GotKanjis (Err err) ->
+        Search query ->
+            let
+                searchResults =
+                    search model.cards query
+
+                urlQuery =
+                    if searchResults.query == "" then
+                        []
+
+                    else
+                        [ Url.Builder.string "q" query ]
+            in
+            ( { model
+                | searchResults = searchResults
+                , query = searchResults.query
+                , completeState = Complete.closed
+              }
+            , Nav.replaceUrl model.key <| Url.Builder.absolute [] urlQuery
+            )
+
+        GotCards (Ok cards) ->
+            ( { model
+                | cards = cards
+                , searchResults = search cards model.query
+                , sortedTokens =
+                    List.map .tokens cards
+                        |> List.foldl Set.union Set.empty
+                        |> Set.toList
+                        |> List.sort
+              }
+            , Cmd.none
+            )
+
+        GotCards (Err err) ->
             ( { model | err = Just err }, Cmd.none )
 
         LinkClicked urlRequest ->
@@ -123,84 +245,77 @@ update msg model =
         UrlChanged url ->
             ( { model | url = url }, Cmd.none )
 
-        KeyPress "/" ->
+        KeyDown "/" ->
             ( model, Task.attempt (\_ -> Noop) (Dom.focus "query") )
 
-        KeyPress "f" ->
-            ( { model | sansSerif = not model.sansSerif }, Cmd.none )
+        KeyDown "?" ->
+            ( model, Task.attempt (\_ -> Noop) (Dom.focus "query") )
 
-        KeyPress _ ->
+        KeyDown _ ->
             ( model, Cmd.none )
 
 
-list2Cards : Int -> ( String, String ) -> Card
-list2Cards i ( kanji, keyword ) =
+search : List Card -> String -> SearchResults
+search cards query =
     let
-        no =
-            i + 1
-
-        funnyChars =
-            Regex.fromString "[^a-z' ]" |> Maybe.withDefault Regex.never
+        limit =
+            120
 
         tokens =
-            keyword
-                |> String.toLower
-                |> String.replace "-" " "
-                |> Regex.replace funnyChars (\_ -> "")
-                |> String.words
-                |> List.append [ String.fromInt no, kanji ]
+            tokenize query
+
+        matchingCards =
+            if query == "" then
+                cards
+
+            else
+                cards |> List.filter (\card -> Set.intersect tokens card.tokens |> (not << Set.isEmpty))
+
+        count =
+            List.length matchingCards
     in
-    Card no keyword kanji tokens
+    { query = String.trim query
+    , cards = List.take limit matchingCards
+    , count = count
+    , truncated = count > limit
+    }
+
+
+
+{--
+-------------------------------------------------
+--}
+
+
+pluralize : Int -> String -> String -> String -> String
+pluralize count zeroCase oneCase manyCase =
+    case count of
+        0 ->
+            zeroCase
+
+        1 ->
+            [ "1", oneCase ] |> String.join " "
+
+        _ ->
+            [ String.fromInt count, manyCase ] |> String.join " "
 
 
 view : Model -> Browser.Document Msg
 view model =
-    let
-        trimmedQuery =
-            String.trim model.query
-
-        suffixedQuery =
-            if
-                trimmedQuery
-                    == ""
-                    || String.endsWith " " model.query
-                    || String.endsWith "*" model.query
-            then
-                trimmedQuery
-
-            else
-                trimmedQuery ++ "*"
-
-        filteredCards =
-            model.cards
-                |> filterWithQuery suffixedQuery
-
-        visibleCards =
-            filteredCards
-                |> List.take 120
-
-        truncated =
-            List.length filteredCards > List.length visibleCards
-    in
     { title =
-        if trimmedQuery == "" then
+        if model.searchResults.query == "" then
             "Heisig lookup"
 
         else
-            "Heisig: " ++ trimmedQuery
+            "Heisig: " ++ model.searchResults.query
     , body =
         [ div []
-            [ renderSearchForm model.query
-            , span [ class "muted" ] [ text (countKanjis filteredCards) ]
-            , div
-                [ classList
-                    [ ( "cards", True )
-                    , ( "sans-serif", model.sansSerif )
-                    ]
-                ]
-                (List.map renderCard visibleCards)
+            [ renderSearchForm model.query model.completeState
+            , span [ class "muted" ] [ text <| pluralize model.searchResults.count "no kanjis" "kanji" "kanjis" ]
+            , div [ class "cards" ]
+                (List.map renderCard model.searchResults.cards)
             ]
-        , renderTruncatedNotice truncated
+        , renderTruncatedNotice model.searchResults.truncated
         , renderError model.err
         ]
     }
@@ -242,55 +357,23 @@ renderTruncatedNotice truncated =
         text ""
 
 
-filterWithQuery : String -> List Card -> List Card
-filterWithQuery query cards =
-    let
-        keywords =
-            query |> String.words
-
-        matcher =
-            Starific.any keywords
-    in
-    if query == "" then
-        cards
-
-    else
-        cards |> List.filter (\card -> matcher card.tokens)
-
-
-countKanjis : List Card -> String
-countKanjis cards =
-    let
-        numOfCards =
-            List.length cards
-    in
-    case numOfCards of
-        0 ->
-            "no kanjis"
-
-        1 ->
-            "1 kanji"
-
-        _ ->
-            String.fromInt numOfCards ++ " kanjis"
-
-
-renderSearchForm : String -> Html Msg
-renderSearchForm query =
-    form [ onSubmit Noop ]
-        [ div [ id "glass" ]
-            [ input
-                [ id "query"
-                , name "query"
-                , value query
-                , onInput Change
-                , stopPropagationOn "keypress" (Json.Decode.succeed ( Noop, True ))
-                , autofocus True
-                , attribute "autocapitalize" "off"
-                , attribute "autocorrect" "off"
-                ]
-                []
+renderSearchForm : String -> Complete.State -> Html Msg
+renderSearchForm query completeState =
+    Html.form [ onSubmit <| Search query ]
+        [ Complete.render
+            [ id "query"
+            , autofocus True
+            , placeholder "keywords..."
+            , autocomplete False
+            , style "width" "500px"
             ]
+            completeState
+            query
+            { updateQuery = UpdateQuery
+            , updateState = UpdateState
+            , acceptQuery = Search
+            }
+        , button [ style "margin-left" "0.3rem" ] [ text "Search" ]
         ]
 
 
@@ -301,6 +384,12 @@ renderCard card =
         , span [ class "keyword" ] [ text card.keyword ]
         , span [ class "kanji" ] [ text card.kanji ]
         ]
+
+
+
+{--
+-------------------------------------------------
+--}
 
 
 main : Program () Model Msg
