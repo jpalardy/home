@@ -215,7 +215,7 @@ update msg model =
                 , query = searchResults.query
                 , completeState = Complete.closed
               }
-            , Nav.replaceUrl model.key <| Url.Builder.absolute [] urlQuery
+            , Nav.replaceUrl model.key <| Url.Builder.relative [] urlQuery
             )
 
         GotCards (Ok cards) ->
