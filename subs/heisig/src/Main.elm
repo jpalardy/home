@@ -363,6 +363,7 @@ renderSearchForm query completeState =
         [ Complete.render
             [ id "query"
             , autofocus True
+            , spellcheck False
             , placeholder "keywords..."
             , style "width" "500px"
             ]
