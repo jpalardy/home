@@ -364,7 +364,6 @@ renderSearchForm query completeState =
             [ id "query"
             , autofocus True
             , placeholder "keywords..."
-            , autocomplete False
             , style "width" "500px"
             ]
             completeState
