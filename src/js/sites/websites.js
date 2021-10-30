@@ -240,6 +240,10 @@ module.exports = [
     alias: "protondb",
     search: "https://www.protondb.com/search?q=%s",
   },
+  {
+    alias: "bootstrap",
+    visit: "https://gist.github.com/jpalardy/a0fb920180cbc5bdc84db99d824ba55b",
+  },
 ].map(site => {
   return {
     alias: site.alias,
