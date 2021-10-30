@@ -22,10 +22,7 @@
 
   </div>
 
-  <div id="volume" class="hide" style="width: 570px; margin-top: 50px; margin-left: 40px">
-    <textarea v-model="text" rows="10"></textarea>
-    <pre id="answer" v-cloak>{{ volume }}</pre>
-  </div>
+  <div id="volume"></div>
 
   <!-- ------------------------------------------------- -->
 
@@ -55,5 +52,8 @@
   <script src="js/vue.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/volume.js"></script>
+  <script>
+    Elm.Volume.init({node: document.getElementById('volume')});
+  </script>
 </body>
 </html>
