@@ -15,12 +15,7 @@ a {
 }
 
 .container {
-  margin-top: 50px;
   display: flex;
-}
-
-.hide {
-  display: none;
 }
 
 /*-------------------------------------------------*/
@@ -83,11 +78,15 @@ circle:hover {
 
 /*-------------------------------------------------*/
 
-#volume textarea {
-  width: 95%;
+.volume {
+  width: 600px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  margin-top: 30px;
 }
 
-[v-cloak] {
-  display: none;
+.hide {
+  visibility: hidden;
 }
 
