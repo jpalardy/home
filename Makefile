@@ -6,7 +6,7 @@ build: TODAY = $(shell date +%F)
 build: CHECKSUM = $(shell $(BUNDLE) | sha1sum | cut -c 1-7)
 build:
 	test -d public || mkdir public
-	for sub in subs/*/Makefile; do cd `dirname $$sub`; make -B; done
+	for sub in subs/*/Makefile; do (cd `dirname $$sub`; make -B); done
 	for sub in subs/*; do rsync -q -av --delete $$sub/public/ public/`basename $$sub`/; done
 	rm -rf public/app*.js
 	$(BUNDLE) --outfile=public/app.$(CHECKSUM).js
