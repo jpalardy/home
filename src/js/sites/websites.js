@@ -244,6 +244,10 @@ module.exports = [
     alias: "bootstrap",
     visit: "https://gist.github.com/jpalardy/a0fb920180cbc5bdc84db99d824ba55b",
   },
+  {
+    alias: "ac",
+    visit: "https://www.allareacodes.com/%s",
+  },
 ].map(site => {
   return {
     alias: site.alias,
