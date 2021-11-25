@@ -251,7 +251,7 @@ module.exports = [
   {
     alias: "gist",
     visit: "https://gist.github.com/jpalardy",
-    search: "https://gist.github.com/search?q=hlsearch",
+    search: "https://gist.github.com/search?q=%s",
   },
 ].map(site => {
   return {
