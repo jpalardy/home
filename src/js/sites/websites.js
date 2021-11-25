@@ -248,6 +248,11 @@ module.exports = [
     alias: "ac",
     visit: "https://www.allareacodes.com/%s",
   },
+  {
+    alias: "gist",
+    visit: "https://gist.github.com/jpalardy",
+    search: "https://gist.github.com/search?q=hlsearch",
+  },
 ].map(site => {
   return {
     alias: site.alias,
