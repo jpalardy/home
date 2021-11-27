@@ -241,10 +241,6 @@ module.exports = [
     search: "https://www.protondb.com/search?q=%s",
   },
   {
-    alias: "bootstrap",
-    visit: "https://gist.github.com/jpalardy/a0fb920180cbc5bdc84db99d824ba55b",
-  },
-  {
     alias: "ac",
     visit: "https://www.allareacodes.com/%s",
   },
@@ -252,6 +248,14 @@ module.exports = [
     alias: "gist",
     visit: "https://gist.github.com/jpalardy",
     search: "https://gist.github.com/search?q=%s",
+  },
+  {
+    alias: "gist@bootstrap",
+    visit: "https://gist.github.com/jpalardy/a0fb920180cbc5bdc84db99d824ba55b",
+  },
+  {
+    alias: "gist@term",
+    visit: "https://gist.github.com/jpalardy/17c87790a6da2e12242c9c5b0f7db66f",
   },
 ].map(site => {
   return {
