@@ -12,6 +12,7 @@
   banner.innerHTML = `
 <style>
 .pagemeta {
+  all: revert;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -20,6 +21,7 @@
   z-index: 9999;
 }
 .pagemeta div {
+  all: revert;
   padding: 20px;
   color: white;
   font-family: monospace;
@@ -28,6 +30,7 @@
   white-space: pre;
 }
 .pagemeta button {
+  all: revert;
   position: absolute;
   top: 10px;
   right: 10px;
