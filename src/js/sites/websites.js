@@ -249,15 +249,18 @@ module.exports = [
     visit: "https://gist.github.com/jpalardy",
     search: "https://gist.github.com/search?q=%s",
   },
-  {
-    alias: "gist@bootstrap",
-    visit: "https://gist.github.com/jpalardy/a0fb920180cbc5bdc84db99d824ba55b",
-  },
-  {
-    alias: "gist@term",
-    visit: "https://gist.github.com/jpalardy/17c87790a6da2e12242c9c5b0f7db66f",
-  },
-].map(site => {
+  (() => {
+    const gists = {
+      bootstrap: "a0fb920180cbc5bdc84db99d824ba55b",
+      term: "17c87790a6da2e12242c9c5b0f7db66f",
+      ffmpeg: "e659ab54acbc96a863bac7e437cabd12",
+    };
+    return Object.entries(gists).map(([name, id]) => ({
+      alias: `gist@${name}`,
+      visit: `https://gist.github.com/jpalardy/${id}`,
+    }));
+  })(),
+].flat().map((site) => {
   return {
     alias: site.alias,
     visit: site.visit || site.search.match("^https?://[^/]+/")[0],
