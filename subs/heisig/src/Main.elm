@@ -1,4 +1,4 @@
-module Main exposing (main)
+port module Main exposing (main)
 
 import Browser
 import Browser.Dom as Dom
@@ -26,6 +26,15 @@ import Url.Parser.Query
 --}
 
 
+port copyText : String -> Cmd msg
+
+
+
+{--
+-------------------------------------------------
+--}
+
+
 type Msg
     = Noop
     | UpdateQuery String
@@ -35,6 +44,7 @@ type Msg
     | LinkClicked Browser.UrlRequest
     | UrlChanged Url.Url
     | KeyDown String
+    | CopyText String
 
 
 type alias Model =
@@ -254,6 +264,9 @@ update msg model =
         KeyDown _ ->
             ( model, Cmd.none )
 
+        CopyText text ->
+            ( model, copyText text )
+
 
 search : List Card -> String -> SearchResults
 search cards query =
@@ -384,7 +397,7 @@ renderCard card =
             [ span [ class "pale" ] [ text (String.fromInt card.no) ]
             , span [ class "right" ] [ text card.keyword ]
             ]
-        , div [ class "content" ]
+        , div [ class "content pointer", onClick <| CopyText card.kanji ]
             [ span [ class "kanji1" ] [ text card.kanji ]
             , span [ class "kanji2 pale" ] [ text card.kanji ]
             ]

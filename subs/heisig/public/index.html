@@ -11,7 +11,12 @@
 </head>
 
 <body>
-  <script>Elm.Main.init();</script>
+  <script>
+    const app = Elm.Main.init();
+    app.ports.copyText.subscribe((text) => {
+      navigator.clipboard.writeText(text);
+    });
+  </script>
 </body>
 
 </html>
