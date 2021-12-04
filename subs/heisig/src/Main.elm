@@ -311,7 +311,7 @@ view model =
     , body =
         [ div []
             [ renderSearchForm model.query model.completeState
-            , span [ class "muted" ] [ text <| pluralize model.searchResults.count "no kanjis" "kanji" "kanjis" ]
+            , div [ class "summary pale" ] [ text <| pluralize model.searchResults.count "no kanjis" "kanji" "kanjis" ]
             , div [ class "cards" ]
                 (List.map renderCard model.searchResults.cards)
             ]
@@ -364,8 +364,8 @@ renderSearchForm query completeState =
             [ id "query"
             , autofocus True
             , spellcheck False
-            , placeholder "keywords..."
             , style "width" "500px"
+            , style "padding-left" "5px"
             ]
             completeState
             query
@@ -380,9 +380,14 @@ renderSearchForm query completeState =
 renderCard : Card -> Html Msg
 renderCard card =
     div [ class "card" ]
-        [ span [ class "no" ] [ text (String.fromInt card.no) ]
-        , span [ class "keyword" ] [ text card.keyword ]
-        , span [ class "kanji" ] [ text card.kanji ]
+        [ div [ class "header" ]
+            [ span [ class "pale" ] [ text (String.fromInt card.no) ]
+            , span [ class "right" ] [ text card.keyword ]
+            ]
+        , div [ class "content" ]
+            [ span [ class "kanji1" ] [ text card.kanji ]
+            , span [ class "kanji2 pale" ] [ text card.kanji ]
+            ]
         ]
 
 
