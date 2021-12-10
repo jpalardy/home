@@ -94,11 +94,13 @@ module.exports = [
     search: "https://klaftertief.github.io/elm-search/?q=%s",
     visit: "https://elm-lang.org/docs",
   },
-].map(site => {
-  return {
-    alias: site.alias,
-    visit: site.visit || site.search.match("^https?://[^/]+/")[0],
-    search: site.search || site.visit,
-    queryMod: site.queryMod,
-  };
-});
+]
+  .flat()
+  .map((site) => {
+    return {
+      alias: site.alias,
+      visit: site.visit || site.search.match("^https?://[^/]+/")[0],
+      search: site.search || site.visit,
+      queryMod: site.queryMod,
+    };
+  });
