@@ -236,7 +236,6 @@ update msg model =
                     List.map .tokens cards
                         |> List.foldl Set.union Set.empty
                         |> Set.toList
-                        |> List.sort
               }
             , Cmd.none
             )
