@@ -11,6 +11,7 @@ import Html.Events exposing (..)
 import Http
 import Json.Decode
 import List.Extra
+import Parser exposing (..)
 import Regex
 import Set
 import Task
@@ -142,20 +143,6 @@ generateSuggestions sortedTokens count query =
             Complete.closed
 
 
-tokenize : String -> Set.Set String
-tokenize text =
-    let
-        funnyChars =
-            Regex.fromString "[^a-z0-9' ]" |> Maybe.withDefault Regex.never
-    in
-    text
-        |> String.toLower
-        |> String.replace "-" " "
-        |> Regex.replace funnyChars (always "")
-        |> String.words
-        |> Set.fromList
-
-
 getKanjis : Cmd Msg
 getKanjis =
     Http.get
@@ -166,6 +153,17 @@ getKanjis =
 
 kanjiDecoder : Json.Decode.Decoder (List Card)
 kanjiDecoder =
+    let
+        punctuations =
+            Regex.fromString "([.()]|^-)" |> Maybe.withDefault Regex.never
+
+        tokenize text =
+            text
+                |> String.toLower
+                |> Regex.replace punctuations (always "")
+                |> String.words
+                |> Set.fromList
+    in
     Json.Decode.keyValuePairs Json.Decode.string
         |> Json.Decode.andThen
             (Json.Decode.succeed
@@ -273,11 +271,37 @@ search cards query =
         limit =
             120
 
+        -- there are 2200 kanji cards
+        withinRange i =
+            i >= 1 && i <= 2200
+
+        parseRange =
+            Parser.succeed Tuple.pair
+                |= Parser.int
+                |. Parser.symbol "-"
+                |= Parser.int
+                |. Parser.end
+                |> Parser.andThen
+                    (\( s, e ) ->
+                        if withinRange s && withinRange e then
+                            succeed <| (List.range s e |> List.map String.fromInt)
+
+                        else
+                            problem "out of range"
+                    )
+
+        expandRange text =
+            run parseRange text |> Result.withDefault [ text ]
+
         tokens =
-            tokenize query
+            query
+                |> String.toLower
+                |> String.words
+                |> List.concatMap expandRange
+                |> Set.fromList
 
         matchingCards =
-            if query == "" then
+            if String.trim query |> String.isEmpty then
                 cards
 
             else
