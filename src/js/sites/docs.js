@@ -19,6 +19,10 @@ module.exports = [
     alias: "pg",
     search: "https://www.postgresql.org/search/?q=%s",
   },
+  {
+    alias: "pgf",
+    visit: "https://www.postgresql.org/docs/current/functions.html",
+  },
   // -------------------------------------------------
   // css
   // -------------------------------------------------
