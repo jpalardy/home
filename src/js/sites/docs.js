@@ -23,6 +23,11 @@ module.exports = [
     alias: "pgf",
     visit: "https://www.postgresql.org/docs/current/functions.html",
   },
+  {
+    alias: "gpg",
+    visit: "https://www.google.com/search?q=postgresql",
+    search: "https://www.google.com/search?q=postgresql+%s",
+  },
   // -------------------------------------------------
   // css
   // -------------------------------------------------
