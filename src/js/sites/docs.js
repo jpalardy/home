@@ -72,10 +72,6 @@ module.exports = [
     visit: "https://hexdocs.pm/elixir/",
     queryMod: capitalize,
   },
-  ["Kernel", "String", "Enum", "Keyword", "List", "Map"].map((name) => ({
-    alias: `exm@${name.toLowerCase()}`,
-    visit: `https://hexdocs.pm/elixir/${name}.html#summary`,
-  })),
   {
     alias: "ef",
     search: "https://elixirforum.com/search?q=%s",
