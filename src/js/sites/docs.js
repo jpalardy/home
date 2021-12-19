@@ -2,6 +2,14 @@ function capitalize(str) {
   return str.toLowerCase().replace(/./, (c) => c.toUpperCase());
 }
 
+function googleSearch(alias, words) {
+  return {
+    alias: `g@${alias}`,
+    visit: `https://www.google.com/search?q=${words}`,
+    search: `https://www.google.com/search?q=${words}+%s`,
+  };
+}
+
 module.exports = [
   // -------------------------------------------------
   // misc
@@ -23,11 +31,7 @@ module.exports = [
     alias: "pgf",
     visit: "https://www.postgresql.org/docs/current/functions.html",
   },
-  {
-    alias: "gpg",
-    visit: "https://www.google.com/search?q=postgresql",
-    search: "https://www.google.com/search?q=postgresql+%s",
-  },
+  googleSearch("pg", "postgresql"),
   // -------------------------------------------------
   // css
   // -------------------------------------------------
@@ -76,29 +80,12 @@ module.exports = [
     alias: "ef",
     search: "https://elixirforum.com/search?q=%s",
   },
-  {
-    alias: "ge",
-    visit: "https://www.google.com/search?q=elixir",
-    search: "https://www.google.com/search?q=elixir+%s",
-  },
-  {
-    alias: "gerl",
-    visit: "https://www.google.com/search?q=erlang",
-    search: "https://www.google.com/search?q=erlang+%s",
-  },
-  {
-    alias: "gep",
-    visit: "https://www.google.com/search?q=elixir+phoenix",
-    search: "https://www.google.com/search?q=elixir+phoenix+%s",
-  },
+  googleSearch("ex", "elixir"),
+  googleSearch("erl", "erlang"),
+  googleSearch("phx", "elixir+phoenix"),
   // -------------------------------------------------
   // elm
   // -------------------------------------------------
-  {
-    alias: "gelm",
-    visit: "https://www.google.com/search?q=elm",
-    search: "https://www.google.com/search?q=elm+%s",
-  },
   {
     alias: "elm",
     search: "https://package.elm-lang.org/packages/elm/%s/latest/",
