@@ -1,8 +1,17 @@
 
+body {
+  font-size: 16px;
+}
+
+form input, form button {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .cards {
   margin: 10px 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 10px;
 }
 
@@ -13,21 +22,23 @@
     border-radius: 5px;
     background: url(../images/cardboard.jpg) no-repeat;
     background-size: cover;
+    color: #444;
   }
 
   .card .header {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    margin: 12px;
+    margin: 1rem;
+    font-size: 1.4rem;
   }
 
   .card .content {
     letter-spacing: 0.5rem;
     position: absolute;
-    bottom: 5px;
-    left: 15px;
-    font-size: 250%;
+    bottom: 0.2rem;
+    left: 1rem;
+    font-size: 4rem;
   }
 
   .card .content:active {
@@ -40,7 +51,7 @@
 
   .card .kanji2 {
     font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', '游明朝', '游明朝体', YuMincho, 'Yu Mincho', 'ＭＳ 明朝', 'MS Mincho', HiraMinProN-W3, 'TakaoEx明朝', TakaoExMincho, 'MotoyaLCedar', 'Droid Sans Japanese', serif;
-    font-size: 70%;
+    font-size: 3rem;
   }
 
 /* ------------------------------------------------- */
@@ -62,10 +73,8 @@
 .summary {
   margin: 5px;
   margin-top: 2px;
-  font-size: 80%;
 }
 
 .awesomplete {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 80%;
 }
