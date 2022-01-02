@@ -169,6 +169,7 @@ const app = new Vue({
       .then(books => {
         books = books
           .filter(book => {
+            book.notes = book.notes || "";
             if (book.status !== "done" || !book.ml || !book.pages || book.notes.includes("#audio") || book.notes.includes("#ebook")) {
               return false;
             }
