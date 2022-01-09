@@ -257,6 +257,10 @@ module.exports = [
     alias: `gist@${name}`,
     visit: `https://gist.github.com/jpalardy/${id}`,
   })),
+  {
+    alias: "hs",
+    visit: "https://www.handspeak.com/word/search/",
+  },
 ]
   .flat()
   .map((site) => {
