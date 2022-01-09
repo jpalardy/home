@@ -11,5 +11,5 @@ watch:
 	ls $(ELM_FILES) | entr -s 'clear; make; ding'
 
 clean:
-	rm -f public/js/app.js
+	rm -rf public/js/app.js elm-stuff
 
