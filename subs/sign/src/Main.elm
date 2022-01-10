@@ -1,6 +1,8 @@
 module Main exposing (main)
 
 import Browser
+import Dict
+import Dict.Extra
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
@@ -128,11 +130,27 @@ view model =
 
             else
                 List.filter (.tokens >> List.any (String.startsWith model.query)) model.phrases
+
+        groupedPhrase =
+            Dict.Extra.groupBy
+                (\phrase ->
+                    phrase.phrase |> String.toLower |> String.uncons |> Maybe.withDefault ( '-', "" ) |> Tuple.first
+                )
+                matchingPhrases
     in
     div [ class "ma3" ]
         [ renderSearchForm model.query
-        , div [ class "phrases flex flex-wrap", style "gap" "5px" ]
-            (List.map renderPhrase matchingPhrases)
+        , div []
+            (List.map
+                (\( letter, phrases ) ->
+                    div []
+                        [ h3 [ class "mb1" ] [ text <| String.fromChar letter ]
+                        , div [ class "phrases flex flex-wrap", style "gap" "5px" ]
+                            (List.map renderPhrase phrases)
+                        ]
+                )
+                (Dict.toList groupedPhrase)
+            )
         , renderError model.err
         ]
 
