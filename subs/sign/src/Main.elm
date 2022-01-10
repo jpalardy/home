@@ -134,7 +134,11 @@ view model =
         groupedPhrase =
             Dict.Extra.groupBy
                 (\phrase ->
-                    phrase.phrase |> String.toLower |> String.uncons |> Maybe.withDefault ( '-', "" ) |> Tuple.first
+                    phrase.phrase
+                        |> String.toLower
+                        |> String.uncons
+                        |> Maybe.withDefault ( '-', "" )
+                        |> Tuple.first
                 )
                 matchingPhrases
     in
@@ -159,7 +163,7 @@ renderSearchForm : String -> Html Msg
 renderSearchForm query =
     Html.form [ onSubmit Noop, class "mb3" ]
         [ input
-            [ class "w-100"
+            [ size 40
             , value query
             , onInput UpdateQuery
             , autofocus True
