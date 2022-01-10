@@ -261,6 +261,11 @@ module.exports = [
     alias: "hs",
     visit: "https://www.handspeak.com/word/search/",
   },
+  {
+    alias: "sign",
+    search: "https://home.jpalardy.com/sign/?q=%s",
+    visit: "https://home.jpalardy.com/sign/",
+  },
 ]
   .flat()
   .map((site) => {
