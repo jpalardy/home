@@ -1,6 +1,7 @@
 module Main exposing (main)
 
 import Browser
+import Browser.Navigation as Nav
 import Dict
 import Dict.Extra
 import Html exposing (..)
@@ -9,6 +10,9 @@ import Html.Events exposing (..)
 import Http
 import Json.Decode
 import Regex
+import Url
+import Url.Parser
+import Url.Parser.Query
 
 
 
@@ -21,12 +25,16 @@ type Msg
     = Noop
     | UpdateQuery String
     | GotPhrases (Result Http.Error (List Phrase))
+    | LinkClicked Browser.UrlRequest
+    | UrlChanged Url.Url
 
 
 type alias Model =
     { query : String
     , phrases : List Phrase
     , err : Maybe Http.Error
+    , url : Url.Url
+    , key : Nav.Key
     }
 
 
@@ -43,11 +51,23 @@ type alias Phrase =
 --}
 
 
-init : () -> ( Model, Cmd Msg )
-init _ =
-    ( { query = ""
+init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
+init _ url key =
+    let
+        unescapeSpace =
+            Maybe.map (String.replace "+" "%20")
+
+        query =
+            { url | path = "", query = unescapeSpace url.query }
+                |> Url.Parser.parse (Url.Parser.query <| Url.Parser.Query.string "q")
+                |> Maybe.withDefault Nothing
+                |> Maybe.withDefault ""
+    in
+    ( { query = query
       , phrases = []
       , err = Nothing
+      , url = url
+      , key = key
       }
     , getPhrases
     )
@@ -102,10 +122,22 @@ update msg model =
             ( model, Cmd.none )
 
         UpdateQuery query ->
-            ( { model
-                | query = query
-              }
-            , Cmd.none
+            let
+                url =
+                    model.url
+
+                urlQuery =
+                    if String.trim query == "" then
+                        Nothing
+
+                    else
+                        Just ("q=" ++ query)
+
+                escapeSpace =
+                    Maybe.map (String.replace " " "+")
+            in
+            ( { model | query = query }
+            , Nav.replaceUrl model.key ({ url | query = escapeSpace urlQuery } |> Url.toString)
             )
 
         GotPhrases (Ok phrases) ->
@@ -114,6 +146,17 @@ update msg model =
         GotPhrases (Err err) ->
             ( { model | err = Just err }, Cmd.none )
 
+        LinkClicked urlRequest ->
+            case urlRequest of
+                Browser.Internal url ->
+                    ( model, Nav.pushUrl model.key (Url.toString url) )
+
+                Browser.External href ->
+                    ( model, Nav.load href )
+
+        UrlChanged url ->
+            ( { model | url = url }, Cmd.none )
+
 
 
 {--
@@ -121,9 +164,12 @@ update msg model =
 --}
 
 
-view : Model -> Html Msg
+view : Model -> Browser.Document Msg
 view model =
     let
+        trimmedQuery =
+            String.trim model.query
+
         matchingPhrases =
             if String.trim model.query == "" then
                 model.phrases
@@ -142,21 +188,30 @@ view model =
                 )
                 matchingPhrases
     in
-    div [ class "ma3" ]
-        [ renderSearchForm model.query
-        , div []
-            (List.map
-                (\( letter, phrases ) ->
-                    div []
-                        [ h3 [ class "mb1" ] [ text <| String.fromChar letter ]
-                        , div [ class "phrases flex flex-wrap", style "gap" "5px" ]
-                            (List.map renderPhrase phrases)
-                        ]
+    { title =
+        if trimmedQuery == "" then
+            "ASL lookup"
+
+        else
+            trimmedQuery ++ " - ASL lookup"
+    , body =
+        [ div [ class "ma3" ]
+            [ renderSearchForm model.query
+            , div []
+                (List.map
+                    (\( letter, phrases ) ->
+                        div []
+                            [ h3 [ class "mb1" ] [ text <| String.fromChar letter ]
+                            , div [ class "phrases flex flex-wrap", style "gap" "5px" ]
+                                (List.map renderPhrase phrases)
+                            ]
+                    )
+                    (Dict.toList groupedPhrase)
                 )
-                (Dict.toList groupedPhrase)
-            )
-        , renderError model.err
+            , renderError model.err
+            ]
         ]
+    }
 
 
 renderSearchForm : String -> Html Msg
@@ -218,9 +273,11 @@ renderError httpErr =
 
 main : Program () Model Msg
 main =
-    Browser.element
+    Browser.application
         { init = init
         , update = update
         , view = view
         , subscriptions = subscriptions
+        , onUrlChange = UrlChanged
+        , onUrlRequest = LinkClicked
         }
