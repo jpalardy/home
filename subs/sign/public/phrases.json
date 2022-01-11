@@ -25,8 +25,16 @@
   "student": 2101,
   "teacher": 2156,
   "understand": 2292,
-  "don't understand": 2292,
   "thank you": 2186,
   "you're welcome": 2380,
-  "slow": 1992
+  "slow": 1992,
+  "fine": 793,
+  "too": 2088,
+  "sign language": 3278,
+  "please": 1658,
+  "ask": 117,
+  "question": 1754,
+  "eat": 645,
+  "want": 2347,
+  "time": 2223
 }
