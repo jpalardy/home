@@ -10,11 +10,11 @@ import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
-import Json.Decode
+import Json.Decode as Decode
 import Regex
 import Task
 import Url
-import Url.Parser exposing (query)
+import Url.Parser
 import Url.Parser.Query
 
 
@@ -91,7 +91,7 @@ getPhrases =
         }
 
 
-phrasesDecoder : Json.Decode.Decoder (List Phrase)
+phrasesDecoder : Decode.Decoder (List Phrase)
 phrasesDecoder =
     let
         punctuations =
@@ -103,9 +103,9 @@ phrasesDecoder =
                 |> Regex.replace punctuations (always " ")
                 |> String.words
     in
-    Json.Decode.keyValuePairs Json.Decode.int
-        |> Json.Decode.andThen
-            (\phrases -> Json.Decode.succeed (List.map (\( phrase, id ) -> Phrase phrase id (tokenize phrase)) phrases |> List.sortBy (.phrase >> String.toLower)))
+    Decode.keyValuePairs Decode.int
+        |> Decode.andThen
+            (\phrases -> Decode.succeed (List.map (\( phrase, id ) -> Phrase phrase id (tokenize phrase)) phrases |> List.sortBy (.phrase >> String.toLower)))
 
 
 focusOn : String -> Cmd Msg
@@ -181,7 +181,7 @@ update msg model =
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    onKeyUp (Json.Decode.map KeyUp (Json.Decode.field "key" Json.Decode.string))
+    onKeyUp (Decode.map KeyUp (Decode.field "key" Decode.string))
 
 
 
@@ -244,15 +244,15 @@ renderSearchForm : String -> Html Msg
 renderSearchForm query =
     let
         keyStopper =
-            Json.Decode.field "key" Json.Decode.string
-                |> Json.Decode.andThen
+            Decode.field "key" Decode.string
+                |> Decode.andThen
                     (\key ->
                         case key of
                             "Escape" ->
-                                Json.Decode.fail "propagate to update's KeyUp"
+                                Decode.fail "propagate to update's KeyUp"
 
                             _ ->
-                                Json.Decode.succeed { message = Noop, stopPropagation = True, preventDefault = True }
+                                Decode.succeed { message = Noop, stopPropagation = True, preventDefault = True }
                     )
     in
     Html.form [ onSubmit Noop, class "mb3" ]
