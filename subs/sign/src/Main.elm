@@ -284,21 +284,24 @@ renderError httpErr =
         Just err ->
             div
                 [ class "muted" ]
-                [ case err of
-                    Http.BadUrl msg ->
-                        text ("⚠️ " ++ msg)
+                [ text <|
+                    "⚠️ "
+                        ++ (case err of
+                                Http.BadUrl msg ->
+                                    msg
 
-                    Http.Timeout ->
-                        text "⚠️ timeout"
+                                Http.Timeout ->
+                                    "timeout"
 
-                    Http.NetworkError ->
-                        text "⚠️ network error"
+                                Http.NetworkError ->
+                                    "network error"
 
-                    Http.BadStatus code ->
-                        text ("⚠️ status: " ++ String.fromInt code)
+                                Http.BadStatus code ->
+                                    "status: " ++ String.fromInt code
 
-                    Http.BadBody body ->
-                        text ("⚠️ error: " ++ body)
+                                Http.BadBody body ->
+                                    "error: " ++ body
+                           )
                 ]
 
         Nothing ->
