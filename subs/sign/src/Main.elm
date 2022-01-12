@@ -223,14 +223,12 @@ view model =
     , body =
         [ div [ class "ma3" ]
             [ renderSearchForm model.query
-            , div []
-                (List.map
+            , div [ style "display" "grid", style "grid-template-columns" "2rem 1fr", style "row-gap" "0.5rem" ]
+                (List.concatMap
                     (\( letter, phrases ) ->
-                        div []
-                            [ h3 [ class "mb1" ] [ text <| String.fromChar letter ]
-                            , div [ class "phrases flex flex-wrap", style "gap" "5px" ]
-                                (List.map renderPhrase phrases)
-                            ]
+                        [ h3 [ class "ma1" ] [ text <| String.fromChar letter ]
+                        , div [ class "flex flex-wrap", style "gap" "0.25rem" ] (List.map renderPhrase phrases)
+                        ]
                     )
                     (Dict.toList groupedPhrase)
                 )
@@ -277,7 +275,7 @@ renderPhrase phrase =
         handspeakURL id =
             "https://www.handspeak.com/word/search/index.php?id=" ++ String.fromInt id
     in
-    a [ href <| handspeakURL phrase.id, class "link db pa2 br2 black-70 bg-black-10" ] [ text phrase.phrase ]
+    a [ href <| handspeakURL phrase.id, class "link pa2 br2 black-70 bg-black-10" ] [ text phrase.phrase ]
 
 
 renderError : Maybe Http.Error -> Html msg
