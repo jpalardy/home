@@ -1,6 +1,8 @@
 module Main exposing (main)
 
 import Browser
+import Browser.Dom
+import Browser.Events exposing (onKeyUp)
 import Browser.Navigation as Nav
 import Dict
 import Dict.Extra
@@ -10,8 +12,9 @@ import Html.Events exposing (..)
 import Http
 import Json.Decode
 import Regex
+import Task
 import Url
-import Url.Parser
+import Url.Parser exposing (query)
 import Url.Parser.Query
 
 
@@ -27,6 +30,7 @@ type Msg
     | GotPhrases (Result Http.Error (List Phrase))
     | LinkClicked Browser.UrlRequest
     | UrlChanged Url.Url
+    | KeyUp String
 
 
 type alias Model =
@@ -104,9 +108,9 @@ phrasesDecoder =
             (\phrases -> Json.Decode.succeed (List.map (\( phrase, id ) -> Phrase phrase id (tokenize phrase)) phrases |> List.sortBy (.phrase >> String.toLower)))
 
 
-subscriptions : Model -> Sub Msg
-subscriptions _ =
-    Sub.none
+focusOn : String -> Cmd Msg
+focusOn id =
+    Task.attempt (\_ -> Noop) (Browser.Dom.focus id)
 
 
 
@@ -156,6 +160,28 @@ update msg model =
 
         UrlChanged url ->
             ( { model | url = url }, Cmd.none )
+
+        KeyUp "Tab" ->
+            ( model, Cmd.none )
+
+        KeyUp "Escape" ->
+            ( { model | query = "" }, focusOn "input" )
+
+        KeyUp key ->
+            let
+                ch =
+                    if String.length key == 1 then
+                        key
+
+                    else
+                        ""
+            in
+            ( { model | query = model.query ++ ch }, focusOn "input" )
+
+
+subscriptions : Model -> Sub Msg
+subscriptions _ =
+    onKeyUp (Json.Decode.map KeyUp (Json.Decode.field "key" Json.Decode.string))
 
 
 
@@ -216,12 +242,28 @@ view model =
 
 renderSearchForm : String -> Html Msg
 renderSearchForm query =
+    let
+        keyStopper =
+            Json.Decode.field "key" Json.Decode.string
+                |> Json.Decode.andThen
+                    (\key ->
+                        case key of
+                            "Escape" ->
+                                Json.Decode.fail "propagate to update's KeyUp"
+
+                            _ ->
+                                Json.Decode.succeed { message = Noop, stopPropagation = True, preventDefault = True }
+                    )
+    in
     Html.form [ onSubmit Noop, class "mb3" ]
         [ input
-            [ size 40
+            [ id "input"
+            , size 40
             , value query
             , onInput UpdateQuery
+            , custom "keyup" keyStopper
             , autofocus True
+            , autocomplete False
             , attribute "autocapitalize" "off"
             , attribute "autocorrect" "off"
             ]
