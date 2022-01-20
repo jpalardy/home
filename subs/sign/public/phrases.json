@@ -64,5 +64,13 @@
   "single": 1974,
   "old": 1547,
   "age": 2796,
-  "family": 740
+  "family": 740,
+  "father": 758,
+  "mother": 1439,
+  "common-law": 5694,
+  "friend": 865,
+  "have": 989,
+  "none": 1500,
+  "long": 1299,
+  "year": 2439
 }
