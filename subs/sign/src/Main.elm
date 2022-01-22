@@ -95,7 +95,7 @@ phrasesDecoder : Decode.Decoder (List Phrase)
 phrasesDecoder =
     let
         punctuations =
-            Regex.fromString "[/()]" |> Maybe.withDefault Regex.never
+            Regex.fromString "[/()-]" |> Maybe.withDefault Regex.never
 
         tokenize text =
             text
