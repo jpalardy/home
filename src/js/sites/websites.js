@@ -179,17 +179,13 @@ module.exports = [
     visit: "https://www.fatsecret.com/calories-nutrition/",
   },
   {
-    alias: "udemy",
-    search: "https://www.udemy.com/courses/search/?q=%s",
-  },
-  {
-    alias: "apk",
-    search: "https://pkgs.alpinelinux.org/contents?file=%s&arch=x86_64",
-  },
-  {
     alias: "linkedin",
     search: "https://www.linkedin.com/jobs/search/?keywords=%s",
     visit: "https://www.linkedin.com/jobs/",
+  },
+  {
+    alias: "udemy",
+    search: "https://www.udemy.com/courses/search/?q=%s",
   },
   {
     alias: "edx",
@@ -249,14 +245,6 @@ module.exports = [
     visit: "https://gist.github.com/jpalardy",
     search: "https://gist.github.com/search?q=%s",
   },
-  Object.entries({
-    bootstrap: "a0fb920180cbc5bdc84db99d824ba55b",
-    term: "17c87790a6da2e12242c9c5b0f7db66f",
-    ffmpeg: "e659ab54acbc96a863bac7e437cabd12",
-  }).map(([name, id]) => ({
-    alias: `gist@${name}`,
-    visit: `https://gist.github.com/jpalardy/${id}`,
-  })),
   {
     alias: "hs",
     visit: "https://www.handspeak.com/word/search/",

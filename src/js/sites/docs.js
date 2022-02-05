@@ -15,6 +15,10 @@ module.exports = [
   // misc
   // -------------------------------------------------
   {
+    alias: "apk",
+    search: "https://pkgs.alpinelinux.org/contents?file=%s&arch=x86_64",
+  },
+  {
     alias: "jq",
     visit: "https://stedolan.github.io/jq/manual/",
   },
@@ -26,10 +30,6 @@ module.exports = [
   {
     alias: "pg",
     search: "https://www.postgresql.org/search/?q=%s",
-  },
-  {
-    alias: "pgf",
-    visit: "https://www.postgresql.org/docs/current/functions.html",
   },
   googleSearch("pg", "postgresql"),
   // -------------------------------------------------
@@ -46,10 +46,6 @@ module.exports = [
   {
     alias: "flex",
     visit: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
-  },
-  {
-    alias: "flexboxfroggy",
-    visit: "https://flexboxfroggy.com/",
   },
   {
     alias: "grid",
