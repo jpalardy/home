@@ -172,5 +172,22 @@
   "live": 1290,
   "whatever": 2387,
   "left (side)": 3997,
-  "right (side)": 1833
+  "right (side)": 1833,
+  "office": 3667,
+  "hall": 974,
+  "across from": 5662,
+  "beside": 3638,
+  "building": 4429,
+  "elevator": 2363,
+  "floor": 856,
+  "stairs": 2060,
+  "upstairs": 2768,
+  "downstairs": 3953,
+  "shop": 1986,
+  "drinking fountain": 855,
+  "class": 398,
+  "classroom": 4438,
+  "restaurant": 2261,
+  "menu": 4309,
+  "order (request)": 1572
 }
