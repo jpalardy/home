@@ -145,10 +145,6 @@ module.exports = [
     search: "https://www.crunchyroll.com/search?q=%s",
   },
   {
-    alias: "fun",
-    search: "https://www.funimation.com/search?q=%s",
-  },
-  {
     alias: "nf",
     search: "https://www.netflix.com/search/%s",
   },
