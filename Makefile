@@ -1,19 +1,30 @@
-BUNDLE = ./node_modules/.bin/esbuild --bundle --minify src/js/app.js
 
-.PHONY: build
-build: COMMIT_SHA = $(shell git rev-parse --short HEAD)
-build: TODAY = $(shell date +%F)
-build: CHECKSUM = $(shell $(BUNDLE) | sha1sum | cut -c 1-7)
-build:
-	test -d public || mkdir public
+all: public/index.html subs
+
+public:
+	mkdir public
+
+.PHONY: compile
+compile:
+	npx tsc
+
+public/app.js: public compile
+	rm -rf public/app.*.js
+	npx esbuild --bundle --minify dist/app.js --outfile=$@
+
+public/index.html: COMMIT_SHA = $(shell git rev-parse --short HEAD)
+public/index.html: TODAY = $(shell date +%F)
+public/index.html: CHECKSUM = $(shell sha1sum $< | cut -c 1-7)
+public/index.html: public/app.js
+	ln -s app.js public/app.$(CHECKSUM).js
+	m4 -D __VERSION__="$(COMMIT_SHA) @ $(TODAY)" -D __APPJS__=app.$(CHECKSUM).js src/html/index.html > $@
+
+.PHONY: subs
+subs: public
 	for sub in subs/*/Makefile; do (cd `dirname $$sub`; make -B); done
 	for sub in subs/*; do rsync -q -av --delete $$sub/public/ public/`basename $$sub`/; done
-	rm -rf public/app*.js
-	$(BUNDLE) --outfile=public/app.$(CHECKSUM).js
-	m4 -D __VERSION__="$(COMMIT_SHA) @ $(TODAY)" -D __APPJS__=app.$(CHECKSUM).js src/html/index.html > public/index.html
 
-watch:
-	rg --files | entr make
+# -------------------------------------------------
 
 .PHONY: coverage
 coverage:
@@ -29,6 +40,7 @@ clean:
 	rm -rf public
 	rm -f deploy.retry
 	rm -rf coverage/ .nyc_output/
+	rm -rf dist
 
 #-------------------------------------------------
 
