@@ -1,4 +1,22 @@
-module.exports = [
+type FullSite = {
+  alias: string;
+  search: string;
+  visit: string;
+};
+type SearchSite = {
+  alias: string;
+  search: string;
+};
+type BookmarkSite = {
+  alias: string;
+  visit: string;
+};
+
+type SiteConfig = FullSite | SearchSite | BookmarkSite;
+
+// -------------------------------------------------
+
+const sites: SiteConfig[] = [
   {
     alias: "g",
     search: "https://www.google.com/search?q=%s",
@@ -250,12 +268,15 @@ module.exports = [
     search: "https://home.jpalardy.com/sign/?q=%s",
     visit: "https://home.jpalardy.com/sign/",
   },
-]
-  .flat()
-  .map((site) => {
-    return {
-      alias: site.alias,
-      visit: site.visit || site.search.match("^https?://[^/]+/")[0],
-      search: site.search || site.visit,
-    };
-  });
+];
+
+export default sites.map((site): FullSite => {
+  if (!("search" in site)) {
+    return {...site, search: site.visit};
+  }
+  if (!("visit" in site)) {
+    const visit = new URL(site.search).origin;
+    return {...site, visit};
+  }
+  return site;
+});

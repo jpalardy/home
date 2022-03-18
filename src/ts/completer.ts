@@ -1,15 +1,17 @@
 class Completer {
-  constructor(words) {
+  readonly words: string[];
+
+  constructor(words: string[]) {
     this.words = words;
-    this.completions = [];
   }
 
-  *matches(prefix, options = {}) {
+  *matches(prefix: string, options = {skipSameFirst: false}): Generator<string, never, unknown> {
     const results = Completer.findCompletions(prefix, this.words);
     if (options.skipSameFirst) {
       const first = results[0];
-      if (first !== undefined && first === prefix) {
-        results.push(results.shift()); // rotate-left
+      if (results[0] === prefix) {
+        results.shift();
+        results.push(first); // rotate-left
       }
     }
     while (true) {
@@ -21,7 +23,8 @@ class Completer {
 
   //-------------------------------------------------
 
-  static findCommonPrefix(words = []) {
+  // simplify?
+  static findCommonPrefix(words: string[] = []): string {
     const firstWord = words[0];
     if (words.length <= 1) {
       return firstWord || "";
@@ -37,11 +40,11 @@ class Completer {
     return firstWord;
   }
 
-  static findCompletions(prefix, words) {
-    const matches = words.filter(word => word.startsWith(prefix));
+  static findCompletions(prefix: string, words: string[]): string[] {
+    const matches = words.filter((word) => word.startsWith(prefix));
     const commonPrefix = Completer.findCommonPrefix(matches) || prefix;
     return [...new Set([commonPrefix, ...matches])];
   }
 }
 
-module.exports = Completer;
+export default Completer;

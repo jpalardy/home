@@ -1,44 +1,47 @@
+type FullSite = {
+  alias: string;
+  search: string;
+  visit: string;
+};
+
+//-------------------------------------------------
+
 class Command {
-  constructor(site, query, url) {
+  readonly site: FullSite;
+
+  readonly query: string;
+
+  readonly url: string;
+
+  constructor(site: FullSite, query: string, url: string) {
     this.site = site;
     this.query = query;
     this.url = url;
   }
 }
 
-//-------------------------------------------------
-
-module.exports = function create(sites, defaultAlias) {
-  const LUT = sites.reduce((acc, site) => {
-    acc[site.alias] = site;
-    return acc;
-  }, {});
+const Parser = function create(sites: FullSite[], defaultAlias: string) {
+  const LUT = new Map(sites.map((site) => [site.alias, site]));
 
   return {
-    parse(text) {
-      const words = text
-        .trim()
-        .split(/ +/)
-        .filter(Boolean);
+    parse(text: string): Command {
+      const words = text.trim().split(/ +/).filter(Boolean);
       // text is blank
       if (words.length === 0) {
-        return null;
+        return this.parse(defaultAlias);
       }
       // first word supposed to be an existing site
       // query is all remaining words
       const [first, ...rest] = words;
-      const site = LUT[first];
+      const site = LUT.get(first);
       // if not, parse again with default site
       if (!site) {
         return this.parse(`${defaultAlias} ${text}`);
       }
-      let query = rest.join(" ");
-      if (site.queryMod) {
-        query = site.queryMod(query);
-      }
+      const query = rest.join(" ");
       // empty query means 'visit', otherwise 'search'
       if (!query) {
-        return new Command(site, "", site.visit);
+        return new Command(site, query, site.visit);
       }
       const encodedQuery = encodeURIComponent(query).replace(/%20/g, "+");
       if (site.search.includes("%s")) {
@@ -49,4 +52,6 @@ module.exports = function create(sites, defaultAlias) {
       return new Command(site, query, `${site.search}#${encodedQuery}`);
     },
   };
-};
+}
+
+export {Command, Parser};

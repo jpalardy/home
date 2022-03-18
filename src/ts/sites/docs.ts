@@ -1,16 +1,30 @@
-function capitalize(str) {
-  return str.toLowerCase().replace(/./, (c) => c.toUpperCase());
-}
+type FullSite = {
+  alias: string;
+  search: string;
+  visit: string;
+};
+type SearchSite = {
+  alias: string;
+  search: string;
+};
+type BookmarkSite = {
+  alias: string;
+  visit: string;
+};
 
-function googleSearch(alias, words) {
+type SiteConfig = FullSite | SearchSite | BookmarkSite;
+
+// -------------------------------------------------
+
+const googleSearch = function (alias: string, words: string): FullSite {
   return {
     alias: `g@${alias}`,
     visit: `https://www.google.com/search?q=${words}`,
     search: `https://www.google.com/search?q=${words}+%s`,
   };
-}
+};
 
-module.exports = [
+const sites: SiteConfig[] = [
   // -------------------------------------------------
   // misc
   // -------------------------------------------------
@@ -66,7 +80,6 @@ module.exports = [
     alias: "exm",
     search: "https://hexdocs.pm/elixir/%s.html#summary",
     visit: "https://hexdocs.pm/elixir/",
-    queryMod: capitalize,
   },
   {
     alias: "ef",
@@ -87,13 +100,15 @@ module.exports = [
     search: "https://klaftertief.github.io/elm-search/?q=%s",
     visit: "https://elm-lang.org/docs",
   },
-]
-  .flat()
-  .map((site) => {
-    return {
-      alias: site.alias,
-      visit: site.visit || site.search.match("^https?://[^/]+/")[0],
-      search: site.search || site.visit,
-      queryMod: site.queryMod,
-    };
-  });
+];
+
+export default sites.map((site): FullSite => {
+  if (!("search" in site)) {
+    return {...site, search: site.visit};
+  }
+  if (!("visit" in site)) {
+    const visit = new URL(site.search).origin;
+    return {...site, visit};
+  }
+  return site;
+});

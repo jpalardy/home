@@ -1,33 +1,48 @@
-/* global window, document, sessionStorage, performance */
+/* global window, document, sessionStorage */
 
-const websites = require("./sites/websites");
-const docs = require("./sites/docs");
+import websites from "./sites/websites";
+import docs from "./sites/docs";
+import {Parser} from "./command";
+import Completer from "./completer";
 
 const sites = [...websites, ...docs];
-
-const Command = require("./command")(sites, "g");
-const Completer = require("./completer");
+const parser = Parser(sites, "g");
 
 //-------------------------------------------------
 // convenience
 //-------------------------------------------------
 
-const ELEMENTS = {
-  input: document.querySelector("#content input"),
-  form: document.querySelector("#content form"),
-};
+const ELEMENTS = (() => {
+  const input = document.querySelector("#content input") as HTMLInputElement;
+  const form = document.querySelector("#content form") as HTMLFormElement;
 
-function guard(predicate, f) {
-  return predicate ? f : () => {};
-}
+  if (!input) {
+    throw Error("missing #content input");
+  }
+
+  if (!form) {
+    throw Error("missing #content form");
+  }
+
+  return {input, form};
+})();
 
 //-------------------------------------------------
 // actions
 //-------------------------------------------------
 
 const lastText = {
-  get: guard(window.sessionStorage, () => sessionStorage.getItem("lastText")),
-  set: guard(window.sessionStorage, (value) => sessionStorage.setItem("lastText", value)),
+  get() {
+    if ("sessionStorage" in window) {
+      return sessionStorage.getItem("lastText");
+    }
+    return null;
+  },
+  set(value: string) {
+    if ("sessionStorage" in window) {
+      sessionStorage.setItem("lastText", value);
+    }
+  },
 };
 
 const ACTIONS = {
@@ -43,12 +58,9 @@ const ACTIONS = {
 
   submit() {
     const text = this.getText();
-    const command = Command.parse(text);
-    if (!command) {
-      return;
-    }
+    const command = parser.parse(text);
     lastText.set(text);
-    window.location = command.url;
+    window.location.href = command.url;
   },
 };
 
@@ -57,35 +69,30 @@ const ACTIONS = {
 //-------------------------------------------------
 
 (() => {
-  const getParams = (query = document.location.search.substring(1)) => {
-    const result = {};
-    query.split("&").forEach((param) => {
+  const getParams = (query: string) => {
+    const params = query.split("&").map((param): [string, string] => {
       const [k, v = ""] = param.split("=", 2);
-      if (!k) {
-        return;
-      }
-      result[k] = decodeURIComponent(v).replace(/\+/g, " ");
+      return [k, decodeURIComponent(v).replace(/\+/g, " ")];
     });
-    return result;
+    return new Map(params);
   };
 
   // restore textfield on back button
-  const getLastText = guard(window.performance, () => {
+  const lt = (() => {
     const entries = performance.getEntriesByType("navigation");
-    // eventually: use optional chaining...
-    if (entries[0] && entries[0].type === "back_forward") {
-      return lastText.get();
+    if (entries[0]?.entryType === "back_forward") {
+      return lastText.get() || "";
     }
     return "";
-  });
+  })();
 
-  const lt = getLastText();
   if (lt) {
     ACTIONS.setCommand(lt);
     return;
   }
 
-  const {q} = getParams();
+  const params = getParams(document.location.search.substring(1));
+  const q = params.get("q");
   if (q) {
     ACTIONS.setCommand(q);
     ACTIONS.submit();
@@ -99,7 +106,7 @@ const ACTIONS = {
 {
   document.body.addEventListener("keydown", () => {
     // any key focuses on search field
-    if (document.activeElement.tagName.toLowerCase() !== "input") {
+    if (document.activeElement?.tagName.toLowerCase() !== "input") {
       ELEMENTS.input.focus();
     }
   });
@@ -114,9 +121,9 @@ const ACTIONS = {
     ACTIONS.submit();
   });
 
-  let iter;
+  let iter: null | Generator<string, never, unknown>;
   let right = "";
-  ELEMENTS.form.addEventListener("keydown", (ev) => {
+  ELEMENTS.form.addEventListener("keydown", (ev: KeyboardEvent) => {
     if (ev.key === "Escape") {
       ACTIONS.setCommand(""); // clear
       iter = null;
@@ -133,10 +140,10 @@ const ACTIONS = {
       return;
     }
     const currentText = ACTIONS.getText();
-    const curPos = ev.target.selectionStart;
+    const curPos = (ev.target as HTMLInputElement).selectionStart || 0;
     const left = currentText.slice(0, curPos);
     right = currentText.slice(curPos);
     iter = completer.matches(left, {skipSameFirst: true});
     ACTIONS.setCommand(iter.next().value, right);
-  });
+  }, false);
 }
