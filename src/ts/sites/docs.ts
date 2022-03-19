@@ -16,13 +16,13 @@ type SiteConfig = FullSite | SearchSite | BookmarkSite;
 
 // -------------------------------------------------
 
-const googleSearch = function (alias: string, words: string): FullSite {
+function googleSearch(alias: string, words: string): FullSite {
   return {
     alias: `g@${alias}`,
     visit: `https://www.google.com/search?q=${words}`,
     search: `https://www.google.com/search?q=${words}+%s`,
   };
-};
+}
 
 const sites: SiteConfig[] = [
   // -------------------------------------------------

@@ -9,7 +9,7 @@ class Completer {
     const results = Completer.findCompletions(prefix, this.words);
     if (options.skipSameFirst) {
       const first = results[0];
-      if (results[0] === prefix) {
+      if (first === prefix) {
         results.shift();
         results.push(first); // rotate-left
       }

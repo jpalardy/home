@@ -91,8 +91,7 @@ const ACTIONS = {
     return;
   }
 
-  const params = getParams(document.location.search.substring(1));
-  const q = params.get("q");
+  const q = getParams(document.location.search.substring(1)).get("q");
   if (q) {
     ACTIONS.setCommand(q);
     ACTIONS.submit();
