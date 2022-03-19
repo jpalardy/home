@@ -1,11 +1,3 @@
-type FullSite = {
-  alias: string;
-  search: string;
-  visit: string;
-};
-
-//-------------------------------------------------
-
 class Command {
   readonly site: FullSite;
 
