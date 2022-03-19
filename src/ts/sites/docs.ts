@@ -102,7 +102,7 @@ const sites: SiteConfig[] = [
   },
 ];
 
-export default sites.map((site): FullSite => {
+const fullSites = sites.map((site): FullSite => {
   if (!("search" in site)) {
     return {...site, search: site.visit};
   }
@@ -112,3 +112,5 @@ export default sites.map((site): FullSite => {
   }
   return site;
 });
+
+export {fullSites as sites};

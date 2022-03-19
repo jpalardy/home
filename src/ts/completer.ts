@@ -21,8 +21,6 @@ class Completer {
     }
   }
 
-  //-------------------------------------------------
-
   // simplify?
   static findCommonPrefix(words: string[] = []): string {
     const firstWord = words[0];
@@ -47,4 +45,4 @@ class Completer {
   }
 }
 
-export default Completer;
+export {Completer};

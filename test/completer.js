@@ -1,9 +1,7 @@
-/* global describe, it, before */
-/* eslint */
+/* eslint @typescript-eslint/no-var-requires: off */
 
 const assert = require("assert");
-
-const Completer = require("../src/js/completer");
+const {Completer} = require("../dist/completer");
 
 describe("Completer", () => {
   describe("class", () => {
@@ -27,20 +25,16 @@ describe("Completer", () => {
       assert.deepEqual(this.subject.words, this.words);
     });
 
-    it("starts without completions", function _test() {
-      assert.deepEqual(this.subject.completions, []);
-    });
-
     it("cycles through completions", function _test() {
       {
         const matches = this.subject.matches("c");
         const words = ["c", "cv", "ch", "caniuse", "cr", "cnm", "c", "cv", "ch"]; // keeps going...
-        words.forEach(word => assert.strictEqual(matches.next().value, word));
+        words.forEach((word) => assert.strictEqual(matches.next().value, word));
       }
       {
         const matches = this.subject.matches("am");
         const words = ["am", "am.ca", "am", "am.ca", "am"];
-        words.forEach(word => assert.strictEqual(matches.next().value, word));
+        words.forEach((word) => assert.strictEqual(matches.next().value, word));
       }
     });
 
@@ -48,19 +42,19 @@ describe("Completer", () => {
       {
         const matches = this.subject.matches("c", {skipSameFirst: true});
         const words = ["cv", "ch", "caniuse", "cr", "cnm", "c", "cv", "ch"]; // keeps going...
-        words.forEach(word => assert.strictEqual(matches.next().value, word));
+        words.forEach((word) => assert.strictEqual(matches.next().value, word));
       }
       {
         const matches = this.subject.matches("am", {skipSameFirst: true});
         const words = ["am.ca", "am", "am.ca", "am"];
-        words.forEach(word => assert.strictEqual(matches.next().value, word));
+        words.forEach((word) => assert.strictEqual(matches.next().value, word));
       }
     });
 
     it("cycles through completions, skipSameFirst, common prefix", function _test() {
       const matches = this.subject.matches("ap", {skipSameFirst: true});
       const words = ["api.", "api.nodejs", "api.express", "api.jq", "api.aws", "api.mdn", "api.", "api.nodejs", "api.express"];
-      words.forEach(word => assert.strictEqual(matches.next().value, word));
+      words.forEach((word) => assert.strictEqual(matches.next().value, word));
     });
   });
 

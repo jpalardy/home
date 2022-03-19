@@ -1,23 +1,23 @@
-/* global describe, it */
+/* eslint @typescript-eslint/no-var-requires: off */
 
 const assert = require("assert");
 
-const sites = require("../src/js/sites/websites");
-const Command = require("../src/js/command")(sites, "ddg");
+const {sites} = require("../dist/sites/websites");
+const {Parser} = require("../dist/command");
 
-const assertURL = function(text, url) {
-  const command = Command.parse(text);
+const assertURL = function (text, url) {
+  const command = Parser(sites, "ddg").parse(text);
   assert.strictEqual(command && command.url, url); // command && to test null
 };
 
 describe("Command", () => {
   describe("parse", () => {
     it("punts an empty query", () => {
-      assertURL("", null);
+      assertURL("", "https://duckduckgo.com");
     });
 
     it("punts a blank query", () => {
-      assertURL("     ", null);
+      assertURL("     ", "https://duckduckgo.com");
     });
 
     it("handles a one-word query", () => {
@@ -37,7 +37,7 @@ describe("Command", () => {
     });
 
     it("handles a site without a query", () => {
-      assertURL("g", "https://www.google.com/");
+      assertURL("g", "https://www.google.com");
     });
 
     it("handles worst case with bad spacing", () => {

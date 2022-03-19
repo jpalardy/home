@@ -1,9 +1,9 @@
 /* global window, document, sessionStorage */
 
-import websites from "./sites/websites";
-import docs from "./sites/docs";
+import {sites as websites} from "./sites/websites";
+import {sites as docs} from "./sites/docs";
 import {Parser} from "./command";
-import Completer from "./completer";
+import {Completer} from "./completer";
 
 const sites = [...websites, ...docs];
 const parser = Parser(sites, "g");
