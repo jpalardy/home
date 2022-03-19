@@ -2,7 +2,7 @@
 
 const assert = require("assert");
 
-const {sites} = require("../dist/sites/websites");
+const {sites} = require("../dist/sites");
 const {Parser} = require("../dist/command");
 
 const assertURL = function (text, url) {

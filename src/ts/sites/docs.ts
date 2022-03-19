@@ -84,15 +84,4 @@ const sites: SiteConfig[] = [
   },
 ];
 
-const fullSites = sites.map((site): FullSite => {
-  if (!("search" in site)) {
-    return {...site, search: site.visit};
-  }
-  if (!("visit" in site)) {
-    const visit = new URL(site.search).origin;
-    return {...site, visit};
-  }
-  return site;
-});
-
-export {fullSites as sites};
+export {sites};
