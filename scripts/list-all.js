@@ -1,7 +1,6 @@
-const websites = require("../src/js/sites/websites");
-const docs = require("../src/js/sites/docs");
+const {sites} = require("../dist/sites");
 
 /* eslint-disable no-console */
-[...websites, ...docs].forEach(site => {
+sites.forEach(site => {
   console.log(site.alias, site.visit);
 });
