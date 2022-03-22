@@ -35,6 +35,10 @@ test: compile
 	@npm test
 	@awk '/alias:/' dist/*.js | awk -F'"' '/"/ {print $$2}' | sort | uniq -c | awk '$$1 != 1 { print "*********", $$0; exit 1 }'
 
+.PHONY: lint
+lint:
+	npx eslint src/ts/
+
 .PHONY: clean
 clean:
 	rm -rf public
