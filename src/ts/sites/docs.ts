@@ -1,3 +1,5 @@
+import {SiteConfig, FullSite} from "./types";
+
 function googleSearch(alias: string, words: string): FullSite {
   return {
     alias: `g@${alias}`,

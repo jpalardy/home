@@ -1,3 +1,5 @@
+import {SiteConfig} from "./types";
+
 const sites: SiteConfig[] = [
   {
     alias: "g",

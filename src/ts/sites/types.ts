@@ -13,3 +13,5 @@ type BookmarkSite = {
 };
 
 type SiteConfig = FullSite | SearchSite | BookmarkSite;
+
+export {FullSite, SiteConfig};

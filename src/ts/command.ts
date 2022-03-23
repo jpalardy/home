@@ -1,3 +1,5 @@
+import {FullSite} from "./sites";
+
 class Command {
   readonly site: FullSite;
 

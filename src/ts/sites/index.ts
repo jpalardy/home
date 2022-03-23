@@ -1,3 +1,4 @@
+import {FullSite, SiteConfig} from "./types";
 import {sites as websites} from "./websites";
 import {sites as docs} from "./docs";
 
@@ -14,4 +15,4 @@ function convertToFullSite(site: SiteConfig): FullSite {
 
 const sites = [...websites, ...docs].map(convertToFullSite);
 
-export {sites};
+export {sites, FullSite};
