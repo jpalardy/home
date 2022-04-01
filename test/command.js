@@ -1,3 +1,4 @@
+/* global require, describe, it */
 /* eslint @typescript-eslint/no-var-requires: off */
 
 const assert = require("assert");
@@ -12,11 +13,8 @@ const assertURL = function (text, url) {
 
 describe("Command", () => {
   describe("parse", () => {
-    it("punts an empty query", () => {
+    it("punts an empty/blank query", () => {
       assertURL("", "https://duckduckgo.com");
-    });
-
-    it("punts a blank query", () => {
       assertURL("     ", "https://duckduckgo.com");
     });
 
