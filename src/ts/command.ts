@@ -1,18 +1,10 @@
 import {FullSite} from "./sites";
 
-class Command {
-  readonly site: FullSite;
-
-  readonly query: string;
-
-  readonly url: string;
-
-  constructor(site: FullSite, query: string, url: string) {
-    this.site = site;
-    this.query = query;
-    this.url = url;
-  }
-}
+type Command = Readonly<{
+  site: FullSite;
+  query: string;
+  url: string;
+}>
 
 const Parser = function create(sites: FullSite[], defaultAlias: string) {
   const LUT = new Map(sites.map((site) => [site.alias, site]));
@@ -34,17 +26,17 @@ const Parser = function create(sites: FullSite[], defaultAlias: string) {
       const query = rest.join(" ");
       // empty query means 'visit', otherwise 'search'
       if (!query) {
-        return new Command(site, query, site.visit);
+        return {site, query, url: site.visit};
       }
       const encodedQuery = encodeURIComponent(query).replace(/%20/g, "+");
       if (site.search.includes("%s")) {
-        return new Command(site, query, site.search.replace(/%s/g, encodedQuery));
+        return {site, query, url: site.search.replace(/%s/g, encodedQuery)};
       }
       // happens for sites without search functionality...
       // at least, query is in the url, as a reminder
-      return new Command(site, query, `${site.search}#${encodedQuery}`);
+      return {site, query, url: `${site.search}#${encodedQuery}`};
     },
   };
 }
 
-export {Command, Parser};
+export {Parser};
