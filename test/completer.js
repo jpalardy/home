@@ -80,6 +80,7 @@ describe("Completer", () => {
       assert.strictEqual(Completer.findCommonPrefix("dog", ["cat", "cow"]), "");
       assert.strictEqual(Completer.findCommonPrefix("cat", ["cow", "dog"]), "");
       assert.strictEqual(Completer.findCommonPrefix("cat", ["", "cat"]), "");
+      assert.strictEqual(Completer.findCommonPrefix("", ["cow", "dog"]), "");
     });
   });
 
@@ -104,6 +105,14 @@ describe("Completer", () => {
 
     it("does not return duplicates if same as commonPrefix", () => {
       assert.deepEqual(Completer.findCompletions("cat", ["cathode"]), ["cathode"]);
+    });
+
+    it("returns everything on blank", () => {
+      assert.deepEqual(Completer.findCompletions("", ["amazon", "ambulance", "amish"]), ["am", "amazon", "ambulance", "amish"]);
+    });
+
+    it("returns full-and-only match", () => {
+      assert.deepEqual(Completer.findCompletions("h", ["amazon", "helicopter", "amish"]), ["helicopter"]);
     });
   });
 });
