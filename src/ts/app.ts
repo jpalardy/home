@@ -69,7 +69,7 @@ const ACTIONS = {
 (() => {
   const getParams = (query: string) => {
     const params = query.split("&").map((param): [string, string] => {
-      const [k, v = ""] = param.split("=", 2);
+      const [k = "", v = ""] = param.split("=", 2);
       return [k, decodeURIComponent(v).replace(/\+/g, " ")];
     });
     return new Map(params);

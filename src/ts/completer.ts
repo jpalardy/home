@@ -15,21 +15,19 @@ class Completer {
       }
     }
     while (true) {
-      for (let i = 0; i < results.length; i += 1) {
-        yield results[i];
+      for (const value of results) {
+        yield value;
       }
     }
   }
 
-  // simplify?
-  static findCommonPrefix(words: string[] = []): string {
-    const firstWord = words[0];
-    if (words.length <= 1) {
-      return firstWord || "";
+  static findCommonPrefix(firstWord: string, words: string[]): string {
+    if (words.length === 0) {
+      return firstWord;
     }
     for (let i = 0; i < firstWord.length; i += 1) {
-      for (let j = 1; j < words.length; j += 1) {
-        if (!words[j][i] || words[j][i] !== firstWord[i]) {
+      for (const word of words) {
+        if (word[i] !== firstWord[i]) {
           return firstWord.slice(0, i);
         }
       }
@@ -40,7 +38,11 @@ class Completer {
 
   static findCompletions(prefix: string, words: string[]): string[] {
     const matches = words.filter((word) => word.startsWith(prefix));
-    const commonPrefix = Completer.findCommonPrefix(matches) || prefix;
+    const [first, ...rest] = matches;
+    if (first === undefined) {
+      return [prefix];
+    }
+    const commonPrefix = Completer.findCommonPrefix(first, rest);
     return [...new Set([commonPrefix, ...matches])];
   }
 }

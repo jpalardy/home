@@ -19,14 +19,13 @@ const Parser = function create(sites: FullSite[], defaultAlias: string) {
 
   return {
     parse(text: string): Command {
-      const words = text.trim().split(/ +/).filter(Boolean);
+      const [first, ...rest] = text.trim().split(/ +/).filter(Boolean);
       // text is blank
-      if (words.length === 0) {
+      if (first === undefined) {
         return this.parse(defaultAlias);
       }
       // first word supposed to be an existing site
       // query is all remaining words
-      const [first, ...rest] = words;
       const site = LUT.get(first);
       // if not, parse again with default site
       if (!site) {

@@ -1,3 +1,4 @@
+/* global require, describe, before, it */
 /* eslint @typescript-eslint/no-var-requires: off */
 
 const assert = require("assert");
@@ -61,28 +62,24 @@ describe("Completer", () => {
   //-------------------------------------------------
 
   describe("findCommonPrefix", () => {
-    it("returns [] for empty array", () => {
-      assert.strictEqual(Completer.findCommonPrefix([]), "");
-      assert.strictEqual(Completer.findCommonPrefix(), "");
-    });
-
-    it("returns first if array only contains one value", () => {
-      assert.strictEqual(Completer.findCommonPrefix(["xxx"]), "xxx");
+    it("returns word for empty array", () => {
+      assert.strictEqual(Completer.findCommonPrefix("foo", []), "foo");
     });
 
     it("returns common prefix if found", () => {
-      assert.strictEqual(Completer.findCommonPrefix(["amazon", "ambulance", "amish"]), "am");
+      assert.strictEqual(Completer.findCommonPrefix("amazon", ["ambulance", "amish"]), "am");
     });
 
     it("returns common prefix if found, all same", () => {
-      assert.strictEqual(Completer.findCommonPrefix(["amazon", "amazon", "amazon"]), "amazon");
-      assert.strictEqual(Completer.findCommonPrefix(["l", "l", "l"]), "l");
+      assert.strictEqual(Completer.findCommonPrefix("amazon", ["amazon", "amazon", "amazon"]), "amazon");
+      assert.strictEqual(Completer.findCommonPrefix("l", ["l", "l", "l"]), "l");
     });
 
     it("does not return common prefix if none found", () => {
-      assert.strictEqual(Completer.findCommonPrefix(["dog", "cat", "cow"]), "");
-      assert.strictEqual(Completer.findCommonPrefix(["cat", "cow", "dog"]), "");
-      assert.strictEqual(Completer.findCommonPrefix(["cat", "", "cat"]), "");
+      assert.strictEqual(Completer.findCommonPrefix("foo", ["bar"]), "");
+      assert.strictEqual(Completer.findCommonPrefix("dog", ["cat", "cow"]), "");
+      assert.strictEqual(Completer.findCommonPrefix("cat", ["cow", "dog"]), "");
+      assert.strictEqual(Completer.findCommonPrefix("cat", ["", "cat"]), "");
     });
   });
 
