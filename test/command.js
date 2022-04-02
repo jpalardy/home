@@ -4,11 +4,11 @@
 const assert = require("assert");
 
 const {sites} = require("../dist/sites");
-const {Parser} = require("../dist/command");
+const Command = require("../dist/command");
 
 const assertURL = function (text, url) {
-  const command = Parser(sites, "ddg").parse(text);
-  assert.strictEqual(command && command.url, url); // command && to test null
+  const command = Command.parser(sites, "ddg")(text);
+  assert.strictEqual(command.url, url);
 };
 
 describe("Command", () => {

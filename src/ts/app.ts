@@ -1,10 +1,10 @@
 /* global window, document, sessionStorage */
 
 import {sites} from "./sites";
-import {Parser} from "./command";
+import * as Command from "./command";
 import {Completer} from "./completer";
 
-const parser = Parser(sites, "g");
+const parseCommand = Command.parser(sites, "g");
 
 //-------------------------------------------------
 // convenience
@@ -56,7 +56,7 @@ const ACTIONS = {
 
   submit() {
     const text = this.getText();
-    const command = parser.parse(text);
+    const command = parseCommand(text);
     lastText.set(text);
     window.location.href = command.url;
   },
