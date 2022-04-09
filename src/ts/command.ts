@@ -1,10 +1,10 @@
 import {FullSite} from "./sites";
 
-type Command = Readonly<{
-  site: FullSite;
-  query: string;
-  url: string;
-}>;
+type Command = {
+  readonly site: FullSite;
+  readonly query: string;
+  readonly url: string;
+};
 
 export function parser(sites: FullSite[], defaultAlias: string) {
   const LUT = new Map(sites.map((site) => [site.alias, site]));
