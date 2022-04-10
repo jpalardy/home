@@ -2,7 +2,7 @@
 
 import {sites} from "./sites";
 import * as Command from "./command";
-import {Completer} from "./completer";
+import * as Completer from "./completer";
 
 const parseCommand = Command.parser(sites, "g");
 
@@ -109,8 +109,7 @@ const ACTIONS = {
   });
 
   //-------------------------------------------------
-  // some state
-  const completer = new Completer(sites.map((site) => site.alias).sort());
+  const aliases = sites.map((site) => site.alias).sort();
   //-------------------------------------------------
 
   ELEMENTS.form.addEventListener("submit", (ev) => {
@@ -118,29 +117,35 @@ const ACTIONS = {
     ACTIONS.submit();
   });
 
-  let iter: null | Generator<string, never, unknown>;
+  let completions: null | Completer.Completions;
   let right = "";
   ELEMENTS.form.addEventListener("keydown", (ev: KeyboardEvent) => {
     if (ev.key === "Escape") {
       ACTIONS.setCommand(""); // clear
-      iter = null;
+      completions = null;
       return;
     }
     if (ev.key !== "Tab") {
-      iter = null;
+      completions = null;
       return;
     }
     // Tab
     ev.preventDefault();
-    if (iter) {
-      ACTIONS.setCommand(iter.next().value, right);
+    if (completions) {
+      let value: string;
+      [value, completions] = Completer.cycle(completions)
+      ACTIONS.setCommand(value, right);
       return;
     }
     const currentText = ACTIONS.getText();
     const curPos = (ev.target as HTMLInputElement).selectionStart || 0;
     const left = currentText.slice(0, curPos);
     right = currentText.slice(curPos);
-    iter = completer.matches(left, {skipSameFirst: true});
-    ACTIONS.setCommand(iter.next().value, right);
+    completions = Completer.init(aliases, left);
+    {
+      let value: string;
+      [value, completions] = Completer.cycle(completions)
+      ACTIONS.setCommand(value, right);
+    }
   }, false);
 }

@@ -2,10 +2,47 @@
 /* eslint @typescript-eslint/no-var-requires: off */
 
 const assert = require("assert");
-const {Completer} = require("../dist/completer");
+const Completer = require("../dist/completer");
 
 describe("Completer", () => {
-  describe("class", () => {
+  describe("init", () => {
+    function assertWords(completions, words) {
+      const completionWords = [completions.first].concat(completions.rest);
+      assert.deepEqual(completionWords, words);
+    }
+
+    it("returns matches and commonPrefix", () => {
+      assertWords(Completer.init(["amazon", "ambulance", "amish"], "am"), ["amazon", "ambulance", "amish", "am"]);
+      assertWords(Completer.init(["amazon", "ambulance", "amish"], "a"), ["amazon", "ambulance", "amish", "am"]);
+      assertWords(Completer.init(["antidote", "antigravity", "spaceship"], "a"), ["antidote", "antigravity", "anti"]);
+    });
+
+    it("returns itself if no matches", () => {
+      assertWords(Completer.init(["dog", "cat", "cow"], "a"), ["a"]);
+      assertWords(Completer.init(["dog", "cat", "cow"], "anti"), ["anti"]);
+    });
+
+    it("does not return extra commonPrefix if in matches", () => {
+      assertWords(Completer.init(["catalog", "cat", "cathode"], "cat"), ["catalog", "cat", "cathode"]);
+      assertWords(Completer.init(["cat"], "cat"), ["cat"]);
+    });
+
+    it("returns everything on blank", () => {
+      assertWords(Completer.init(["amazon", "ambulance", "amish"], ""), ["amazon", "ambulance", "amish", "am"]);
+      assertWords(Completer.init(["a", "b", "c"], ""), ["a", "b", "c", ""]);
+    });
+
+    it("returns full-and-only match", () => {
+      assertWords(Completer.init(["amazon", "helicopter", "amish"], "h"), ["helicopter"]);
+      assertWords(Completer.init(["cathode"], "cat"), ["cathode"]);
+    });
+
+    it("returns itself when matching nothing", () => {
+      assertWords(Completer.init(["a", "b", "c"], "x"), ["x"]);
+    });
+  });
+
+  describe("cycle", () => {
     before(function _before() {
       // all aliases as of 2018-02-10
       this.words = `
@@ -19,43 +56,38 @@ describe("Completer", () => {
       `
         .trim()
         .split(/[ \n]+/);
-      this.subject = new Completer(this.words);
     });
 
-    it("contains words as given", function _test() {
-      assert.deepEqual(this.subject.words, this.words);
-    });
+    function assertWords(words, completions) {
+      words.forEach((word) => {
+        let value;
+        [value, completions] = Completer.cycle(completions);
+        assert.strictEqual(value, word);
+      });
+    }
 
     it("cycles through completions", function _test() {
       {
-        const matches = this.subject.matches("c");
-        const words = ["c", "cv", "ch", "caniuse", "cr", "cnm", "c", "cv", "ch"]; // keeps going...
-        words.forEach((word) => assert.strictEqual(matches.next().value, word));
-      }
-      {
-        const matches = this.subject.matches("am");
-        const words = ["am", "am.ca", "am", "am.ca", "am"];
-        words.forEach((word) => assert.strictEqual(matches.next().value, word));
-      }
-    });
-
-    it("cycles through completions, skipSameFirst", function _test() {
-      {
-        const matches = this.subject.matches("c", {skipSameFirst: true});
+        let completions = Completer.init(this.words, "c");
         const words = ["cv", "ch", "caniuse", "cr", "cnm", "c", "cv", "ch"]; // keeps going...
-        words.forEach((word) => assert.strictEqual(matches.next().value, word));
+        assertWords(words, completions);
       }
       {
-        const matches = this.subject.matches("am", {skipSameFirst: true});
-        const words = ["am.ca", "am", "am.ca", "am"];
-        words.forEach((word) => assert.strictEqual(matches.next().value, word));
+        let completions = Completer.init(this.words, "am");
+        const words = ["am", "am.ca", "am", "am.ca", "am"];
+        assertWords(words, completions);
+      }
+      {
+        let completions = Completer.init(["a", "b", "c"], "x");
+        const words = ["x", "x", "x", "x"];
+        assertWords(words, completions);
       }
     });
 
-    it("cycles through completions, skipSameFirst, common prefix", function _test() {
-      const matches = this.subject.matches("ap", {skipSameFirst: true});
-      const words = ["api.", "api.nodejs", "api.express", "api.jq", "api.aws", "api.mdn", "api.", "api.nodejs", "api.express"];
-      words.forEach((word) => assert.strictEqual(matches.next().value, word));
+    it("cycles through completions, common prefix", function _test() {
+      const words = ["api.nodejs", "api.express", "api.jq", "api.aws", "api.mdn", "api.", "api.nodejs", "api.express"];
+      let completions = Completer.init(words, "ap");
+      assertWords(words, completions);
     });
   });
 
@@ -81,38 +113,6 @@ describe("Completer", () => {
       assert.strictEqual(Completer.findCommonPrefix("cat", ["cow", "dog"]), "");
       assert.strictEqual(Completer.findCommonPrefix("cat", ["", "cat"]), "");
       assert.strictEqual(Completer.findCommonPrefix("", ["cow", "dog"]), "");
-    });
-  });
-
-  //-------------------------------------------------
-
-  describe("findCompletions", () => {
-    it("returns commonPrefix and matches", () => {
-      assert.deepEqual(Completer.findCompletions("am", ["amazon", "ambulance", "amish"]), ["am", "amazon", "ambulance", "amish"]);
-      assert.deepEqual(Completer.findCompletions("a", ["amazon", "ambulance", "amish"]), ["am", "amazon", "ambulance", "amish"]);
-      assert.deepEqual(Completer.findCompletions("a", ["antidote", "antigravity", "spaceship"]), ["anti", "antidote", "antigravity"]);
-    });
-
-    it("returns itself if no matches", () => {
-      assert.deepEqual(Completer.findCompletions("a", ["dog", "cat", "cow"]), ["a"]);
-      assert.deepEqual(Completer.findCompletions("anti", ["dog", "cat", "cow"]), ["anti"]);
-    });
-
-    it("does not return duplicates if in matches", () => {
-      assert.deepEqual(Completer.findCompletions("cat", ["catalog", "cat", "cathode"]), ["cat", "catalog", "cathode"]);
-      assert.deepEqual(Completer.findCompletions("cat", ["cat"]), ["cat"]);
-    });
-
-    it("does not return duplicates if same as commonPrefix", () => {
-      assert.deepEqual(Completer.findCompletions("cat", ["cathode"]), ["cathode"]);
-    });
-
-    it("returns everything on blank", () => {
-      assert.deepEqual(Completer.findCompletions("", ["amazon", "ambulance", "amish"]), ["am", "amazon", "ambulance", "amish"]);
-    });
-
-    it("returns full-and-only match", () => {
-      assert.deepEqual(Completer.findCompletions("h", ["amazon", "helicopter", "amish"]), ["helicopter"]);
     });
   });
 });
