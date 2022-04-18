@@ -252,6 +252,11 @@ const sites: SiteConfig[] = [
     search: "https://home.jpalardy.com/sign/?q=%s",
     visit: "https://home.jpalardy.com/sign/",
   },
+  {
+    alias: "reebee",
+    search: "https://www.reebee.com/flyers?q=%s&sort=price",
+    visit: "https://www.reebee.com/flyers",
+  },
 ];
 
 export {sites};
