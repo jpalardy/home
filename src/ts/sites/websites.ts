@@ -91,7 +91,7 @@ const sites: SiteConfig[] = [
   },
   {
     alias: "leanpub",
-    search: "https://leanpub.com/bookstore/type/book/sort/earnings_in_last_7_days?search=%s",
+    search: "https://leanpub.com/bookstore?type=all&search=%s",
   },
   {
     alias: "imdb",
