@@ -5,9 +5,10 @@
   "version": "0.4.0",
   "scripts": {
     "coverage": "nyc --reporter=html --reporter text npm test",
-    "test": "mocha --reporter dot"
+    "test": "mocha -r ts-node/register --reporter dot test/*.ts"
   },
   "devDependencies": {
+    "@types/mocha": "9.1.1",
     "@typescript-eslint/eslint-plugin": "5.23.0",
     "@typescript-eslint/parser": "5.23.0",
     "esbuild": "0.14.39",
@@ -16,6 +17,7 @@
     "eslint-plugin-import": "2.26.0",
     "mocha": "10.0.0",
     "nyc": "15.1.0",
+    "ts-node": "10.7.0",
     "typescript": "4.6.4"
   },
   "private": true
