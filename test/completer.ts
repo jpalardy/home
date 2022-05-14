@@ -3,41 +3,44 @@ import assert = require("assert");
 import Completer = require("../src/ts/completer");
 import {Completions} from "../src/ts/completer";
 
+function assertWords(words: string[], completions: Completions) {
+  words.forEach((word) => {
+    let value: string;
+    [value, completions] = Completer.cycle(completions);
+    assert.strictEqual(value, word);
+  });
+}
+
 describe("Completer", () => {
   describe("init", () => {
-    function assertWords(completions: Completions, words: string[]) {
-      const completionWords = [completions.first].concat(completions.rest);
-      assert.deepEqual(completionWords, words);
-    }
-
     it("returns matches and commonPrefix", () => {
-      assertWords(Completer.init(["amazon", "ambulance", "amish"], "am"), ["amazon", "ambulance", "amish", "am"]);
-      assertWords(Completer.init(["amazon", "ambulance", "amish"], "a"), ["amazon", "ambulance", "amish", "am"]);
-      assertWords(Completer.init(["antidote", "antigravity", "spaceship"], "a"), ["antidote", "antigravity", "anti"]);
+      assertWords(["amazon", "ambulance", "amish", "am"], Completer.init(["amazon", "ambulance", "amish"], "am") );
+      assertWords(["amazon", "ambulance", "amish", "am"], Completer.init(["amazon", "ambulance", "amish"], "a") );
+      assertWords(["antidote", "antigravity", "anti"], Completer.init(["antidote", "antigravity", "spaceship"], "a") );
     });
 
     it("returns itself if no matches", () => {
-      assertWords(Completer.init(["dog", "cat", "cow"], "a"), ["a"]);
-      assertWords(Completer.init(["dog", "cat", "cow"], "anti"), ["anti"]);
+      assertWords(["a"], Completer.init(["dog", "cat", "cow"], "a") );
+      assertWords(["anti"], Completer.init(["dog", "cat", "cow"], "anti") );
     });
 
     it("does not return extra commonPrefix if in matches", () => {
-      assertWords(Completer.init(["catalog", "cat", "cathode"], "cat"), ["catalog", "cat", "cathode"]);
-      assertWords(Completer.init(["cat"], "cat"), ["cat"]);
+      assertWords(["catalog", "cat", "cathode"], Completer.init(["catalog", "cat", "cathode"], "cat") );
+      assertWords(["cat"], Completer.init(["cat"], "cat") );
     });
 
     it("returns everything on blank", () => {
-      assertWords(Completer.init(["amazon", "ambulance", "amish"], ""), ["amazon", "ambulance", "amish", "am"]);
-      assertWords(Completer.init(["a", "b", "c"], ""), ["a", "b", "c", ""]);
+      assertWords(["amazon", "ambulance", "amish", "am"], Completer.init(["amazon", "ambulance", "amish"], "") );
+      assertWords(["a", "b", "c", ""], Completer.init(["a", "b", "c"], "") );
     });
 
     it("returns full-and-only match", () => {
-      assertWords(Completer.init(["amazon", "helicopter", "amish"], "h"), ["helicopter"]);
-      assertWords(Completer.init(["cathode"], "cat"), ["cathode"]);
+      assertWords(["helicopter"], Completer.init(["amazon", "helicopter", "amish"], "h") );
+      assertWords(["cathode"], Completer.init(["cathode"], "cat") );
     });
 
     it("returns itself when matching nothing", () => {
-      assertWords(Completer.init(["a", "b", "c"], "x"), ["x"]);
+      assertWords(["x"], Completer.init(["a", "b", "c"], "x") );
     });
   });
 
@@ -56,14 +59,6 @@ describe("Completer", () => {
         .trim()
         .split(/[ \n]+/);
     });
-
-    function assertWords(words: string[], completions: Completions) {
-      words.forEach((word) => {
-        let value: string;
-        [value, completions] = Completer.cycle(completions);
-        assert.strictEqual(value, word);
-      });
-    }
 
     it("cycles through completions", function _test() {
       {
