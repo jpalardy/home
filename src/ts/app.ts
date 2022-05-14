@@ -145,6 +145,10 @@ const ACTIONS = {
     {
       let value: string;
       [value, completions] = Completer.cycle(completions)
+      // completion matched text, try to cycle once
+      if (value === left) {
+        [value, completions] = Completer.cycle(completions)
+      }
       ACTIONS.setCommand(value, right);
     }
   }, false);
