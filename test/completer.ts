@@ -1,12 +1,11 @@
-/* global require, describe, before, it */
-/* eslint @typescript-eslint/no-var-requires: off */
+import assert = require("assert");
 
-const assert = require("assert");
-const Completer = require("../dist/completer");
+import Completer = require("../src/ts/completer");
+import {Completions} from "../src/ts/completer";
 
 describe("Completer", () => {
   describe("init", () => {
-    function assertWords(completions, words) {
+    function assertWords(completions: Completions, words: string[]) {
       const completionWords = [completions.first].concat(completions.rest);
       assert.deepEqual(completionWords, words);
     }
@@ -58,9 +57,9 @@ describe("Completer", () => {
         .split(/[ \n]+/);
     });
 
-    function assertWords(words, completions) {
+    function assertWords(words: string[], completions: Completions) {
       words.forEach((word) => {
-        let value;
+        let value: string;
         [value, completions] = Completer.cycle(completions);
         assert.strictEqual(value, word);
       });
@@ -68,17 +67,17 @@ describe("Completer", () => {
 
     it("cycles through completions", function _test() {
       {
-        let completions = Completer.init(this.words, "c");
+        const completions = Completer.init(this.words, "c");
         const words = ["cv", "ch", "caniuse", "cr", "cnm", "c", "cv", "ch"]; // keeps going...
         assertWords(words, completions);
       }
       {
-        let completions = Completer.init(this.words, "am");
+        const completions = Completer.init(this.words, "am");
         const words = ["am", "am.ca", "am", "am.ca", "am"];
         assertWords(words, completions);
       }
       {
-        let completions = Completer.init(["a", "b", "c"], "x");
+        const completions = Completer.init(["a", "b", "c"], "x");
         const words = ["x", "x", "x", "x"];
         assertWords(words, completions);
       }
@@ -86,7 +85,7 @@ describe("Completer", () => {
 
     it("cycles through completions, common prefix", function _test() {
       const words = ["api.nodejs", "api.express", "api.jq", "api.aws", "api.mdn", "api.", "api.nodejs", "api.express"];
-      let completions = Completer.init(words, "ap");
+      const completions = Completer.init(words, "ap");
       assertWords(words, completions);
     });
   });

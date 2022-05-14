@@ -10,5 +10,8 @@
     "noUncheckedIndexedAccess": true,
     "strict": true,
     "skipLibCheck": true
-  }
+  },
+  "exclude": [
+    "test/*.ts"
+  ]
 }

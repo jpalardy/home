@@ -31,7 +31,7 @@ coverage:
 	@npm run coverage
 
 .PHONY: test
-test: compile
+test:
 	@npm test
 	@awk '/alias:/' dist/*.js | awk -F'"' '/"/ {print $$2}' | sort | uniq -c | awk '$$1 != 1 { print "*********", $$0; exit 1 }'
 

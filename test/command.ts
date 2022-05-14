@@ -1,12 +1,9 @@
-/* global require, describe, it */
-/* eslint @typescript-eslint/no-var-requires: off */
+import assert = require("assert");
 
-const assert = require("assert");
+import {sites} from "../src/ts/sites";
+import Command = require("../src/ts/command");
 
-const {sites} = require("../dist/sites");
-const Command = require("../dist/command");
-
-const assertURL = function (text, url) {
+const assertURL = function (text: string, url: string) {
   const command = Command.parser(sites, "ddg")(text);
   assert.strictEqual(command.url, url);
 };
