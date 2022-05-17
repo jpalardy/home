@@ -1,15 +1,15 @@
 type FullSite = {
-  alias: string;
-  search: string;
-  visit: string;
+  readonly alias: string;
+  readonly search: string;
+  readonly visit: string;
 };
 type SearchSite = {
-  alias: string;
-  search: string;
+  readonly alias: string;
+  readonly search: string;
 };
 type BookmarkSite = {
-  alias: string;
-  visit: string;
+  readonly alias: string;
+  readonly visit: string;
 };
 
 type SiteConfig = FullSite | SearchSite | BookmarkSite;
