@@ -1,5 +1,3 @@
-/* global window, document, sessionStorage */
-
 import {sites} from "./sites";
 import * as Command from "./command";
 import * as Completer from "./completer";
