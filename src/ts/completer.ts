@@ -1,7 +1,7 @@
 // non-empty list, really
-export interface Completions {
-  first: string;
-  rest: string[];
+export type Completions = {
+  readonly first: string;
+  readonly rest: string[];
 }
 
 export function init(words: string[], prefix: string): Completions {
