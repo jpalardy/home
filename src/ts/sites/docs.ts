@@ -8,7 +8,7 @@ function googleSearch(alias: string, words: string): FullSite {
   };
 }
 
-const sites: SiteConfig[] = [
+export const sites: SiteConfig[] = [
   // -------------------------------------------------
   // misc
   // -------------------------------------------------
@@ -85,5 +85,3 @@ const sites: SiteConfig[] = [
     visit: "https://elm-lang.org/docs",
   },
 ];
-
-export {sites};

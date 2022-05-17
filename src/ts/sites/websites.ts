@@ -1,6 +1,6 @@
 import {SiteConfig} from "./types";
 
-const sites: SiteConfig[] = [
+export const sites: SiteConfig[] = [
   {
     alias: "g",
     search: "https://www.google.com/search?q=%s",
@@ -258,5 +258,3 @@ const sites: SiteConfig[] = [
     visit: "https://www.reebee.com/flyers",
   },
 ];
-
-export {sites};
