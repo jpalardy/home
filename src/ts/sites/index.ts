@@ -4,7 +4,8 @@ import {sites as docs} from "./docs";
 
 function convertToFullSite(site: SiteConfig): FullSite {
   if (!("search" in site)) {
-    return {...site, search: site.visit};
+    const search = site.visit;
+    return {...site, search};
   }
   if (!("visit" in site)) {
     const visit = new URL(site.search).origin;
