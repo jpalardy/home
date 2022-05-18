@@ -1,6 +1,6 @@
 import {sites} from "./sites";
-import * as Command from "./command";
-import * as Completer from "./completer";
+import Command = require("./command");
+import Completer = require("./completer");
 
 const parseCommand = Command.parser(sites, "g");
 
