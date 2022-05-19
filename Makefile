@@ -37,7 +37,7 @@ test:
 
 .PHONY: lint
 lint:
-	npx eslint src/ts/
+	npx eslint src/ts/ test/
 
 .PHONY: clean
 clean:
