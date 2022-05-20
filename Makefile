@@ -29,6 +29,7 @@ subs: public
 .PHONY: coverage
 coverage:
 	@npm run coverage
+	npx type-coverage --detail
 
 .PHONY: test
 test:
