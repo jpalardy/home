@@ -25,10 +25,12 @@ function kanjiSet() {
   return new Set(letters.match(/\S/g));
 }
 
+type HtmlWrapper = (text: string) => string;
+
 (() => {
   const kanjis = kanjiSet();
-  const knownWrap = (text: string): string => `<a class="known" href="https://home.jpalardy.com/heisig/?q=${text}">${text}</a>`;
-  const unknownWrap = (text: string): string => `<span class="unknown">${text}</span>`;
+  const knownWrap: HtmlWrapper = (text) => `<a class="known" href="https://home.jpalardy.com/heisig/?q=${text}">${text}</a>`;
+  const unknownWrap: HtmlWrapper = (text) => `<span class="unknown">${text}</span>`;
 
   const input: HTMLInputElement | null = document.querySelector(".text");
   const output: HTMLDivElement | null = document.querySelector(".output");
