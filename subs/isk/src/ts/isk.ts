@@ -1,4 +1,4 @@
-function kanjiSet() {
+function kanjiSet(): Set<string> {
   const letters = `
     一二三四五六七八九十口日月田目古吾冒朋明唱晶品呂昌早旭世胃旦胆亘凹凸旧自白百中千舌升昇丸寸肘専博占上下卓朝嘲只貝唄貞員貼見児元頁頑凡負万句肌旬勺的首乙乱直具真工左右有賄貢項刀刃切召昭則副別丁町可頂子孔
     了女好如母貫兄呪克小少大多夕汐外名石肖硝砕砂妬削光太器臭嗅妙省厚奇川州順水氷永泉腺原願泳沼沖汎江汰汁沙潮源活消況河泊湖測土吐圧埼垣填圭封涯寺時均火炎煩淡灯畑災灰点照魚漁里黒墨鯉量厘埋同洞胴向尚字守完宣
@@ -40,7 +40,7 @@ type HtmlWrapper = (text: string) => string;
   }
 
   input.addEventListener("keyup", () => {
-    const chars = input.value.match(/./g) || [];
+    const chars = input.value.split("");
     output.innerHTML = chars
       .map((c) => {
         c = c.toLowerCase();
