@@ -25,33 +25,60 @@ function kanjiSet(): Set<string> {
   return new Set(letters.match(/\S/g));
 }
 
-type HtmlWrapper = (text: string) => string;
+type Category = "ascii" | "kanji" | "other";
+
+function splitOn(arr: string[], f: (v: string) => Category): [Category, string][] {
+  const result: [Category, string][] = [];
+  let run: string[] = [];
+  let lastCategory: Category | null = null;
+  arr.forEach((letter) => {
+    const category = f(letter);
+    if (category !== lastCategory && lastCategory !== null) {
+      result.push([lastCategory, run.join("")]);
+      run = [];
+    }
+    run.push(letter);
+    lastCategory = category;
+  });
+  if (lastCategory !== null) {
+    result.push([lastCategory, run.join("")]);
+  }
+  return result;
+}
 
 (() => {
-  const kanjis = kanjiSet();
-  const knownWrap: HtmlWrapper = (text) => `<a class="known" href="https://home.jpalardy.com/heisig/?q=${text}">${text}</a>`;
-  const unknownWrap: HtmlWrapper = (text) => `<span class="unknown">${text}</span>`;
-
   const input: HTMLInputElement | null = document.querySelector(".text");
   const output: HTMLDivElement | null = document.querySelector(".output");
 
   if (!input || !output) {
-    return;
+    throw new Error("missing input or output element!");
   }
+
+  type HtmlWrapper = (text: string) => string;
+  const wrappers: {[k in Category]: HtmlWrapper} = {
+    ascii: (text) => text,
+    kanji: (text) => {
+      const spacedText = text.split("").join(" ");
+      return `<a class="known" href="https://home.jpalardy.com/heisig/?q=${spacedText}">${text}</a>`;
+    },
+    other: (text) => `<span class="unknown">${text}</span>`,
+  };
+
+  const kanjis = kanjiSet();
+  const categorize = (letter: string): Category => {
+    if (letter.match(/[ -~]/)) {
+      return "ascii";
+    }
+    if (kanjis.has(letter)) {
+      return "kanji";
+    }
+    return "other";
+  };
 
   input.addEventListener("keyup", () => {
     const chars = input.value.split("");
-    output.innerHTML = chars
-      .map((c) => {
-        c = c.toLowerCase();
-        if (c.match(/[ -~]/)) {
-          return c;
-        }
-        if (kanjis.has(c)) {
-          return knownWrap(c);
-        }
-        return unknownWrap(c);
-      })
+    output.innerHTML = splitOn(chars, categorize)
+      .map(([category, text]) => wrappers[category](text))
       .join("");
   });
 })();
