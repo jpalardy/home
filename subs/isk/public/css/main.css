@@ -26,17 +26,17 @@
 
 /*-------------------------------------------------*/
 
-.unknown {
+.other {
   opacity: 0.2;
   color: red;
 }
 
-a.known {
+a.kanji {
   text-decoration: none;
   color: inherit;
 }
 
-a.known:hover {
+a.kanji:hover {
   background-color: #eee;
 }
 

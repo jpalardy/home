@@ -59,9 +59,9 @@ function splitOn(arr: string[], f: (v: string) => Category): [Category, string][
     ascii: (text) => text,
     kanji: (text) => {
       const spacedText = text.split("").join(" ");
-      return `<a class="known" href="https://home.jpalardy.com/heisig/?q=${spacedText}">${text}</a>`;
+      return `<a class="kanji" href="https://home.jpalardy.com/heisig/?q=${spacedText}">${text}</a>`;
     },
-    other: (text) => `<span class="unknown">${text}</span>`,
+    other: (text) => `<span class="other">${text}</span>`,
   };
 
   const kanjis = kanjiSet();
