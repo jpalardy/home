@@ -28,21 +28,23 @@ function kanjiSet(): Set<string> {
 type Category = "ascii" | "kanji" | "other";
 
 function splitOn(arr: string[], f: (v: string) => Category): [Category, string][] {
+  const [first] = arr;
+  if (first === undefined) {
+    return [];
+  }
   const result: [Category, string][] = [];
   let run: string[] = [];
-  let lastCategory: Category | null = null;
+  let lastCategory = f(first);
   arr.forEach((letter) => {
     const category = f(letter);
-    if (category !== lastCategory && lastCategory !== null) {
+    if (category !== lastCategory) {
       result.push([lastCategory, run.join("")]);
       run = [];
     }
     run.push(letter);
     lastCategory = category;
   });
-  if (lastCategory !== null) {
-    result.push([lastCategory, run.join("")]);
-  }
+  result.push([lastCategory, run.join("")]);
   return result;
 }
 
