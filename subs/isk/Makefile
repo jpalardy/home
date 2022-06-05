@@ -7,6 +7,10 @@ build: compile
 compile:
 	npx tsc
 
+.PHONY: watch
+watch:
+	npx tsc --watch
+
 .PHONY: clean
 clean:
 	rm -rf dist/
