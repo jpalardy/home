@@ -257,4 +257,8 @@ export const sites: SiteConfig[] = [
     search: "https://www.reebee.com/flyers?q=%s&sort=price",
     visit: "https://www.reebee.com/flyers",
   },
+  {
+    alias: "ct",
+    search: "https://www.canadiantire.ca/en/search-results.html?q=%s",
+  },
 ];
