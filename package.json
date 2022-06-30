@@ -11,7 +11,7 @@
     "@types/mocha": "9.1.1",
     "@typescript-eslint/eslint-plugin": "5.30.0",
     "@typescript-eslint/parser": "5.30.0",
-    "esbuild": "0.14.47",
+    "esbuild": "0.14.48",
     "eslint": "8.18.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-import": "2.26.0",
