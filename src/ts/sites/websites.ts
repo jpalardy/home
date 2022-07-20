@@ -6,6 +6,10 @@ export const sites: SiteConfig[] = [
     search: "https://www.google.com/search?q=%s",
   },
   {
+    alias: "gn",
+    search: "https://news.google.com/search?q=%s",
+  },
+  {
     alias: "gt",
     search: "https://translate.google.com/#auto|en|%s",
   },
