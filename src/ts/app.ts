@@ -1,4 +1,4 @@
-import {FullSite, sites} from "./sites";
+import * as Sites from "./sites";
 import Command = require("./command");
 import Completer = require("./completer");
 
@@ -6,7 +6,7 @@ import Completer = require("./completer");
 // combine sites
 //-------------------------------------------------
 
-function getLocalSites(): FullSite[] {
+function getLocalSites(): Sites.FullSite[] {
   if (!("localStorage" in window)) {
     return [];
   }
@@ -19,13 +19,10 @@ function getLocalSites(): FullSite[] {
   if (!Array.isArray(parsedJSON)) {
     return [];
   }
-  const assertFullSite = function (obj: unknown): obj is FullSite {
-    return typeof obj === "object" && obj !== null && ["alias", "search", "visit"].every((key) => key in obj);
-  };
-  return parsedJSON.filter(assertFullSite);
+  return parsedJSON.filter(Sites.assertSiteConfig).map(Sites.convertToFullSite);
 }
 
-const combinedSites = sites.concat(getLocalSites());
+const combinedSites = Sites.sites.concat(getLocalSites());
 const parseCommand = Command.parser(combinedSites, "g");
 
 //-------------------------------------------------
