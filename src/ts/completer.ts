@@ -2,7 +2,7 @@
 export type Completions = {
   readonly first: string;
   readonly rest: string[];
-}
+};
 
 export function init(words: string[], prefix: string): Completions {
   const matches = words.filter((word) => word.startsWith(prefix));

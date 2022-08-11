@@ -14,33 +14,33 @@ function assertWords(words: string[], completions: Completions) {
 describe("Completer", () => {
   describe("init", () => {
     it("returns matches and commonPrefix", () => {
-      assertWords(["amazon", "ambulance", "amish", "am"], Completer.init(["amazon", "ambulance", "amish"], "am") );
-      assertWords(["amazon", "ambulance", "amish", "am"], Completer.init(["amazon", "ambulance", "amish"], "a") );
-      assertWords(["antidote", "antigravity", "anti"], Completer.init(["antidote", "antigravity", "spaceship"], "a") );
+      assertWords(["amazon", "ambulance", "amish", "am"], Completer.init(["amazon", "ambulance", "amish"], "am"));
+      assertWords(["amazon", "ambulance", "amish", "am"], Completer.init(["amazon", "ambulance", "amish"], "a"));
+      assertWords(["antidote", "antigravity", "anti"], Completer.init(["antidote", "antigravity", "spaceship"], "a"));
     });
 
     it("returns itself if no matches", () => {
-      assertWords(["a"], Completer.init(["dog", "cat", "cow"], "a") );
-      assertWords(["anti"], Completer.init(["dog", "cat", "cow"], "anti") );
+      assertWords(["a"], Completer.init(["dog", "cat", "cow"], "a"));
+      assertWords(["anti"], Completer.init(["dog", "cat", "cow"], "anti"));
     });
 
     it("does not return extra commonPrefix if in matches", () => {
-      assertWords(["catalog", "cat", "cathode"], Completer.init(["catalog", "cat", "cathode"], "cat") );
-      assertWords(["cat"], Completer.init(["cat"], "cat") );
+      assertWords(["catalog", "cat", "cathode"], Completer.init(["catalog", "cat", "cathode"], "cat"));
+      assertWords(["cat"], Completer.init(["cat"], "cat"));
     });
 
     it("returns everything on blank", () => {
-      assertWords(["amazon", "ambulance", "amish", "am"], Completer.init(["amazon", "ambulance", "amish"], "") );
-      assertWords(["a", "b", "c", ""], Completer.init(["a", "b", "c"], "") );
+      assertWords(["amazon", "ambulance", "amish", "am"], Completer.init(["amazon", "ambulance", "amish"], ""));
+      assertWords(["a", "b", "c", ""], Completer.init(["a", "b", "c"], ""));
     });
 
     it("returns full-and-only match", () => {
-      assertWords(["helicopter"], Completer.init(["amazon", "helicopter", "amish"], "h") );
-      assertWords(["cathode"], Completer.init(["cathode"], "cat") );
+      assertWords(["helicopter"], Completer.init(["amazon", "helicopter", "amish"], "h"));
+      assertWords(["cathode"], Completer.init(["cathode"], "cat"));
     });
 
     it("returns itself when matching nothing", () => {
-      assertWords(["x"], Completer.init(["a", "b", "c"], "x") );
+      assertWords(["x"], Completer.init(["a", "b", "c"], "x"));
     });
   });
 

@@ -117,37 +117,41 @@ const ACTIONS = {
 
   let completions: null | Completer.Completions;
   let right = "";
-  ELEMENTS.form.addEventListener("keydown", (ev: KeyboardEvent) => {
-    if (ev.key === "Escape") {
-      ACTIONS.setCommand(""); // clear
-      completions = null;
-      return;
-    }
-    if (ev.key !== "Tab") {
-      completions = null;
-      return;
-    }
-    // Tab
-    ev.preventDefault();
-    if (completions) {
-      let value: string;
-      [value, completions] = Completer.cycle(completions)
-      ACTIONS.setCommand(value, right);
-      return;
-    }
-    const currentText = ACTIONS.getText();
-    const curPos = (ev.target as HTMLInputElement).selectionStart || 0;
-    const left = currentText.slice(0, curPos);
-    right = currentText.slice(curPos);
-    completions = Completer.init(aliases, left);
-    {
-      let value: string;
-      [value, completions] = Completer.cycle(completions)
-      // completion matched text, try to cycle once
-      if (value === left) {
-        [value, completions] = Completer.cycle(completions)
+  ELEMENTS.form.addEventListener(
+    "keydown",
+    (ev: KeyboardEvent) => {
+      if (ev.key === "Escape") {
+        ACTIONS.setCommand(""); // clear
+        completions = null;
+        return;
       }
-      ACTIONS.setCommand(value, right);
-    }
-  }, false);
+      if (ev.key !== "Tab") {
+        completions = null;
+        return;
+      }
+      // Tab
+      ev.preventDefault();
+      if (completions) {
+        let value: string;
+        [value, completions] = Completer.cycle(completions);
+        ACTIONS.setCommand(value, right);
+        return;
+      }
+      const currentText = ACTIONS.getText();
+      const curPos = (ev.target as HTMLInputElement).selectionStart || 0;
+      const left = currentText.slice(0, curPos);
+      right = currentText.slice(curPos);
+      completions = Completer.init(aliases, left);
+      {
+        let value: string;
+        [value, completions] = Completer.cycle(completions);
+        // completion matched text, try to cycle once
+        if (value === left) {
+          [value, completions] = Completer.cycle(completions);
+        }
+        ACTIONS.setCommand(value, right);
+      }
+    },
+    false
+  );
 }

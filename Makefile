@@ -39,6 +39,7 @@ test:
 .PHONY: lint
 lint:
 	npx eslint src/ts/ test/
+	npx prettier src/ts/ test/ --check
 
 .PHONY: clean
 clean:
