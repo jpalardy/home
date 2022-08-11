@@ -31,6 +31,9 @@ coverage:
 	@npm run coverage
 	npx type-coverage --detail
 
+.PHONY: sane
+sane: coverage lint
+
 .PHONY: test
 test:
 	@npm test
