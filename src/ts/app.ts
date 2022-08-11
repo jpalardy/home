@@ -1,8 +1,32 @@
-import {sites} from "./sites";
+import {FullSite, sites} from "./sites";
 import Command = require("./command");
 import Completer = require("./completer");
 
-const parseCommand = Command.parser(sites, "g");
+//-------------------------------------------------
+// combine sites
+//-------------------------------------------------
+
+function getLocalSites(): FullSite[] {
+  if (!("localStorage" in window)) {
+    return [];
+  }
+  let parsedJSON: unknown[] = [];
+  try {
+    parsedJSON = JSON.parse(localStorage.getItem("localSites") || "[]");
+  } catch (err) {
+    console.error(err);
+  }
+  if (!Array.isArray(parsedJSON)) {
+    return [];
+  }
+  const assertFullSite = function (obj: unknown): obj is FullSite {
+    return typeof obj === "object" && obj !== null && ["alias", "search", "visit"].every((key) => key in obj);
+  };
+  return parsedJSON.filter(assertFullSite);
+}
+
+const combinedSites = sites.concat(getLocalSites());
+const parseCommand = Command.parser(combinedSites, "g");
 
 //-------------------------------------------------
 // convenience
@@ -107,7 +131,7 @@ const ACTIONS = {
   });
 
   //-------------------------------------------------
-  const aliases = sites.map((site) => site.alias).sort();
+  const aliases = combinedSites.map((site) => site.alias).sort();
   //-------------------------------------------------
 
   ELEMENTS.form.addEventListener("submit", (ev) => {
