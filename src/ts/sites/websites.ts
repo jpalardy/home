@@ -265,4 +265,9 @@ export const sites: SiteConfig[] = [
     alias: "ct",
     search: "https://www.canadiantire.ca/en/search-results.html?q=%s",
   },
+  {
+    alias: "te",
+    search: "https://tradingeconomics.com/search.aspx?q=%s",
+    visit: "https://tradingeconomics.com/stream",
+  },
 ];
