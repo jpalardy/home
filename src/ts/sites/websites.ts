@@ -270,4 +270,8 @@ export const sites: SiteConfig[] = [
     search: "https://tradingeconomics.com/search.aspx?q=%s",
     visit: "https://tradingeconomics.com/stream",
   },
+  {
+    alias: "brew",
+    search: "https://formulae.brew.sh/formula/%s#default",
+  },
 ];
