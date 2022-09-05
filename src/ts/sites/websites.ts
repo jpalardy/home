@@ -160,6 +160,15 @@ export const sites: SiteConfig[] = [
     visit: "https://home.jpalardy.com/heisig/",
   },
   {
+    alias: "sign",
+    search: "https://home.jpalardy.com/sign/?q=%s",
+    visit: "https://home.jpalardy.com/sign/",
+  },
+  {
+    alias: "aliases",
+    visit: "https://home.jpalardy.com/aliases.txt",
+  },
+  {
     alias: "bookmarklets",
     visit: "https://blog.jpalardy.com/bookmarklets/",
   },
@@ -250,11 +259,6 @@ export const sites: SiteConfig[] = [
   {
     alias: "hs",
     visit: "https://www.handspeak.com/word/search/",
-  },
-  {
-    alias: "sign",
-    search: "https://home.jpalardy.com/sign/?q=%s",
-    visit: "https://home.jpalardy.com/sign/",
   },
   {
     alias: "reebee",

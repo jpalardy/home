@@ -1,5 +1,5 @@
 
-all: public/index.html subs
+all: public/index.html public/aliases.txt subs
 
 public:
 	mkdir public
@@ -18,6 +18,9 @@ public/index.html: CHECKSUM = $(shell sha1sum $< | cut -c 1-7)
 public/index.html: public/app.js
 	ln -s app.js public/app.$(CHECKSUM).js
 	m4 -D __VERSION__="$(COMMIT_SHA) @ $(TODAY)" -D __APPJS__=app.$(CHECKSUM).js src/html/index.html > $@
+
+public/aliases.txt: public/app.js
+	make list > $@
 
 .PHONY: subs
 subs: public
