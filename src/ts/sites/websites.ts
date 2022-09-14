@@ -278,4 +278,8 @@ export const sites: SiteConfig[] = [
     alias: "brew",
     search: "https://formulae.brew.sh/formula/%s#default",
   },
+  {
+    alias: "ft",
+    visit: "https://docs.google.com/spreadsheets/d/1ZPq4vhuQs7RagN12AX4JBRUBf8kJMHzfcxQmGazHlVM/edit#gid=0",
+  },
 ];
