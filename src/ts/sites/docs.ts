@@ -66,6 +66,10 @@ export const sites: SiteConfig[] = [
     visit: "https://hexdocs.pm/elixir/",
   },
   {
+    alias: "@spec",
+    visit: "https://hexdocs.pm/elixir/typespecs.html",
+  },
+  {
     alias: "ef",
     search: "https://elixirforum.com/search?q=%s",
   },
