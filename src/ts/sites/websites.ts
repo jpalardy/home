@@ -32,6 +32,10 @@ export const sites: SiteConfig[] = [
     search: "https://play.google.com/store/search?q=%s&c=movies&hl=en",
   },
   {
+    alias: "gd",
+    search: "https://drive.google.com/drive/search?q=%s",
+  },
+  {
     alias: "tw",
     search: "https://twitter.com/search?q=%s",
   },
