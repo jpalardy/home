@@ -286,4 +286,8 @@ export const sites: SiteConfig[] = [
     alias: "ft",
     visit: "https://docs.google.com/spreadsheets/d/1ZPq4vhuQs7RagN12AX4JBRUBf8kJMHzfcxQmGazHlVM/edit#gid=0",
   },
+  {
+    alias: "steam",
+    visit: "https://store.steampowered.com/search/?term=%s",
+  },
 ];
