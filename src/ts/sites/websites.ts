@@ -288,6 +288,6 @@ export const sites: SiteConfig[] = [
   },
   {
     alias: "steam",
-    visit: "https://store.steampowered.com/search/?term=%s",
+    search: "https://store.steampowered.com/search/?term=%s",
   },
 ];
