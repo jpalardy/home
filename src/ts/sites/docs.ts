@@ -29,7 +29,6 @@ export const sites: SiteConfig[] = [
     alias: "pg",
     search: "https://www.postgresql.org/search/?q=%s",
   },
-  googleSearch("pg", "postgresql"),
   // -------------------------------------------------
   // css
   // -------------------------------------------------
@@ -64,10 +63,6 @@ export const sites: SiteConfig[] = [
     alias: "exm",
     search: "https://hexdocs.pm/elixir/%s.html#summary",
     visit: "https://hexdocs.pm/elixir/",
-  },
-  {
-    alias: "@spec",
-    visit: "https://hexdocs.pm/elixir/typespecs.html",
   },
   {
     alias: "ef",
