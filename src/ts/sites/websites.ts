@@ -240,10 +240,6 @@ export const sites: SiteConfig[] = [
     search: "https://finance.yahoo.com/chart/%s",
   },
   {
-    alias: "newegg",
-    search: "https://www.newegg.ca/p/pl?d=%s",
-  },
-  {
     alias: "dw",
     search: "https://distrowatch.com/table.php?distribution=%s",
   },
@@ -281,10 +277,6 @@ export const sites: SiteConfig[] = [
   {
     alias: "brew",
     search: "https://formulae.brew.sh/formula/%s#default",
-  },
-  {
-    alias: "ft",
-    visit: "https://docs.google.com/spreadsheets/d/1ZPq4vhuQs7RagN12AX4JBRUBf8kJMHzfcxQmGazHlVM/edit#gid=0",
   },
   {
     alias: "steam",
