@@ -28,20 +28,12 @@ export const sites: SiteConfig[] = [
     visit: "https://www.google.com/finance",
   },
   {
-    alias: "gplay",
-    search: "https://play.google.com/store/search?q=%s&c=movies&hl=en",
-  },
-  {
     alias: "gd",
     search: "https://drive.google.com/drive/search?q=%s",
   },
   {
     alias: "tw",
     search: "https://twitter.com/search?q=%s",
-  },
-  {
-    alias: "yt",
-    search: "https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search",
   },
   {
     alias: "yts",
@@ -84,34 +76,8 @@ export const sites: SiteConfig[] = [
     search: "https://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s",
   },
   {
-    alias: "audible",
-    search: "https://www.audible.com/search?advsearchKeywords=%s",
-  },
-  {
-    alias: "vpl",
-    search: "https://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue",
-    visit: "https://www.vpl.ca/",
-  },
-  {
-    alias: "bp",
-    search: "https://bookpiles.ca/jonathan/books?q=%s",
-    visit: "https://bookpiles.ca/jonathan/books",
-  },
-  {
-    alias: "leanpub",
-    search: "https://leanpub.com/bookstore?type=all&search=%s",
-  },
-  {
-    alias: "imdb",
-    search: "https://imdb.com/find?q=%s",
-  },
-  {
     alias: "yelp",
     search: "https://www.yelp.com/search?find_desc=%s",
-  },
-  {
-    alias: "rt",
-    search: "https://www.rottentomatoes.com/search/?search=%s",
   },
   {
     alias: "gh",
@@ -143,22 +109,6 @@ export const sites: SiteConfig[] = [
     search: "https://caniuse.com/#search=%s",
   },
   {
-    alias: "ann",
-    search: "https://www.animenewsnetwork.com/encyclopedia/search.php?searchbox=%s",
-  },
-  {
-    alias: "anidb",
-    search: "https://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist",
-  },
-  {
-    alias: "cr",
-    search: "https://www.crunchyroll.com/search?q=%s",
-  },
-  {
-    alias: "nf",
-    search: "https://www.netflix.com/search/%s",
-  },
-  {
     alias: "heisig",
     search: "https://home.jpalardy.com/heisig/?q=%s",
     visit: "https://home.jpalardy.com/heisig/",
@@ -185,10 +135,6 @@ export const sites: SiteConfig[] = [
     search: "https://www.wordreference.com/es/en/translation.asp?spen=%s",
   },
   {
-    alias: "cnm",
-    visit: "https://www.cinemaclock.com/bri/vancouver",
-  },
-  {
     alias: "fs",
     search: "https://www.fatsecret.com/calories-nutrition/search?q=%s",
     visit: "https://www.fatsecret.com/calories-nutrition/",
@@ -209,11 +155,6 @@ export const sites: SiteConfig[] = [
   {
     alias: "coursera",
     search: "https://www.coursera.org/courses?languages=en&query=%s",
-  },
-  {
-    alias: "jw",
-    visit: "https://www.justwatch.com/ca",
-    search: "https://www.justwatch.com/ca/search?q=%s",
   },
   {
     alias: "wtb",
@@ -242,10 +183,6 @@ export const sites: SiteConfig[] = [
   {
     alias: "dw",
     search: "https://distrowatch.com/table.php?distribution=%s",
-  },
-  {
-    alias: "protondb",
-    search: "https://www.protondb.com/search?q=%s",
   },
   {
     alias: "ac",
@@ -277,9 +214,5 @@ export const sites: SiteConfig[] = [
   {
     alias: "brew",
     search: "https://formulae.brew.sh/formula/%s#default",
-  },
-  {
-    alias: "steam",
-    search: "https://store.steampowered.com/search/?term=%s",
   },
 ];

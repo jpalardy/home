@@ -1,6 +1,7 @@
 import {FullSite, SiteConfig} from "./types";
 import {sites as websites} from "./websites";
 import {sites as docs} from "./docs";
+import {sites as media} from "./media";
 
 function isObject(obj: unknown): obj is Record<string, unknown> {
   return typeof obj === "object" && obj !== null;
@@ -22,6 +23,6 @@ function convertToFullSite(site: SiteConfig): FullSite {
   return site;
 }
 
-const sites = [...websites, ...docs].map(convertToFullSite);
+const sites = [...websites, ...docs, ...media].map(convertToFullSite);
 
 export {sites, assertSiteConfig, convertToFullSite, FullSite};
