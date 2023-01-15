@@ -68,4 +68,8 @@ export const sites: SiteConfig[] = [
     alias: "cnm",
     visit: "https://www.cinemaclock.com/bri/vancouver",
   },
+  {
+    alias: "mc",
+    search: "https://www.metacritic.com/search/all/%s/results",
+  },
 ];
