@@ -215,4 +215,8 @@ export const sites: SiteConfig[] = [
     alias: "brew",
     search: "https://formulae.brew.sh/formula/%s#default",
   },
+  {
+    alias: "brewer",
+    visit: "https://colorbrewer2.org/",
+  },
 ];
