@@ -1,4 +1,6 @@
 
+SUBPROJECTS = subs/heisig/ subs/heisig-v1/ subs/sign/ subs/volume/ subs/isk/
+
 all: public/index.html public/aliases.txt subs
 
 public:
@@ -24,7 +26,7 @@ public/aliases.txt: public/app.js
 
 .PHONY: subs
 subs: public
-	for sub in subs/*/Makefile; do (cd `dirname $$sub`; make -B); done
+	for sub in $(SUBPROJECTS); do (cd $$sub; pwd; make clean && make); done
 	for sub in subs/*; do rsync -q -av --delete $$sub/public/ public/`basename $$sub`/; done
 
 # -------------------------------------------------
