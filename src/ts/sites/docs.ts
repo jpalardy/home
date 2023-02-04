@@ -71,6 +71,14 @@ export const sites: SiteConfig[] = [
   googleSearch("ex", "elixir"),
   googleSearch("erl", "erlang"),
   googleSearch("phx", "elixir+phoenix"),
+  {
+    alias: "ex.inspect.opts",
+    visit: "https://hexdocs.pm/elixir/Inspect.Opts.html",
+  },
+  {
+    alias: "ex.special.forms",
+    visit: "https://hexdocs.pm/elixir/Kernel.SpecialForms.html",
+  },
   // -------------------------------------------------
   // elm
   // -------------------------------------------------
