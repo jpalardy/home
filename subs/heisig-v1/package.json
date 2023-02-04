@@ -1,0 +1,10 @@
+{
+  "name": "heisig-v1",
+  "version": "1.0.0",
+  "description": "webapp to lookup heisig kanjis",
+  "author": "Jonathan Palardy",
+  "license": "MIT",
+  "dependencies": {
+    "elm": "^0.19.1-5"
+  }
+}

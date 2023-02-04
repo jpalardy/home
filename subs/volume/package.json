@@ -1,0 +1,10 @@
+{
+  "name": "volume",
+  "version": "0.4.0",
+  "description": "webapp to visualize my books by pages and volume",
+  "author": "Jonathan Palardy",
+  "license": "MIT",
+  "dependencies": {
+    "elm": "^0.19.1-5"
+  }
+}

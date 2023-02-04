@@ -1,0 +1,10 @@
+{
+  "name": "sign",
+  "version": "0.2.0",
+  "description": "a lookup webapp for ASL signs",
+  "author": "Jonathan Palardy",
+  "license": "MIT",
+  "dependencies": {
+    "elm": "^0.19.1-5"
+  }
+}
