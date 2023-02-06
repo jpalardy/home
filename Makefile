@@ -1,10 +1,25 @@
 
-SUBPROJECTS = subs/heisig/ subs/heisig-v1/ subs/sign/ subs/volume/ subs/isk/
+SUBS_MAKEFILE := $(shell ls subs/*/Makefile)
+SUBS_BUILD := $(SUBS_MAKEFILE:Makefile=_build)
+SUBS_CLEAN := $(SUBS_MAKEFILE:Makefile=_clean)
 
-.PHONY: subs
-subs: public
-	for sub in $(SUBPROJECTS); do (cd $$sub; pwd; make clean && make); done
+%/_build:
+	make -C $(dir $@)
+
+%/_clean:
+	make -C $(dir $@) clean
+
+.PHONY: all
+all: build copy
+
+.PHONY: build
+build: $(SUBS_BUILD)
+
+.PHONY: copy
+copy: public
 	for sub in subs/*; do rsync -q -av --delete $$sub/public/ public/`basename $$sub`/; done
+	mv public/home/* public/
+	rmdir public/home
 
 public:
 	mkdir public
@@ -12,11 +27,8 @@ public:
 #-------------------------------------------------
 
 .PHONY: clean
-clean:
+clean: $(SUBS_CLEAN)
 	rm -rf public
-	rm -f deploy.retry
-	rm -rf coverage/ .nyc_output/
-	rm -rf dist
 
 #-------------------------------------------------
 
