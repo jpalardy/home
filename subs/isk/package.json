@@ -1,0 +1,10 @@
+{
+  "name": "isk",
+  "version": "0.2.0",
+  "description": "highlights non-jouyou kanjis",
+  "devDependencies": {
+    "typescript": "4.9.5"
+  },
+  "author": "Jonathan Palardy",
+  "license": "MIT"
+}
