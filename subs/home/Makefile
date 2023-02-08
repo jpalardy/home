@@ -9,11 +9,11 @@ node_modules:
 
 .PHONY: compile
 compile: node_modules
-	npx tsc
+	node_modules/.bin/tsc
 
 public/app.js: public compile
 	rm -rf public/app.*.js
-	npx esbuild --bundle --minify dist/app.js --outfile=$@
+	node_modules/.bin/esbuild --bundle --minify dist/app.js --outfile=$@
 
 public/index.html: COMMIT_SHA = $(shell git rev-parse --short HEAD)
 public/index.html: TODAY = $(shell date +%F)
@@ -37,7 +37,7 @@ sane: coverage lint
 .PHONY: coverage
 coverage: node_modules
 	@npm run coverage
-	npx type-coverage --detail
+	node_modules/.bin/type-coverage --detail
 
 .PHONY: test
 test: node_modules
@@ -46,8 +46,8 @@ test: node_modules
 
 .PHONY: lint
 lint: node_modules
-	npx eslint src/ts/ test/
-	npx prettier src/ts/ test/ --check
+	node_modules/.bin/eslint src/ts/ test/
+	node_modules/.bin/prettier src/ts/ test/ --check
 
 # -------------------------------------------------
 

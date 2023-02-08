@@ -8,11 +8,11 @@ node_modules:
 
 .PHONY: compile
 compile: node_modules
-	npx tsc
+	node_modules/.bin/tsc
 
 .PHONY: watch
 watch:
-	npx tsc --watch
+	node_modules/.bin/tsc --watch
 
 # -------------------------------------------------
 
