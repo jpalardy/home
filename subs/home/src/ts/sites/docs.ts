@@ -79,6 +79,10 @@ export const sites: SiteConfig[] = [
     alias: "ex.special.forms",
     visit: "https://hexdocs.pm/elixir/Kernel.SpecialForms.html",
   },
+  {
+    alias: "ex.mix.test",
+    visit: "https://hexdocs.pm/mix/Mix.Tasks.Test.html",
+  },
   // -------------------------------------------------
   // elm
   // -------------------------------------------------
