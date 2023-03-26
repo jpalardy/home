@@ -83,6 +83,10 @@ export const sites: SiteConfig[] = [
     alias: "ex.mix.test",
     visit: "https://hexdocs.pm/mix/Mix.Tasks.Test.html",
   },
+  {
+    alias: "ex.typespecs",
+    visit: "https://hexdocs.pm/elixir/typespecs.html",
+  },
   // -------------------------------------------------
   // elm
   // -------------------------------------------------
