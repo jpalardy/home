@@ -6,7 +6,7 @@
     "@types/mocha": "10.0.1",
     "@typescript-eslint/eslint-plugin": "5.57.0",
     "@typescript-eslint/parser": "5.57.0",
-    "esbuild": "0.17.14",
+    "esbuild": "0.17.15",
     "eslint": "8.37.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-import": "2.27.5",
@@ -15,7 +15,7 @@
     "prettier": "^2.8.7",
     "ts-node": "10.9.1",
     "type-coverage": "2.25.0",
-    "typescript": "5.0.2"
+    "typescript": "5.0.3"
   },
   "scripts": {
     "coverage": "nyc --reporter=html --reporter text npm test",
