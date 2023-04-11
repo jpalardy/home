@@ -219,4 +219,8 @@ export const sites: SiteConfig[] = [
     alias: "brewer",
     visit: "https://colorbrewer2.org/",
   },
+  {
+    alias: "chatgpt",
+    visit: "https://chat.openai.com/chat",
+  },
 ];
