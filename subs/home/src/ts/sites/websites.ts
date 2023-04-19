@@ -177,7 +177,7 @@ export const sites: SiteConfig[] = [
     search: "https://finance.yahoo.com/q?s=%s",
   },
   {
-    alias: "chart",
+    alias: "ychart",
     search: "https://finance.yahoo.com/chart/%s",
   },
   {
