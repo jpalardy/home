@@ -146,6 +146,19 @@ const ACTIONS = {
         completions = null;
         return;
       }
+      if (ev.ctrlKey && ev.key === "u") {
+        ACTIONS.setCommand(""); // clear
+        completions = null;
+        return;
+      }
+      if (ev.ctrlKey && ev.key === "w") {
+        const currentText = ACTIONS.getText();
+        // drop the last workd
+        const currentWords = currentText.trimEnd().split(" ");
+        ACTIONS.setCommand(currentWords.slice(0, -1).join(" "));
+        completions = null;
+        return;
+      }
       if (ev.key !== "Tab") {
         completions = null;
         return;
