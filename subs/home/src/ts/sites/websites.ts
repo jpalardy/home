@@ -216,6 +216,10 @@ export const sites: SiteConfig[] = [
     search: "https://formulae.brew.sh/formula/%s#default",
   },
   {
+    alias: "asdf.plugins",
+    visit: "https://github.com/asdf-vm/asdf-plugins#plugin-list",
+  },
+  {
     alias: "brewer",
     visit: "https://colorbrewer2.org/",
   },
