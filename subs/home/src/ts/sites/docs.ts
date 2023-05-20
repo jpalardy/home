@@ -60,7 +60,7 @@ export const sites: SiteConfig[] = [
     search: "https://hex.pm/packages?search=%s",
   },
   {
-    alias: "hexd",
+    alias: "hd",
     search: "https://hexdocs.pm/elixir/search.html?q=%s",
     visit: "https://hexdocs.pm/elixir/",
   },
