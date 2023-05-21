@@ -227,9 +227,4 @@ export const sites: SiteConfig[] = [
     alias: "chatgpt",
     visit: "https://chat.openai.com/chat",
   },
-  {
-    alias: "nebula",
-    search: "https://nebula.tv/search?q=%s",
-    visit: "https://nebula.tv/myshows",
-  },
 ];

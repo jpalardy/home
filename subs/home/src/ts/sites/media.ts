@@ -10,6 +10,11 @@ export const sites: SiteConfig[] = [
     search: "https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search",
   },
   {
+    alias: "nebula",
+    search: "https://nebula.tv/search?q=%s",
+    visit: "https://nebula.tv/myshows",
+  },
+  {
     alias: "audible",
     search: "https://www.audible.com/search?advsearchKeywords=%s",
   },
