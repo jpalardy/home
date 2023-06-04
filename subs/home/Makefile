@@ -32,7 +32,7 @@ public/aliases.txt: public/app.js
 # -------------------------------------------------
 
 .PHONY: sane
-sane: coverage lint
+sane: compile coverage lint
 
 .PHONY: coverage
 coverage: node_modules
