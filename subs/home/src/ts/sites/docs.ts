@@ -29,6 +29,10 @@ export const sites: SiteConfig[] = [
     alias: "pg",
     search: "https://www.postgresql.org/search/?q=%s",
   },
+  {
+    alias: "vim.ale",
+    visit: "https://github.com/dense-analysis/ale/blob/master/supported-tools.md",
+  },
   // -------------------------------------------------
   // css
   // -------------------------------------------------
