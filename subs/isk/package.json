@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "highlights non-jouyou kanjis",
   "devDependencies": {
-    "typescript": "5.1.5"
+    "typescript": "5.1.6"
   },
   "author": "Jonathan Palardy",
   "license": "MIT"

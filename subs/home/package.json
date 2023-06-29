@@ -15,7 +15,7 @@
     "prettier": "^2.8.8",
     "ts-node": "10.9.1",
     "type-coverage": "2.26.0",
-    "typescript": "5.1.5"
+    "typescript": "5.1.6"
   },
   "scripts": {
     "coverage": "nyc --reporter=html --reporter text npm test",
