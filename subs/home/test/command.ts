@@ -44,6 +44,36 @@ describe("Command", () => {
     });
   });
 
+  describe("parse ytl mod", () => {
+    it("handles full shorts URLs", () => {
+      const equivalentQueries = [
+        "https://www.youtube.com/shorts/di-4koYimic",
+        "https://www.youtube.com/shorts/di-4koYimic?some=thing",
+        "https://www.youtube.com/shorts/di-4koYimic?some=thing#t=0m10s",
+        "https://youtube.com/shorts/di-4koYimic",
+        "https://youtu.be/shorts/di-4koYimic",
+        "https://m.youtube.com/shorts/di-4koYimic",
+        "https://m.youtube.com/shorts/di-4koYimic?some=thing#t=0m10s",
+      ];
+      equivalentQueries.forEach((q) => {
+        assertURL(`ytl ${q}`, "https://www.youtube.com/watch?v=di-4koYimic");
+      });
+    });
+
+    it("passes through bad shorts URLs", () => {
+      assertURL(
+        "ytl https://www.youtube.com/whatever/di-4koYimic",
+        "https://www.youtube.com/watch?v=https%3A%2F%2Fwww.youtube.com%2Fwhatever%2Fdi-4koYimic"
+      );
+      assertURL("ytl muffin", "https://www.youtube.com/watch?v=muffin");
+    });
+
+    it("visits on whitespace", () => {
+      assertURL("ytl", "https://www.youtube.com");
+      assertURL("ytl   ", "https://www.youtube.com");
+    });
+  });
+
   describe("parse (legacy)", () => {
     it("does not handle site as a query", () => {
       assertURL("gim yim", "https://www.google.com/search?q=yim&tbm=isch");

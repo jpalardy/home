@@ -10,6 +10,17 @@ export const sites: SiteConfig[] = [
     search: "https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search",
   },
   {
+    alias: "ytl",
+    search: "https://www.youtube.com/watch?v=%s",
+    mod: (query: string) => {
+      try {
+        return new URL(query).pathname.match("^/shorts/(.*)$")?.[1] || query;
+      } catch {
+        return query;
+      }
+    },
+  },
+  {
     alias: "nebula",
     search: "https://nebula.tv/search?q=%s",
     visit: "https://nebula.tv/myshows",
