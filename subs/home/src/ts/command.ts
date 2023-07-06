@@ -22,7 +22,8 @@ export function parser(sites: FullSite[], defaultAlias: string) {
     if (!site) {
       return parse(`${defaultAlias} ${text}`);
     }
-    const query = rest.join(" ");
+    const mod = site.mod || ((str) => str);
+    const query = mod(rest.join(" "));
     // empty query means 'visit', otherwise 'search'
     if (!query) {
       return {site, query, url: site.visit};
