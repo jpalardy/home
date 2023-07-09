@@ -63,7 +63,7 @@ describe("Command", () => {
     it("passes through bad shorts URLs", () => {
       assertURL(
         "ytl https://www.youtube.com/whatever/di-4koYimic",
-        "https://www.youtube.com/watch?v=https%3A%2F%2Fwww.youtube.com%2Fwhatever%2Fdi-4koYimic"
+        "https://www.youtube.com/watch?v=https%3A%2F%2Fwww.youtube.com%2Fwhatever%2Fdi-4koYimic",
       );
       assertURL("ytl muffin", "https://www.youtube.com/watch?v=muffin");
     });

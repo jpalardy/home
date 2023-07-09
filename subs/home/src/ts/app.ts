@@ -186,6 +186,6 @@ const ACTIONS = {
         ACTIONS.setCommand(value, right);
       }
     },
-    false
+    false,
   );
 }
