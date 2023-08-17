@@ -88,4 +88,8 @@ export const sites: SiteConfig[] = [
     alias: "mc",
     search: "https://www.metacritic.com/search/all/%s/results",
   },
+  {
+    alias: "courteau",
+    visit: "https://ici.radio-canada.ca/ohdio/musique/emissions/6003/tellementcourteau",
+  },
 ];
