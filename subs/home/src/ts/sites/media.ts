@@ -92,4 +92,8 @@ export const sites: SiteConfig[] = [
     alias: "courteau",
     visit: "https://ici.radio-canada.ca/ohdio/musique/emissions/6003/tellementcourteau",
   },
+  {
+    alias: "abe",
+    search: "https://www.abebooks.com/servlet/SearchResults?kn=%s&pt=book",
+  },
 ];
