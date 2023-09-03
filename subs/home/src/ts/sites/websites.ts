@@ -227,4 +227,8 @@ export const sites: SiteConfig[] = [
     alias: "chatgpt",
     visit: "https://chat.openai.com/chat",
   },
+  {
+    alias: "ak",
+    search: "https://www.animatedknots.com/?s=%s",
+  },
 ];
