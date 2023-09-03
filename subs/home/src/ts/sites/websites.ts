@@ -120,7 +120,7 @@ export const sites: SiteConfig[] = [
   },
   {
     alias: "aliases",
-    visit: "https://home.jpalardy.com/aliases.txt",
+    visit: "/aliases.txt",
   },
   {
     alias: "bookmarklets",
