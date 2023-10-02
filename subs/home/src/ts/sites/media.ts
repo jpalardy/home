@@ -96,4 +96,8 @@ export const sites: SiteConfig[] = [
     alias: "abe",
     search: "https://www.abebooks.com/servlet/SearchResults?kn=%s&pt=book",
   },
+  {
+    alias: "atv",
+    search: "https://tv.apple.com/search?term=%s",
+  },
 ];
