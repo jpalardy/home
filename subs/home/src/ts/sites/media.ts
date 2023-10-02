@@ -97,6 +97,10 @@ export const sites: SiteConfig[] = [
     search: "https://www.abebooks.com/servlet/SearchResults?kn=%s&pt=book",
   },
   {
+    alias: "gr",
+    search: "https://www.goodreads.com/search?utf8=%E2%9C%93&query=%s",
+  },
+  {
     alias: "atv",
     search: "https://tv.apple.com/search?term=%s",
   },
