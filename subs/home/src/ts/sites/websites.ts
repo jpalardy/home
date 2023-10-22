@@ -131,6 +131,10 @@ export const sites: SiteConfig[] = [
     search: "http://www.romajidesu.com/dictionary/meaning-of-%s.html",
   },
   {
+    alias: "jisho",
+    search: "https://jisho.org/search/%s",
+  },
+  {
     alias: "wr",
     search: "https://www.wordreference.com/es/en/translation.asp?spen=%s",
   },
