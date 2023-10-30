@@ -108,26 +108,6 @@ export const sites: SiteConfig[] = [
   // -------------------------------------------------
   {
     alias: "tidy",
-    visit: "https://www.tidyverse.org/",
-  },
-  {
-    alias: "tidy.ggplot2",
-    visit: "https://ggplot2.tidyverse.org/",
-  },
-  {
-    alias: "tidy.dplyr",
-    visit: "https://dplyr.tidyverse.org/",
-  },
-  {
-    alias: "tidy.stringr",
-    visit: "https://stringr.tidyverse.org/",
-  },
-  {
-    alias: "tidy.readr",
-    visit: "https://readr.tidyverse.org/",
-  },
-  {
-    alias: "tidy.lubridate",
-    visit: "https://lubridate.tidyverse.org/",
+    visit: "https://www.tidyverse.org/packages/",
   },
 ];
