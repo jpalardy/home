@@ -5,6 +5,6 @@
   "author": "Jonathan Palardy",
   "license": "MIT",
   "dependencies": {
-    "elm": "^0.19.1-5"
+    "elm": "^0.19.1-6"
   }
 }
