@@ -3,11 +3,12 @@ import {SiteConfig} from "./types";
 export const sites: SiteConfig[] = [
   {
     alias: "gplay",
+    visit: "https://play.google.com/store/movies",
     search: "https://play.google.com/store/search?q=%s&c=movies&hl=en",
   },
   {
     alias: "yt",
-    search: "https://www.youtube.com/results?search_type=search_videos&search_sort=relevance&search_query=%s&search=Search",
+    search: "https://www.youtube.com/results?search_query=%s",
   },
   {
     alias: "ytl",
@@ -23,7 +24,7 @@ export const sites: SiteConfig[] = [
   {
     alias: "nebula",
     search: "https://nebula.tv/search?q=%s",
-    visit: "https://nebula.tv/myshows",
+    visit: "https://nebula.tv/library/latest-videos",
   },
   {
     alias: "audible",
@@ -86,7 +87,7 @@ export const sites: SiteConfig[] = [
   },
   {
     alias: "mc",
-    search: "https://www.metacritic.com/search/all/%s/results",
+    search: "https://www.metacritic.com/search/%s/",
   },
   {
     alias: "courteau",
