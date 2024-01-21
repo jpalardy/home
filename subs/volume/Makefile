@@ -3,7 +3,7 @@ TARGET = public/js/volume.js
 ELM_FILES = $(wildcard src/*.elm)
 
 $(TARGET): node_modules $(ELM_FILES)
-	node_modules/.bin/elm make $(OPTIMIZE) src/Volume.elm --output $@
+	npm exec -- elm make $(OPTIMIZE) src/Volume.elm --output $@
 
 node_modules:
 	npm install

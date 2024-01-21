@@ -4,7 +4,7 @@ ELM_FILES = $(wildcard src/*.elm)
 
 $(TARGET): check
 $(TARGET): node_modules $(ELM_FILES)
-	node_modules/.bin/elm make $(OPTIMIZE) src/Main.elm --output $@
+	npm exec -- elm make $(OPTIMIZE) src/Main.elm --output $@
 
 node_modules:
 	npm install

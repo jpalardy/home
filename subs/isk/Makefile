@@ -8,11 +8,11 @@ node_modules:
 
 .PHONY: compile
 compile: node_modules
-	node_modules/.bin/tsc
+	npm exec -- tsc
 
 .PHONY: watch
 watch:
-	node_modules/.bin/tsc --watch
+	npm exec -- tsc --watch
 
 # -------------------------------------------------
 
