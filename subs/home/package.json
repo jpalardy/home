@@ -4,8 +4,8 @@
   "description": "a command-line on the web",
   "devDependencies": {
     "@types/mocha": "10.0.6",
-    "@typescript-eslint/eslint-plugin": "7.1.0",
-    "@typescript-eslint/parser": "7.1.0",
+    "@typescript-eslint/eslint-plugin": "7.1.1",
+    "@typescript-eslint/parser": "7.1.1",
     "esbuild": "0.20.1",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
@@ -15,7 +15,7 @@
     "prettier": "^3.2.5",
     "ts-node": "10.9.2",
     "type-coverage": "2.27.1",
-    "typescript": "5.3.3"
+    "typescript": "5.4.2"
   },
   "scripts": {
     "coverage": "nyc --reporter=html --reporter text npm test",
