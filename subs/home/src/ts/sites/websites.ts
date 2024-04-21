@@ -40,10 +40,6 @@ export const sites: SiteConfig[] = [
     visit: "https://www.youtube.com/feed/subscriptions",
   },
   {
-    alias: "sh",
-    search: "http://symbolhound.com/?q=%s",
-  },
-  {
     alias: "wa",
     search: "https://www.wolframalpha.com/input/?i=%s",
   },
@@ -200,11 +196,6 @@ export const sites: SiteConfig[] = [
   {
     alias: "hs",
     visit: "https://www.handspeak.com/word/search/",
-  },
-  {
-    alias: "reebee",
-    search: "https://www.reebee.com/flyers?q=%s&sort=price",
-    visit: "https://www.reebee.com/flyers",
   },
   {
     alias: "ct",
