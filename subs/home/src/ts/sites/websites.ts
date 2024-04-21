@@ -65,11 +65,11 @@ export const sites: SiteConfig[] = [
   },
   {
     alias: "am",
-    search: "https://www.amazon.com/exec/obidos/external-search?mode=blended&keyword=%s",
+    search: "https://www.amazon.com/s?k=%s",
   },
   {
     alias: "amca",
-    search: "https://www.amazon.ca/exec/obidos/external-search?mode=blended&keyword=%s",
+    search: "https://www.amazon.ca/s?k=%s",
   },
   {
     alias: "yelp",
