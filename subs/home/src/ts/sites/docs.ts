@@ -1,13 +1,5 @@
 import {SiteConfig, FullSite} from "./types";
 
-function googleSearch(alias: string, words: string): FullSite {
-  return {
-    alias: `_${alias}`,
-    visit: `https://www.google.com/search?q=${words}`,
-    search: `https://www.google.com/search?q=${words}+%s`,
-  };
-}
-
 export const sites: SiteConfig[] = [
   // -------------------------------------------------
   // misc
@@ -72,9 +64,21 @@ export const sites: SiteConfig[] = [
     alias: "ef",
     search: "https://elixirforum.com/search?q=%s",
   },
-  googleSearch("ex", "elixir"),
-  googleSearch("erl", "erlang"),
-  googleSearch("phx", "elixir+phoenix"),
+  {
+    alias: "_ex",
+    visit: `https://www.google.com/search?q=elixir`,
+    search: `https://www.google.com/search?q=elixir+%s`,
+  },
+  {
+    alias: "_erl",
+    visit: "https://www.google.com/search?q=erlang",
+    search: "https://www.google.com/search?q=erlang+%s",
+  },
+  {
+    alias: "_ex",
+    visit: "https://www.google.com/search?q=elixir+phoenix",
+    search: "https://www.google.com/search?q=elixir+phoenix+%s",
+  },
   {
     alias: "ex.inspect.opts",
     visit: "https://hexdocs.pm/elixir/Inspect.Opts.html",
