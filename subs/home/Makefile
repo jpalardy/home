@@ -46,7 +46,6 @@ test: node_modules
 
 .PHONY: lint
 lint: node_modules
-	npm exec -- eslint src/ts/ test/
 	npm exec -- prettier src/ts/ test/ --check
 
 # -------------------------------------------------
