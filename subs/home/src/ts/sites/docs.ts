@@ -2,12 +2,27 @@ import {SiteConfig, FullSite} from "./types";
 
 export const sites: SiteConfig[] = [
   // -------------------------------------------------
-  // misc
+  // packages
   // -------------------------------------------------
   {
-    alias: "apk",
+    alias: "pkg.apk",
     search: "https://pkgs.alpinelinux.org/contents?file=%s&arch=x86_64",
   },
+  {
+    alias: "pkg.aur",
+    search: "https://aur.archlinux.org/packages?K=%s",
+  },
+  {
+    alias: "pkg.arch",
+    search: "https://archlinux.org/packages/?q=%s",
+  },
+  {
+    alias: "pkg.manjaro",
+    search: "https://packages.manjaro.org/?query=%s",
+  },
+  // -------------------------------------------------
+  // misc
+  // -------------------------------------------------
   {
     alias: "jq",
     visit: "https://stedolan.github.io/jq/manual/",
