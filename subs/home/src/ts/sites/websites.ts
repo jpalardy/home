@@ -226,4 +226,8 @@ export const sites: SiteConfig[] = [
     alias: "ak",
     search: "https://www.animatedknots.com/?s=%s",
   },
+  {
+    alias: "wk",
+    search: "https://www.wanikani.com/search?query=%s",
+  },
 ];
