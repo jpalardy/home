@@ -230,4 +230,8 @@ export const sites: SiteConfig[] = [
     alias: "wk",
     search: "https://www.wanikani.com/search?query=%s",
   },
+  {
+    alias: ">",
+    search: "https://home.jpalardy.com/?q=%s",
+  },
 ];
