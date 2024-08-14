@@ -231,6 +231,10 @@ export const sites: SiteConfig[] = [
     search: "https://www.wanikani.com/search?query=%s",
   },
   {
+    alias: "wk.updates",
+    visit: "https://tofugu.notion.site/WaniKani-Updates-cef4c0d53cda41518eb2fbf02a9294fb",
+  },
+  {
     alias: ">",
     search: "https://home.jpalardy.com/?q=%s",
   },
