@@ -127,6 +127,10 @@ export const sites: SiteConfig[] = [
     search: "http://www.romajidesu.com/dictionary/meaning-of-%s.html",
   },
   {
+    alias: "rdk",
+    search: "https://www.romajidesu.com/kanji/%s",
+  },
+  {
     alias: "jisho",
     search: "https://jisho.org/search/%s",
   },
