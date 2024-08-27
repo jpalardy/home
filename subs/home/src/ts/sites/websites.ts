@@ -56,6 +56,10 @@ export const sites: SiteConfig[] = [
     search: "https://www.merriam-webster.com/dictionary/%s",
   },
   {
+    alias: "w13",
+    search: "https://www.websters1913.com/words/%s",
+  },
+  {
     alias: "ud",
     search: "https://www.urbandictionary.com/define.php?term=%s",
   },
