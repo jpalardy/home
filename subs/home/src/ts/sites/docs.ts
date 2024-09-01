@@ -40,6 +40,10 @@ export const sites: SiteConfig[] = [
     alias: "vim.ale",
     visit: "https://github.com/dense-analysis/ale/blob/master/supported-tools.md",
   },
+  {
+    alias: "vim.digraphs",
+    visit: "https://vimhelp.org/digraph.txt.html",
+  },
   // -------------------------------------------------
   // css
   // -------------------------------------------------
