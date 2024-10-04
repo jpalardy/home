@@ -44,7 +44,7 @@ export const sites: SiteConfig[] = [
   },
   {
     alias: "nf",
-    search: "https://www.netflix.com/search/%s",
+    search: "https://www.netflix.com/search?q=%s",
   },
   {
     alias: "jw",
