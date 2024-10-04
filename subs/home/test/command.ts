@@ -44,6 +44,12 @@ describe("Command", () => {
     });
   });
 
+  describe("encoder", () => {
+    it("is used if available", () => {
+      assertURL(`jisho wear pants`, "https://jisho.org/search/wear%20pants");
+    });
+  });
+
   describe("parse ytl mod", () => {
     it("handles full shorts URLs", () => {
       const equivalentQueries = [

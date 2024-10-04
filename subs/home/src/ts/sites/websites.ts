@@ -137,6 +137,7 @@ export const sites: SiteConfig[] = [
   {
     alias: "jisho",
     search: "https://jisho.org/search/%s",
+    encoder: encodeURIComponent,
   },
   {
     alias: "wr",

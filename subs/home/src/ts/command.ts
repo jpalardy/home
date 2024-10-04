@@ -28,7 +28,8 @@ export function parser(sites: FullSite[], defaultAlias: string) {
     if (!query) {
       return {site, query, url: site.visit};
     }
-    const encodedQuery = encodeURIComponent(query).replace(/%20/g, "+");
+    const encoder = site.encoder || ((query) => encodeURIComponent(query).replace(/%20/g, "+"));
+    const encodedQuery = encoder(query);
     if (site.search.includes("%s")) {
       return {site, query, url: site.search.replace(/%s/g, encodedQuery)};
     }
