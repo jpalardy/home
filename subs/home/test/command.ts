@@ -44,9 +44,10 @@ describe("Command", () => {
     });
   });
 
-  describe("encoder", () => {
-    it("is used if available", () => {
+  describe("url-encodes depending on path vs query location", () => {
+    it("using %20 in path", () => {
       assertURL(`jisho wear pants`, "https://jisho.org/search/wear%20pants");
+      assertURL(`nf outer limits`, "https://www.netflix.com/search/outer%20limits");
     });
   });
 

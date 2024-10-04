@@ -9,6 +9,8 @@ type Command = {
 export function parser(sites: FullSite[], defaultAlias: string) {
   const LUT = new Map(sites.map((site) => [site.alias, site]));
 
+  const queryEncoder = (query: string) => encodeURIComponent(query).replace(/%20/g, "+");
+
   return function parse(text: string): Command {
     const [first, ...rest] = text.trim().split(/ +/).filter(Boolean);
     // text is blank
@@ -28,7 +30,7 @@ export function parser(sites: FullSite[], defaultAlias: string) {
     if (!query) {
       return {site, query, url: site.visit};
     }
-    const encoder = site.encoder || ((query) => encodeURIComponent(query).replace(/%20/g, "+"));
+    const encoder = site.search.match(/\?.*%s/) ? queryEncoder : encodeURIComponent;
     const encodedQuery = encoder(query);
     if (site.search.includes("%s")) {
       return {site, query, url: site.search.replace(/%s/g, encodedQuery)};
