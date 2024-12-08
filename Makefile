@@ -2,12 +2,16 @@
 SUBS_MAKEFILE := $(shell ls subs/*/Makefile)
 SUBS_BUILD := $(SUBS_MAKEFILE:Makefile=_build)
 SUBS_CLEAN := $(SUBS_MAKEFILE:Makefile=_clean)
+SUBS_PURGE := $(SUBS_MAKEFILE:Makefile=_purge)
 
 %/_build:
 	make -C $(dir $@)
 
 %/_clean:
 	make -C $(dir $@) clean
+
+%/_purge:
+	make -C $(dir $@) purge
 
 .PHONY: all
 all: build copy
@@ -29,6 +33,10 @@ public:
 
 .PHONY: clean
 clean: $(SUBS_CLEAN)
+	rm -rf public
+
+.PHONY: purge
+purge: $(SUBS_PURGE)
 	rm -rf public
 
 #-------------------------------------------------
