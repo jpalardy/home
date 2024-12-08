@@ -11,6 +11,10 @@ export const sites: SiteConfig[] = [
     search: "https://www.youtube.com/results?search_query=%s",
   },
   {
+    alias: "ytt",
+    search: "https://www.youtube.com/results?search_query=trailer+%s",
+  },
+  {
     alias: "ytl",
     search: "https://www.youtube.com/watch?v=%s",
     mod: (query: string) => {
