@@ -65,7 +65,7 @@ export const sites: SiteConfig[] = [
   },
   {
     alias: "fa",
-    search: "https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=%s&m=free",
+    search: "https://fontawesome.com/search?q=%s&o=r&m=free",
   },
   // -------------------------------------------------
   // elixir, phoenix
