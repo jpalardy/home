@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -6,29 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <link rel="icon" type="image/png" href="https://secure.gravatar.com/avatar/ecfd1bdc5d3aab1e40f25658817712ba" />
     <script src="__APPJS__" defer></script>
-    <style>
-      #content {
-        margin: 30px 15px;
-      }
-      #content input {
-        color: #333;
-        font: 16px monospace;
-        outline: none;
-        border: 0;
-      }
-      #content form {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        grid-gap: 6px;
-        align-items: center;
-      }
-    </style>
   </head>
   <body data-version="__VERSION__">
-    <div id="content">
-      <form>
+    <div id="content" style="margin: 30px 15px">
+      <form style="display: grid; grid-template-columns: max-content 1fr; grid-gap: 6px; align-items: center">
         <label>&gt;</label>
-        <input name="command" autofocus autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" />
+        <input
+          name="command"
+          autofocus
+          autocapitalize="off"
+          autocorrect="off"
+          autocomplete="off"
+          style="color: #333; font: 16px monospace; outline: none; border: 0"
+          spellcheck="false"
+        />
       </form>
     </div>
   </body>
