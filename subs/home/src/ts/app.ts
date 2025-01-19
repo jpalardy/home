@@ -30,15 +30,14 @@ const parseCommand = Command.parser(combinedSites, "g");
 //-------------------------------------------------
 
 const ELEMENTS = (() => {
-  const input = document.querySelector("#content input") as HTMLInputElement;
-  const form = document.querySelector("#content form") as HTMLFormElement;
-
-  if (!input) {
-    throw Error("missing #content input");
+  const form = document.querySelector("form") as HTMLFormElement;
+  if (!form) {
+    throw Error("missing form");
   }
 
-  if (!form) {
-    throw Error("missing #content form");
+  const input = form.querySelector("input") as HTMLInputElement;
+  if (!input) {
+    throw Error("missing form.input");
   }
 
   return {input, form};
