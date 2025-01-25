@@ -32,12 +32,8 @@ export const sites: SiteConfig[] = [
     search: "https://drive.google.com/drive/search?q=%s",
   },
   {
-    alias: "tw",
-    search: "https://twitter.com/search?q=%s",
-  },
-  {
-    alias: "yts",
-    visit: "https://www.youtube.com/feed/subscriptions",
+    alias: "bsky",
+    search: "https://bsky.app/search?q=%s",
   },
   {
     alias: "wa",
@@ -131,10 +127,6 @@ export const sites: SiteConfig[] = [
     search: "http://www.romajidesu.com/dictionary/meaning-of-%s.html",
   },
   {
-    alias: "rdk",
-    search: "https://www.romajidesu.com/kanji/%s",
-  },
-  {
     alias: "jisho",
     search: "https://jisho.org/search/%s",
   },
@@ -148,21 +140,8 @@ export const sites: SiteConfig[] = [
     visit: "https://www.fatsecret.com/calories-nutrition/",
   },
   {
-    alias: "linkedin",
-    search: "https://www.linkedin.com/jobs/search/?keywords=%s",
-    visit: "https://www.linkedin.com/jobs/",
-  },
-  {
     alias: "udemy",
     search: "https://www.udemy.com/courses/search/?q=%s",
-  },
-  {
-    alias: "edx",
-    search: "https://www.edx.org/search?q=%s",
-  },
-  {
-    alias: "coursera",
-    search: "https://www.coursera.org/courses?languages=en&query=%s",
   },
   {
     alias: "wtb",
@@ -219,16 +198,12 @@ export const sites: SiteConfig[] = [
     search: "https://formulae.brew.sh/formula/%s#default",
   },
   {
-    alias: "asdf.plugins",
-    visit: "https://github.com/asdf-vm/asdf-plugins#plugin-list",
+    alias: "mise.plugins",
+    visit: "https://github.com/jdx/mise/blob/main/registry.toml",
   },
   {
     alias: "brewer",
     visit: "https://colorbrewer2.org/",
-  },
-  {
-    alias: "chatgpt",
-    visit: "https://chat.openai.com/chat",
   },
   {
     alias: "ak",
@@ -237,10 +212,6 @@ export const sites: SiteConfig[] = [
   {
     alias: "wk",
     search: "https://www.wanikani.com/search?query=%s",
-  },
-  {
-    alias: "wk.updates",
-    visit: "https://tofugu.notion.site/WaniKani-Updates-cef4c0d53cda41518eb2fbf02a9294fb",
   },
   {
     alias: ">",

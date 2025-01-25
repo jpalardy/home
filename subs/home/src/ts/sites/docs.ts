@@ -18,7 +18,8 @@ export const sites: SiteConfig[] = [
   },
   {
     alias: "pkg.manjaro",
-    search: "https://packages.manjaro.org/?query=%s",
+    visit: "https://manjaristas.org/branch_compare",
+    search: "https://manjaristas.org/branch_compare?q=%s",
   },
   // -------------------------------------------------
   // misc
@@ -37,24 +38,12 @@ export const sites: SiteConfig[] = [
     search: "https://www.postgresql.org/search/?q=%s",
   },
   {
-    alias: "vim.ale",
-    visit: "https://github.com/dense-analysis/ale/blob/master/supported-tools.md",
-  },
-  {
     alias: "vim.digraphs",
     visit: "https://vimhelp.org/digraph.txt.html",
   },
   // -------------------------------------------------
   // css
   // -------------------------------------------------
-  {
-    alias: "tac",
-    visit: "https://tachyons.io/docs/",
-  },
-  {
-    alias: "tac_",
-    visit: "https://github.com/tachyons-css/tachyons/blob/main/css/tachyons.css",
-  },
   {
     alias: "flex",
     visit: "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
@@ -94,7 +83,7 @@ export const sites: SiteConfig[] = [
     search: "https://www.google.com/search?q=erlang+%s",
   },
   {
-    alias: "_ex",
+    alias: "_phx",
     visit: "https://www.google.com/search?q=elixir+phoenix",
     search: "https://www.google.com/search?q=elixir+phoenix+%s",
   },
@@ -124,7 +113,7 @@ export const sites: SiteConfig[] = [
   {
     alias: "elm-sig",
     search: "https://klaftertief.github.io/elm-search/?q=%s",
-    visit: "https://elm-lang.org/docs",
+    visit: "https://klaftertief.github.io/elm-search/",
   },
   // -------------------------------------------------
   // R

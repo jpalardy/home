@@ -2,17 +2,16 @@ import {SiteConfig} from "./types";
 
 export const sites: SiteConfig[] = [
   {
-    alias: "gplay",
-    visit: "https://play.google.com/store/movies",
-    search: "https://play.google.com/store/search?q=%s&c=movies&hl=en",
-  },
-  {
     alias: "yt",
     search: "https://www.youtube.com/results?search_query=%s",
   },
   {
     alias: "ytt",
     search: "https://www.youtube.com/results?search_query=trailer+%s",
+  },
+  {
+    alias: "yts",
+    visit: "https://www.youtube.com/feed/subscriptions",
   },
   {
     alias: "ytl",
@@ -24,11 +23,6 @@ export const sites: SiteConfig[] = [
         return query;
       }
     },
-  },
-  {
-    alias: "nebula",
-    search: "https://nebula.tv/search?q=%s",
-    visit: "https://nebula.tv/library/latest-videos",
   },
   {
     alias: "audible",
