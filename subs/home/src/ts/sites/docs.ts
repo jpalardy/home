@@ -1,4 +1,4 @@
-import {SiteConfig, FullSite} from "./types";
+import {SiteConfig} from "./types";
 
 export const sites: SiteConfig[] = [
   // -------------------------------------------------

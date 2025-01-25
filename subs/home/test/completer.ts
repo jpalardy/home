@@ -1,6 +1,6 @@
-import assert = require("assert");
+import * as assert from "assert";
 
-import Completer = require("../src/ts/completer");
+import * as Completer from "../src/ts/completer";
 import {Completions} from "../src/ts/completer";
 
 function assertWords(words: string[], completions: Completions) {

@@ -1,7 +1,7 @@
-import assert = require("assert");
+import * as assert from "assert";
 
 import {sites} from "../src/ts/sites";
-import Command = require("../src/ts/command");
+import * as Command from "../src/ts/command";
 
 const assertURL = function (text: string, url: string) {
   const command = Command.parser(sites, "ddg")(text);
