@@ -29,8 +29,8 @@ through the extra step of searching on Google and clicking my way through?
 
 Check out both:
 
-- [src/js/sites/docs.js](src/js/sites/docs.js)
-- [src/js/sites/websites.js](src/js/sites/websites.js)
+- [subs/home/src/ts/sites/docs.ts](subs/home/src/ts/sites/docs.ts)
+- [subs/home/src/ts/sites/websites.ts](subs/home/src/ts/sites/websites.ts)
 
 to see what sites are available.
 
