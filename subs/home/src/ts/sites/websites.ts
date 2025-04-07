@@ -32,6 +32,11 @@ export const sites: SiteConfig[] = [
     search: "https://drive.google.com/drive/search?q=%s",
   },
   {
+    alias: "reddit",
+    visit: `https://www.reddit.com/`,
+    search: `https://www.google.com/search?q=%s+reddit`,
+  },
+  {
     alias: "bsky",
     search: "https://bsky.app/search?q=%s",
   },
