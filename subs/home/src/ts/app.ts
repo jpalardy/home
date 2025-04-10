@@ -85,14 +85,6 @@ const ACTIONS = {
 //-------------------------------------------------
 
 (() => {
-  const getParams = (query: string) => {
-    const params = query.split("&").map((param): [string, string] => {
-      const [k = "", v = ""] = param.split("=", 2);
-      return [k, decodeURIComponent(v).replace(/\+/g, " ")];
-    });
-    return new Map(params);
-  };
-
   // restore textfield on back button
   const lt = (() => {
     const entries = performance.getEntriesByType("navigation");
@@ -107,7 +99,8 @@ const ACTIONS = {
     return;
   }
 
-  const q = getParams(document.location.search.substring(1)).get("q");
+  const params = new URLSearchParams(document.location.search);
+  const q = params.get("q");
   if (q) {
     ACTIONS.setCommand(q);
     ACTIONS.submit();
