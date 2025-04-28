@@ -4,6 +4,11 @@ OUTPUT = public/js/app.js
 
 # -------------------------------------------------
 
+release: COMMIT_SHA = $(shell git rev-parse --short HEAD)
+release: TODAY = $(shell date +%F)
+release: optimize
+	m4 -D __VERSION__="$(COMMIT_SHA) @ $(TODAY)" templates/index.html > public/index.html
+
 .PHONY: optimize
 optimize: test
 	npm exec -- elm make src/Main.elm --optimize --output $(OUTPUT)
