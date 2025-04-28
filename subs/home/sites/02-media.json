@@ -1,0 +1,112 @@
+[
+  {
+    "alias": "yt",
+    "search": "https://www.youtube.com/results?search_query=%s",
+    "visit": "https://www.youtube.com"
+  },
+  {
+    "alias": "ytt",
+    "search": "https://www.youtube.com/results?search_query=trailer+%s",
+    "visit": "https://www.youtube.com"
+  },
+  {
+    "alias": "yts",
+    "visit": "https://www.youtube.com/feed/subscriptions",
+    "search": "https://www.youtube.com/feed/subscriptions"
+  },
+  {
+    "alias": "audible",
+    "search": "https://www.audible.com/search?advsearchKeywords=%s",
+    "visit": "https://www.audible.com"
+  },
+  {
+    "alias": "ann",
+    "search": "https://www.animenewsnetwork.com/encyclopedia/search.php?searchbox=%s",
+    "visit": "https://www.animenewsnetwork.com"
+  },
+  {
+    "alias": "anidb",
+    "search": "https://anidb.info/perl-bin/animedb.pl?adb.search=%s&show=animelist",
+    "visit": "https://anidb.info"
+  },
+  {
+    "alias": "cr",
+    "search": "https://www.crunchyroll.com/search?q=%s",
+    "visit": "https://www.crunchyroll.com"
+  },
+  {
+    "alias": "nf",
+    "search": "https://www.netflix.com/search?q=%s",
+    "visit": "https://www.netflix.com"
+  },
+  {
+    "alias": "jw",
+    "visit": "https://www.justwatch.com/ca",
+    "search": "https://www.justwatch.com/ca/search?q=%s"
+  },
+  {
+    "alias": "protondb",
+    "search": "https://www.protondb.com/search?q=%s",
+    "visit": "https://www.protondb.com"
+  },
+  {
+    "alias": "steam",
+    "search": "https://store.steampowered.com/search/?term=%s",
+    "visit": "https://store.steampowered.com"
+  },
+  {
+    "alias": "vpl",
+    "search": "https://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue",
+    "visit": "https://www.vpl.ca/"
+  },
+  {
+    "alias": "bp",
+    "search": "https://bookpiles.ca/jonathan/books?q=%s",
+    "visit": "https://bookpiles.ca/jonathan/books"
+  },
+  {
+    "alias": "leanpub",
+    "search": "https://leanpub.com/bookstore?type=all&search=%s",
+    "visit": "https://leanpub.com"
+  },
+  {
+    "alias": "imdb",
+    "search": "https://imdb.com/find?q=%s",
+    "visit": "https://imdb.com"
+  },
+  {
+    "alias": "rt",
+    "search": "https://www.rottentomatoes.com/search/?search=%s",
+    "visit": "https://www.rottentomatoes.com"
+  },
+  {
+    "alias": "cnm",
+    "visit": "https://www.cinemaclock.com/bri/vancouver",
+    "search": "https://www.cinemaclock.com/bri/vancouver"
+  },
+  {
+    "alias": "mc",
+    "search": "https://www.metacritic.com/search/%s/",
+    "visit": "https://www.metacritic.com"
+  },
+  {
+    "alias": "courteau",
+    "visit": "https://ici.radio-canada.ca/ohdio/musique/emissions/6003/tellementcourteau",
+    "search": "https://ici.radio-canada.ca/ohdio/musique/emissions/6003/tellementcourteau"
+  },
+  {
+    "alias": "abe",
+    "search": "https://www.abebooks.com/servlet/SearchResults?kn=%s&pt=book",
+    "visit": "https://www.abebooks.com"
+  },
+  {
+    "alias": "gr",
+    "search": "https://www.goodreads.com/search?utf8=%E2%9C%93&query=%s",
+    "visit": "https://www.goodreads.com"
+  },
+  {
+    "alias": "atv",
+    "search": "https://tv.apple.com/search?term=%s",
+    "visit": "https://tv.apple.com"
+  }
+]

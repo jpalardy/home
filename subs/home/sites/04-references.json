@@ -1,0 +1,122 @@
+[
+  {
+    "alias": "pkg.apk",
+    "search": "https://pkgs.alpinelinux.org/contents?file=%s&arch=x86_64",
+    "visit": "https://pkgs.alpinelinux.org"
+  },
+  {
+    "alias": "pkg.aur",
+    "search": "https://aur.archlinux.org/packages?K=%s",
+    "visit": "https://aur.archlinux.org"
+  },
+  {
+    "alias": "pkg.arch",
+    "search": "https://archlinux.org/packages/?q=%s",
+    "visit": "https://archlinux.org"
+  },
+  {
+    "alias": "pkg.manjaro",
+    "visit": "https://manjaristas.org/branch_compare",
+    "search": "https://manjaristas.org/branch_compare?q=%s"
+  },
+  {
+    "alias": "jq",
+    "visit": "https://stedolan.github.io/jq/manual/",
+    "search": "https://stedolan.github.io/jq/manual/"
+  },
+  {
+    "alias": "mdn",
+    "search": "https://developer.mozilla.org/en-US/search?q=%s",
+    "visit": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"
+  },
+  {
+    "alias": "pg",
+    "search": "https://www.postgresql.org/search/?q=%s",
+    "visit": "https://www.postgresql.org"
+  },
+  {
+    "alias": "vim.digraphs",
+    "visit": "https://vimhelp.org/digraph.txt.html",
+    "search": "https://vimhelp.org/digraph.txt.html"
+  },
+  {
+    "alias": "flex",
+    "visit": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+    "search": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+  },
+  {
+    "alias": "grid",
+    "visit": "https://css-tricks.com/snippets/css/complete-guide-grid/",
+    "search": "https://css-tricks.com/snippets/css/complete-guide-grid/"
+  },
+  {
+    "alias": "fa",
+    "search": "https://fontawesome.com/search?q=%s&o=r&m=free",
+    "visit": "https://fontawesome.com"
+  },
+  {
+    "alias": "hex",
+    "search": "https://hex.pm/packages?search=%s",
+    "visit": "https://hex.pm"
+  },
+  {
+    "alias": "hd",
+    "search": "https://hexdocs.pm/elixir/search.html?q=%s",
+    "visit": "https://hexdocs.pm/elixir/"
+  },
+  {
+    "alias": "ef",
+    "search": "https://elixirforum.com/search?q=%s",
+    "visit": "https://elixirforum.com"
+  },
+  {
+    "alias": "_ex",
+    "visit": "https://www.google.com/search?q=elixir",
+    "search": "https://www.google.com/search?q=elixir+%s"
+  },
+  {
+    "alias": "_erl",
+    "visit": "https://www.google.com/search?q=erlang",
+    "search": "https://www.google.com/search?q=erlang+%s"
+  },
+  {
+    "alias": "_phx",
+    "visit": "https://www.google.com/search?q=elixir+phoenix",
+    "search": "https://www.google.com/search?q=elixir+phoenix+%s"
+  },
+  {
+    "alias": "ex.inspect.opts",
+    "visit": "https://hexdocs.pm/elixir/Inspect.Opts.html",
+    "search": "https://hexdocs.pm/elixir/Inspect.Opts.html"
+  },
+  {
+    "alias": "ex.special.forms",
+    "visit": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html",
+    "search": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html"
+  },
+  {
+    "alias": "ex.mix.test",
+    "visit": "https://hexdocs.pm/mix/Mix.Tasks.Test.html",
+    "search": "https://hexdocs.pm/mix/Mix.Tasks.Test.html"
+  },
+  {
+    "alias": "ex.typespecs",
+    "visit": "https://hexdocs.pm/elixir/typespecs.html",
+    "search": "https://hexdocs.pm/elixir/typespecs.html"
+  },
+  {
+    "alias": "elm",
+    "search": "https://package.elm-lang.org/packages/elm/%s/latest/",
+    "visit": "https://package.elm-lang.org"
+  },
+  {
+    "alias": "elm-sig",
+    "search": "https://klaftertief.github.io/elm-search/?q=%s",
+    "visit": "https://klaftertief.github.io/elm-search/"
+  },
+  {
+    "alias": "tidy",
+    "visit": "https://www.tidyverse.org/packages/",
+    "search": "https://www.tidyverse.org/packages/"
+  }
+]

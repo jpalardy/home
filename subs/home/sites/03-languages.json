@@ -1,0 +1,52 @@
+[
+  {
+    "alias": "mw",
+    "search": "https://www.merriam-webster.com/dictionary/%s",
+    "visit": "https://www.merriam-webster.com"
+  },
+  {
+    "alias": "w13",
+    "search": "https://www.websters1913.com/words/%s",
+    "visit": "https://www.websters1913.com"
+  },
+  {
+    "alias": "ud",
+    "search": "https://www.urbandictionary.com/define.php?term=%s",
+    "visit": "https://www.urbandictionary.com"
+  },
+  {
+    "alias": "wr",
+    "search": "https://www.wordreference.com/es/en/translation.asp?spen=%s",
+    "visit": "https://www.wordreference.com"
+  },
+  {
+    "alias": "hs",
+    "visit": "https://www.handspeak.com/word/search/",
+    "search": "https://www.handspeak.com/word/search/"
+  },
+  {
+    "alias": "sign",
+    "search": "https://home.jpalardy.com/sign/?q=%s",
+    "visit": "https://home.jpalardy.com/sign/"
+  },
+  {
+    "alias": "heisig",
+    "search": "https://home.jpalardy.com/heisig/?q=%s",
+    "visit": "https://home.jpalardy.com/heisig/"
+  },
+  {
+    "alias": "rd",
+    "search": "http://www.romajidesu.com/dictionary/meaning-of-%s.html",
+    "visit": "http://www.romajidesu.com"
+  },
+  {
+    "alias": "jisho",
+    "search": "https://jisho.org/search/%s",
+    "visit": "https://jisho.org"
+  },
+  {
+    "alias": "wk",
+    "search": "https://www.wanikani.com/search?query=%s",
+    "visit": "https://www.wanikani.com"
+  }
+]

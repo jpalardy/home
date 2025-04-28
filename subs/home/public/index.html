@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>jpalardy.com - home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="icon" type="image/png" href="https://secure.gravatar.com/avatar/ecfd1bdc5d3aab1e40f25658817712ba" />
+  </head>
+  <body>
+
+    <div id="app"></div>
+
+    <script src="js/app.js"></script>
+    <script>
+      const params = new URLSearchParams(document.location.search);
+      const q = params.get("q") || "g ";
+      const app = Elm.Main.init({ node: document.getElementById("app"), flags: q });
+
+      app.ports.redirect.subscribe((url) => {
+        window.location.assign(url);
+      });
+
+      try {
+        const localSites = JSON.parse(localStorage.getItem("localSites"));
+        if (localSites) {
+          app.ports.addSites.send(localSites);
+        }
+      } catch (err) {
+        app.ports.addSites.send(err.message);
+      }
+    </script>
+  </body>
+</html>
