@@ -13,7 +13,7 @@
     <script src="js/app.js"></script>
     <script>
       const params = new URLSearchParams(document.location.search);
-      const q = params.get("q") || "g ";
+      const q = params.get("q") || "";
       const app = Elm.Main.init({ node: document.getElementById("app"), flags: q });
 
       app.ports.redirect.subscribe((url) => {
