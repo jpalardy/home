@@ -35,6 +35,7 @@ type Msg
 
 type alias Model =
     { text : String
+    , initialText : String
     , destination : Maybe String
     , sites : Dict String Site
     , completions : List String
@@ -121,6 +122,7 @@ getSites =
 init : String -> ( Model, Cmd Msg )
 init initialText =
     ( { text = ""
+      , initialText = initialText
       , destination = Nothing
       , sites = Site.hardcoded
       , completions = []
@@ -157,8 +159,15 @@ update msg model =
                     sites
                         |> Site.fromList
                         |> Dict.union model.sites
+
+                newModel =
+                    model |> updateSites newSites
             in
-            ( model |> updateSites newSites, Cmd.none )
+            if newModel.text == newModel.initialText then
+                update Submit newModel
+
+            else
+                ( newModel, Cmd.none )
 
         KeyDown "Escape" ->
             ( model |> updateText "", focus )
