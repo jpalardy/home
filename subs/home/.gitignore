@@ -1,5 +1,4 @@
 elm-stuff/
-public/js/app.js
-public/index.html
+public/
 node_modules/
 tests/Sites.elm

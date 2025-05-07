@@ -22,7 +22,6 @@ build: $(SUBS_BUILD)
 .PHONY: copy
 copy: public
 	for sub in subs/*; do rsync -q -av --delete $$sub/public/ public/`basename $$sub`/; done
-	rm -f public/app.*.js
 	mv public/home/* public/
 	rmdir public/home
 
