@@ -80,16 +80,6 @@
     "visit": "https://www.yelp.com"
   },
   {
-    "alias": "gh",
-    "search": "https://github.com/search?q=%s&type=code",
-    "visit": "https://github.com/jpalardy"
-  },
-  {
-    "alias": "ghn",
-    "visit": "https://github.com/notifications",
-    "search": "https://github.com/notifications"
-  },
-  {
     "alias": "dh",
     "search": "https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=%s&starCount=0",
     "visit": "https://hub.docker.com"
@@ -110,14 +100,14 @@
     "visit": "https://color.adobe.com"
   },
   {
+    "alias": "colorbrewer2",
+    "visit": "https://colorbrewer2.org/",
+    "search": "https://colorbrewer2.org/"
+  },
+  {
     "alias": "caniuse",
     "search": "https://caniuse.com/#search=%s",
     "visit": "https://caniuse.com"
-  },
-  {
-    "alias": "bookmarklets",
-    "visit": "https://blog.jpalardy.com/bookmarklets/",
-    "search": "https://blog.jpalardy.com/bookmarklets/"
   },
   {
     "alias": "fs",
@@ -151,13 +141,13 @@
   },
   {
     "alias": "yfin",
-    "search": "https://finance.yahoo.com/q?s=%s",
+    "search": "https://finance.yahoo.com/lookup/?s=%s",
     "visit": "https://finance.yahoo.com"
   },
   {
-    "alias": "ychart",
-    "search": "https://finance.yahoo.com/chart/%s",
-    "visit": "https://finance.yahoo.com"
+    "alias": "te",
+    "search": "https://tradingeconomics.com/search.aspx?q=%s",
+    "visit": "https://tradingeconomics.com/stream"
   },
   {
     "alias": "dw",
@@ -170,19 +160,9 @@
     "search": "https://www.allareacodes.com/%s"
   },
   {
-    "alias": "gist",
-    "visit": "https://gist.github.com/jpalardy",
-    "search": "https://gist.github.com/search?q=%s"
-  },
-  {
     "alias": "ct",
     "search": "https://www.canadiantire.ca/en/search-results.html?q=%s",
     "visit": "https://www.canadiantire.ca"
-  },
-  {
-    "alias": "te",
-    "search": "https://tradingeconomics.com/search.aspx?q=%s",
-    "visit": "https://tradingeconomics.com/stream"
   },
   {
     "alias": "brew",
@@ -195,14 +175,34 @@
     "search": "https://github.com/jdx/mise/blob/main/registry.toml"
   },
   {
-    "alias": "brewer",
-    "visit": "https://colorbrewer2.org/",
-    "search": "https://colorbrewer2.org/"
-  },
-  {
     "alias": "ak",
     "search": "https://www.animatedknots.com/?s=%s",
     "visit": "https://www.animatedknots.com"
+  },
+  {
+    "alias": "gr",
+    "search": "https://www.goodreads.com/search?utf8=%E2%9C%93&query=%s",
+    "visit": "https://www.goodreads.com"
+  },
+  {
+    "alias": "audible",
+    "search": "https://www.audible.com/search?advsearchKeywords=%s",
+    "visit": "https://www.audible.com"
+  },
+  {
+    "alias": "vpl",
+    "search": "https://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue",
+    "visit": "https://www.vpl.ca/"
+  },
+  {
+    "alias": "leanpub",
+    "search": "https://leanpub.com/bookstore?type=all&search=%s",
+    "visit": "https://leanpub.com"
+  },
+  {
+    "alias": "abe",
+    "search": "https://www.abebooks.com/servlet/SearchResults?kn=%s&pt=book",
+    "visit": "https://www.abebooks.com"
   },
   {
     "alias": "yt",
@@ -215,14 +215,29 @@
     "visit": "https://www.youtube.com"
   },
   {
-    "alias": "yts",
-    "visit": "https://www.youtube.com/feed/subscriptions",
-    "search": "https://www.youtube.com/feed/subscriptions"
+    "alias": "imdb",
+    "search": "https://imdb.com/find?q=%s",
+    "visit": "https://imdb.com"
   },
   {
-    "alias": "audible",
-    "search": "https://www.audible.com/search?advsearchKeywords=%s",
-    "visit": "https://www.audible.com"
+    "alias": "rt",
+    "search": "https://www.rottentomatoes.com/search/?search=%s",
+    "visit": "https://www.rottentomatoes.com"
+  },
+  {
+    "alias": "jw",
+    "visit": "https://www.justwatch.com/ca",
+    "search": "https://www.justwatch.com/ca/search?q=%s"
+  },
+  {
+    "alias": "nf",
+    "search": "https://www.netflix.com/search?q=%s",
+    "visit": "https://www.netflix.com"
+  },
+  {
+    "alias": "atv",
+    "search": "https://tv.apple.com/search?term=%s",
+    "visit": "https://tv.apple.com"
   },
   {
     "alias": "ann",
@@ -240,54 +255,14 @@
     "visit": "https://www.crunchyroll.com"
   },
   {
-    "alias": "nf",
-    "search": "https://www.netflix.com/search?q=%s",
-    "visit": "https://www.netflix.com"
-  },
-  {
-    "alias": "jw",
-    "visit": "https://www.justwatch.com/ca",
-    "search": "https://www.justwatch.com/ca/search?q=%s"
-  },
-  {
-    "alias": "protondb",
-    "search": "https://www.protondb.com/search?q=%s",
-    "visit": "https://www.protondb.com"
-  },
-  {
     "alias": "steam",
     "search": "https://store.steampowered.com/search/?term=%s",
     "visit": "https://store.steampowered.com"
   },
   {
-    "alias": "vpl",
-    "search": "https://vpl.bibliocommons.com/search?t=smart&search_category=keyword&q=%s&searchOpt=catalogue",
-    "visit": "https://www.vpl.ca/"
-  },
-  {
-    "alias": "bp",
-    "search": "https://bookpiles.ca/jonathan/books?q=%s",
-    "visit": "https://bookpiles.ca/jonathan/books"
-  },
-  {
-    "alias": "leanpub",
-    "search": "https://leanpub.com/bookstore?type=all&search=%s",
-    "visit": "https://leanpub.com"
-  },
-  {
-    "alias": "imdb",
-    "search": "https://imdb.com/find?q=%s",
-    "visit": "https://imdb.com"
-  },
-  {
-    "alias": "rt",
-    "search": "https://www.rottentomatoes.com/search/?search=%s",
-    "visit": "https://www.rottentomatoes.com"
-  },
-  {
-    "alias": "cnm",
-    "visit": "https://www.cinemaclock.com/bri/vancouver",
-    "search": "https://www.cinemaclock.com/bri/vancouver"
+    "alias": "protondb",
+    "search": "https://www.protondb.com/search?q=%s",
+    "visit": "https://www.protondb.com"
   },
   {
     "alias": "mc",
@@ -298,21 +273,6 @@
     "alias": "courteau",
     "visit": "https://ici.radio-canada.ca/ohdio/musique/emissions/6003/tellementcourteau",
     "search": "https://ici.radio-canada.ca/ohdio/musique/emissions/6003/tellementcourteau"
-  },
-  {
-    "alias": "abe",
-    "search": "https://www.abebooks.com/servlet/SearchResults?kn=%s&pt=book",
-    "visit": "https://www.abebooks.com"
-  },
-  {
-    "alias": "gr",
-    "search": "https://www.goodreads.com/search?utf8=%E2%9C%93&query=%s",
-    "visit": "https://www.goodreads.com"
-  },
-  {
-    "alias": "atv",
-    "search": "https://tv.apple.com/search?term=%s",
-    "visit": "https://tv.apple.com"
   },
   {
     "alias": "mw",
@@ -338,16 +298,6 @@
     "alias": "hs",
     "visit": "https://www.handspeak.com/word/search/",
     "search": "https://www.handspeak.com/word/search/"
-  },
-  {
-    "alias": "sign",
-    "search": "https://home.jpalardy.com/sign/?q=%s",
-    "visit": "https://home.jpalardy.com/sign/"
-  },
-  {
-    "alias": "heisig",
-    "search": "https://home.jpalardy.com/heisig/?q=%s",
-    "visit": "https://home.jpalardy.com/heisig/"
   },
   {
     "alias": "rd",
@@ -483,5 +433,50 @@
     "alias": "tidy",
     "visit": "https://www.tidyverse.org/packages/",
     "search": "https://www.tidyverse.org/packages/"
+  },
+  {
+    "alias": "gh",
+    "search": "https://github.com/search?q=%s&type=code",
+    "visit": "https://github.com/jpalardy"
+  },
+  {
+    "alias": "ghn",
+    "visit": "https://github.com/notifications",
+    "search": "https://github.com/notifications?query=%s"
+  },
+  {
+    "alias": "gist",
+    "visit": "https://gist.github.com/jpalardy",
+    "search": "https://gist.github.com/search?q=%s"
+  },
+  {
+    "alias": "yts",
+    "visit": "https://www.youtube.com/feed/subscriptions",
+    "search": "https://www.youtube.com/feed/subscriptions"
+  },
+  {
+    "alias": "bp",
+    "search": "https://bookpiles.ca/jonathan/books?q=%s",
+    "visit": "https://bookpiles.ca/jonathan/books"
+  },
+  {
+    "alias": "bookmarklets",
+    "visit": "https://blog.jpalardy.com/bookmarklets/",
+    "search": "https://blog.jpalardy.com/bookmarklets/"
+  },
+  {
+    "alias": "sign",
+    "search": "https://home.jpalardy.com/sign/?q=%s",
+    "visit": "https://home.jpalardy.com/sign/"
+  },
+  {
+    "alias": "heisig",
+    "search": "https://home.jpalardy.com/heisig/?q=%s",
+    "visit": "https://home.jpalardy.com/heisig/"
+  },
+  {
+    "alias": "cnm",
+    "visit": "https://www.cinemaclock.com/bri/vancouver",
+    "search": "https://www.cinemaclock.com/bri/vancouver"
   }
 ]

@@ -1,0 +1,47 @@
+[
+  {
+    "alias": "gh",
+    "search": "https://github.com/search?q=%s&type=code",
+    "visit": "https://github.com/jpalardy"
+  },
+  {
+    "alias": "ghn",
+    "visit": "https://github.com/notifications",
+    "search": "https://github.com/notifications?query=%s"
+  },
+  {
+    "alias": "gist",
+    "visit": "https://gist.github.com/jpalardy",
+    "search": "https://gist.github.com/search?q=%s"
+  },
+  {
+    "alias": "yts",
+    "visit": "https://www.youtube.com/feed/subscriptions",
+    "search": "https://www.youtube.com/feed/subscriptions"
+  },
+  {
+    "alias": "bp",
+    "search": "https://bookpiles.ca/jonathan/books?q=%s",
+    "visit": "https://bookpiles.ca/jonathan/books"
+  },
+  {
+    "alias": "bookmarklets",
+    "visit": "https://blog.jpalardy.com/bookmarklets/",
+    "search": "https://blog.jpalardy.com/bookmarklets/"
+  },
+  {
+    "alias": "sign",
+    "search": "https://home.jpalardy.com/sign/?q=%s",
+    "visit": "https://home.jpalardy.com/sign/"
+  },
+  {
+    "alias": "heisig",
+    "search": "https://home.jpalardy.com/heisig/?q=%s",
+    "visit": "https://home.jpalardy.com/heisig/"
+  },
+  {
+    "alias": "cnm",
+    "visit": "https://www.cinemaclock.com/bri/vancouver",
+    "search": "https://www.cinemaclock.com/bri/vancouver"
+  }
+]
