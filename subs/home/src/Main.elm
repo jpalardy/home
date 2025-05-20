@@ -39,6 +39,7 @@ type alias Model =
     , destination : Maybe String
     , sites : Dict String Site
     , completions : List String
+    , submitted : Bool
     , err : WrappedError
     }
 
@@ -71,6 +72,7 @@ updateText text model =
         | text = text
         , destination = Site.match model.sites text
         , completions = completions
+        , submitted = False
     }
 
 
@@ -126,6 +128,7 @@ init initialText =
       , destination = Nothing
       , sites = Site.hardcoded
       , completions = []
+      , submitted = False
       , err = None
       }
         |> updateText initialText
@@ -144,11 +147,12 @@ update msg model =
             ( model |> updateText text, Cmd.none )
 
         Submit ->
-            ( model
-            , model.destination
-                |> Maybe.map redirect
-                |> Maybe.withDefault Cmd.none
-            )
+            case model.destination of
+                Nothing ->
+                    ( model, Cmd.none )
+
+                Just url ->
+                    ( { model | submitted = True }, redirect url )
 
         GotSites (Err err) ->
             ( { model | err = err }, Cmd.none )
@@ -191,7 +195,15 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    Html.div [ HA.style "margin" "30px 15px" ]
+    let
+        extraStyles =
+            if model.submitted then
+                [ HA.style "opacity" "0.3" ]
+
+            else
+                []
+    in
+    Html.div (HA.style "margin" "30px 15px" :: extraStyles)
         [ renderForm model.text
         , renderDestination model.destination
         , renderError model.err
