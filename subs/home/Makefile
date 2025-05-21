@@ -1,6 +1,8 @@
 
 ELMs = $(wildcard **/*.elm)
 OUTPUT = public/app.js
+# --debug, probably
+FLAGS ?= ""
 
 # -------------------------------------------------
 
@@ -16,7 +18,7 @@ optimize: node_modules test
 
 .PHONY: build
 build: node_modules
-	npm exec -- elm make src/Main.elm --output $(OUTPUT)
+	npm exec -- elm make src/Main.elm --output $(FLAGS) $(OUTPUT)
 
 .PHONY: watch
 watch:
