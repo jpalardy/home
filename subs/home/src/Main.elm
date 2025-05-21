@@ -182,6 +182,9 @@ update msg model =
         KeyDown "Tab" ->
             ( model |> tabComplete, focus )
 
+        KeyDown "Shift-Enter" ->
+            ( model |> updateText ("g " ++ model.text), focus )
+
         KeyDown _ ->
             ( model, Cmd.none )
 
