@@ -80,34 +80,9 @@
     "visit": "https://www.yelp.com"
   },
   {
-    "alias": "dh",
-    "search": "https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=%s&starCount=0",
-    "visit": "https://hub.docker.com"
-  },
-  {
     "alias": "ls",
     "search": "https://yubnub.org/kernel/ls?args=%s",
     "visit": "https://yubnub.org"
-  },
-  {
-    "alias": "color-hex",
-    "search": "https://www.color-hex.com/color/%s",
-    "visit": "https://www.color-hex.com"
-  },
-  {
-    "alias": "color",
-    "search": "https://color.adobe.com/search?q=%s",
-    "visit": "https://color.adobe.com"
-  },
-  {
-    "alias": "colorbrewer2",
-    "visit": "https://colorbrewer2.org/",
-    "search": "https://colorbrewer2.org/"
-  },
-  {
-    "alias": "caniuse",
-    "search": "https://caniuse.com/#search=%s",
-    "visit": "https://caniuse.com"
   },
   {
     "alias": "fs",
@@ -123,11 +98,6 @@
     "alias": "wtb",
     "visit": "https://www.worldtimebuddy.com/",
     "search": "https://www.worldtimebuddy.com/"
-  },
-  {
-    "alias": "aws",
-    "search": "https://console.aws.amazon.com/%s/home",
-    "visit": "https://console.aws.amazon.com"
   },
   {
     "alias": "usgs",
@@ -150,11 +120,6 @@
     "visit": "https://tradingeconomics.com/stream"
   },
   {
-    "alias": "dw",
-    "search": "https://distrowatch.com/table.php?distribution=%s",
-    "visit": "https://distrowatch.com"
-  },
-  {
     "alias": "ac",
     "visit": "https://www.allareacodes.com/",
     "search": "https://www.allareacodes.com/%s"
@@ -163,16 +128,6 @@
     "alias": "ct",
     "search": "https://www.canadiantire.ca/en/search-results.html?q=%s",
     "visit": "https://www.canadiantire.ca"
-  },
-  {
-    "alias": "brew",
-    "search": "https://formulae.brew.sh/formula/%s#default",
-    "visit": "https://formulae.brew.sh"
-  },
-  {
-    "alias": "mise.plugins",
-    "visit": "https://github.com/jdx/mise/blob/main/registry.toml",
-    "search": "https://github.com/jdx/mise/blob/main/registry.toml"
   },
   {
     "alias": "ak",

@@ -80,34 +80,9 @@
     "visit": "https://www.yelp.com"
   },
   {
-    "alias": "dh",
-    "search": "https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=%s&starCount=0",
-    "visit": "https://hub.docker.com"
-  },
-  {
     "alias": "ls",
     "search": "https://yubnub.org/kernel/ls?args=%s",
     "visit": "https://yubnub.org"
-  },
-  {
-    "alias": "color-hex",
-    "search": "https://www.color-hex.com/color/%s",
-    "visit": "https://www.color-hex.com"
-  },
-  {
-    "alias": "color",
-    "search": "https://color.adobe.com/search?q=%s",
-    "visit": "https://color.adobe.com"
-  },
-  {
-    "alias": "colorbrewer2",
-    "visit": "https://colorbrewer2.org/",
-    "search": "https://colorbrewer2.org/"
-  },
-  {
-    "alias": "caniuse",
-    "search": "https://caniuse.com/#search=%s",
-    "visit": "https://caniuse.com"
   },
   {
     "alias": "fs",
@@ -123,11 +98,6 @@
     "alias": "wtb",
     "visit": "https://www.worldtimebuddy.com/",
     "search": "https://www.worldtimebuddy.com/"
-  },
-  {
-    "alias": "aws",
-    "search": "https://console.aws.amazon.com/%s/home",
-    "visit": "https://console.aws.amazon.com"
   },
   {
     "alias": "usgs",
@@ -150,11 +120,6 @@
     "visit": "https://tradingeconomics.com/stream"
   },
   {
-    "alias": "dw",
-    "search": "https://distrowatch.com/table.php?distribution=%s",
-    "visit": "https://distrowatch.com"
-  },
-  {
     "alias": "ac",
     "visit": "https://www.allareacodes.com/",
     "search": "https://www.allareacodes.com/%s"
@@ -163,16 +128,6 @@
     "alias": "ct",
     "search": "https://www.canadiantire.ca/en/search-results.html?q=%s",
     "visit": "https://www.canadiantire.ca"
-  },
-  {
-    "alias": "brew",
-    "search": "https://formulae.brew.sh/formula/%s#default",
-    "visit": "https://formulae.brew.sh"
-  },
-  {
-    "alias": "mise.plugins",
-    "visit": "https://github.com/jdx/mise/blob/main/registry.toml",
-    "search": "https://github.com/jdx/mise/blob/main/registry.toml"
   },
   {
     "alias": "ak",
@@ -315,22 +270,72 @@
     "visit": "https://www.wanikani.com"
   },
   {
-    "alias": "pkg.apk",
+    "alias": "aws",
+    "search": "https://console.aws.amazon.com/%s/home",
+    "visit": "https://console.aws.amazon.com"
+  },
+  {
+    "alias": "color-hex",
+    "search": "https://www.color-hex.com/color/%s",
+    "visit": "https://www.color-hex.com"
+  },
+  {
+    "alias": "color",
+    "search": "https://color.adobe.com/search?q=%s",
+    "visit": "https://color.adobe.com"
+  },
+  {
+    "alias": "colorbrewer2",
+    "visit": "https://colorbrewer2.org/",
+    "search": "https://colorbrewer2.org/"
+  },
+  {
+    "alias": "caniuse",
+    "search": "https://caniuse.com/#search=%s",
+    "visit": "https://caniuse.com"
+  },
+  {
+    "alias": "fa",
+    "search": "https://fontawesome.com/search?q=%s&o=r&m=free",
+    "visit": "https://fontawesome.com"
+  },
+  {
+    "alias": "dh",
+    "search": "https://hub.docker.com/search/?isAutomated=0&isOfficial=0&page=1&pullCount=0&q=%s&starCount=0",
+    "visit": "https://hub.docker.com"
+  },
+  {
+    "alias": "dw",
+    "search": "https://distrowatch.com/table.php?distribution=%s",
+    "visit": "https://distrowatch.com"
+  },
+  {
+    "alias": "brew",
+    "search": "https://formulae.brew.sh/formula/%s#default",
+    "visit": "https://formulae.brew.sh"
+  },
+  {
+    "alias": "mise",
+    "visit": "https://github.com/jdx/mise/blob/main/registry.toml",
+    "search": "https://github.com/jdx/mise/blob/main/registry.toml"
+  },
+  {
+    "alias": "apk",
     "search": "https://pkgs.alpinelinux.org/contents?file=%s&arch=x86_64",
     "visit": "https://pkgs.alpinelinux.org"
   },
   {
-    "alias": "pkg.aur",
+    "alias": "aur",
     "search": "https://aur.archlinux.org/packages?K=%s",
     "visit": "https://aur.archlinux.org"
   },
   {
-    "alias": "pkg.arch",
+    "alias": "arch",
     "search": "https://archlinux.org/packages/?q=%s",
     "visit": "https://archlinux.org"
   },
   {
-    "alias": "pkg.manjaro",
+    "alias": "manjaro",
     "visit": "https://manjaristas.org/branch_compare",
     "search": "https://manjaristas.org/branch_compare?q=%s"
   },
@@ -365,59 +370,39 @@
     "search": "https://css-tricks.com/snippets/css/complete-guide-grid/"
   },
   {
-    "alias": "fa",
-    "search": "https://fontawesome.com/search?q=%s&o=r&m=free",
-    "visit": "https://fontawesome.com"
-  },
-  {
     "alias": "hex",
     "search": "https://hex.pm/packages?search=%s",
     "visit": "https://hex.pm"
   },
   {
-    "alias": "hd",
+    "alias": "hexdocs",
     "search": "https://hexdocs.pm/elixir/search.html?q=%s",
     "visit": "https://hexdocs.pm/elixir/"
+  },
+  {
+    "alias": "hexdocs.inspect.opts",
+    "visit": "https://hexdocs.pm/elixir/Inspect.Opts.html",
+    "search": "https://hexdocs.pm/elixir/Inspect.Opts.html"
+  },
+  {
+    "alias": "hexdocs.special.forms",
+    "visit": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html",
+    "search": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html"
+  },
+  {
+    "alias": "hexdocs.mix.test",
+    "visit": "https://hexdocs.pm/mix/Mix.Tasks.Test.html",
+    "search": "https://hexdocs.pm/mix/Mix.Tasks.Test.html"
+  },
+  {
+    "alias": "hexdocs.typespecs",
+    "visit": "https://hexdocs.pm/elixir/typespecs.html",
+    "search": "https://hexdocs.pm/elixir/typespecs.html"
   },
   {
     "alias": "ef",
     "search": "https://elixirforum.com/search?q=%s",
     "visit": "https://elixirforum.com"
-  },
-  {
-    "alias": "_ex",
-    "visit": "https://www.google.com/search?q=elixir",
-    "search": "https://www.google.com/search?q=elixir+%s"
-  },
-  {
-    "alias": "_erl",
-    "visit": "https://www.google.com/search?q=erlang",
-    "search": "https://www.google.com/search?q=erlang+%s"
-  },
-  {
-    "alias": "_phx",
-    "visit": "https://www.google.com/search?q=elixir+phoenix",
-    "search": "https://www.google.com/search?q=elixir+phoenix+%s"
-  },
-  {
-    "alias": "ex.inspect.opts",
-    "visit": "https://hexdocs.pm/elixir/Inspect.Opts.html",
-    "search": "https://hexdocs.pm/elixir/Inspect.Opts.html"
-  },
-  {
-    "alias": "ex.special.forms",
-    "visit": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html",
-    "search": "https://hexdocs.pm/elixir/Kernel.SpecialForms.html"
-  },
-  {
-    "alias": "ex.mix.test",
-    "visit": "https://hexdocs.pm/mix/Mix.Tasks.Test.html",
-    "search": "https://hexdocs.pm/mix/Mix.Tasks.Test.html"
-  },
-  {
-    "alias": "ex.typespecs",
-    "visit": "https://hexdocs.pm/elixir/typespecs.html",
-    "search": "https://hexdocs.pm/elixir/typespecs.html"
   },
   {
     "alias": "elm",
@@ -473,10 +458,5 @@
     "alias": "heisig",
     "search": "https://home.jpalardy.com/heisig/?q=%s",
     "visit": "https://home.jpalardy.com/heisig/"
-  },
-  {
-    "alias": "cnm",
-    "visit": "https://www.cinemaclock.com/bri/vancouver",
-    "search": "https://www.cinemaclock.com/bri/vancouver"
   }
 ]

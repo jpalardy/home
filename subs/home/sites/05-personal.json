@@ -38,10 +38,5 @@
     "alias": "heisig",
     "search": "https://home.jpalardy.com/heisig/?q=%s",
     "visit": "https://home.jpalardy.com/heisig/"
-  },
-  {
-    "alias": "cnm",
-    "visit": "https://www.cinemaclock.com/bri/vancouver",
-    "search": "https://www.cinemaclock.com/bri/vancouver"
   }
 ]
