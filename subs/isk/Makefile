@@ -1,7 +1,7 @@
 
 .PHONY: build
 build: compile
-	cp dist/isk.js public/js/isk.js
+	rsync -a dist/isk.js public/js/
 
 node_modules:
 	npm install
