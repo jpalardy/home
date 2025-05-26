@@ -18,8 +18,8 @@ init words text =
             commonPrefix matches |> Maybe.withDefault text
     in
     matches
-        |> List.filter ((/=) newPrefix)
-        |> (\matchesWithoutPrefix -> matchesWithoutPrefix ++ [ newPrefix ])
+        |> when (not << List.member newPrefix) ((::) newPrefix >> cycle)
+        |> when (List.Extra.isPrefixOf [ text ]) cycle
 
 
 cycle : List a -> List a
@@ -60,3 +60,12 @@ commonPrefix2 str1 str2 =
                 |> List.length
     in
     String.left len str1
+
+
+when : (a -> Bool) -> (a -> a) -> a -> a
+when condition transform value =
+    if condition value then
+        transform value
+
+    else
+        value

@@ -30,6 +30,10 @@ suite =
                 \_ ->
                     Completion.init animals "cat"
                         |> Expect.equal [ "caterpillar", "cat" ]
+            , test "returns expected prefix matches (doesn't skip common prefix)" <|
+                \_ ->
+                    Completion.init animals "ca"
+                        |> Expect.equal [ "cat", "caterpillar" ]
             , test "returns itself (without prefix)" <|
                 \_ ->
                     Completion.init animals "duck"
