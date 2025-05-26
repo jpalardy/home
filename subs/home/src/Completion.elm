@@ -16,10 +16,16 @@ init words text =
 
         newPrefix =
             commonPrefix matches |> Maybe.withDefault text
+
+        append item list =
+            list ++ [ item ]
+
+        startsWith item =
+            List.Extra.isPrefixOf [ item ]
     in
     matches
-        |> when (not << List.member newPrefix) ((::) newPrefix >> cycle)
-        |> when (List.Extra.isPrefixOf [ text ]) cycle
+        |> when (List.Extra.notMember newPrefix) (append newPrefix)
+        |> when (startsWith text) cycle
 
 
 cycle : List a -> List a
