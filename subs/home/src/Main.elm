@@ -30,6 +30,7 @@ type Msg
     | Submit
     | KeyDown String
     | GotSites (Result WrappedError (List Site))
+    | Refocus
     | NoOp
 
 
@@ -186,7 +187,10 @@ update msg model =
             ( model |> updateText ("g " ++ model.text), focus )
 
         KeyDown _ ->
-            ( model, Cmd.none )
+            ( model, focus )
+
+        Refocus ->
+            ( model, focus )
 
         NoOp ->
             ( model, Cmd.none )
@@ -237,6 +241,7 @@ renderForm text =
             , HA.style "border" "0"
             , HA.value text
             , HE.onInput Update
+            , HE.onBlur Refocus
             , HE.custom "keydown" (KeyDecoder.tabCatcher (KeyDown "Tab"))
             ]
             []
