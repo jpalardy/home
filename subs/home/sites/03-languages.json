@@ -15,6 +15,11 @@
     "visit": "https://www.urbandictionary.com"
   },
   {
+    "alias": "kym",
+    "search": "https://knowyourmeme.com/search?&q=%s",
+    "visit": "https://knowyourmeme.com/"
+  },
+  {
     "alias": "wr",
     "search": "https://www.wordreference.com/es/en/translation.asp?spen=%s",
     "visit": "https://www.wordreference.com"
