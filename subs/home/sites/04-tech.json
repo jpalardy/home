@@ -148,5 +148,15 @@
     "alias": "tidy",
     "visit": "https://www.tidyverse.org/packages/",
     "search": "https://www.tidyverse.org/packages/"
+  },
+  {
+    "alias": "zig.lang",
+    "visit": "https://ziglang.org/documentation/master/",
+    "search": "https://ziglang.org/documentation/master/"
+  },
+  {
+    "alias": "zig.std",
+    "visit": "https://ziglang.org/documentation/master/std/",
+    "search": "https://ziglang.org/documentation/master/"
   }
 ]

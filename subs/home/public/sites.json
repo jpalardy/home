@@ -425,6 +425,16 @@
     "search": "https://www.tidyverse.org/packages/"
   },
   {
+    "alias": "zig.lang",
+    "visit": "https://ziglang.org/documentation/master/",
+    "search": "https://ziglang.org/documentation/master/"
+  },
+  {
+    "alias": "zig.std",
+    "visit": "https://ziglang.org/documentation/master/std/",
+    "search": "https://ziglang.org/documentation/master/"
+  },
+  {
     "alias": "gh",
     "search": "https://github.com/search?q=%s&type=code",
     "visit": "https://github.com/jpalardy"
