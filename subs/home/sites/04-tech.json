@@ -158,5 +158,10 @@
     "alias": "zig.std",
     "visit": "https://ziglang.org/documentation/master/std/",
     "search": "https://ziglang.org/documentation/master/"
+  },
+  {
+    "alias": "lobsters",
+    "visit": "https://lobste.rs/",
+    "search": "https://lobste.rs/search?q=%s&what=stories"
   }
 ]
