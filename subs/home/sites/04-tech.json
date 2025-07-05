@@ -163,5 +163,10 @@
     "alias": "lobsters",
     "visit": "https://lobste.rs/",
     "search": "https://lobste.rs/search?q=%s&what=stories"
+  },
+  {
+    "alias": "news.ycombinator",
+    "visit": "https://news.ycombinator.com/",
+    "search": "https://hn.algolia.com/?q=%s"
   }
 ]
