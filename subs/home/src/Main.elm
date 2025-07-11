@@ -261,6 +261,8 @@ renderDestination destination =
                 , HA.style "font" "16px monospace"
                 , HA.style "display" "block"
                 , HA.style "margin-top" "20px"
+                , HA.style "overflow" "hidden"
+                , HA.style "text-wrap" "nowrap"
                 ]
                 [ Html.text url ]
 
