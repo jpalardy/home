@@ -115,6 +115,11 @@
     "visit": "https://finance.yahoo.com"
   },
   {
+    "alias": "chart",
+    "search": "https://finance.yahoo.com/quote/%s/chart/",
+    "visit": "https://finance.yahoo.com"
+  },
+  {
     "alias": "te",
     "search": "https://tradingeconomics.com/search.aspx?q=%s",
     "visit": "https://tradingeconomics.com/stream"
