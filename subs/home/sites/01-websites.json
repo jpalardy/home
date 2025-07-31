@@ -143,5 +143,10 @@
     "alias": "archive",
     "search": "https://archive.is/%s",
     "visit": "https://archive.is/"
+  },
+  {
+    "alias": "ltt",
+    "search": "https://link-to-text.github.io/",
+    "visit": "https://link-to-text.github.io/"
   }
 ]
