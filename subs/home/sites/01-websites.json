@@ -40,6 +40,11 @@
     "search": "https://www.google.com/search?q=%s+reddit"
   },
   {
+    "alias": "cbc",
+    "search": "https://www.cbc.ca/search?q=%s",
+    "visit": "https://www.cbc.ca/news"
+  },
+  {
     "alias": "bsky",
     "search": "https://bsky.app/search?q=%s",
     "visit": "https://bsky.app"
