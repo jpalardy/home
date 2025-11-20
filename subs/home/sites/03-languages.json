@@ -43,5 +43,10 @@
     "alias": "wk",
     "search": "https://www.wanikani.com/search?query=%s",
     "visit": "https://www.wanikani.com"
+  },
+  {
+    "alias": "nnwe",
+    "search": "https://news.web.nhk/news/easy/search/index.html?keyword=%s",
+    "visit": "https://news.web.nhk/news/easy/"
   }
 ]
