@@ -153,5 +153,10 @@
     "alias": "ltt",
     "search": "https://link-to-text.github.io/",
     "visit": "https://link-to-text.github.io/"
+  },
+  {
+    "alias": "apa",
+    "search": "https://www.mybib.com/tools/apa-citation-generator",
+    "visit": "https://www.mybib.com/tools/apa-citation-generator"
   }
 ]
