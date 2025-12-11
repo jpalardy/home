@@ -38,5 +38,10 @@
     "alias": "heisig",
     "search": "https://home.jpalardy.com/heisig/?q=%s",
     "visit": "https://home.jpalardy.com/heisig/"
+  },
+  {
+    "alias": "crabi",
+    "search": "https://home.jpalardy.com/crabi/?q=%s",
+    "visit": "https://home.jpalardy.com/crabi/"
   }
 ]
