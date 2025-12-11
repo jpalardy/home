@@ -18,7 +18,7 @@ node_modules:
 
 .PHONY: watch
 watch:
-	ls $(ELMs) | entr -c -s 'ding make -s'
+	ls $(ELMs) | entr -c -s 'ding make build -s'
 
 .PHONY: test
 test:
