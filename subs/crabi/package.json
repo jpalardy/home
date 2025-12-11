@@ -1,0 +1,11 @@
+{
+  "name": "crabi",
+  "version": "0.2.0",
+  "description": "webapp to lookup wk kanjis",
+  "author": "Jonathan Palardy",
+  "license": "MIT",
+  "dependencies": {
+    "elm": "^0.19.1-6",
+    "uglify-js": "^3.19.3"
+  }
+}
