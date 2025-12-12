@@ -1,8 +1,6 @@
 
 ELMs = $(wildcard **/*.elm)
 OUTPUT = public/app.js
-# --debug, probably
-FLAGS ?=
 
 # -------------------------------------------------
 
@@ -18,7 +16,10 @@ optimize: node_modules test
 
 .PHONY: build
 build: node_modules
-	npm exec -- elm make src/Main.elm $(FLAGS) --output $(OUTPUT)
+	npm exec -- elm make --debug src/Main.elm --output $(OUTPUT)
+
+node_modules:
+	npm install
 
 .PHONY: watch
 watch:
@@ -37,9 +38,6 @@ purge: clean
 	rm -rf node_modules/ public
 
 # -------------------------------------------------
-
-node_modules:
-	npm install
 
 tests/Sites.elm: public/sites.json node_modules
 	printf "module Sites exposing (all)\nimport Site exposing (Site)\nall : List Site\nall=" > $@
