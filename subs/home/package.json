@@ -1,4 +1,9 @@
 {
+  "name": "home",
+  "version": "0.1.0",
+  "description": "command-line inspired search engine",
+  "author": "Jonathan Palardy",
+  "license": "MIT",
   "dependencies": {
     "elm": "^0.19.1-6",
     "elm-format": "^0.8.8",
