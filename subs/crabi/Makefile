@@ -40,3 +40,6 @@ ifndef DECK
 endif
 	scripts/convert $(DECK) | jq --slurp -c 'add' > public/cards.min.json
 
+tailwind:
+	npm exec -- tailwindcss -i css/main.css -o public/css/main.css --minify --watch
+

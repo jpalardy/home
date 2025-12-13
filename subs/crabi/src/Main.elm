@@ -257,18 +257,17 @@ view model =
             trimmedQuery ->
                 "Crabi: " ++ trimmedQuery
     , body =
-        [ div
-            [ style "width" "1210px"
-            , style "margin" "0 auto"
-            ]
-            (case model.err of
-                Nothing ->
-                    renderSearchForm model.query model.completeState
-                        :: List.map renderResult model.searchResults
+        [ div [ class "mx-3" ]
+            [ div [ class "max-w-[1210px] mx-auto my-6" ]
+                (case model.err of
+                    Nothing ->
+                        renderSearchForm model.query model.completeState
+                            :: List.map renderResult model.searchResults
 
-                Just err ->
-                    [ renderError err ]
-            )
+                    Just err ->
+                        [ renderError err ]
+                )
+            ]
         ]
     }
 
@@ -277,24 +276,12 @@ renderResult : SearchResult -> Html Msg
 renderResult searchResult =
     div []
         [ div
-            [ style "margin" "20px 0 5px 0"
-            , style "font-size" "larger"
-            ]
-            [ span [ style "font-weight" "bold" ]
-                [ text searchResult.query ]
+            [ class "text-lg mt-5 mb-1" ]
+            [ span [ class "font-bold" ] [ text searchResult.query ]
             , text ": "
-            , span
-                [ style "color" "#777"
-                ]
-                [ text <| pluralize searchResult.count "no cards" "card" "cards"
-                ]
+            , span [ class "text-gray-500" ] [ text <| pluralize searchResult.count "no cards" "card" "cards" ]
             ]
-        , div
-            [ style "margin" "0"
-            , style "display" "flex"
-            , style "flex-wrap" "wrap"
-            , style "gap" "5px"
-            ]
+        , div [ class "flex flex-wrap gap-2" ]
             (List.map renderCard searchResult.cards)
         ]
 
@@ -320,26 +307,19 @@ renderError httpErr =
                     "Error: " ++ body
     in
     div
-        [ style "width" "fit-content"
-        , style "border" "3px solid red"
-        , style "border-radius" "5px"
-        , style "font-family" "sans-serif"
-        , style "padding" "30px 20px"
-        , style "background" "pink"
-        , style "margin" "20px auto"
-        ]
+        [ class "mx-auto my-3 border-3 border-red-500 rounded-md bg-red-200 w-fit p-6" ]
         [ text message ]
 
 
 renderSearchForm : String -> Complete.State -> Html Msg
 renderSearchForm query completeState =
-    Html.form [ onSubmit <| Search query ]
+    Html.form [ class "max-w-[700px]", onSubmit <| Search query ]
         [ Complete.render
             [ id "query"
             , autofocus True
             , spellcheck False
-            , style "width" "500px"
-            , style "padding-left" "5px"
+            , class "w-full p-1 px-3 border rounded rounded-full"
+            , placeholder "search"
             ]
             completeState
             query
@@ -347,41 +327,18 @@ renderSearchForm query completeState =
             , updateState = UpdateState
             , acceptQuery = Search
             }
-        , button [ style "margin-left" "0.3rem" ] [ text "Search" ]
+
+        -- , button [ class "ml-1 border rounded bg-blue-300 text-white" ] [ text "Search" ]
         ]
 
 
 renderCard : Card -> Html Msg
 renderCard card =
     div
-        [ style "width" "230px"
-        , style "height" "142px"
-        , style "border" "2px solid darkblue"
-        , style "border-radius" "5px"
-        , style "background" "#d2e8ff"
-        , style "display" "grid"
-        , style "grid-template-columns" "96px 1fr"
-        ]
-        [ div
-            [ style "margin" "0 auto"
-            , style "font-family" "\"ヒラギノ角ゴ Pro W3\", \"Hiragino Kaku Gothic Pro\", Osaka, \"メイリオ\", Meiryo, \"ＭＳ Ｐゴシック\", \"MS PGothic\", sans-serif"
-            , style "font-size" "4rem"
-            , style "display" "flex"
-            , style "align-items" "center"
-            ]
-            [ text card.kanji ]
-        , div
-            [ style "display" "flex"
-            , style "align-items" "center"
-            ]
-            [ ul
-                [ style "list-style-type" "none"
-                , style "text-align" "right"
-                , style "font-size" "large"
-                , style "color" "#777"
-                , style "padding" "0"
-                , style "margin" "0 15px 0 auto"
-                ]
+        [ class "w-[230px] h-[142px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2" ]
+        [ div [ class "mx-auto text-6xl flex items-center font-japanese" ] [ text card.kanji ]
+        , div [ class "flex items-center" ]
+            [ ul [ class "text-right text-gray-500 ml-auto mr-4" ]
                 (card.keywords |> List.map (\kw -> li [] [ text kw ]))
             ]
         ]
