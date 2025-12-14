@@ -1,19 +1,30 @@
 
-TARGET = public/js/volume.js
-ELM_FILES = $(wildcard src/*.elm)
+ELMs = $(wildcard **/*.elm)
+OUTPUT = public/js/volume.js
 
-$(TARGET): node_modules $(ELM_FILES)
-	npm exec -- elm make $(OPTIMIZE) src/Volume.elm --output $@
+# -------------------------------------------------
+
+.PHONY: optimize
+optimize: node_modules
+	npm exec -- elm make src/Main.elm --optimize --output $(OUTPUT)
+	npm exec -- uglifyjs $(OUTPUT) --compress 'pure_funcs=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9],pure_getters,keep_fargs=false,unsafe_comps,unsafe' | npm exec -- uglifyjs --mangle --output $(OUTPUT)
+
+.PHONY: build
+build: node_modules
+	npm exec -- elm make --debug src/Main.elm --output $(OUTPUT)
 
 node_modules:
 	npm install
 
+.PHONY: watch
 watch:
-	ls $(ELM_FILES) | entr -s 'clear; make; ding'
+	ls $(ELMs) | entr -c -s 'ding make -s build'
 
+.PHONY: clean
 clean:
-	rm -rf $(TARGET) elm-stuff
+	rm -rf elm-stuff/ $(OUTPUT)
 
+.PHONY: purge
 purge: clean
 	rm -rf node_modules/
 
