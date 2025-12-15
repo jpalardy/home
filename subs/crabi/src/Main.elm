@@ -325,8 +325,6 @@ renderSearchForm query completeState =
             , updateState = UpdateState
             , acceptQuery = Search
             }
-
-        -- , button [ class "ml-1 border rounded bg-blue-300 text-white" ] [ text "Search" ]
         ]
 
 
