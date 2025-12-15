@@ -33,3 +33,6 @@ purge: clean
 public/heisig.min.json: public/heisig.json
 	jq '[.[] | {(.kanji): .keyword}] | add' -c $< > $@
 
+tailwind:
+	npm exec -- tailwindcss -i css/main.css -o public/css/main.css --minify --watch
+

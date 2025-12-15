@@ -13,8 +13,7 @@
             "elm/json": "1.1.4",
             "elm/parser": "1.1.0",
             "elm/regex": "1.0.0",
-            "elm/url": "1.0.0",
-            "elm-community/list-extra": "8.7.0"
+            "elm/url": "1.0.0"
         },
         "indirect": {
             "elm/bytes": "1.0.8",

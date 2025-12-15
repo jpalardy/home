@@ -5,7 +5,9 @@
   "author": "Jonathan Palardy",
   "license": "MIT",
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.18",
     "elm": "^0.19.1-6",
+    "tailwindcss": "^4.1.18",
     "uglify-js": "^3.19.3"
   }
 }
