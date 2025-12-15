@@ -257,17 +257,15 @@ view model =
             trimmedQuery ->
                 "Crabi: " ++ trimmedQuery
     , body =
-        [ div [ class "mx-3" ]
-            [ div [ class "max-w-[1210px] mx-auto my-6" ]
-                (case model.err of
-                    Nothing ->
-                        renderSearchForm model.query model.completeState
-                            :: List.map renderResult model.searchResults
+        [ div [ class "max-w-6xl mx-auto mt-6 px-4" ]
+            (case model.err of
+                Nothing ->
+                    renderSearchForm model.query model.completeState
+                        :: List.map renderResult model.searchResults
 
-                    Just err ->
-                        [ renderError err ]
-                )
-            ]
+                Just err ->
+                    [ renderError err ]
+            )
         ]
     }
 
@@ -281,7 +279,7 @@ renderResult searchResult =
             , text ": "
             , span [ class "text-gray-500" ] [ text <| pluralize searchResult.count "no cards" "card" "cards" ]
             ]
-        , div [ class "flex flex-wrap gap-2" ]
+        , div [ class "flex flex-wrap gap-1" ]
             (List.map renderCard searchResult.cards)
         ]
 
@@ -335,8 +333,8 @@ renderSearchForm query completeState =
 renderCard : Card -> Html Msg
 renderCard card =
     div
-        [ class "w-[230px] h-[142px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2" ]
-        [ div [ class "mx-auto text-6xl flex items-center font-japanese" ] [ text card.kanji ]
+        [ class "w-[220px] h-[136px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2" ]
+        [ div [ class "mx-auto text-6xl flex items-center font-japanese text-gray-700" ] [ text card.kanji ]
         , div [ class "flex items-center" ]
             [ ul [ class "text-right text-gray-500 ml-auto mr-4" ]
                 (card.keywords |> List.map (\kw -> li [] [ text kw ]))
