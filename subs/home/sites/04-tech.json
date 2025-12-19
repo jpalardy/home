@@ -168,5 +168,10 @@
     "alias": "news.ycombinator",
     "visit": "https://news.ycombinator.com/",
     "search": "https://hn.algolia.com/?q=%s"
+  },
+  {
+    "alias": "tw",
+    "visit": "https://tailwindcss.com/",
+    "search": "https://tailwindcss.com/docs/%s"
   }
 ]
