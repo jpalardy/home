@@ -30,6 +30,11 @@
     "visit": "https://www.google.com/finance"
   },
   {
+    "alias": "gtr",
+    "search": "https://trends.google.com/trends/explore?q=%s",
+    "visit": "https://trends.google.com/trends/"
+  },
+  {
     "alias": "gd",
     "search": "https://drive.google.com/drive/search?q=%s",
     "visit": "https://drive.google.com"
