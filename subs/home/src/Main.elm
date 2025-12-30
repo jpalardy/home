@@ -133,16 +133,12 @@ init initialText =
       , err = None
       }
         |> updateText initialText
-    , getSites
+    , Cmd.batch [ getSites, focus ]
     )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
-    let
-        focus =
-            Task.attempt (\_ -> NoOp) (Browser.Dom.focus "q")
-    in
     case msg of
         Update text ->
             ( model |> updateText text, Cmd.none )
@@ -186,8 +182,12 @@ update msg model =
         KeyDown "Shift-Enter" ->
             ( model |> updateText ("g " ++ model.text), focus )
 
-        KeyDown _ ->
-            ( model, focus )
+        KeyDown c ->
+            if String.length c == 1 then
+                ( { model | text = model.text ++ c }, focus )
+
+            else
+                ( model, focus )
 
         Refocus ->
             ( model, focus )
@@ -300,6 +300,16 @@ renderError wrappedError =
 
         DecodeError err ->
             divWrapper <| Json.Decode.errorToString err
+
+
+
+-------------------------------------------------
+-- helpers
+-------------------------------------------------
+
+
+focus =
+    Task.attempt (\_ -> NoOp) (Browser.Dom.focus "q")
 
 
 
