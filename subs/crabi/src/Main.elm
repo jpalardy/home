@@ -330,13 +330,23 @@ renderSearchForm query completeState =
 
 renderCard : Card -> Html Msg
 renderCard card =
+    let
+        wanikaniURL query =
+            Url.Builder.crossOrigin "https://www.wanikani.com" [ "search" ] [ Url.Builder.string "query" query ]
+    in
     div
-        [ class "w-[220px] h-[136px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2" ]
+        [ class "w-[220px] h-[136px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2 relative group" ]
         [ div [ class "mx-auto text-6xl flex items-center font-japanese text-gray-700" ] [ text card.kanji ]
         , div [ class "flex items-center" ]
             [ ul [ class "text-right text-gray-500 ml-auto mr-4" ]
                 (card.keywords |> List.map (\kw -> li [] [ text kw ]))
             ]
+        , a
+            [ href <| wanikaniURL card.kanji
+            , attribute "referrerpolicy" "no-referrer"
+            , class "hover:opacity-100 rounded absolute right-0 top-0 p-1 opacity-0 group-hover:opacity-10"
+            ]
+            [ img [ src "images/external-link.svg", class "w-[20px]" ] [] ]
         ]
 
 
