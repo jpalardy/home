@@ -33,7 +33,7 @@ combiner msg =
                 |> msg
         )
         (Json.Decode.field "metaKey" <| decodeMaybeKey "Meta")
-        (Json.Decode.field "ctrlKey" <| decodeMaybeKey "Ctrl")
+        (Json.Decode.field "ctrlKey" <| decodeMaybeKey "Control")
         (Json.Decode.field "shiftKey" <| decodeMaybeKey "Shift")
         (Json.Decode.field "key" Json.Decode.string)
 
