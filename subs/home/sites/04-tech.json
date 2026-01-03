@@ -173,5 +173,10 @@
     "alias": "tw",
     "visit": "https://tailwindcss.com/",
     "search": "https://tailwindcss.com/docs/%s"
+  },
+  {
+    "alias": "svg",
+    "visit": "https://www.svgrepo.com/",
+    "search": "https://www.svgrepo.com/vectors/%s/"
   }
 ]
