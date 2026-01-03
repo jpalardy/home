@@ -181,12 +181,8 @@ update msg model =
         KeyDown "Shift-Enter" ->
             ( model |> updateText ("g " ++ model.text), focus )
 
-        KeyDown c ->
-            if String.length c == 1 then
-                ( { model | text = model.text ++ c }, focus )
-
-            else
-                ( model, focus )
+        KeyDown _ ->
+            ( model, Cmd.none )
 
         NoOp ->
             ( model, Cmd.none )
@@ -303,6 +299,7 @@ renderError wrappedError =
 -------------------------------------------------
 
 
+focus : Cmd Msg
 focus =
     Task.attempt (\_ -> NoOp) (Browser.Dom.focus "q")
 
