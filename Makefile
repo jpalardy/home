@@ -46,6 +46,6 @@ deploy-dryrun:
 
 .PHONY: deploy
 deploy:
-	aws s3 sync public/ s3://home.jpalardy.com/ --profile jonathan
+	aws s3 sync public/ s3://home.jpalardy.com/ --cache-control "public, max-age=172800" --profile jonathan
 	aws cloudfront create-invalidation --distribution-id E1SGJ2SOI6A0WB --paths "/*" --profile jonathan
 
