@@ -38,7 +38,7 @@ convert:
 ifndef DECK
 	$(error DECK is not set)
 endif
-	scripts/convert $(DECK) | jq --slurp -c 'add' > public/cards.min.json
+	scripts/convert $(DECK) | jq --slurp 'add' > public/cards.json
 
 tailwind:
 	npm exec -- tailwindcss -i css/main.css -o public/css/main.css --minify --watch

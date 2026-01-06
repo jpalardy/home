@@ -122,7 +122,7 @@ getCards =
                         )
                     )
     in
-    Http.get { url = "cards.min.json", expect = Http.expectJson GotCards cardsDecoder }
+    Http.get { url = "cards.json", expect = Http.expectJson GotCards cardsDecoder }
 
 
 subscriptions : Model -> Sub Msg
