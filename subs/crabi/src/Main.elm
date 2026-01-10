@@ -338,8 +338,8 @@ renderCard card =
         [ class "w-[220px] h-[136px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2 relative group" ]
         [ div [ class "mx-auto text-6xl flex items-center font-japanese text-gray-700" ] [ text card.kanji ]
         , div [ class "flex items-center" ]
-            [ ul [ class "text-right text-gray-500 ml-auto mr-4" ]
-                (card.keywords |> List.map (\kw -> li [] [ text kw ]))
+            [ ul [ class "text-right text-gray-500 ml-auto mr-4 leading-none" ]
+                (card.keywords |> List.map (\kw -> li [ class "my-1" ] [ text kw ]))
             ]
         , a
             [ href <| wanikaniURL card.kanji
