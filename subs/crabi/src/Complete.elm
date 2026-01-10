@@ -1,8 +1,8 @@
 module Complete exposing (State, closed, new, render)
 
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Html.Events exposing (..)
+import Html exposing (Html)
+import Html.Attributes as HA
+import Html.Events as HE
 import Json.Decode
 
 
@@ -136,7 +136,7 @@ keyDecoder state messages =
             )
 
 
-render : List (Attribute msg) -> State -> String -> Callbacks msg -> Html msg
+render : List (Html.Attribute msg) -> State -> String -> Callbacks msg -> Html msg
 render attrs state query messages =
     let
         boolean v =
@@ -146,33 +146,33 @@ render attrs state query messages =
             else
                 "false"
     in
-    div [ class "awesomplete" ]
-        [ input
+    Html.div [ HA.class "awesomplete" ]
+        [ Html.input
             (attrs
-                ++ [ value query
-                   , onInput messages.updateQuery
-                   , onBlur (messages.updateState Closed)
-                   , custom "keydown" (keyDecoder state messages)
-                   , autocomplete False
-                   , attribute "autocapitalize" "off"
-                   , attribute "autocorrect" "off"
+                ++ [ HA.value query
+                   , HE.onInput messages.updateQuery
+                   , HE.onBlur (messages.updateState Closed)
+                   , HE.custom "keydown" (keyDecoder state messages)
+                   , HA.autocomplete False
+                   , HA.attribute "autocapitalize" "off"
+                   , HA.attribute "autocorrect" "off"
                    ]
             )
             []
         , case state of
             Closed ->
-                text ""
+                Html.text ""
 
             Opened suggestions selectedIndex ->
-                ul []
+                Html.ul []
                     (List.indexedMap
                         (\i suggestion ->
-                            li
+                            Html.li
                                 -- mousedown (instead of mouseclick) to prevent blur
-                                [ preventDefaultOn "mousedown" (Json.Decode.succeed ( messages.acceptQuery suggestion, True ))
-                                , attribute "aria-selected" (boolean <| i == selectedIndex)
+                                [ HE.preventDefaultOn "mousedown" (Json.Decode.succeed ( messages.acceptQuery suggestion, True ))
+                                , HA.attribute "aria-selected" (boolean <| i == selectedIndex)
                                 ]
-                                [ text suggestion ]
+                                [ Html.text suggestion ]
                         )
                         suggestions
                     )

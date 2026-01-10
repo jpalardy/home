@@ -5,12 +5,11 @@ import Browser.Dom as Dom
 import Browser.Events as Events
 import Browser.Navigation as Nav
 import Complete
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Html.Events exposing (..)
+import Html exposing (Html)
+import Html.Attributes as HA
+import Html.Events as HE
 import Http
 import Json.Decode
-import Parser exposing (..)
 import Set exposing (Set)
 import Task
 import Url
@@ -134,6 +133,29 @@ subscriptions _ =
 -------------------------------------------------
 
 
+updateSearch : String -> Model -> ( Model, Cmd Msg )
+updateSearch query model =
+    let
+        searchResult =
+            search model.cards query
+
+        searchResults =
+            case searchResult.count of
+                0 ->
+                    model.searchResults
+
+                _ ->
+                    searchResult :: model.searchResults
+    in
+    ( { model
+        | searchResults = searchResults
+        , query = ""
+        , completeState = Complete.closed
+      }
+    , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
+    )
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     let
@@ -156,25 +178,7 @@ update msg model =
             ( { model | completeState = completeState }, Cmd.none )
 
         Search query ->
-            let
-                searchResult =
-                    search model.cards query
-
-                searchResults =
-                    case searchResult.count of
-                        0 ->
-                            model.searchResults
-
-                        _ ->
-                            searchResult :: model.searchResults
-            in
-            ( { model
-                | searchResults = searchResults
-                , query = ""
-                , completeState = Complete.closed
-              }
-            , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
-            )
+            updateSearch query model
 
         GotCards (Ok cards) ->
             { model
@@ -184,7 +188,7 @@ update msg model =
                         |> List.foldl Set.union Set.empty
                         |> Set.toList
             }
-                |> update (Search model.query)
+                |> updateSearch model.query
 
         GotCards (Err err) ->
             ( { model | err = Just err }, Cmd.none )
@@ -208,7 +212,7 @@ update msg model =
 
         KeyDown "Escape" ->
             { model | searchResults = [] }
-                |> update (Search "")
+                |> updateSearch ""
                 |> Tuple.mapSecond (\cmd -> Cmd.batch [ cmd, focusQueryCmd ])
 
         KeyDown _ ->
@@ -257,7 +261,7 @@ view model =
             trimmedQuery ->
                 "Crabi: " ++ trimmedQuery
     , body =
-        [ div [ class "max-w-6xl mx-auto mt-6 px-4" ]
+        [ Html.div [ HA.class "max-w-6xl mx-auto mt-6 px-4" ]
             (case model.err of
                 Nothing ->
                     renderSearchForm model.query model.completeState
@@ -272,14 +276,14 @@ view model =
 
 renderResult : SearchResult -> Html Msg
 renderResult searchResult =
-    div []
-        [ div
-            [ class "text-lg mt-5 mb-1" ]
-            [ span [ class "font-bold" ] [ text searchResult.query ]
-            , text ": "
-            , span [ class "text-gray-500" ] [ text <| pluralize searchResult.count "no cards" "card" "cards" ]
+    Html.div []
+        [ Html.div
+            [ HA.class "text-lg mt-5 mb-1" ]
+            [ Html.span [ HA.class "font-bold" ] [ Html.text searchResult.query ]
+            , Html.text ": "
+            , Html.span [ HA.class "text-gray-500" ] [ Html.text <| pluralize searchResult.count "no cards" "card" "cards" ]
             ]
-        , div [ class "flex flex-wrap gap-1" ]
+        , Html.div [ HA.class "flex flex-wrap gap-1" ]
             (List.map renderCard searchResult.cards)
         ]
 
@@ -304,20 +308,20 @@ renderError httpErr =
                 Http.BadBody body ->
                     "Error: " ++ body
     in
-    div
-        [ class "mx-auto my-3 border-3 border-red-500 rounded-md bg-red-200 w-fit p-6" ]
-        [ text message ]
+    Html.div
+        [ HA.class "mx-auto my-3 border-3 border-red-500 rounded-md bg-red-200 w-fit p-6" ]
+        [ Html.text message ]
 
 
 renderSearchForm : String -> Complete.State -> Html Msg
 renderSearchForm query completeState =
-    Html.form [ class "max-w-[700px]", onSubmit <| Search query ]
+    Html.form [ HA.class "max-w-[700px]", HE.onSubmit <| Search query ]
         [ Complete.render
-            [ id "query"
-            , autofocus True
-            , spellcheck False
-            , class "w-full p-1 px-3 border rounded rounded-full"
-            , placeholder "search"
+            [ HA.id "query"
+            , HA.autofocus True
+            , HA.spellcheck False
+            , HA.class "w-full p-1 px-3 border rounded rounded-full"
+            , HA.placeholder "search"
             ]
             completeState
             query
@@ -334,19 +338,19 @@ renderCard card =
         wanikaniURL query =
             Url.Builder.crossOrigin "https://www.wanikani.com" [ "search" ] [ Url.Builder.string "query" query ]
     in
-    div
-        [ class "w-[220px] h-[136px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2 relative group" ]
-        [ div [ class "mx-auto text-6xl flex items-center font-japanese text-gray-700" ] [ text card.kanji ]
-        , div [ class "flex items-center" ]
-            [ ul [ class "text-right text-gray-500 ml-auto mr-4 leading-none" ]
-                (card.keywords |> List.map (\kw -> li [ class "my-1" ] [ text kw ]))
+    Html.div
+        [ HA.class "w-[220px] h-[136px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2 relative group" ]
+        [ Html.div [ HA.class "mx-auto text-6xl flex items-center font-japanese text-gray-700" ] [ Html.text card.kanji ]
+        , Html.div [ HA.class "flex items-center" ]
+            [ Html.ul [ HA.class "text-right text-gray-500 ml-auto mr-4 leading-none" ]
+                (card.keywords |> List.map (\kw -> Html.li [ HA.class "my-1" ] [ Html.text kw ]))
             ]
-        , a
-            [ href <| wanikaniURL card.kanji
-            , attribute "referrerpolicy" "no-referrer"
-            , class "hover:opacity-100 rounded absolute right-0 top-0 p-1 opacity-0 group-hover:opacity-10"
+        , Html.a
+            [ HA.href <| wanikaniURL card.kanji
+            , HA.attribute "referrerpolicy" "no-referrer"
+            , HA.class "hover:opacity-100 rounded absolute right-0 top-0 p-1 opacity-0 group-hover:opacity-10"
             ]
-            [ img [ src "images/external-link.svg", class "w-[20px]" ] [] ]
+            [ Html.img [ HA.src "images/external-link.svg", HA.class "w-[20px]" ] [] ]
         ]
 
 
