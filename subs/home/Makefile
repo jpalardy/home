@@ -35,7 +35,7 @@ review: node_modules
 
 .PHONY: clean
 clean:
-	rm -rf elm-stuff/ $(OUTPUT)
+	rm -rf elm-stuff/ review/elm-stuff/ $(OUTPUT) public/css/main.css
 
 .PHONY: purge
 purge: clean
