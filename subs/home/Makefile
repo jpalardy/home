@@ -10,7 +10,7 @@ release: optimize
 	m4 -D __VERSION__="$(COMMIT_SHA) @ $(TODAY)" templates/index.html > public/index.html
 
 .PHONY: optimize
-optimize: node_modules test
+optimize: node_modules test review
 	npm exec -- elm make src/Main.elm --optimize --output $(OUTPUT)
 	npm exec -- uglifyjs $(OUTPUT) --compress 'pure_funcs=[F2,F3,F4,F5,F6,F7,F8,F9,A2,A3,A4,A5,A6,A7,A8,A9],pure_getters,keep_fargs=false,unsafe_comps,unsafe' | npm exec -- uglifyjs --mangle --output $(OUTPUT)
 
@@ -26,8 +26,12 @@ watch:
 	ls $(ELMs) | entr -c -s 'ding make -s build test'
 
 .PHONY: test
-test: tests/Sites.elm
+test: node_modules tests/Sites.elm
 	npm exec -- elm-test
+
+.PHONY: review
+review: node_modules
+	npm exec -- elm-review
 
 .PHONY: clean
 clean:

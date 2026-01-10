@@ -2,8 +2,6 @@ module Site exposing (Site, fromJson, fromList, hardcoded, match)
 
 import Dict exposing (Dict)
 import Json.Decode
-import Maybe
-import String
 import Url
 
 

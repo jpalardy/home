@@ -1,4 +1,4 @@
-port module Main exposing (main)
+port module Main exposing (Model, Msg, WrappedError, main)
 
 import Browser
 import Browser.Dom
@@ -136,6 +136,16 @@ init initialText =
     )
 
 
+updateSubmit : Model -> ( Model, Cmd Msg )
+updateSubmit model =
+    case model.destination of
+        Nothing ->
+            ( model, Cmd.none )
+
+        Just url ->
+            ( { model | submitted = True }, redirect url )
+
+
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
@@ -143,12 +153,7 @@ update msg model =
             ( model |> updateText text, Cmd.none )
 
         Submit ->
-            case model.destination of
-                Nothing ->
-                    ( model, Cmd.none )
-
-                Just url ->
-                    ( { model | submitted = True }, redirect url )
+            updateSubmit model
 
         GotSites (Err err) ->
             ( { model | err = err }, Cmd.none )
@@ -164,7 +169,7 @@ update msg model =
                     model |> updateSites newSites
             in
             if newModel.text == newModel.initialText then
-                update Submit newModel
+                updateSubmit newModel
 
             else
                 ( newModel, Cmd.none )
