@@ -7,6 +7,9 @@
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
     "elm": "^0.19.1-6",
+    "elm-format": "^0.8.8",
+    "elm-review": "^2.13.5",
+    "elm-test": "^0.19.1-revision16",
     "tailwindcss": "^4.1.18",
     "uglify-js": "^3.19.3"
   }
