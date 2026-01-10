@@ -2,6 +2,7 @@ module ReviewConfig exposing (config)
 
 import NoDeprecated
 import NoDuplicatePorts
+import NoInconsistentAliases
 import NoMissingSubscriptionsCall
 import NoMissingTypeAnnotation
 import NoMissingTypeExpose
@@ -75,6 +76,23 @@ configCamelCase =
     ]
 
 
+{-| <https://github.com/sparksp/elm-review-imports>
+
+    rejected: NoModuleOnExposedNames.rule
+    - wants to remove Html from Html.map, if Html is exposing(...)
+
+-}
+configImports : List Rule
+configImports =
+    [ NoInconsistentAliases.config
+        [ ( "Html.Attributes", "HA" )
+        , ( "Html.Events", "HE" )
+        ]
+        |> NoInconsistentAliases.noMissingAliases
+        |> NoInconsistentAliases.rule
+    ]
+
+
 {-| <https://github.com/jfmengels/elm-review-the-elm-architecture>
 -}
 configElmArchitecture : List Rule
@@ -101,5 +119,6 @@ config =
         , configCommon
         , configPorts
         , configCamelCase
+        , configImports
         , configElmArchitecture
         ]
