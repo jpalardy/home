@@ -43,5 +43,10 @@
     "alias": "crabi",
     "search": "https://home.jpalardy.com/crabi/?q=%s",
     "visit": "https://home.jpalardy.com/crabi/"
+  },
+  {
+    "alias": "bb",
+    "search": "https://blog.jpalardy.com/bookmark-board/",
+    "visit": "https://blog.jpalardy.com/bookmark-board/"
   }
 ]
