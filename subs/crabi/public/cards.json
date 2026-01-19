@@ -136,6 +136,9 @@
   ],
   "日": [
     "nichi",
+    "jitsu",
+    "hi",
+    "ka",
     "sun"
   ],
   "刀": [
@@ -1371,6 +1374,8 @@
     "parent"
   ],
   "頭": [
+    "zu",
+    "tou",
     "kashira",
     "atama",
     "head"
@@ -2160,6 +2165,7 @@
   ],
   "品": [
     "hin",
+    "shina",
     "product"
   ],
   "守": [
