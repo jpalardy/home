@@ -147,13 +147,18 @@ updateSearch query model =
                 _ ->
                     searchResult :: model.searchResults
     in
-    ( { model
-        | searchResults = searchResults
-        , query = ""
-        , completeState = Complete.closed
-      }
-    , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
-    )
+    case ( searchResult.count, query == "" ) of
+        ( 0, False ) ->
+            ( model, Cmd.none )
+
+        _ ->
+            ( { model
+                | searchResults = searchResults
+                , query = ""
+                , completeState = Complete.closed
+              }
+            , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
+            )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
