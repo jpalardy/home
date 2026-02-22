@@ -267,12 +267,15 @@ view model =
                 "Crabi: " ++ trimmedQuery
     , body =
         [ Html.div [ HA.class "max-w-6xl mx-auto mt-6 px-4" ]
-            (case model.err of
-                Nothing ->
+            (case ( model.err, model.searchResults ) of
+                ( Nothing, [] ) ->
+                    [ renderSearchForm model.query model.completeState, renderPrompt ]
+
+                ( Nothing, _ ) ->
                     renderSearchForm model.query model.completeState
                         :: List.map renderResult model.searchResults
 
-                Just err ->
+                ( Just err, _ ) ->
                     [ renderError err ]
             )
         ]
@@ -357,6 +360,13 @@ renderCard card =
             ]
             [ Html.img [ HA.src "images/external-link.svg", HA.class "w-[20px]" ] [] ]
         ]
+
+
+renderPrompt : Html Msg
+renderPrompt =
+    Html.div
+        [ HA.class "mr-auto mt-10 size-fit" ]
+        [ Html.img [ HA.src "images/prompt.jpg" ] [] ]
 
 
 
