@@ -138,22 +138,14 @@ updateSearch query model =
     let
         searchResult =
             search model.cards query
-
-        searchResults =
-            case searchResult.count of
-                0 ->
-                    model.searchResults
-
-                _ ->
-                    searchResult :: model.searchResults
     in
     case ( searchResult.count, query == "" ) of
         ( 0, False ) ->
             ( model, Cmd.none )
 
-        _ ->
+        ( count, _ ) ->
             ( { model
-                | searchResults = searchResults
+                | searchResults = ifelse (count == 0) model.searchResults (searchResult :: model.searchResults)
                 , query = ""
                 , completeState = Complete.closed
               }
@@ -371,6 +363,15 @@ renderPrompt =
 
 
 -------------------------------------------------
+
+
+ifelse : Bool -> a -> a -> a
+ifelse condition v1 v2 =
+    if condition then
+        v1
+
+    else
+        v2
 
 
 main : Program () Model Msg
