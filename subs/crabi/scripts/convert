@@ -23,8 +23,11 @@ NF == 0 { next }
   gensub(/ \+/, " ", "g")
   split(tolower($0), keywords, /(--|,)/)
   printf "{%s:[", wrap(kanji)
+  delete seen
   for (i in keywords) {
     keyword = gensub(/(^ *| *$)/, "", "g", keywords[i])
+    # remove duplicates within a card (sakura, sakura problem)
+    if (seen[keyword]++) { continue }
     if (i > 1) { printf "," }
     printf "%s", wrap(keyword)
   }
