@@ -163,5 +163,10 @@
     "alias": "apa",
     "search": "https://www.mybib.com/tools/apa-citation-generator",
     "visit": "https://www.mybib.com/tools/apa-citation-generator"
+  },
+  {
+    "alias": "excalidraw",
+    "search": "https://excalidraw.com/",
+    "visit": "https://excalidraw.com/"
   }
 ]
