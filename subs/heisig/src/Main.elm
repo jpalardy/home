@@ -272,12 +272,15 @@ view model =
                 "Heisig: " ++ trimmedQuery
     , body =
         [ Html.div [ HA.class "max-w-6xl mx-auto mt-6 px-4" ]
-            (case model.err of
-                Nothing ->
+            (case ( model.err, model.searchResults ) of
+                ( Nothing, [] ) ->
+                    [ renderSearchForm model.query model.completeState, renderPrompt ]
+
+                ( Nothing, _ ) ->
                     renderSearchForm model.query model.completeState
                         :: List.map renderResult model.searchResults
 
-                Just err ->
+                ( Just err, _ ) ->
                     [ renderError err ]
             )
         ]
@@ -353,6 +356,13 @@ renderCard card =
         , Html.div [ HA.class "flex items-center m-auto text-gray-600 text-center px-3" ]
             [ Html.text card.keyword ]
         ]
+
+
+renderPrompt : Html Msg
+renderPrompt =
+    Html.div
+        [ HA.class "mr-auto mt-10 size-fit" ]
+        [ Html.img [ HA.src "images/prompt.jpg" ] [] ]
 
 
 
