@@ -13,7 +13,7 @@ NF == 0 { next }
 # kanji line
 /^<span lang="ja">/ {
   sub(".*>", "")
-  sub("*", "")
+  sub("\\*", "")
   kanji = $0
   next
 }
