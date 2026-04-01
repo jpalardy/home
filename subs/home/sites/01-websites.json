@@ -50,6 +50,11 @@
     "visit": "https://www.cbc.ca/news"
   },
   {
+    "alias": "aj",
+    "search": "https://www.aljazeera.com/search/%s",
+    "visit": "https://www.aljazeera.com/"
+  },
+  {
     "alias": "bsky",
     "search": "https://bsky.app/search?q=%s",
     "visit": "https://bsky.app"
