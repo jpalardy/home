@@ -16,7 +16,7 @@
         node: document.getElementById("app"),
         flags: cards,
       });
-      app.ports.saveBookmarks.subscribe((cards) => {
+      app.ports.saveCards.subscribe((cards) => {
         localStorage.setItem("cards", JSON.stringify(cards));
       });
     </script>
