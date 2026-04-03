@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.card {
+  a {
+    text-decoration: revert;
+  }
+
+  ul {
+    list-style: inside;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: revert;
+  }
+}
