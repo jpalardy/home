@@ -1,6 +1,6 @@
 {
-  "name": "bookmarkBoard",
-  "version": "0.1.0",
+  "name": "board",
+  "version": "0.2.0",
   "description": "a localStorage-driven webpage for bookmarks",
   "author": "Jonathan Palardy",
   "license": "ISC",

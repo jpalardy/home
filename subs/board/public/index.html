@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Bookmark Board</title>
+    <title>Board</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -11,13 +11,13 @@
 
     <script src="js/app.js"></script>
     <script>
-      const bookmarks = localStorage.getItem("bookmarks") || "[]";
+      const cards = localStorage.getItem("cards") || "[]";
       const app = Elm.Main.init({
         node: document.getElementById("app"),
-        flags: bookmarks,
+        flags: cards,
       });
-      app.ports.saveBookmarks.subscribe((bookmarks) => {
-        localStorage.setItem("bookmarks", JSON.stringify(bookmarks));
+      app.ports.saveBookmarks.subscribe((cards) => {
+        localStorage.setItem("cards", JSON.stringify(cards));
       });
     </script>
   </body>
