@@ -68,6 +68,14 @@ setModal mdl model =
 init : String -> ( Model, Cmd Msg )
 init content =
     case Json.Decode.decodeString (Json.Decode.list Card.decoder) content of
+        -- start with _some_ cards
+        Ok [] ->
+            let
+                initCards =
+                    [ Card.blank, Card.blank, Card.blank, Card.blank ]
+            in
+            ( { cards = initCards, modal = Closed }, saveCards initCards )
+
         Ok cards ->
             ( { cards = cards, modal = Closed }, Cmd.none )
 
