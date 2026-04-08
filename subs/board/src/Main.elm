@@ -204,7 +204,10 @@ view model =
         buttons =
             let
                 btnClass =
-                    "border rounded-md py-1 px-2 h-fit hover:bg-blue-400 hover:text-white disabled:opacity-50 hover:disabled:bg-gray-400"
+                    String.join " "
+                        [ "border rounded-md py-1 px-2 h-fit text-white bg-blue-400 opacity-50 hover:opacity-100"
+                        , "disabled:text-gray-400 disabled:bg-gray-300"
+                        ]
 
                 disabled =
                     List.isEmpty model.cards
