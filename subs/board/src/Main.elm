@@ -139,20 +139,7 @@ update msg model =
             updateCards <| List.Extra.removeAt i model.cards
 
         NewCard ->
-            let
-                newCard =
-                    Card.blank
-
-                newCards =
-                    model.cards ++ [ newCard ]
-
-                ( updatedModel1, updateCmd ) =
-                    newCards |> updateCards
-
-                ( updatedModel2, focusCmd ) =
-                    updatedModel1 |> setModal (CardEdit newCard (List.length newCards - 1))
-            in
-            ( updatedModel2, Cmd.batch [ updateCmd, focusCmd ] )
+            updateCards <| model.cards ++ [ Card.blank ]
 
         KeyDown "Escape" ->
             ( { model | modal = Closed }, Cmd.none )
@@ -193,7 +180,7 @@ view model =
     let
         cards =
             Html.div
-                [ HA.class "flex flex-wrap gap-1 pb-[170px]", HE.onDoubleClick NewCard ]
+                [ HA.class "flex flex-wrap gap-1 pb-[170px]" ]
                 (model.cards
                     |> List.indexedMap
                         (\i card ->
@@ -213,7 +200,9 @@ view model =
                     List.isEmpty model.cards
             in
             Html.div [ HA.class "flex flex-wrap gap-1 text-gray-300 font-bold text-sm items-center justify-end h-[60px]" ]
-                [ Html.button [ HA.class btnClass, HE.onClick RequestFileOpen ]
+                [ Html.button [ HA.class btnClass, HE.onClick NewCard ]
+                    [ Html.text "+" ]
+                , Html.button [ HA.class btnClass, HE.onClick RequestFileOpen ]
                     [ Html.text "Import" ]
                 , Html.button [ HA.class btnClass, HE.onClick DownloadFile, HA.disabled disabled ]
                     [ Html.text "Export" ]
