@@ -187,13 +187,28 @@ view : Model -> Html Msg
 view model =
     let
         cards =
+            let
+                doubleClickOnly ev =
+                    HE.custom "mousedown"
+                        (Json.Decode.field "detail" Json.Decode.int
+                            |> Json.Decode.andThen
+                                (\detail ->
+                                    if detail >= 2 then
+                                        Json.Decode.succeed
+                                            { message = ev
+                                            , stopPropagation = True
+                                            , preventDefault = True
+                                            }
+
+                                    else
+                                        Json.Decode.fail "single click"
+                                )
+                        )
+            in
             Html.div
                 [ HA.class "flex flex-wrap gap-1 pb-[170px]" ]
                 (model.cards
-                    |> List.indexedMap
-                        (\i card ->
-                            renderCard card [ HE.stopPropagationOn "dblclick" (Json.Decode.succeed ( Edit card i, True )) ]
-                        )
+                    |> List.indexedMap (\i card -> renderCard card [ doubleClickOnly <| Edit card i ])
                 )
 
         buttons =
