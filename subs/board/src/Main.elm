@@ -178,7 +178,7 @@ renderCard card extraAttrs =
     in
     Html.div ([ HA.class "card w-[277px] h-[170px] rounded-md text-white text-xl p-3", HA.style "background" background ] ++ extraAttrs)
         [ Html.div
-            [ HA.class "flex size-full items-center justify-center" ]
+            [ HA.class "flex size-full items-center justify-center truncate" ]
             [ Markdown.toHtmlWith unsanitized [] card.content ]
         ]
 
