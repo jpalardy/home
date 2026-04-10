@@ -5,8 +5,8 @@
     text-decoration: revert;
   }
 
-  ul {
-    list-style: inside;
+  li::before {
+    content: "• ";
   }
 
   h1,
