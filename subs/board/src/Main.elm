@@ -252,7 +252,7 @@ view model =
             let
                 btnClass =
                     String.join " "
-                        [ "border rounded-md py-1 px-2 h-fit text-white bg-blue-400 opacity-50 hover:opacity-100"
+                        [ "border rounded-md py-1 px-3 h-fit hover:text-white hover:bg-blue-400"
                         , "disabled:text-gray-400 disabled:bg-gray-300"
                         ]
 
