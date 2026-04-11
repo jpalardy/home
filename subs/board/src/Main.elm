@@ -4,6 +4,7 @@ import Browser
 import Browser.Dom
 import Browser.Events
 import Card exposing (Card)
+import Drag
 import File exposing (File)
 import File.Download
 import File.Select
@@ -30,6 +31,8 @@ type Msg
     | UpdateColor String
     | UpdateCard Card Int
     | DeleteCard Int
+    | DragStart Int
+    | DragDrop Int
     | NewCard
 
 
@@ -41,6 +44,7 @@ type Modal
 
 type alias Model =
     { cards : List Card
+    , dragIndex : Maybe Int
     , modal : Modal
     }
 
@@ -74,20 +78,20 @@ init content =
                 initCards =
                     [ Card.blank, Card.blank, Card.blank, Card.blank ]
             in
-            ( { cards = initCards, modal = Closed }, saveCards initCards )
+            ( { cards = initCards, dragIndex = Nothing, modal = Closed }, saveCards initCards )
 
         Ok cards ->
-            ( { cards = cards, modal = Closed }, Cmd.none )
+            ( { cards = cards, dragIndex = Nothing, modal = Closed }, Cmd.none )
 
         Err err ->
-            { cards = [], modal = Closed } |> setModal (ImportError err)
+            { cards = [], dragIndex = Nothing, modal = Closed } |> setModal (ImportError err)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     let
         updateCards updatedCards =
-            ( { model | cards = updatedCards, modal = Closed }, saveCards updatedCards )
+            ( { model | cards = updatedCards, dragIndex = Nothing, modal = Closed }, saveCards updatedCards )
     in
     case msg of
         Noop ->
@@ -155,6 +159,30 @@ update msg model =
         KeyDown _ ->
             ( model, Cmd.none )
 
+        DragStart i ->
+            ( { model | dragIndex = Just i }, Cmd.none )
+
+        DragDrop dropIndex ->
+            case model.dragIndex of
+                Nothing ->
+                    ( model, Cmd.none )
+
+                Just dragIndex ->
+                    updateCards <| moveItem dragIndex dropIndex model.cards
+
+
+moveItem : Int -> Int -> List a -> List a
+moveItem srcIndex dstIndex list =
+    case List.Extra.getAt srcIndex list of
+        Nothing ->
+            list
+
+        Just item ->
+            list
+                |> List.Extra.removeAt srcIndex
+                |> List.Extra.splitAt dstIndex
+                |> (\( before, after ) -> List.concat [ before, [ item ], after ])
+
 
 
 -------------------------------------------------
@@ -208,7 +236,16 @@ view model =
             Html.div
                 [ HA.class "flex flex-wrap gap-1 pb-[170px]" ]
                 (model.cards
-                    |> List.indexedMap (\i card -> renderCard card [ doubleClickOnly <| Edit card i ])
+                    |> List.indexedMap
+                        (\i card ->
+                            renderCard card
+                                [ doubleClickOnly <| Edit card i
+                                , HA.draggable "true"
+                                , Drag.onStart (DragStart i)
+                                , Drag.onDrop (DragDrop i)
+                                , Drag.onOver Noop
+                                ]
+                        )
                 )
 
         buttons =
