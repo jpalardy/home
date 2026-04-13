@@ -1,0 +1,21 @@
+#!/usr/bin/env -S awk -f
+
+function wrap(str) {
+  return sprintf("\"%s\"", str)
+}
+
+{
+  pairs[$1] = pairs[$1]$2
+  pairs[$2] = pairs[$2]$1
+}
+
+END {
+  for (k in pairs) {
+    printf "{%s:[%s", wrap(k), wrap("~" k)
+    for (i=1; i<=length(pairs[k]); i++) {
+      printf ",%s", wrap("~" substr(pairs[k], i, 1))
+    }
+    print "]}"
+  }
+}
+
