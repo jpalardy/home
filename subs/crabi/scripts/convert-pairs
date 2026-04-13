@@ -5,8 +5,14 @@ function wrap(str) {
 }
 
 {
-  pairs[$1] = pairs[$1]$2
-  pairs[$2] = pairs[$2]$1
+  for (i = 1; i <= NF; i++) {
+    for (j = 1; j <= NF; j++) {
+      if (i == j) continue
+      pairs[$i] = pairs[$i]$j
+    }
+  }
+  # pairs[$1] = pairs[$1]$2
+  # pairs[$2] = pairs[$2]$1
 }
 
 END {
