@@ -56,6 +56,7 @@ type alias Card =
     { kanji : String
     , keywords : List String
     , searchKeywords : Set String
+    , similar : Bool
     }
 
 
@@ -117,6 +118,7 @@ getCards =
                             { kanji = kanji
                             , keywords = keywords
                             , searchKeywords = Set.fromList (kanji :: keywords)
+                            , similar = keywords |> List.any (String.startsWith "~")
                             }
                         )
                     )
@@ -337,13 +339,26 @@ renderCard card =
     let
         wanikaniURL query =
             Url.Builder.crossOrigin "https://www.wanikani.com" [ "search" ] [ Url.Builder.string "query" query ]
+
+        renderIf : Bool -> Html msg -> Html msg
+        renderIf condition content =
+            ifelse condition content (Html.text "")
     in
     Html.div
         [ HA.class "w-[220px] h-[136px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2 relative group" ]
         [ Html.div [ HA.class "mx-auto text-6xl flex items-center font-japanese text-gray-700" ] [ Html.text card.kanji ]
         , Html.div [ HA.class "flex items-center" ]
             [ Html.ul [ HA.class "text-right text-gray-500 ml-auto mr-4 leading-none" ]
-                (card.keywords |> List.map (\kw -> Html.li [ HA.class "my-1" ] [ Html.text kw ]))
+                ((card.keywords |> List.filter (not << String.startsWith "~") |> List.map (\kw -> Html.li [ HA.class "my-1" ] [ Html.text kw ]))
+                    ++ [ renderIf card.similar <|
+                            let
+                                similar =
+                                    "~" ++ card.kanji
+                            in
+                            Html.li [ HA.class "my-1" ]
+                                [ Html.a [ HA.class "bg-blue-300 px-2", HA.href "#", HE.onClick <| Search similar ] [ Html.text similar ] ]
+                       ]
+                )
             ]
         , Html.a
             [ HA.href <| wanikaniURL card.kanji
