@@ -1,4 +1,20 @@
 {
+  "々": [
+    "noma",
+    "repeater"
+  ],
+  "丁": [
+    "chou",
+    "street"
+  ],
+  "万": [
+    "man",
+    "ten thousand"
+  ],
+  "丈": [
+    "jou",
+    "height"
+  ],
   "上": [
     "jou",
     "above"
@@ -7,1423 +23,168 @@
     "ka",
     "below"
   ],
-  "大": [
-    "tai",
-    "big"
-  ],
-  "工": [
-    "kou",
-    "construction"
-  ],
-  "入": [
-    "nyuu",
-    "enter"
-  ],
-  "山": [
-    "san",
-    "mountain"
-  ],
-  "口": [
-    "kou",
-    "mouth"
-  ],
-  "人": [
-    "nin",
-    "person"
-  ],
-  "力": [
-    "ryoku",
-    "riki",
-    "power"
-  ],
-  "女": [
-    "jo",
-    "woman"
-  ],
-  "玉": [
-    "tama",
-    "ball"
-  ],
-  "本": [
-    "hon",
-    "book"
-  ],
-  "子": [
-    "shi",
-    "child"
-  ],
-  "丸": [
-    "maru",
-    "circle"
-  ],
-  "正": [
-    "sei",
-    "shou",
-    "correct"
-  ],
-  "土": [
-    "do",
-    "dirt"
-  ],
-  "犬": [
-    "inu",
-    "dog"
-  ],
-  "夕": [
-    "yuu",
-    "evening"
-  ],
-  "出": [
-    "shutsu",
-    "exit"
-  ],
-  "目": [
-    "moku",
-    "me",
-    "eye"
-  ],
-  "火": [
-    "ka",
-    "fire"
-  ],
-  "手": [
-    "te",
-    "hand"
-  ],
-  "天": [
-    "ten",
-    "heaven"
-  ],
-  "王": [
-    "ou",
-    "king"
-  ],
-  "左": [
-    "sa",
-    "left"
-  ],
-  "中": [
-    "chuu",
-    "middle"
-  ],
-  "月": [
-    "getsu",
-    "moon"
-  ],
-  "々": [
-    "noma",
-    "repeater"
-  ],
-  "田": [
-    "ta",
-    "rice paddy"
-  ],
-  "右": [
-    "yuu",
-    "right"
-  ],
-  "小": [
-    "shou",
-    "small"
-  ],
-  "立": [
-    "ritsu",
-    "stand"
-  ],
-  "丁": [
-    "chou",
-    "street"
-  ],
-  "日": [
-    "nichi",
-    "jitsu",
-    "hi",
-    "ka",
-    "sun"
-  ],
-  "刀": [
-    "tou",
-    "sword"
-  ],
-  "才": [
-    "sai",
-    "talent"
-  ],
-  "千": [
-    "sen",
-    "thousand"
-  ],
-  "木": [
-    "moku",
-    "tree"
-  ],
-  "水": [
-    "sui",
-    "water"
-  ],
-  "白": [
-    "haku",
-    "white"
-  ],
-  "文": [
-    "bun",
-    "writing"
-  ],
-  "円": [
-    "en",
-    "yen"
-  ],
-  "矢": [
-    "ya",
-    "arrow"
-  ],
-  "市": [
-    "shi",
-    "city"
-  ],
-  "牛": [
-    "gyuu",
-    "cow"
-  ],
-  "切": [
-    "setsu",
-    "cut"
-  ],
-  "方": [
-    "hou",
-    "direction"
-  ],
-  "戸": [
-    "to",
-    "door"
-  ],
-  "太": [
-    "tai",
-    "fat"
-  ],
-  "父": [
-    "chichi",
-    "father"
-  ],
-  "少": [
-    "shou",
-    "few"
-  ],
-  "友": [
-    "yuu",
-    "friend"
-  ],
-  "毛": [
-    "mou",
-    "fur"
-  ],
-  "半": [
-    "han",
-    "half"
-  ],
-  "心": [
-    "shin",
-    "heart"
-  ],
-  "内": [
-    "nai",
-    "inside"
-  ],
-  "字": [
-    "ji",
-    "letter"
-  ],
-  "生": [
-    "sei",
-    "life"
-  ],
-  "台": [
-    "dai",
-    "machine"
-  ],
-  "母": [
-    "haha",
-    "mother"
-  ],
-  "午": [
-    "go",
-    "noon"
-  ],
-  "北": [
-    "hoku",
-    "north"
-  ],
-  "今": [
-    "kon",
-    "now"
-  ],
-  "古": [
-    "ko",
-    "old"
-  ],
-  "外": [
-    "gai",
-    "outside"
-  ],
-  "分": [
-    "bun",
-    "part"
-  ],
-  "引": [
-    "hi",
-    "pull"
-  ],
-  "止": [
-    "shi",
-    "stop"
-  ],
-  "用": [
-    "you",
-    "task"
-  ],
-  "万": [
-    "man",
-    "ten thousand"
-  ],
-  "広": [
-    "hiro",
-    "wide"
-  ],
-  "冬": [
-    "fuyu",
-    "winter"
-  ],
-  "打": [
-    "da",
-    "hit"
-  ],
-  "氷": [
-    "koori",
-    "ice"
-  ],
-  "号": [
-    "gou",
-    "number"
-  ],
-  "去": [
-    "kyo",
-    "past"
-  ],
-  "先": [
-    "sen",
-    "previous"
-  ],
-  "申": [
-    "mou",
-    "say humbly"
-  ],
-  "早": [
-    "sou",
-    "early"
-  ],
-  "名": [
-    "mei",
-    "name"
-  ],
-  "年": [
-    "nen",
-    "year"
-  ],
-  "百": [
-    "hyaku",
-    "hundred"
-  ],
-  "町": [
-    "chou",
-    "town"
-  ],
-  "穴": [
-    "ana",
-    "hole"
-  ],
-  "元": [
-    "gen",
-    "origin"
-  ],
-  "休": [
-    "kyuu",
-    "rest"
-  ],
-  "村": [
-    "mura",
-    "village"
-  ],
-  "央": [
-    "ou",
-    "center"
-  ],
-  "気": [
-    "ki",
-    "energy"
-  ],
-  "男": [
-    "dan",
-    "man"
-  ],
-  "宝": [
-    "hou",
-    "treasure"
+  "不": [
+    "fu",
+    "not"
+  ],
+  "与": [
+    "yo",
+    "give"
   ],
   "世": [
     "sei",
     "world"
   ],
-  "他": [
-    "ta",
-    "other"
+  "両": [
+    "ryou",
+    "both"
   ],
-  "皿": [
-    "sara",
-    "plate"
+  "並": [
+    "hei",
+    "line up"
   ],
-  "竹": [
-    "take",
-    "bamboo"
+  "中": [
+    "chuu",
+    "middle"
   ],
-  "糸": [
-    "ito",
-    "thread"
-  ],
-  "耳": [
-    "mimi",
-    "ear"
-  ],
-  "虫": [
-    "mushi",
-    "insect"
-  ],
-  "花": [
-    "hana",
-    "flower"
-  ],
-  "見": [
-    "mi",
-    "see"
-  ],
-  "貝": [
-    "kai",
-    "shellfish"
-  ],
-  "赤": [
-    "aka",
-    "red"
-  ],
-  "足": [
-    "soku",
-    "foot"
-  ],
-  "車": [
-    "sha",
-    "car"
-  ],
-  "不": [
-    "fu",
-    "not"
-  ],
-  "仕": [
-    "shi",
-    "doing"
+  "丸": [
+    "maru",
+    "circle"
   ],
   "主": [
     "shu",
     "master"
   ],
-  "写": [
-    "sha",
-    "copy"
-  ],
-  "平": [
-    "hei",
-    "flat"
-  ],
-  "礼": [
-    "rei",
-    "thanks"
-  ],
-  "石": [
-    "seki",
-    "stone"
-  ],
-  "兄": [
-    "kyou",
-    "older brother"
-  ],
-  "皮": [
-    "hi",
-    "skin"
-  ],
-  "交": [
-    "kou",
-    "mix"
-  ],
-  "光": [
-    "kou",
-    "sunlight"
-  ],
-  "回": [
-    "kai",
-    "times"
-  ],
-  "多": [
-    "ta",
-    "many"
-  ],
-  "毎": [
-    "mai",
-    "every"
-  ],
-  "代": [
-    "tai",
-    "dai",
-    "substitute"
-  ],
-  "米": [
-    "bei",
-    "rice"
-  ],
-  "体": [
-    "tai",
-    "body"
-  ],
-  "図": [
-    "zu",
-    "diagram"
-  ],
-  "声": [
-    "koe",
-    "voice"
-  ],
-  "弟": [
-    "dai",
-    "younger brother"
-  ],
-  "来": [
-    "rai",
-    "come"
-  ],
-  "社": [
-    "sha",
-    "company"
-  ],
-  "角": [
-    "kaku",
-    "angle"
-  ],
-  "谷": [
-    "tani",
-    "valley"
-  ],
-  "麦": [
-    "mugi",
-    "wheat"
-  ],
-  "林": [
-    "hayashi",
-    "forest"
-  ],
-  "当": [
-    "tou",
-    "correct"
-  ],
-  "考": [
-    "kou",
-    "think"
-  ],
-  "肉": [
-    "niku",
-    "meat"
-  ],
-  "自": [
-    "ji",
-    "self"
-  ],
-  "色": [
-    "iro",
-    "color"
-  ],
-  "行": [
-    "kou",
-    "go"
-  ],
-  "西": [
-    "sei",
-    "west"
-  ],
-  "何": [
-    "nani",
-    "what"
-  ],
-  "近": [
-    "kin",
-    "near"
-  ],
-  "言": [
-    "gen",
-    "say"
-  ],
-  "空": [
-    "kuu",
-    "sky"
-  ],
-  "草": [
-    "kusa",
-    "grass"
-  ],
-  "音": [
-    "on",
-    "sound"
-  ],
-  "会": [
-    "kai",
-    "meet"
-  ],
-  "同": [
-    "dou",
-    "same"
-  ],
-  "豚": [
-    "buta",
-    "pig"
-  ],
-  "作": [
-    "saku",
-    "make"
-  ],
-  "走": [
-    "sou",
-    "run"
-  ],
-  "羽": [
-    "hane",
-    "feather"
-  ],
-  "形": [
-    "kei",
-    "shape"
-  ],
-  "里": [
-    "sato",
-    "hometown"
-  ],
-  "金": [
-    "kin",
-    "gold"
-  ],
-  "学": [
-    "gaku",
-    "study"
-  ],
-  "雨": [
-    "ame",
-    "rain"
-  ],
-  "青": [
-    "sei",
-    "blue"
-  ],
-  "斤": [
-    "kin",
-    "axe"
-  ],
-  "化": [
-    "ka",
-    "change"
-  ],
-  "地": [
-    "chi",
-    "earth"
-  ],
-  "両": [
-    "ryou",
-    "both"
-  ],
-  "全": [
-    "zen",
-    "all"
-  ],
-  "向": [
-    "kou",
-    "yonder"
-  ],
-  "安": [
-    "an",
-    "relax"
-  ],
-  "州": [
-    "shuu",
-    "state"
-  ],
-  "曲": [
-    "kyoku",
-    "music"
-  ],
-  "有": [
-    "yuu",
-    "have"
-  ],
-  "京": [
-    "kyou",
-    "capital"
-  ],
-  "国": [
-    "koku",
-    "country"
-  ],
-  "夜": [
-    "ya",
-    "night"
-  ],
-  "明": [
-    "mei",
-    "bright"
-  ],
-  "東": [
-    "tou",
-    "east"
-  ],
-  "歩": [
-    "ho",
-    "walk"
-  ],
-  "知": [
-    "chi",
-    "know"
-  ],
-  "南": [
-    "nan",
-    "south"
-  ],
-  "室": [
-    "shitsu",
-    "room"
-  ],
-  "妹": [
-    "mai",
-    "younger sister"
-  ],
-  "直": [
-    "choku",
-    "fix"
-  ],
-  "前": [
-    "zen",
-    "front"
-  ],
-  "死": [
-    "shi",
-    "death"
-  ],
-  "羊": [
-    "you",
-    "sheep"
-  ],
-  "血": [
-    "ketsu",
-    "blood"
-  ],
-  "長": [
-    "chou",
-    "long"
-  ],
-  "後": [
-    "go",
-    "behind"
-  ],
-  "思": [
-    "omo",
-    "think"
-  ],
-  "店": [
-    "ten",
-    "shop"
-  ],
-  "星": [
-    "sei",
-    "star"
-  ],
-  "海": [
-    "kai",
-    "sea"
-  ],
-  "点": [
-    "ten",
-    "point"
-  ],
-  "活": [
-    "katsu",
-    "lively"
-  ],
-  "科": [
-    "ka",
-    "science"
-  ],
-  "茶": [
-    "cha",
-    "tea"
-  ],
-  "私": [
-    "shi",
-    "i"
-  ],
-  "食": [
-    "shoku",
-    "eat"
-  ],
-  "首": [
-    "kubi",
-    "neck"
-  ],
-  "亡": [
-    "bou",
-    "death"
-  ],
-  "家": [
-    "ie",
-    "house"
-  ],
-  "姉": [
-    "shi",
-    "older sister"
-  ],
-  "取": [
-    "to",
-    "take"
-  ],
-  "床": [
-    "yuka",
-    "floor"
-  ],
-  "由": [
-    "yuu",
-    "reason"
-  ],
-  "札": [
-    "satsu",
-    "fuda",
-    "bill"
-  ],
-  "辺": [
-    "hen",
-    "area"
-  ],
-  "付": [
-    "tsu",
-    "attach"
-  ],
-  "以": [
-    "i",
-    "from"
-  ],
-  "必": [
-    "hitsu",
-    "certain"
-  ],
-  "未": [
-    "mi",
-    "not yet"
-  ],
-  "末": [
-    "matsu",
-    "end"
-  ],
-  "校": [
-    "kou",
-    "school"
-  ],
-  "夏": [
-    "natsu",
-    "summer"
-  ],
-  "弱": [
-    "jaku",
-    "weak"
-  ],
-  "通": [
-    "tsuu",
-    "pass through"
-  ],
-  "高": [
-    "kou",
-    "tall"
-  ],
-  "強": [
-    "kyou",
-    "strong"
-  ],
-  "理": [
-    "ri",
-    "reason"
-  ],
-  "画": [
-    "ga",
-    "kaku",
-    "image"
-  ],
-  "欠": [
-    "ketsu",
-    "lack"
-  ],
-  "氏": [
-    "shi",
-    "family name"
-  ],
-  "民": [
-    "min",
-    "peoples"
-  ],
-  "失": [
-    "shitsu",
-    "fault"
-  ],
-  "紙": [
-    "kami",
-    "paper"
-  ],
-  "船": [
-    "sen",
-    "boat"
-  ],
-  "週": [
-    "shuu",
-    "week"
-  ],
-  "雪": [
-    "yuki",
-    "snow"
-  ],
-  "時": [
-    "ji",
-    "time"
-  ],
-  "記": [
-    "ki",
-    "write down"
-  ],
-  "教": [
-    "kyou",
-    "teach"
-  ],
-  "組": [
-    "kumi",
-    "group"
-  ],
-  "魚": [
-    "gyo",
-    "fish"
-  ],
-  "鳥": [
-    "chou",
-    "bird"
-  ],
-  "黄": [
-    "ki",
-    "yellow"
-  ],
-  "黒": [
-    "koku",
-    "black"
-  ],
-  "象": [
-    "zou",
-    "elephant"
-  ],
-  "風": [
-    "fuu",
-    "wind"
-  ],
-  "映": [
-    "ei",
-    "reflect"
-  ],
-  "次": [
-    "ji",
-    "next"
-  ],
-  "池": [
-    "chi",
-    "pond"
-  ],
-  "支": [
-    "shi",
-    "support"
-  ],
-  "住": [
-    "juu",
-    "dwell"
-  ],
-  "助": [
-    "jo",
-    "help"
-  ],
-  "君": [
-    "kun",
-    "buddy"
-  ],
-  "対": [
-    "tai",
-    "versus"
-  ],
-  "究": [
+  "久": [
     "kyuu",
-    "research"
-  ],
-  "身": [
-    "shin",
-    "somebody"
-  ],
-  "者": [
-    "sha",
-    "someone"
-  ],
-  "研": [
-    "ken",
-    "sharpen"
-  ],
-  "森": [
-    "mori",
-    "forest"
-  ],
-  "朝": [
-    "asa",
-    "morning"
-  ],
-  "絵": [
-    "e",
-    "picture"
-  ],
-  "道": [
-    "dou",
-    "road"
-  ],
-  "間": [
-    "kan",
-    "ma",
-    "interval"
-  ],
-  "数": [
-    "suu",
-    "count"
-  ],
-  "楽": [
-    "raku",
-    "comfort"
-  ],
-  "話": [
-    "wa",
-    "talk"
-  ],
-  "役": [
-    "yaku",
-    "service"
-  ],
-  "投": [
-    "tou",
-    "throw"
-  ],
-  "決": [
-    "ketsu",
-    "decide"
-  ],
-  "雲": [
-    "kumo",
-    "cloud"
-  ],
-  "電": [
-    "den",
-    "electricity"
-  ],
-  "所": [
-    "sho",
-    "place"
-  ],
-  "反": [
-    "han",
-    "anti"
-  ],
-  "馬": [
-    "ba",
-    "horse"
-  ],
-  "場": [
-    "jou",
-    "location"
-  ],
-  "医": [
-    "i",
-    "medicine"
-  ],
-  "番": [
-    "ban",
-    "number in a series"
-  ],
-  "局": [
-    "kyoku",
-    "bureau"
-  ],
-  "答": [
-    "tou",
-    "kota",
-    "answer"
-  ],
-  "買": [
-    "ka",
-    "buy"
-  ],
-  "売": [
-    "bai",
-    "sell"
-  ],
-  "事": [
-    "ji",
-    "occurrence"
-  ],
-  "具": [
-    "gu",
-    "tool"
-  ],
-  "和": [
-    "wa",
-    "peace"
-  ],
-  "服": [
-    "fuku",
-    "clothes"
-  ],
-  "物": [
-    "butsu",
-    "motsu",
-    "mono",
-    "thing"
-  ],
-  "苦": [
     "ku",
-    "suffering"
+    "long time"
   ],
-  "表": [
-    "hyou",
-    "express"
+  "乏": [
+    "bou",
+    "scarce"
   ],
   "乗": [
     "jou",
     "no",
     "ride"
   ],
-  "客": [
-    "kyaku",
-    "guest"
+  "乱": [
+    "ran",
+    "riot"
   ],
-  "屋": [
-    "ya",
-    "roof"
+  "乳": [
+    "nyuu",
+    "milk"
   ],
-  "持": [
-    "ji",
-    "hold"
-  ],
-  "相": [
-    "sou",
-    "mutual"
-  ],
-  "県": [
-    "ken",
-    "prefecture"
-  ],
-  "美": [
-    "bi",
-    "beauty"
-  ],
-  "負": [
-    "fu",
-    "lose"
-  ],
-  "比": [
-    "hi",
-    "compare"
-  ],
-  "送": [
-    "sou",
-    "send"
-  ],
-  "談": [
-    "dan",
-    "talk"
-  ],
-  "像": [
-    "zou",
-    "statue"
-  ],
-  "辛": [
-    "kara",
-    "spicy"
-  ],
-  "使": [
-    "shi",
-    "use"
-  ],
-  "部": [
-    "bu",
-    "part"
-  ],
-  "界": [
-    "kai",
-    "world"
-  ],
-  "発": [
-    "hatsu",
-    "departure"
-  ],
-  "重": [
-    "juu",
-    "heavy"
-  ],
-  "仮": [
-    "ka",
-    "temporary"
-  ],
-  "予": [
-    "yo",
-    "beforehand"
-  ],
-  "定": [
-    "tei",
-    "determine"
-  ],
-  "新": [
-    "shin",
-    "new"
-  ],
-  "返": [
-    "hen",
-    "return"
-  ],
-  "受": [
-    "ju",
-    "accept"
-  ],
-  "実": [
-    "jitsu",
-    "truth"
-  ],
-  "要": [
-    "you",
-    "need"
-  ],
-  "度": [
-    "do",
-    "degree"
-  ],
-  "保": [
-    "ho",
-    "preserve"
-  ],
-  "試": [
-    "shi",
-    "try"
-  ],
-  "験": [
-    "ken",
-    "test"
-  ],
-  "勝": [
-    "shou",
-    "win"
-  ],
-  "泳": [
-    "oyo",
-    "swim"
-  ],
-  "公": [
-    "kou",
-    "public"
-  ],
-  "始": [
-    "shi",
-    "begin"
-  ],
-  "起": [
-    "o",
-    "wake up"
-  ],
-  "院": [
-    "in",
-    "institution"
-  ],
-  "終": [
-    "shuu",
-    "end"
-  ],
-  "習": [
-    "shuu",
-    "learn"
-  ],
-  "転": [
-    "ten",
-    "revolve"
-  ],
-  "葉": [
-    "ha",
-    "leaf"
-  ],
-  "運": [
-    "un",
-    "carry"
-  ],
-  "開": [
-    "kai",
-    "open"
-  ],
-  "飲": [
-    "no",
-    "drink"
-  ],
-  "業": [
-    "gyou",
-    "business"
+  "乾": [
+    "kan",
+    "dry"
   ],
   "了": [
     "ryou",
     "finish"
   ],
-  "歌": [
-    "ka",
-    "song"
-  ],
-  "算": [
-    "san",
-    "calculate"
-  ],
-  "聞": [
-    "bun",
-    "hear"
-  ],
-  "語": [
-    "go",
-    "language"
-  ],
-  "鳴": [
-    "na",
-    "chirp"
-  ],
-  "頁": [
-    "kashira",
-    "page"
-  ],
-  "速": [
-    "soku",
-    "fast"
-  ],
-  "配": [
-    "hai",
-    "distribute"
-  ],
-  "酒": [
-    "shu",
-    "alcohol"
-  ],
-  "進": [
-    "shin",
-    "advance"
-  ],
-  "落": [
-    "raku",
-    "fall"
-  ],
-  "軽": [
-    "karo",
-    "lightweight"
-  ],
-  "集": [
-    "shuu",
-    "collect"
-  ],
-  "路": [
-    "ro",
-    "road"
-  ],
-  "農": [
-    "nou",
-    "farming"
-  ],
-  "線": [
-    "sen",
-    "line"
-  ],
-  "鉄": [
-    "tetsu",
-    "iron"
-  ],
-  "横": [
-    "yoko",
-    "side"
-  ],
-  "調": [
-    "chou",
-    "investigate"
-  ],
-  "読": [
-    "doku",
+  "予": [
     "yo",
-    "read"
-  ],
-  "親": [
-    "shin",
-    "parent"
-  ],
-  "頭": [
-    "zu",
-    "tou",
-    "kashira",
-    "atama",
-    "head"
-  ],
-  "顔": [
-    "kao",
-    "face"
-  ],
-  "病": [
-    "byou",
-    "sick"
-  ],
-  "漢": [
-    "kan",
-    "chinese"
-  ],
-  "最": [
-    "sai",
-    "most"
-  ],
-  "求": [
-    "kyuu",
-    "request"
-  ],
-  "誰": [
-    "dare",
-    "who"
+    "beforehand"
   ],
   "争": [
     "sou",
     "conflict"
   ],
+  "事": [
+    "ji",
+    "occurrence"
+  ],
+  "井": [
+    "i",
+    "well"
+  ],
+  "亡": [
+    "bou",
+    "death"
+  ],
+  "交": [
+    "kou",
+    "mix"
+  ],
+  "京": [
+    "kyou",
+    "capital"
+  ],
+  "人": [
+    "nin",
+    "person"
+  ],
+  "今": [
+    "kon",
+    "now"
+  ],
+  "仏": [
+    "butsu",
+    "buddha"
+  ],
+  "仕": [
+    "shi",
+    "doing"
+  ],
+  "他": [
+    "ta",
+    "other"
+  ],
+  "付": [
+    "tsu",
+    "attach"
+  ],
+  "代": [
+    "tai",
+    "dai",
+    "substitute"
+  ],
+  "令": [
+    "rei",
+    "orders"
+  ],
+  "以": [
+    "i",
+    "from"
+  ],
+  "仮": [
+    "ka",
+    "temporary"
+  ],
   "仲": [
     "naka",
     "relationship"
+  ],
+  "件": [
+    "ken",
+    "matter"
+  ],
+  "任": [
+    "nin",
+    "duty"
+  ],
+  "企": [
+    "ki",
+    "plan"
+  ],
+  "休": [
+    "kyuu",
+    "rest"
+  ],
+  "会": [
+    "kai",
+    "meet"
   ],
   "伝": [
     "den",
     "transmit"
   ],
-  "好": [
-    "kou",
-    "like"
-  ],
-  "老": [
-    "rou",
-    "elderly"
+  "似": [
+    "ni",
+    "resemble"
   ],
   "位": [
     "i",
@@ -1433,841 +194,239 @@
     "tei",
     "low"
   ],
-  "初": [
-    "sho",
-    "first"
+  "住": [
+    "juu",
+    "dwell"
   ],
-  "別": [
-    "betsu",
-    "separate"
+  "体": [
+    "tai",
+    "body"
   ],
-  "利": [
-    "ri",
-    "profit"
+  "何": [
+    "nani",
+    "what"
   ],
-  "努": [
-    "do",
-    "toil"
+  "余": [
+    "yo",
+    "surplus"
   ],
-  "労": [
-    "rou",
-    "labor"
+  "作": [
+    "saku",
+    "make"
   ],
-  "岸": [
-    "gan",
-    "coast"
-  ],
-  "放": [
-    "hou",
-    "release"
-  ],
-  "注": [
-    "chuu",
-    "pour"
-  ],
-  "拾": [
-    "hiro",
-    "pick up"
-  ],
-  "指": [
+  "使": [
     "shi",
-    "finger"
+    "use"
   ],
-  "命": [
-    "mei",
-    "myou",
-    "fate"
+  "例": [
+    "rei",
+    "example"
   ],
-  "洋": [
-    "you",
-    "western style"
-  ],
-  "神": [
-    "shin",
-    "god"
-  ],
-  "功": [
-    "kou",
-    "achievement"
-  ],
-  "成": [
-    "sei",
-    "become"
-  ],
-  "波": [
-    "ha",
-    "wave"
-  ],
-  "級": [
-    "kyuu",
-    "level"
-  ],
-  "競": [
+  "供": [
     "kyou",
-    "compete"
+    "offer",
+    "accompany"
   ],
-  "良": [
-    "ryou",
-    "good"
-  ],
-  "特": [
-    "toku",
-    "special"
+  "価": [
+    "ka",
+    "value"
   ],
   "便": [
     "ben",
     "bin",
     "convenience"
   ],
-  "秒": [
-    "byou",
-    "second"
-  ],
-  "戦": [
-    "sen",
-    "war"
-  ],
-  "働": [
-    "dou",
-    "work"
-  ],
-  "共": [
-    "kyou",
-    "together"
-  ],
-  "昔": [
-    "mukashi",
-    "long ago"
-  ],
-  "育": [
-    "iku",
-    "nurture"
-  ],
-  "追": [
-    "o",
-    "follow"
-  ],
-  "令": [
-    "rei",
-    "orders"
-  ],
-  "意": [
-    "i",
-    "idea"
-  ],
-  "味": [
-    "mi",
-    "flavor",
-    "taste"
-  ],
-  "待": [
-    "tai",
-    "wait"
-  ],
-  "息": [
-    "soku",
-    "breath"
-  ],
-  "根": [
-    "kon",
-    "root"
-  ],
-  "彼": [
-    "kare",
-    "he"
-  ],
-  "流": [
-    "ryuu",
-    "ru",
-    "stream"
-  ],
-  "消": [
-    "shou",
-    "extinguish"
-  ],
-  "倍": [
-    "bai",
-    "double"
-  ],
-  "疲": [
-    "hi",
-    "tired"
-  ],
-  "員": [
-    "in",
-    "member"
-  ],
-  "島": [
-    "shima",
-    "island"
-  ],
-  "動": [
-    "dou",
-    "move"
-  ],
-  "商": [
-    "shou",
-    "merchandise"
-  ],
-  "族": [
-    "zoku",
-    "tribe"
-  ],
-  "深": [
-    "shin",
-    "deep"
-  ],
-  "童": [
-    "dou",
-    "juvenile"
-  ],
-  "陽": [
-    "you",
-    "sunshine"
-  ],
-  "階": [
-    "kai",
-    "floor"
-  ],
-  "章": [
-    "shou",
-    "chapter"
-  ],
-  "第": [
-    "dai",
-    "ordinal number prefix"
-  ],
-  "都": [
-    "to",
-    "metropolis"
-  ],
-  "寒": [
-    "samu",
-    "cold"
-  ],
-  "暑": [
-    "atsu",
-    "hot"
-  ],
-  "歯": [
-    "ha",
-    "tooth"
-  ],
-  "温": [
-    "on",
-    "warm"
-  ],
-  "湯": [
-    "yu",
-    "hot water"
-  ],
-  "勉": [
-    "ben",
-    "exertion"
-  ],
-  "庭": [
-    "tei",
-    "garden"
-  ],
-  "祭": [
-    "sai",
-    "festival"
-  ],
-  "悪": [
-    "aku",
-    "o",
-    "bad",
-    "evil"
-  ],
-  "期": [
-    "ki",
-    "go",
-    "period of time"
-  ],
-  "港": [
-    "kou",
-    "harbor"
-  ],
-  "登": [
-    "tou",
-    "climb"
-  ],
-  "着": [
-    "chaku",
-    "wear"
-  ],
-  "短": [
-    "tan",
-    "short"
-  ],
-  "球": [
-    "kyuu",
-    "sphere"
-  ],
-  "野": [
-    "ya",
-    "field"
-  ],
-  "泉": [
-    "sen",
-    "spring"
-  ],
-  "旅": [
-    "ryo",
-    "trip"
-  ],
-  "植": [
-    "shoku",
-    "plant"
-  ],
-  "合": [
-    "gou",
-    "gatsu",
-    "suit"
-  ],
-  "僕": [
-    "boku",
-    "i"
-  ],
-  "俺": [
-    "ore",
-    "i"
-  ],
-  "問": [
-    "mon",
-    "problem"
-  ],
-  "想": [
-    "sou",
-    "so",
-    "imagine"
-  ],
-  "整": [
-    "sei",
-    "arrange"
-  ],
-  "暗": [
-    "an",
-    "dark"
-  ],
-  "様": [
-    "sama",
-    "formal name ender"
-  ],
-  "橋": [
-    "hashi",
-    "bridge"
-  ],
-  "緑": [
-    "midori",
-    "green"
-  ],
-  "詩": [
-    "shi",
-    "poem"
-  ],
-  "銀": [
-    "gin",
-    "silver"
-  ],
-  "題": [
-    "dai",
-    "topic"
-  ],
-  "館": [
-    "kan",
-    "public building"
-  ],
-  "士": [
-    "shi",
-    "samurai"
-  ],
-  "料": [
-    "ryou",
-    "fee"
-  ],
-  "標": [
-    "hyou",
-    "signpost"
-  ],
-  "殺": [
-    "satsu",
-    "kill"
-  ],
-  "缶": [
-    "kan",
-    "can"
-  ],
-  "駅": [
-    "eki",
-    "station"
-  ],
-  "億": [
-    "oku",
-    "hundred million"
-  ],
-  "然": [
-    "zen",
-    "nature"
-  ],
-  "練": [
-    "ren",
-    "practice"
-  ],
-  "熱": [
-    "netsu",
-    "heat"
-  ],
-  "賞": [
-    "shou",
-    "prize"
-  ],
-  "器": [
-    "ki",
-    "container"
-  ],
-  "輪": [
-    "rin",
-    "wheel"
-  ],
-  "選": [
-    "sen",
-    "choose"
-  ],
-  "鏡": [
-    "kagami",
-    "mirror"
-  ],
-  "情": [
-    "jou",
-    "feeling"
-  ],
-  "謝": [
-    "sha",
-    "apologize"
-  ],
-  "宿": [
-    "shuku",
-    "lodge"
-  ],
-  "課": [
-    "ka",
-    "section"
-  ],
-  "疑": [
-    "gi",
-    "doubt"
-  ],
-  "皆": [
-    "minna",
-    "all"
-  ],
-  "感": [
-    "kan",
-    "feeling"
-  ],
-  "養": [
-    "you",
-    "foster"
-  ],
-  "苺": [
-    "ichigo",
-    "strawberry"
-  ],
-  "例": [
-    "rei",
-    "example"
-  ],
-  "卒": [
-    "sotsu",
-    "graduate"
-  ],
-  "協": [
-    "kyou",
-    "cooperation"
-  ],
-  "参": [
-    "san",
-    "shin",
-    "participate"
-  ],
-  "周": [
-    "shuu",
-    "circumference"
-  ],
-  "固": [
-    "ko",
-    "hard"
-  ],
-  "季": [
-    "ki",
-    "seasons"
-  ],
-  "完": [
-    "kan",
-    "perfect"
-  ],
-  "希": [
-    "ki",
-    "wish"
-  ],
-  "念": [
-    "nen",
-    "thought"
-  ],
-  "折": [
-    "setsu",
-    "fold"
-  ],
-  "望": [
-    "bou",
-    "hope"
-  ],
-  "束": [
-    "soku",
-    "bundle"
-  ],
-  "芸": [
-    "gei",
-    "art"
-  ],
-  "基": [
-    "ki",
-    "foundation"
-  ],
-  "性": [
-    "sei",
-    "shou",
-    "gender"
-  ],
-  "狼": [
-    "rou",
-    "ookami",
-    "wolf"
-  ],
-  "松": [
-    "matsu",
-    "pine"
-  ],
-  "的": [
-    "teki",
-    "target"
-  ],
-  "約": [
-    "yaku",
-    "promise"
-  ],
-  "格": [
-    "kaku",
-    "status"
-  ],
-  "能": [
-    "nou",
-    "ability"
-  ],
-  "閉": [
-    "hei",
-    "closed"
-  ],
-  "井": [
-    "i",
-    "well"
-  ],
-  "材": [
-    "zai",
-    "lumber"
-  ],
-  "残": [
-    "zan",
-    "remainder"
-  ],
-  "骨": [
-    "kotsu",
-    "bone"
-  ],
-  "妥": [
-    "da",
-    "gentle"
-  ],
-  "雰": [
-    "fun",
-    "atmosphere"
-  ],
-  "頑": [
-    "gan",
-    "stubborn"
-  ],
-  "囲": [
-    "i",
-    "surround"
-  ],
-  "願": [
-    "gan",
-    "request"
-  ],
-  "寺": [
-    "tera",
-    "temple"
-  ],
-  "岩": [
-    "iwa",
-    "boulder"
-  ],
-  "帰": [
-    "kae",
-    "return"
-  ],
-  "春": [
-    "haru",
-    "spring"
-  ],
-  "昼": [
-    "hiru",
-    "noon"
-  ],
-  "晴": [
-    "ha",
-    "clear up"
-  ],
-  "秋": [
-    "aki",
-    "autumn"
-  ],
-  "計": [
+  "係": [
     "kei",
-    "measure"
+    "connection"
   ],
-  "列": [
-    "retsu",
-    "row"
+  "促": [
+    "soku",
+    "urge"
   ],
-  "区": [
-    "ku",
-    "district"
-  ],
-  "坂": [
-    "saka",
-    "slope"
-  ],
-  "式": [
-    "shiki",
-    "ritual"
+  "保": [
+    "ho",
+    "preserve"
   ],
   "信": [
     "shin",
     "believe"
   ],
-  "匹": [
-    "hiki",
-    "small animal"
+  "修": [
+    "shuu",
+    "mastering",
+    "repair"
   ],
-  "単": [
-    "tan",
-    "simple"
+  "俳": [
+    "hai",
+    "haiku"
   ],
-  "司": [
-    "shi",
-    "director"
+  "俺": [
+    "ore",
+    "i"
   ],
-  "夫": [
-    "fuu",
-    "husband"
+  "倉": [
+    "sou",
+    "warehouse",
+    "storehouse"
   ],
-  "昨": [
-    "saku",
+  "個": [
+    "ko",
+    "individual"
+  ],
+  "倍": [
+    "bai",
+    "double"
+  ],
+  "倒": [
+    "tou",
+    "overthrow"
+  ],
+  "候": [
+    "kou",
+    "climate",
+    "weather",
+    "candidate"
+  ],
+  "借": [
+    "shaku",
+    "borrow"
+  ],
+  "値": [
+    "chi",
+    "value"
+  ],
+  "停": [
+    "tei",
+    "halt"
+  ],
+  "健": [
+    "ken",
+    "healthy"
+  ],
+  "側": [
+    "gawa",
+    "soba",
+    "side"
+  ],
+  "偵": [
+    "tei",
+    "spy"
+  ],
+  "傘": [
+    "kasa",
+    "umbrella"
+  ],
+  "備": [
+    "bi",
+    "provide"
+  ],
+  "催": [
+    "sai",
+    "sponsor"
+  ],
+  "傷": [
+    "shou",
+    "wound"
+  ],
+  "働": [
+    "dou",
+    "work"
+  ],
+  "像": [
+    "zou",
+    "statue"
+  ],
+  "僕": [
+    "boku",
+    "i"
+  ],
+  "僚": [
+    "ryou",
+    "colleague"
+  ],
+  "僧": [
+    "sou",
+    "priest"
+  ],
+  "億": [
+    "oku",
+    "hundred million"
+  ],
+  "優": [
+    "yuu",
+    "superior"
+  ],
+  "元": [
+    "gen",
+    "origin"
+  ],
+  "兄": [
+    "kyou",
+    "older brother"
+  ],
+  "先": [
+    "sen",
     "previous"
   ],
-  "毒": [
-    "doku",
-    "poison"
-  ],
-  "技": [
-    "gi",
-    "skill"
-  ],
-  "泣": [
-    "na",
-    "cry"
-  ],
-  "浅": [
-    "asa",
-    "shallow"
-  ],
-  "術": [
-    "jutsu",
-    "technique"
-  ],
-  "紀": [
-    "ki",
-    "account"
-  ],
-  "英": [
-    "ei",
-    "england"
-  ],
-  "軍": [
-    "gun",
-    "army"
-  ],
-  "飯": [
-    "han",
-    "meal"
-  ],
-  "勇": [
-    "yuu",
-    "courage"
-  ],
-  "変": [
-    "hen",
-    "change"
-  ],
-  "福": [
-    "fuku",
-    "luck"
-  ],
-  "法": [
-    "hou",
-    "method"
-  ],
-  "払": [
-    "hara",
-    "pay"
-  ],
-  "仏": [
-    "butsu",
-    "buddha"
-  ],
-  "晩": [
-    "ban",
-    "night"
-  ],
-  "猫": [
-    "neko",
-    "cat"
-  ],
-  "丈": [
-    "jou",
-    "height"
-  ],
-  "曜": [
-    "you",
-    "weekday"
-  ],
-  "書": [
-    "sho",
-    "write"
-  ],
-  "門": [
-    "mon",
-    "gates"
-  ],
-  "係": [
-    "kei",
-    "connection"
-  ],
-  "品": [
-    "hin",
-    "shina",
-    "product"
-  ],
-  "守": [
-    "su",
-    "protect"
-  ],
-  "幸": [
+  "光": [
     "kou",
-    "happiness"
+    "sunlight"
   ],
-  "急": [
-    "kyuu",
-    "hurry"
-  ],
-  "真": [
-    "shin",
-    "reality"
-  ],
-  "箱": [
-    "hako",
-    "box"
-  ],
-  "荷": [
+  "児": [
+    "ji",
     "ni",
-    "luggage"
+    "child"
+  ],
+  "党": [
+    "tou",
+    "party",
+    "group"
+  ],
+  "入": [
+    "nyuu",
+    "enter"
+  ],
+  "全": [
+    "zen",
+    "all"
+  ],
+  "公": [
+    "kou",
+    "public"
+  ],
+  "共": [
+    "kyou",
+    "together"
+  ],
+  "兵": [
+    "hei",
+    "soldier"
+  ],
+  "具": [
+    "gu",
+    "tool"
   ],
   "典": [
     "ten",
     "rule"
   ],
-  "治": [
-    "ji",
-    "cure",
-    "heal",
-    "rule"
+  "内": [
+    "nai",
+    "inside"
   ],
-  "笑": [
-    "wara",
-    "laugh"
-  ],
-  "辞": [
-    "ji",
-    "quit"
-  ],
-  "関": [
-    "kan",
-    "related"
-  ],
-  "弁": [
-    "ben",
-    "dialect"
-  ],
-  "政": [
-    "sei",
-    "politics"
-  ],
-  "留": [
-    "ru",
-    "ryuu",
-    "detain"
-  ],
-  "証": [
-    "shou",
-    "evidence"
-  ],
-  "険": [
-    "ken",
-    "risky"
-  ],
-  "園": [
+  "円": [
     "en",
-    "garden"
+    "yen"
   ],
-  "遠": [
-    "en",
-    "far"
+  "冊": [
+    "satsu",
+    "book counter"
   ],
-  "面": [
-    "men",
-    "face"
-  ],
-  "府": [
-    "fu",
-    "government"
-  ],
-  "浴": [
-    "yoku",
-    "bathe"
-  ],
-  "危": [
-    "ki",
-    "dangerous"
-  ],
-  "存": [
-    "son",
-    "exist"
-  ],
-  "専": [
-    "sen",
-    "specialty"
+  "再": [
+    "sa",
+    "sai",
+    "again"
   ],
   "冒": [
     "bou",
@@ -2277,478 +436,467 @@
     "jou",
     "superfluous"
   ],
-  "阪": [
-    "han",
-    "heights"
+  "写": [
+    "sha",
+    "copy"
   ],
-  "企": [
-    "ki",
-    "plan"
+  "冬": [
+    "fuyu",
+    "winter"
   ],
-  "喜": [
-    "ki",
-    "rejoice"
+  "冷": [
+    "rei",
+    "cool",
+    "cold"
   ],
-  "原": [
-    "gen",
-    "original"
-  ],
-  "細": [
-    "sai",
-    "thin",
-    "detailed"
-  ],
-  "鼻": [
-    "hana",
-    "nose"
-  ],
-  "側": [
-    "gawa",
-    "soba",
-    "side"
-  ],
-  "兵": [
-    "hei",
-    "soldier"
-  ],
-  "堂": [
-    "dou",
-    "hall"
-  ],
-  "塩": [
-    "shio",
-    "salt"
-  ],
-  "席": [
-    "seki",
-    "seat"
-  ],
-  "敗": [
-    "hai",
-    "failure"
-  ],
-  "果": [
-    "ka",
-    "fruit"
-  ],
-  "梅": [
-    "ume"
-  ],
-  "因": [
-    "in",
-    "cause"
-  ],
-  "常": [
-    "jou",
-    "normal"
-  ],
-  "識": [
-    "shiki",
-    "discerning"
-  ],
-  "干": [
-    "kan",
-    "dry"
-  ],
-  "是": [
-    "ze",
-    "absolutely"
-  ],
-  "官": [
-    "kan",
-    "government"
-  ],
-  "底": [
-    "soko",
-    "bottom"
-  ],
-  "愛": [
-    "ai",
-    "love"
-  ],
-  "署": [
-    "sho",
-    "government office"
-  ],
-  "恋": [
-    "ren",
-    "romance"
-  ],
-  "覚": [
-    "kaku",
-    "memorize"
-  ],
-  "幻": [
-    "gen",
-    "illusion"
-  ],
-  "詳": [
-    "shou",
-    "detailed"
-  ],
-  "渉": [
-    "shou",
-    "wade",
-    "ford"
-  ],
-  "悲": [
-    "hi",
-    "sad"
-  ],
-  "薬": [
-    "yaku",
-    "medicine"
-  ],
-  "無": [
-    "mu",
-    "nothing"
-  ],
-  "結": [
-    "ketsu",
-    "bind"
-  ],
-  "非": [
-    "hi",
-    "injustice"
-  ],
-  "察": [
-    "satsu",
-    "guess"
-  ],
-  "警": [
-    "kei",
-    "warn"
-  ],
-  "説": [
-    "setsu",
-    "theory"
-  ],
-  "劇": [
-    "geki",
-    "drama"
-  ],
-  "繋": [
-    "tsuna",
-    "connect"
-  ],
-  "苛": [
-    "iji",
-    "frustration"
-  ],
-  "訓": [
-    "kun",
-    "instruction"
-  ],
-  "弓": [
-    "kyuu",
-    "bow"
-  ],
-  "告": [
-    "koku",
-    "announce"
-  ],
-  "種": [
-    "shu",
-    "kind"
-  ],
-  "類": [
-    "rui",
-    "type"
-  ],
-  "等": [
+  "凍": [
     "tou",
-    "equal"
+    "frozen"
   ],
-  "汽": [
-    "ki",
-    "steam"
+  "処": [
+    "sho",
+    "deal with"
   ],
-  "座": [
-    "za",
-    "sit"
+  "出": [
+    "shutsu",
+    "exit"
   ],
-  "忘": [
-    "bou",
-    "forget"
+  "刀": [
+    "tou",
+    "sword"
   ],
-  "禅": [
-    "zen"
+  "分": [
+    "bun",
+    "part"
   ],
-  "可": [
-    "ka",
-    "possible"
-  ],
-  "枚": [
-    "mai",
-    "flat object counter"
-  ],
-  "達": [
-    "tatsu",
-    "attain"
-  ],
-  "報": [
-    "hou",
-    "news"
-  ],
-  "借": [
-    "shaku",
-    "borrow"
-  ],
-  "焼": [
-    "ya",
-    "bake"
-  ],
-  "洗": [
-    "sen",
-    "wash"
-  ],
-  "胸": [
-    "mune",
-    "chest"
-  ],
-  "脳": [
-    "nou",
-    "brain"
-  ],
-  "僧": [
-    "sou",
-    "priest"
-  ],
-  "許": [
-    "kyo",
-    "permit"
-  ],
-  "静": [
-    "sei",
-    "quiet"
-  ],
-  "句": [
-    "ku",
-    "paragraph"
-  ],
-  "禁": [
-    "kin",
-    "prohibit"
-  ],
-  "喫": [
-    "kitsu",
-    "consume"
-  ],
-  "煙": [
-    "en",
-    "smoke"
-  ],
-  "喉": [
-    "kou",
-    "throat"
-  ],
-  "叩": [
-    "kou",
-    "tap"
-  ],
-  "飴": [
-    "ame",
-    "candy"
-  ],
-  "芋": [
-    "imo",
-    "potato"
-  ],
-  "加": [
-    "ka",
-    "add"
-  ],
-  "節": [
+  "切": [
     "setsu",
-    "season",
-    "joint"
+    "cut"
   ],
-  "減": [
-    "gen",
-    "decrease"
+  "列": [
+    "retsu",
+    "row"
   ],
-  "順": [
-    "jun",
-    "order",
-    "sequence"
+  "初": [
+    "sho",
+    "first"
   ],
-  "容": [
-    "you",
-    "form",
-    "appearance"
+  "判": [
+    "han",
+    "judge"
   ],
-  "布": [
-    "fu",
-    "cloth"
+  "別": [
+    "betsu",
+    "separate"
   ],
-  "易": [
-    "i",
-    "easy"
-  ],
-  "財": [
-    "sai",
-    "wealth"
-  ],
-  "昆": [
-    "kon",
-    "insect"
-  ],
-  "閥": [
-    "batsu",
-    "clique"
-  ],
-  "歴": [
-    "reki",
-    "continuation"
-  ],
-  "舌": [
-    "shita",
-    "tongue"
-  ],
-  "冊": [
-    "satsu",
-    "book counter"
-  ],
-  "宇": [
-    "u",
-    "outer space"
-  ],
-  "忙": [
-    "bou",
-    "busy"
-  ],
-  "埋": [
-    "u",
-    "bury"
-  ],
-  "団": [
-    "dan",
-    "ton",
-    "group"
-  ],
-  "暴": [
-    "bou",
-    "violence"
-  ],
-  "混": [
-    "kon",
-    "mix"
-  ],
-  "乱": [
-    "ran",
-    "riot"
-  ],
-  "徒": [
-    "to",
-    "junior"
-  ],
-  "得": [
-    "toku",
-    "acquire"
-  ],
-  "改": [
-    "kai",
-    "renew"
-  ],
-  "続": [
-    "zoku",
-    "continue"
-  ],
-  "連": [
-    "ren",
-    "take along"
-  ],
-  "善": [
-    "zen",
-    "morally good"
-  ],
-  "絡": [
-    "raku",
-    "entangle"
-  ],
-  "史": [
-    "shi",
-    "history"
-  ],
-  "若": [
-    "waka",
-    "young"
-  ],
-  "詞": [
-    "shi",
-    "part of speech"
-  ],
-  "宙": [
-    "chuu",
-    "midair"
-  ],
-  "履": [
+  "利": [
     "ri",
-    "footwear"
+    "profit"
   ],
-  "笛": [
-    "teki",
-    "flute"
+  "制": [
+    "sei",
+    "control"
   ],
-  "困": [
-    "kon",
-    "distressed",
-    "troubled"
-  ],
-  "機": [
-    "ki",
-    "machine"
-  ],
-  "害": [
-    "gai",
-    "damage",
-    "injury"
-  ],
-  "余": [
-    "yo",
-    "surplus"
-  ],
-  "難": [
-    "nan",
-    "difficult"
-  ],
-  "被": [
-    "hi",
-    "incur",
-    "cover"
-  ],
-  "裕": [
-    "yuu",
-    "abundant"
-  ],
-  "震": [
-    "shin",
-    "earthquake"
-  ],
-  "尻": [
-    "shiri",
-    "butt"
-  ],
-  "尾": [
-    "bi",
-    "tail"
-  ],
-  "械": [
-    "kai",
-    "contraption"
-  ],
-  "確": [
-    "kaku",
-    "certain"
+  "券": [
+    "ken",
+    "ticket"
   ],
   "刺": [
     "sa",
     "shi",
     "stab"
   ],
-  "個": [
+  "則": [
+    "soku",
+    "rule"
+  ],
+  "前": [
+    "zen",
+    "front"
+  ],
+  "副": [
+    "fuku",
+    "vice"
+  ],
+  "割": [
+    "wari",
+    "divide"
+  ],
+  "創": [
+    "sou",
+    "create"
+  ],
+  "劇": [
+    "geki",
+    "drama"
+  ],
+  "力": [
+    "ryoku",
+    "riki",
+    "power"
+  ],
+  "功": [
+    "kou",
+    "achievement"
+  ],
+  "加": [
+    "ka",
+    "add"
+  ],
+  "助": [
+    "jo",
+    "help"
+  ],
+  "努": [
+    "do",
+    "toil"
+  ],
+  "励": [
+    "rei",
+    "encourage"
+  ],
+  "労": [
+    "rou",
+    "labor"
+  ],
+  "効": [
+    "kou",
+    "effective"
+  ],
+  "勇": [
+    "yuu",
+    "courage"
+  ],
+  "勉": [
+    "ben",
+    "exertion"
+  ],
+  "動": [
+    "dou",
+    "move"
+  ],
+  "務": [
+    "mu",
+    "task"
+  ],
+  "勝": [
+    "shou",
+    "win"
+  ],
+  "勢": [
+    "sei",
+    "force"
+  ],
+  "勧": [
+    "kan",
+    "recommend"
+  ],
+  "匂": [
+    "nio",
+    "smell",
+    "scent"
+  ],
+  "化": [
+    "ka",
+    "change"
+  ],
+  "北": [
+    "hoku",
+    "north"
+  ],
+  "匹": [
+    "hiki",
+    "small animal"
+  ],
+  "区": [
+    "ku",
+    "district"
+  ],
+  "医": [
+    "i",
+    "medicine"
+  ],
+  "千": [
+    "sen",
+    "thousand"
+  ],
+  "午": [
+    "go",
+    "noon"
+  ],
+  "半": [
+    "han",
+    "half"
+  ],
+  "卒": [
+    "sotsu",
+    "graduate"
+  ],
+  "協": [
+    "kyou",
+    "cooperation"
+  ],
+  "南": [
+    "nan",
+    "south"
+  ],
+  "単": [
+    "tan",
+    "simple"
+  ],
+  "博": [
+    "haku",
+    "exhibition",
+    "gambling"
+  ],
+  "占": [
+    "sen",
+    "fortune",
+    "occupy"
+  ],
+  "印": [
+    "in",
+    "seal"
+  ],
+  "危": [
+    "ki",
+    "dangerous"
+  ],
+  "卵": [
+    "tamago",
+    "egg"
+  ],
+  "厚": [
+    "atsu",
+    "thick"
+  ],
+  "原": [
+    "gen",
+    "original"
+  ],
+  "厳": [
+    "gen",
+    "strict"
+  ],
+  "去": [
+    "kyo",
+    "past"
+  ],
+  "参": [
+    "san",
+    "shin",
+    "participate"
+  ],
+  "友": [
+    "yuu",
+    "friend"
+  ],
+  "反": [
+    "han",
+    "anti"
+  ],
+  "収": [
+    "shuu",
+    "obtain"
+  ],
+  "取": [
+    "to",
+    "take"
+  ],
+  "受": [
+    "ju",
+    "accept"
+  ],
+  "口": [
+    "kou",
+    "mouth"
+  ],
+  "古": [
     "ko",
-    "individual"
+    "old"
+  ],
+  "句": [
+    "ku",
+    "paragraph"
+  ],
+  "叩": [
+    "kou",
+    "tap"
+  ],
+  "可": [
+    "ka",
+    "possible"
+  ],
+  "台": [
+    "dai",
+    "machine"
+  ],
+  "史": [
+    "shi",
+    "history"
+  ],
+  "右": [
+    "yuu",
+    "right"
+  ],
+  "叶": [
+    "kana",
+    "grant",
+    "come true"
+  ],
+  "号": [
+    "gou",
+    "number"
+  ],
+  "司": [
+    "shi",
+    "director"
+  ],
+  "各": [
+    "kaku",
+    "each"
+  ],
+  "合": [
+    "gou",
+    "gatsu",
+    "suit"
+  ],
+  "同": [
+    "dou",
+    "same"
+  ],
+  "名": [
+    "mei",
+    "name"
+  ],
+  "向": [
+    "kou",
+    "yonder"
+  ],
+  "君": [
+    "kun",
+    "buddy"
+  ],
+  "含": [
+    "gan",
+    "include"
+  ],
+  "吸": [
+    "kyuu",
+    "suck"
+  ],
+  "告": [
+    "koku",
+    "announce"
+  ],
+  "周": [
+    "shuu",
+    "circumference"
+  ],
+  "味": [
+    "mi",
+    "flavor",
+    "taste"
+  ],
+  "呼": [
+    "yo",
+    "call"
+  ],
+  "命": [
+    "mei",
+    "myou",
+    "fate"
+  ],
+  "和": [
+    "wa",
+    "peace"
+  ],
+  "品": [
+    "hin",
+    "shina",
+    "product"
+  ],
+  "員": [
+    "in",
+    "member"
+  ],
+  "商": [
+    "shou",
+    "merchandise"
+  ],
+  "問": [
+    "mon",
+    "problem"
+  ],
+  "善": [
+    "zen",
+    "morally good"
+  ],
+  "喉": [
+    "kou",
+    "throat"
+  ],
+  "喜": [
+    "ki",
+    "rejoice"
+  ],
+  "喫": [
+    "kitsu",
+    "consume"
+  ],
+  "営": [
+    "ei",
+    "manage"
+  ],
+  "嘆": [
+    "tan",
+    "sigh"
+  ],
+  "器": [
+    "ki",
+    "container"
+  ],
+  "回": [
+    "kai",
+    "times"
+  ],
+  "因": [
+    "in",
+    "cause"
+  ],
+  "団": [
+    "dan",
+    "ton",
+    "group"
+  ],
+  "困": [
+    "kon",
+    "distressed",
+    "troubled"
+  ],
+  "囲": [
+    "i",
+    "surround"
+  ],
+  "図": [
+    "zu",
+    "diagram"
+  ],
+  "固": [
+    "ko",
+    "hard"
+  ],
+  "国": [
+    "koku",
+    "country"
+  ],
+  "園": [
+    "en",
+    "garden"
+  ],
+  "土": [
+    "do",
+    "dirt"
   ],
   "圧": [
     "atsu",
@@ -2758,326 +906,978 @@
     "zai",
     "exist"
   ],
-  "夢": [
-    "mu",
-    "dream"
+  "地": [
+    "chi",
+    "earth"
   ],
-  "産": [
-    "san",
-    "give birth",
-    "property"
+  "坂": [
+    "saka",
+    "slope"
   ],
-  "臭": [
-    "kusa",
-    "stinking",
-    "smelly"
-  ],
-  "厚": [
-    "atsu",
-    "thick"
-  ],
-  "妻": [
-    "sai",
-    "wife"
-  ],
-  "災": [
-    "sai",
-    "disaster"
-  ],
-  "率": [
-    "ritsu",
-    "sotsu",
-    "percent"
-  ],
-  "飛": [
-    "hi",
-    "fly"
-  ],
-  "嫌": [
-    "ken",
-    "dislike"
-  ],
-  "倒": [
-    "tou",
-    "overthrow"
-  ],
-  "議": [
-    "gi",
-    "deliberation"
-  ],
-  "犯": [
-    "han",
-    "crime"
-  ],
-  "罪": [
-    "zai",
-    "guilt"
-  ],
-  "防": [
-    "bou",
-    "prevent"
-  ],
-  "論": [
-    "ron",
-    "theory"
-  ],
-  "経": [
-    "kei",
-    "passage of time"
-  ],
-  "貰": [
-    "mora",
-    "receive"
-  ],
-  "委": [
-    "i",
-    "committee"
-  ],
-  "挙": [
-    "kyo",
-    "raise"
-  ],
-  "制": [
-    "sei",
-    "control"
-  ],
-  "査": [
-    "sa",
-    "inspect"
-  ],
-  "祈": [
-    "ki",
-    "pray"
-  ],
-  "総": [
-    "sou",
-    "whole"
-  ],
-  "設": [
-    "setsu",
-    "establish"
-  ],
-  "権": [
-    "ken",
-    "rights"
-  ],
-  "件": [
-    "ken",
-    "matter"
-  ],
-  "派": [
-    "ha",
-    "sect"
-  ],
-  "岡": [
-    "oka",
-    "hill"
-  ],
-  "素": [
-    "so",
-    "element"
-  ],
-  "断": [
-    "dan",
-    "cut off"
-  ],
-  "批": [
-    "hi",
-    "criticism"
-  ],
-  "任": [
-    "nin",
-    "duty"
-  ],
-  "検": [
-    "ken",
-    "examine"
-  ],
-  "条": [
-    "jou",
-    "clause"
-  ],
-  "責": [
-    "seki",
-    "blame"
-  ],
-  "省": [
-    "shou",
-    "conserve"
-  ],
-  "敵": [
-    "teki",
-    "enemy"
-  ],
-  "済": [
-    "sai",
-    "come to an end"
-  ],
-  "判": [
-    "han",
-    "judge"
-  ],
-  "務": [
-    "mu",
-    "task"
-  ],
-  "資": [
-    "shi",
-    "resources"
-  ],
-  "増": [
-    "zou",
-    "increase"
-  ],
-  "建": [
-    "ken",
-    "build"
-  ],
-  "税": [
-    "zei",
-    "tax"
-  ],
-  "解": [
-    "kai",
-    "solve"
-  ],
-  "際": [
-    "sai",
-    "kiwa",
-    "occasion"
-  ],
-  "認": [
-    "nin",
-    "recognize"
-  ],
-  "義": [
-    "gi",
-    "righteousness"
-  ],
-  "羨": [
-    "sen",
-    "envy"
-  ],
-  "罰": [
-    "batsu",
-    "penalty"
-  ],
-  "誕": [
-    "tan",
-    "birth"
-  ],
-  "降": [
-    "kou",
-    "descend"
-  ],
-  "脱": [
-    "datsu",
-    "undress",
-    "escape"
-  ],
-  "過": [
-    "ka",
-    "surpass"
+  "均": [
+    "kin",
+    "equal"
   ],
   "坊": [
     "bou",
     "monk"
   ],
-  "各": [
-    "kaku",
-    "each"
+  "型": [
+    "kei",
+    "model"
   ],
-  "置": [
-    "chi",
-    "put"
+  "埋": [
+    "u",
+    "bury"
   ],
-  "宮": [
-    "miya",
-    "shinto shrine"
-  ],
-  "案": [
-    "an",
-    "plan"
-  ],
-  "費": [
-    "hi",
-    "expense"
-  ],
-  "価": [
-    "ka",
-    "value"
-  ],
-  "勢": [
-    "sei",
-    "force"
-  ],
-  "寝": [
-    "ne",
-    "lie down"
-  ],
-  "営": [
-    "ei",
-    "manage"
-  ],
-  "示": [
-    "ji",
-    "indicate"
-  ],
-  "統": [
-    "tou",
-    "unite"
-  ],
-  "領": [
-    "ryou",
-    "territory"
-  ],
-  "策": [
-    "saku",
-    "plan"
-  ],
-  "更": [
-    "kou",
-    "renew"
-  ],
-  "藤": [
-    "fuji",
-    "wisteria"
-  ],
-  "評": [
-    "hyou",
-    "evaluate"
-  ],
-  "衣": [
-    "i",
-    "clothes"
-  ],
-  "副": [
-    "fuku",
-    "vice"
-  ],
-  "観": [
-    "kan",
-    "view"
-  ],
-  "値": [
-    "chi",
-    "value"
-  ],
-  "吸": [
-    "kyuu",
-    "suck"
+  "城": [
+    "jou",
+    "shiro",
+    "castle"
   ],
   "域": [
     "iki",
     "region"
   ],
+  "基": [
+    "ki",
+    "foundation"
+  ],
+  "堂": [
+    "dou",
+    "hall"
+  ],
+  "報": [
+    "hou",
+    "news"
+  ],
+  "場": [
+    "jou",
+    "location"
+  ],
+  "塩": [
+    "shio",
+    "salt"
+  ],
+  "境": [
+    "kyou",
+    "boundary"
+  ],
+  "墓": [
+    "bo",
+    "grave",
+    "tomb"
+  ],
+  "増": [
+    "zou",
+    "increase"
+  ],
+  "壊": [
+    "kai",
+    "break"
+  ],
+  "士": [
+    "shi",
+    "samurai"
+  ],
+  "声": [
+    "koe",
+    "voice"
+  ],
+  "売": [
+    "bai",
+    "sell"
+  ],
+  "変": [
+    "hen",
+    "change"
+  ],
+  "夏": [
+    "natsu",
+    "summer"
+  ],
+  "夕": [
+    "yuu",
+    "evening"
+  ],
+  "外": [
+    "gai",
+    "outside"
+  ],
+  "多": [
+    "ta",
+    "many"
+  ],
+  "夜": [
+    "ya",
+    "night"
+  ],
+  "夢": [
+    "mu",
+    "dream"
+  ],
+  "大": [
+    "tai",
+    "big"
+  ],
+  "天": [
+    "ten",
+    "heaven"
+  ],
+  "太": [
+    "tai",
+    "fat"
+  ],
+  "夫": [
+    "fuu",
+    "husband"
+  ],
+  "央": [
+    "ou",
+    "center"
+  ],
+  "失": [
+    "shitsu",
+    "fault"
+  ],
+  "奇": [
+    "ki",
+    "odd",
+    "strange"
+  ],
+  "女": [
+    "jo",
+    "woman"
+  ],
+  "好": [
+    "kou",
+    "like"
+  ],
+  "妙": [
+    "myou",
+    "peculiar"
+  ],
+  "妥": [
+    "da",
+    "gentle"
+  ],
+  "妨": [
+    "bou",
+    "obstruct",
+    "impede"
+  ],
+  "妹": [
+    "mai",
+    "younger sister"
+  ],
+  "妻": [
+    "sai",
+    "wife"
+  ],
+  "姉": [
+    "shi",
+    "older sister"
+  ],
+  "始": [
+    "shi",
+    "begin"
+  ],
+  "委": [
+    "i",
+    "committee"
+  ],
+  "姪": [
+    "mei",
+    "niece"
+  ],
   "姿": [
     "shi",
     "figure"
   ],
+  "娘": [
+    "musume",
+    "daughter"
+  ],
+  "婚": [
+    "kon",
+    "marriage"
+  ],
+  "婦": [
+    "fu",
+    "wife"
+  ],
+  "嫌": [
+    "ken",
+    "dislike"
+  ],
+  "子": [
+    "shi",
+    "child"
+  ],
+  "字": [
+    "ji",
+    "letter"
+  ],
+  "存": [
+    "son",
+    "exist"
+  ],
+  "季": [
+    "ki",
+    "seasons"
+  ],
+  "学": [
+    "gaku",
+    "study"
+  ],
+  "孫": [
+    "son",
+    "grandchild"
+  ],
+  "宅": [
+    "taku",
+    "house"
+  ],
+  "宇": [
+    "u",
+    "outer space"
+  ],
+  "守": [
+    "su",
+    "protect"
+  ],
+  "安": [
+    "an",
+    "relax"
+  ],
+  "完": [
+    "kan",
+    "perfect"
+  ],
+  "宗": [
+    "shuu",
+    "religion"
+  ],
+  "官": [
+    "kan",
+    "government"
+  ],
+  "宙": [
+    "chuu",
+    "midair"
+  ],
+  "定": [
+    "tei",
+    "determine"
+  ],
+  "宝": [
+    "hou",
+    "treasure"
+  ],
+  "実": [
+    "jitsu",
+    "truth"
+  ],
+  "客": [
+    "kyaku",
+    "guest"
+  ],
+  "室": [
+    "shitsu",
+    "room"
+  ],
+  "宮": [
+    "miya",
+    "shinto shrine"
+  ],
+  "害": [
+    "gai",
+    "damage",
+    "injury"
+  ],
+  "宴": [
+    "en",
+    "banquet",
+    "party"
+  ],
+  "家": [
+    "ie",
+    "house"
+  ],
+  "容": [
+    "you",
+    "form",
+    "appearance"
+  ],
+  "宿": [
+    "shuku",
+    "lodge"
+  ],
+  "寄": [
+    "ki",
+    "draw near",
+    "stop by",
+    "send"
+  ],
+  "密": [
+    "mitsu",
+    "secrecy"
+  ],
+  "富": [
+    "fu",
+    "rich"
+  ],
+  "寒": [
+    "samu",
+    "cold"
+  ],
+  "寝": [
+    "ne",
+    "lie down"
+  ],
+  "察": [
+    "satsu",
+    "guess"
+  ],
+  "審": [
+    "shin",
+    "judge"
+  ],
+  "寺": [
+    "tera",
+    "temple"
+  ],
+  "対": [
+    "tai",
+    "versus"
+  ],
+  "専": [
+    "sen",
+    "specialty"
+  ],
+  "尋": [
+    "jin",
+    "inquire"
+  ],
+  "導": [
+    "dou",
+    "lead"
+  ],
+  "小": [
+    "shou",
+    "small"
+  ],
+  "少": [
+    "shou",
+    "few"
+  ],
+  "就": [
+    "shuu",
+    "get a position"
+  ],
+  "尻": [
+    "shiri",
+    "butt"
+  ],
+  "尾": [
+    "bi",
+    "tail"
+  ],
+  "局": [
+    "kyoku",
+    "bureau"
+  ],
+  "居": [
+    "kyo",
+    "alive"
+  ],
+  "屈": [
+    "kutsu",
+    "yield"
+  ],
+  "届": [
+    "todo",
+    "deliver"
+  ],
+  "屋": [
+    "ya",
+    "roof"
+  ],
+  "展": [
+    "ten",
+    "expand"
+  ],
+  "属": [
+    "zoku",
+    "belong"
+  ],
+  "層": [
+    "sou",
+    "layer"
+  ],
+  "履": [
+    "ri",
+    "footwear"
+  ],
+  "山": [
+    "san",
+    "mountain"
+  ],
+  "岡": [
+    "oka",
+    "hill"
+  ],
+  "岩": [
+    "iwa",
+    "boulder"
+  ],
+  "岸": [
+    "gan",
+    "coast"
+  ],
+  "島": [
+    "shima",
+    "island"
+  ],
+  "崎": [
+    "saki",
+    "cape"
+  ],
+  "州": [
+    "shuu",
+    "state"
+  ],
+  "巣": [
+    "su",
+    "nest"
+  ],
+  "工": [
+    "kou",
+    "construction"
+  ],
+  "左": [
+    "sa",
+    "left"
+  ],
+  "巨": [
+    "kyo",
+    "giant"
+  ],
+  "差": [
+    "sa",
+    "distinction"
+  ],
+  "巻": [
+    "kan",
+    "scroll"
+  ],
+  "市": [
+    "shi",
+    "city"
+  ],
+  "布": [
+    "fu",
+    "cloth"
+  ],
+  "希": [
+    "ki",
+    "wish"
+  ],
+  "師": [
+    "shi",
+    "teacher"
+  ],
+  "席": [
+    "seki",
+    "seat"
+  ],
+  "帯": [
+    "tai",
+    "belt"
+  ],
+  "帰": [
+    "kae",
+    "return"
+  ],
+  "常": [
+    "jou",
+    "normal"
+  ],
+  "干": [
+    "kan",
+    "dry"
+  ],
+  "平": [
+    "hei",
+    "flat"
+  ],
+  "年": [
+    "nen",
+    "year"
+  ],
+  "幸": [
+    "kou",
+    "happiness"
+  ],
+  "幹": [
+    "kan",
+    "miki",
+    "tree trunk"
+  ],
+  "幻": [
+    "gen",
+    "illusion"
+  ],
+  "幼": [
+    "you",
+    "infancy",
+    "childhood"
+  ],
+  "幾": [
+    "iku",
+    "how many",
+    "how much"
+  ],
+  "庁": [
+    "chou",
+    "agency",
+    "government office"
+  ],
+  "広": [
+    "hiro",
+    "wide"
+  ],
+  "床": [
+    "yuka",
+    "floor"
+  ],
+  "序": [
+    "jo",
+    "preface"
+  ],
+  "底": [
+    "soko",
+    "bottom"
+  ],
+  "店": [
+    "ten",
+    "shop"
+  ],
+  "府": [
+    "fu",
+    "government"
+  ],
+  "度": [
+    "do",
+    "degree"
+  ],
+  "座": [
+    "za",
+    "sit"
+  ],
+  "庫": [
+    "ko",
+    "storage"
+  ],
+  "庭": [
+    "tei",
+    "garden"
+  ],
+  "康": [
+    "kou",
+    "ease"
+  ],
+  "廊": [
+    "rou",
+    "corridor"
+  ],
+  "延": [
+    "en",
+    "prolong"
+  ],
+  "建": [
+    "ken",
+    "build"
+  ],
+  "弁": [
+    "ben",
+    "dialect"
+  ],
+  "式": [
+    "shiki",
+    "ritual"
+  ],
+  "弓": [
+    "kyuu",
+    "bow"
+  ],
+  "引": [
+    "hi",
+    "pull"
+  ],
+  "弟": [
+    "dai",
+    "younger brother"
+  ],
+  "弱": [
+    "jaku",
+    "weak"
+  ],
+  "張": [
+    "chou",
+    "stretch"
+  ],
+  "強": [
+    "kyou",
+    "strong"
+  ],
+  "当": [
+    "tou",
+    "correct"
+  ],
+  "形": [
+    "kei",
+    "shape"
+  ],
+  "影": [
+    "ei",
+    "shadow"
+  ],
+  "役": [
+    "yaku",
+    "service"
+  ],
+  "彼": [
+    "kare",
+    "he"
+  ],
+  "往": [
+    "ou",
+    "journey"
+  ],
+  "径": [
+    "kei",
+    "diameter"
+  ],
+  "待": [
+    "tai",
+    "wait"
+  ],
+  "律": [
+    "ritsu",
+    "law"
+  ],
+  "後": [
+    "go",
+    "behind"
+  ],
+  "徒": [
+    "to",
+    "junior"
+  ],
+  "従": [
+    "juu",
+    "obey"
+  ],
+  "得": [
+    "toku",
+    "acquire"
+  ],
+  "復": [
+    "fuku",
+    "restore"
+  ],
+  "微": [
+    "bi",
+    "delicate",
+    "tiny",
+    "slight"
+  ],
+  "徳": [
+    "toku",
+    "virtue"
+  ],
+  "徴": [
+    "chou",
+    "indication"
+  ],
+  "心": [
+    "shin",
+    "heart"
+  ],
+  "必": [
+    "hitsu",
+    "certain"
+  ],
+  "志": [
+    "shi",
+    "intention",
+    "ambition"
+  ],
+  "忘": [
+    "bou",
+    "forget"
+  ],
+  "忙": [
+    "bou",
+    "busy"
+  ],
   "応": [
     "ou",
     "respond"
+  ],
+  "快": [
+    "kai",
+    "pleasant"
+  ],
+  "念": [
+    "nen",
+    "thought"
+  ],
+  "怒": [
+    "do",
+    "angry"
+  ],
+  "怖": [
+    "fu",
+    "scary"
+  ],
+  "思": [
+    "omo",
+    "think"
+  ],
+  "急": [
+    "kyuu",
+    "hurry"
+  ],
+  "性": [
+    "sei",
+    "shou",
+    "gender"
+  ],
+  "怪": [
+    "kai",
+    "ke",
+    "suspicious"
+  ],
+  "恋": [
+    "ren",
+    "romance"
+  ],
+  "恐": [
+    "kyou",
+    "fear"
+  ],
+  "恩": [
+    "on",
+    "kindness"
+  ],
+  "息": [
+    "soku",
+    "breath"
+  ],
+  "悩": [
+    "naya",
+    "worry"
+  ],
+  "悪": [
+    "aku",
+    "o",
+    "bad",
+    "evil"
+  ],
+  "悲": [
+    "hi",
+    "sad"
+  ],
+  "情": [
+    "jou",
+    "feeling"
+  ],
+  "惑": [
+    "waku",
+    "misguided"
+  ],
+  "想": [
+    "sou",
+    "so",
+    "imagine"
+  ],
+  "意": [
+    "i",
+    "idea"
+  ],
+  "愛": [
+    "ai",
+    "love"
+  ],
+  "感": [
+    "kan",
+    "feeling"
+  ],
+  "態": [
+    "tai",
+    "appearance",
+    "state",
+    "shape"
+  ],
+  "慣": [
+    "kan",
+    "accustomed"
+  ],
+  "憧": [
+    "akoga",
+    "yearn",
+    "long for"
+  ],
+  "憲": [
+    "ken",
+    "constitution"
+  ],
+  "懐": [
+    "natsu",
+    "futokoro",
+    "nostalgia"
+  ],
+  "成": [
+    "sei",
+    "become"
+  ],
+  "我": [
+    "ga",
+    "i",
+    "me"
+  ],
+  "戦": [
+    "sen",
+    "war"
+  ],
+  "戸": [
+    "to",
+    "door"
+  ],
+  "所": [
+    "sho",
+    "place"
+  ],
+  "手": [
+    "te",
+    "hand"
+  ],
+  "才": [
+    "sai",
+    "talent"
+  ],
+  "打": [
+    "da",
+    "hit"
+  ],
+  "払": [
+    "hara",
+    "pay"
+  ],
+  "批": [
+    "hi",
+    "criticism"
+  ],
+  "技": [
+    "gi",
+    "skill"
+  ],
+  "投": [
+    "tou",
+    "throw"
+  ],
+  "折": [
+    "setsu",
+    "fold"
+  ],
+  "抜": [
+    "nu",
+    "pull out"
+  ],
+  "押": [
+    "o",
+    "push"
+  ],
+  "担": [
+    "tan",
+    "carry"
+  ],
+  "招": [
+    "shou",
+    "beckon"
+  ],
+  "拭": [
+    "fu",
+    "nugu",
+    "wipe"
+  ],
+  "拾": [
+    "hiro",
+    "pick up"
+  ],
+  "持": [
+    "ji",
+    "hold"
+  ],
+  "指": [
+    "shi",
+    "finger"
+  ],
+  "挙": [
+    "kyo",
+    "raise"
+  ],
+  "振": [
+    "shin",
+    "shake",
+    "wave"
+  ],
+  "捉": [
+    "tora",
+    "catch"
+  ],
+  "捕": [
+    "ho",
+    "catch"
+  ],
+  "捜": [
+    "sou",
+    "search"
+  ],
+  "捨": [
+    "su",
+    "throw away"
+  ],
+  "掃": [
+    "sou",
+    "sweep"
+  ],
+  "授": [
+    "ju",
+    "instruct"
+  ],
+  "掛": [
+    "ka",
+    "hang"
+  ],
+  "採": [
+    "sai",
+    "gather"
+  ],
+  "探": [
+    "tan",
+    "look for",
+    "search for"
+  ],
+  "接": [
+    "setsu",
+    "adjoin"
+  ],
+  "揃": [
+    "soro",
+    "complete"
   ],
   "提": [
     "tei",
@@ -3089,682 +1889,403 @@
     "aid",
     "assist"
   ],
-  "状": [
-    "jou",
-    "condition"
+  "撃": [
+    "geki",
+    "attack"
   ],
-  "態": [
-    "tai",
-    "appearance",
-    "state",
-    "shape"
+  "撮": [
+    "satsu",
+    "photograph"
   ],
-  "賀": [
-    "ga",
-    "congratulations"
-  ],
-  "諦": [
-    "akira",
-    "give up",
-    "abandon"
-  ],
-  "袖": [
-    "sode",
-    "sleeve"
-  ],
-  "築": [
-    "chiku",
-    "construct",
-    "build"
-  ],
-  "痒": [
-    "kayu",
-    "itchy"
-  ],
-  "紫": [
+  "支": [
     "shi",
-    "murasaki",
-    "purple"
+    "support"
   ],
-  "職": [
-    "shoku",
-    "employment"
+  "改": [
+    "kai",
+    "renew"
   ],
-  "護": [
-    "go",
-    "defend"
+  "攻": [
+    "kou",
+    "aggression"
   ],
-  "割": [
-    "wari",
-    "divide"
+  "放": [
+    "hou",
+    "release"
   ],
-  "裁": [
-    "sai",
-    "judge"
+  "政": [
+    "sei",
+    "politics"
   ],
-  "崎": [
-    "saki",
-    "cape"
+  "故": [
+    "ko",
+    "circumstance"
   ],
-  "演": [
-    "en",
-    "acting"
+  "救": [
+    "kyuu",
+    "rescue"
   ],
-  "律": [
-    "ritsu",
-    "law"
+  "敗": [
+    "hai",
+    "failure"
   ],
-  "師": [
-    "shi",
-    "teacher"
+  "教": [
+    "kyou",
+    "teach"
   ],
-  "看": [
-    "kan",
-    "watch over"
+  "散": [
+    "san",
+    "scatter"
   ],
-  "準": [
-    "jun",
-    "standard"
+  "数": [
+    "suu",
+    "count"
   ],
-  "則": [
-    "soku",
-    "rule"
+  "整": [
+    "sei",
+    "arrange"
   ],
-  "備": [
-    "bi",
-    "provide"
+  "敵": [
+    "teki",
+    "enemy"
   ],
-  "張": [
-    "chou",
-    "stretch"
+  "文": [
+    "bun",
+    "writing"
   ],
-  "優": [
-    "yuu",
-    "superior"
+  "料": [
+    "ryou",
+    "fee"
   ],
-  "宅": [
-    "taku",
-    "house"
+  "斤": [
+    "kin",
+    "axe"
   ],
-  "沢": [
-    "taku",
-    "swamp"
+  "断": [
+    "dan",
+    "cut off"
   ],
-  "突": [
-    "totsu",
-    "stab"
+  "新": [
+    "shin",
+    "new"
   ],
-  "収": [
-    "shuu",
-    "obtain"
-  ],
-  "停": [
-    "tei",
-    "halt"
-  ],
-  "革": [
-    "kaku",
-    "leather"
-  ],
-  "鬼": [
-    "ki",
-    "demon"
-  ],
-  "導": [
-    "dou",
-    "lead"
-  ],
-  "贅": [
-    "zei",
-    "extravagant"
-  ],
-  "棚": [
-    "tana",
-    "shelf"
+  "方": [
+    "hou",
+    "direction"
   ],
   "施": [
     "shi",
     "carry out"
   ],
-  "現": [
-    "gen",
-    "present time",
-    "appear"
+  "旅": [
+    "ryo",
+    "trip"
   ],
-  "乳": [
-    "nyuu",
-    "milk"
+  "族": [
+    "zoku",
+    "tribe"
   ],
-  "呼": [
-    "yo",
-    "call"
-  ],
-  "城": [
-    "jou",
-    "shiro",
-    "castle"
-  ],
-  "俳": [
-    "hai",
-    "haiku"
-  ],
-  "秀": [
-    "shuu",
-    "excel"
-  ],
-  "幹": [
-    "kan",
-    "miki",
-    "tree trunk"
-  ],
-  "規": [
+  "旗": [
     "ki",
-    "standard"
+    "flag"
   ],
-  "祝": [
-    "shuku",
-    "celebrate"
+  "既": [
+    "ki",
+    "previously"
   ],
-  "届": [
-    "todo",
-    "deliver"
-  ],
-  "狭": [
-    "sema",
-    "narrow"
-  ],
-  "肩": [
-    "kata",
-    "shoulder"
-  ],
-  "腕": [
-    "ude",
-    "arm"
-  ],
-  "腰": [
-    "koshi",
-    "waist"
-  ],
-  "触": [
-    "shoku",
-    "touch"
-  ],
-  "載": [
-    "sai",
-    "place on"
-  ],
-  "層": [
-    "sou",
-    "layer"
-  ],
-  "型": [
-    "kei",
-    "model"
-  ],
-  "庁": [
-    "chou",
-    "agency",
-    "government office"
-  ],
-  "視": [
-    "shi",
-    "look at"
-  ],
-  "差": [
-    "sa",
-    "distinction"
-  ],
-  "管": [
-    "kan",
-    "pipe"
-  ],
-  "審": [
-    "shin",
-    "judge"
-  ],
-  "境": [
-    "kyou",
-    "boundary"
-  ],
-  "環": [
-    "kan",
-    "loop"
-  ],
-  "武": [
-    "bu",
-    "military"
-  ],
-  "質": [
-    "shitsu",
-    "quality"
-  ],
-  "述": [
-    "jutsu",
-    "mention"
-  ],
-  "供": [
-    "kyou",
-    "offer",
-    "accompany"
-  ],
-  "展": [
-    "ten",
-    "expand"
-  ],
-  "担": [
-    "tan",
-    "carry"
-  ],
-  "違": [
-    "chiga",
-    "different"
-  ],
-  "量": [
-    "ryou",
-    "quantity"
-  ],
-  "販": [
-    "han",
-    "sell"
-  ],
-  "額": [
-    "gaku",
-    "amount"
-  ],
-  "製": [
-    "sei",
-    "manufacture"
-  ],
-  "株": [
-    "kabu",
-    "stock"
-  ],
-  "燃": [
-    "nen",
-    "burn"
-  ],
-  "輸": [
-    "yu",
-    "transport"
-  ],
-  "限": [
-    "gen",
-    "limit"
-  ],
-  "与": [
-    "yo",
-    "give"
-  ],
-  "含": [
-    "gan",
-    "include"
-  ],
-  "況": [
-    "kyou",
-    "condition"
-  ],
-  "渡": [
-    "wata",
-    "transit"
-  ],
-  "響": [
-    "kyou",
-    "echo"
-  ],
-  "票": [
-    "hyou",
-    "ballot"
-  ],
-  "訴": [
-    "so",
-    "sue"
-  ],
-  "訟": [
-    "shou",
-    "lawsuit"
-  ],
-  "栄": [
-    "ei",
-    "prosper"
-  ],
-  "逮": [
-    "tai",
-    "apprehend"
-  ],
-  "候": [
-    "kou",
-    "climate",
-    "weather",
-    "candidate"
-  ],
-  "鮮": [
-    "sen",
-    "fresh"
-  ],
-  "慣": [
-    "kan",
-    "accustomed"
-  ],
-  "絶": [
-    "zetsu",
-    "extinction",
-    "die out"
-  ],
-  "豊": [
-    "hou",
-    "plentiful"
-  ],
-  "肥": [
+  "日": [
+    "nichi",
+    "jitsu",
     "hi",
-    "obese"
+    "ka",
+    "sun"
   ],
-  "巻": [
-    "kan",
-    "scroll"
-  ],
-  "捜": [
+  "早": [
     "sou",
-    "search"
+    "early"
   ],
-  "輩": [
-    "hai",
-    "comrade"
+  "昆": [
+    "kon",
+    "insect"
   ],
-  "隠": [
-    "in",
-    "hide"
+  "昇": [
+    "shou",
+    "ascend"
   ],
-  "影": [
+  "明": [
+    "mei",
+    "bright"
+  ],
+  "易": [
+    "i",
+    "easy"
+  ],
+  "昔": [
+    "mukashi",
+    "long ago"
+  ],
+  "星": [
+    "sei",
+    "star"
+  ],
+  "映": [
     "ei",
-    "shadow"
+    "reflect"
   ],
-  "涼": [
-    "suzu",
-    "cool"
+  "春": [
+    "haru",
+    "spring"
+  ],
+  "昨": [
+    "saku",
+    "previous"
+  ],
+  "是": [
+    "ze",
+    "absolutely"
+  ],
+  "昼": [
+    "hiru",
+    "noon"
+  ],
+  "時": [
+    "ji",
+    "time"
+  ],
+  "晩": [
+    "ban",
+    "night"
+  ],
+  "普": [
+    "fu",
+    "normal"
   ],
   "景": [
     "kei",
     "scene"
   ],
-  "抜": [
-    "nu",
-    "pull out"
+  "晴": [
+    "ha",
+    "clear up"
   ],
-  "補": [
-    "ho",
-    "supplement"
-  ],
-  "構": [
-    "kou",
-    "set up",
-    "care"
-  ],
-  "捕": [
-    "ho",
-    "catch"
-  ],
-  "効": [
-    "kou",
-    "effective"
-  ],
-  "満": [
-    "man",
-    "full"
-  ],
-  "莫": [
-    "baku",
-    "endless"
-  ],
-  "模": [
-    "mo",
-    "bo",
-    "imitation"
-  ],
-  "絞": [
-    "kou",
-    "strangle"
-  ],
-  "給": [
-    "kyuu",
-    "salary"
-  ],
-  "属": [
-    "zoku",
-    "belong"
-  ],
-  "掛": [
+  "暇": [
     "ka",
-    "hang"
+    "spare time"
+  ],
+  "暑": [
+    "atsu",
+    "hot"
+  ],
+  "暖": [
+    "dan",
+    "warm"
+  ],
+  "暗": [
+    "an",
+    "dark"
+  ],
+  "暴": [
+    "bou",
+    "violence"
+  ],
+  "曜": [
+    "you",
+    "weekday"
+  ],
+  "曲": [
+    "kyoku",
+    "music"
+  ],
+  "更": [
+    "kou",
+    "renew"
+  ],
+  "書": [
+    "sho",
+    "write"
   ],
   "替": [
     "ka",
     "replace",
     "exchange"
   ],
-  "居": [
-    "kyo",
-    "alive"
-  ],
-  "捉": [
-    "tora",
-    "catch"
-  ],
-  "授": [
-    "ju",
-    "instruct"
-  ],
-  "復": [
-    "fuku",
-    "restore"
-  ],
-  "往": [
-    "ou",
-    "journey"
-  ],
-  "較": [
-    "kaku",
-    "kou",
-    "contrast",
-    "compare"
-  ],
-  "筆": [
-    "hitsu",
-    "writing brush"
-  ],
-  "鉛": [
-    "en",
-    "lead"
-  ],
-  "貯": [
-    "cho",
-    "savings"
-  ],
-  "故": [
-    "ko",
-    "circumstance"
-  ],
-  "従": [
-    "juu",
-    "obey"
-  ],
-  "我": [
-    "ga",
-    "i",
-    "me"
-  ],
-  "激": [
-    "geki",
-    "fierce",
-    "violent"
-  ],
-  "討": [
-    "tou",
-    "chastise"
-  ],
-  "郵": [
-    "yuu",
-    "mail"
-  ],
-  "針": [
-    "shin",
-    "needle"
-  ],
-  "徴": [
-    "chou",
-    "indication"
-  ],
-  "怪": [
-    "kai",
-    "ke",
-    "suspicious"
-  ],
-  "獣": [
-    "juu",
-    "beast"
-  ],
-  "菓": [
-    "ka",
-    "cake"
-  ],
-  "河": [
-    "ka",
-    "river"
-  ],
-  "振": [
-    "shin",
-    "shake",
-    "wave"
-  ],
-  "汗": [
-    "ase",
-    "sweat"
-  ],
-  "再": [
-    "sa",
+  "最": [
     "sai",
-    "again"
+    "most"
   ],
-  "造": [
-    "zou",
-    "create"
+  "月": [
+    "getsu",
+    "moon"
   ],
-  "接": [
-    "setsu",
-    "adjoin"
-  ],
-  "独": [
-    "doku",
-    "alone"
-  ],
-  "占": [
-    "sen",
-    "fortune",
-    "occupy"
-  ],
-  "印": [
-    "in",
-    "seal"
-  ],
-  "励": [
-    "rei",
-    "encourage"
-  ],
-  "創": [
-    "sou",
-    "create"
-  ],
-  "障": [
-    "shou",
-    "hinder"
-  ],
-  "段": [
-    "dan",
-    "steps"
-  ],
-  "胃": [
-    "i",
-    "stomach"
-  ],
-  "腹": [
-    "fuku",
-    "belly"
-  ],
-  "痛": [
-    "tsuu",
-    "pain"
-  ],
-  "退": [
-    "tai",
-    "retreat",
-    "reject"
-  ],
-  "悩": [
-    "naya",
-    "worry"
-  ],
-  "暇": [
-    "ka",
-    "spare time"
-  ],
-  "織": [
-    "shiki",
-    "shoku",
-    "weave"
-  ],
-  "迷": [
-    "mei",
-    "astray",
-    "lost"
-  ],
-  "惑": [
-    "waku",
-    "misguided"
-  ],
-  "誘": [
+  "有": [
     "yuu",
-    "invite"
+    "have"
   ],
-  "就": [
-    "shuu",
-    "get a position"
+  "服": [
+    "fuku",
+    "clothes"
   ],
-  "訪": [
-    "hou",
-    "visit"
+  "望": [
+    "bou",
+    "hope"
   ],
-  "怒": [
-    "do",
-    "angry"
+  "朝": [
+    "asa",
+    "morning"
   ],
-  "昇": [
-    "shou",
-    "ascend"
+  "期": [
+    "ki",
+    "go",
+    "period of time"
   ],
-  "睡": [
-    "sui",
-    "drowsy"
+  "木": [
+    "moku",
+    "tree"
   ],
-  "症": [
-    "shou",
-    "symptom"
+  "未": [
+    "mi",
+    "not yet"
   ],
-  "締": [
-    "tei",
-    "tighten"
+  "末": [
+    "matsu",
+    "end"
   ],
-  "迫": [
-    "haku",
-    "urge"
+  "本": [
+    "hon",
+    "book"
   ],
-  "濃": [
-    "nou",
-    "dense",
-    "thick"
+  "札": [
+    "satsu",
+    "fuda",
+    "bill"
   ],
-  "端": [
-    "tan",
-    "hashi",
-    "edge"
+  "机": [
+    "tsukue",
+    "desk"
+  ],
+  "材": [
+    "zai",
+    "lumber"
+  ],
+  "村": [
+    "mura",
+    "village"
+  ],
+  "束": [
+    "soku",
+    "bundle"
+  ],
+  "条": [
+    "jou",
+    "clause"
+  ],
+  "来": [
+    "rai",
+    "come"
+  ],
+  "杯": [
+    "hai",
+    "cup of liquid"
+  ],
+  "東": [
+    "tou",
+    "east"
+  ],
+  "松": [
+    "matsu",
+    "pine"
+  ],
+  "板": [
+    "ban",
+    "board"
+  ],
+  "枕": [
+    "makura",
+    "pillow"
+  ],
+  "林": [
+    "hayashi",
+    "forest"
+  ],
+  "枚": [
+    "mai",
+    "flat object counter"
+  ],
+  "果": [
+    "ka",
+    "fruit"
+  ],
+  "染": [
+    "sen",
+    "dye"
+  ],
+  "柵": [
+    "saku",
+    "fence"
+  ],
+  "査": [
+    "sa",
+    "inspect"
+  ],
+  "栄": [
+    "ei",
+    "prosper"
+  ],
+  "校": [
+    "kou",
+    "school"
+  ],
+  "株": [
+    "kabu",
+    "stock"
+  ],
+  "根": [
+    "kon",
+    "root"
+  ],
+  "格": [
+    "kaku",
+    "status"
+  ],
+  "案": [
+    "an",
+    "plan"
+  ],
+  "桜": [
+    "sakura"
+  ],
+  "梅": [
+    "ume"
+  ],
+  "械": [
+    "kai",
+    "contraption"
+  ],
+  "棒": [
+    "bou",
+    "pole",
+    "rod",
+    "stick"
+  ],
+  "棚": [
+    "tana",
+    "shelf"
+  ],
+  "森": [
+    "mori",
+    "forest"
+  ],
+  "植": [
+    "shoku",
+    "plant"
+  ],
+  "検": [
+    "ken",
+    "examine"
+  ],
+  "業": [
+    "gyou",
+    "business"
   ],
   "極": [
     "kyoku",
@@ -3772,87 +2293,294 @@
     "kiwa",
     "extreme"
   ],
-  "憧": [
-    "akoga",
-    "yearn",
-    "long for"
+  "楽": [
+    "raku",
+    "comfort"
   ],
-  "貸": [
-    "ka",
-    "lend"
-  ],
-  "健": [
-    "ken",
-    "healthy"
-  ],
-  "眠": [
-    "min",
-    "sleep"
-  ],
-  "靴": [
-    "kutsu",
-    "shoes"
-  ],
-  "途": [
-    "to",
-    "route"
-  ],
-  "招": [
-    "shou",
-    "beckon"
-  ],
-  "康": [
+  "構": [
     "kou",
-    "ease"
+    "set up",
+    "care"
   ],
-  "屈": [
-    "kutsu",
-    "yield"
+  "様": [
+    "sama",
+    "formal name ender"
   ],
-  "郎": [
-    "rou",
-    "guy"
+  "標": [
+    "hyou",
+    "signpost"
   ],
-  "叶": [
-    "kana",
-    "grant",
-    "come true"
+  "模": [
+    "mo",
+    "bo",
+    "imitation"
   ],
-  "拭": [
-    "fu",
-    "nugu",
-    "wipe"
+  "権": [
+    "ken",
+    "rights"
   ],
-  "庫": [
-    "ko",
-    "storage"
+  "横": [
+    "yoko",
+    "side"
   ],
-  "児": [
+  "橋": [
+    "hashi",
+    "bridge"
+  ],
+  "機": [
+    "ki",
+    "machine"
+  ],
+  "欠": [
+    "ketsu",
+    "lack"
+  ],
+  "次": [
     "ji",
-    "ni",
-    "child"
+    "next"
   ],
-  "冷": [
-    "rei",
-    "cool",
-    "cold"
+  "欧": [
+    "ou",
+    "europe"
   ],
-  "凍": [
-    "tou",
-    "frozen"
+  "欲": [
+    "yoku",
+    "want"
   ],
-  "幼": [
-    "you",
-    "infancy",
-    "childhood"
+  "歌": [
+    "ka",
+    "song"
   ],
-  "稚": [
+  "止": [
+    "shi",
+    "stop"
+  ],
+  "正": [
+    "sei",
+    "shou",
+    "correct"
+  ],
+  "武": [
+    "bu",
+    "military"
+  ],
+  "歩": [
+    "ho",
+    "walk"
+  ],
+  "歯": [
+    "ha",
+    "tooth"
+  ],
+  "歴": [
+    "reki",
+    "continuation"
+  ],
+  "死": [
+    "shi",
+    "death"
+  ],
+  "残": [
+    "zan",
+    "remainder"
+  ],
+  "段": [
+    "dan",
+    "steps"
+  ],
+  "殺": [
+    "satsu",
+    "kill"
+  ],
+  "母": [
+    "haha",
+    "mother"
+  ],
+  "毎": [
+    "mai",
+    "every"
+  ],
+  "毒": [
+    "doku",
+    "poison"
+  ],
+  "比": [
+    "hi",
+    "compare"
+  ],
+  "毛": [
+    "mou",
+    "fur"
+  ],
+  "氏": [
+    "shi",
+    "family name"
+  ],
+  "民": [
+    "min",
+    "peoples"
+  ],
+  "気": [
+    "ki",
+    "energy"
+  ],
+  "水": [
+    "sui",
+    "water"
+  ],
+  "氷": [
+    "koori",
+    "ice"
+  ],
+  "永": [
+    "ei",
+    "eternity"
+  ],
+  "求": [
+    "kyuu",
+    "request"
+  ],
+  "汗": [
+    "ase",
+    "sweat"
+  ],
+  "汚": [
+    "o",
+    "dirty"
+  ],
+  "江": [
+    "e",
+    "inlet",
+    "bay"
+  ],
+  "池": [
     "chi",
-    "immature"
+    "pond"
   ],
-  "処": [
-    "sho",
-    "deal with"
+  "決": [
+    "ketsu",
+    "decide"
+  ],
+  "汽": [
+    "ki",
+    "steam"
+  ],
+  "沢": [
+    "taku",
+    "swamp"
+  ],
+  "河": [
+    "ka",
+    "river"
+  ],
+  "治": [
+    "ji",
+    "cure",
+    "heal",
+    "rule"
+  ],
+  "沼": [
+    "numa",
+    "bog"
+  ],
+  "況": [
+    "kyou",
+    "condition"
+  ],
+  "泉": [
+    "sen",
+    "spring"
+  ],
+  "法": [
+    "hou",
+    "method"
+  ],
+  "波": [
+    "ha",
+    "wave"
+  ],
+  "泣": [
+    "na",
+    "cry"
+  ],
+  "泥": [
+    "doro",
+    "mud"
+  ],
+  "注": [
+    "chuu",
+    "pour"
+  ],
+  "泳": [
+    "oyo",
+    "swim"
+  ],
+  "洋": [
+    "you",
+    "western style"
+  ],
+  "洗": [
+    "sen",
+    "wash"
+  ],
+  "活": [
+    "katsu",
+    "lively"
+  ],
+  "派": [
+    "ha",
+    "sect"
+  ],
+  "流": [
+    "ryuu",
+    "ru",
+    "stream"
+  ],
+  "浅": [
+    "asa",
+    "shallow"
+  ],
+  "浜": [
+    "hama",
+    "beach"
+  ],
+  "浮": [
+    "u",
+    "uwa",
+    "float"
+  ],
+  "浴": [
+    "yoku",
+    "bathe"
+  ],
+  "海": [
+    "kai",
+    "sea"
+  ],
+  "消": [
+    "shou",
+    "extinguish"
+  ],
+  "液": [
+    "eki",
+    "fluid",
+    "liquid"
+  ],
+  "涼": [
+    "suzu",
+    "cool"
+  ],
+  "深": [
+    "shin",
+    "deep"
+  ],
+  "混": [
+    "kon",
+    "mix"
+  ],
+  "添": [
+    "ten",
+    "append"
   ],
   "清": [
     "sei",
@@ -3860,45 +2588,485 @@
     "shin",
     "pure"
   ],
+  "渇": [
+    "kawa",
+    "dry up",
+    "thirst"
+  ],
+  "済": [
+    "sai",
+    "come to an end"
+  ],
+  "渉": [
+    "shou",
+    "wade",
+    "ford"
+  ],
+  "減": [
+    "gen",
+    "decrease"
+  ],
+  "渡": [
+    "wata",
+    "transit"
+  ],
+  "温": [
+    "on",
+    "warm"
+  ],
+  "港": [
+    "kou",
+    "harbor"
+  ],
+  "湯": [
+    "yu",
+    "hot water"
+  ],
+  "満": [
+    "man",
+    "full"
+  ],
+  "準": [
+    "jun",
+    "standard"
+  ],
+  "漏": [
+    "rou",
+    "leak"
+  ],
+  "演": [
+    "en",
+    "acting"
+  ],
+  "漢": [
+    "kan",
+    "chinese"
+  ],
   "潔": [
     "ketsu",
     "pure",
     "clean"
   ],
-  "録": [
-    "roku",
-    "record"
+  "激": [
+    "geki",
+    "fierce",
+    "violent"
   ],
-  "隊": [
-    "tai",
-    "squad"
+  "濃": [
+    "nou",
+    "dense",
+    "thick"
   ],
-  "修": [
-    "shuu",
-    "mastering",
-    "repair"
+  "濡": [
+    "nu",
+    "wet",
+    "damp"
   ],
-  "券": [
-    "ken",
-    "ticket"
+  "火": [
+    "ka",
+    "fire"
   ],
-  "婦": [
-    "fu",
-    "wife"
+  "災": [
+    "sai",
+    "disaster"
   ],
-  "妙": [
-    "myou",
-    "peculiar"
+  "点": [
+    "ten",
+    "point"
   ],
-  "微": [
-    "bi",
-    "delicate",
-    "tiny",
-    "slight"
+  "烈": [
+    "retsu",
+    "violent",
+    "intense"
+  ],
+  "無": [
+    "mu",
+    "nothing"
+  ],
+  "然": [
+    "zen",
+    "nature"
+  ],
+  "焼": [
+    "ya",
+    "bake"
+  ],
+  "煙": [
+    "en",
+    "smoke"
+  ],
+  "照": [
+    "shou",
+    "illuminate"
+  ],
+  "熱": [
+    "netsu",
+    "heat"
+  ],
+  "燃": [
+    "nen",
+    "burn"
+  ],
+  "父": [
+    "chichi",
+    "father"
+  ],
+  "版": [
+    "han",
+    "edition"
+  ],
+  "牛": [
+    "gyuu",
+    "cow"
+  ],
+  "物": [
+    "butsu",
+    "motsu",
+    "mono",
+    "thing"
+  ],
+  "特": [
+    "toku",
+    "special"
+  ],
+  "犬": [
+    "inu",
+    "dog"
+  ],
+  "犯": [
+    "han",
+    "crime"
+  ],
+  "状": [
+    "jou",
+    "condition"
+  ],
+  "独": [
+    "doku",
+    "alone"
+  ],
+  "狭": [
+    "sema",
+    "narrow"
+  ],
+  "狼": [
+    "rou",
+    "ookami",
+    "wolf"
+  ],
+  "猛": [
+    "mou",
+    "fierce"
+  ],
+  "猫": [
+    "neko",
+    "cat"
+  ],
+  "獣": [
+    "juu",
+    "beast"
+  ],
+  "玄": [
+    "gen",
+    "mysterious"
+  ],
+  "率": [
+    "ritsu",
+    "sotsu",
+    "percent"
+  ],
+  "玉": [
+    "tama",
+    "ball"
+  ],
+  "王": [
+    "ou",
+    "king"
+  ],
+  "現": [
+    "gen",
+    "present time",
+    "appear"
+  ],
+  "球": [
+    "kyuu",
+    "sphere"
+  ],
+  "理": [
+    "ri",
+    "reason"
+  ],
+  "環": [
+    "kan",
+    "loop"
+  ],
+  "生": [
+    "sei",
+    "life"
+  ],
+  "産": [
+    "san",
+    "give birth",
+    "property"
+  ],
+  "用": [
+    "you",
+    "task"
+  ],
+  "田": [
+    "ta",
+    "rice paddy"
+  ],
+  "由": [
+    "yuu",
+    "reason"
+  ],
+  "申": [
+    "mou",
+    "say humbly"
+  ],
+  "男": [
+    "dan",
+    "man"
+  ],
+  "町": [
+    "chou",
+    "town"
+  ],
+  "画": [
+    "ga",
+    "kaku",
+    "image"
+  ],
+  "界": [
+    "kai",
+    "world"
+  ],
+  "留": [
+    "ru",
+    "ryuu",
+    "detain"
+  ],
+  "略": [
+    "ryaku",
+    "abbreviation"
+  ],
+  "番": [
+    "ban",
+    "number in a series"
+  ],
+  "疑": [
+    "gi",
+    "doubt"
+  ],
+  "疲": [
+    "hi",
+    "tired"
+  ],
+  "病": [
+    "byou",
+    "sick"
+  ],
+  "症": [
+    "shou",
+    "symptom"
+  ],
+  "痒": [
+    "kayu",
+    "itchy"
+  ],
+  "痛": [
+    "tsuu",
+    "pain"
+  ],
+  "発": [
+    "hatsu",
+    "departure"
+  ],
+  "登": [
+    "tou",
+    "climb"
+  ],
+  "白": [
+    "haku",
+    "white"
+  ],
+  "百": [
+    "hyaku",
+    "hundred"
+  ],
+  "的": [
+    "teki",
+    "target"
+  ],
+  "皆": [
+    "minna",
+    "all"
+  ],
+  "皮": [
+    "hi",
+    "skin"
+  ],
+  "皿": [
+    "sara",
+    "plate"
   ],
   "益": [
     "eki",
     "benefit"
+  ],
+  "盗": [
+    "tou",
+    "steal"
+  ],
+  "監": [
+    "kan",
+    "oversee"
+  ],
+  "目": [
+    "moku",
+    "me",
+    "eye"
+  ],
+  "直": [
+    "choku",
+    "fix"
+  ],
+  "相": [
+    "sou",
+    "mutual"
+  ],
+  "省": [
+    "shou",
+    "conserve"
+  ],
+  "看": [
+    "kan",
+    "watch over"
+  ],
+  "県": [
+    "ken",
+    "prefecture"
+  ],
+  "真": [
+    "shin",
+    "reality"
+  ],
+  "眠": [
+    "min",
+    "sleep"
+  ],
+  "眼": [
+    "gan",
+    "eyeball"
+  ],
+  "着": [
+    "chaku",
+    "wear"
+  ],
+  "睡": [
+    "sui",
+    "drowsy"
+  ],
+  "督": [
+    "toku",
+    "director",
+    "supervise"
+  ],
+  "矢": [
+    "ya",
+    "arrow"
+  ],
+  "知": [
+    "chi",
+    "know"
+  ],
+  "短": [
+    "tan",
+    "short"
+  ],
+  "石": [
+    "seki",
+    "stone"
+  ],
+  "研": [
+    "ken",
+    "sharpen"
+  ],
+  "確": [
+    "kaku",
+    "certain"
+  ],
+  "示": [
+    "ji",
+    "indicate"
+  ],
+  "礼": [
+    "rei",
+    "thanks"
+  ],
+  "社": [
+    "sha",
+    "company"
+  ],
+  "祈": [
+    "ki",
+    "pray"
+  ],
+  "祖": [
+    "so",
+    "ancestor"
+  ],
+  "祝": [
+    "shuku",
+    "celebrate"
+  ],
+  "神": [
+    "shin",
+    "god"
+  ],
+  "票": [
+    "hyou",
+    "ballot"
+  ],
+  "祭": [
+    "sai",
+    "festival"
+  ],
+  "禁": [
+    "kin",
+    "prohibit"
+  ],
+  "禅": [
+    "zen"
+  ],
+  "福": [
+    "fuku",
+    "luck"
+  ],
+  "秀": [
+    "shuu",
+    "excel"
+  ],
+  "私": [
+    "shi",
+    "i"
+  ],
+  "秋": [
+    "aki",
+    "autumn"
+  ],
+  "科": [
+    "ka",
+    "science"
+  ],
+  "秒": [
+    "byou",
+    "second"
+  ],
+  "秘": [
+    "hi",
+    "secret"
   ],
   "移": [
     "i",
@@ -3908,320 +3076,356 @@
     "tei",
     "extent"
   ],
-  "精": [
-    "sei",
-    "spirit",
-    "pure"
+  "税": [
+    "zei",
+    "tax"
   ],
-  "並": [
-    "hei",
-    "line up"
+  "稚": [
+    "chi",
+    "immature"
   ],
-  "憲": [
-    "ken",
-    "constitution"
-  ],
-  "沼": [
-    "numa",
-    "bog"
-  ],
-  "衆": [
-    "shuu",
-    "populace"
-  ],
-  "揃": [
-    "soro",
-    "complete"
-  ],
-  "巨": [
-    "kyo",
-    "giant"
-  ],
-  "傘": [
-    "kasa",
-    "umbrella"
-  ],
-  "浜": [
-    "hama",
-    "beach"
-  ],
-  "逆": [
-    "gyaku",
-    "reverse",
-    "opposite"
-  ],
-  "博": [
-    "haku",
-    "exhibition",
-    "gambling"
-  ],
-  "麗": [
-    "rei",
-    "lovely"
-  ],
-  "撃": [
-    "geki",
-    "attack"
-  ],
-  "奇": [
-    "ki",
-    "odd",
-    "strange"
-  ],
-  "攻": [
-    "kou",
-    "aggression"
-  ],
-  "綺": [
-    "ki",
-    "beautiful"
-  ],
-  "杯": [
-    "hai",
-    "cup of liquid"
-  ],
-  "催": [
-    "sai",
-    "sponsor"
-  ],
-  "促": [
-    "soku",
-    "urge"
-  ],
-  "江": [
-    "e",
-    "inlet",
-    "bay"
-  ],
-  "請": [
-    "sei",
-    "shin",
-    "shou",
-    "request"
-  ],
-  "雄": [
-    "yuu",
-    "male",
-    "manly",
-    "brave"
-  ],
-  "韓": [
-    "kan",
-    "korea"
-  ],
-  "壊": [
-    "kai",
-    "break"
-  ],
-  "診": [
-    "shin",
-    "diagnose"
-  ],
-  "閣": [
-    "kaku",
-    "the cabinet"
-  ],
-  "勧": [
-    "kan",
-    "recommend"
-  ],
-  "略": [
-    "ryaku",
-    "abbreviation"
-  ],
-  "航": [
-    "kou",
-    "navigation"
-  ],
-  "寄": [
-    "ki",
-    "draw near",
-    "stop by",
-    "send"
-  ],
-  "板": [
-    "ban",
-    "board"
-  ],
-  "街": [
-    "gai",
-    "street"
-  ],
-  "僚": [
-    "ryou",
-    "colleague"
-  ],
-  "玄": [
-    "gen",
-    "mysterious"
-  ],
-  "宗": [
-    "shuu",
-    "religion"
-  ],
-  "娘": [
-    "musume",
-    "daughter"
-  ],
-  "宴": [
-    "en",
-    "banquet",
-    "party"
-  ],
-  "怖": [
-    "fu",
-    "scary"
-  ],
-  "恐": [
-    "kyou",
-    "fear"
-  ],
-  "添": [
-    "ten",
-    "append"
-  ],
-  "猛": [
-    "mou",
-    "fierce"
-  ],
-  "烈": [
-    "retsu",
-    "violent",
-    "intense"
-  ],
-  "索": [
-    "saku",
-    "search"
-  ],
-  "詰": [
-    "tsu",
-    "stuffed"
-  ],
-  "欧": [
-    "ou",
-    "europe"
+  "種": [
+    "shu",
+    "kind"
   ],
   "積": [
     "seki",
     "accumulate"
   ],
-  "監": [
-    "kan",
-    "oversee"
+  "穴": [
+    "ana",
+    "hole"
   ],
-  "臣": [
-    "shin",
-    "servant",
-    "retainer"
+  "究": [
+    "kyuu",
+    "research"
+  ],
+  "空": [
+    "kuu",
+    "sky"
+  ],
+  "突": [
+    "totsu",
+    "stab"
+  ],
+  "立": [
+    "ritsu",
+    "stand"
+  ],
+  "章": [
+    "shou",
+    "chapter"
+  ],
+  "童": [
+    "dou",
+    "juvenile"
+  ],
+  "端": [
+    "tan",
+    "hashi",
+    "edge"
+  ],
+  "競": [
+    "kyou",
+    "compete"
+  ],
+  "竹": [
+    "take",
+    "bamboo"
+  ],
+  "笑": [
+    "wara",
+    "laugh"
+  ],
+  "笛": [
+    "teki",
+    "flute"
+  ],
+  "符": [
+    "fu",
+    "token"
+  ],
+  "第": [
+    "dai",
+    "ordinal number prefix"
+  ],
+  "筆": [
+    "hitsu",
+    "writing brush"
+  ],
+  "等": [
+    "tou",
+    "equal"
+  ],
+  "答": [
+    "tou",
+    "kota",
+    "answer"
+  ],
+  "策": [
+    "saku",
+    "plan"
+  ],
+  "算": [
+    "san",
+    "calculate"
+  ],
+  "管": [
+    "kan",
+    "pipe"
+  ],
+  "箱": [
+    "hako",
+    "box"
+  ],
+  "節": [
+    "setsu",
+    "season",
+    "joint"
+  ],
+  "築": [
+    "chiku",
+    "construct",
+    "build"
+  ],
+  "米": [
+    "bei",
+    "rice"
+  ],
+  "粉": [
+    "fun",
+    "powder"
+  ],
+  "精": [
+    "sei",
+    "spirit",
+    "pure"
+  ],
+  "糸": [
+    "ito",
+    "thread"
+  ],
+  "系": [
+    "kei",
+    "lineage",
+    "system"
+  ],
+  "紀": [
+    "ki",
+    "account"
+  ],
+  "約": [
+    "yaku",
+    "promise"
+  ],
+  "紙": [
+    "kami",
+    "paper"
+  ],
+  "級": [
+    "kyuu",
+    "level"
+  ],
+  "素": [
+    "so",
+    "element"
+  ],
+  "索": [
+    "saku",
+    "search"
+  ],
+  "紫": [
+    "shi",
+    "murasaki",
+    "purple"
+  ],
+  "細": [
+    "sai",
+    "thin",
+    "detailed"
+  ],
+  "終": [
+    "shuu",
+    "end"
+  ],
+  "組": [
+    "kumi",
+    "group"
+  ],
+  "経": [
+    "kei",
+    "passage of time"
+  ],
+  "結": [
+    "ketsu",
+    "bind"
+  ],
+  "絞": [
+    "kou",
+    "strangle"
+  ],
+  "絡": [
+    "raku",
+    "entangle"
+  ],
+  "給": [
+    "kyuu",
+    "salary"
+  ],
+  "統": [
+    "tou",
+    "unite"
+  ],
+  "絵": [
+    "e",
+    "picture"
+  ],
+  "絶": [
+    "zetsu",
+    "extinction",
+    "die out"
+  ],
+  "続": [
+    "zoku",
+    "continue"
+  ],
+  "綺": [
+    "ki",
+    "beautiful"
   ],
   "緊": [
     "kin",
     "tense"
   ],
-  "乾": [
+  "総": [
+    "sou",
+    "whole"
+  ],
+  "緑": [
+    "midori",
+    "green"
+  ],
+  "線": [
+    "sen",
+    "line"
+  ],
+  "締": [
+    "tei",
+    "tighten"
+  ],
+  "編": [
+    "hen",
+    "knit"
+  ],
+  "練": [
+    "ren",
+    "practice"
+  ],
+  "績": [
+    "seki",
+    "achievement"
+  ],
+  "繋": [
+    "tsuna",
+    "connect"
+  ],
+  "織": [
+    "shiki",
+    "shoku",
+    "weave"
+  ],
+  "缶": [
     "kan",
-    "dry"
+    "can"
   ],
-  "督": [
-    "toku",
-    "director",
-    "supervise"
+  "罪": [
+    "zai",
+    "guilt"
   ],
-  "柵": [
-    "saku",
-    "fence"
+  "置": [
+    "chi",
+    "put"
   ],
-  "魅": [
-    "mi",
-    "alluring"
+  "罰": [
+    "batsu",
+    "penalty"
   ],
-  "渇": [
-    "kawa",
-    "dry up",
-    "thirst"
+  "署": [
+    "sho",
+    "government office"
   ],
-  "婚": [
-    "kon",
-    "marriage"
+  "羊": [
+    "you",
+    "sheep"
   ],
-  "遊": [
-    "yuu",
-    "play"
+  "美": [
+    "bi",
+    "beauty"
   ],
-  "旗": [
-    "ki",
-    "flag"
+  "羨": [
+    "sen",
+    "envy"
   ],
-  "照": [
-    "shou",
-    "illuminate"
+  "義": [
+    "gi",
+    "righteousness"
   ],
-  "快": [
-    "kai",
-    "pleasant"
-  ],
-  "貧": [
-    "bin",
-    "poor"
-  ],
-  "適": [
-    "teki",
-    "suitable"
-  ],
-  "預": [
-    "yo",
-    "deposit"
-  ],
-  "延": [
-    "en",
-    "prolong"
+  "羽": [
+    "hane",
+    "feather"
   ],
   "翌": [
     "yoku",
     "the next",
     "the following"
   ],
-  "覧": [
-    "ran",
-    "look at"
+  "習": [
+    "shuu",
+    "learn"
   ],
-  "懐": [
-    "natsu",
-    "futokoro",
-    "nostalgia"
-  ],
-  "浮": [
-    "u",
-    "uwa",
-    "float"
-  ],
-  "漏": [
+  "老": [
     "rou",
-    "leak"
+    "elderly"
   ],
-  "符": [
-    "fu",
-    "token"
-  ],
-  "購": [
+  "考": [
     "kou",
-    "purchase"
+    "think"
   ],
-  "越": [
-    "etsu",
-    "go beyond"
+  "者": [
+    "sha",
+    "someone"
   ],
-  "飾": [
+  "耳": [
+    "mimi",
+    "ear"
+  ],
+  "聞": [
+    "bun",
+    "hear"
+  ],
+  "職": [
     "shoku",
-    "decorate"
+    "employment"
   ],
-  "版": [
-    "han",
-    "edition"
+  "肉": [
+    "niku",
+    "meat"
   ],
-  "騒": [
-    "sou",
-    "boisterous"
+  "肥": [
+    "hi",
+    "obese"
+  ],
+  "肩": [
+    "kata",
+    "shoulder"
+  ],
+  "育": [
+    "iku",
+    "nurture"
+  ],
+  "胃": [
+    "i",
+    "stomach"
   ],
   "背": [
     "hai",
@@ -4229,44 +3433,133 @@
     "back",
     "height"
   ],
-  "撮": [
-    "satsu",
-    "photograph"
+  "胸": [
+    "mune",
+    "chest"
   ],
-  "盗": [
-    "tou",
-    "steal"
+  "能": [
+    "nou",
+    "ability"
   ],
-  "匂": [
-    "nio",
-    "smell",
-    "scent"
+  "脈": [
+    "myaku",
+    "vein"
   ],
-  "系": [
-    "kei",
-    "lineage",
-    "system"
+  "脱": [
+    "datsu",
+    "undress",
+    "escape"
   ],
-  "押": [
-    "o",
-    "push"
+  "脳": [
+    "nou",
+    "brain"
   ],
-  "濡": [
-    "nu",
-    "wet",
-    "damp"
+  "腕": [
+    "ude",
+    "arm"
   ],
-  "枕": [
-    "makura",
-    "pillow"
+  "腰": [
+    "koshi",
+    "waist"
   ],
-  "姪": [
-    "mei",
-    "niece"
+  "腹": [
+    "fuku",
+    "belly"
   ],
-  "乏": [
-    "bou",
-    "scarce"
+  "臣": [
+    "shin",
+    "servant",
+    "retainer"
+  ],
+  "自": [
+    "ji",
+    "self"
+  ],
+  "臭": [
+    "kusa",
+    "stinking",
+    "smelly"
+  ],
+  "興": [
+    "kyou",
+    "kou",
+    "interest"
+  ],
+  "舌": [
+    "shita",
+    "tongue"
+  ],
+  "航": [
+    "kou",
+    "navigation"
+  ],
+  "船": [
+    "sen",
+    "boat"
+  ],
+  "良": [
+    "ryou",
+    "good"
+  ],
+  "色": [
+    "iro",
+    "color"
+  ],
+  "芋": [
+    "imo",
+    "potato"
+  ],
+  "花": [
+    "hana",
+    "flower"
+  ],
+  "芸": [
+    "gei",
+    "art"
+  ],
+  "苛": [
+    "iji",
+    "frustration"
+  ],
+  "若": [
+    "waka",
+    "young"
+  ],
+  "苦": [
+    "ku",
+    "suffering"
+  ],
+  "英": [
+    "ei",
+    "england"
+  ],
+  "苺": [
+    "ichigo",
+    "strawberry"
+  ],
+  "茶": [
+    "cha",
+    "tea"
+  ],
+  "草": [
+    "kusa",
+    "grass"
+  ],
+  "荷": [
+    "ni",
+    "luggage"
+  ],
+  "莫": [
+    "baku",
+    "endless"
+  ],
+  "菓": [
+    "ka",
+    "cake"
+  ],
+  "菜": [
+    "sai",
+    "vegetable"
   ],
   "華": [
     "ka",
@@ -4274,19 +3567,723 @@
     "flower",
     "gorgeous"
   ],
+  "落": [
+    "raku",
+    "fall"
+  ],
+  "葉": [
+    "ha",
+    "leaf"
+  ],
+  "薬": [
+    "yaku",
+    "medicine"
+  ],
+  "藤": [
+    "fuji",
+    "wisteria"
+  ],
+  "虫": [
+    "mushi",
+    "insect"
+  ],
+  "融": [
+    "yuu",
+    "dissolve"
+  ],
+  "血": [
+    "ketsu",
+    "blood"
+  ],
+  "衆": [
+    "shuu",
+    "populace"
+  ],
+  "行": [
+    "kou",
+    "go"
+  ],
+  "術": [
+    "jutsu",
+    "technique"
+  ],
+  "街": [
+    "gai",
+    "street"
+  ],
+  "衛": [
+    "ei",
+    "defense"
+  ],
+  "衣": [
+    "i",
+    "clothes"
+  ],
+  "表": [
+    "hyou",
+    "express"
+  ],
+  "袖": [
+    "sode",
+    "sleeve"
+  ],
+  "被": [
+    "hi",
+    "incur",
+    "cover"
+  ],
+  "裁": [
+    "sai",
+    "judge"
+  ],
+  "裕": [
+    "yuu",
+    "abundant"
+  ],
+  "補": [
+    "ho",
+    "supplement"
+  ],
+  "製": [
+    "sei",
+    "manufacture"
+  ],
+  "複": [
+    "fuku",
+    "duplicate"
+  ],
+  "西": [
+    "sei",
+    "west"
+  ],
+  "要": [
+    "you",
+    "need"
+  ],
+  "見": [
+    "mi",
+    "see"
+  ],
+  "規": [
+    "ki",
+    "standard"
+  ],
+  "視": [
+    "shi",
+    "look at"
+  ],
+  "覚": [
+    "kaku",
+    "memorize"
+  ],
+  "覧": [
+    "ran",
+    "look at"
+  ],
+  "親": [
+    "shin",
+    "parent"
+  ],
+  "観": [
+    "kan",
+    "view"
+  ],
+  "角": [
+    "kaku",
+    "angle"
+  ],
+  "解": [
+    "kai",
+    "solve"
+  ],
+  "触": [
+    "shoku",
+    "touch"
+  ],
+  "言": [
+    "gen",
+    "say"
+  ],
+  "計": [
+    "kei",
+    "measure"
+  ],
+  "討": [
+    "tou",
+    "chastise"
+  ],
+  "訓": [
+    "kun",
+    "instruction"
+  ],
+  "記": [
+    "ki",
+    "write down"
+  ],
+  "訟": [
+    "shou",
+    "lawsuit"
+  ],
+  "訪": [
+    "hou",
+    "visit"
+  ],
+  "設": [
+    "setsu",
+    "establish"
+  ],
+  "許": [
+    "kyo",
+    "permit"
+  ],
+  "訳": [
+    "yaku",
+    "translation",
+    "reason"
+  ],
+  "訴": [
+    "so",
+    "sue"
+  ],
+  "診": [
+    "shin",
+    "diagnose"
+  ],
+  "証": [
+    "shou",
+    "evidence"
+  ],
+  "評": [
+    "hyou",
+    "evaluate"
+  ],
+  "詞": [
+    "shi",
+    "part of speech"
+  ],
+  "試": [
+    "shi",
+    "try"
+  ],
+  "詩": [
+    "shi",
+    "poem"
+  ],
+  "詰": [
+    "tsu",
+    "stuffed"
+  ],
+  "話": [
+    "wa",
+    "talk"
+  ],
+  "詳": [
+    "shou",
+    "detailed"
+  ],
+  "認": [
+    "nin",
+    "recognize"
+  ],
+  "誕": [
+    "tan",
+    "birth"
+  ],
+  "誘": [
+    "yuu",
+    "invite"
+  ],
+  "語": [
+    "go",
+    "language"
+  ],
+  "説": [
+    "setsu",
+    "theory"
+  ],
+  "読": [
+    "doku",
+    "yo",
+    "read"
+  ],
+  "誰": [
+    "dare",
+    "who"
+  ],
+  "課": [
+    "ka",
+    "section"
+  ],
+  "調": [
+    "chou",
+    "investigate"
+  ],
+  "談": [
+    "dan",
+    "talk"
+  ],
+  "請": [
+    "sei",
+    "shin",
+    "shou",
+    "request"
+  ],
+  "論": [
+    "ron",
+    "theory"
+  ],
+  "諦": [
+    "akira",
+    "give up",
+    "abandon"
+  ],
+  "謝": [
+    "sha",
+    "apologize"
+  ],
+  "識": [
+    "shiki",
+    "discerning"
+  ],
+  "警": [
+    "kei",
+    "warn"
+  ],
+  "議": [
+    "gi",
+    "deliberation"
+  ],
+  "護": [
+    "go",
+    "defend"
+  ],
+  "谷": [
+    "tani",
+    "valley"
+  ],
+  "豊": [
+    "hou",
+    "plentiful"
+  ],
+  "豚": [
+    "buta",
+    "pig"
+  ],
+  "象": [
+    "zou",
+    "elephant"
+  ],
   "豪": [
     "gou",
     "exceptional"
+  ],
+  "貝": [
+    "kai",
+    "shellfish"
+  ],
+  "負": [
+    "fu",
+    "lose"
+  ],
+  "財": [
+    "sai",
+    "wealth"
+  ],
+  "貧": [
+    "bin",
+    "poor"
+  ],
+  "貨": [
+    "ka",
+    "freight"
+  ],
+  "販": [
+    "han",
+    "sell"
+  ],
+  "責": [
+    "seki",
+    "blame"
+  ],
+  "貯": [
+    "cho",
+    "savings"
+  ],
+  "貰": [
+    "mora",
+    "receive"
+  ],
+  "買": [
+    "ka",
+    "buy"
+  ],
+  "貸": [
+    "ka",
+    "lend"
+  ],
+  "費": [
+    "hi",
+    "expense"
+  ],
+  "賀": [
+    "ga",
+    "congratulations"
+  ],
+  "資": [
+    "shi",
+    "resources"
+  ],
+  "賛": [
+    "san",
+    "agree"
+  ],
+  "賞": [
+    "shou",
+    "prize"
+  ],
+  "質": [
+    "shitsu",
+    "quality"
+  ],
+  "購": [
+    "kou",
+    "purchase"
+  ],
+  "贅": [
+    "zei",
+    "extravagant"
+  ],
+  "赤": [
+    "aka",
+    "red"
+  ],
+  "走": [
+    "sou",
+    "run"
+  ],
+  "起": [
+    "o",
+    "wake up"
+  ],
+  "越": [
+    "etsu",
+    "go beyond"
+  ],
+  "足": [
+    "soku",
+    "foot"
+  ],
+  "路": [
+    "ro",
+    "road"
+  ],
+  "身": [
+    "shin",
+    "somebody"
+  ],
+  "車": [
+    "sha",
+    "car"
+  ],
+  "軍": [
+    "gun",
+    "army"
+  ],
+  "転": [
+    "ten",
+    "revolve"
+  ],
+  "軽": [
+    "karo",
+    "lightweight"
+  ],
+  "較": [
+    "kaku",
+    "kou",
+    "contrast",
+    "compare"
+  ],
+  "載": [
+    "sai",
+    "place on"
+  ],
+  "輩": [
+    "hai",
+    "comrade"
+  ],
+  "輪": [
+    "rin",
+    "wheel"
+  ],
+  "輸": [
+    "yu",
+    "transport"
+  ],
+  "辛": [
+    "kara",
+    "spicy"
+  ],
+  "辞": [
+    "ji",
+    "quit"
+  ],
+  "農": [
+    "nou",
+    "farming"
+  ],
+  "辺": [
+    "hen",
+    "area"
+  ],
+  "込": [
+    "ko",
+    "into",
+    "included"
+  ],
+  "迎": [
+    "gei",
+    "welcome"
+  ],
+  "近": [
+    "kin",
+    "near"
+  ],
+  "返": [
+    "hen",
+    "return"
+  ],
+  "迫": [
+    "haku",
+    "urge"
+  ],
+  "述": [
+    "jutsu",
+    "mention"
+  ],
+  "迷": [
+    "mei",
+    "astray",
+    "lost"
+  ],
+  "追": [
+    "o",
+    "follow"
+  ],
+  "退": [
+    "tai",
+    "retreat",
+    "reject"
+  ],
+  "送": [
+    "sou",
+    "send"
+  ],
+  "逆": [
+    "gyaku",
+    "reverse",
+    "opposite"
+  ],
+  "途": [
+    "to",
+    "route"
+  ],
+  "通": [
+    "tsuu",
+    "pass through"
+  ],
+  "速": [
+    "soku",
+    "fast"
+  ],
+  "造": [
+    "zou",
+    "create"
+  ],
+  "連": [
+    "ren",
+    "take along"
+  ],
+  "逮": [
+    "tai",
+    "apprehend"
+  ],
+  "週": [
+    "shuu",
+    "week"
+  ],
+  "進": [
+    "shin",
+    "advance"
+  ],
+  "遊": [
+    "yuu",
+    "play"
+  ],
+  "運": [
+    "un",
+    "carry"
+  ],
+  "過": [
+    "ka",
+    "surpass"
+  ],
+  "道": [
+    "dou",
+    "road"
+  ],
+  "達": [
+    "tatsu",
+    "attain"
+  ],
+  "違": [
+    "chiga",
+    "different"
+  ],
+  "遠": [
+    "en",
+    "far"
+  ],
+  "適": [
+    "teki",
+    "suitable"
+  ],
+  "選": [
+    "sen",
+    "choose"
+  ],
+  "郎": [
+    "rou",
+    "guy"
+  ],
+  "部": [
+    "bu",
+    "part"
+  ],
+  "郵": [
+    "yuu",
+    "mail"
+  ],
+  "都": [
+    "to",
+    "metropolis"
+  ],
+  "配": [
+    "hai",
+    "distribute"
+  ],
+  "酒": [
+    "shu",
+    "alcohol"
+  ],
+  "酸": [
+    "san",
+    "acid"
+  ],
+  "里": [
+    "sato",
+    "hometown"
+  ],
+  "重": [
+    "juu",
+    "heavy"
+  ],
+  "野": [
+    "ya",
+    "field"
+  ],
+  "量": [
+    "ryou",
+    "quantity"
+  ],
+  "金": [
+    "kin",
+    "gold"
+  ],
+  "針": [
+    "shin",
+    "needle"
+  ],
+  "鉄": [
+    "tetsu",
+    "iron"
+  ],
+  "鉛": [
+    "en",
+    "lead"
+  ],
+  "銀": [
+    "gin",
+    "silver"
+  ],
+  "銭": [
+    "sen",
+    "coin"
+  ],
+  "録": [
+    "roku",
+    "record"
+  ],
+  "鏡": [
+    "kagami",
+    "mirror"
   ],
   "鑑": [
     "kan",
     "model",
     "take into account"
   ],
-  "妨": [
+  "長": [
+    "chou",
+    "long"
+  ],
+  "門": [
+    "mon",
+    "gates"
+  ],
+  "閉": [
+    "hei",
+    "closed"
+  ],
+  "開": [
+    "kai",
+    "open"
+  ],
+  "間": [
+    "kan",
+    "ma",
+    "interval"
+  ],
+  "関": [
+    "kan",
+    "related"
+  ],
+  "閣": [
+    "kaku",
+    "the cabinet"
+  ],
+  "閥": [
+    "batsu",
+    "clique"
+  ],
+  "阪": [
+    "han",
+    "heights"
+  ],
+  "防": [
     "bou",
-    "obstruct",
-    "impede"
+    "prevent"
+  ],
+  "降": [
+    "kou",
+    "descend"
+  ],
+  "限": [
+    "gen",
+    "limit"
+  ],
+  "院": [
+    "in",
+    "institution"
   ],
   "除": [
     "jo",
@@ -4294,281 +4291,284 @@
     "exclude",
     "remove"
   ],
-  "既": [
-    "ki",
-    "previously"
-  ],
-  "普": [
-    "fu",
-    "normal"
-  ],
-  "尋": [
-    "jin",
-    "inquire"
-  ],
-  "幾": [
-    "iku",
-    "how many",
-    "how much"
-  ],
-  "掃": [
-    "sou",
-    "sweep"
-  ],
-  "泥": [
-    "doro",
-    "mud"
-  ],
-  "棒": [
-    "bou",
-    "pole",
-    "rod",
-    "stick"
-  ],
-  "離": [
-    "ri",
-    "detach"
-  ],
-  "驚": [
-    "kyou",
-    "surprised"
-  ],
-  "嘆": [
-    "tan",
-    "sigh"
-  ],
-  "倉": [
-    "sou",
-    "warehouse",
-    "storehouse"
-  ],
-  "孫": [
-    "son",
-    "grandchild"
-  ],
-  "巣": [
-    "su",
-    "nest"
-  ],
-  "融": [
-    "yuu",
-    "dissolve"
-  ],
-  "帯": [
-    "tai",
-    "belt"
-  ],
-  "径": [
-    "kei",
-    "diameter"
-  ],
-  "救": [
-    "kyuu",
-    "rescue"
-  ],
-  "散": [
-    "san",
-    "scatter"
-  ],
-  "粉": [
-    "fun",
-    "powder"
-  ],
-  "編": [
-    "hen",
-    "knit"
-  ],
-  "脈": [
-    "myaku",
-    "vein"
-  ],
-  "菜": [
-    "sai",
-    "vegetable"
-  ],
-  "貨": [
-    "ka",
-    "freight"
-  ],
   "陸": [
     "riku",
     "land"
   ],
-  "似": [
-    "ni",
-    "resemble"
+  "険": [
+    "ken",
+    "risky"
   ],
-  "均": [
-    "kin",
-    "equal"
+  "陽": [
+    "you",
+    "sunshine"
   ],
-  "墓": [
-    "bo",
-    "grave",
-    "tomb"
+  "隊": [
+    "tai",
+    "squad"
   ],
-  "富": [
-    "fu",
-    "rich"
+  "階": [
+    "kai",
+    "floor"
   ],
-  "徳": [
-    "toku",
-    "virtue"
-  ],
-  "探": [
-    "tan",
-    "look for",
-    "search for"
-  ],
-  "廊": [
-    "rou",
-    "corridor"
-  ],
-  "偵": [
-    "tei",
-    "spy"
-  ],
-  "久": [
-    "kyuu",
-    "ku",
-    "long time"
-  ],
-  "序": [
-    "jo",
-    "preface"
-  ],
-  "志": [
-    "shi",
-    "intention",
-    "ambition"
-  ],
-  "恩": [
-    "on",
-    "kindness"
-  ],
-  "採": [
+  "際": [
     "sai",
-    "gather"
+    "kiwa",
+    "occasion"
   ],
-  "桜": [
-    "sakura"
+  "障": [
+    "shou",
+    "hinder"
   ],
-  "永": [
-    "ei",
-    "eternity"
+  "隠": [
+    "in",
+    "hide"
   ],
-  "眼": [
-    "gan",
-    "eyeball"
+  "雄": [
+    "yuu",
+    "male",
+    "manly",
+    "brave"
   ],
-  "祖": [
-    "so",
-    "ancestor"
-  ],
-  "績": [
-    "seki",
-    "achievement"
-  ],
-  "衛": [
-    "ei",
-    "defense"
-  ],
-  "複": [
-    "fuku",
-    "duplicate"
+  "集": [
+    "shuu",
+    "collect"
   ],
   "雑": [
     "zatsu",
     "random",
     "miscellaneous"
   ],
-  "賛": [
-    "san",
-    "agree"
+  "離": [
+    "ri",
+    "detach"
   ],
-  "銭": [
-    "sen",
-    "coin"
+  "難": [
+    "nan",
+    "difficult"
+  ],
+  "雨": [
+    "ame",
+    "rain"
+  ],
+  "雪": [
+    "yuki",
+    "snow"
+  ],
+  "雰": [
+    "fun",
+    "atmosphere"
+  ],
+  "雲": [
+    "kumo",
+    "cloud"
+  ],
+  "電": [
+    "den",
+    "electricity"
+  ],
+  "震": [
+    "shin",
+    "earthquake"
+  ],
+  "青": [
+    "sei",
+    "blue"
+  ],
+  "静": [
+    "sei",
+    "quiet"
+  ],
+  "非": [
+    "hi",
+    "injustice"
+  ],
+  "面": [
+    "men",
+    "face"
+  ],
+  "革": [
+    "kaku",
+    "leather"
+  ],
+  "靴": [
+    "kutsu",
+    "shoes"
+  ],
+  "韓": [
+    "kan",
+    "korea"
+  ],
+  "音": [
+    "on",
+    "sound"
+  ],
+  "響": [
+    "kyou",
+    "echo"
+  ],
+  "頁": [
+    "kashira",
+    "page"
+  ],
+  "順": [
+    "jun",
+    "order",
+    "sequence"
+  ],
+  "預": [
+    "yo",
+    "deposit"
+  ],
+  "頑": [
+    "gan",
+    "stubborn"
+  ],
+  "領": [
+    "ryou",
+    "territory"
+  ],
+  "頭": [
+    "zu",
+    "tou",
+    "kashira",
+    "atama",
+    "head"
+  ],
+  "題": [
+    "dai",
+    "topic"
+  ],
+  "額": [
+    "gaku",
+    "amount"
+  ],
+  "顔": [
+    "kao",
+    "face"
+  ],
+  "願": [
+    "gan",
+    "request"
+  ],
+  "類": [
+    "rui",
+    "type"
+  ],
+  "風": [
+    "fuu",
+    "wind"
+  ],
+  "飛": [
+    "hi",
+    "fly"
+  ],
+  "食": [
+    "shoku",
+    "eat"
+  ],
+  "飯": [
+    "han",
+    "meal"
+  ],
+  "飲": [
+    "no",
+    "drink"
+  ],
+  "飴": [
+    "ame",
+    "candy"
   ],
   "飼": [
     "ka",
     "domesticate"
   ],
-  "傷": [
-    "shou",
-    "wound"
+  "飾": [
+    "shoku",
+    "decorate"
   ],
-  "党": [
-    "tou",
-    "party",
-    "group"
+  "養": [
+    "you",
+    "foster"
   ],
-  "迎": [
-    "gei",
-    "welcome"
+  "館": [
+    "kan",
+    "public building"
   ],
-  "興": [
-    "kyou",
-    "kou",
-    "interest"
+  "首": [
+    "kubi",
+    "neck"
   ],
-  "卵": [
-    "tamago",
-    "egg"
+  "馬": [
+    "ba",
+    "horse"
   ],
-  "込": [
-    "ko",
-    "into",
-    "included"
-  ],
-  "液": [
+  "駅": [
     "eki",
-    "fluid",
-    "liquid"
+    "station"
   ],
-  "酸": [
-    "san",
-    "acid"
+  "騒": [
+    "sou",
+    "boisterous"
   ],
-  "厳": [
-    "gen",
-    "strict"
+  "験": [
+    "ken",
+    "test"
   ],
-  "捨": [
-    "su",
-    "throw away"
+  "驚": [
+    "kyou",
+    "surprised"
   ],
-  "密": [
-    "mitsu",
-    "secrecy"
+  "骨": [
+    "kotsu",
+    "bone"
   ],
-  "汚": [
-    "o",
-    "dirty"
+  "高": [
+    "kou",
+    "tall"
   ],
-  "欲": [
-    "yoku",
-    "want"
+  "鬼": [
+    "ki",
+    "demon"
   ],
-  "暖": [
-    "dan",
-    "warm"
+  "魅": [
+    "mi",
+    "alluring"
   ],
-  "机": [
-    "tsukue",
-    "desk"
+  "魚": [
+    "gyo",
+    "fish"
   ],
-  "秘": [
-    "hi",
-    "secret"
-  ],
-  "訳": [
-    "yaku",
-    "translation",
-    "reason"
-  ],
-  "染": [
+  "鮮": [
     "sen",
-    "dye"
+    "fresh"
+  ],
+  "鳥": [
+    "chou",
+    "bird"
+  ],
+  "鳴": [
+    "na",
+    "chirp"
+  ],
+  "麗": [
+    "rei",
+    "lovely"
+  ],
+  "麦": [
+    "mugi",
+    "wheat"
+  ],
+  "黄": [
+    "ki",
+    "yellow"
+  ],
+  "黒": [
+    "koku",
+    "black"
+  ],
+  "鼻": [
+    "hana",
+    "nose"
   ]
 }
