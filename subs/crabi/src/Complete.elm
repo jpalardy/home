@@ -128,6 +128,14 @@ keyDecoder state messages =
                             Nothing ->
                                 suppressedEvent
 
+                    ( Opened _ _, "Tab" ) ->
+                        case selection state of
+                            Just text ->
+                                handleWith <| messages.acceptQuery text
+
+                            Nothing ->
+                                suppressedEvent
+
                     ( Opened _ _, "Escape" ) ->
                         handleWith <| messages.updateState Closed
 
