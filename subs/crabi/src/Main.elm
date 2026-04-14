@@ -117,7 +117,14 @@ getCards =
                         (\( kanji, keywords ) ->
                             { kanji = kanji
                             , keywords = keywords
-                            , searchKeywords = Set.fromList (kanji :: keywords)
+                            , searchKeywords =
+                                Set.fromList
+                                    (List.concat
+                                        [ [ kanji ]
+                                        , keywords
+                                        , keywords |> List.concatMap String.words
+                                        ]
+                                    )
                             , similar = keywords |> List.any (String.startsWith "~")
                             }
                         )
