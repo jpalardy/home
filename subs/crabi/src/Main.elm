@@ -31,6 +31,7 @@ type Msg
     | UrlRequested Browser.UrlRequest
     | UrlChanged Url.Url
     | KeyDown String
+    | Clear
 
 
 type alias Model =
@@ -199,6 +200,9 @@ update msg model =
         GotCards (Err err) ->
             ( { model | err = Just err }, Cmd.none )
 
+        Clear ->
+            ( { model | searchResults = [] }, focusQueryCmd )
+
         UrlRequested urlRequest ->
             case urlRequest of
                 Browser.Internal url ->
@@ -215,11 +219,6 @@ update msg model =
 
         KeyDown "?" ->
             ( model, focusQueryCmd )
-
-        KeyDown "Escape" ->
-            { model | searchResults = [] }
-                |> updateSearch ""
-                |> Tuple.mapSecond (\cmd -> Cmd.batch [ cmd, focusQueryCmd ])
 
         KeyDown _ ->
             ( model, Cmd.none )
@@ -273,8 +272,19 @@ view model =
                     [ renderSearchForm model.query model.completeState, renderPrompt ]
 
                 ( Nothing, _ ) ->
-                    renderSearchForm model.query model.completeState
-                        :: List.map renderResult model.searchResults
+                    List.concat
+                        [ [ renderSearchForm model.query model.completeState ]
+                        , List.map renderResult model.searchResults
+                        , [ Html.div [ HA.class "pt-3 group" ]
+                                [ Html.a
+                                    [ HA.href "#"
+                                    , HA.class "text-gray-500 opacity-20 group-hover:opacity-100"
+                                    , HE.onClick Clear
+                                    ]
+                                    [ Html.text "clear" ]
+                                ]
+                          ]
+                        ]
 
                 ( Just err, _ ) ->
                     [ renderError err ]
