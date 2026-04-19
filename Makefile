@@ -1,4 +1,6 @@
 
+MAKEFLAGS += -j$(shell nproc)
+
 SUBS_MAKEFILE := $(shell ls subs/*/Makefile)
 SUBS_BUILD := $(SUBS_MAKEFILE:Makefile=_build)
 SUBS_CLEAN := $(SUBS_MAKEFILE:Makefile=_clean)
