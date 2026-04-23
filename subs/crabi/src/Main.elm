@@ -27,6 +27,7 @@ type Msg
     | UpdateQuery String
     | UpdateState Complete.State
     | Search String
+    | DeleteResult Int
     | GotCards (Result Http.Error (List Card))
     | UrlRequested Browser.UrlRequest
     | UrlChanged Url.Url
@@ -186,6 +187,16 @@ update msg model =
         Search query ->
             updateSearch query model
 
+        DeleteResult i ->
+            let
+                newSearchResults =
+                    model.searchResults
+                        |> List.indexedMap Tuple.pair
+                        |> List.filter (Tuple.first >> (/=) i)
+                        |> List.map Tuple.second
+            in
+            ( { model | searchResults = newSearchResults }, Cmd.none )
+
         GotCards (Ok cards) ->
             { model
                 | cards = cards
@@ -279,7 +290,7 @@ view model =
 
                 ( Nothing, _ ) ->
                     renderSearchForm model.query model.completeState
-                        :: List.map renderResult model.searchResults
+                        :: List.indexedMap renderResult model.searchResults
 
                 ( Just err, _ ) ->
                     [ renderError err ]
@@ -288,14 +299,20 @@ view model =
     }
 
 
-renderResult : SearchResult -> Html Msg
-renderResult searchResult =
+renderResult : Int -> SearchResult -> Html Msg
+renderResult i searchResult =
     Html.div []
         [ Html.div
-            [ HA.class "text-lg mt-5 mb-1" ]
+            [ HA.class "text-lg mt-5 mb-1 group" ]
             [ Html.span [ HA.class "font-bold" ] [ Html.text searchResult.query ]
             , Html.text ": "
             , Html.span [ HA.class "text-gray-500" ] [ Html.text <| pluralize searchResult.count "no cards" "card" "cards" ]
+            , Html.a
+                [ HA.href "#delete"
+                , HA.class "px-2 opacity-0 group-hover:opacity-100"
+                , HE.onClick <| DeleteResult i
+                ]
+                [ Html.text "❌" ]
             ]
         , Html.div [ HA.class "flex flex-wrap gap-1" ]
             (List.map renderCard searchResult.cards)
