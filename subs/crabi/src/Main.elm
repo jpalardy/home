@@ -309,7 +309,7 @@ renderResult i searchResult =
             , Html.span [ HA.class "text-gray-500" ] [ Html.text <| pluralize searchResult.count "no cards" "card" "cards" ]
             , Html.a
                 [ HA.href "#delete"
-                , HA.class "px-2 opacity-0 group-hover:opacity-100"
+                , HA.class "px-2 text-sm opacity-0 group-hover:opacity-100"
                 , HE.onClick <| DeleteResult i
                 ]
                 [ Html.text "❌" ]
