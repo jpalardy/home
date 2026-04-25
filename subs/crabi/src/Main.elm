@@ -237,6 +237,16 @@ update msg model =
             else
                 model |> updateSearch "" |> Tuple.mapSecond (\cmd -> Cmd.batch [ cmd, focusQueryCmd ])
 
+        KeyDown "F2" ->
+            let
+                queryWithCommas =
+                    model.query
+                        |> String.split ""
+                        |> List.filter ((/=) ",")
+                        |> String.join ","
+            in
+            ( { model | query = queryWithCommas }, Cmd.none )
+
         KeyDown _ ->
             ( model, Cmd.none )
 
