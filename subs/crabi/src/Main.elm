@@ -244,11 +244,12 @@ update msg model =
 search : List Card -> String -> SearchResult
 search cards query =
     let
-        trimmedQuery =
-            String.trim query
+        subqueries =
+            query |> String.split "," |> List.map String.trim
 
         matchingCards =
-            cards |> List.filter (.searchKeywords >> Set.member trimmedQuery)
+            subqueries
+                |> List.concatMap (\q -> cards |> List.filter (.searchKeywords >> Set.member q))
     in
     { query = String.trim query
     , cards = matchingCards
