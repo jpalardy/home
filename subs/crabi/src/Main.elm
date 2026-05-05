@@ -318,9 +318,8 @@ renderResult i searchResult =
             [ Html.span [ HA.class "font-bold" ] [ Html.text searchResult.query ]
             , Html.text ": "
             , Html.span [ HA.class "text-gray-500" ] [ Html.text <| pluralize searchResult.count "no cards" "card" "cards" ]
-            , Html.a
-                [ HA.href "#delete"
-                , HA.class "px-2 text-sm opacity-0 group-hover:opacity-100"
+            , Html.button
+                [ HA.class "px-2 text-sm opacity-0 group-hover:opacity-100 cursor-pointer"
                 , HE.onClick <| DeleteResult i
                 ]
                 [ Html.text "❌" ]
@@ -396,7 +395,7 @@ renderCard card =
                                     "~" ++ card.kanji
                             in
                             Html.li [ HA.class "my-1" ]
-                                [ Html.a [ HA.class "bg-blue-300 px-2", HA.href "#", HE.onClick <| Search similar ] [ Html.text similar ] ]
+                                [ Html.button [ HA.class "bg-blue-300 px-2 cursor-pointer", HE.onClick <| Search similar ] [ Html.text similar ] ]
                        ]
                 )
             ]
