@@ -329,6 +329,8 @@ modal : List (Html Msg) -> Html Msg
 modal content =
     Html.div
         [ HA.class "fixed top-0 left-0 size-full bg-black/80 p-4"
+        , HA.attribute "aria-modal" "true"
+        , HA.attribute "role" "dialog"
         , HE.onMouseDown CloseModal
         ]
         [ Html.div
