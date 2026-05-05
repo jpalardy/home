@@ -329,11 +329,11 @@ modal : List (Html Msg) -> Html Msg
 modal content =
     Html.div
         [ HA.class "fixed top-0 left-0 size-full bg-black/80 p-4"
-        , HE.onClick CloseModal
+        , HE.onMouseDown CloseModal
         ]
         [ Html.div
             [ HA.class "bg-white rounded p-4 text-sm text-gray-600 mx-auto mt-[5%] w-fit"
-            , HE.stopPropagationOn "click" (Json.Decode.succeed ( Noop, True ))
+            , HE.stopPropagationOn "mousedown" (Json.Decode.succeed ( Noop, True ))
             ]
             content
         ]
