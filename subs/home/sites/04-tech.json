@@ -178,5 +178,10 @@
     "alias": "svg",
     "visit": "https://www.svgrepo.com/",
     "search": "https://www.svgrepo.com/vectors/%s/"
+  },
+  {
+    "alias": "hx",
+    "visit": "https://docs.helix-editor.com/",
+    "search": "https://docs.helix-editor.com/?search=%s"
   }
 ]
