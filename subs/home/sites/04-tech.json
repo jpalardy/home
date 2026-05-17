@@ -85,11 +85,6 @@
     "visit": "https://www.postgresql.org"
   },
   {
-    "alias": "vim.digraphs",
-    "visit": "https://vimhelp.org/digraph.txt.html",
-    "search": "https://vimhelp.org/digraph.txt.html"
-  },
-  {
     "alias": "flex",
     "visit": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
     "search": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/"

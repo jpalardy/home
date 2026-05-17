@@ -5,11 +5,6 @@
     "visit": "https://github.com/jpalardy"
   },
   {
-    "alias": "ghn",
-    "visit": "https://github.com/notifications",
-    "search": "https://github.com/notifications?query=%s"
-  },
-  {
     "alias": "gist",
     "visit": "https://gist.github.com/jpalardy",
     "search": "https://gist.github.com/search?q=%s"
