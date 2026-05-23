@@ -38,9 +38,9 @@ purge: clean
 
 # -------------------------------------------------
 
-tailwind:
+tailwind: node_modules
 	npm exec -- tailwindcss -i css/main.css -o public/css/main.css --minify --watch
 
-tailwind-build:
+tailwind-build: node_modules
 	npm exec -- tailwindcss -i css/main.css -o public/css/main.css --minify
 

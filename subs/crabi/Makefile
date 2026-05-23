@@ -45,9 +45,9 @@ endif
 	{ scripts/convert $(DECK) | jq --slurp 'add | to_entries'; scripts/convert-pairs data/pairs.txt | jq --slurp 'add | to_entries'; } | jq -s '.[0] + .[1] | group_by(.key) | map({key: .[0].key, value: map(.value) | add}) | from_entries' --sort-keys > public/cards.json
 	ncol -n 1 data/pairs.txt | sort | uniq -c | awk '$$1 > 1'
 
-tailwind:
+tailwind: node_modules
 	npm exec -- tailwindcss -i css/main.css -o public/css/main.css --minify --watch
 
-tailwind-build:
+tailwind-build: node_modules
 	npm exec -- tailwindcss -i css/main.css -o public/css/main.css --minify
 
