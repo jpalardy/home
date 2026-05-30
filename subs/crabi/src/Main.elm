@@ -384,7 +384,7 @@ renderCard card =
             ifelse condition content (Html.text "")
     in
     Html.div
-        [ HA.class "w-[220px] h-[136px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2 relative group" ]
+        [ HA.class "w-[250px] h-[155px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2 relative group" ]
         [ Html.div [ HA.class "mx-auto text-6xl flex items-center font-japanese text-gray-700" ] [ Html.text card.kanji ]
         , Html.div [ HA.class "flex items-center" ]
             [ Html.ul [ HA.class "text-right text-gray-500 ml-auto mr-4 leading-none" ]
