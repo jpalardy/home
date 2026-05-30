@@ -376,8 +376,8 @@ renderSearchForm query completeState =
 renderCard : Card -> Html Msg
 renderCard card =
     let
-        wanikaniURL query =
-            Url.Builder.crossOrigin "https://www.wanikani.com" [ "search" ] [ Url.Builder.string "query" query ]
+        wanikaniURL kanji =
+            Url.Builder.crossOrigin "https://www.wanikani.com/" [ "kanji", kanji ] []
 
         renderIf : Bool -> Html msg -> Html msg
         renderIf condition content =
