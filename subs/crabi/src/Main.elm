@@ -194,8 +194,17 @@ update msg model =
                         |> List.indexedMap Tuple.pair
                         |> List.filter (Tuple.first >> (/=) i)
                         |> List.map Tuple.second
+
+                -- top might have been deleted, refresh URL
+                query =
+                    newSearchResults
+                        |> List.head
+                        |> Maybe.map .query
+                        |> Maybe.withDefault ""
             in
-            ( { model | searchResults = newSearchResults }, Cmd.none )
+            ( { model | searchResults = newSearchResults }
+            , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
+            )
 
         GotCards (Ok cards) ->
             { model
