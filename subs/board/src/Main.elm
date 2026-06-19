@@ -11,6 +11,7 @@ import File.Select
 import Html exposing (Html)
 import Html.Attributes as HA
 import Html.Events as HE
+import ISODate
 import Json.Decode
 import Json.Encode
 import List.Extra
@@ -21,6 +22,7 @@ import Task
 type Msg
     = Noop
     | DownloadFile
+    | DownloadFileWithDate String String
     | RequestFileOpen
     | FileSelected File
     | FileLoaded String
@@ -102,7 +104,14 @@ update msg model =
                 content =
                     Json.Encode.encode 2 (Json.Encode.list Card.encoder model.cards)
             in
-            ( model, File.Download.string "board.json" "application.json" content )
+            ( model, Task.perform (DownloadFileWithDate content) ISODate.now )
+
+        DownloadFileWithDate content isoDate ->
+            let
+                filename =
+                    "board-" ++ isoDate ++ ".json"
+            in
+            ( model, File.Download.string filename "application.json" content )
 
         RequestFileOpen ->
             ( model
