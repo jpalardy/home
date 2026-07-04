@@ -173,5 +173,10 @@
     "alias": "excalidraw",
     "search": "https://excalidraw.com/",
     "visit": "https://excalidraw.com/"
+  },
+  {
+    "alias": "coface",
+    "search": "https://www.coface.com/news-economy-and-insights/business-risk-dashboard/country-risk-files/%s",
+    "visit": "https://www.coface.com/news-economy-and-insights/business-risk-dashboard/country-risk-map"
   }
 ]
