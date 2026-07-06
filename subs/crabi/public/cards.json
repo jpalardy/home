@@ -324,7 +324,9 @@
   "修": [
     "shuu",
     "mastering",
-    "repair"
+    "repair",
+    "~修",
+    "~候"
   ],
   "俳": [
     "hai",
@@ -360,7 +362,9 @@
     "kou",
     "climate",
     "weather",
-    "candidate"
+    "candidate",
+    "~候",
+    "~修"
   ],
   "借": [
     "shaku",
