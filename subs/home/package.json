@@ -5,9 +5,9 @@
   "author": "Jonathan Palardy",
   "license": "MIT",
   "dependencies": {
-    "elm": "^0.19.1-6",
+    "elm": "^0.19.2-0",
     "elm-format": "^0.8.8",
-    "elm-test": "^0.19.1-revision17",
+    "elm-test": "^0.19.2-0",
     "uglify-js": "^3.19.3"
   }
 }
