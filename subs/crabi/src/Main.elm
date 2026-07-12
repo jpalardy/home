@@ -1,4 +1,4 @@
-module Main exposing (main)
+module Main exposing (..)
 
 import Browser
 import Browser.Dom as Dom
@@ -266,9 +266,18 @@ search cards query =
         subqueries =
             query |> String.split "," |> List.map String.trim
 
+        unique list =
+            case list of
+                [] ->
+                    []
+
+                x :: rest ->
+                    x :: unique (List.filter ((/=) x) rest)
+
         matchingCards =
             subqueries
                 |> List.concatMap (\q -> cards |> List.filter (.searchKeywords >> Set.member q))
+                |> unique
     in
     { query = String.trim query
     , cards = matchingCards
