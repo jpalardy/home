@@ -5,12 +5,12 @@
   "author": "Jonathan Palardy",
   "license": "MIT",
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.2",
+    "@tailwindcss/cli": "^4.3.3",
     "elm": "^0.19.2-0",
     "elm-format": "^0.8.8",
     "elm-review": "^2.13.5",
     "elm-test": "^0.19.2-0",
-    "tailwindcss": "^4.3.2",
+    "tailwindcss": "^4.3.3",
     "uglify-js": "^3.19.3"
   }
 }
