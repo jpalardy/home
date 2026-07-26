@@ -1,0 +1,12 @@
+[
+  {
+    "alias": "linkedin",
+    "visit": "https://www.linkedin.com/jobs/",
+    "search": "https://www.linkedin.com/search/results/all/?keywords=%s"
+  },
+  {
+    "alias": "indeed",
+    "visit": "https://ca.indeed.com/",
+    "search": "https://ca.indeed.com/jobs?q=%s&l=Vancouver"
+  }
+]
