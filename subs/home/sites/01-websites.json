@@ -178,5 +178,10 @@
     "alias": "coface",
     "search": "https://www.coface.com/news-economy-and-insights/business-risk-dashboard/country-risk-files/%s",
     "visit": "https://www.coface.com/news-economy-and-insights/business-risk-dashboard/country-risk-map"
+  },
+  {
+    "alias": "claude",
+    "search": "https://claude.ai/recents?search=%s",
+    "visit": "https://claude.ai/new"
   }
 ]
