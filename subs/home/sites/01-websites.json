@@ -25,6 +25,11 @@
     "visit": "https://maps.google.com"
   },
   {
+    "alias": "ge",
+    "search": "https://earth.google.com/web/search/%s/",
+    "visit": "https://earth.google.com/web/"
+  },
+  {
     "alias": "gfin",
     "search": "https://www.google.com/finance?q=%s",
     "visit": "https://www.google.com/finance"
