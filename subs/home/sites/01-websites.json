@@ -188,5 +188,10 @@
     "alias": "claude",
     "search": "https://claude.ai/recents?search=%s",
     "visit": "https://claude.ai/new"
+  },
+  {
+    "alias": "mt",
+    "search": "https://www.marinetraffic.com/",
+    "visit": "https://www.marinetraffic.com/"
   }
 ]
