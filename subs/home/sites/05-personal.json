@@ -43,5 +43,10 @@
     "alias": "bb",
     "search": "https://home.jpalardy.com/board/",
     "visit": "https://home.jpalardy.com/board/"
+  },
+  {
+    "alias": "ul",
+    "search": "https://uplink.jpalardy.com/?q=%s",
+    "visit": "https://uplink.jpalardy.com/"
   }
 ]
