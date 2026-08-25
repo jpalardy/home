@@ -178,5 +178,10 @@
     "alias": "hx",
     "visit": "https://docs.helix-editor.com/",
     "search": "https://docs.helix-editor.com/?search=%s"
+  },
+  {
+    "alias": "go",
+    "visit": "https://pkg.go.dev/",
+    "search": "https://pkg.go.dev/search?m=symbol&q=%s"
   }
 ]
