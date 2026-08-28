@@ -7,7 +7,7 @@
   "dependencies": {
     "elm": "^0.19.2-0",
     "elm-format": "^0.8.8",
-    "elm-test": "^0.19.2-0",
+    "elm-test": "^0.19.2-1",
     "uglify-js": "^3.19.3"
   }
 }
