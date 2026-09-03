@@ -45,11 +45,6 @@
     "visit": "https://drive.google.com"
   },
   {
-    "alias": "mq",
-    "search": "https://www.mapquest.com/search/%s",
-    "visit": "https://www.mapquest.com/"
-  },
-  {
     "alias": "reddit",
     "visit": "https://www.reddit.com/",
     "search": "https://www.google.com/search?q=%s+reddit"
