@@ -48,5 +48,10 @@
     "alias": "ul",
     "search": "https://uplink.jpalardy.com/?q=%s",
     "visit": "https://uplink.jpalardy.com/"
+  },
+  {
+    "alias": "tv",
+    "search": "https://www.tradingview.com/chart/?symbol=%s",
+    "visit": "https://www.tradingview.com/"
   }
 ]
