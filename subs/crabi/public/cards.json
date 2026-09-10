@@ -358,7 +358,9 @@
   "倉": [
     "sou",
     "warehouse",
-    "storehouse"
+    "storehouse",
+    "~倉",
+    "~創"
   ],
   "個": [
     "ko",
@@ -674,7 +676,9 @@
   ],
   "創": [
     "sou",
-    "create"
+    "create",
+    "~創",
+    "~倉"
   ],
   "劇": [
     "geki",
