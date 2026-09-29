@@ -299,7 +299,7 @@ view model =
                         , Html.div [ HA.class "flex flex-col" ]
                             [ Html.label [ HA.class "mt-3 mb-1" ]
                                 [ Html.text "Content" ]
-                            , Html.textarea [ HA.id "modalFocus", HA.class "border px-1 py-2 whitespace-nowrap", HA.rows 12, HA.value card.content, HE.onInput UpdateContent ]
+                            , Html.textarea [ HA.id "modalFocus", HA.class "border px-1 py-2 whitespace-nowrap min-block-[6lh] field-sizing-content", HA.value card.content, HE.onInput UpdateContent ]
                                 []
                             , Html.label [ HA.class "mt-3 mb-1" ]
                                 [ Html.text "Color" ]
