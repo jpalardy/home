@@ -73,6 +73,13 @@ setModal mdl model =
 
 init : String -> ( Model, Cmd Msg )
 init content =
+    let
+        initModel =
+            { cards = [], dragIndex = Nothing, modal = Closed }
+
+        withCards cards target =
+            { target | cards = cards }
+    in
     case Json.Decode.decodeString (Json.Decode.list Card.decoder) content of
         -- start with _some_ cards
         Ok [] ->
@@ -80,13 +87,13 @@ init content =
                 initCards =
                     [ Card.blank, Card.blank, Card.blank, Card.blank ]
             in
-            ( { cards = initCards, dragIndex = Nothing, modal = Closed }, saveCards initCards )
+            ( initModel |> withCards initCards, saveCards initCards )
 
         Ok cards ->
-            ( { cards = cards, dragIndex = Nothing, modal = Closed }, Cmd.none )
+            ( initModel |> withCards cards, Cmd.none )
 
         Err err ->
-            { cards = [], dragIndex = Nothing, modal = Closed } |> setModal (ImportError err)
+            initModel |> setModal (ImportError err)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -114,14 +121,10 @@ update msg model =
             ( model, File.Download.string filename "application.json" content )
 
         RequestFileOpen ->
-            ( model
-            , File.Select.file [ "application/json" ] FileSelected
-            )
+            ( model, File.Select.file [ "application/json" ] FileSelected )
 
         FileSelected file ->
-            ( model
-            , Task.perform FileLoaded (File.toString file)
-            )
+            ( model, Task.perform FileLoaded (File.toString file) )
 
         FileLoaded content ->
             case Json.Decode.decodeString (Json.Decode.list Card.decoder) content of
