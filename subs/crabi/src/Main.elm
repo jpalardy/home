@@ -196,7 +196,7 @@ updateSearch query model =
             { model | query = "", completeState = Complete.closed }
                 |> withSearchResults model.searchResults
 
-        ( _, _ ) ->
+        _ ->
             { model | query = "", completeState = Complete.closed }
                 |> withSearchResults (searchResult :: model.searchResults)
 
