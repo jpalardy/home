@@ -22,10 +22,14 @@ import Url.Parser.Query
 -------------------------------------------------
 
 
+type Target
+    = Query String
+    | State Complete.State
+
+
 type Msg
     = Noop
-    | UpdateQuery String
-    | UpdateState Complete.State
+    | Update Target
     | Search String
     | DeleteResult Int
     | GotCards (Result Http.Error (List Card))
@@ -194,15 +198,14 @@ update msg model =
         Noop ->
             ( model, Cmd.none )
 
-        UpdateQuery query ->
-            ( { model
-                | query = query
-                , completeState = generateSuggestions (model.deck |> successOrEmpty |> .keywords) 10 query
-              }
-            , Cmd.none
-            )
+        Update (Query query) ->
+            let
+                completeState =
+                    generateSuggestions (model.deck |> successOrEmpty |> .keywords) 10 query
+            in
+            ( { model | query = query, completeState = completeState }, Cmd.none )
 
-        UpdateState completeState ->
+        Update (State completeState) ->
             ( { model | completeState = completeState }, Cmd.none )
 
         Search query ->
@@ -401,8 +404,8 @@ renderSearchForm query completeState =
             ]
             completeState
             query
-            { updateQuery = UpdateQuery
-            , updateState = UpdateState
+            { updateQuery = Query >> Update
+            , updateState = State >> Update
             , acceptQuery = Search
             }
         ]
