@@ -168,6 +168,20 @@ successOrEmpty rmtDeck =
             Deck [] []
 
 
+withSearchResults : List SearchResult -> Model -> ( Model, Cmd Msg )
+withSearchResults searchResults model =
+    let
+        query =
+            searchResults
+                |> List.head
+                |> Maybe.map .query
+                |> Maybe.withDefault ""
+    in
+    ( { model | searchResults = searchResults }
+    , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
+    )
+
+
 updateSearch : String -> Model -> ( Model, Cmd Msg )
 updateSearch query model =
     let
@@ -178,14 +192,13 @@ updateSearch query model =
         ( 0, False ) ->
             ( model, Cmd.none )
 
-        ( count, _ ) ->
-            ( { model
-                | searchResults = ifelse (count == 0) model.searchResults (searchResult :: model.searchResults)
-                , query = ""
-                , completeState = Complete.closed
-              }
-            , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
-            )
+        ( 0, True ) ->
+            { model | query = "", completeState = Complete.closed }
+                |> withSearchResults model.searchResults
+
+        ( _, _ ) ->
+            { model | query = "", completeState = Complete.closed }
+                |> withSearchResults (searchResult :: model.searchResults)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -218,17 +231,8 @@ update msg model =
                         |> List.indexedMap Tuple.pair
                         |> List.filter (Tuple.first >> (/=) i)
                         |> List.map Tuple.second
-
-                -- top might have been deleted, refresh URL
-                query =
-                    newSearchResults
-                        |> List.head
-                        |> Maybe.map .query
-                        |> Maybe.withDefault ""
             in
-            ( { model | searchResults = newSearchResults }
-            , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
-            )
+            model |> withSearchResults newSearchResults
 
         GotCards (Ok cards) ->
             let
@@ -265,11 +269,13 @@ update msg model =
         -- second ESC: clear query
         -- third ESC: clear results
         KeyDown "Escape" ->
-            if model.query == "" then
-                ( { model | searchResults = [] }, focusQueryCmd )
+            (if model.query == "" then
+                model |> withSearchResults []
 
-            else
-                model |> updateSearch "" |> Tuple.mapSecond (\cmd -> Cmd.batch [ cmd, focusQueryCmd ])
+             else
+                model |> updateSearch ""
+            )
+                |> Tuple.mapSecond (\cmd -> Cmd.batch [ cmd, focusQueryCmd ])
 
         KeyDown _ ->
             ( model, Cmd.none )
