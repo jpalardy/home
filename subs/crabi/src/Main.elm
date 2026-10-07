@@ -40,12 +40,17 @@ type RemoteData err a
     | Success a
 
 
+type alias Deck =
+    { cards : List Card
+    , keywords : List String
+    }
+
+
 type alias Model =
     { query : String
     , completeState : Complete.State
-    , cards : RemoteData Http.Error (List Card)
     , searchResults : List SearchResult
-    , sortedKeywords : List String
+    , deck : RemoteData Http.Error Deck
     , url : Url.Url
     , key : Nav.Key
     }
@@ -84,9 +89,8 @@ init _ url key =
     in
     ( { query = query
       , completeState = Complete.closed
-      , cards = Loading
+      , deck = Loading
       , searchResults = []
-      , sortedKeywords = []
       , url = url
       , key = key
       }
@@ -147,16 +151,24 @@ subscriptions _ =
 -------------------------------------------------
 
 
+successOrEmpty : RemoteData err Deck -> Deck
+successOrEmpty rmtDeck =
+    case rmtDeck of
+        Success deck ->
+            deck
+
+        Loading ->
+            Deck [] []
+
+        Failure _ ->
+            Deck [] []
+
+
 updateSearch : String -> Model -> ( Model, Cmd Msg )
 updateSearch query model =
     let
         searchResult =
-            case model.cards of
-                Success cards ->
-                    search cards query
-
-                _ ->
-                    search [] query
+            search (model.deck |> successOrEmpty |> .cards) query
     in
     case ( searchResult.count, query == "" ) of
         ( 0, False ) ->
@@ -185,7 +197,7 @@ update msg model =
         UpdateQuery query ->
             ( { model
                 | query = query
-                , completeState = generateSuggestions model.sortedKeywords 10 query
+                , completeState = generateSuggestions (model.deck |> successOrEmpty |> .keywords) 10 query
               }
             , Cmd.none
             )
@@ -216,17 +228,18 @@ update msg model =
             )
 
         GotCards (Ok cards) ->
-            { model
-                | cards = Success cards
-                , sortedKeywords =
-                    List.map .searchKeywords cards
+            let
+                keywords =
+                    cards
+                        |> List.map .searchKeywords
                         |> List.foldl Set.union Set.empty
                         |> Set.toList
-            }
+            in
+            { model | deck = Success (Deck cards keywords) }
                 |> updateSearch model.query
 
         GotCards (Err err) ->
-            ( { model | cards = Failure err }, Cmd.none )
+            ( { model | deck = Failure err }, Cmd.none )
 
         UrlRequested urlRequest ->
             case urlRequest of
@@ -312,7 +325,7 @@ view model =
                 "Crabi: " ++ trimmedQuery
     , body =
         [ Html.div [ HA.class "max-w-6xl mx-auto mt-6 px-4" ]
-            (case ( model.cards, model.searchResults ) of
+            (case ( model.deck, model.searchResults ) of
                 ( Loading, _ ) ->
                     [ renderSearchForm model.query Complete.closed
                     , Html.img [ HA.class "mt-5", HA.src "images/loader.gif" ] []
