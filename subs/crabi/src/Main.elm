@@ -425,7 +425,11 @@ renderCard card =
 
         renderIf : Bool -> Html msg -> Html msg
         renderIf condition content =
-            ifelse condition content (Html.text "")
+            if condition then
+                content
+
+            else
+                Html.text ""
     in
     Html.div
         [ HA.class "w-[250px] h-[155px] border-3 rounded-md border-blue-900 bg-blue-200 grid grid-cols-2 relative group" ]
@@ -461,15 +465,6 @@ renderPrompt =
 
 
 -------------------------------------------------
-
-
-ifelse : Bool -> a -> a -> a
-ifelse condition v1 v2 =
-    if condition then
-        v1
-
-    else
-        v2
 
 
 main : Program () Model Msg
