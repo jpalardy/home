@@ -44,3 +44,7 @@ tailwind: node_modules
 tailwind-build: node_modules
 	npm exec -- tailwindcss -i css/main.css -o public/css/main.css --minify
 
+# -------------------------------------------------
+
+cards:
+	curl 'https://home.jpalardy.com/crabi/cards.json' -o public/cards.json
