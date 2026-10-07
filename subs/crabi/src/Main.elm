@@ -34,15 +34,20 @@ type Msg
     | KeyDown String
 
 
+type RemoteData err a
+    = Loading
+    | Failure err
+    | Success a
+
+
 type alias Model =
     { query : String
     , completeState : Complete.State
-    , cards : List Card
+    , cards : RemoteData Http.Error (List Card)
     , searchResults : List SearchResult
     , sortedKeywords : List String
     , url : Url.Url
     , key : Nav.Key
-    , err : Maybe Http.Error
     }
 
 
@@ -79,12 +84,11 @@ init _ url key =
     in
     ( { query = query
       , completeState = Complete.closed
-      , cards = []
+      , cards = Loading
       , searchResults = []
       , sortedKeywords = []
       , url = url
       , key = key
-      , err = Nothing
       }
     , getCards
     )
@@ -147,7 +151,12 @@ updateSearch : String -> Model -> ( Model, Cmd Msg )
 updateSearch query model =
     let
         searchResult =
-            search model.cards query
+            case model.cards of
+                Success cards ->
+                    search cards query
+
+                _ ->
+                    search [] query
     in
     case ( searchResult.count, query == "" ) of
         ( 0, False ) ->
@@ -208,7 +217,7 @@ update msg model =
 
         GotCards (Ok cards) ->
             { model
-                | cards = cards
+                | cards = Success cards
                 , sortedKeywords =
                     List.map .searchKeywords cards
                         |> List.foldl Set.union Set.empty
@@ -217,7 +226,7 @@ update msg model =
                 |> updateSearch model.query
 
         GotCards (Err err) ->
-            ( { model | err = Just err }, Cmd.none )
+            ( { model | cards = Failure err }, Cmd.none )
 
         UrlRequested urlRequest ->
             case urlRequest of
@@ -303,15 +312,20 @@ view model =
                 "Crabi: " ++ trimmedQuery
     , body =
         [ Html.div [ HA.class "max-w-6xl mx-auto mt-6 px-4" ]
-            (case ( model.err, model.searchResults ) of
-                ( Nothing, [] ) ->
+            (case ( model.cards, model.searchResults ) of
+                ( Loading, _ ) ->
+                    [ renderSearchForm model.query Complete.closed
+                    , Html.img [ HA.class "mt-5", HA.src "images/loader.gif" ] []
+                    ]
+
+                ( Success _, [] ) ->
                     [ renderSearchForm model.query model.completeState, renderPrompt ]
 
-                ( Nothing, _ ) ->
+                ( Success _, _ ) ->
                     renderSearchForm model.query model.completeState
                         :: List.indexedMap renderResult model.searchResults
 
-                ( Just err, _ ) ->
+                ( Failure err, _ ) ->
                     [ renderError err ]
             )
         ]
