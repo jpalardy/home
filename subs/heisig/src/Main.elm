@@ -38,15 +38,25 @@ type Msg
     | KeyDown String
 
 
+type RemoteData err a
+    = Loading
+    | Failure err
+    | Success a
+
+
+type alias Deck =
+    { cards : List Card
+    , keywords : List String
+    }
+
+
 type alias Model =
     { query : String
     , completeState : Complete.State
-    , cards : List Card
     , searchResults : List SearchResult
-    , sortedKeywords : List String
+    , deck : RemoteData Http.Error Deck
     , url : Url.Url
     , key : Nav.Key
-    , err : Maybe Http.Error
     }
 
 
@@ -83,12 +93,10 @@ init _ url key =
     in
     ( { query = query
       , completeState = Complete.closed
-      , cards = []
+      , deck = Loading
       , searchResults = []
-      , sortedKeywords = []
       , url = url
       , key = key
-      , err = Nothing
       }
     , getCards
     )
@@ -150,11 +158,24 @@ subscriptions _ =
 -------------------------------------------------
 
 
+successOrEmpty : RemoteData err Deck -> Deck
+successOrEmpty rmtDeck =
+    case rmtDeck of
+        Success deck ->
+            deck
+
+        Loading ->
+            Deck [] []
+
+        Failure _ ->
+            Deck [] []
+
+
 updateSearch : String -> Model -> ( Model, Cmd Msg )
 updateSearch query model =
     let
         searchResult =
-            search model.cards query
+            search (model.deck |> successOrEmpty |> .cards) query
     in
     case ( searchResult.count, query == "" ) of
         ( 0, False ) ->
@@ -181,12 +202,11 @@ update msg model =
             ( model, Cmd.none )
 
         Update (Query query) ->
-            ( { model
-                | query = query
-                , completeState = generateSuggestions model.sortedKeywords 10 query
-              }
-            , Cmd.none
-            )
+            let
+                completeState =
+                    generateSuggestions (model.deck |> successOrEmpty |> .keywords) 10 query
+            in
+            ( { model | query = query, completeState = completeState }, Cmd.none )
 
         Update (State completeState) ->
             ( { model | completeState = completeState }, Cmd.none )
@@ -195,17 +215,18 @@ update msg model =
             updateSearch query model
 
         GotCards (Ok cards) ->
-            { model
-                | cards = cards
-                , sortedKeywords =
-                    List.map .searchKeywords cards
+            let
+                keywords =
+                    cards
+                        |> List.map .searchKeywords
                         |> List.foldl Set.union Set.empty
                         |> Set.toList
-            }
+            in
+            { model | deck = Success (Deck cards keywords) }
                 |> updateSearch model.query
 
         GotCards (Err err) ->
-            ( { model | err = Just err }, Cmd.none )
+            ( { model | deck = Failure err }, Cmd.none )
 
         UrlRequested urlRequest ->
             case urlRequest of
@@ -276,15 +297,20 @@ view model =
                 "Heisig: " ++ trimmedQuery
     , body =
         [ Html.div [ HA.class "max-w-6xl mx-auto mt-6 px-4" ]
-            (case ( model.err, model.searchResults ) of
-                ( Nothing, [] ) ->
+            (case ( model.deck, model.searchResults ) of
+                ( Loading, _ ) ->
+                    [ renderSearchForm model.query Complete.closed
+                    , Html.img [ HA.class "mt-5", HA.src "images/loader.gif" ] []
+                    ]
+
+                ( Success _, [] ) ->
                     [ renderSearchForm model.query model.completeState, renderPrompt ]
 
-                ( Nothing, _ ) ->
+                ( Success _, _ ) ->
                     renderSearchForm model.query model.completeState
                         :: List.map renderResult model.searchResults
 
-                ( Just err, _ ) ->
+                ( Failure err, _ ) ->
                     [ renderError err ]
             )
         ]
