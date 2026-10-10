@@ -288,11 +288,21 @@ update msg model =
 search : List Card -> String -> SearchResult
 search cards query =
     let
-        trimmedQuery =
-            String.trim query
+        subqueries =
+            query |> String.split "," |> List.map String.trim
+
+        unique list =
+            case list of
+                [] ->
+                    []
+
+                x :: rest ->
+                    x :: unique (List.filter ((/=) x) rest)
 
         matchingCards =
-            cards |> List.filter (.searchKeywords >> Set.member trimmedQuery)
+            subqueries
+                |> List.concatMap (\q -> cards |> List.filter (.searchKeywords >> Set.member q))
+                |> unique
     in
     { query = String.trim query
     , cards = matchingCards
