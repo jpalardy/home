@@ -171,6 +171,20 @@ successOrEmpty rmtDeck =
             Deck [] []
 
 
+withSearchResults : List SearchResult -> Model -> ( Model, Cmd Msg )
+withSearchResults searchResults model =
+    let
+        query =
+            searchResults
+                |> List.head
+                |> Maybe.map .query
+                |> Maybe.withDefault ""
+    in
+    ( { model | searchResults = searchResults }
+    , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
+    )
+
+
 updateSearch : String -> Model -> ( Model, Cmd Msg )
 updateSearch query model =
     let
@@ -181,14 +195,13 @@ updateSearch query model =
         ( 0, False ) ->
             ( model, Cmd.none )
 
-        ( count, _ ) ->
-            ( { model
-                | searchResults = ifelse (count == 0) model.searchResults (searchResult :: model.searchResults)
-                , query = ""
-                , completeState = Complete.closed
-              }
-            , Nav.replaceUrl model.key <| Url.Builder.relative [] [ Url.Builder.string "q" query ]
-            )
+        ( 0, True ) ->
+            { model | query = "", completeState = Complete.closed }
+                |> withSearchResults model.searchResults
+
+        _ ->
+            { model | query = "", completeState = Complete.closed }
+                |> withSearchResults (searchResult :: model.searchResults)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -245,9 +258,16 @@ update msg model =
         KeyDown "?" ->
             ( model, focusQueryCmd )
 
+        -- first ESC: close completion (implicit in Complete widget)
+        -- second ESC: clear query
+        -- third ESC: clear results
         KeyDown "Escape" ->
-            { model | searchResults = [] }
-                |> updateSearch ""
+            (if model.query == "" then
+                model |> withSearchResults []
+
+             else
+                model |> updateSearch ""
+            )
                 |> Tuple.mapSecond (\cmd -> Cmd.batch [ cmd, focusQueryCmd ])
 
         KeyDown _ ->
@@ -397,15 +417,6 @@ renderPrompt =
 
 
 -------------------------------------------------
-
-
-ifelse : Bool -> a -> a -> a
-ifelse condition v1 v2 =
-    if condition then
-        v1
-
-    else
-        v2
 
 
 main : Program () Model Msg
