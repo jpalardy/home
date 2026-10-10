@@ -151,7 +151,7 @@ getCards =
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    Events.onKeyUp (Json.Decode.map KeyDown (Json.Decode.field "key" Json.Decode.string))
+    Events.onKeyDown (Json.Decode.map KeyDown (Json.Decode.field "key" Json.Decode.string))
 
 
 
