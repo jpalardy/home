@@ -23,10 +23,14 @@ import Url.Parser.Query
 -------------------------------------------------
 
 
+type Target
+    = Query String
+    | State Complete.State
+
+
 type Msg
     = Noop
-    | UpdateQuery String
-    | UpdateState Complete.State
+    | Update Target
     | Search String
     | GotCards (Result Http.Error (List Card))
     | UrlRequested Browser.UrlRequest
@@ -176,7 +180,7 @@ update msg model =
         Noop ->
             ( model, Cmd.none )
 
-        UpdateQuery query ->
+        Update (Query query) ->
             ( { model
                 | query = query
                 , completeState = generateSuggestions model.sortedKeywords 10 query
@@ -184,7 +188,7 @@ update msg model =
             , Cmd.none
             )
 
-        UpdateState completeState ->
+        Update (State completeState) ->
             ( { model | completeState = completeState }, Cmd.none )
 
         Search query ->
@@ -338,8 +342,8 @@ renderSearchForm query completeState =
             ]
             completeState
             query
-            { updateQuery = UpdateQuery
-            , updateState = UpdateState
+            { updateQuery = Query >> Update
+            , updateState = State >> Update
             , acceptQuery = Search
             }
         ]
