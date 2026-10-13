@@ -30,6 +30,7 @@ type Msg
     | Submit
     | KeyDown String
     | GotSites (Result WrappedError (List Site))
+    | Click
     | NoOp
 
 
@@ -189,6 +190,9 @@ update msg model =
         KeyDown _ ->
             ( model, Cmd.none )
 
+        Click ->
+            ( model, focus )
+
         NoOp ->
             ( model, Cmd.none )
 
@@ -317,6 +321,7 @@ subscriptions : Model -> Sub Msg
 subscriptions _ =
     Sub.batch
         [ Browser.Events.onKeyDown (KeyDecoder.combiner KeyDown)
+        , Browser.Events.onClick (Json.Decode.succeed Click)
         , addSites (Json.Decode.decodeValue Site.fromJson >> Result.mapError DecodeError >> GotSites)
         ]
 
