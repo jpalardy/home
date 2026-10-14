@@ -1,4 +1,4 @@
-module Site exposing (Site, fromJson, fromList, hardcoded, match)
+module Site exposing (Site, fromJson, fromList, match)
 
 import Dict exposing (Dict)
 import Json.Decode
@@ -42,20 +42,6 @@ match sites text =
 
 
 {-------------------------------------------------}
-
-
-hardcoded : Dict String Site
-hardcoded =
-    fromList
-        [ { alias = "g"
-          , visit = "https://www.google.com/"
-          , search = "https://www.google.com/search?q=%s"
-          }
-        , { alias = "?"
-          , search = "sites.json"
-          , visit = "sites.json"
-          }
-        ]
 
 
 fromList : List Site -> Dict String Site

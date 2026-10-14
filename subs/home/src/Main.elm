@@ -34,14 +34,19 @@ type Msg
     | NoOp
 
 
+type RemoteData err a
+    = Loading
+    | Failure err
+    | Success a
+
+
 type alias Model =
     { text : String
     , initialText : String
     , destination : Maybe String
-    , sites : Dict String Site
+    , sites : RemoteData WrappedError (Dict String Site)
     , completions : List String
     , submitted : Bool
-    , err : WrappedError
     }
 
 
@@ -59,6 +64,19 @@ port addSites : (Json.Decode.Value -> msg) -> Sub msg
 -------------------------------------------------
 
 
+sitesOrEmpty : RemoteData err (Dict k v) -> Dict k v
+sitesOrEmpty rmtSites =
+    case rmtSites of
+        Loading ->
+            Dict.empty
+
+        Failure _ ->
+            Dict.empty
+
+        Success sites ->
+            sites
+
+
 updateText : String -> Model -> Model
 updateText text model =
     let
@@ -71,7 +89,7 @@ updateText text model =
     in
     { model
         | text = text
-        , destination = Site.match model.sites text
+        , destination = Site.match (model.sites |> sitesOrEmpty) text
         , completions = completions
         , submitted = False
     }
@@ -84,7 +102,7 @@ updateCompletions completions model =
 
 updateSites : Dict String Site -> Model -> Model
 updateSites sites model =
-    { model | sites = sites } |> updateText model.text
+    { model | sites = Success sites } |> updateText model.text
 
 
 tabComplete : Model -> Model
@@ -93,7 +111,7 @@ tabComplete model =
         completions =
             case model.completions of
                 [] ->
-                    Completion.init (model.sites |> Dict.keys) model.text
+                    Completion.init (model.sites |> sitesOrEmpty |> Dict.keys) model.text
 
                 _ ->
                     Completion.cycle model.completions
@@ -127,10 +145,9 @@ init initialText =
     ( { text = ""
       , initialText = initialText
       , destination = Nothing
-      , sites = Site.hardcoded
+      , sites = Loading
       , completions = []
       , submitted = False
-      , err = None
       }
         |> updateText initialText
     , Cmd.batch [ getSites, focus ]
@@ -157,14 +174,14 @@ update msg model =
             updateSubmit model
 
         GotSites (Err err) ->
-            ( { model | err = err }, Cmd.none )
+            ( { model | sites = Failure err }, Cmd.none )
 
         GotSites (Ok sites) ->
             let
                 newSites =
                     sites
                         |> Site.fromList
-                        |> Dict.union model.sites
+                        |> Dict.union (model.sites |> sitesOrEmpty)
 
                 newModel =
                     model |> updateSites newSites
@@ -211,11 +228,18 @@ view model =
             else
                 []
     in
-    Html.div (HA.style "margin" "30px 15px" :: extraStyles)
-        [ renderForm model.text
-        , renderDestination model.destination
-        , renderError model.err
-        ]
+    Html.div (HA.style "margin" "30px 15px" :: extraStyles) <|
+        case model.sites of
+            Failure err ->
+                [ renderError err ]
+
+            Loading ->
+                []
+
+            Success _ ->
+                [ renderForm model.text
+                , renderDestination model.destination
+                ]
 
 
 renderForm : String -> Html Msg
@@ -272,7 +296,7 @@ renderError wrappedError =
     let
         divWrapper message =
             Html.div
-                [ HA.style "color" "#faa"
+                [ HA.style "color" "rgb(216, 24, 24)"
                 , HA.style "font" "16px monospace"
                 , HA.style "margin-top" "20px"
                 , HA.style "max-width" "800px"

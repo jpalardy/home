@@ -70,6 +70,8 @@ suite =
 
                 dynamicTests =
                     Sites.all
+                        -- an exception
+                        |> List.filter (\site -> site.alias /= "?")
                         |> List.concatMap
                             (\site ->
                                 [ test ("returns only valid visit URL for alias \"" ++ site.alias ++ "\"") <|
