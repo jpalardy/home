@@ -20,8 +20,7 @@ import Task
 
 
 type WrappedError
-    = None
-    | HttpError Http.Error
+    = HttpError Http.Error
     | DecodeError Json.Decode.Error
 
 
@@ -82,28 +81,34 @@ sitesOrEmpty rmtSites =
             sites
 
 
-updateText : String -> Model -> Model
-updateText text model =
+withText : String -> Model -> Model
+withText text model =
+    let
+        destination =
+            Site.match (model.sites |> sitesOrEmpty) text
+    in
     if text == model.text then
-        model
+        { model
+            | destination = destination
+        }
 
     else
         { model
             | text = text
             , inputState = Modified
-            , destination = Site.match (model.sites |> sitesOrEmpty) text
+            , destination = destination
             , completions = []
         }
 
 
-updateCompletions : List String -> Model -> Model
-updateCompletions completions model =
+withCompletions : List String -> Model -> Model
+withCompletions completions model =
     { model | completions = completions }
 
 
-updateSites : Dict String Site -> Model -> Model
-updateSites sites model =
-    { model | sites = Success sites } |> updateText model.text
+withSites : Dict String Site -> Model -> Model
+withSites sites model =
+    { model | sites = Success sites }
 
 
 tabComplete : Model -> Model
@@ -121,8 +126,8 @@ tabComplete model =
             completions |> List.head |> Maybe.withDefault model.text
     in
     model
-        |> updateText newText
-        |> updateCompletions completions
+        |> withText newText
+        |> withCompletions completions
 
 
 
@@ -149,13 +154,13 @@ init initialText =
       , sites = Loading
       , completions = []
       }
-        |> updateText initialText
+        |> withText initialText
     , Cmd.batch [ getSites, focus ]
     )
 
 
-updateSubmit : Model -> ( Model, Cmd Msg )
-updateSubmit model =
+trySubmit : Model -> ( Model, Cmd Msg )
+trySubmit model =
     case model.destination of
         Nothing ->
             ( model, Cmd.none )
@@ -168,10 +173,10 @@ update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         Update text ->
-            ( model |> updateText text, Cmd.none )
+            ( model |> withText text, Cmd.none )
 
         Submit ->
-            updateSubmit model
+            trySubmit model
 
         GotSites (Err err) ->
             ( { model | sites = Failure err }, Cmd.none )
@@ -187,25 +192,27 @@ update msg model =
                         |> Dict.union (model.sites |> sitesOrEmpty)
 
                 newModel =
-                    model |> updateSites newSites
+                    model
+                        |> withSites newSites
+                        |> withText model.text
             in
             if inputState == Unmodified then
-                updateSubmit newModel
+                trySubmit newModel
 
             else
                 ( newModel, Cmd.none )
 
         KeyDown "Escape" ->
-            ( model |> updateText "", focus )
+            ( model |> withText "", focus )
 
         KeyDown "Control-u" ->
-            ( model |> updateText "", focus )
+            ( model |> withText "", focus )
 
         KeyDown "Tab" ->
             ( model |> tabComplete, focus )
 
         KeyDown "Shift-Enter" ->
-            ( model |> updateText ("g " ++ model.text), focus )
+            ( model |> withText ("g " ++ model.text), focus )
 
         KeyDown _ ->
             ( model, Cmd.none )
@@ -307,9 +314,6 @@ renderError wrappedError =
                 [ Html.text message ]
     in
     case wrappedError of
-        None ->
-            Html.text ""
-
         HttpError (Http.BadUrl msg) ->
             divWrapper msg
 
