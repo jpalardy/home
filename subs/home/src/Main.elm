@@ -40,13 +40,18 @@ type RemoteData err a
     | Success a
 
 
+type InputState
+    = Unmodified
+    | Modified
+    | Submitted
+
+
 type alias Model =
     { text : String
-    , initialText : String
+    , inputState : InputState
     , destination : Maybe String
     , sites : RemoteData WrappedError (Dict String Site)
     , completions : List String
-    , submitted : Bool
     }
 
 
@@ -79,20 +84,16 @@ sitesOrEmpty rmtSites =
 
 updateText : String -> Model -> Model
 updateText text model =
-    let
-        completions =
-            if text == model.text then
-                model.completions
+    if text == model.text then
+        model
 
-            else
-                []
-    in
-    { model
-        | text = text
-        , destination = Site.match (model.sites |> sitesOrEmpty) text
-        , completions = completions
-        , submitted = False
-    }
+    else
+        { model
+            | text = text
+            , inputState = Modified
+            , destination = Site.match (model.sites |> sitesOrEmpty) text
+            , completions = []
+        }
 
 
 updateCompletions : List String -> Model -> Model
@@ -142,12 +143,11 @@ getSites =
 
 init : String -> ( Model, Cmd Msg )
 init initialText =
-    ( { text = ""
-      , initialText = initialText
+    ( { text = initialText
+      , inputState = Unmodified
       , destination = Nothing
       , sites = Loading
       , completions = []
-      , submitted = False
       }
         |> updateText initialText
     , Cmd.batch [ getSites, focus ]
@@ -161,7 +161,7 @@ updateSubmit model =
             ( model, Cmd.none )
 
         Just url ->
-            ( { model | submitted = True }, redirect url )
+            ( { model | inputState = Submitted }, redirect url )
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -178,6 +178,9 @@ update msg model =
 
         GotSites (Ok sites) ->
             let
+                inputState =
+                    model.inputState
+
                 newSites =
                     sites
                         |> Site.fromList
@@ -186,7 +189,7 @@ update msg model =
                 newModel =
                     model |> updateSites newSites
             in
-            if newModel.text == newModel.initialText then
+            if inputState == Unmodified then
                 updateSubmit newModel
 
             else
@@ -222,7 +225,7 @@ view : Model -> Html Msg
 view model =
     let
         extraStyles =
-            if model.submitted then
+            if model.inputState == Submitted then
                 [ HA.style "opacity" "0.3" ]
 
             else
