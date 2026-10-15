@@ -7,7 +7,6 @@
     <link rel="icon" type="image/png" href="https://secure.gravatar.com/avatar/ecfd1bdc5d3aab1e40f25658817712ba" />
   </head>
   <body data-version="__VERSION__">
-
     <div id="app"></div>
 
     <script src="app.js"></script>
@@ -28,6 +27,10 @@
       } catch (err) {
         app.ports.addSites.send(err.message);
       }
+
+      window.addEventListener("pageshow", (e) => {
+        if (e.persisted) app.ports.restoredFromBfcache.send(null);
+      });
     </script>
   </body>
 </html>
