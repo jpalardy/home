@@ -151,13 +151,17 @@ getSites =
 
 init : String -> ( Model, Cmd Msg )
 init initialText =
+    let
+        squish =
+            String.words >> String.join " "
+    in
     ( { text = initialText
       , inputState = Unmodified
       , destination = Nothing
       , sites = Loading
       , completions = []
       }
-        |> withText initialText
+        |> withText (squish initialText)
     , Cmd.batch [ getSites, focus ]
     )
 
