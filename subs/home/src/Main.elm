@@ -1,4 +1,4 @@
-port module Main exposing (Model, Msg, WrappedError, main)
+port module Main exposing (..)
 
 import Browser
 import Browser.Dom
@@ -64,7 +64,7 @@ port redirect : String -> Cmd msg
 port addSites : (Json.Decode.Value -> msg) -> Sub msg
 
 
-port restoredFromBfcache : (() -> msg) -> Sub msg
+port restoredFromBfcache : (Json.Decode.Value -> msg) -> Sub msg
 
 
 
@@ -357,7 +357,7 @@ subscriptions _ =
         [ Browser.Events.onKeyDown (KeyDecoder.combiner KeyDown)
         , Browser.Events.onClick (Json.Decode.succeed Click)
         , addSites (Json.Decode.decodeValue Site.fromJson >> Result.mapError DecodeError >> GotSites)
-        , restoredFromBfcache (\_ -> Update "")
+        , restoredFromBfcache (always <| Update "")
         ]
 
 
