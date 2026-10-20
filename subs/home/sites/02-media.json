@@ -1,7 +1,7 @@
 [
   {
     "alias": "gr",
-    "search": "https://www.goodreads.com/search?utf8=%E2%9C%93&query=%s",
+    "search": "https://www.goodreads.com/search?utf8=%E2%9C%93&q=%s",
     "visit": "https://www.goodreads.com"
   },
   {
@@ -16,7 +16,7 @@
   },
   {
     "alias": "leanpub",
-    "search": "https://leanpub.com/bookstore?type=all&search=%s",
+    "search": "https://leanpub.com/store?type=all&search=%s",
     "visit": "https://leanpub.com"
   },
   {
