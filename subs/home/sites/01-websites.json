@@ -193,5 +193,10 @@
     "alias": "mt",
     "search": "https://www.marinetraffic.com/",
     "visit": "https://www.marinetraffic.com/"
+  },
+  {
+    "alias": "nominatim",
+    "search": "https://nominatim.openstreetmap.org/ui/search.html?q=%s",
+    "visit": "https://nominatim.org/"
   }
 ]
