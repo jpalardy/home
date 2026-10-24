@@ -183,5 +183,10 @@
     "alias": "go",
     "visit": "https://pkg.go.dev/",
     "search": "https://pkg.go.dev/search?m=symbol&q=%s"
+  },
+  {
+    "alias": "local",
+    "visit": "http://localhost/",
+    "search": "http://localhost:%s/"
   }
 ]
