@@ -30,6 +30,7 @@ type Msg
     | KeyDown String
     | GotSites (Result WrappedError (List Site))
     | Click
+    | RestoredFromBfcache
     | NoOp
 
 
@@ -227,6 +228,9 @@ update msg model =
         Click ->
             ( model, focus )
 
+        RestoredFromBfcache ->
+            ( { model | inputState = Modified }, focus )
+
         NoOp ->
             ( model, Cmd.none )
 
@@ -361,7 +365,7 @@ subscriptions _ =
         [ Browser.Events.onKeyDown (KeyDecoder.combiner KeyDown)
         , Browser.Events.onClick (Json.Decode.succeed Click)
         , addSites (Json.Decode.decodeValue Site.fromJson >> Result.mapError DecodeError >> GotSites)
-        , restoredFromBfcache (always <| Update "")
+        , restoredFromBfcache (always <| RestoredFromBfcache)
         ]
 
 
