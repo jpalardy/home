@@ -6,10 +6,10 @@
   "license": "ISC",
   "dependencies": {
     "@tailwindcss/cli": "^4.3.3",
-    "elm": "^0.19.2-0",
+    "elm": "^0.19.3-0",
     "elm-format": "^0.8.8",
     "elm-review": "^2.13.5",
-    "elm-test": "^0.19.2-1",
+    "elm-test": "^0.19.3-0",
     "tailwindcss": "^4.3.3",
     "uglify-js": "^3.19.3"
   }
