@@ -23,6 +23,7 @@ copy: SUBS_NORMAL := $(filter-out home,$(SUBDIRS))
 copy: build
 	for sub in $(SUBS_NORMAL); do rsync -q -av --delete subs/$$sub/public/ public/$$sub/; done
 	for sub in $(SUBS_HOIST); do rsync -q -av subs/$$sub/public/ public/; done
+	rm public/crabi/cards.json
 
 # -------------------------------------------------
 
