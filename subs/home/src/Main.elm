@@ -156,13 +156,12 @@ init initialText =
         squish =
             String.words >> String.join " "
     in
-    ( { text = initialText
+    ( { text = squish initialText
       , inputState = Unmodified
       , destination = Nothing
       , sites = Loading
       , completions = []
       }
-        |> withText (squish initialText)
     , Cmd.batch [ getSites, focus ]
     )
 
