@@ -240,15 +240,7 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    let
-        extraStyles =
-            if model.inputState == Submitted then
-                [ HA.style "opacity" "0.3" ]
-
-            else
-                []
-    in
-    Html.div (HA.style "margin" "30px 15px" :: extraStyles) <|
+    Html.div [ HA.style "margin" "30px 15px" ] <|
         case model.sites of
             Failure err ->
                 [ renderError err ]
@@ -257,18 +249,34 @@ view model =
                 []
 
             Success _ ->
-                [ renderForm model.text
+                [ renderForm model.text model.inputState
                 , renderDestination model.destination
+                , Html.img
+                    [ HA.style "margin-left" "20px"
+                    , HA.style "margin-bottom" "4px"
+                    , HA.src "loader.gif"
+                    , HA.hidden <| model.inputState /= Submitted
+                    ]
+                    []
                 ]
 
 
-renderForm : String -> Html Msg
-renderForm text =
+renderForm : String -> InputState -> Html Msg
+renderForm text inputState =
+    let
+        maybeOpacity =
+            if inputState == Submitted then
+                HA.style "opacity" "0.3"
+
+            else
+                HA.classList []
+    in
     Html.form
         [ HA.style "display" "grid"
         , HA.style "grid-template-columns" "max-content 1fr"
         , HA.style "grid-gap" "6px"
         , HA.style "align-items" "center"
+        , maybeOpacity
         , HE.onSubmit Submit
         ]
         [ Html.label [] [ Html.text ">" ]
@@ -303,7 +311,7 @@ renderDestination destination =
                 [ HA.href url
                 , HA.style "color" "#ddd"
                 , HA.style "font" "16px monospace"
-                , HA.style "display" "block"
+                , HA.style "display" "inline-block"
                 , HA.style "margin-top" "20px"
                 , HA.style "overflow" "hidden"
                 , HA.style "text-wrap" "nowrap"
