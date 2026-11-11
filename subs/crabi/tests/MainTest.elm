@@ -83,5 +83,17 @@ suite =
             , test "accepts multi-part blank queries" <|
                 \_ ->
                     Main.parseQuery "  ,   ,   " |> Expect.equal []
+            , test "extracts one kanji" <|
+                \_ ->
+                    Main.parseQuery "子" |> Expect.equal [ "子" ]
+            , test "extracts all kanji" <|
+                \_ ->
+                    Main.parseQuery "子供" |> Expect.equal [ "子供", "子", "供" ]
+            , test "extracts only kanji" <|
+                \_ ->
+                    Main.parseQuery "子供たち" |> Expect.equal [ "子供たち", "子", "供" ]
+            , test "extracts kanji in combination queries" <|
+                \_ ->
+                    Main.parseQuery "   peach ,   tree  , 子供たち , さる   " |> Expect.equal [ "peach", "tree", "子供たち", "さる", "子", "供" ]
             ]
         ]

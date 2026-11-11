@@ -294,17 +294,38 @@ unique list =
 parseQuery : String -> List String
 parseQuery query =
     let
+        isKanji c =
+            let
+                code =
+                    Char.toCode c
+            in
+            -- CJK Unified Ideographs (the main block)
+            (code >= 0x4E00 && code <= 0x9FFF)
+                -- Extension A
+                || (code >= 0x3400 && code <= 0x4DBF)
+                -- CJK Compatibility Ideographs
+                || (code >= 0xF900 && code <= 0xFAFF)
+                -- Extension B (rare kanji)
+                || (code >= 0x00020000 && code <= 0x0002A6DF)
+                -- 々 (iteration mark)
+                || (code == 0x3005)
+
+        extractKanji str =
+            str
+                |> String.filter isKanji
+                |> String.split ""
+
         squish str =
             str |> String.words |> String.join " "
 
-        subqueries =
-            query
+        subqueries str =
+            str
                 |> String.split ","
                 |> List.map squish
                 |> unique
                 |> List.filter ((/=) "")
     in
-    subqueries
+    (subqueries query ++ extractKanji query) |> unique
 
 
 search : List Card -> String -> SearchResult
