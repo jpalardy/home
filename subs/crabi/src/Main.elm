@@ -281,22 +281,38 @@ update msg model =
             ( model, Cmd.none )
 
 
+unique : List a -> List a
+unique list =
+    case list of
+        [] ->
+            []
+
+        x :: rest ->
+            x :: unique (List.filter ((/=) x) rest)
+
+
+parseQuery : String -> List String
+parseQuery query =
+    let
+        squish str =
+            str |> String.words |> String.join " "
+
+        subqueries =
+            query
+                |> String.split ","
+                |> List.map squish
+                |> unique
+                |> List.filter ((/=) "")
+    in
+    subqueries
+
+
 search : List Card -> String -> SearchResult
 search cards query =
     let
-        subqueries =
-            query |> String.split "," |> List.map String.trim
-
-        unique list =
-            case list of
-                [] ->
-                    []
-
-                x :: rest ->
-                    x :: unique (List.filter ((/=) x) rest)
-
         matchingCards =
-            subqueries
+            query
+                |> parseQuery
                 |> List.concatMap (\q -> cards |> List.filter (.searchKeywords >> Set.member q))
                 |> unique
     in
